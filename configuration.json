@@ -1,0 +1,18 @@
+{
+    "date_retrieved": "apr-23-2023",
+    "projects": [
+        {
+        "name": "triangle",
+        "giturl": "git@github.com:damorim/triangle-example.git",
+        "commit": "57b4e2bd66c7c96641c7bbedb7c740212c44fec4",
+        "oracles": [
+            {
+                "file": "src/test/java/com/example/TriangleTest.java",
+                "tseq_start_ln": 70,
+                "tseq_end_ln": 70,
+                "oracle_ln": 71
+            }   
+        ]
+        }   
+    ]
+}
