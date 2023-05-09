@@ -1,0 +1,418 @@
+{
+    "projects": [
+        {
+            "userName": "3pillarlabs",
+            "repoName": "spring-integration-aws",
+            "subRepo": "spring-integration-aws",
+            "commitSHA": "8e9be33b3134898cd8f6111afb19356c33d15f53",
+            "buildSystem": "maven",
+            "allTests": [
+                {
+                    "className": "JsonMessageMarshallerTest",
+                    "classPath": "spring-integration-aws/src/test/java/org/springframework/integration/aws",
+                    "before": {
+                        "startLn": 23,
+                        "endLn": 25
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testSerialization",
+                            "startLn": 28,
+                            "endLn": 41,
+                            "oracleLn": 40,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        },
+                        {
+                            "testName": "testMessageHeaders",
+                            "startLn": 44,
+                            "endLn": 76,
+                            "oracleLn": 61,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        },
+                        {
+                            "testName": "testPrimitivesPayload",
+                            "startLn": 79,
+                            "endLn": 89,
+                            "oracleLn": 88,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        },
+                        {
+                            "testName": "testArrayofPrimitivesPayload",
+                            "startLn": 92,
+                            "endLn": 103,
+                            "oracleLn": 102,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        },
+                        {
+                            "testName": "testArrayOfPojo",
+                            "startLn": 106,
+                            "endLn": 124,
+                            "oracleLn": 122,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        },
+                        {
+                            "testName": "testSimpleMessage",
+                            "startLn": 127,
+                            "endLn": 133,
+                            "oracleLn": 132,
+                            "focalFile": "spring-integration-aws/src/main/java/org/springframework/integration/aws/JsonMessageMarshaller.java",
+                            "focalStartLn": 122,
+                            "focalEndLn": 182
+                        }
+                    ]
+                },
+                {
+                    "className": "SqsChannelParserTests",
+                    "classPath": "spring-integration-aws/src/test/java/org/springframework/integration/aws/sqs/config",
+                    "before": {
+                        "startLn": 111,
+                        "endLn": 115
+                    },
+                    "after": {
+                        "startLn": 118,
+                        "endLn": 122
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testSqsInboundChannelAdapterParser",
+                            "startLn": 34,
+                            "endLn": 56,
+                            "oracleLn": 46,
+                            "focalFile": "../focals/spring-integration-aws.txt",
+                            "focalStartLn": 1,
+                            "focalEndLn": 19
+                        },
+                        {
+                            "testName": "testMessageDrivenFlow",
+                            "startLn": 59,
+                            "endLn": 79,
+                            "oracleLn": 78,
+                            "focalFile": "../focals/spring-integration-aws.txt",
+                            "focalStartLn": 21,
+                            "focalEndLn": 38
+                        },
+                        {
+                            "testName": "testPollingFlow",
+                            "startLn": 82,
+                            "endLn": 99,
+                            "oracleLn": 92,
+                            "focalFile": "../focals/spring-integration-aws.txt",
+                            "focalStartLn": 40,
+                            "focalEndLn": 64
+                        }
+                    ]
+                },
+                {
+                    "className": "SqsOutboundGatewayParserTests",
+                    "classPath": "spring-integration-aws/src/test/java/org/springframework/integration/aws/sqs/config",
+                    "before": {
+                        "startLn": 92,
+                        "endLn": 95
+                    },
+                    "after":{
+                        "startLn": 86,
+                        "endLn": 90
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testRetrievingSqsOutboundGatewayParser",
+                            "startLn": 32,
+                            "endLn": 39,
+                            "oracleLn": 39,
+                            "focalFile": "../focals/spring-integration-aws.txt",
+                            "focalStartLn": 1,
+                            "focalEndLn": 19
+                        },
+                        {
+                            "testName": "testMessageFlow",
+                            "startLn": 63,
+                            "endLn": 73,
+                            "oracleLn": 72,
+                            "focalFile": "../focals/spring-integration-aws.txt",
+                            "focalStartLn": 21,
+                            "focalEndLn": 38
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "DigitalPebble",
+            "repoName": "storm-crawler",
+            "subRepo": "core",
+            "commitSHA": "8481aefaeb75af0f07fd99a573bc5ef137fdd27d",
+            "buildSystem": "maven",
+            "allTests": [
+                {
+                    "className": "AbstractFetcherBoltTest",
+                    "classPath": "core/src/test/java/com/digitalpebble/stormcrawler/bolt",
+                    "before": {
+                        "startLn": 42,
+                        "endLn": 44
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testDodgyURL",
+                            "startLn": 49,
+                            "endLn": 68,
+                            "oracleLn": 68,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 70,
+                            "focalEndLn": 72
+                        },
+                        {
+                            "testName": "testDodgyURL",
+                            "startLn": 49,
+                            "endLn": 74,
+                            "oracleLn": 74,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "test304",
+                            "startLn": 78,
+                            "endLn": 106,
+                            "oracleLn": 106,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 70,
+                            "focalEndLn": 72
+                        },
+                        {
+                            "testName": "test304",
+                            "startLn": 78,
+                            "endLn": 112,
+                            "oracleLn": 112,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        }
+                    ]
+                },
+                {
+                    "className": "FeedParserBoltTest",
+                    "classPath": "core/src/test/java/com/digitalpebble/stormcrawler/bolt",
+                    "before": {
+                        "startLn": 35,
+                        "endLn": 38
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testFeedParsing",
+                            "startLn": 41,
+                            "endLn": 54,
+                            "oracleLn": 41,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testFeedParsingNoMT",
+                            "startLn": 41,
+                            "endLn": 74,
+                            "oracleLn": 41,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testFeedParsingDetextBytes",
+                            "startLn": 41,
+                            "endLn": 89,
+                            "oracleLn": 41,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testNonFeedParsing",
+                            "startLn": 94,
+                            "endLn": 100,
+                            "oracleLn": 100,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 62,
+                            "focalEndLn": 64
+                        }
+                    ]
+                },
+                {
+                    "className": "JSoupParserBoltTest",
+                    "classPath": "core/src/test/java/com/digitalpebble/stormcrawler/bolt",
+                    "before": {
+                        "startLn": 110,
+                        "endLn": 113
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testNoFollowOutlinks",
+                            "startLn": 136,
+                            "endLn": 145,
+                            "oracleLn": 145,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testHTTPRobots",
+                            "startLn": 149,
+                            "endLn": 162,
+                            "oracleLn": 162,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testRobotsMetaProcessor",
+                            "startLn": 184,
+                            "endLn": 195,
+                            "oracleLn": 195,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 62,
+                            "focalEndLn": 64
+                        },
+                        {
+                            "testName": "testHTMLRedir",
+                            "startLn": 216,
+                            "endLn": 226,
+                            "oracleLn": 226,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        },
+                        {
+                            "testName": "testExecuteWithOutlinksLimit",
+                            "startLn": 230,
+                            "endLn": 239,
+                            "oracleLn": 239,
+                            "focalFile": "core/src/test/java/com/digitalpebble/stormcrawler/TestOutputCollector.java",
+                            "focalStartLn": 66,
+                            "focalEndLn": 68
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "IQSS",
+            "repoName": "dataverse",
+            "commitSHA": "82cef32dec3255977a9588efa384117cacf7601e",
+            "buildSystem": "maven",
+            "allTests": [
+                {
+                    "className": "ActionLogRecordTest",
+                    "classPath": "src/test/java/edu/harvard/iq/dataverse/actionlogging",
+                    "before": {
+                        "startLn": 20,
+                        "endLn": 26
+                    },
+                    "after": {
+                        "startLn": 29,
+                        "endLn": 31
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testEqualityWithNull",
+                            "startLn": 34,
+                            "endLn": 37,
+                            "oracleLn": 36,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 179,
+                            "focalEndLn": 206
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherClass",
+                            "startLn": 40,
+                            "endLn": 43,
+                            "oracleLn": 42,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 179,
+                            "focalEndLn": 206
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherStartTime",
+                            "startLn": 46,
+                            "endLn": 50,
+                            "oracleLn": 49,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 108,
+                            "focalEndLn": 110
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherEndTime",
+                            "startLn": 53,
+                            "endLn": 58,
+                            "oracleLn": 57,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 108,
+                            "focalEndLn": 1110
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherActionResult",
+                            "startLn": 61,
+                            "endLn": 67,
+                            "oracleLn": 66,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 126,
+                            "focalEndLn": 128
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherUserIdentifier",
+                            "startLn": 70,
+                            "endLn": 77,
+                            "oracleLn": 76,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 179,
+                            "focalEndLn": 206
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherActionType",
+                            "startLn": 80,
+                            "endLn": 88,
+                            "oracleLn": 87,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 148,
+                            "focalEndLn": 151
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherSubActionType",
+                            "startLn": 91,
+                            "endLn": 100,
+                            "oracleLn": 99,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 157,
+                            "focalEndLn": 160
+                        },
+                        {
+                            "testName": "testEqualityWithAnotherInfo",
+                            "startLn": 103,
+                            "endLn": 113,
+                            "oracleLn": 112,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 166,
+                            "focalEndLn": 169
+                        },
+                        {
+                            "testName": "testEqualityWithEqualFieldValues",
+                            "startLn": 116,
+                            "endLn": 126,
+                            "oracleLn": 125,
+                            "focalFile": "src/main/java/edu/harvard/iq/dataverse/actionlogging/ActionLogRecord.java",
+                            "focalStartLn": 166,
+                            "focalEndLn": 169
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

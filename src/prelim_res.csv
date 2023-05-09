@@ -1,0 +1,103 @@
+Project	TestClass	TestName	TrueOracle	GenOracle	Corr	Incorr	BuildErr	RunErr	TestFailure
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	`assertArrayEquals(aryIn, aryOut);`	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	assertEquals(aryIn.length, aryOut.length);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertEquals(aryOut.length, ((TestPojo[]) otherPacket.getPayload()).length);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	assertEquals(simpleMessage, packet.getPayload());	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	assertEquals(simpleMessage, packet.getPayload());	1	0	0	0	0
+3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	"assertEquals(packet.getPayload().toString(), ""Hello World"");"	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(queueNameProperty, getPropertyValue(sqsExecutor, ""queue""), ""Expected the same queue name"");"	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(""my-queue-name"", queueNameProperty);"	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(""sqsChannel"", channel.getComponentName());"	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	assertEquals(payload, recvMessage);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	assertEquals(payload, recvMessage);	1	0	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	"assertTrue(channel.send(MessageBuilder.withPayload(""Hello, World"").build(), 1000));"	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertEquals(payload, recv.getPayload());	1	0	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertNotNull(inputChannel);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertNotNull(inputChannel);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertThat(inputChannel).isInstanceOf(AbstractMessageChannel.class);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
+3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	assertTrue(acked || failed);	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	assertEquals(true, acked);	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertFalse(acked && failed);	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertTrue(acked || failed);	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertThat(output.getAckedTuples().contains(tuple) || output.getFailedTuples().contains(tuple)).isTrue();	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertThat(output.getEmitted(Constants.StatusStreamName).size()).isEqualTo(1);	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	`assertEquals(3, fields.size());`	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	assertNull(bolt.execute(tuple));	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(0, getEmitted().size());	0	1	0	0	0
+DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	assertEquals(0, getEmitted().size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	org.junit.assertTrue(statusTuples.isEmpty());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertNotNull(bolt.getEmitted());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(expectedResult, bolt.getEmitted().size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(expectedEmittedList, bolt.getEmitted());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	org.junit.assertEquals(2, statusTuples.size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	assertEquals(2, output.getEmitted(Constants.StatusStreamName).size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	org.junit.assertEquals(2, output.getEmitted(Constants.StatusStreamName).size());	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
+DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	assertNotEquals(referenceRecord, record);	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	assertNotEquals(referenceRecord, record);	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	AssertPlaceHolder:  org.junit.assertNotEquals(referenceRecord, record);	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"assertNotEquals(referenceRecord, ""a test string"");"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"org.junit.assertTrue(referenceRecord.equals(new ActionLogRecord(ActionType.Admin, ""subType1"")));"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"assertTrue(referenceRecord.equals(new ActionLogRecord(ActionType.Admin, ""subType1"")));"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertNull(record.getStartTime());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(record.getStartTime(), null);	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	assertEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(record.getStartTime(), this.referenceRecord.getStartTime());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertNotEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	assertEquals(true, this.referenceRecord.equals(record));	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	org.junit.assertFalse(this.referenceRecord.equals(record));	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	org.junit.assertFalse(referenceRecord.equals(record));	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertNotEquals(this.referenceRecord.getActionSubType(), record.setActionSubType(""subType2"").getActionSubType());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""subType2"", record.getActionSubType());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertTrue(this.referenceRecord.setActionSubType(""subType2"").equals(record));"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"org.junit.assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	"org.junit.assertEquals(""Getter and setter methods for info field are not working properly"", ""info1"", record.getInfo());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	"assertEquals(this.referenceRecord.getInfo(), record.setInfo(""info1"").getInfo());"	0	1	0	0	0
+IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	assertEquals(this.referenceRecord.getInfo(), record.setInfo(this.referenceRecord.getInfo()).getInfo());	0	1	0	0	0
