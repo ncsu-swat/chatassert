@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mvn clean compile
+
+# get classpath of dependencies and store in a variable
+mvn dependency:build-classpath -Dmdep.outputFile=cp.txt
+cp=$(<cp.txt)
+rm cp.txt
+
+# run tests
+java -cp $cp:target/classes ncsusoftware.Main
