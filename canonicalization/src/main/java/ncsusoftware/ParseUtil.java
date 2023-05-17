@@ -3,7 +3,9 @@ package ncsusoftware;
 import java.util.Optional;
 
 import com.github.javaparser.JavaParser;
+import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
+import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.SimpleName;
@@ -48,6 +50,24 @@ public class ParseUtil {
             return;
         }
         throw new RuntimeException("TODO");
+    }
+
+    public static com.github.javaparser.ast.CompilationUnit parseCompilationUnit(JavaParser jparser, String content) {
+        Optional<CompilationUnit> optCU = jparser.parse(content).getResult();
+        if (optCU.isPresent()) {
+            // get compilation unit (ast of a file file) for the original file
+            return optCU.get();            
+        }
+        throw new RuntimeException("could not find it!");
+    }
+
+    public static MethodDeclaration parseMethodDeclaration(JavaParser jparser, String methodDeclaration) {
+        Optional<MethodDeclaration> optMD = jparser.parseMethodDeclaration(methodDeclaration).getResult();
+        if (optMD.isPresent()) {
+            // get compilation unit (ast of a file file) for the original file
+            return optMD.get();            
+        }
+        throw new RuntimeException("could not find it!");
     }
         
 }
