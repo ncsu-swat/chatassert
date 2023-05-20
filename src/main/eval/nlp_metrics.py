@@ -4,6 +4,8 @@ import weighted_ngram_match
 import syntax_match
 import dataflow_match
 
+from rouge_score import rouge_scorer
+
 def spacify(line):
     testString = []
     specialsPair = [ ['=', '='], ['+', '+'], ['-', '-'], ['+', '='], ['-', '='], ['*', '='], 
@@ -135,8 +137,17 @@ def code_bleu(data):
 
     return code_bleu_score
 
-def rouge(refs, preds):
-    pass
+def rouge(data):
+    score = 0
+    scorer = rouge_scorer.RougeScorer(['rougeL'])
+
+    for true, pred in zip(data['TrueOracle'], data['GenOracle']):
+        true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', ''))
+        pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', ''))
+        
+        score = scorer.score(true, pred)['rougeL'][2] # 2 for fmeasure
+
+    return score
 
 def edit_sim(refs, preds):
     pass
@@ -148,7 +159,10 @@ def main():
     print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
     print('Teco BLEU: {}'.format(bleu(dataTeco)))
 
-    print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
-    print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
+    # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+
+    print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
+    print('Teco Rouge: {}'.format(rouge(dataTeco)))
 
 main()
