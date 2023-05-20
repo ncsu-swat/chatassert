@@ -1,0 +1,47 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.rockagen:commons-lib >----------------------
+[INFO] Building commons-lib 0.1.10-RELEASE
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ commons-lib ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ commons-lib ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.2:compile (default-compile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[40,55] [deprecation] ROUND_HALF_UP in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[175,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[196,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[233,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[270,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ commons-lib ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.2:testCompile (default-testCompile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ commons-lib ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.045 s
+[INFO] Finished at: 2023-05-19T04:25:07-04:00
+[INFO] ------------------------------------------------------------------------

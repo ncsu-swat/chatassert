@@ -1,0 +1,72 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.sharneng:gm4java:jar:1.1.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.codehaus.mojo:cobertura-maven-plugin is missing. @ line 92, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------< com.sharneng:gm4java >------------------------
+[INFO] Building gm4java 1.1.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gm4java ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ gm4java ---
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ gm4java ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ gm4java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 22 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/main/java/org/gm4java/engine/support/ReaderWriterProcessImpl.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/main/java/org/gm4java/engine/support/ReaderWriterProcessImpl.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/main/java/org/gm4java/engine/support/ReaderWriterProcessImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ gm4java ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ gm4java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[61,44] cannot find symbol
+  symbol:   variable expected
+  location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[61,54] cannot find symbol
+  symbol:   variable actual
+  location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[79,53] cannot find symbol
+  symbol:   variable expectedVersion
+  location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.795 s
+[INFO] Finished at: 2023-05-19T04:41:56-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:testCompile (default-testCompile) on project gm4java: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[61,44] cannot find symbol
+[ERROR]   symbol:   variable expected
+[ERROR]   location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[61,54] cannot find symbol
+[ERROR]   symbol:   variable actual
+[ERROR]   location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[79,53] cannot find symbol
+[ERROR]   symbol:   variable expectedVersion
+[ERROR]   location: class org.gm4java.engine.support.GMProcessFactoryImplTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
