@@ -67,7 +67,7 @@ public class ParseUtil {
             // get compilation unit (ast of a file file) for the original file
             return optMD.get();            
         }
-        throw new RuntimeException("could not find it!");
+        throw new RuntimeException("could not find method declaration!");
     }
         
 }

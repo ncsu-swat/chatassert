@@ -1,103 +1,500 @@
-Project	TestClass	TestName	TrueOracle	GenOracle	Corr	Incorr	BuildErr	RunErr	TestFailure
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSerialization	assertEquals(pojo, otherPojo);	assertEquals(pojo, otherPojo);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testMessageHeaders	assertEquals(sent.getPayload(), received.getPayload());	assertEquals(sentHeaders.getCorrelationId(), recvHeaders.getCorrelationId());	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testPrimitivesPayload	assertEquals(i, j);	assertEquals(i, j);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	`assertArrayEquals(aryIn, aryOut);`	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	assertEquals(aryIn.length, aryOut.length);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayofPrimitivesPayload	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	assertArrayEquals(aryIn, aryOut);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testArrayOfPojo	assertTrue(Arrays.deepEquals(aryIn, aryOut));	org.junit.assertEquals(aryOut.length, ((TestPojo[]) otherPacket.getPayload()).length);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	assertEquals(simpleMessage, packet.getPayload());	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	assertEquals(simpleMessage, packet.getPayload());	1	0	0	0	0
-3pillarlabs/spring-integration-aws	JsonMessageMarshallerTest	testSimpleMessage	assertEquals(simpleMessage, packet.getPayload());	"assertEquals(packet.getPayload().toString(), ""Hello World"");"	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(queueNameProperty, getPropertyValue(sqsExecutor, ""queue""), ""Expected the same queue name"");"	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(""my-queue-name"", queueNameProperty);"	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testSqsInboundChannelAdapterParser	"assertEquals(""testQueue"", queueNameProperty);"	"assertEquals(""sqsChannel"", channel.getComponentName());"	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	assertEquals(payload, recvMessage);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	assertEquals(payload, recvMessage);	1	0	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testMessageDrivenFlow	assertEquals(payload, recvMessage);	"assertTrue(channel.send(MessageBuilder.withPayload(""Hello, World"").build(), 1000));"	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsChannelParserTests	testPollingFlow	assertEquals(payload, recv.getPayload());	assertEquals(payload, recv.getPayload());	1	0	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertNotNull(inputChannel);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertNotNull(inputChannel);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testRetrievingSqsOutboundGatewayParser	"assertEquals(""in"", inputChannel.getComponentName());"	assertThat(inputChannel).isInstanceOf(AbstractMessageChannel.class);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
-3pillarlabs/spring-integration-aws	SqsOutboundGatewayParserTests	testMessageFlow	assertEquals(payload, recv.getPayload());	assertNotNull(recv);	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	assertTrue(acked || failed);	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	assertEquals(true, acked);	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(true, acked || failed);	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	testDodgyURL	Assert.assertEquals(1, statusTuples.size());	"org.junit.assertTrue(""Tuple wasn't acked or failed"", acked || failed);"	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertFalse(acked && failed);	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertTrue(acked || failed);	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(true, acked || failed);	assertThat(output.getAckedTuples().contains(tuple) || output.getFailedTuples().contains(tuple)).isTrue();	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	AbstractFetcherBoltTest	test304	Assert.assertEquals(1, statusTuples.size());	assertThat(output.getEmitted(Constants.StatusStreamName).size()).isEqualTo(1);	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	`assertEquals(3, fields.size());`	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsing	Assert.assertEquals(170, output.getEmitted(Constants.StatusStreamName).size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingNoMT	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testFeedParsingDetextBytes	org.junit.Assert.assertEquals(3, fields.size());	assertEquals(3, fields.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	assertNull(bolt.execute(tuple));	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(0, getEmitted().size());	0	1	0	0	0
-DigitalPebble/storm-crawler	FeedParserBoltTest	testNonFeedParsing	Assert.assertEquals(1, output.getEmitted().size());	assertEquals(0, getEmitted().size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testNoFollowOutlinks	Assert.assertEquals(10, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	org.junit.assertTrue(statusTuples.isEmpty());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTTPRobots	Assert.assertEquals(0, statusTuples.size());	org.junit.assertEquals(1, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertNotNull(bolt.getEmitted());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(expectedResult, bolt.getEmitted().size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testRobotsMetaProcessor	Assert.assertEquals(1, output.getEmitted().size());	org.junit.assertEquals(expectedEmittedList, bolt.getEmitted());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	org.junit.assertEquals(2, statusTuples.size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	assertEquals(2, output.getEmitted(Constants.StatusStreamName).size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testHTMLRedir	Assert.assertEquals(2, statusTuples.size());	org.junit.assertEquals(2, output.getEmitted(Constants.StatusStreamName).size());	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
-DigitalPebble/storm-crawler	JSoupParserBoltTest	testExecuteWithOutlinksLimit	Assert.assertEquals(5, statusTuples.size());	`assertEquals(1, statusTuples.size());`	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	assertNotEquals(referenceRecord, record);	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	assertNotEquals(referenceRecord, record);	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithNull	assertFalse(this.referenceRecord.equals(record));	AssertPlaceHolder:  org.junit.assertNotEquals(referenceRecord, record);	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"assertNotEquals(referenceRecord, ""a test string"");"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"org.junit.assertTrue(referenceRecord.equals(new ActionLogRecord(ActionType.Admin, ""subType1"")));"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherClass	assertFalse(this.referenceRecord.equals(record));	"assertTrue(referenceRecord.equals(new ActionLogRecord(ActionType.Admin, ""subType1"")));"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertNull(record.getStartTime());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherStartTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(record.getStartTime(), null);	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	assertEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(record.getStartTime(), this.referenceRecord.getStartTime());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherEndTime	assertFalse(this.referenceRecord.equals(record));	org.junit.assertNotEquals(referenceRecord.getStartTime(), record.getStartTime());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionResult	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(Result.InternalError, record.getActionResult());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	assertEquals(true, this.referenceRecord.equals(record));	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	org.junit.assertFalse(this.referenceRecord.equals(record));	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherUserIdentifier	assertFalse(this.referenceRecord.equals(record));	org.junit.assertFalse(referenceRecord.equals(record));	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherActionType	assertFalse(this.referenceRecord.equals(record));	org.junit.assertEquals(ActionType.BuiltinUser, record.getActionType());	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertNotEquals(this.referenceRecord.getActionSubType(), record.setActionSubType(""subType2"").getActionSubType());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""subType2"", record.getActionSubType());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherSubActionType	assertFalse(this.referenceRecord.equals(record));	"assertTrue(this.referenceRecord.setActionSubType(""subType2"").equals(record));"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithAnotherInfo	assertFalse(this.referenceRecord.equals(record));	"org.junit.assertEquals(""info2"", record.setInfo(""info2"").getInfo());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	"org.junit.assertEquals(""Getter and setter methods for info field are not working properly"", ""info1"", record.getInfo());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	"assertEquals(this.referenceRecord.getInfo(), record.setInfo(""info1"").getInfo());"	0	1	0	0	0
-IQSS/dataverse	ActionLogRecordTest	testEqualityWithEqualFieldValues	assertTrue(this.referenceRecord.equals(record));	assertEquals(this.referenceRecord.getInfo(), record.setInfo(this.referenceRecord.getInfo()).getInfo());	0	1	0	0	0
+TestID	Project	TestClass	TestName	TrueOracle	GenOracle	Corr	Incorr	BuildErr	RunErr	TestFailure
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals(expected, actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals(expected, actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals(expected, actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertNotEquals(expected, actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertEquals("802", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("527.56", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("27.92", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("800 mbar to inHg conversion failed", "29.53", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("27.89", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("32.48", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("Incorrect conversion to inHg", "STR", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("802 API value should convert to 23.739389inHg", "23.739389", actual) ;	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("28.34", actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals(expected, actual);	0	1	0	0	0
+2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertEquals("29.77", actual);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertEquals(expectedValue, actualValue);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls); // Verifies that aXls is not null	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	<AssertPlaceHolder>assertEquals("Expected size of the code list to be 3", 3, generatedCodeList.getCodeEntryOrCodeListExtension().size());	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertEquals(expectedList, actualList);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(document);	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertTrue(aXls.isReadable());	0	1	0	0	0
+3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	<AssertPlaceHolder>assertEquals(1, aXls.getContent().length);</AssertPlaceHolder>	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertEquals(0, aXls.getInputStream().available());	0	1	0	0	0
+4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotEquals(0, sql.selectAllFrom("table"));	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotNull(sql.toString());	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotNull(sql.selectAllFrom("table_name"));	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotNull(sql.selectAllFrom("table"));	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	`assertEquals(0, sql.select("*").from("my_table").execute().size());`	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertEquals(sql.select().from("myTable").toString(), "SELECT * FROM myTable");	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotEquals("", instance.toString());	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertTrue(sql instanceof TSqlBuilder);	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotNull(sql.select("SELECT * FROM table"));	0	1	0	0	0
+5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	assertEquals("STR",sql.select().from("STR").toString());	assertNotNull(sql.select("SELECT * FROM table"));	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertTrue(sql.toString().contains("SELECT SOME FROM"));	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertEquals("SELECT * FROM", sql.select("*").from("").toString());	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	`assertNotNull(sql.select("some_column").from("some_table"));`	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertEquals(0, sql.selectSomeFrom("dummy_table").size());	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertNotNull(result);	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertNotNull(sql.select("someColumn").from("someTable").toString());	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertEquals(expectedResult, sql.select("columnName").from("tableName").toString());	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	<code>assertTrue(sql.select("some_column").from("some_table").toString().contains("SELECT some_column FROM some_table"));</code>	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertNotNull(sql.select("some_column").from("some_table").toString());	0	1	0	0	0
+6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	assertEquals("STR",sql.select("STR","STR").from("STR").toString());	assertNotNull(result);	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertTrue(sql.toString().contains("SELECT * FROM STR WHERE STR"));	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertEquals("SELECT * FROM STR WHERE STR", sql.toString());	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertEquals("SELECT * FROM STR WHERE STR", sql.build());	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertEquals("SELECT FROM STR WHERE STR", sql.toString());	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertNotNull(sql.select().from("STR").where("STR"), "Query result should not be null");	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertNotNull(sql);	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertEquals("Expected and actual values for toString() method must match", sql.toString(), "SELECT * FROM STR WHERE STR");	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertNotNull(sql.select());	0	1	0	0	0
+7	redraiment/jactiverecord	TSqlBuilderTest	testWhere	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertEquals("SELECT STR, STR FROM STR GROUP BY STR HAVING STR", sql.toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertNotNull(sql.select("STR", "STR").getHaving());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertTrue(sql.toString().contains("HAVING"));	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertNotNull(sql.select("STR", "STR").from("STR").groupBy("STR").having("STR").toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertEquals("SELECT STR, STR FROM STR GROUP BY STR HAVING STR", sql.toString());	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertEquals(sql.toString(), "SELECT STR, STR FROM STR GROUP BY STR HAVING STR");	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertNotNull(sql);	0	1	0	0	0
+8	redraiment/jactiverecord	TSqlBuilderTest	testHaving	assertEquals("STR",sql.toString());	assertEquals("SELECT STR, STR FROM STR GROUP BY STR HAVING STR", sql.toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertEquals("Expected the query string to sort the results by column STR", "SELECT * FROM STR ORDER BY STR", sql.toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertNotNull(sql.select().toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertEquals(expectedSize, sql.execute().size());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertEquals(expectedQuery, actualQuery);	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertTrue(sql.select().from("STR").orderBy("STR").toString().contains("ORDER BY STR"));	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertNotEquals(sql.toString(), "");	0	1	0	0	0
+9	redraiment/jactiverecord	TSqlBuilderTest	testSort	assertEquals("STR",sql.toString());	assertTrue(sql.select().from("STR").orderBy("STR").toString().contains("ORDER BY STR"));	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertEquals( "Generated SQL query for paging is incorrect", "SELECT * FROM STR LIMIT 10", sql.build() ) ;	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	<AssertPlaceHolder>assertNotEquals(0, sql.select().from("STR").limit(10).toString().length());</AssertPlaceHolder>	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertTrue(sql.select().from("STR").limit(10).toString().contains("SELECT * FROM STR LIMIT 10"));	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertNotEquals("", sql.select().from("STR").limit(10).toString());	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	This assertion checks that the result of calling the `toString()` method on the `sql.select().from("STR").limit(10)` object is not null.	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	`assertNotNull(sql.toString());`	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertTrue(sql.select().from("STR").limit(10).toString().endsWith("LIMIT 10"));	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+10	redraiment/jactiverecord	TSqlBuilderTest	testPaging	assertEquals("STR",sql.toString());	assertNotNull(sql.toString());	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotNull(sql.getBuiltSql());	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertThat(sql.toString(), Matchers.not(Matchers.isEmptyString()));	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertTrue(sql.toString().contains("SELECT"));	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotNull(sql);	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertTrue(sql.toString().contains("SELECT"));	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotNull(sql);	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotNull(sql.build());	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotEquals("", sql.toString());	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertNotEquals(0, sql.toString().length());	0	1	0	0	0
+11	redraiment/jactiverecord	TSqlBuilderTest	testQuery	assertEquals("STR",sql.select("STR","STR").from("STR").where("STR","STR").groupBy("STR").having("STR").orderBy("STR").limit(10).offset(100).toString());	assertTrue(sql != null);	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	<AssertPlaceHolder>assertNotEquals("ToString should not be null", null, sql.toString());</AssertPlaceHolder>	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertTrue(!sql.toString().isEmpty());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertNotNull(sql.toString());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertFalse(sql.toString().isEmpty());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertTrue(sql instanceof TSqlBuilder);	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertNotEquals("", new TSqlBuilder().toString(), sql.toString());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertEquals("Expected string representation does not match", "ClassName@HashCode", new ClassName().toString());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertNotEquals("toString() should return a non-null value.", null, focal.toString());	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertNotNull(sql);	0	1	0	0	0
+12	redraiment/jactiverecord	TSqlBuilderTest	testUpdate	assertEquals("STR",sql.update("STR").set("STR").toString());	assertFalse(sql.toString().isEmpty());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertTrue(sql.toString().contains("DELETE"));	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertEquals(0, sql.deleteFrom("SomeTable").where("SomeColumn = ?", someValue).execute());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertNotNull(sql.toString());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertEquals(0, sql.delete().from("table_name").where("id = 1").execute());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertTrue(sql.toString().contains("DELETE"));	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertEquals(expectedToString, testObject.toString());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertTrue(sql.toString() != null);	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertTrue(sql.toString().contains("DELETE"));	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertEquals(0, sql.delete().execute());	0	1	0	0	0
+13	redraiment/jactiverecord	TSqlBuilderTest	testDelete	assertEquals("STR",sql.delete().from("STR").toString());	assertEquals(0, sql.delete().from("my_table").execute());	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertEquals(0, sql.insert().execute());	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertTrue(sql.toString().contains("INSERT"));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertNotEquals(0, sql.insert("tableName", new Object[] {}));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertEquals(1, sql.insert("table_name", "column_name", "value"));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertEquals(0, sql.getCurrentQuery().indexOf("INSERT INTO"));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertTrue(sql.toString().contains("INSERT"));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertEquals(1, sql.insert("table_name", column_values));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertTrue(sql.toString().contains("INSERT"));	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertTrue(sql instanceof TSqlBuilder);	0	1	0	0	0
+14	redraiment/jactiverecord	TSqlBuilderTest	testInsert	assertEquals("STR",sql.insert().into("STR").values("STR","STR").toString());	assertNotNull(sql);	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("Expected value", FOCAL(setupList, setupDelimiter), "Actual value");`	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("STRa,b,c", join(Arrays.asList("a", "b", "c"), ","));`	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("expected", join(list, delimiter));</code>	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("STR", actualResult);	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("Expected string after join with delimiter", "STRoneSTRtwoSTRthree", join(Arrays.asList("one", "two", "three"), "STR"));	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("expected return string", FOCAL(new ArrayList<Object>(), null), "STR");	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	<code>assertEquals("expectedOutput", join(Arrays.asList("input1", "input2", "input3"), ","));</code>	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("test1,test2,test3", join(List.of("test1", "test2", "test3"), ","));	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("expectedResult", join(Arrays.asList("element1", "element2", "element3"), ","));	0	1	0	0	0
+15	redraiment/jactiverecord	SeqTest	testJoinListNull	Assert.assertEquals("STR",Seq.join(null,"STR"));	assertEquals("Expected output string doesn't match actual output string", "STR", join(null, "delimiter"));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("STR", FOCAL(null, null));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("hello world", join(Arrays.asList("hello", "world"), " "));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("Expected output string", expectedOutput, join(inputList, delimiter));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	`assertEquals("STR", ClassName.join(new ArrayList<>(), "STR"));`	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("expected", FOCAL.join(Arrays.asList("a", "b", "c"), "+"));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("Expected", FOCAL.join(Collections.emptyList(), null));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("STR", FOCAL.join(new ArrayList<>(), "delimiter"));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals(expected, actual);	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("STR", FOCAL.join(Collections.emptyList(), "TEST"));	0	1	0	0	0
+16	redraiment/jactiverecord	SeqTest	testJoinListEmpty	Assert.assertEquals("STR",Seq.join(Collections.EMPTY_LIST,"STR"));	assertEquals("Expected empty list to join to an empty string", "", join(new ArrayList<>(),""));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertNull(join(null, "-"));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("Expected concatenated string", "STR", FOCAL.join(null, "delimiter"));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("str1,str2,str3", join(Arrays.asList("str1", "str2", "str3"), ","));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("Expected output string", FOCAL(Collections.singletonList("element"), "delimiter"));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("Expected String not generated", "EXPECTED_STRING", FOCAL.join(list, delimiter));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	`assertEquals("string1,string2,string3", join(Arrays.asList("string1", "string2", "string3"), ","));`	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertNull(join(null, "delimiter"));	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("a,b,c", actualResult);	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	assertEquals("expectedOutput", FOCAL(new ArrayList<>()), "Failure message");`	0	1	0	0	0
+17	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),null));	<AssertPlaceHolder>assertEquals("expectedString", join(new ArrayList<String>(), null));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("a,b,c", join(Arrays.asList("a", "b", "c"), ","));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	`assertEquals("STRa", join(Arrays.asList("a"), null));`	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("Expected empty string for empty list with null delimiter", "", join(new ArrayList<>(), null));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("STR", FOCAL.join(Collections.emptyList(), "delimiter"));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("foo,bar,baz", join(Arrays.asList("foo", "bar", "baz"), ","));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("hello|world", join(Arrays.asList("hello", "world"), "|"));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("STR1,STR2,STR3", join(Arrays.asList("STR1", "STR2", "STR3"), ","));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("expected", FOCAL(new ArrayList<>(), "MY_DELIMITER"));`	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("", join(new ArrayList<>(), "foo"));	0	1	0	0	0
+18	redraiment/jactiverecord	SeqTest	testJoinDelimiterEmpty	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("1,2,3", join(Arrays.asList("1", "2", "3"), ","));</AssertPlaceHolder>	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("EXPECTED", MyClass.join(Arrays.asList("one", "two", "three"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("ExpectedResult", FOCAL.join(Arrays.asList("value1", "value2", "value3"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("Expected comma separated list", "output_string", FOCAL(join(input_collection, delimiter)));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder> assertEquals("one,two,three", MyClass.join(Arrays.asList("one", "two", "three"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("expectedResult", join(Arrays.asList("element1", "element2", "element3"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("1, 2, 3", join(Arrays.asList(1, 2, 3), ", "));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	`assertEquals("a,b,c", join(Arrays.asList("a", "b", "c"), ","));`	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("a,b,c", join(Arrays.asList("a", "b", "c"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("a,b,c", join(Arrays.asList("a", "b", "c"), ","));	0	1	0	0	0
+19	redraiment/jactiverecord	SeqTest	testCommaList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("item1,item2,item3,item4", join(Arrays.asList("item1", "item2", "item3", "item4"), ","));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("STR", joined);	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("expected output", join(Arrays.asList("Item 1", "Item 2", "Item 3"), ","));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	`assertNotNull(join(list, delimiter));`	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("expectedValue", join(list, "delimiter"));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("expected", join(collection, delimiter));</AssertPlaceHolder>	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("STRING1,STRING2,STRING3", join(Arrays.asList("STRING1","STRING2","STRING3"),","));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("foo;bar;baz", join(Arrays.asList("foo", "bar", "baz"), ";"));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("foo,bar", join(Arrays.asList("foo", "bar"), ","));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	<AssertPlaceHolder>assertEquals("expectedResult", join(Arrays.asList("input1", "input2"), ","));	0	1	0	0	0
+20	redraiment/jactiverecord	SeqTest	testConditionList	Assert.assertEquals("STR",Seq.join(Arrays.asList("STR","STR","STR"),"STR"));	assertEquals("expected_string", join(new ArrayList<>(), "delimiter"));	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertEquals(actuals.length, 3);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertNotSame(actuals, Seq.map(Arrays.asList("foo", "bar"), "%s"));	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+21	redraiment/jactiverecord	SeqTest	testConstantMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	<AssertPlaceHolder>assertEquals(Arrays.asList("STR", "STR", "STR"), actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertEquals(Arrays.asList("STR", "STR", "STR"), actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+22	redraiment/jactiverecord	SeqTest	testFormatMap	Assert.assertArrayEquals(newString[]{"STR","STR","STR"},actuals);	assertArrayEquals(new String[]{"STR", "STR", "STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[]{"STR|STR", "STR|STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[]{"STR,STR", "STR,STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	`assertEquals(Arrays.asList("STR,STR", "STR,STR"), Arrays.asList(actuals));`	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[] {"STR,STR", "STR,STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[] {"STR|STR","STR|STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertEquals(Arrays.asList("STR,STR","STR,STR"), Arrays.asList(actuals));	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertEquals(2, actuals.length);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertEquals(expected, Arrays.asList(actuals));	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[] {"STR,STR", "STR,STR"}, actuals);	0	1	0	0	0
+23	redraiment/jactiverecord	SeqTest	testPartition	Assert.assertArrayEquals(newString[]{"STR","STR"},actuals);	assertArrayEquals(new String[]{"STR-STR", "STR-STR"}, actuals);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertEquals(4, a[1]);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertEquals(-4, a[3]);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 4, 3, 0, 0}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 2, 0, 3, 4}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[] {0, 4, 3, 1, -1}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertEquals(4, a[3]);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 3, 4, 0, 0}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 3, 4, 0, 0}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 4, 3, 2, 0}, a);	0	1	0	0	0
+24	redraiment/jactiverecord	SeqTest	testAssignAt	Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);	assertArrayEquals(new int[]{0, 3, 0, 4, 0}, a);	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals("expectedPath", node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals(expectedPath, node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals("Expected string does not match the actual string.", "STR", node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals("expected path", node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	`assertEquals(expected, node.getPath());`	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals(expected, node.getPath());`	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals(expectedPath, node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	`assertNotNull(node);`	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertNotEquals("", node.getPath());	0	1	0	0	0
+25	retog/wymiwyg-commons-core	MultiPathNodeTest	commonPath	Assert.assertEquals("STR",node.getPath());	assertEquals("expected path", node.getPath());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(producer);	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(getProducer());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(getProducer());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	<AssertPlaceHolder>assertTrue(getProducer().getDefaultTopic().equals("STR" + TEST_NAME_SERVER));</AssertPlaceHolder>	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(getProducer());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(getProducer());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(producer);	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	<code>assertNotNull(producer);</code>	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(getProducer());	0	1	0	0	0
+26	rhwayfun/spring-boot-rocketmq-starter	RocketMqAutoConfigurationTest	defaultRocketMqProducer	Assert.assertTrue(this.context.containsBean("STR"));	assertNotNull(producer);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertNotNull(value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	`assertEquals(expectedValue, value);`	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertEquals("Expected method name to be 'STR'", "STR", value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertEquals("The value of the @Plog annotation for method STR is not correct", "EXPECTED_VALUE", value);	0	1	0	0	0
+27	rockagen/commons-lib	OPLogTest	testDescription	Assert.assertEquals("STR",value);	assertEquals(expectedValue, value);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);`	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+28	rockagen/commons-lib	ReflexUtilTest	testGetInstance	Assert.assertEquals(21,obj.getAge());	assertNotNull(obj);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);`	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz); //This checks if the arrays 'exp' and 'clazz' are equal.	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+29	rockagen/commons-lib	ReflexUtilTest	testIntefaceGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	`assertArrayEquals(exp, clazz)`	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	`assertArrayEquals(exp, clazz);`	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	assertArrayEquals(exp, clazz);	0	1	0	0	0
+30	rockagen/commons-lib	ReflexUtilTest	testSuperClassesGenericTypeClass	Assert.assertArrayEquals(clazz,exp);	<AssertPlaceHolder>assertArrayEquals(exp, clazz);</AssertPlaceHolder>	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertNotNull(StringEscapeUtils.escapeJava("test"));	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertEquals(expectedOutput, actualOutput);	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertNotEquals("Input string should not be equal to output string", "<input_string>", escapeJava("<input_string>"));	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	// previous assert statement: assertEquals(input, escapeJava(input));	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertEquals("Expected escaped string is different from actual escaped string.", "Hello\\nWorld", escapeJava("Hello\nWorld"));</code>	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertEquals("Test failed for method - escapeJava ", "\\tSome text \\r\\n with escape characters \\u1234", escapeJava("\tSome text \r\n with escape characters \u1234"));	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	<code>assertEquals("\\t", escapeJava("\t"));</code>	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertEquals("Test for escapeJava method failed", "hello\\tworld", escapeJava("hello\tworld"));	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertEquals(expectedOutput, actualOutput);	0	1	0	0	0
+31	rockagen/commons-lib	CommUtilTest	testEscape	Assert.assertEquals("STR",CommUtil.escapeJava("STR"));	assertNotEquals(expectedOutput, actualOutput);	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("Expected string value", "Actual string value", subPostfix("inputString", 0, 5, "testPostfix"));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("Expected 'helloPOST', but received " + result, "helloPOST", result);	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("fooBAA", subPostfix("foobar", 3, 6, "BAA"));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("Expected output", "actualOutput", subPostfix("hello world", 0, 5, "-suffix"));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertNotEquals("STR", subPostfix("TestString", 0, 4, null));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("substring with postfix", "abc123xyzAB_", subPostfix("abc123xyzABCDEFGH", 3, 9, "_"));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("abcDEF123", subPostfix("123abcDEF", 3, 9, "123"));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("test string with startIndex 3 and endIndex 10 and without postfix", "st example", subPostfix("test string example", 3, 10, null));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	assertEquals("TESTING", subPostfix("Hello TESTING", 6, 13, null));	0	1	0	0	0
+32	rockagen/commons-lib	CommUtilTest	testString	Assert.assertEquals("STR",CommUtil.subPostfix("STR",0,4,"STR"));	<ASSERTION>assertEquals("abcXYZ", subPostfix("abcDEFXYZ", 3, 6, "XYZ"));</ASSERTION>	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertNotNull(repeatChar('a', 5));	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals("AAAAA", repeatChar('A', 5));	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals(len, repeatChar('a', len).length());	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals(expected, actual);	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals(expected, actual);	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertNotEquals(repeatChar('a', 3), repeatChar('b', 3));	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals(expected, actual);	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals("Expected output is different", "jjjjj", repeatChar('j', 5));	0	1	0	0	0
+33	rockagen/commons-lib	CommUtilTest	testSameChars	Assert.assertEquals("STR",CommUtil.repeatChar('b',10));	assertEquals("aaa", repeatChar('a', 3));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	<AssertPlaceHolder>assertEquals("ABCDEF", toDBC("ＡＢＣＤＥＦ"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("Expected converted string is not the same as actual", "STR", toDBC(" "));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("EXPECTED_STRING", toDBC("INPUT_STRING"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("Hello World", toDBC("Ｈｅｌｌｏ　Ｗｏｒｌｄ"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("CONVERSION", toDBC("CONVERSION"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("Expected output string", expectedOutput, toDBC(inputString));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertNotNull(toDBC("abc"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	<code>assertEquals("abc", toDBC("ａｂｃ"));</code>	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("ABC的123！", SomeClass.toDBC("ＡＢＣ的１２３！"));	0	1	0	0	0
+34	rockagen/commons-lib	CommUtilTest	testBC	Assert.assertEquals("STR",CommUtil.toDBC("STR"));	assertEquals("Expected output: STR, but actual output is not correct", "STR", toDBC(""));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	<AssertPlaceHolder>: assertEquals("616263", hexdump(new byte[]{0x61, 0x62, 0x63}));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals(expected, actual);	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals("Expected hex string", "actual hex string", hexdump(byteArray));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertNotNull(hexdump(new byte[] {0x41, 0x42, 0x43}));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals(expectedOutput, actualOutput);	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals("48656C6C6F20576F726C64", hexdump("Hello World".getBytes()));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals(expectedResult, result);	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals("Expected hexdump function to return a valid hex string.", "534552", hexdump(new byte[]{0x53, 0x45, 0x52}));	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertNotNull(result);	0	1	0	0	0
+35	rockagen/commons-lib	CommUtilTest	testHex	Assert.assertEquals("STR",CommUtil.hexdump("STR".getBytes()));	assertEquals("535452", hexdump(new byte[]{83, 84, 82}));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected hex dump does not match actual hex dump", "EXPECTED", hexdump(b.toByteArray()));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected hex value does not match actual hex value.", expectedHexValue, hexdump(actualByteArray));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected output string", hexdump(bs.getBytes()), "Actual output string");	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected hex string doesn't equal actual hex string.", "534152", hexdump(bs.getBytes()));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("535452", hexdump(b.toByteArray()));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals(expected, output);	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	<AssertPlaceHolder> assertEquals("Expected hexdump result not obtained", "EXPECTED RESULT", hexdump("SOME BYTES".getBytes()));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected result", expected, actual);	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected hex string does not match", "EXPECTED", hexdump(b.toByteArray()));	0	1	0	0	0
+36	rockagen/commons-lib	CommUtilTest	testBitValue	Assert.assertEquals("STR",CommUtil.hexdump(CommUtil.bitValue(b)));	assertEquals("Expected hexdump of bitSet to match", "STR", hexdump(b.toByteArray()));	0	1	0	0	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	`assertSame(sut, sut.getProcessFactory());`	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotSame(sut, new GMProcessFactoryImpl(factory, gmPath));	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotNull(sut.getGMPath());	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotNull(sut.getGMPath());	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotNull("GMProcessFactory instance should not be null.", sut);	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotNull(sut);	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertEquals(sut.getGMPath(), gmPath);	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	`assertNotNull(sut.getGMPath());`	0	0	0	1	0
+37	sharneng/gm4java	GMProcessFactoryImplTest	builder_returnsFactory	assertThat(sut.getGMPath(),equalTo(gmPath));	assertNotNull(sut.getGMPath());	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertNotNull(result);	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertNotNull(result);	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals(expectedVersion, result);	0	1	0	0	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	`assertThat(result.getVersion(), equalTo(expectedVersion));`	0	1	0	0	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals("Expected version is not equal to the actual one", expectedVersion, result);	0	1	0	0	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals(new DefaultArtifactVersion("1.2.3"), result);	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals("The extracted version does not match the expected version.", expectedVersion, result.toString());	0	1	0	0	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals(new DefaultArtifactVersion("2.0.0"), result);	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertNotNull(result);`	0	0	0	1	0
+38	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessAndExtractVersion	assertThat(result,notNullValue());	assertEquals( expectedVersion , result ) ;	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals(new DefaultArtifactVersion("1.2.3"), result);	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	`assertNotNull(result);`	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals(version, result.toString());	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals("Expected version does not match", expectedVersion, result.toString());	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals("Expected version does not match actual version", expectedVersion, result);	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals("Expected version not returned", expectedVersion, result);`	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals("1.0.0", result.toString());	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals(new DefaultArtifactVersion("1.2.3"), result);	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertNotNull(result);	0	1	0	0	0
+39	sharneng/gm4java	GMProcessFactoryImplTest	getVersion_callsGMProcessOnlyOnce	assertThat(sut.getVersion(),is(result));	assertEquals("1.0.0", result.toString());	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(gmPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals("The returned path should be the same as the path passed to the constructor.", gmPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(expectedGMPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(gmPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(gmPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	`assertEquals(gmPath, sut.getGMPath());`	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(expectedOutput, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertNotNull(result);`	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	assertEquals(gmPath, result);	0	1	0	0	0
+40	sharneng/gm4java	GMProcessFactoryImplTest	getGMPath_returnsPathPassedToConstructor	assertThat(result,equalTo(gmPath));	`assertEquals(expectedOutput, result);`	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	`assertThat(connection2, sameInstance(connection));`	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertSame("borrowObject method should return the same object when called twice in a row", connection, connection2);	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertNotSame(connection, connection2);	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertThat(connection2, not(equalTo(connection)));	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertEquals(connection, connection2);	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);`	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertTrue(connection == connection2);	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertThat(connection2, sameInstance(connection));	0	1	0	0	0
+41	sharneng/gm4java	GMConnectionPoolTest	borrowObject_reusesObjectReturnedToPool	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotNull(connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	`assertNotSame(connection, connection2);`	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	`assertNotEquals(connection, connection2);`	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertNotEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertEquals(connection, connection2);	0	1	0	0	0
+42	sharneng/gm4java	GMConnectionPoolTest	setTestOnX_noEffect_whenOff	assertThat(connection2,is(connection));	assertEquals(connection, connection2); // verifies that the two objects borrowed are equal	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	`assertNotSame(connection, connection2);`	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection2, connection);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	`assertNotEquals(connection2, connection);`	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+43	sharneng/gm4java	GMConnectionPoolTest	setTestOnBorrow_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection2, connection);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertEquals(2, sut.getNumActive());	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotSame(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	`assertNotEquals(connection, connection2);`	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotSame(connection, connection2);	0	1	0	0	0
+44	sharneng/gm4java	GMConnectionPoolTest	setTestOnReturn_removesTestFailedConnection	assertThat(connection2,not(is(connection)));	assertNotEquals(connection, connection2);	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertNotEquals("", sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals("STR", sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(gmPath, sut.getGMPath());	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals(expected, actual);	0	1	0	0	0
+45	sharneng/gm4java	GMConnectionPoolTest	setGMPath_changesCommandSendtoGM	assertThat(sut.getGMPath(),is(gmPath));	assertEquals("Expected GM path to match", gmPath, sut.getGMPath());	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	`assertThat(result, is(expected));`	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+46	sharneng/gm4java	PooledGMServiceTest	getConnection__execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals("STR", command, gmCommand);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+47	sharneng/gm4java	PooledGMServiceTest	getConnection__executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals("STR", command);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+48	sharneng/gm4java	PooledGMServiceTest	execute_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	`assertNotNull(result);`	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	`assertEquals(expected, result);`	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertSame(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertEquals(expected, result);	0	1	0	0	0
+49	sharneng/gm4java	PooledGMServiceTest	executeByList_delegatesToBorrowedConnection	assertThat(result,is(expected));	assertThat(result, equalTo(expected));	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	assertEquals(text, stream.toString());	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	assertEquals(expectedOutput, stream.toString());	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	`assertTrue(stream.toString().contains(text));`	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	`assertEquals(text, stream.toString());`	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	`assertEquals(text, stream.toString());`	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	`assertEquals(text, stream.toString());`	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	assertEquals(expectedOutput, actualOutput);	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	assertEquals(text, stream.toString());	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	`assertEquals(text, stream.toString());`	0	1	0	0	0
+50	sharneng/gm4java	ReaderWriterProcessImplTest	getWriter__write_sendStringToStream	assertThat(stream.toByteArray(),equalTo(text.getBytes()));	assertTrue(stream.toString().contains(text));	0	1	0	0	0

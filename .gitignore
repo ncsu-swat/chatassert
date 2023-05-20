@@ -3,8 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
-*.so
+# C extensions (commenting since the my_languages.so in eval/parser has .so)
+# *.so
 
 # Distribution / packaging
 .Python

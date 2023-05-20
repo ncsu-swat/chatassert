@@ -9,12 +9,17 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+import py4j.GatewayServer;
+
 public class Main {
     
     public static void main(String[] args) throws Exception {
         // uncomment to see an example of the this transformation (for canonicalization of assertion)
         // thisTransformationSampler();        
-        methodTransplantation();
+        // methodTransplantation();
+
+        GatewayServer gatewayServer = new GatewayServer(new MethodInjector());
+        gatewayServer.start();
     }
 
     private static void methodTransplantation() throws FileNotFoundException {
