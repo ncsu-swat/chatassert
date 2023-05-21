@@ -159,8 +159,8 @@ def main():
     print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
     print('Teco BLEU: {}'.format(bleu(dataTeco)))
 
-    # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
-    # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
+    print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
 
     print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
     print('Teco Rouge: {}'.format(rouge(dataTeco)))
