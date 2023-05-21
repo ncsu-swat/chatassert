@@ -156,9 +156,9 @@ def edit_sim(data):
         true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
         pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
 
-        score += edit_distance(true, pred)
+        score += edit_distance(true, pred)/max(len(true), len(pred))
 
-    return score/len(data)
+    return 1-score/len(data)
 
 def main():
     dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestID', 'TrueOracle', 'GenOracle'])
