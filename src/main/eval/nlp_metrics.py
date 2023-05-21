@@ -1,4 +1,5 @@
 import pandas as pd
+from nltk import edit_distance
 from bleu import corpus_bleu, SmoothingFunction
 import weighted_ngram_match
 import syntax_match
@@ -147,10 +148,17 @@ def rouge(data):
         
         score = scorer.score(true, pred)['rougeL'][2] # 2 for fmeasure
 
-    return score
+    return score/len(data)
 
-def edit_sim(refs, preds):
-    pass
+def edit_sim(data):
+    score = 0
+    for true, pred in zip(data['TrueOracle'], data['GenOracle']):
+        true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
+        pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
+
+        score += nltk.edit_distance(true, pred)
+
+    return score/len(data)
 
 def main():
     dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestID', 'TrueOracle', 'GenOracle'])
@@ -164,5 +172,8 @@ def main():
 
     print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
     print('Teco Rouge: {}'.format(rouge(dataTeco)))
+
+    print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
+    print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
 
 main()
