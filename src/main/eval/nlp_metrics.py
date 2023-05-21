@@ -156,7 +156,7 @@ def edit_sim(data):
         true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
         pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
 
-        score += nltk.edit_distance(true, pred)
+        score += edit_distance(true, pred)
 
     return score/len(data)
 
