@@ -1,4 +1,4 @@
-TestID	NumPreds	TrueOracle	GenOracle
+TestID	NumPreds	True Oracle	Gen Oracle
 0	10	assertEquals(expected,actual);	assertEquals(expected,actual);
 0	10	assertEquals(expected,actual);	"assertEquals(""STR"",expected,actual);"
 0	10	assertEquals(expected,actual);	assertEquals(expected,actual);

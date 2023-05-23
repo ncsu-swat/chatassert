@@ -11,7 +11,7 @@ from path_config import DATA_DIR,API_KEY_FILEPATH,CONFIG_DIR, PRO_DIR
 from utils.file_util import read_file
 from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
-from utils.markdown_util import extract_code_block_from_markdown_text
+from utils.markdown_util import extract_assertion
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 
 from py4j.java_gateway import JavaGateway
@@ -26,15 +26,16 @@ openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key
 MAX_INTERACTION = 10  # Maximum number of interactions                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
 
-def interact_with_openai(prompt):
-    # Function for interacting with the API                                                                                                                                                                   
+global messages
+def insert_message(role, content):
+    global messages
+    messages.append({"role": role, "content": content})
 
+def interact_with_openai():
+    # Function for interacting with the API                                                                                                                                                                   
     response = openai.ChatCompletion.create(
         model=MODEL_NAME,
-        messages=[
-            {"role": "system", "content": "You are a chatbot for oracle generation."},
-            {"role": "user", "content": prompt},
-        ]
+        messages=messages
     )
 
     result = ""
@@ -45,16 +46,24 @@ def interact_with_openai(prompt):
 
 
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
-    return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate only one org.junit.Assert statement that is different from the previous one for the same <SETUP>, <TEST>, and <FOCAL>, where <SETUP>: {}\n<TEST>: {}\n<FOCAL>: {}\nDo not include any error message or precision value in the assert statement.".format(setup, test, focal)
+    if interact_index == 1:
+        return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate only one org.junit.Assert statement that is different from the previous one for the same <SETUP>, <TEST>, and <FOCAL>, where <SETUP>: {}\n<TEST>: {}\n<FOCAL>: {}\nDo not include any error message or precision value in the assert statement.".format(setup, test, focal)
+    elif interact_index > 1:
+        return "Can you generate another type of assertion?"
 
 
 if __name__ == "__main__":
+    global messages
+    messages = [
+        {"role": "system", "content": "You are a chatbot for oracle generation."},
+    ]
+
     gateway = JavaGateway()
     assertionTypes = ['assertEquals', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals', 'assertThat']
 
     with open(os.path.join(PRO_DIR, "prelim_res.csv"), "w+") as resCSV:
         csvWriter = csv.writer(resCSV, delimiter='\t')
-        csvWriter.writerow(["Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
+        csvWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
 
         corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
@@ -135,12 +144,18 @@ if __name__ == "__main__":
                         # Initialize the conversation history                                                                                                                                                                     
                         conversation_history = ""
 
+                        messages = [
+                            {"role": "system", "content": "You are a chatbot for oracle generation."},
+                        ]
                         # for variantId, assertion_type in enumerate(assertionTypes):                            
                         for variantId in range(1, MAX_INTERACTION + 1):
+                            print('\n\n')
+                            
                             openai.organization = orgs[current_org]
                             org_counter[current_org] += 1
                             # Add user input to the conversation history                                                                                                                                                          
                             prompt = prompt_generator(variantId, before_code, test_code, focal_code)
+                            insert_message(role="user", content=prompt)
                             # prompt = f"{conversation_history}\n{prompt}"
                             if if_exceed_token_limit(prompt, MODEL_NAME):
                                 #TODO: text-splitter
@@ -149,10 +164,15 @@ if __name__ == "__main__":
                             # Get the model's response  
                             while(True):
                                 try:
-                                    model_response = interact_with_openai(prompt)
+                                    # print('\nMESSAGES: {}'.format(messages))
+                                    model_response = interact_with_openai()
                                     break
-                                except Exception as e:                                                                                                                                                                          
-                                    print("\n\n!!! Interaction Exception (Rate Limit Exceeded? Print Exception Message) - Sleeping for 20s !!!\n")
+                                except Exception as e: 
+                                    sum = 0
+                                    for message in messages:
+                                        sum += len(message['content'])
+
+                                    print("\n\nMessage length: {}\n!!! Interaction Exception (Rate Limit Exceeded? Print Exception Message) - Sleeping for 20s !!!\n".format(sum))
                                     time.sleep(20)
 
                             # Shuffle organizations to avoid Rate Limit Error
@@ -164,20 +184,14 @@ if __name__ == "__main__":
                             # print(model_response)
                             # print('\n----------------------------------------------\n')
 
-                            gpt_oracle = extract_code_block_from_markdown_text(model_response)
+                            gpt_oracle = extract_assertion(model_response)
                             print("Gen: {}".format(gpt_oracle))
 
                             if gpt_oracle == None:
                                 continue ## could not find anything apparently
 
-                            # use fully-qualified name for Assertion type
-                            # TODO (low prio): Better solution is to use a type solver https://www.javadoc.io/doc/com.github.javaparser/javaparser-symbol-solver-core/3.6.10/com/github/javaparser/symbolsolver/JavaSymbolSolver.html
-                            gpt_oracle = gpt_oracle.lstrip()
-                            if 'org.junit.Assert' not in gpt_oracle:
-                                if '.' in gpt_oracle.split('(')[0]:
-                                    gpt_oracle = 'org.junit.Assert.' + gpt_oracle.split('(')[0].split('.')[-1] + '(' + '('.join(gpt_oracle.split('(')[1:])
-                                else:
-                                    gpt_oracle = 'org.junit.Assert.' + gpt_oracle
+                            # add response to conversation history
+                            insert_message(role="assistant", content=gpt_oracle)
 
                             # Check if the oracle is plausible (using py4j and Java Method Injector)
                             testInjector = gateway.entry_point
@@ -196,7 +210,7 @@ if __name__ == "__main__":
                             if res["failures"]+res["errors"] == 0:
                                 print("Plausible oracle detected")
                                 
-                                if gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip() == oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip():
+                                if gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip() == oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip():
                                     corr += 1
                                     csv_corr = "1"
                                 else:
