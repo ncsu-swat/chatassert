@@ -10,16 +10,16 @@ import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class MethodInjector{
+public class PY4JGateway{
     String filePath;
     private JavaParser jParser;
     private CompilationUnit cu;
 
-    MethodInjector(){
+    PY4JGateway(){
 
     }
 
-    MethodInjector(String filePath) throws FileNotFoundException{
+    PY4JGateway(String filePath) throws FileNotFoundException{
         setFile(filePath);
     }
 
@@ -60,6 +60,10 @@ public class MethodInjector{
             System.out.println("Exception occurred - " + e.toString());
         }
 
+        return 0;
+    }
+
+    public int extractMethod(String filePath, String methodName){
         return 0;
     }
 }

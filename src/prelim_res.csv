@@ -1,56 +1,21 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Corr	Incorr	BuildErr	RunErr	TestFailure
-1	1	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertEquals(""802"", actual);"	0	1	0	0	0
-1	2	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertTrue(actual.equals(""802""));"	0	1	0	0	0
-1	3	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertNotEquals(""801"", actual);"	0	1	0	0	0
-1	4	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertNotNull(actual);	0	1	0	0	0
-1	5	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertSame(expected, actual);	0	1	0	0	0
-1	6	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertNotSame(""800"", actual);"	0	1	0	0	0
-1	7	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertFalse(actual.equals(""800""));"	0	1	0	0	0
-1	8	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertNull(expected);	0	1	0	0	0
-1	9	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	"assertTrue(actual.contains(""80""));"	0	1	0	0	0
-1	10	1337joe/cubesensors-for-java	TestPressure	testToMillibar	Assert.assertEquals(expected,actual);	assertNotEquals(expected.toUpperCase(), actual);	0	1	0	0	0
-2	1	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	"assertEquals(""28.08"", actual);"	0	1	0	0	0
-2	2	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertTrue(Double.parseDouble(actual) >= 28.0);	0	1	0	0	0
-2	3	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertNotNull(actual);	0	1	0	0	0
-2	4	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertNotEquals(expected, actual);	0	1	0	0	0
-2	5	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertSame(expected, actual);	0	1	0	0	0
-2	6	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertFalse(expected.equals(actual));	0	1	0	0	0
-2	7	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	"assertArrayEquals(new String[]{""STR""}, new String[]{expected});"	0	1	0	0	0
-2	8	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertNotSame(expected, actual);	0	1	0	0	0
-2	9	1337joe/cubesensors-for-java	TestPressure	testToInHg	Assert.assertEquals(expected,actual);	assertNull(actual);	0	1	0	0	0
-3	1	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
-3	2	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertTrue(aXls.exists());	1	0	0	0	0
-3	3	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	"assertEquals(""expectedValue"", actualValue);"	0	1	0	0	0
-3	4	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	"assertNotEquals(""unexpectedValue"", actualValue);"	0	1	0	0	0
-3	5	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertFalse(condition);	0	1	0	0	0
-3	6	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertArrayEquals(expectedArray, actualArray);	0	1	0	0	0
-3	8	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertSame(expectedObject, actualObject);	0	1	0	0	0
-3	9	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNotSame(firstObject, secondObject);	0	1	0	0	0
-3	10	phax/ph-genericode	ExcelSheetToCodeList04Test	testReadExcel	assertTrue(aXls.exists());	assertNull(object);	0	1	0	0	0
-4	1	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotNull(aXls);	0	1	0	0	0
-4	2	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertTrue(aXls.exists());	1	0	0	0	0
-4	3	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	"assertEquals(""STR"", aXls.getFilename());"	0	1	0	0	0
-4	4	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertSame(ClassPathResource.class, aXls.getClass());	0	1	0	0	0
-4	5	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertArrayEquals(new byte[]{}, aXls.read());	0	1	0	0	0
-4	6	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertFalse(aXls.isDirectory());	0	1	0	0	0
-4	7	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotEquals(0, aXls.contentLength());	0	1	0	0	0
-4	8	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertThrows(IllegalArgumentException.class, () -> new Genericode10CodeListMarshaller(null));	0	1	0	0	0
-4	9	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	assertNotSame(null, new Genericode10CodeListMarshaller());	0	1	0	0	0
-4	10	phax/ph-genericode	ExcelSheetToCodeList10Test	testReadExcel	assertTrue(aXls.exists());	"assertTimeoutPreemptively(Duration.ofSeconds(2), () -> { 
-  // code to be tested
-});"	0	1	0	0	0
-5	1	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"		0	1	0	0	0
-5	2	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	"assertEquals(""Expected output"", actualOutput);"	0	1	0	0	0
-5	3	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertTrue(condition);	0	1	0	0	0
-5	4	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNotNull(object);	0	1	0	0	0
-5	5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertFalse(condition);	0	1	0	0	0
-5	6	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNotEquals(expectedValue, actualValue);	0	1	0	0	0
-5	7	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertArrayEquals(expectedArray, actualArray);	0	1	0	0	0
-5	8	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertSame(expectedObject, actualObject);	0	1	0	0	0
-5	9	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNotSame(notExpectedObject, actualObject);	0	1	0	0	0
-5	10	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNull(object);	0	1	0	0	0
-6	1	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertEquals(""Expected result does not match actual result"", expected.toString(), sql.selectSomeFrom().toString());"	0	1	0	0	0
-6	2	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertTrue(""Expected non-empty result set"", sql.selectSomeFrom().size() > 0);"	0	1	0	0	0
-6	3	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertNotNull(""Expected non-null result set"", sql.selectSomeFrom());"	0	1	0	0	0
-6	4	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertNotEquals(""Expected result not equal to null"", null, sql.selectSomeFrom());"	0	1	0	0	0
-6	5	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertSame(""Expected same objects"", expected, actual);"	0	1	0	0	0
+1	0	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNotNull(sql.toString());	0	0	1	0	0
+1	1	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	"assertNotEquals("""", sql.toString());"	0	0	1	0	0
+1	2	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	"assertTrue(sql.toString().contains(""SELECT * FROM""));"	0	0	1	0	0
+1	3	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	"assertEquals(0, sql.toString().indexOf(""SELECT * FROM""));"	0	0	1	0	0
+1	4	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNotSame(new TSqlBuilder(), sql);	0	1	0	0	0
+1	5	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertFalse(sql.toString().isEmpty());	0	0	1	0	0
+1	6	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertArrayEquals(new int[]{1, 2, 3}, new int[]{1, 2, 3});	0	1	0	0	0
+1	7	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertSame(sql, sql);	0	1	0	0	0
+1	8	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	"assertTrue(sql.toString().startsWith(""SEL""));"	0	0	1	0	0
+1	9	redraiment/jactiverecord	TSqlBuilderTest	testSelectAllFrom	"assertEquals(""STR"",sql.select().from(""STR"").toString());"	assertNull(new TSqlBuilder().toString());	0	0	1	0	0
+2	0	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertNotNull(sql.select(""some_column"").from(""some_table""));"	0	0	1	0	0
+2	1	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertNotNull(sql.select(""some_column"").from(""some_table"").toSql());"	0	0	1	0	0
+2	2	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertTrue(sql.select(""some_column"").from(""some_table"").toSql().contains(""SELECT some_column FROM some_table""));"	0	0	1	0	0
+2	4	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	assertArrayEquals(expectedArray, actualArray);	0	0	1	0	0
+2	5	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertFalse(sql.select(""some_column"").from(""some_table"").toSql().isEmpty());"	0	0	1	0	0
+2	6	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	assertNotSame(expectedObject, actualObject);	0	0	1	0	0
+2	7	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertThrows(expectedException, new Executable() {
+            public void execute() throws Throwable {
+                sql.select(null).from(""some_table"").toSql();"	0	1	0	0	0
+2	8	redraiment/jactiverecord	TSqlBuilderTest	testSelectSomeFrom	"assertEquals(""STR"",sql.select(""STR"",""STR"").from(""STR"").toString());"	"assertNull(sql.select(""some_column"").from(""some_table"").toSql());"	0	0	1	0	0

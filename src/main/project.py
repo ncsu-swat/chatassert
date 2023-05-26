@@ -48,7 +48,8 @@ class Project():
         res_dict = {"build_failure": False, "tests": 0, "failures": 0, "errors": 0}
         print("Running maven tests...")
         
-        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(self.repo_dir, self.sub_dir, className, testName))
+        print(className, testName)
+        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dgpg.skip -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(self.repo_dir, self.sub_dir, className, testName))
 
         # parse the result
         print("Parsing the result...")

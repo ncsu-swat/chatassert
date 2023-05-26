@@ -4,6 +4,8 @@ import csv
 import pandas as pd
 pd.options.display.max_colwidth = 500
 
+from file_util import read_file
+
 from AST import AST
 
 repos = pd.read_json('../../teco_eval/teco/repos/repos.json')
@@ -23,6 +25,11 @@ with open('../../teco_eval/teco/input/id.jsonl', 'r') as idsFile:
 golds = None
 with open('../../teco_eval/teco/input/gold_stmts.jsonl', 'r') as goldsFile:
     golds = [json.loads(line) for line in goldsFile]
+
+# Oracle line numbers in AST without comments
+oracleLns = None
+with open('../../teco_eval/teco/input/eval_locs.jsonl', 'r') as evalLocsFile:
+    oracleLns = [json.loads(line)[1] for line in evalLocsFile]
 
 # Focal paths and methods
 focalPaths, focalMethods = None, None
@@ -85,7 +92,7 @@ def buildTestJson(currentLineNumber):
         testMethodString += testLineAST.pretty_print(indent=4)
     testMethodString += " " * 5 + "".join(golds[currentLineNumber])
     testMethodString += '\n}'
-    test['testMethod'] = testMethodString
+    test['testMethod'] = "@Test\n" + testMethodString
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
@@ -140,8 +147,6 @@ def countTecoStrs():
                     counter += 1
                     found = True
                     break
-        
-    print(counter)
 
 # Check to see if the total number of tests retrieved is equal to the total number of predictions from teco
 def testCounterSanityCheck():
@@ -153,8 +158,6 @@ def testCounterSanityCheck():
     assert counter == len(preds), "Not all teco tests could be retrieved, expected test count: {}, got: {}".format(len(ids), counter)
 
 # countTecoPreds()
-countTecoStrs()
-exit(0)
 
 #-------------------------------------------------
 projectsList = []
