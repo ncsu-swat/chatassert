@@ -32,6 +32,8 @@ def reset_one(target_repo):
                 project = Project(repoName, subDir, gitURL, commit)
                 # clone the project
                 project.init_env()
+            
+                return project
 
 if len(sys.argv) > 1:
     reset_one(sys.argv[1])

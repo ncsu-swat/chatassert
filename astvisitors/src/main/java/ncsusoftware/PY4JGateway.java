@@ -4,6 +4,10 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 
+import com.github.javaparser.ast.stmt.Statement;
+import com.github.javaparser.ast.stmt.AssertStmt;
+import com.github.javaparser.ParseResult;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
@@ -36,7 +40,7 @@ public class PY4JGateway{
     public int inject(String methodName, String newMethod){
         MethodDeclaration newMD = null;
         try{
-            System.out.println("Injecting: {}".format(methodName));
+            System.out.println("Injecting: " + methodName);
 
             newMD = ParseUtil.parseMethodDeclaration(this.jParser, newMethod);
             MethodInjectorTransformer mi = new MethodInjectorTransformer(methodName, newMD);
@@ -52,8 +56,9 @@ public class PY4JGateway{
     }
 
     public int rewriteFile(CompilationUnit cu){
+        FileWriter writer = null;
         try{
-            FileWriter writer = new FileWriter(this.filePath);
+            writer = new FileWriter(this.filePath);
             writer.write(cu.toString());
             writer.close();
         }catch(IOException e){
@@ -63,7 +68,9 @@ public class PY4JGateway{
         return 0;
     }
 
-    public int extractMethod(String filePath, String methodName){
+    public int abstractString(String expr){
+        
+
         return 0;
     }
 }

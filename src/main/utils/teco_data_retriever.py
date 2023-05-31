@@ -92,7 +92,7 @@ def buildTestJson(currentLineNumber):
         testMethodString += testLineAST.pretty_print(indent=4)
     testMethodString += " " * 5 + "".join(golds[currentLineNumber])
     testMethodString += '\n}'
-    test['testMethod'] = "@Test\n" + testMethodString
+    test['testMethod'] = testMethodString
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
@@ -147,6 +147,35 @@ def countTecoStrs():
                     counter += 1
                     found = True
                     break
+
+def abstractStringLiterals(text):
+    string_pos = []
+    i = 0
+    in_string = False
+
+    while i<len(text):
+        print('HERE - {} {}'.format(i, text[i]))
+        if text[i] == '\\' and text[i+1] == "\"":
+            i += 1
+        elif text[i] == "\"":
+            if not in_string:
+                # Starting double quote
+                string_pos.append([i])
+            else:
+                # Ending double quote
+                string_pos[len(string_pos)-1].append(i+1)
+            in_string = not in_string
+        i += 1 
+
+    if len(string_pos)>0: abstracted = text[0:string_pos[0][0]]
+    for i in range(len(string_pos)):
+        abstracted += "\"STR\""
+        if i+1<len(string_pos): abstracted += text[string_pos[i][1]:string_pos[i+1][0]]
+        else: abstracted += text[string_pos[i][1]:len(text)]
+
+    print(string_pos)
+
+    return abstracted
 
 # Check to see if the total number of tests retrieved is equal to the total number of predictions from teco
 def testCounterSanityCheck():

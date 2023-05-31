@@ -61,7 +61,13 @@ class AST:
             s += self.tok + " "
             if self.tok in [';', '{']: s += '\n'
             prev = self.tok_kind
-        if self.children is not None and self.ast_type not in ['MarkerAnnotationExpr']:
+        if self.children is not None:
+            if self.ast_type in ['MarkerAnnotationExpr']:
+                for child in self.children:
+                    s += child.tok
+                s += '\n'
+                return s
+
             for child in self.children:
                 s += child.pretty_print(indent + 2)
         return " " * indent + re.sub(' +', ' ', s)

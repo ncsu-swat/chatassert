@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import openai
 import time
@@ -14,6 +15,7 @@ from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
 from utils.markdown_util import extract_assertion
 from utils.prompt_generator_util import get_vulnerable_function_attributes
+from utils.mock_gpt import mock_response
 
 from py4j.java_gateway import JavaGateway
 
@@ -24,14 +26,16 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 10  # Maximum number of interactions
-FEEDBACK_BUDGET = 5 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
+MAX_INTERACTION = 50  # Maximum number of interactions
+TARGET_NUMBER = 10 # Number of oracles to be generated
+FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
+SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
 
-global messages
+global conversation_history, feedback_history
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
     if interact_index == 0:
-        return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate only one org.junit.Assert statement that is different from the previous one for the same <SETUP>, <TEST>, and <FOCAL>, where <SETUP>: {}\n<TEST>: {}\n<FOCAL>: {}\nDo not include any error message or precision value in the assert statement.".format(setup, test, focal)
+        return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate only one org.junit.Assert statement where,\n\n<SETUP>: ```{}```\n\n<TEST>: ```{}```\n\n<FOCAL>: ```{}```\n".format(setup, test, focal)
     elif interact_index > 0:
         return "Can you generate another type of assertion?"
 
@@ -43,8 +47,12 @@ def shuffle_organization():
         org_counter[current_org] = 0
         current_org = (current_org + 1) % len(org_counter)
 
-def interact_with_openai():
+def interact_with_openai(temperature=1, which_history="conversation"):
+    global history, conversation_history, feedback_history
     global openai, orgs, org_counter, current_org
+
+    if which_history == "conversation": history = conversation_history
+    elif which_history == "feedback": history = feedback_history
 
     # Increase current organization's interaction counter for shuffle tracking
     openai.organization = orgs[current_org]
@@ -56,7 +64,8 @@ def interact_with_openai():
             # Function for interacting with the API                                                                                                                                                                   
             response = openai.ChatCompletion.create(
                 model=MODEL_NAME,
-                messages=messages
+                messages=history,
+                temperature=temperature
             )
 
             result = ""
@@ -65,72 +74,94 @@ def interact_with_openai():
             break
         except Exception as e: 
             sum = 0
-            for message in messages:
+            for message in history:
                 sum += len(message['content'])
 
-            print("\n\nMessage length: {}\n!!! Interaction Exception (Rate Limit Exceeded? Print Exception Message) - Sleeping for 20s !!!\n".format(sum))
-            time.sleep(20)
+            print("\n!!! Interaction Exception !!!")
+            # Interaction exception can be either due to "exceeding token limit" or "exceeding rate limit"
+            print("Message length: {}".format(sum))
+            if sum > 3096:
+                # Preemptively resetting conversation history to avoid future interaction exception due to exceeding token limit
+                if which_history == "conversation":
+                    conversation_history = [
+                        {"role": "system", "content": SYSTEM_ROLE},
+                        {"role": conversation_history[1]["role"], "content": conversation_history[1]["content"]} # Restoring original prompt
+                    ]
+                elif which_history == "feedback":
+                    feedback_history = [
+                        {"role": "system", "content": SYSTEM_ROLE}
+                    ]
+
+            else:
+                print("Potentially rate limit exceeded - Sleeping for 20s\n")
+                time.sleep(20)
 
     shuffle_organization()
 
     return result
 
-def get_gpt_oracle():
-    model_response = interact_with_openai()
-    gpt_oracle = extract_assertion(model_response)
-    print("Gen: {}".format(gpt_oracle))
+def get_gpt_oracle(mock_flag=False, test_name="", temperature=1, which_history="conversation"):
+    gpt_oracle = None
+    
+    if mock_flag:
+        print(test_name)
+        gpt_oracle = extract_assertion(mock_response(test_name))
+        print("Gen: {}".format(gpt_oracle))
 
-    if gpt_oracle is not None:
-        # add response to conversation history
-        insert_message(role="assistant", content=gpt_oracle)
+        if gpt_oracle is None:
+            return None
+    else:
+        model_response = interact_with_openai(temperature, which_history)
+        gpt_oracle = extract_assertion(model_response)
+        print("Gen: {}".format(gpt_oracle))
+
+        if (gpt_oracle is None) or (gpt_oracle.strip() == "org.junit.Assert."):
+            return None
 
     return gpt_oracle
 
-def ask(oracle_id, before_code, test_code, focal_code):
-    global messages
+def ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code):
+    global conversation_history
     
     # Add user input to the conversation history                                                                                                                                                          
     prompt = prompt_generator(oracle_id, before_code, test_code, focal_code)
-    insert_message(role="user", content=prompt)
+    insert_message(role="user", content=prompt, which_history="conversation")
 
     if if_exceed_token_limit(prompt, MODEL_NAME):
         #TODO: text-splitter
         pass
 
-    gpt_oracle = get_gpt_oracle()
+    gpt_oracle = get_gpt_oracle(mock_flag=mock_flag, test_name=test_name)
 
     return gpt_oracle
 
-def follow_up(feedback_anchor, gpt_oracle):
-    res, feedback = collect_feedback(gateway, project, filePath, className, test_name, test_code, gpt_oracle)
+def follow_up(mock_flag, gateway, oracle_id, project, file_path, className, test_name, test_code, gpt_oracle):
+    # Adding the original assertion generation prompt in the feedback chain to give ChatGPT more content
+    insert_message(role="user", content=conversation_history[1]["content"], which_history="feedback")
+
+    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, className, test_name, test_code, gpt_oracle)
 
     for feedback_id in range(FEEDBACK_BUDGET):
-        print('\n\nMESSAGES:')
-        print(messages)
-        print('\n\n')
+        # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
         if feedback is not None:
-            if len(feedback) > 0 and (feedback_id != FEEDBACK_BUDGET): 
-                gpt_oracle = get_gpt_oracle()
-            elif len(feedback) == 0 or (feedback_id == FEEDBACK_BUDGET-1):
-                # Cleanup feedback chain
-                for msg_id in range(len(messages)-1, feedback_anchor-1, -1): messages.pop(msg_id)
-                # Add the most recent gpt_oracle that resolved compilation/test errors or if FEEDBACK_BUDGET is over select the last gpt_oracle in the feedback chain
-                insert_message(role="assistant", content=gpt_oracle)
-                # Either no error has occurred or the compilation/test error was not resolved within the FEEDBACK_BUDGET
-                print('\n\nAFTER CLEANUP:')
-                print(messages)
-                print('\n\n')
+            if len(feedback) > 0 and (feedback_id < FEEDBACK_BUDGET-1): 
+                insert_message(role="assistant", content=gpt_oracle, which_history="feedback")
+
+                fixed_gpt_oracle = get_gpt_oracle(mock_flag=mock_flag, test_name=test_name, temperature=1.5, which_history="feedback")
+                if fixed_gpt_oracle is None: continue
+                else: gpt_oracle = fixed_gpt_oracle
+            elif len(feedback) == 0:
                 break
 
-        res, feedback = collect_feedback(gateway, project, filePath, className, test_name, test_code, gpt_oracle)                       
+        res, feedback = collect_feedback(gateway, oracle_id, project, filePath, className, test_name, test_code, gpt_oracle)                       
     
+    if feedback is None or len(feedback) > 0:
+        # Even after exhausting the feedback budget, no plausible oracle was found
+        return None, None, None
+
     return res, feedback, gpt_oracle
 
-def insert_message(role, content):
-    global messages
-    messages.append({"role": role, "content": content})
-
-def collect_feedback(javaGateway, project, file_path, class_name, test_name, test_code, gpt_oracle):
+def collect_feedback(javaGateway, oracle_id, project, file_path, class_name, test_name, test_code, gpt_oracle):
     # Check if the oracle is plausible (using py4j and Java Method Injector)
     try:
         testInjector = javaGateway.entry_point
@@ -138,22 +169,35 @@ def collect_feedback(javaGateway, project, file_path, class_name, test_name, tes
         testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>", gpt_oracle))
 
         res, output = project.run_test(class_name, test_name)
-        output = output.lower()
+
+        with open('execution_log/{}_{}.txt'.format(test_name, oracle_id), 'w+') as logFile:
+            logFile.write(output)
 
         feedback = ""
         output_lines = output.split('\n')
         
         for i in range(len(output_lines)):
             # Compilation error
-            if "compilation failure" in output_lines[i]:
-                if i+1 < len(output_lines):
-                    feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(output_lines[i+1])
-                else:
-                    print('\n\n!!! Could not retrieve compilation error message !!!\n\n')
+            if "COMPILATION ERROR" in output_lines[i]:
+                err_msg = ""
+                err_line = 2
+                while(i+err_line < len(output_lines)): # Get the next 5 lines until we get a line with INFO or ERROR or WARNING
+                    if (err_line == 2) and (i+err_line < len(output_lines)):
+                        err_msg += output_lines[i+err_line]
+                    elif (err_line > 2) and (i+err_line < len(output_lines)):
+                        if ("[ERROR]" in output_lines[i+err_line]) or ("[INFO]" in output_lines[i+err_line]) or ("[WARNING]" in output_lines[i+err_line]):
+                            feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(err_msg.replace("[ERROR]", ""))
+                            break
+                        else:
+                            err_msg += " " + output_lines[i+err_line]
+                    else:
+                        if len(feedback) == 0:
+                            print('\n\n!!! Could not retrieve compilation error message !!!\n\n')
+                    err_line += 1
                 break
 
             # Test failure
-            if "test failures" in output_lines[i]:
+            if "test failures" in output_lines[i].lower():
                 report_dir = os.path.join(project.repo_dir, 'target/surefire-reports/')
                 report_path = None
                 for r_path in os.listdir(report_dir):
@@ -162,16 +206,16 @@ def collect_feedback(javaGateway, project, file_path, class_name, test_name, tes
                         break
                 
                 if report_path is None:
-                    print('\n\n!!! Could not retrieve test error message (report path not found) !!!\n\n')
+                    print("\n\n!!! Could not retrieve test error message (report path not found) !!!\n\n")
                 else:
                     report = ET.parse(report_path)
                     root = report.getroot()
                     message_found = False
-                    for item in root.findall('./testcase'):
+                    for item in root.findall("./testcase"):
                         for child in item:
-                            if child.tag == 'failure':
+                            if child.tag == "failure" or child.tag == "error":
                                 err_msg = child.attrib['message'] if 'message' in child.attrib else child.text.split('\n')[0]
-                                feedback = "I am getting the following test failure: \n{}\nCan you please fix the generated assert statement?".format(err_msg)
+                                feedback = "I am getting the following test {}: \n{}\nCan you please fix the generated assert statement?".format(child.tag, err_msg)
                                 message_found = True
                                 break
                         # If there are multiple test cases reported then consider the failure message of only the first test case
@@ -182,8 +226,8 @@ def collect_feedback(javaGateway, project, file_path, class_name, test_name, tes
                 break
 
         if len(feedback) > 0:
-            print('\nFEEDBACK: {}\n'.format(feedback))
-            insert_message(role='user', content=feedback)
+            # print('\nFEEDBACK: {}\n'.format(feedback))
+            insert_message(role="user", content=feedback, which_history="feedback")
     
         return res, feedback
 
@@ -192,18 +236,32 @@ def collect_feedback(javaGateway, project, file_path, class_name, test_name, tes
 
     return None, None
 
+def insert_message(role, content, which_history):
+    global conversation_history, feedback_history
+    if which_history == "conversation": conversation_history.append({"role": role, "content": content})
+    elif which_history == "feedback": feedback_history.append({"role": role, "content": content})
+
 if __name__ == "__main__":
-    global messages
-    messages = [
-        {"role": "system", "content": "You are a chatbot for oracle generation."},
+    v1_flag, v2_flag, mock_flag = False, False, False
+    arg = " ".join(sys.argv)
+    if 'v1' in arg: v1_flag = True
+    if 'v2' in arg: v2_flag = True
+    if 'mock' in arg: mock_flag = True
+
+    global conversation_history, feedback_history
+    conversation_history = [
+        {"role": "system", "content": SYSTEM_ROLE},
     ]
 
     gateway = JavaGateway()
     assertionTypes = ['assertEquals', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals', 'assertThat']
 
-    with open(os.path.join(PRO_DIR, "prelim_res.csv"), "w+") as resCSV:
-        csvWriter = csv.writer(resCSV, delimiter='\t')
-        csvWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
+    with open(os.path.join(PRO_DIR, "res_all.csv"), "w+") as resAll, open(os.path.join(PRO_DIR, "res_pass.csv"), "w+") as resPass:
+        resAllWriter = csv.writer(resAll, delimiter='\t')
+        resPassWriter = csv.writer(resPass, delimiter='\t')
+
+        resAllWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
+        resPassWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
 
         corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
@@ -220,6 +278,11 @@ if __name__ == "__main__":
                 gitURL = "git@github.com:{}/{}.git".format(userName, repoName)
                 commit = project_data["commitSHA"]
                 allTests = project_data["allTests"]
+                
+                # removing existing repo
+                if repoName in os.listdir('../tmp/repos'):
+                    os.system('rm -rf ../tmp/repos/{}'.format(repoName))
+                
                 # create project object
                 project = Project(repoName, subDir, gitURL, commit)
                 # clone the project
@@ -253,44 +316,70 @@ if __name__ == "__main__":
                     for test in classTests:
                         testId += 1
                         test_name = test["testName"]
-                        test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
-                        # test_lines[test["oracleLn"]-test["startLn"]] = "<AssertPlaceHolder>"
+                        test_lines = read_file(filePath, int(test["startLn"]), int(test["oracleLn"]))
+                        if len(test_lines) == 0: continue
+                        test_lines[test["oracleLn"]-test["startLn"]] = "\t<AssertPlaceHolder>\n}"
                                 
-                        # test_code = "".join(test_lines)
-                        test_code = test["testMethod"]
+                        test_code = "".join(test_lines)
+                        # test_code = test["testMethod"]
 
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
-                        # focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
-                        focal_code = test["focalMethod"]
+                        focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
+                        # focal_code = test["focalMethod"]
 
                         # RQ1. Exp1. Rewrite the original source code to comply with Teco's formatting (e.g. no comments, string literals are replaced by STR)
-                        testInjector = gateway.entry_point
-                        testInjector.setFile(filePath)
-                        testInjector.inject(test_name, test_code)
-                        if before_name != "":
-                            testInjector.inject(before_name, before_code)
+                        # testInjector = gateway.entry_point
+                        # testInjector.setFile(filePath)
+                        # testInjector.inject(test_name, test_code)
+                        # if before_name != "":
+                        #     testInjector.inject(before_name, before_code)
 
-                        focalInjector = gateway.entry_point
-                        focalInjector.setFile(focal_path)
-                        focalInjector.inject(focal_name, focal_code)
+                        # focalInjector = gateway.entry_point
+                        # focalInjector.setFile(focal_path)
+                        # focalInjector.inject(focal_name, focal_code)
 
                         # oracle_code = "".join(read_file(filePath, int(test["oracleLn"]), int(test["oracleLn"])))
                         oracle_code = test['oracle']
-                        test_code = test_code.replace(oracle_code, "<AssertPlaceHolder>")
+                        # test_code = test_code.replace(oracle_code, "<AssertPlaceHolder>")
 
                         # print('\n\nTEST CODE: {}\nORACLE CODE: {}\nTEST CODE: {}\n\n'.format(''.join(test_lines), oracle_code, test_code))
 
-                        messages = [
-                            {"role": "system", "content": "You are a chatbot for oracle generation."},
+                        conversation_history = [
+                            {"role": "system", "content": SYSTEM_ROLE},
                         ]
-                        feedback_anchor = None
+                        target_number = TARGET_NUMBER
                         # for variantId, assertion_type in enumerate(assertionTypes):                            
                         for oracle_id in range(MAX_INTERACTION):
-                            print('\n\n')
-                            gpt_oracle = ask(oracle_id, before_code, test_code, focal_code)
-                            if gpt_oracle == None: continue
-                            res, feedback, gpt_oracle = follow_up(feedback_anchor=len(messages)-1, gpt_oracle=gpt_oracle)
+                            start_time = time.time()
+
+                            feedback_history = [
+                                {"role": "system", "content": SYSTEM_ROLE},
+                            ]
+
+                            if target_number == 0: break # Already produced TARGET_NUMBER of plausible oracles for this test
+
+                            res, feedback = None, None
+                            if v1_flag: # Single feedback
+                                gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
+                                if gpt_oracle is None: continue
+                                res, feedback = collect_feedback(gateway, oracle_id, project, filePath, className, test_name, test_code, gpt_oracle)
+
+                            elif v2_flag: # Feedback loop
+                                gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
+                                if gpt_oracle is None: continue
+                                res, feedback, gpt_oracle = follow_up(mock_flag, gateway, oracle_id, project, filePath, className, test_name, test_code, gpt_oracle)
+                                if gpt_oracle is None: continue
+
+                                if len(feedback) > 0:
+                                    # Explicitly tell ChatGPT to avoid gpt_oracle
+                                    insert_message(role="assistant", content="AVOID generating the assertion `"+gpt_oracle+"`", which_history="conversation")
+
+                                # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
+                                if len(gpt_oracle) > 0 and len(feedback) == 0:
+                                    # Oracle compiles and runs - add it to main conversation history
+                                    insert_message(role="assistant", content=gpt_oracle, which_history="conversation")
+                                    target_number -= 1
 
                             if res is not None:
                                 csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"
@@ -322,7 +411,12 @@ if __name__ == "__main__":
                                     test_failure += 1
                                     csv_testFailure = "1"
 
-                                csvWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId, oracle_id, userName, repoName, className, test_name, oracle_code.strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
+                                end_time = time.time()
+
+                                if len(feedback) == 0:
+                                    resPassWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId, oracle_id, userName, repoName, className, test_name, oracle_code.strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
+                                
+                                resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId, oracle_id, userName, repoName, className, test_name, oracle_code.strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
 
                                 # input('\n\nENTER A KEY')
                     #         break
