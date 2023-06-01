@@ -5,6 +5,7 @@ import openai
 import time
 import csv
 import re
+import shutil
 import xml.etree.ElementTree as ET
 
 from utils.gpt_util import if_exceed_token_limit
@@ -26,9 +27,9 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 50  # Maximum number of interactions
+MAX_INTERACTION = 10  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
-FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
+FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
 
@@ -241,6 +242,14 @@ def insert_message(role, content, which_history):
     if which_history == "conversation": conversation_history.append({"role": role, "content": content})
     elif which_history == "feedback": feedback_history.append({"role": role, "content": content})
 
+def backup_test_file(file_path):
+    backup_file_path = file_path.replace(".java", "") + "_backup.java"
+    shutil.copyfile(file_path, backup_file_path)
+
+def restore_test_file(file_path):
+    backup_file_path = file_path.replace(".java", "") + "_backup.java"
+    shutil.copyfile(backup_file_path, file_path)
+
 if __name__ == "__main__":
     v1_flag, v2_flag, mock_flag = False, False, False
     arg = " ".join(sys.argv)
@@ -294,6 +303,8 @@ if __name__ == "__main__":
                     filePath = os.path.join(project.repo_dir, classPath)
                     classTests = testClass["classTests"]
 
+                    backup_test_file(filePath)
+
                     before_name = ""
                     before_code = ""
                     after_code = ""
@@ -313,8 +324,10 @@ if __name__ == "__main__":
                     #     raise Exception("expecting all tests to pass")
                             
                     print("\n-----------------------------------------\nAnalyzing Oracles for Test Class: {}\n-----------------------------------------\n".format(className))
-                    for test in classTests:
-                        testId += 1
+                    for (testId, test) in enumerate(classTests):
+                        # Restore test file from backup
+                        restore_test_file(filePath)
+
                         test_name = test["testName"]
                         test_lines = read_file(filePath, int(test["startLn"]), int(test["oracleLn"]))
                         if len(test_lines) == 0: continue

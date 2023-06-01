@@ -33,19 +33,24 @@
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,39] error: cannot find symbol
-[INFO] 1 error
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/annotation/OPLogTest.java:[17,24] error: cannot find symbol
+[ERROR]   symbol:   method assertNotEquals(String,String)
+  location: class Assert
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,24] error: cannot find symbol
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.996 s
-[INFO] Finished at: 2023-05-31T14:11:18-04:00
+[INFO] Total time:  3.237 s
+[INFO] Finished at: 2023-05-31T16:20:37-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure: Compilation failure: 
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,39] error: cannot find symbol
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/annotation/OPLogTest.java:[17,24] error: cannot find symbol
+[ERROR]   symbol:   method assertNotEquals(String,String)
+[ERROR]   location: class Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,24] error: cannot find symbol
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

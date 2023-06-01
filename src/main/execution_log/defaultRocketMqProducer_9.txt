@@ -41,8 +41,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.038 s
-[INFO] Finished at: 2023-05-31T13:31:22-04:00
+[INFO] Total time:  2.488 s
+[INFO] Finished at: 2023-05-31T16:10:23-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project spring-boot-rocketmq-starter: Compilation failure: Compilation failure: 
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[17,24] package javax.annotation does not exist
