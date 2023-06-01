@@ -19,3 +19,4 @@ tiktoken
 tqdm==4.65.0
 urllib3==1.26.15
 yarl==1.9.1
+py4j==0.10.9.7
