@@ -1,0 +1,6 @@
+{
+    "1": [
+        "Assert.assertEquals(expected,actual)",
+        "Assert.assertArrayEquals(expected,actual)"
+    ]
+}

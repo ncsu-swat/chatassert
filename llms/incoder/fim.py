@@ -205,61 +205,17 @@ def <insert>
     print(result["text"])
     return result["text"]
 
-def ishrak_example(example, max_to_generate=128, temperature=0.2):
-    parts = example.split("<insert>")
-    result = infill(parts, max_to_generate=max_to_generate, temperature=temperature)
-#    print("completed document:")
-#    print(result["text"])
-    return result["text"]
+# def ishrak_example(example, max_to_generate=128, temperature=0.2):
+#     parts = example.split("<insert>")
+#     result = infill(parts, max_to_generate=max_to_generate, temperature=temperature)
+#     return result["text"]
 
 
 if __name__ == "__main__":
-    # print("code to docstring test:")
-    # code_to_docstring()
-    # print()
-    # print("docstring to code test:")
-    # docstring_to_code()
+    print("code to docstring test:")
+    code_to_docstring()
+    print()
+    print("docstring to code test:")
+    docstring_to_code()
 
 
-    ## this should be generated with an AST
-
-    example_one = '''\
-@Test
-public void testParamCountOneItem ( ) {
-   final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
-   Assert.assertEquals(<insert>, 1);
-} <|/ file |>'''    
-
-    example_two = '''\
-@Test
-public void testParamCountOneItem ( ) {
-   final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
-   Assert.assertEquals(1, <insert>);
-} <|/ file |>'''
-
-#     example_three = '''\
-# @Test
-# public void testParamCountOneItem ( ) {
-#    final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
-#    Assert.<insert>
-# } <|/ file |>'''
-    
-    examples = [example_one, example_two]
-    oras = set() # store in a set to discard duplicates
-    t1 = time.time()
-    for example in examples:
-        print(".", end="")
-        temp = 0.1
-        for i in range(10):
-            out = ishrak_example(example, max_to_generate=30, temperature=temp)
-            temp += 0.05
-            # extracting assertion from string
-            tmp = out[out.find("Assert."):]
-            ora = tmp[:tmp.find(';')]
-            ora = ora.replace(" ", "") # remove empty spaces to facilitate deduplication            
-            oras.add(ora)
-    # print syntactically unique oracles
-    for ora in oras:
-        print(ora)
-    print(f"ellapsed time {time.time()-t1}")
-            

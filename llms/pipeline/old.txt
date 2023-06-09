@@ -1,0 +1,22 @@
+    ## this should be generated with an AST
+
+    example_one = '''\
+@Test
+public void testParamCountOneItem ( ) {
+   final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
+   Assert.assertEquals(<insert>, 1);
+} <|/ file |>'''    
+
+    example_two = '''\
+@Test
+public void testParamCountOneItem ( ) {
+   final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
+   Assert.assertEquals(1, <insert>);
+} <|/ file |>'''
+
+#     example_three = '''\
+# @Test
+# public void testParamCountOneItem ( ) {
+#    final OSimpleKeyIndexDefinition keyIndexDefinition = new OSimpleKeyIndexDefinition ( OType . INTEGER ) ; 
+#    Assert.<insert>
+# } <|/ file |>'''
