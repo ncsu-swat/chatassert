@@ -33,36 +33,19 @@
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/annotation/OPLogTest.java:[17,24] error: cannot find symbol
-[ERROR]   symbol:   method assertNotEquals(String,String)
-  location: class Assert
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,24] error: cannot find symbol
-[ERROR]   symbol:   variable assertj
-  location: class Assert
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,38] error: cannot find symbol
-[ERROR]   symbol:   variable expectedOutput
-  location: class CommUtilTest
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,54] error: cannot find symbol
-[INFO] 4 errors 
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[44,24] error: no suitable method found for assertEquals(no arguments)
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.055 s
-[INFO] Finished at: 2023-05-31T16:38:51-04:00
+[INFO] Total time:  2.987 s
+[INFO] Finished at: 2023-06-02T05:31:18-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure: Compilation failure: 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/annotation/OPLogTest.java:[17,24] error: cannot find symbol
-[ERROR]   symbol:   method assertNotEquals(String,String)
-[ERROR]   location: class Assert
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/ReflexUtilTest.java:[21,24] error: cannot find symbol
-[ERROR]   symbol:   variable assertj
-[ERROR]   location: class Assert
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,38] error: cannot find symbol
-[ERROR]   symbol:   variable expectedOutput
-[ERROR]   location: class CommUtilTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,54] error: cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[44,24] error: no suitable method found for assertEquals(no arguments)
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

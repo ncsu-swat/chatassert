@@ -1,0 +1,60 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.rockagen:commons-lib >----------------------
+[INFO] Building commons-lib 0.1.10-RELEASE
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ commons-lib ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ commons-lib ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[40,55] [deprecation] ROUND_HALF_UP in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[175,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[196,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[233,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[270,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ commons-lib ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[73,38] error: cannot find symbol
+[ERROR]   symbol:   variable expectedHexString
+  location: class CommUtilTest
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[73,69] error: cannot find symbol
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.303 s
+[INFO] Finished at: 2023-06-02T07:20:54-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure: Compilation failure: 
+[ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[73,38] error: cannot find symbol
+[ERROR]   symbol:   variable expectedHexString
+[ERROR]   location: class CommUtilTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[73,69] error: cannot find symbol
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

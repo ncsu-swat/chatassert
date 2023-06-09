@@ -1,0 +1,125 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.orientechnologies:orientdb-core >-----------------
+[INFO] Building OrientDB Core 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1685993909528
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-core ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Dsecurity.userPasswordSaltIterations=10
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- javacc-maven-plugin:2.6:jjtree-javacc (jjtree-javacc) @ orientdb-core ---
+[INFO] Skipping - all parsers are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/io/OIOUtils.java:[29,35] com.sun.jmx.remote.internal.ArrayQueue is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[34,40] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,21] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,29] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[39,19] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[53,49] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,25] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,5] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,38] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[61,28] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[78,7] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[92,43] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,24] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[117,9] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[39,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[46,18] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[49,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[42,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[50,15] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[53,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,11] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,31] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,31] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[77,26] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Some input files use or override a deprecated API that is marked for removal.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Recompile with -Xlint:removal for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-core ---
+[WARNING] Manifest com.orientechnologies:orientdb-core:jar:3.0.42 : Unused Export-Package instructions: [com.orientechnologies.nio.*] 
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.423 s
+[INFO] Finished at: 2023-06-05T15:38:49-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java:[347,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

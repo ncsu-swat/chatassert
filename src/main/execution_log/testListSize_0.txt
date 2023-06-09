@@ -1,0 +1,343 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.orientechnologies:orientdb-core >-----------------
+[INFO] Building OrientDB Core 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686141862883
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-core ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Dsecurity.userPasswordSaltIterations=10
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- javacc-maven-plugin:2.6:jjtree-javacc (jjtree-javacc) @ orientdb-core ---
+[INFO] Skipping - all parsers are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/io/OIOUtils.java:[29,35] com.sun.jmx.remote.internal.ArrayQueue is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[34,40] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,21] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,29] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[39,19] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[53,49] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,25] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,5] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,38] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[61,28] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[78,7] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[92,43] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,24] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[117,9] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[39,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[46,18] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[49,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[42,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[50,15] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[53,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,11] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,31] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,31] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[77,26] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Some input files use or override a deprecated API that is marked for removal.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Recompile with -Xlint:removal for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-core ---
+[WARNING] Manifest com.orientechnologies:orientdb-core:jar:3.0.42 : Unused Export-Package instructions: [com.orientechnologies.nio.*] 
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[17,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorEquals
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorEquals.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorEquals.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[18,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorAnd
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorAnd.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorAnd.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[19,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorOr
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorOr.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorOr.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[20,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNotEquals
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[21,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNotEquals2
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals2.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals2.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[22,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNot
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNot.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNot.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[23,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMinorEquals
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinorEquals.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinorEquals.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[24,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMinor
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinor.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinor.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[25,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajorEquals
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajorEquals.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajorEquals.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[26,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsAll
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsAll.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsAll.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[27,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajor.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajor.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[28,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorLike
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorLike.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorLike.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[29,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMatches
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMatches.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMatches.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[30,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorInstanceof
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorInstanceof.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorInstanceof.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[31,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorIs
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIs.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIs.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[32,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorIn
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIn.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIn.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[33,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsKey
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsKey.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsKey.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[34,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsValue
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsValue.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsValue.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[35,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsText
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsText.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsText.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[36,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContains
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContains.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContains.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[37,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorTraverse
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorTraverse.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorTraverse.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[38,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorBetween
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorBetween.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorBetween.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[43,49] cannot access com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMod
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/math/OQueryOperatorMod.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/math/OQueryOperatorMod.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/CountStepTest.java:[21,9] cannot access com.orientechnologies.orient.core.sql.executor.CountStep
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/CountStep.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/CountStep.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatementTest.java:[54,31] cannot access com.orientechnologies.orient.core.sql.parser.OProfileStorageStatement
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatement.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatement.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[16,9] cannot access com.orientechnologies.common.collection.OMultiValue
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/collection/OMultiValue.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/collection/OMultiValue.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[19,42] cannot find symbol
+  symbol:   method getSize(java.util.List<java.lang.String>)
+  location: class com.orientechnologies.common.collection.OMultiValueTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/coll/SQLFunctionDifferenceTest.java:[37,11] cannot access com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/coll/OSQLFunctionDifference.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/coll/OSQLFunctionDifference.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[INFO] 28 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  39.357 s
+[INFO] Finished at: 2023-06-07T08:45:00-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[17,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorEquals
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorEquals.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorEquals.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[18,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorAnd
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorAnd.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorAnd.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[19,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorOr
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorOr.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorOr.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[20,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNotEquals
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[21,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNotEquals2
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals2.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNotEquals2.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[22,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorNot
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNot.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorNot.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[23,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMinorEquals
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinorEquals.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinorEquals.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[24,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMinor
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinor.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMinor.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[25,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajorEquals
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajorEquals.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajorEquals.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[26,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsAll
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsAll.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsAll.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[27,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMajor
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajor.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMajor.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[28,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorLike
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorLike.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorLike.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[29,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorMatches
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMatches.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorMatches.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[30,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorInstanceof
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorInstanceof.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorInstanceof.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[31,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorIs
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIs.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIs.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[32,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorIn
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIn.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorIn.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[33,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsKey
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsKey.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsKey.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[34,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsValue
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsValue.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsValue.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[35,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContainsText
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsText.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContainsText.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[36,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorContains
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContains.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorContains.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[37,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorTraverse
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorTraverse.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorTraverse.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[38,49] cannot access com.orientechnologies.orient.core.sql.operator.OQueryOperatorBetween
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorBetween.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/OQueryOperatorBetween.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OOQueryOperatorTest.java:[43,49] cannot access com.orientechnologies.orient.core.sql.operator.math.OQueryOperatorMod
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/math/OQueryOperatorMod.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/operator/math/OQueryOperatorMod.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/CountStepTest.java:[21,9] cannot access com.orientechnologies.orient.core.sql.executor.CountStep
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/CountStep.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/CountStep.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatementTest.java:[54,31] cannot access com.orientechnologies.orient.core.sql.parser.OProfileStorageStatement
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatement.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OProfileStorageStatement.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[16,9] cannot access com.orientechnologies.common.collection.OMultiValue
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/collection/OMultiValue.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/collection/OMultiValue.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[19,42] cannot find symbol
+[ERROR]   symbol:   method getSize(java.util.List<java.lang.String>)
+[ERROR]   location: class com.orientechnologies.common.collection.OMultiValueTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/coll/SQLFunctionDifferenceTest.java:[37,11] cannot access com.orientechnologies.orient.core.sql.functions.coll.OSQLFunctionDifference
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/coll/OSQLFunctionDifference.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/coll/OSQLFunctionDifference.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

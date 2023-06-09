@@ -35,10 +35,13 @@
  T E S T S
 -------------------------------------------------------
 Running me.zzp.ar.sql.TSqlBuilderTest
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.036 sec <<< FAILURE!
-testSelectSomeFrom(me.zzp.ar.sql.TSqlBuilderTest)  Time elapsed: 0.006 sec  <<< ERROR!
-java.lang.NullPointerException
-	at me.zzp.ar.sql.AbstractSqlBuilder.toString(AbstractSqlBuilder.java:184)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec <<< FAILURE!
+testSelectSomeFrom(me.zzp.ar.sql.TSqlBuilderTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.AssertionError: expected null, but was:<select someColumn from someTable where someCondition>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotNull(Assert.java:664)
+	at org.junit.Assert.assertNull(Assert.java:646)
+	at org.junit.Assert.assertNull(Assert.java:656)
 	at me.zzp.ar.sql.TSqlBuilderTest.testSelectSomeFrom(TSqlBuilderTest.java:24)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -74,16 +77,15 @@ java.lang.NullPointerException
 
 Results :
 
-Tests in error: 
-  testSelectSomeFrom(me.zzp.ar.sql.TSqlBuilderTest)
+Failed tests:   testSelectSomeFrom(me.zzp.ar.sql.TSqlBuilderTest): expected null, but was:<select someColumn from someTable where someCondition>
 
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.365 s
-[INFO] Finished at: 2023-05-31T12:25:11-04:00
+[INFO] Total time:  2.423 s
+[INFO] Finished at: 2023-06-02T04:05:42-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project jactiverecord: There are test failures.
 [ERROR] 

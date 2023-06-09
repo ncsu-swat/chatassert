@@ -1,5 +1,8 @@
 import json
 import csv
+import random
+import os
+import sys
 
 import pandas as pd
 pd.options.display.max_colwidth = 500
@@ -7,6 +10,11 @@ pd.options.display.max_colwidth = 500
 from file_util import read_file
 
 from AST import AST
+
+sys.path.append('../') # Since Project module is in the parent directory
+from project import Project
+
+#-------------------------------------------
 
 repos = pd.read_json('../../teco_eval/teco/repos/repos.json')
 projects = None
@@ -44,19 +52,20 @@ with open('../../teco_eval/teco/input/test_mkey.jsonl', 'r') as testPathsFile, o
     setupMethods = [json.loads(line) for line in setupMethodsFile]
     testMethods = [json.loads(line) for line in testMethodsFile]
     testSignatures = [json.loads(line) for line in testSignaturesFile]
-    
-# Predictions
-preds = None
-with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
-    preds = [json.loads(line) for line in predsFile]
 
 # Method to create nested test class json object
 def buildTestClassJson(currentLineNumber):
     testClass = dict()
 
     testClass['className'] = testPaths[currentLineNumber].split('/')[-1].split('#')[0]
+    
     testClass['classPath'] = ''
-    if len(project['subRepo']) > 0: testClass['classPath'] += project['subRepo'] + '/'
+    if len(project['subRepos']) > 0: 
+        testFileName = testPaths[currentLineNumber].split('#')[0].split('$')[0].split('/')[-1] + '.java'
+        testClass['subRepo'] = findSubRepoForTest(testFileName)
+        testClass['classPath'] += testClass['subRepo'] + '/' 
+    else:
+        testClass['subRepo'] = ''
     testClass['classPath'] += 'src/test/java/' + testPaths[currentLineNumber].split('#')[0] + '.java'
     
     # Before (setup) method and Before (setup) method line numbers from AST
@@ -96,11 +105,13 @@ def buildTestJson(currentLineNumber):
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
-    test['oracleLn'] = len(testMethod)
+    test['oracleLn'] = test['startLn'] + 2 + len(testMethod) # + 2 because of the @Test annotation and the test method signature
 
     # Add focal method
     test['focalFile'] = ''
-    if len(project['subRepo']) > 0: test['focalFile'] += project['subRepo'] + '/'
+    if len(project['subRepos']) > 0: 
+        focalFileName = focalPaths[currentLineNumber].split('#')[0].split('$')[0].split('/')[-1] + '.java'
+        test['focalFile'] += findSubRepoForTest(focalFileName) + '/'
     test['focalFile'] += 'src/main/java/' + focalPaths[currentLineNumber].split('#')[0] + '.java'
     
     test['focalName'] = focalPaths[currentLineNumber].split('#')[1].split('(')[0]
@@ -115,16 +126,33 @@ def buildTestJson(currentLineNumber):
 
     return test
 
-def countTecoPreds():
-    with open('../../teco_eval/teco/output/preds_processed.csv', 'w+') as preds_csv:
-        csvWriter = csv.writer(preds_csv, delimiter='\t')
-        csvWriter.writerow(['TestID', 'NumPreds', 'True Oracle', 'Gen Oracle'])
-        for i, (pred, gold) in enumerate(zip(preds, golds)):
-            for topPred in pred['topk']:
-                # print(str(i), ''.join(gold).replace('Assert.', ''), ''.join(topPred['toks']).replace('Assert.', ''))
-                goldAssert = ''.join(gold).replace('Assert.', '')
-                predAssert = ''.join(topPred['toks']).replace('Assert.', '')
-                csvWriter.writerow("{}\t{}\t{}\t{}".format(str(i), str(len(pred['topk'])), goldAssert, predAssert).split('\t'))
+# For repositories with multiple maven modules
+def findSubRepoForTest(fileName):
+    gitURL = "git@github.com:{}/{}.git".format(project['userName'], project['repoName'])
+    
+    if not os.path.exists('tmp/repos/{}'.format(project['repoName'])):
+        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], 'tmp')
+        tmpProj.init_env()
+
+    def walker(subRepo, root, searchFile):
+        for root, dirs, files in os.walk(root):
+            for d in dirs:
+                ret = walker(subRepo, os.path.join(root, d), searchFile)
+                if ret is not None:
+                    return ret
+            for f in files:
+                if searchFile == f:
+                    return subRepo
+            return None
+    for subRepo in project['subRepos']:
+        retSubRepo = walker(subRepo, os.path.join('tmp/repos/{}'.format(project['repoName']), subRepo), fileName)
+        if retSubRepo is not None:
+            # print('RET: {}\n'.format(retSubRepo))
+            return retSubRepo
+
+    print('ALERT: Could not find repository sub module for project: {}, file name: {}\n'.format(project['repoName'], fileName))
+
+    return None
 
 def countTecoStrs():
     counter = 0
@@ -148,34 +176,15 @@ def countTecoStrs():
                     found = True
                     break
 
-def abstractStringLiterals(text):
-    string_pos = []
-    i = 0
-    in_string = False
-
-    while i<len(text):
-        print('HERE - {} {}'.format(i, text[i]))
-        if text[i] == '\\' and text[i+1] == "\"":
-            i += 1
-        elif text[i] == "\"":
-            if not in_string:
-                # Starting double quote
-                string_pos.append([i])
-            else:
-                # Ending double quote
-                string_pos[len(string_pos)-1].append(i+1)
-            in_string = not in_string
-        i += 1 
-
-    if len(string_pos)>0: abstracted = text[0:string_pos[0][0]]
-    for i in range(len(string_pos)):
-        abstracted += "\"STR\""
-        if i+1<len(string_pos): abstracted += text[string_pos[i][1]:string_pos[i+1][0]]
-        else: abstracted += text[string_pos[i][1]:len(text)]
-
-    print(string_pos)
-
-    return abstracted
+def sampleTeco():
+    all_preds = None
+    sample_size = 350
+    with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as allPredsFile, open('../../teco_eval/teco/output/preds.jsonl', 'w+') as predsFile:
+        all_preds = [json.loads(line) for line in allPredsFile]
+        random.shuffle(all_preds)
+        idxs = random.sample(range(len(all_preds)), sample_size)
+        for idx in idxs:
+            predsFile.write(json.dumps(all_preds[idx]) + '\n')
 
 # Check to see if the total number of tests retrieved is equal to the total number of predictions from teco
 def testCounterSanityCheck():
@@ -186,11 +195,47 @@ def testCounterSanityCheck():
                 counter += 1
     assert counter == len(preds), "Not all teco tests could be retrieved, expected test count: {}, got: {}".format(len(ids), counter)
 
-# countTecoPreds()
+# Check which sub-modules from the projects are being used
+def listUsedSubModules(sample_id):
+    project_submodule_set = set()
+
+    with open('../../sample_{}.json'.format(str(sample_id))) as sample_file:
+        projects = json.loads(sample_file.read())['projects']
+        for prj in projects:
+            for testClass in prj['allTests']:
+                if len(testClass['subRepo']) > 0:
+                    project_submodule_set.add('{}_{}'.format(prj['repoName'], testClass['subRepo']))
+                else:
+                    project_submodule_set.add('{}_'.format(prj['repoName']))
+
+    for item in project_submodule_set:
+        print(item)
+
+# listUsedSubModules(1)
+# exit(0)
 
 #-------------------------------------------------
+isChunking = True if 'chunk' in sys.argv else False
+
+# Predictions
+preds = None
+if not isChunking:
+    with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as predsFile:
+        preds = [json.loads(line) for line in predsFile]
+else:
+    with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
+        preds = [json.loads(line) for line in predsFile]
+
+#-------------------------------------------------
+
 projectsList = []
+chunkList = [[],[],[],[],[],[],[]] # 6 chunks with 50 each
+currentChunk = -1
+
 for predId, pred in enumerate(preds):
+    if predId % 50 == 0:
+        currentChunk += 1
+
     project = None
 
     currentDataId = int(pred['data_id'].replace('csn-', ''))
@@ -200,10 +245,16 @@ for predId, pred in enumerate(preds):
     repo = repos[repos['full_name']==projName]
 
     # Retrieve project if available in the projects array of dictionaries
-    for prj in projectsList:
-        if prj['userName']==repo['user'].to_string(index=False) and prj['repoName']==repo['repo'].to_string(index=False):
-            project = prj
-            break
+    if not isChunking:
+        for prj in projectsList:
+            if prj['userName']==repo['user'].to_string(index=False) and prj['repoName']==repo['repo'].to_string(index=False):
+                project = prj
+                break
+    else:
+        for prj in chunkList[currentChunk]:
+            if prj['userName']==repo['user'].to_string(index=False) and prj['repoName']==repo['repo'].to_string(index=False):
+                project = prj
+                break
 
     if project is None: # Project was not found
         project = dict()
@@ -211,9 +262,10 @@ for predId, pred in enumerate(preds):
         project['userName'] = repo['user'].to_string(index=False)
         project['repoName'] = repo['repo'].to_string(index=False)
 
-        project['subRepo'] = ''
+        project['subRepos'] = []
         if repo['mvn_multi_module'].reset_index(drop=True)[0]:
-            project[subRepo] = repo['mvn_modules'][0].reset_index(drop=True)[0]
+            for subRepo in repo['mvn_modules'].reset_index(drop=True)[0]:
+                project['subRepos'].append(subRepo)
 
         project['commitSHA'] = repo['sha'].to_string(index=False)
         project['buildSystem'] = repo['build_system'].to_string(index=False)
@@ -229,7 +281,12 @@ for predId, pred in enumerate(preds):
         
         testClass['classTests'].append(test)
         project['allTests'].append(testClass)
-        projectsList.append(project)
+        
+        if not isChunking:
+            projectsList.append(project)
+        else:
+            chunkList[currentChunk].append(project)
+
     else: # Project exists in the dictionary
         testClassFound = False
         testClass = buildTestClassJson(currentLineNumber)
@@ -249,9 +306,16 @@ for predId, pred in enumerate(preds):
             testClass['classTests'].append(test)
             project['allTests'].append(testClass)
 
-with open('../../new_data.json', 'w+') as newData:
-    testCounterSanityCheck()
+#-------------------------------------------------------
 
-    projectsDict = { 'projects': projectsList }
-    json.dump(projectsDict, newData, indent=4)
+if not isChunking:
+    with open('../../sample_all.json', 'w+') as newData:
+        testCounterSanityCheck()
+        projectsDict = { 'projects': projectsList }
+        json.dump(projectsDict, newData, indent=4)
+else:
+    for (chunkId, chunk) in enumerate(chunkList):
+        with open('../../sample_{}.json'.format(str(chunkId+1)), 'w+') as chunkFile:
+            chunkDict = { 'projects': chunk }
+            json.dump(chunkDict, chunkFile, indent=4)
 

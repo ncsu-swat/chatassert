@@ -27,23 +27,55 @@
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jactiverecord ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jactiverecord ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running me.zzp.util.SeqTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[78,25] no suitable method found for assertArrayEquals(java.lang.Integer[],int[])
+    method org.junit.Assert.assertArrayEquals(java.lang.Object[],java.lang.Object[]) is not applicable
+      (argument mismatch; int[] cannot be converted to java.lang.Object[])
+    method org.junit.Assert.assertArrayEquals(byte[],byte[]) is not applicable
+      (argument mismatch; java.lang.Integer[] cannot be converted to byte[])
+    method org.junit.Assert.assertArrayEquals(char[],char[]) is not applicable
+      (argument mismatch; java.lang.Integer[] cannot be converted to char[])
+    method org.junit.Assert.assertArrayEquals(short[],short[]) is not applicable
+      (argument mismatch; java.lang.Integer[] cannot be converted to short[])
+    method org.junit.Assert.assertArrayEquals(int[],int[]) is not applicable
+      (argument mismatch; java.lang.Integer[] cannot be converted to int[])
+    method org.junit.Assert.assertArrayEquals(long[],long[]) is not applicable
+      (argument mismatch; java.lang.Integer[] cannot be converted to long[])
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.179 s
-[INFO] Finished at: 2023-05-31T13:01:03-04:00
+[INFO] Total time:  1.537 s
+[INFO] Finished at: 2023-06-01T20:39:06-04:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[78,25] no suitable method found for assertArrayEquals(java.lang.Integer[],int[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.Object[],java.lang.Object[]) is not applicable
+[ERROR]       (argument mismatch; int[] cannot be converted to java.lang.Object[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(byte[],byte[]) is not applicable
+[ERROR]       (argument mismatch; java.lang.Integer[] cannot be converted to byte[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(char[],char[]) is not applicable
+[ERROR]       (argument mismatch; java.lang.Integer[] cannot be converted to char[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(short[],short[]) is not applicable
+[ERROR]       (argument mismatch; java.lang.Integer[] cannot be converted to short[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(int[],int[]) is not applicable
+[ERROR]       (argument mismatch; java.lang.Integer[] cannot be converted to int[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(long[],long[]) is not applicable
+[ERROR]       (argument mismatch; java.lang.Integer[] cannot be converted to long[])
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

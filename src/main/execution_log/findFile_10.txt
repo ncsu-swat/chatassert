@@ -1,0 +1,75 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------------< com.fizzed:jne >---------------------------
+[INFO] Building jne 3.0.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jne ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target
+[INFO] 
+[INFO] --- buildnumber:1.4:create (detect-scm-revision) @ jne ---
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne
+[INFO] Storing buildNumber: 783226a1 at timestamp: 20230609
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- enforcer:1.4.1:enforce (enforce-versions) @ jne ---
+[INFO] 
+[INFO] --- fizzed-versionizer:1.0.6:generate (generate-version-class) @ jne ---
+[INFO] Versionizer creating generated source directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/generated-sources/versionizer
+[INFO] Versionizer generated source directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/generated-sources/versionizer added to project
+[INFO] Versionizer generating version java source: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/generated-sources/versionizer/com/fizzed/jne/Version.java
+[INFO] 
+[INFO] --- license:1.9:update-file-header (apply-license-header) @ jne ---
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/src
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/generated-sources
+[INFO] Scan 13 files header done in 40.682ms.
+[INFO] All files are up-to-date.
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ jne ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.5.1:compile (default-compile) @ jne ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ jne ---
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- compiler:3.5.1:testCompile (default-testCompile) @ jne ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ jne ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fizzed.jne.JNETest
+08:02:58.757 [main] DEBUG com.fizzed.jne.JNE - finding fileName [resource-linux-x64.txt] targetFileName [resource-linux-x64.txt] os [LINUX] arch [X64]...
+08:02:58.759 [main] DEBUG com.fizzed.jne.JNE - finding resource [/jne/linux/x64/resource-linux-x64.txt]
+08:02:58.760 [main] DEBUG com.fizzed.jne.JNE - resource found @ file:/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/test-classes/jne/linux/x64/resource-linux-x64.txt
+08:02:58.760 [main] DEBUG com.fizzed.jne.JNE - resource in file
+08:02:58.760 [main] DEBUG com.fizzed.jne.JNE - setting file to executable
+08:02:58.760 [main] DEBUG com.fizzed.jne.JNE - returning [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jne/target/test-classes/jne/linux/x64/resource-linux-x64.txt]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.266 s - in com.fizzed.jne.JNETest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.476 s
+[INFO] Finished at: 2023-06-09T08:02:58-04:00
+[INFO] ------------------------------------------------------------------------

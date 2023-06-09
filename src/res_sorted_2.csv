@@ -1,0 +1,21 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Corr	Sorted	Time
+0	0	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertNotNull(locītājs);	0	0
+	1	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertNull(locītājs.generateInflections(null));	0	0
+	2	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertFalse(locītājs.guessVerbs);	0	0
+	3	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertFalse(locītājs.guessParticiples);	0	0
+	4	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertFalse(locītājs.guessAdjectives);	0	0
+	5	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertTrue(locītājs.enableGuessing);	0	0
+	6	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertFalse(locītājs.enableVocative);	0	0
+	7	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertTrue(locītājs.guessInflexibleNouns);	0	0
+	8	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertFalse(locītājs.enableAllGuesses);	0	0
+	9	/	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertNotNull(locītājs.clearCache());	0	0
+1	0	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertFalse(locītājs.isRecognized());	0	0
+	1	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(locītājs.isRecognized());	0	0
+	2	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertEquals(10,locītājs.getCacheSize());	0	0
+	3	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertThrows(IllegalArgumentException.class,()->locītājs.setCacheSize(-1));	0	0
+	4	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertNotNull(locītājs);	0	0
+	5	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(locītājs.isRecognized());	0	0
+	6	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertNotEquals(0,locītājs.getWordforms().size());	0	0
+	7	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertNotNull(locītājs.getWordforms());	0	0
+	8	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertFalse(locītājs.isCacheEnabled());	0	0
+	9	/	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(locītājs.isDebug());	0	0

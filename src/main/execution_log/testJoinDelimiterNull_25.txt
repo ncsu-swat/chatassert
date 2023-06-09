@@ -30,23 +30,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,12] illegal start of expression
-[INFO] 4 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[32,43] cannot find symbol
+  symbol:   method join(java.util.List<java.lang.Object>,java.lang.String)
+  location: class me.zzp.util.SeqTest
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.734 s
-[INFO] Finished at: 2023-05-31T09:20:34-04:00
+[INFO] Total time:  1.966 s
+[INFO] Finished at: 2023-06-01T19:13:56-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,12] illegal start of expression
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[32,43] cannot find symbol
+[ERROR]   symbol:   method join(java.util.List<java.lang.Object>,java.lang.String)
+[ERROR]   location: class me.zzp.util.SeqTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

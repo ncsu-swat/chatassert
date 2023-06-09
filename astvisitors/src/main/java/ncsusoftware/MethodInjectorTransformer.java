@@ -27,7 +27,7 @@ public class MethodInjectorTransformer extends VoidVisitorAdapter<Void> {
                 final BodyDeclaration bd = members.get(i);
                 if (bd instanceof MethodDeclaration) {
                     if (((MethodDeclaration) bd).getNameAsString().equals(name)) {
-                        System.out.println("done");
+                        // System.out.println("done");
                         ciDeclaration.setMember(i, newMethodDeclaration);
                         return;
                     }

@@ -1,0 +1,80 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.orientechnologies:orientdb-lucene >----------------
+[INFO] Building OrientDB Lucene full text index 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ orientdb-lucene ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target
+[INFO] 
+[INFO] --- buildnumber:1.4:create (default) @ orientdb-lucene ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686140397141
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco:0.8.5:prepare-agent (default) @ orientdb-lucene ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ orientdb-lucene ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ orientdb-lucene ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 105 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- bundle:3.5.0:manifest (bundle-manifest) @ orientdb-lucene ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] 
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ orientdb-lucene ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 23 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ orientdb-lucene ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 133 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/lucene/test/BaseLuceneTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/lucene/test/BaseLuceneTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/LuceneSpatialFunctionAsGeoJSONTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/LuceneSpatialFunctionAsGeoJSONTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ orientdb-lucene ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.lucene.test.LuceneListIndexingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.292 s - in com.orientechnologies.lucene.test.LuceneListIndexingTest
+Shutting down OrientDB engine and checking for direct memory leaks...
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.808 s
+[INFO] Finished at: 2023-06-07T08:20:19-04:00
+[INFO] ------------------------------------------------------------------------

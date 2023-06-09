@@ -1,0 +1,70 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< io.fabric8:fabric8-maven-plugin-enricher-api >------------
+[INFO] Building Fabric8 Maven :: Enricher :: API 4.4.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/target
+[INFO] 
+[INFO] --- resources:3.0.0:resources (default-resources) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.1:compile (default-compile) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.0.0:testResources (default-testResources) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.1:testCompile (default-testCompile) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[28,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[29,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[30,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[31,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[32,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[33,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[34,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[35,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[36,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/GoTimeUtilTest.java:[37,22] Integer(int) in java.lang.Integer has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 12 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractorTest.java:[19,60] cannot find symbol
+  symbol:   method extract(org.codehaus.plexus.util.xml.Xpp3Dom)
+  location: class org.junit.Assert
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.662 s
+[INFO] Finished at: 2023-06-08T15:42:18-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project fabric8-maven-plugin-enricher-api: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractorTest.java:[19,60] cannot find symbol
+[ERROR]   symbol:   method extract(org.codehaus.plexus.util.xml.Xpp3Dom)
+[ERROR]   location: class org.junit.Assert
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

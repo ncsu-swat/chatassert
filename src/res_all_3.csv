@@ -1,0 +1,11 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertTrue(config.size() > 0);	28.73310899734497	0	1	0	0	0
+0	1	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertEquals(expected, config);	12.280116081237793	0	0	1	0	0
+0	2	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertNotNull(config);	7.767244100570679	0	1	0	0	0
+0	3	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertTrue(expected.equals(config));	9.737015008926392	0	0	1	0	0
+0	4	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertSame(expected, config);	7.2009971141815186	0	0	1	0	0
+0	5	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertNotSame(expected, config);	7.845807075500488	0	1	0	0	0
+0	6	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertFalse(config.isEmpty());	7.11530613899231	0	1	0	0	0
+0	7	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertArrayEquals(expected.entrySet().toArray(), config.entrySet().toArray());	7.822297096252441	0	0	1	0	0
+0	8	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertNotEquals(expected.hashCode(), config.hashCode());	7.910284042358398	0	1	0	0	0
+0	9	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_deep_inner_objects	"assertThat(config).containsEntry(""STR"",expected);"	assertNotEquals(expected.toString(), config.toString());	7.91042685508728	0	1	0	0	0

@@ -30,20 +30,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,54] cannot find symbol
-  symbol:   variable myObj
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,40] cannot find symbol
+  symbol:   variable result
   location: class me.zzp.ar.sql.TSqlBuilderTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.943 s
-[INFO] Finished at: 2023-05-31T12:21:59-04:00
+[INFO] Total time:  1.694 s
+[INFO] Finished at: 2023-06-02T04:03:41-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,54] cannot find symbol
-[ERROR]   symbol:   variable myObj
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,40] cannot find symbol
+[ERROR]   symbol:   variable result
 [ERROR]   location: class me.zzp.ar.sql.TSqlBuilderTest
 [ERROR] 
 [ERROR] -> [Help 1]

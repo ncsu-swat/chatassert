@@ -1,0 +1,789 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.orientechnologies:orientdb-core >-----------------
+[INFO] Building OrientDB Core 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686325519278
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-core ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Dsecurity.userPasswordSaltIterations=10
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- javacc-maven-plugin:2.6:jjtree-javacc (jjtree-javacc) @ orientdb-core ---
+[INFO] Skipping - all parsers are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/io/OIOUtils.java:[29,35] com.sun.jmx.remote.internal.ArrayQueue is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[34,40] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,21] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,29] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[39,19] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[53,49] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,25] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,5] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,38] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[61,28] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[78,7] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[92,43] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,24] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[117,9] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[39,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[46,18] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[49,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[42,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[50,15] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[53,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,11] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,31] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,31] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[77,26] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Some input files use or override a deprecated API that is marked for removal.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Recompile with -Xlint:removal for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-core ---
+[WARNING] Manifest com.orientechnologies:orientdb-core:jar:3.0.42 : Unused Export-Package instructions: [com.orientechnologies.nio.*] 
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java: cannot find symbol
+  symbol:   method hasnext()
+  location: variable result of type com.orientechnologies.orient.core.sql.executor.OResultSet
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/metadata/schema/OClassImplTest.java: cannot find symbol
+  symbol:   variable result
+  location: class com.orientechnologies.orient.core.metadata.schema.OClassImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentSchemalessBinarySerializationTest.java: cannot find symbol
+  symbol:   variable expected
+  location: class com.orientechnologies.orient.core.record.impl.ODocumentSchemalessBinarySerializationTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentSchemalessBinarySerializationTest.java: cannot find symbol
+  symbol:   variable actual
+  location: class com.orientechnologies.orient.core.record.impl.ODocumentSchemalessBinarySerializationTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentFieldConversionTest.java: reference to assertEquals is ambiguous
+  both method assertEquals(java.lang.Object,java.lang.Object) in org.junit.Assert and method assertEquals(long,long) in org.junit.Assert match
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashFunction
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashFunction.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashFunction.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: method does not override or implement a method from a supertype
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashTable
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashTable.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashTable.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashIndexBucket
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashIndexBucket.Entry
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket$Entry.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket$Entry.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/OPartitionedDatabasePoolTest.java: cannot access com.orientechnologies.orient.core.OOrientListenerAbstract
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/OOrientListenerAbstract.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/OOrientListenerAbstract.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/OLocalHashTableTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OMurmurHash3HashFunction
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OMurmurHash3HashFunction.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OMurmurHash3HashFunction.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/tx/TransactionRidAllocationTest.java: cannot access com.orientechnologies.orient.core.tx.OTransactionOptimistic
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/tx/OTransactionOptimistic.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/tx/OTransactionOptimistic.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateLinkStatementExecutionTest.java: cannot find symbol
+  symbol:   variable focalClass
+  location: class com.orientechnologies.orient.core.sql.executor.OCreateLinkStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/cache/OCommandCacheTest.java: cannot access com.orientechnologies.orient.core.command.OCommandRequestAsynch
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommandRequestAsynch.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommandRequestAsynch.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/cache/OCommandCacheTest.java: cannot access com.orientechnologies.orient.core.cache.OCommandCache
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OCommandCache.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OCommandCache.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.record.OIdentityChangeListener
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/record/OIdentityChangeListener.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/record/OIdentityChangeListener.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.db.record.ORecordTrackedSet
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedSet.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedSet.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.cache.OLocalRecordCache
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OLocalRecordCache.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OLocalRecordCache.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.db.record.ORecordTrackedList
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedList.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedList.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/sbtree/local/SBTreeLeafBucketTest.java: cannot access com.orientechnologies.orient.core.storage.index.sbtree.local.OSBTreeBucket
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeBucket.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeBucket.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/command/traverse/OTraverseTest.java: cannot access com.orientechnologies.orient.core.command.OCommand
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommand.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommand.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/command/traverse/OTraverseTest.java: cannot access com.orientechnologies.orient.core.command.traverse.OTraverse.STRATEGY
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/traverse/OTraverse$STRATEGY.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/traverse/OTraverse$STRATEGY.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/concur/collection/CASObjectArrayTest.java: cannot access com.orientechnologies.common.concur.collection.CASObjectArray
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/concur/collection/CASObjectArray.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/concur/collection/CASObjectArray.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/tool/ODatabaseImportTest.java: cannot access com.orientechnologies.orient.core.db.tool.ODatabaseExport
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseExport.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseExport.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/tool/ODatabaseImportTest.java: cannot access com.orientechnologies.orient.core.db.tool.ODatabaseImport
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseImport.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseImport.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/UnsafeConverterTest.java: cannot access com.orientechnologies.common.serialization.OUnsafeBinaryConverter
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurityRole$ALLOW_MODES.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurityRole$ALLOW_MODES.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OSecurity
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurity.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurity.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/ORule$ResourceGeneric.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/ORule$ResourceGeneric.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OIdentity
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OIdentity.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OIdentity.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot find symbol
+  symbol:   variable ResourceGeneric
+  location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot find symbol
+  symbol:   variable ResourceGeneric
+  location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.fetch.OFetchPlan
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.fetch.OFetchPlan
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.exception.OFetchException
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/exception/OFetchException.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/exception/OFetchException.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+  symbol:   variable ALLOW_MODES
+  location: interface com.orientechnologies.orient.core.metadata.security.OSecurityRole
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+  symbol:   variable ResourceGeneric
+  location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+  symbol:   variable ResourceGeneric
+  location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+  symbol:   variable ResourceGeneric
+  location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/OJUnitTestListener.java: cannot access com.orientechnologies.common.listener.OListenerManger
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/listener/OListenerManger.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/listener/OListenerManger.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLScriptTest.java: cannot access com.orientechnologies.orient.core.command.script.OCommandScriptException
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/script/OCommandScriptException.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/script/OCommandScriptException.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStepTest.java: cannot access com.orientechnologies.orient.core.sql.executor.ConvertToResultInternalStep
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStep.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStep.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStepTest.java: cannot access com.orientechnologies.common.exception.OSystemException
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/exception/OSystemException.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/exception/OSystemException.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/ORecordSerializerBinaryDebugTest.java: cannot access com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryV0
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerBinaryV0.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerBinaryV0.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/ORecordSerializerBinaryDebugTest.java: cannot access com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializationDebugProperty
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializationDebugProperty.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializationDebugProperty.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCacheTest.java: cannot access com.orientechnologies.orient.core.sql.parser.OExecutionPlanCache
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCache.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCache.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.metadata.function.OFunctionLibrary
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/function/OFunctionLibrary.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/function/OFunctionLibrary.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionHeuristicPathFinderAbstract
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionHeuristicPathFinderAbstract.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionHeuristicPathFinderAbstract.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_HEURISTIC_FORMULA
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_TIE_BREAKER
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_HEURISTIC_FORMULA
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.sql.functions.graph.HeuristicFormula
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/HeuristicFormula.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/HeuristicFormula.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_TIE_BREAKER
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_HEURISTIC_FORMULA
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_TIE_BREAKER
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EDGE_TYPE_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_VERTEX_AXIS_NAMES
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_HEURISTIC_FORMULA
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_CUSTOM_HEURISTIC_FORMULA
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_DIRECTION
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_PARALLEL
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_TIE_BREAKER
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_EMPTY_IF_MAX_DEPTH
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+  symbol:   variable PARAM_MAX_DEPTH
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.763 s
+[INFO] Finished at: 2023-06-09T11:45:52-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   method hasnext()
+[ERROR]   location: variable result of type com.orientechnologies.orient.core.sql.executor.OResultSet
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/metadata/schema/OClassImplTest.java: cannot find symbol
+[ERROR]   symbol:   variable result
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.schema.OClassImplTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentSchemalessBinarySerializationTest.java: cannot find symbol
+[ERROR]   symbol:   variable expected
+[ERROR]   location: class com.orientechnologies.orient.core.record.impl.ODocumentSchemalessBinarySerializationTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentSchemalessBinarySerializationTest.java: cannot find symbol
+[ERROR]   symbol:   variable actual
+[ERROR]   location: class com.orientechnologies.orient.core.record.impl.ODocumentSchemalessBinarySerializationTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentFieldConversionTest.java: reference to assertEquals is ambiguous
+[ERROR]   both method assertEquals(java.lang.Object,java.lang.Object) in org.junit.Assert and method assertEquals(long,long) in org.junit.Assert match
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashFunction
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashFunction.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashFunction.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: method does not override or implement a method from a supertype
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashTable
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashTable.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashTable.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashIndexBucket
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/LocalHashTableIterationTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OHashIndexBucket.Entry
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket$Entry.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OHashIndexBucket$Entry.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/OPartitionedDatabasePoolTest.java: cannot access com.orientechnologies.orient.core.OOrientListenerAbstract
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/OOrientListenerAbstract.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/OOrientListenerAbstract.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/hashindex/local/OLocalHashTableTestIT.java: cannot access com.orientechnologies.orient.core.storage.index.hashindex.local.OMurmurHash3HashFunction
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OMurmurHash3HashFunction.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/hashindex/local/OMurmurHash3HashFunction.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/tx/TransactionRidAllocationTest.java: cannot access com.orientechnologies.orient.core.tx.OTransactionOptimistic
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/tx/OTransactionOptimistic.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/tx/OTransactionOptimistic.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateLinkStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   variable focalClass
+[ERROR]   location: class com.orientechnologies.orient.core.sql.executor.OCreateLinkStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/cache/OCommandCacheTest.java: cannot access com.orientechnologies.orient.core.command.OCommandRequestAsynch
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommandRequestAsynch.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommandRequestAsynch.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/cache/OCommandCacheTest.java: cannot access com.orientechnologies.orient.core.cache.OCommandCache
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OCommandCache.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OCommandCache.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.record.OIdentityChangeListener
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/record/OIdentityChangeListener.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/record/OIdentityChangeListener.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.db.record.ORecordTrackedSet
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedSet.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedSet.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.cache.OLocalRecordCache
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OLocalRecordCache.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/cache/OLocalRecordCache.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/CollectionOfLinkInNestedDocumentTest.java: cannot access com.orientechnologies.orient.core.db.record.ORecordTrackedList
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedList.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/record/ORecordTrackedList.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/sbtree/local/SBTreeLeafBucketTest.java: cannot access com.orientechnologies.orient.core.storage.index.sbtree.local.OSBTreeBucket
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeBucket.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeBucket.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/command/traverse/OTraverseTest.java: cannot access com.orientechnologies.orient.core.command.OCommand
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommand.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/OCommand.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/command/traverse/OTraverseTest.java: cannot access com.orientechnologies.orient.core.command.traverse.OTraverse.STRATEGY
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/traverse/OTraverse$STRATEGY.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/traverse/OTraverse$STRATEGY.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/concur/collection/CASObjectArrayTest.java: cannot access com.orientechnologies.common.concur.collection.CASObjectArray
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/concur/collection/CASObjectArray.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/concur/collection/CASObjectArray.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/tool/ODatabaseImportTest.java: cannot access com.orientechnologies.orient.core.db.tool.ODatabaseExport
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseExport.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseExport.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/tool/ODatabaseImportTest.java: cannot access com.orientechnologies.orient.core.db.tool.ODatabaseImport
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseImport.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/db/tool/ODatabaseImport.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/UnsafeConverterTest.java: cannot access com.orientechnologies.common.serialization.OUnsafeBinaryConverter
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OSecurityRole.ALLOW_MODES
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurityRole$ALLOW_MODES.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurityRole$ALLOW_MODES.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OSecurity
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurity.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OSecurity.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.ORule.ResourceGeneric
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/ORule$ResourceGeneric.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/ORule$ResourceGeneric.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot access com.orientechnologies.orient.core.metadata.security.OIdentity
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OIdentity.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/security/OIdentity.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot find symbol
+[ERROR]   symbol:   variable ResourceGeneric
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLGrantRevokeTest.java: cannot find symbol
+[ERROR]   symbol:   variable ResourceGeneric
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.fetch.OFetchPlan
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.fetch.OFetchPlan
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/fetch/OFetchPlan.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/fetch/DepthFetchPlanTest.java: cannot access com.orientechnologies.orient.core.exception.OFetchException
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/exception/OFetchException.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/exception/OFetchException.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   variable ALLOW_MODES
+[ERROR]   location: interface com.orientechnologies.orient.core.metadata.security.OSecurityRole
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   variable ResourceGeneric
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   variable ResourceGeneric
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ORevokeStatementExecutionTest.java: cannot find symbol
+[ERROR]   symbol:   variable ResourceGeneric
+[ERROR]   location: class com.orientechnologies.orient.core.metadata.security.ORule
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/OJUnitTestListener.java: cannot access com.orientechnologies.common.listener.OListenerManger
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/listener/OListenerManger.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/listener/OListenerManger.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLScriptTest.java: cannot access com.orientechnologies.orient.core.command.script.OCommandScriptException
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/script/OCommandScriptException.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/command/script/OCommandScriptException.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStepTest.java: cannot access com.orientechnologies.orient.core.sql.executor.ConvertToResultInternalStep
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStep.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStep.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/ConvertToResultInternalStepTest.java: cannot access com.orientechnologies.common.exception.OSystemException
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/exception/OSystemException.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/common/exception/OSystemException.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/ORecordSerializerBinaryDebugTest.java: cannot access com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializerBinaryV0
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerBinaryV0.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializerBinaryV0.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/ORecordSerializerBinaryDebugTest.java: cannot access com.orientechnologies.orient.core.serialization.serializer.record.binary.ORecordSerializationDebugProperty
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializationDebugProperty.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/serialization/serializer/record/binary/ORecordSerializationDebugProperty.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCacheTest.java: cannot access com.orientechnologies.orient.core.sql.parser.OExecutionPlanCache
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCache.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/parser/OExecutionPlanCache.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.metadata.function.OFunctionLibrary
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/function/OFunctionLibrary.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/metadata/function/OFunctionLibrary.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionHeuristicPathFinderAbstract
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionHeuristicPathFinderAbstract.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionHeuristicPathFinderAbstract.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_HEURISTIC_FORMULA
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_TIE_BREAKER
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_HEURISTIC_FORMULA
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot access com.orientechnologies.orient.core.sql.functions.graph.HeuristicFormula
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/HeuristicFormula.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes/com/orientechnologies/orient/core/sql/functions/graph/HeuristicFormula.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_TIE_BREAKER
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_HEURISTIC_FORMULA
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_TIE_BREAKER
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EDGE_TYPE_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_VERTEX_AXIS_NAMES
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_HEURISTIC_FORMULA
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_CUSTOM_HEURISTIC_FORMULA
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_DIRECTION
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_PARALLEL
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_TIE_BREAKER
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_EMPTY_IF_MAX_DEPTH
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionAstarTest.java: cannot find symbol
+[ERROR]   symbol:   variable PARAM_MAX_DEPTH
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionAstar
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

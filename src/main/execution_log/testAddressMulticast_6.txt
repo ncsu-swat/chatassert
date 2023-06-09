@@ -1,0 +1,47 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.fluenda:parcefone >------------------------
+[INFO] Building ParCEFone 2.1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ parcefone ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ parcefone ---
+[INFO] Copying 2 resources to META-INF
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ parcefone ---
+[WARNING] Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/classes
+[WARNING] [options] bootstrap class path not set in conjunction with -source 7
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ parcefone ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ parcefone ---
+[WARNING] Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/test-classes
+[WARNING] [options] bootstrap class path not set in conjunction with -source 7
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ parcefone ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.fluenda.parcefone.event.MacAddressTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.124 s - in com.fluenda.parcefone.event.MacAddressTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.128 s
+[INFO] Finished at: 2023-06-05T15:03:25-04:00
+[INFO] ------------------------------------------------------------------------

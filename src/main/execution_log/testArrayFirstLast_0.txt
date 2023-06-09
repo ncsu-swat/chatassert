@@ -1,0 +1,710 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.orientechnologies:orientdb-core >-----------------
+[INFO] Building OrientDB Core 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686141991618
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-core ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Dsecurity.userPasswordSaltIterations=10
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- javacc-maven-plugin:2.6:jjtree-javacc (jjtree-javacc) @ orientdb-core ---
+[INFO] Skipping - all parsers are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/io/OIOUtils.java:[29,35] com.sun.jmx.remote.internal.ArrayQueue is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[29,16] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[26,16] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[34,40] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,21] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[35,29] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[39,19] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[53,49] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[54,25] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,5] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[55,38] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[61,28] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[78,7] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[92,43] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[114,24] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[117,9] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[39,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[46,18] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/serialization/OUnsafeBinaryConverter.java:[49,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[42,24] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[50,15] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/comparator/OUnsafeByteArrayComparator.java:[53,21] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,11] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[74,31] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,31] sun.misc.SignalHandler is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[77,26] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/common/console/TTYConsoleReader.java:[75,5] sun.misc.Signal is internal proprietary API and may be removed in a future release
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/id/ORecordId.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Some input files use or override a deprecated API that is marked for removal.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/command/script/transformer/resultset/ONashornObjectMirrorTransformer.java: Recompile with -Xlint:removal for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSetAware.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-core ---
+[WARNING] Manifest com.orientechnologies:orientdb-core:jar:3.0.42 : Unused Export-Package instructions: [com.orientechnologies.nio.*] 
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/stat/OSQLFunctionModeTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/stat/OSQLFunctionModeTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[7,53] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[8,44] cannot find symbol
+  symbol:   class ORID
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[9,48] cannot find symbol
+  symbol:   class OVertex
+  location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[22,11] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionShortestPathTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[24,24] cannot find symbol
+  symbol:   class OVertex
+  location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionShortestPathTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[3,48] cannot find symbol
+  symbol:   class OGlobalConfiguration
+  location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[194,19] cannot find symbol
+  symbol:   class OByteBufferPool
+  location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[197,24] cannot find symbol
+  symbol:   class OPointer
+  location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[199,23] cannot find symbol
+  symbol:   class OByteBufferPool
+  location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[12,58] cannot find symbol
+  symbol:   class ORidBag
+  location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[13,44] cannot find symbol
+  symbol:   class ORecordId
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[14,57] cannot find symbol
+  symbol:   class OClass
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[15,57] cannot find symbol
+  symbol:   class OProperty
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[16,57] cannot find symbol
+  symbol:   class OSchema
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[17,57] cannot find symbol
+  symbol:   class OType
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[19,73] cannot find symbol
+  symbol:   class ORecordSerializer
+  location: package com.orientechnologies.orient.core.serialization.serializer.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[3,44] cannot find symbol
+  symbol:   class ODatabase
+  location: package com.orientechnologies.orient.core.db
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[4,51] cannot find symbol
+  symbol:   class OIdentifiable
+  location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[7,44] cannot find symbol
+  symbol:   class ORecordId
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[10,57] cannot find symbol
+  symbol:   class OClass
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[11,57] cannot find symbol
+  symbol:   class OSchema
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[12,57] cannot find symbol
+  symbol:   class OType
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[13,48] cannot find symbol
+  symbol:   class OElement
+  location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[14,48] cannot find symbol
+  symbol:   class OVertex
+  location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[15,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[16,54] cannot find symbol
+  symbol:   class OResult
+  location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[17,54] cannot find symbol
+  symbol:   class OResultSet
+  location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java:[3,53] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java:[16,10] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: class com.orientechnologies.orient.core.sql.executor.OCreateUserStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[4,51] cannot find symbol
+  symbol:   class OMultiValueChangeEvent
+  location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[5,57] cannot find symbol
+  symbol:   class OType
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[6,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[3,66] cannot find symbol
+  symbol:   class OClosableLinkedContainer
+  location: package com.orientechnologies.common.collection.closabledictionary
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[4,49] cannot find symbol
+  symbol:   class OByteBufferPool
+  location: package com.orientechnologies.common.directmemory
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[5,49] cannot find symbol
+  symbol:   class OPointer
+  location: package com.orientechnologies.common.directmemory
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[9,42] package com.orientechnologies.common.types does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[10,48] cannot find symbol
+  symbol:   class OGlobalConfiguration
+  location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[12,49] cannot find symbol
+  symbol:   class OChecksumMode
+  location: package com.orientechnologies.orient.core.storage
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[13,55] cannot find symbol
+  symbol:   class OCacheEntry
+  location: package com.orientechnologies.orient.core.storage.cache
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[15,55] cannot find symbol
+  symbol:   class OCachePointer
+  location: package com.orientechnologies.orient.core.storage.cache
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[16,61] cannot find symbol
+  symbol:   class OWOWCache
+  location: package com.orientechnologies.orient.core.storage.cache.local
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[17,52] package com.orientechnologies.orient.core.storage.fs does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[18,75] package com.orientechnologies.orient.core.storage.impl.local.paginated.base does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[19,74] cannot find symbol
+  symbol:   class OAbstractWALRecord
+  location: package com.orientechnologies.orient.core.storage.impl.local.paginated.wal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[20,74] cannot find symbol
+  symbol:   class OLogSequenceNumber
+  location: package com.orientechnologies.orient.core.storage.impl.local.paginated.wal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[50,24] cannot find symbol
+  symbol:   class O2QCache
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[51,24] cannot find symbol
+  symbol:   class OWOWCache
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[54,24] cannot find symbol
+  symbol:   class OClosableLinkedContainer
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[54,55] cannot find symbol
+  symbol:   class OFileClassic
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[61,24] cannot find symbol
+  symbol:   class OByteBufferPool
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1169,64] cannot find symbol
+  symbol:   class OLogSequenceNumber
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1196,73] cannot find symbol
+  symbol:   class OPointer
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1197,7] cannot find symbol
+  symbol:   class OByteBufferPool
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1196,18] cannot find symbol
+  symbol:   class OCacheEntry
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1202,18] cannot find symbol
+  symbol:   class OCacheEntry
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1206,49] cannot find symbol
+  symbol:   class OLogSequenceNumber
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1213,48] cannot find symbol
+  symbol:   class OAbstractWALRecord
+  location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[22,45] cannot find symbol
+  symbol:   class OCommandSQLParsingException
+  location: package com.orientechnologies.orient.core.sql
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[35,37] cannot find symbol
+  symbol:   class ParseException
+  location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[52,37] cannot find symbol
+  symbol:   class ParseException
+  location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[68,13] cannot find symbol
+  symbol:   class OrientSql
+  location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/exception/RecordNotFoundExceptionTest.java:[3,44] cannot find symbol
+  symbol:   class ORecordId
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[12,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[17,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[21,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[149,13] cannot find symbol
+  symbol:   class OrientSql
+  location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[3,48] cannot find symbol
+  symbol:   class OGlobalConfiguration
+  location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[5,51] cannot find symbol
+  symbol:   class OIdentifiable
+  location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[6,58] cannot find symbol
+  symbol:   class ORidBag
+  location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[8,44] cannot find symbol
+  symbol:   class ORID
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[9,44] cannot find symbol
+  symbol:   class ORecordId
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[11,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[27,45] cannot find symbol
+  symbol:   class ORID
+  location: class com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeRidBagConcurrencySingleRidBag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[29,11] cannot find symbol
+  symbol:   class ORID
+  location: class com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeRidBagConcurrencySingleRidBag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[3,53] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[5,44] cannot find symbol
+  symbol:   class ORID
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[6,57] cannot find symbol
+  symbol:   class OClass
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[7,57] cannot find symbol
+  symbol:   class OSchema
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[8,57] cannot find symbol
+  symbol:   class OType
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[9,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[24,11] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: class com.orientechnologies.orient.core.index.UniqueIndexTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OMoveVertexStatementExecutionTest.java:[6,53] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OMoveVertexStatementExecutionTest.java:[17,11] cannot find symbol
+  symbol:   class ODatabaseDocument
+  location: class com.orientechnologies.orient.core.sql.executor.OMoveVertexStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[22,54] cannot find symbol
+  symbol:   class OResult
+  location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[178,11] cannot find symbol
+  symbol:   class OMathExpression
+  location: class com.orientechnologies.orient.core.sql.parser.OMathExpressionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[186,11] cannot find symbol
+  symbol:   class OMathExpression
+  location: class com.orientechnologies.orient.core.sql.parser.OMathExpressionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[22,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[29,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[33,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[806,13] cannot find symbol
+  symbol:   class OrientSql
+  location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[3,46] cannot find symbol
+  symbol:   class OException
+  location: package com.orientechnologies.common.exception
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[6,58] cannot find symbol
+  symbol:   class ORidBag
+  location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[7,44] cannot find symbol
+  symbol:   class ORecordId
+  location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[8,57] cannot find symbol
+  symbol:   class OType
+  location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[10,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[10,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[18,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[22,13] cannot find symbol
+  symbol:   class SimpleNode
+  location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[61,13] cannot find symbol
+  symbol:   class OrientSql
+  location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/metadata/schema/OClassImplTest.java:[5,53] cannot find symbol
+  symbol:   class ODocument
+  location: package com.orientechnologies.orient.core.record.impl
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  42.425 s
+[INFO] Finished at: 2023-06-07T08:47:11-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[7,53] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[8,44] cannot find symbol
+[ERROR]   symbol:   class ORID
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[9,48] cannot find symbol
+[ERROR]   symbol:   class OVertex
+[ERROR]   location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[22,11] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionShortestPathTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/graph/OSQLFunctionShortestPathTest.java:[24,24] cannot find symbol
+[ERROR]   symbol:   class OVertex
+[ERROR]   location: class com.orientechnologies.orient.core.sql.functions.graph.OSQLFunctionShortestPathTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[3,48] cannot find symbol
+[ERROR]   symbol:   class OGlobalConfiguration
+[ERROR]   location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[194,19] cannot find symbol
+[ERROR]   symbol:   class OByteBufferPool
+[ERROR]   location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[197,24] cannot find symbol
+[ERROR]   symbol:   class OPointer
+[ERROR]   location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[199,23] cannot find symbol
+[ERROR]   symbol:   class OByteBufferPool
+[ERROR]   location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest.Allocator
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[12,58] cannot find symbol
+[ERROR]   symbol:   class ORidBag
+[ERROR]   location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[13,44] cannot find symbol
+[ERROR]   symbol:   class ORecordId
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[14,57] cannot find symbol
+[ERROR]   symbol:   class OClass
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[15,57] cannot find symbol
+[ERROR]   symbol:   class OProperty
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[16,57] cannot find symbol
+[ERROR]   symbol:   class OSchema
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[17,57] cannot find symbol
+[ERROR]   symbol:   class OType
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java:[19,73] cannot find symbol
+[ERROR]   symbol:   class ORecordSerializer
+[ERROR]   location: package com.orientechnologies.orient.core.serialization.serializer.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[3,44] cannot find symbol
+[ERROR]   symbol:   class ODatabase
+[ERROR]   location: package com.orientechnologies.orient.core.db
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[4,51] cannot find symbol
+[ERROR]   symbol:   class OIdentifiable
+[ERROR]   location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[7,44] cannot find symbol
+[ERROR]   symbol:   class ORecordId
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[10,57] cannot find symbol
+[ERROR]   symbol:   class OClass
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[11,57] cannot find symbol
+[ERROR]   symbol:   class OSchema
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[12,57] cannot find symbol
+[ERROR]   symbol:   class OType
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[13,48] cannot find symbol
+[ERROR]   symbol:   class OElement
+[ERROR]   location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[14,48] cannot find symbol
+[ERROR]   symbol:   class OVertex
+[ERROR]   location: package com.orientechnologies.orient.core.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[15,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[16,54] cannot find symbol
+[ERROR]   symbol:   class OResult
+[ERROR]   location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java:[17,54] cannot find symbol
+[ERROR]   symbol:   class OResultSet
+[ERROR]   location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java:[3,53] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OCreateUserStatementExecutionTest.java:[16,10] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: class com.orientechnologies.orient.core.sql.executor.OCreateUserStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[4,51] cannot find symbol
+[ERROR]   symbol:   class OMultiValueChangeEvent
+[ERROR]   location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[5,57] cannot find symbol
+[ERROR]   symbol:   class OType
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[6,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[3,66] cannot find symbol
+[ERROR]   symbol:   class OClosableLinkedContainer
+[ERROR]   location: package com.orientechnologies.common.collection.closabledictionary
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[4,49] cannot find symbol
+[ERROR]   symbol:   class OByteBufferPool
+[ERROR]   location: package com.orientechnologies.common.directmemory
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[5,49] cannot find symbol
+[ERROR]   symbol:   class OPointer
+[ERROR]   location: package com.orientechnologies.common.directmemory
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[9,42] package com.orientechnologies.common.types does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[10,48] cannot find symbol
+[ERROR]   symbol:   class OGlobalConfiguration
+[ERROR]   location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[12,49] cannot find symbol
+[ERROR]   symbol:   class OChecksumMode
+[ERROR]   location: package com.orientechnologies.orient.core.storage
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[13,55] cannot find symbol
+[ERROR]   symbol:   class OCacheEntry
+[ERROR]   location: package com.orientechnologies.orient.core.storage.cache
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[15,55] cannot find symbol
+[ERROR]   symbol:   class OCachePointer
+[ERROR]   location: package com.orientechnologies.orient.core.storage.cache
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[16,61] cannot find symbol
+[ERROR]   symbol:   class OWOWCache
+[ERROR]   location: package com.orientechnologies.orient.core.storage.cache.local
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[17,52] package com.orientechnologies.orient.core.storage.fs does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[18,75] package com.orientechnologies.orient.core.storage.impl.local.paginated.base does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[19,74] cannot find symbol
+[ERROR]   symbol:   class OAbstractWALRecord
+[ERROR]   location: package com.orientechnologies.orient.core.storage.impl.local.paginated.wal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[20,74] cannot find symbol
+[ERROR]   symbol:   class OLogSequenceNumber
+[ERROR]   location: package com.orientechnologies.orient.core.storage.impl.local.paginated.wal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[50,24] cannot find symbol
+[ERROR]   symbol:   class O2QCache
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[51,24] cannot find symbol
+[ERROR]   symbol:   class OWOWCache
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[54,24] cannot find symbol
+[ERROR]   symbol:   class OClosableLinkedContainer
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[54,55] cannot find symbol
+[ERROR]   symbol:   class OFileClassic
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[61,24] cannot find symbol
+[ERROR]   symbol:   class OByteBufferPool
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1169,64] cannot find symbol
+[ERROR]   symbol:   class OLogSequenceNumber
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1196,73] cannot find symbol
+[ERROR]   symbol:   class OPointer
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1197,7] cannot find symbol
+[ERROR]   symbol:   class OByteBufferPool
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1196,18] cannot find symbol
+[ERROR]   symbol:   class OCacheEntry
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1202,18] cannot find symbol
+[ERROR]   symbol:   class OCacheEntry
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1206,49] cannot find symbol
+[ERROR]   symbol:   class OLogSequenceNumber
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/cache/local/twoq/ReadWriteDiskCacheTest.java:[1213,48] cannot find symbol
+[ERROR]   symbol:   class OAbstractWALRecord
+[ERROR]   location: class com.orientechnologies.orient.core.storage.cache.local.twoq.ReadWriteDiskCacheTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[22,45] cannot find symbol
+[ERROR]   symbol:   class OCommandSQLParsingException
+[ERROR]   location: package com.orientechnologies.orient.core.sql
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[35,37] cannot find symbol
+[ERROR]   symbol:   class ParseException
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[52,37] cannot find symbol
+[ERROR]   symbol:   class ParseException
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OProjectionTest.java:[68,13] cannot find symbol
+[ERROR]   symbol:   class OrientSql
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OProjectionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/exception/RecordNotFoundExceptionTest.java:[3,44] cannot find symbol
+[ERROR]   symbol:   class ORecordId
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[12,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[17,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[21,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OUpdateStatementTest.java:[149,13] cannot find symbol
+[ERROR]   symbol:   class OrientSql
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OUpdateStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[3,48] cannot find symbol
+[ERROR]   symbol:   class OGlobalConfiguration
+[ERROR]   location: package com.orientechnologies.orient.core.config
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[5,51] cannot find symbol
+[ERROR]   symbol:   class OIdentifiable
+[ERROR]   location: package com.orientechnologies.orient.core.db.record
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[6,58] cannot find symbol
+[ERROR]   symbol:   class ORidBag
+[ERROR]   location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[8,44] cannot find symbol
+[ERROR]   symbol:   class ORID
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[9,44] cannot find symbol
+[ERROR]   symbol:   class ORecordId
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[11,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[27,45] cannot find symbol
+[ERROR]   symbol:   class ORID
+[ERROR]   location: class com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeRidBagConcurrencySingleRidBag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/ridbag/sbtree/OSBTreeRidBagConcurrencySingleRidBag.java:[29,11] cannot find symbol
+[ERROR]   symbol:   class ORID
+[ERROR]   location: class com.orientechnologies.orient.core.storage.ridbag.sbtree.OSBTreeRidBagConcurrencySingleRidBag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[3,53] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[5,44] cannot find symbol
+[ERROR]   symbol:   class ORID
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[6,57] cannot find symbol
+[ERROR]   symbol:   class OClass
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[7,57] cannot find symbol
+[ERROR]   symbol:   class OSchema
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[8,57] cannot find symbol
+[ERROR]   symbol:   class OType
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[9,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/UniqueIndexTest.java:[24,11] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: class com.orientechnologies.orient.core.index.UniqueIndexTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OMoveVertexStatementExecutionTest.java:[6,53] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: package com.orientechnologies.orient.core.db.document
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OMoveVertexStatementExecutionTest.java:[17,11] cannot find symbol
+[ERROR]   symbol:   class ODatabaseDocument
+[ERROR]   location: class com.orientechnologies.orient.core.sql.executor.OMoveVertexStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[22,54] cannot find symbol
+[ERROR]   symbol:   class OResult
+[ERROR]   location: package com.orientechnologies.orient.core.sql.executor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[178,11] cannot find symbol
+[ERROR]   symbol:   class OMathExpression
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OMathExpressionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OMathExpressionTest.java:[186,11] cannot find symbol
+[ERROR]   symbol:   class OMathExpression
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OMathExpressionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[22,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[29,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[33,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OSelectStatementTest.java:[806,13] cannot find symbol
+[ERROR]   symbol:   class OrientSql
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OSelectStatementTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[3,46] cannot find symbol
+[ERROR]   symbol:   class OException
+[ERROR]   location: package com.orientechnologies.common.exception
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[6,58] cannot find symbol
+[ERROR]   symbol:   class ORidBag
+[ERROR]   location: package com.orientechnologies.orient.core.db.record.ridbag
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[7,44] cannot find symbol
+[ERROR]   symbol:   class ORecordId
+[ERROR]   location: package com.orientechnologies.orient.core.id
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[8,57] cannot find symbol
+[ERROR]   symbol:   class OType
+[ERROR]   location: package com.orientechnologies.orient.core.metadata.schema
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeIndexDefinitionTest.java:[10,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[10,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[18,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[22,13] cannot find symbol
+[ERROR]   symbol:   class SimpleNode
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/parser/OParserTestAbstract.java:[61,13] cannot find symbol
+[ERROR]   symbol:   class OrientSql
+[ERROR]   location: class com.orientechnologies.orient.core.sql.parser.OParserTestAbstract
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/metadata/schema/OClassImplTest.java:[5,53] cannot find symbol
+[ERROR]   symbol:   class ODocument
+[ERROR]   location: package com.orientechnologies.orient.core.record.impl
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

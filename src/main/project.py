@@ -8,13 +8,12 @@ import re
 import xml.etree.ElementTree as et
 
 class Project():
-
-    def __init__(self, project_name, subDir="", project_url="", cur_com=""):
+    def __init__(self, project_name, subDir="", project_url="", cur_com="", base_dir=TMP_DIR):
         self.project_name = project_name
         self.sub_dir = subDir
         self.project_url = project_url        
         self.cur_com = cur_com 
-        self.repo_dir = os.path.join(TMP_DIR, "repos", project_name)
+        self.repo_dir = os.path.join(base_dir, "repos", project_name)
 
     def init_env(self): 
         # delete folder if it exists
@@ -44,12 +43,12 @@ class Project():
             print(elem.attrib)
 
 
-    def run_test(self, className, testName):
+    def run_test(self, subRepo, className, testName):
         res_dict = {"build_failure": False, "tests": 0, "failures": 0, "errors": 0}
         print("Running maven tests...")
         
         print(className, testName)
-        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dgpg.skip -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(self.repo_dir, self.sub_dir, className, testName))
+        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dgpg.skip -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(self.repo_dir, subRepo, className, testName))
 
         # parse the result
         print("Parsing the result...")

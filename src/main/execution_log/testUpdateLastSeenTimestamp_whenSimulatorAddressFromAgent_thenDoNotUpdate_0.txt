@@ -1,0 +1,179 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
+[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 171 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 135 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/RegistryTest.java:[260,14] cannot access com.hazelcast.simulator.coordinator.registry.TestData
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/registry/TestData.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/registry/TestData.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/HistogramLogMergerTest.java:[11,34] cannot access com.hazelcast.simulator.utils.HistogramLogMerger
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/HistogramLogMerger.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/HistogramLogMerger.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[271,51] cannot access com.hazelcast.simulator.agent.workerprocess.WorkerProcessFailureMonitor.ExceptionExtensionFilter
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$ExceptionExtensionFilter.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$ExceptionExtensionFilter.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[278,51] cannot access com.hazelcast.simulator.agent.workerprocess.WorkerProcessFailureMonitor.HProfExtensionFilter
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$HProfExtensionFilter.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$HProfExtensionFilter.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/BashCommandTest.java:[26,13] cannot access com.hazelcast.simulator.utils.BashCommand
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/BashCommand.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/BashCommand.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[49,9] cannot access com.hazelcast.simulator.provisioner.ProvisionerCli
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/provisioner/ProvisionerCli.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/provisioner/ProvisionerCli.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/TagUtilsTest.java:[15,38] cannot access com.hazelcast.simulator.utils.TagUtils
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/TagUtils.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/TagUtils.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/AgentCliTest.java:[79,9] cannot access com.hazelcast.simulator.agent.AgentCli
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/AgentCli.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/AgentCli.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/tasks/StartWorkersTaskTest.java:[62,13] cannot access com.hazelcast.simulator.coordinator.tasks.StartWorkersTask
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/tasks/StartWorkersTask.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/tasks/StartWorkersTask.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorCliTest.java:[341,77] cannot access com.hazelcast.simulator.coordinator.CoordinatorParameters
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/CoordinatorParameters.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/CoordinatorParameters.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/wizard/WizardCliTest.java:[61,22] cannot access com.hazelcast.simulator.wizard.WizardCli
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/wizard/WizardCli.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/wizard/WizardCli.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/GitInfoTest.java:[14,23] cannot access com.hazelcast.simulator.common.GitInfo
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/common/GitInfo.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/common/GitInfo.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronomeTest.java:[13,9] cannot access com.hazelcast.simulator.worker.metronome.ConstantCombinedRateMetronome
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronome.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronome.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[113,9] cannot access com.hazelcast.simulator.coordinator.FailureListener
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/FailureListener.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/FailureListener.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,37] cannot find symbol
+  symbol:   variable expectedResponse
+  location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,55] cannot find symbol
+  symbol:   variable actualResponse
+  location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[INFO] 16 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.769 s
+[INFO] Finished at: 2023-06-07T05:37:05-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/RegistryTest.java:[260,14] cannot access com.hazelcast.simulator.coordinator.registry.TestData
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/registry/TestData.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/registry/TestData.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/HistogramLogMergerTest.java:[11,34] cannot access com.hazelcast.simulator.utils.HistogramLogMerger
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/HistogramLogMerger.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/HistogramLogMerger.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[271,51] cannot access com.hazelcast.simulator.agent.workerprocess.WorkerProcessFailureMonitor.ExceptionExtensionFilter
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$ExceptionExtensionFilter.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$ExceptionExtensionFilter.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[278,51] cannot access com.hazelcast.simulator.agent.workerprocess.WorkerProcessFailureMonitor.HProfExtensionFilter
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$HProfExtensionFilter.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitor$HProfExtensionFilter.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/BashCommandTest.java:[26,13] cannot access com.hazelcast.simulator.utils.BashCommand
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/BashCommand.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/BashCommand.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[49,9] cannot access com.hazelcast.simulator.provisioner.ProvisionerCli
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/provisioner/ProvisionerCli.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/provisioner/ProvisionerCli.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/TagUtilsTest.java:[15,38] cannot access com.hazelcast.simulator.utils.TagUtils
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/TagUtils.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/utils/TagUtils.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/AgentCliTest.java:[79,9] cannot access com.hazelcast.simulator.agent.AgentCli
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/AgentCli.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/agent/AgentCli.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/tasks/StartWorkersTaskTest.java:[62,13] cannot access com.hazelcast.simulator.coordinator.tasks.StartWorkersTask
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/tasks/StartWorkersTask.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/tasks/StartWorkersTask.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorCliTest.java:[341,77] cannot access com.hazelcast.simulator.coordinator.CoordinatorParameters
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/CoordinatorParameters.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/CoordinatorParameters.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/wizard/WizardCliTest.java:[61,22] cannot access com.hazelcast.simulator.wizard.WizardCli
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/wizard/WizardCli.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/wizard/WizardCli.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/GitInfoTest.java:[14,23] cannot access com.hazelcast.simulator.common.GitInfo
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/common/GitInfo.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/common/GitInfo.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronomeTest.java:[13,9] cannot access com.hazelcast.simulator.worker.metronome.ConstantCombinedRateMetronome
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronome.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/worker/metronome/ConstantCombinedRateMetronome.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[113,9] cannot access com.hazelcast.simulator.coordinator.FailureListener
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/FailureListener.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes/com/hazelcast/simulator/coordinator/FailureListener.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,37] cannot find symbol
+[ERROR]   symbol:   variable expectedResponse
+[ERROR]   location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,55] cannot find symbol
+[ERROR]   symbol:   variable actualResponse
+[ERROR]   location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

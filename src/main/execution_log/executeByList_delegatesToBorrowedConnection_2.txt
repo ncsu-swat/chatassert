@@ -34,31 +34,29 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gm4java ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest_backup.java:[34,8] class GMProcessFactoryImplTest is public, should be declared in a file named GMProcessFactoryImplTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMConnectionPoolTest_backup.java:[46,8] class GMConnectionPoolTest is public, should be declared in a file named GMConnectionPoolTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/PooledGMServiceTest_backup.java:[44,8] class PooledGMServiceTest is public, should be declared in a file named PooledGMServiceTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[17,8] duplicate class: org.gm4java.engine.support.GMProcessFactoryImplTest
-[INFO] 4 errors 
-[INFO] -------------------------------------------------------------
+[INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gm4java ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.gm4java.engine.support.PooledGMServiceTest
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/adminuser/.m2/repository/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.869 s
-[INFO] Finished at: 2023-06-01T04:00:19-04:00
+[INFO] Total time:  2.295 s
+[INFO] Finished at: 2023-06-02T07:49:45-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gm4java: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest_backup.java:[34,8] class GMProcessFactoryImplTest is public, should be declared in a file named GMProcessFactoryImplTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMConnectionPoolTest_backup.java:[46,8] class GMConnectionPoolTest is public, should be declared in a file named GMConnectionPoolTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/PooledGMServiceTest_backup.java:[44,8] class PooledGMServiceTest is public, should be declared in a file named PooledGMServiceTest.java
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/gm4java/src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java:[17,8] duplicate class: org.gm4java.engine.support.GMProcessFactoryImplTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

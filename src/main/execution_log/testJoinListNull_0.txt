@@ -30,23 +30,33 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,12] illegal start of expression
-[INFO] 4 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,48] cannot find symbol
+  symbol:   variable result
+  location: class me.zzp.util.SeqTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[89,39] cannot find symbol
+  symbol:   variable expected
+  location: class me.zzp.ar.sql.TSqlBuilderTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[89,49] cannot find symbol
+  symbol:   variable actual
+  location: class me.zzp.ar.sql.TSqlBuilderTest
+[INFO] 3 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.845 s
-[INFO] Finished at: 2023-05-31T08:12:07-04:00
+[INFO] Total time:  2.828 s
+[INFO] Finished at: 2023-06-06T16:34:38-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[28,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,48] cannot find symbol
+[ERROR]   symbol:   variable result
+[ERROR]   location: class me.zzp.util.SeqTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[89,39] cannot find symbol
+[ERROR]   symbol:   variable expected
+[ERROR]   location: class me.zzp.ar.sql.TSqlBuilderTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[89,49] cannot find symbol
+[ERROR]   symbol:   variable actual
+[ERROR]   location: class me.zzp.ar.sql.TSqlBuilderTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

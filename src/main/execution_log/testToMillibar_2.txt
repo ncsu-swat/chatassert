@@ -22,23 +22,23 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ cubesensors-for-java ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/target/test-classes
+[INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/target/test-classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[16,40] variable expected might not have been initialized
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[16,50] variable actual might not have been initialized
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure_backup.java:[11,8] class TestPressure is public, should be declared in a file named TestPressure.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[11,8] duplicate class: com.w3asel.cubesensors.api.v1.format.TestPressure
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.708 s
-[INFO] Finished at: 2023-05-31T15:22:45-04:00
+[INFO] Total time:  1.720 s
+[INFO] Finished at: 2023-06-01T14:56:05-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project cubesensors-for-java: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[16,40] variable expected might not have been initialized
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[16,50] variable actual might not have been initialized
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure_backup.java:[11,8] class TestPressure is public, should be declared in a file named TestPressure.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[11,8] duplicate class: com.w3asel.cubesensors.api.v1.format.TestPressure
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

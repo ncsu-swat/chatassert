@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "userName": "fabric8io",
+            "repoName": "fabric8-maven-plugin",
+            "subRepos": [
+                "core",
+                "enricher/api",
+                "enricher/standard",
+                "enricher/fabric8",
+                "generator/api",
+                "generator/java-exec",
+                "generator/spring-boot",
+                "generator/vertx",
+                "generator/karaf",
+                "generator/wildfly-swarm",
+                "generator/quarkus",
+                "generator/thorntail-v2",
+                "generator/webapp",
+                "generator/openliberty",
+                "watcher/api",
+                "watcher/standard",
+                "enricher/deprecated",
+                "it"
+            ],
+            "commitSHA": "4beae533a97571ddd6a6bc5dfa37c56a028cd3a9",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MavenConfigurationExtractorTest",
+                    "classPath": "enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractorTest.java",
+                    "subRepo": "enricher/api",
+                    "classTests": [
+                        {
+                            "testName": "should_parse_deep_inner_objects",
+                            "startLn": 67,
+                            "endLn": 96,
+                            "testMethod": "@Test\n public void should_parse_deep_inner_objects ( ) {\n     final Plugin fakePlugin = createFakePlugin ( \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" ) ; \n     final Map < String , Object > config = MavenConfigurationExtractor . extract ( ( Xpp3Dom ) fakePlugin . getConfiguration ( ) ) ; \n     final Map < String , Object > e = new HashMap < > ( ) ; \n     e . put ( \"STR\" , \"STR\" ) ; \n     final Map < String , Object > d = new HashMap < > ( ) ; \n     d . put ( \"STR\" , e ) ; \n     final Map < String , Object > c = new HashMap < > ( ) ; \n     c . put ( \"STR\" , d ) ; \n     final Map < String , Object > expected = new HashMap < > ( ) ; \n     expected . put ( \"STR\" , c ) ; \n     assertThat(config).containsEntry(\"STR\",expected);\n}",
+                            "oracle": "assertThat(config).containsEntry(\"STR\",expected);",
+                            "oracleLn": 79,
+                            "focalFile": "enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java",
+                            "focalName": "extract",
+                            "focalStartLn": 38,
+                            "focalEndLn": 44,
+                            "focalMethod": " public static Map < String , Object > extract ( Xpp3Dom root ) { \n if ( root == null ) { \n return new HashMap < > ( ) ; \n } return getElement ( root ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

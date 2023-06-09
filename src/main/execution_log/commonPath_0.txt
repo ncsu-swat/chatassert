@@ -15,7 +15,6 @@
 [INFO] -------------------------------[ bundle ]-------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ wymiwyg-commons-core ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/target
 [INFO] 
 [INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ wymiwyg-commons-core ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -41,8 +40,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.411 s
-[INFO] Finished at: 2023-05-31T13:01:31-04:00
+[INFO] Total time:  1.916 s
+[INFO] Finished at: 2023-06-06T16:35:47-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project wymiwyg-commons-core: Compilation failure: Compilation failure: 
 [ERROR] Source option 5 is no longer supported. Use 6 or later.

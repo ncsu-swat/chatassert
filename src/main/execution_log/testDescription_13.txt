@@ -37,7 +37,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.rockagen.commons.annotation.OPLogTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.13 sec
 
 Results :
 
@@ -46,6 +46,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.168 s
-[INFO] Finished at: 2023-05-31T13:57:10-04:00
+[INFO] Total time:  3.601 s
+[INFO] Finished at: 2023-06-02T04:20:15-04:00
 [INFO] ------------------------------------------------------------------------

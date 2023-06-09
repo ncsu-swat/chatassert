@@ -1,0 +1,60 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------------< com.github.xmlet:xsdParser >---------------------
+[INFO] Building com.github.xmlet:xsdParser 1.2.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ xsdParser ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/target
+[INFO] 
+[INFO] --- jacoco:0.8.1:prepare-agent (default) @ xsdParser ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.1/org.jacoco.agent-0.8.1-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ xsdParser ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ xsdParser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 90 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ xsdParser ---
+[INFO] Copying 453 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ xsdParser ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/src/test/java/org/xmlet/xsdparser/IssuesTest.java:[227,39] cannot find symbol
+  symbol:   variable expectedValue
+  location: class org.xmlet.xsdparser.IssuesTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/src/test/java/org/xmlet/xsdparser/IssuesTest.java:[227,54] cannot find symbol
+  symbol:   variable optional
+  location: class org.xmlet.xsdparser.IssuesTest
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.205 s
+[INFO] Finished at: 2023-06-08T07:55:19-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project xsdParser: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/src/test/java/org/xmlet/xsdparser/IssuesTest.java:[227,39] cannot find symbol
+[ERROR]   symbol:   variable expectedValue
+[ERROR]   location: class org.xmlet.xsdparser.IssuesTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/XsdParser/src/test/java/org/xmlet/xsdparser/IssuesTest.java:[227,54] cannot find symbol
+[ERROR]   symbol:   variable optional
+[ERROR]   location: class org.xmlet.xsdparser.IssuesTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

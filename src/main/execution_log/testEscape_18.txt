@@ -33,24 +33,24 @@
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,8] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,9] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,10] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,11] error: illegal start of expression
-[INFO] 4 errors 
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,38] error: cannot find symbol
+[ERROR]   symbol:   variable expectedOutput
+  location: class CommUtilTest
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,54] error: cannot find symbol
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.881 s
-[INFO] Finished at: 2023-05-31T14:41:27-04:00
+[INFO] Total time:  3.057 s
+[INFO] Finished at: 2023-06-02T04:59:56-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure: Compilation failure: 
 [ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,8] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,9] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,10] error: illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,11] error: illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,38] error: cannot find symbol
+[ERROR]   symbol:   variable expectedOutput
+[ERROR]   location: class CommUtilTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[18,54] error: cannot find symbol
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

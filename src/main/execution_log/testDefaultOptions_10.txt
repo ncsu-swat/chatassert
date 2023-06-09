@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< io.openliberty.tools:ci.common >-------------------
+[INFO] Building ci.common 1.8.18
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ci.common ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ ci.common ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ ci.common ---
+[INFO] Copying 62 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/JavaCompilerOptionsTest.java:[47,66] cannot find symbol
+  symbol:   variable Arrays
+  location: class io.openliberty.tools.common.plugins.util.JavaCompilerOptionsTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.287 s
+[INFO] Finished at: 2023-06-07T05:54:04-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:testCompile (default-testCompile) on project ci.common: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/JavaCompilerOptionsTest.java:[47,66] cannot find symbol
+[ERROR]   symbol:   variable Arrays
+[ERROR]   location: class io.openliberty.tools.common.plugins.util.JavaCompilerOptionsTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

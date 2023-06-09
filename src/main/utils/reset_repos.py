@@ -14,7 +14,7 @@ def reset_one(target_repo):
     if target_repo in os.listdir('../../tmp/repos'):
         os.system('rm -rf ../../tmp/repos/{}'.format(target_repo))
 
-    configuration_file = os.path.join("../..", "new_data.json")
+    configuration_file = os.path.join("../..", "sample_all.json")
     with open(configuration_file) as f:
         data = json.load(f)
         testId = 0

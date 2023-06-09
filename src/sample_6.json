@@ -1,0 +1,339 @@
+{
+    "projects": [
+        {
+            "userName": "nidi3",
+            "repoName": "graphviz-java",
+            "subRepos": [
+                "graphviz-java",
+                "graphviz-java-min-deps",
+                "graphviz-java-all-j2v8",
+                "graphviz-rough",
+                "graphviz-kotlin"
+            ],
+            "commitSHA": "dcbd021a903a4114dd087ef9acec5650b92c89b2",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "GraphvizTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java",
+                    "subRepo": "graphviz-java",
+                    "before": {
+                        "setupName": "init",
+                        "startLn": 43,
+                        "endLn": 46,
+                        "setupMethod": "@BeforeAll\n static void init ( ) { \n Graphviz . useEngine ( new AbstractGraphvizEngineTest . GraphvizEngineDummy ( ) ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "withTotalMemory",
+                            "startLn": 80,
+                            "endLn": 86,
+                            "testMethod": "@Test\n void withTotalMemory ( ) {\n     final Graph graph = graph ( ) . with ( node ( \"STR\" ) . link ( \"STR\" ) ) ; \n     final String result = Graphviz . fromGraph ( graph ) . totalMemory ( 32000 ) . render ( SVG ) . toString ( ) ; \n     assertThat(result,is(\"STR\"+\"STR\"+uriPathOf(newFile(\"STR\"))+\"STR\"));\n}",
+                            "oracle": "assertThat(result,is(\"STR\"+\"STR\"+uriPathOf(newFile(\"STR\"))+\"STR\"));",
+                            "oracleLn": 84,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/service/SystemUtils.java",
+                            "focalName": "uriPathOf",
+                            "focalStartLn": 79,
+                            "focalEndLn": 81,
+                            "focalMethod": " public static String uriPathOf ( File path ) { \n return uriPathOf ( path . getAbsolutePath ( ) ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "GraphvizServerTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java",
+                    "subRepo": "graphviz-java",
+                    "classTests": [
+                        {
+                            "testName": "cmdLineArgs",
+                            "startLn": 54,
+                            "endLn": 59,
+                            "testMethod": "@Test\n void cmdLineArgs ( ) {\n     final GraphvizServer . CmdOptions opts = GraphvizServer . CmdOptions . parse ( new String [ ] { \n \"STR\" , \"STR\" , \"STR\" } ) ; \n     assertEquals(map(\"STR\",\"STR\"),opts.opts);\n}",
+                            "oracle": "assertEquals(map(\"STR\",\"STR\"),opts.opts);",
+                            "oracleLn": 57,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/engine/GraphvizServer.java",
+                            "focalName": "parse",
+                            "focalStartLn": 126,
+                            "focalEndLn": 150,
+                            "focalMethod": " static CmdOptions parse ( String [ ] args ) { \n final CmdOptions options = new CmdOptions ( ) ; \n for ( int i = 0 ; \n i < args . length ; \n i ++ ) { \n if ( args [ i ] . startsWith ( \"STR\" ) ) { \n final int len = args [ i ] . length ( ) ; \n if ( len == 1 ) { \n throw new IllegalArgumentException ( \"STR\" ) ; \n } final String name = args [ i ] . substring ( 1 , 2 ) ; \n String value ; \n if ( len > 2 ) { \n value = args [ i ] . substring ( 2 ) ; \n } else if ( i == args . length - 1 ) { \n value = \"STR\" ; \n } else { \n value = args [ i + 1 ] ; \n i ++ ; \n } options . opts . put ( name , value ) ; \n } else { \n options . args . add ( args [ i ] ) ; \n } } return options ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ColorTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/attribute/ColorTest.java",
+                    "subRepo": "graphviz-java",
+                    "classTests": [
+                        {
+                            "testName": "rgbOk",
+                            "startLn": 56,
+                            "endLn": 59,
+                            "testMethod": "@Test\n void rgbOk ( ) {\n     assertColor(attr(\"STR\",\"STR\"),Color.rgb(\"STR\"));\n}",
+                            "oracle": "assertColor(attr(\"STR\",\"STR\"),Color.rgb(\"STR\"));",
+                            "oracleLn": 58,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Color.java",
+                            "focalName": "rgb",
+                            "focalStartLn": 91,
+                            "focalEndLn": 97,
+                            "focalMethod": " public static Color rgb ( String rgb ) { \n final String val = rgb . startsWith ( \"STR\" ) ? rgb . substring ( 1 ) : rgb ; \n if ( val . length ( ) != 6 ) { \n throw new IllegalArgumentException ( \"STR\" ) ; \n } return new Color ( \"STR\" + val ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "TooTallNate",
+            "repoName": "Java-WebSocket",
+            "subRepos": [],
+            "commitSHA": "e630e60168f8a857549731cd500e9312dfccbc46",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "PerMessageDeflateExtensionTest",
+                    "classPath": "src/test/java/org/java_websocket/extensions/PerMessageDeflateExtensionTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testAcceptProvidedExtensionAsServer",
+                            "startLn": 51,
+                            "endLn": 58,
+                            "testMethod": "@Test\n public void testAcceptProvidedExtensionAsServer ( ) {\n     PerMessageDeflateExtension deflateExtension = new PerMessageDeflateExtension ( ) ; \n     assertTrue(deflateExtension.acceptProvidedExtensionAsServer(\"STR\"));\n}",
+                            "oracle": "assertTrue(deflateExtension.acceptProvidedExtensionAsServer(\"STR\"));",
+                            "oracleLn": 54,
+                            "focalFile": "src/main/java/org/java_websocket/extensions/permessage_deflate/PerMessageDeflateExtension.java",
+                            "focalName": "acceptProvidedExtensionAsServer",
+                            "focalStartLn": 252,
+                            "focalEndLn": 272,
+                            "focalMethod": "@Override\n public boolean acceptProvidedExtensionAsServer ( String inputExtension ) { \n String [ ] requestedExtensions = inputExtension . split ( \"STR\" ) ; \n for ( String extension : requestedExtensions ) { \n ExtensionRequestData extensionData = ExtensionRequestData . parseExtensionRequest ( extension ) ; \n if ( ! EXTENSION_REGISTERED_NAME . equalsIgnoreCase ( extensionData . getExtensionName ( ) ) ) { \n continue ; \n } Map < String , String > headers = extensionData . getExtensionParameters ( ) ; \n requestedParameters . putAll ( headers ) ; \n if ( requestedParameters . containsKey ( CLIENT_NO_CONTEXT_TAKEOVER ) ) { \n clientNoContextTakeover = true ; \n } return true ; \n } return false ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "fabric8io",
+            "repoName": "fabric8-maven-plugin",
+            "subRepos": [
+                "core",
+                "enricher/api",
+                "enricher/standard",
+                "enricher/fabric8",
+                "generator/api",
+                "generator/java-exec",
+                "generator/spring-boot",
+                "generator/vertx",
+                "generator/karaf",
+                "generator/wildfly-swarm",
+                "generator/quarkus",
+                "generator/thorntail-v2",
+                "generator/webapp",
+                "generator/openliberty",
+                "watcher/api",
+                "watcher/standard",
+                "enricher/deprecated",
+                "it"
+            ],
+            "commitSHA": "4beae533a97571ddd6a6bc5dfa37c56a028cd3a9",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ProfileUtilTest",
+                    "classPath": "core/src/test/java/io/fabric8/maven/core/util/ProfileUtilTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "simple",
+                            "startLn": 43,
+                            "endLn": 58,
+                            "testMethod": "@Test\n public void simple ( ) throws IOException {\n     InputStream is = getClass ( ) . getResourceAsStream ( \"STR\" ) ; \n     assertNotNull(is);\n}",
+                            "oracle": "assertNotNull(is);",
+                            "oracleLn": 46,
+                            "focalFile": "core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java",
+                            "focalName": "use",
+                            "focalStartLn": 128,
+                            "focalEndLn": 130,
+                            "focalMethod": " public boolean use ( String inc ) { \n return ! excludes . contains ( inc ) && includes . contains ( inc ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "arnohaase",
+            "repoName": "a-foundation",
+            "subRepos": [
+                "a-foundation"
+            ],
+            "commitSHA": "f3eef2ca89d67775f202a4c28140230a6229291e",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "AJsonSerHelperTest",
+                    "classPath": "a-foundation/src/test/java/com/ajjpj/afoundation/io/AJsonSerHelperTest.java",
+                    "subRepo": "a-foundation",
+                    "classTests": [
+                        {
+                            "testName": "testArray1",
+                            "startLn": 200,
+                            "endLn": 211,
+                            "testMethod": "@Test\n public void testArray1 ( ) throws IOException {\n     final ByteArrayOutputStream baos = new ByteArrayOutputStream ( ) ; \n     final AJsonSerHelper ser = new AJsonSerHelper ( baos ) ; \n     ser . startArray ( ) ; \n     ser . writeBooleanLiteral ( true ) ; \n     ser . endArray ( ) ; \n     final String result = new String ( baos . toByteArray ( ) , \"STR\" ) ; \n     assertEquals(\"STR\",result);\n}",
+                            "oracle": "assertEquals(\"STR\",result);",
+                            "oracleLn": 208,
+                            "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/io/AJsonSerHelper.java",
+                            "focalName": "endArray",
+                            "focalStartLn": 67,
+                            "focalEndLn": 72,
+                            "focalMethod": " public void endArray ( ) throws IOException { \n checkInArray ( ) ; \n state . pop ( ) ; \n out . write ( \"STR\" ) ; \n afterValueWritten ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testNegativeNumber1",
+                            "startLn": 82,
+                            "endLn": 91,
+                            "testMethod": "@Test\n public void testNegativeNumber1 ( ) throws IOException {\n     final ByteArrayOutputStream baos = new ByteArrayOutputStream ( ) ; \n     final AJsonSerHelper ser = new AJsonSerHelper ( baos ) ; \n     ser . writeNumberLiteral ( - 1234567890 , 1 ) ; \n     final String result = new String ( baos . toByteArray ( ) , \"STR\" ) ; \n     assertEquals(\"STR\",result);\n}",
+                            "oracle": "assertEquals(\"STR\",result);",
+                            "oracleLn": 88,
+                            "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/io/AJsonSerHelper.java",
+                            "focalName": "writeNumberLiteral",
+                            "focalStartLn": 110,
+                            "focalEndLn": 131,
+                            "focalMethod": " public void writeNumberLiteral ( long value , int numFracDigits ) throws IOException { \n checkAcceptsValueAndPrefixComma ( ) ; \n if ( value < 0 ) { \n out . write ( '-' ) ; \n value = - value ; \n } if ( numFracDigits == 0 ) { \n out . write ( String . valueOf ( value ) ) ; \n } else { \n final long intPart = value / TEN_POW [ numFracDigits ] ; \n final String fracPart = String . valueOf ( 1_000_000_000 + value % TEN_POW [ numFracDigits ] ) . substring ( 10 - numFracDigits , 10 ) ; \n out . write ( String . valueOf ( intPart ) ) ; \n out . write ( \"STR\" ) ; \n out . write ( fracPart ) ; \n } afterValueWritten ( ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "NanoHttpd",
+            "repoName": "nanohttpd",
+            "subRepos": [
+                "core",
+                "webserver",
+                "samples",
+                "websocket",
+                "markdown-plugin",
+                "nanolets",
+                "fileupload"
+            ],
+            "commitSHA": "efb2ebf85a2b06f7c508aba9eaad5377e3a01e81",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "TestNanolets",
+                    "classPath": "nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java",
+                    "subRepo": "nanolets",
+                    "before": {
+                        "setupName": "setUp",
+                        "startLn": 81,
+                        "endLn": 96,
+                        "setupMethod": "@BeforeClass\n public static void setUp ( ) throws Exception { \n stdIn = new PipedOutputStream ( ) ; \n System . setIn ( new PipedInputStream ( stdIn ) ) ; \n serverStartThread = new Thread ( new Runnable ( ) { \n @Override\n public void run ( ) { \n String [ ] args = { \n } ; \n AppNanolets . main ( args ) ; \n } } ) ; \n serverStartThread . start ( ) ; \n Thread . sleep ( 200 ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testRoutePrioritizerRemoveRouteNoRouteMatches",
+                            "startLn": 548,
+                            "endLn": 555,
+                            "testMethod": "@Test\n public void testRoutePrioritizerRemoveRouteNoRouteMatches ( ) {\n     DefaultRoutePrioritizer prioritizer = new DefaultRoutePrioritizer ( ) ; \n     prioritizer . addRoute ( \"STR\" , 100 , NotImplementedHandler . class ) ; \n     prioritizer . removeRoute ( \"STR\" ) ; \n     Assert.assertEquals(1,prioritizer.getPrioritizedRoutes().size());\n}",
+                            "oracle": "Assert.assertEquals(1,prioritizer.getPrioritizedRoutes().size());",
+                            "oracleLn": 553,
+                            "focalFile": "nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java",
+                            "focalName": "getPrioritizedRoutes",
+                            "focalStartLn": 515,
+                            "focalEndLn": 518,
+                            "focalMethod": "@Override\n public Collection < UriResource > getPrioritizedRoutes ( ) { \n return Collections . unmodifiableCollection ( mappings ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "amlinv",
+            "repoName": "stat-collection-utils",
+            "subRepos": [],
+            "commitSHA": "44da9965afbd2e92ce17ce2271d3bf21f69e2e97",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "JMXJvmIdConnectionFactoryTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/connection/impl/JMXJvmIdConnectionFactoryTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 54,
+                        "endLn": 78,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n this . factory = new JMXJvmIdConnectionFactory ( \"STR\" ) ; \n this . mockVirtualMachine = Mockito . mock ( VirtualMachine . class ) ; \n this . mockLogger = Mockito . mock ( Logger . class ) ; \n this . mockAttacher = Mockito . mock ( VirtualMachineAttacher . class ) ; \n this . mockJmxServiceUrlFactory = Mockito . mock ( JMXServiceUrlFactory . class ) ; \n this . mockJmxConnectorFactoryDelegate = Mockito . mock ( JMXConnectorFactoryDelegate . class ) ; \n this . mockJmxMbeanConnectorFactory = Mockito . mock ( JMXMBeanConnectionFactory . class ) ; \n this . mockJmxServiceUrl = Mockito . mock ( JMXServiceURL . class ) ; \n this . mockJmxConnector = Mockito . mock ( JMXConnector . class ) ; \n this . mockJmxMbeanConnection = Mockito . mock ( JMXMBeanConnection . class ) ; \n this . mockAgentProperties = Mockito . mock ( Properties . class ) ; \n this . mockSystemProperties = Mockito . mock ( Properties . class ) ; \n Mockito . when ( this . mockJmxServiceUrlFactory . createJMXServiceUrl ( \"STR\" ) ) . thenReturn ( this . mockJmxServiceUrl ) ; \n Mockito . when ( this . mockJmxConnectorFactoryDelegate . connect ( this . mockJmxServiceUrl ) ) . thenReturn ( this . mockJmxConnector ) ; \n Mockito . when ( this . mockJmxMbeanConnectorFactory . create ( this . mockJmxConnector ) ) . thenReturn ( this . mockJmxMbeanConnection ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCreateConnection",
+                            "startLn": 121,
+                            "endLn": 138,
+                            "testMethod": "@Test\n public void testCreateConnection ( ) throws Exception {\n     this . initFactory ( ) ; \n     Mockito . when ( this . mockAttacher . attach ( \"STR\" ) ) . thenReturn ( this . mockVirtualMachine ) ; \n     Mockito . when ( this . mockVirtualMachine . getAgentProperties ( ) ) . thenReturn ( this . mockAgentProperties ) ; \n     Mockito . when ( this . mockVirtualMachine . getSystemProperties ( ) ) . thenReturn ( this . mockSystemProperties ) ; \n     Mockito . when ( this . mockAgentProperties . getProperty ( JMXJvmIdConnectionFactory . COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ) . thenReturn ( \"STR\" ) ; \n     MBeanAccessConnection result = this . factory . createConnection ( ) ; \n     assertSame(result,this.mockJmxMbeanConnection);\n}",
+                            "oracle": "assertSame(result,this.mockJmxMbeanConnection);",
+                            "oracleLn": 129,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/connection/impl/JMXJvmIdConnectionFactory.java",
+                            "focalName": "createConnection",
+                            "focalStartLn": 104,
+                            "focalEndLn": 132,
+                            "focalMethod": "@Override\n public MBeanAccessConnection createConnection ( ) throws IOException { \n JMXMBeanConnection result = null ; \n try { \n VirtualMachine vm = this . attacher . attach ( jvmId ) ; \n String url = vm . getAgentProperties ( ) . getProperty ( COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ; \n if ( url == null ) { \n String javaHome = vm . getSystemProperties ( ) . getProperty ( \"STR\" ) ; \n String agent = javaHome + File . separator + \"STR\" + File . separator + \"STR\" ; \n vm . loadAgent ( agent ) ; \n url = vm . getAgentProperties ( ) . getProperty ( COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ; \n } if ( url != null ) { \n JMXServiceURL jmxUrl = this . jmxServiceUrlFactory . createJMXServiceUrl ( url ) ; \n JMXConnector connector = this . jmxConnectorFactoryDelegate . connect ( jmxUrl ) ; \n result = this . jmxmBeanConnectionFactory . create ( connector ) ; \n } else { \n log . warn ( \"STR\" , this . jvmId ) ; \n } } catch ( AgentInitializationException | AgentLoadException | AttachNotSupportedException exc ) { \n log . warn ( \"STR\" , this . jvmId , exc ) ; \n } return result ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "JmxAttributePollerTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/polling/JmxAttributePollerTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 77,
+                        "endLn": 111,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n this . polled001 = new TestDataClass001 ( ) ; \n this . polledObjects = new LinkedList < > ( ) ; \n this . polledObjects . add ( \"STR\" ) ; \n this . polledObjects . add ( polled001 ) ; \n this . mockMBeanAccessConnectionFactory = Mockito . mock ( MBeanAccessConnectionFactory . class ) ; \n this . mockScheduler = Mockito . mock ( Scheduler . class ) ; \n this . mockBatchCapableAccessConnection = Mockito . mock ( MBeanBatchCapableAccessConnection . class ) ; \n this . mockAccessConnection = Mockito . mock ( MBeanAccessConnection . class ) ; \n this . mockAttributeInjector = Mockito . mock ( AttributeInjector . class ) ; \n this . mockBatchPollProcessor = Mockito . mock ( BatchPollProcessor . class ) ; \n this . mockObjectQueryPreparer = Mockito . mock ( ObjectQueryPreparer . class ) ; \n this . mockTestHooks = Mockito . mock ( JmxAttributePoller . ConcurrencyTestHooks . class ) ; \n this . mockLogger = Mockito . mock ( Logger . class ) ; \n this . poller = new JmxAttributePoller ( this . polledObjects ) ; \n this . processes = new LinkedList < > ( ) ; \n this . executionSlips = new LinkedList < > ( ) ; \n Answer < SchedulerProcessExecutionSlip > startProcessAnswer = createProcessExecutionSlipAnswer ( null , null ) ; \n Mockito . when ( this . mockScheduler . startProcess ( Mockito . any ( SchedulerProcess . class ) ) ) . thenAnswer ( startProcessAnswer ) ; \n this . testObjectName001 = new ObjectName ( this . TEST_ONAME_001_STR ) ; \n this . accessConnectionFactoryDesc = \"STR\" ; \n Mockito . when ( this . mockMBeanAccessConnectionFactory . getTargetDescription ( ) ) . thenReturn ( this . accessConnectionFactoryDesc ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testGetSetAttributeInjector",
+                            "startLn": 143,
+                            "endLn": 150,
+                            "testMethod": "@Test\n public void testGetSetAttributeInjector ( ) throws Exception {\n     assertNotNull(this.poller.getAttributeInjector());\n}",
+                            "oracle": "assertNotNull(this.poller.getAttributeInjector());",
+                            "oracleLn": 145,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/polling/JmxAttributePoller.java",
+                            "focalName": "getAttributeInjector",
+                            "focalStartLn": 103,
+                            "focalEndLn": 105,
+                            "focalMethod": " public AttributeInjector getAttributeInjector ( ) { \n return attributeInjector ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "fizzed",
+            "repoName": "jne",
+            "subRepos": [],
+            "commitSHA": "783226a1fb002d304d22f841870c5c73575fc994",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "JNETest",
+                    "classPath": "src/test/java/com/fizzed/jne/JNETest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "findFile",
+                            "startLn": 34,
+                            "endLn": 58,
+                            "testMethod": "@Test\n public void findFile ( ) throws IOException , ExtractException {\n     Options options = new Options ( ) ; \n     options . setOperatingSystem ( OperatingSystem . LINUX ) ; \n     options . setHardwareArchitecture ( HardwareArchitecture . X64 ) ; \n     File file ; \n     file = JNE . findFile ( \"STR\" , options ) ; \n     assertThat(file,is(not(nullValue())));\n}",
+                            "oracle": "assertThat(file,is(not(nullValue())));",
+                            "oracleLn": 41,
+                            "focalFile": "src/main/java/com/fizzed/jne/JNE.java",
+                            "focalName": "findFile",
+                            "focalStartLn": 320,
+                            "focalEndLn": 339,
+                            "focalMethod": " synchronized static public File findFile ( String name , Options options ) throws IOException { \n if ( options == null ) { \n options = DEFAULT_OPTIONS ; \n } File file = JNE . find ( name , name , options , options . getOperatingSystem ( ) , options . getHardwareArchitecture ( ) ) ; \n if ( file == null ) { \n file = JNE . find ( name , name , options , options . getOperatingSystem ( ) , HardwareArchitecture . ANY ) ; \n } if ( file == null ) { \n file = JNE . find ( name , name , options , OperatingSystem . ANY , HardwareArchitecture . ANY ) ; \n } return file ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

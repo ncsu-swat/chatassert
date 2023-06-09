@@ -30,27 +30,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,39] cannot find symbol
-  symbol:   variable expectedString
-  location: class me.zzp.ar.sql.TSqlBuilderTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,55] cannot find symbol
-  symbol:   variable obj
-  location: class me.zzp.ar.sql.TSqlBuilderTest
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,52] cannot find symbol
+  symbol:   method some()
+  location: interface me.zzp.ar.sql.SqlBuilder
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.949 s
-[INFO] Finished at: 2023-05-31T12:20:55-04:00
+[INFO] Total time:  1.580 s
+[INFO] Finished at: 2023-06-06T16:32:48-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,39] cannot find symbol
-[ERROR]   symbol:   variable expectedString
-[ERROR]   location: class me.zzp.ar.sql.TSqlBuilderTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,55] cannot find symbol
-[ERROR]   symbol:   variable obj
-[ERROR]   location: class me.zzp.ar.sql.TSqlBuilderTest
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java:[24,52] cannot find symbol
+[ERROR]   symbol:   method some()
+[ERROR]   location: interface me.zzp.ar.sql.SqlBuilder
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -1,0 +1,72 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.alipay.sofa:bolt >------------------------
+[INFO] Building com.alipay.sofa:bolt 1.6.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ bolt ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ bolt ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 274
+[INFO] Successfully formatted: 0 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 274 file(s)
+[INFO] Approximate time taken: 1s
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
+[INFO] Updating license headers...
+[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/HEADER
+[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
+[WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 168 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractBoltClient.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractBoltClient.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 106 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/utiltest/RemotingUtilTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/utiltest/RemotingUtilTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/rpc/LifeCycleTest.java:[35,40] cannot find symbol
+  symbol:   variable connectionManager
+  location: class com.alipay.remoting.rpc.LifeCycleTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.723 s
+[INFO] Finished at: 2023-06-05T21:23:18-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.5.1:testCompile (default-testCompile) on project bolt: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/rpc/LifeCycleTest.java:[35,40] cannot find symbol
+[ERROR]   symbol:   variable connectionManager
+[ERROR]   location: class com.alipay.remoting.rpc.LifeCycleTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

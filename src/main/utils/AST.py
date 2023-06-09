@@ -64,7 +64,7 @@ class AST:
         if self.children is not None:
             if self.ast_type in ['MarkerAnnotationExpr']:
                 for child in self.children:
-                    s += child.tok
+                    s += child.tok if child.tok is not None else ""
                 s += '\n'
                 return s
 

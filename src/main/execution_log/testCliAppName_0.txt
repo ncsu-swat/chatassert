@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[WARNING] The project de.vandermeer:execs:jar:0.4.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ------------------------< de.vandermeer:execs >-------------------------
+[INFO] Building Execution Service 0.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom (0 B at 0 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.0.8/ST4-4.0.8.pom
+Progress (1): 2.7/14 kBProgress (1): 5.5/14 kBProgress (1): 8.2/14 kBProgress (1): 11/14 kB Progress (1): 14/14 kBProgress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.0.8/ST4-4.0.8.pom (14 kB at 125 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.pom (2.2 kB at 28 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-master/3.5.2/antlr-master-3.5.2.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-master/3.5.2/antlr-master-3.5.2.pom (12 kB at 141 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.0.8/ST4-4.0.8.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar (0 B at 0 B/s)
+Progress (1): 4.1/240 kBProgress (2): 4.1/240 kB | 4.1/168 kBProgress (2): 8.2/240 kB | 4.1/168 kBProgress (2): 8.2/240 kB | 8.2/168 kBProgress (2): 12/240 kB | 8.2/168 kB Progress (2): 12/240 kB | 12/168 kB Progress (2): 16/240 kB | 12/168 kBProgress (2): 16/240 kB | 16/168 kBProgress (2): 20/240 kB | 16/168 kBProgress (2): 20/240 kB | 20/168 kBProgress (2): 25/240 kB | 20/168 kBProgress (2): 25/240 kB | 25/168 kBProgress (2): 29/240 kB | 25/168 kBProgress (2): 29/240 kB | 29/168 kBProgress (2): 33/240 kB | 29/168 kBProgress (2): 33/240 kB | 33/168 kBProgress (2): 37/240 kB | 33/168 kBProgress (2): 41/240 kB | 33/168 kBProgress (2): 45/240 kB | 33/168 kBProgress (2): 49/240 kB | 33/168 kBProgress (2): 49/240 kB | 37/168 kBProgress (2): 53/240 kB | 37/168 kBProgress (2): 53/240 kB | 41/168 kBProgress (2): 57/240 kB | 41/168 kBProgress (2): 57/240 kB | 45/168 kBProgress (2): 61/240 kB | 45/168 kBProgress (2): 61/240 kB | 49/168 kBProgress (2): 66/240 kB | 49/168 kBProgress (2): 66/240 kB | 53/168 kBProgress (2): 66/240 kB | 57/168 kBProgress (2): 66/240 kB | 61/168 kBProgress (2): 66/240 kB | 66/168 kBProgress (2): 70/240 kB | 66/168 kBProgress (2): 74/240 kB | 66/168 kBProgress (2): 78/240 kB | 66/168 kBProgress (2): 82/240 kB | 66/168 kBProgress (2): 86/240 kB | 66/168 kBProgress (2): 90/240 kB | 66/168 kBProgress (2): 94/240 kB | 66/168 kBProgress (2): 98/240 kB | 66/168 kBProgress (2): 98/240 kB | 70/168 kBProgress (2): 98/240 kB | 74/168 kBProgress (2): 98/240 kB | 78/168 kBProgress (2): 98/240 kB | 82/168 kBProgress (2): 98/240 kB | 86/168 kBProgress (2): 102/240 kB | 86/168 kBProgress (2): 102/240 kB | 90/168 kBProgress (2): 106/240 kB | 90/168 kBProgress (2): 106/240 kB | 94/168 kBProgress (2): 111/240 kB | 94/168 kBProgress (2): 111/240 kB | 98/168 kBProgress (2): 115/240 kB | 98/168 kBProgress (2): 119/240 kB | 98/168 kBProgress (2): 119/240 kB | 102/168 kBProgress (2): 123/240 kB | 102/168 kBProgress (2): 123/240 kB | 106/168 kBProgress (2): 127/240 kB | 106/168 kBProgress (2): 127/240 kB | 111/168 kBProgress (2): 131/240 kB | 111/168 kBProgress (2): 131/240 kB | 115/168 kBProgress (2): 135/240 kB | 115/168 kBProgress (2): 135/240 kB | 119/168 kBProgress (2): 139/240 kB | 119/168 kBProgress (2): 139/240 kB | 123/168 kBProgress (2): 143/240 kB | 123/168 kBProgress (2): 143/240 kB | 127/168 kBProgress (2): 147/240 kB | 127/168 kBProgress (2): 147/240 kB | 131/168 kBProgress (2): 147/240 kB | 135/168 kBProgress (2): 147/240 kB | 139/168 kBProgress (2): 152/240 kB | 139/168 kBProgress (2): 152/240 kB | 143/168 kBProgress (2): 156/240 kB | 143/168 kBProgress (2): 156/240 kB | 147/168 kBProgress (2): 160/240 kB | 147/168 kBProgress (2): 164/240 kB | 147/168 kBProgress (2): 164/240 kB | 152/168 kBProgress (2): 164/240 kB | 156/168 kBProgress (2): 164/240 kB | 160/168 kBProgress (2): 164/240 kB | 164/168 kBProgress (2): 164/240 kB | 168 kB    Progress (2): 168/240 kB | 168 kBProgress (2): 172/240 kB | 168 kBProgress (2): 176/240 kB | 168 kBProgress (2): 180/240 kB | 168 kBProgress (2): 184/240 kB | 168 kBProgress (2): 188/240 kB | 168 kBProgress (2): 193/240 kB | 168 kBProgress (2): 197/240 kB | 168 kBProgress (2): 201/240 kB | 168 kBProgress (2): 205/240 kB | 168 kBProgress (2): 209/240 kB | 168 kBProgress (2): 213/240 kB | 168 kBProgress (2): 217/240 kB | 168 kBProgress (2): 221/240 kB | 168 kBProgress (2): 225/240 kB | 168 kBProgress (2): 229/240 kB | 168 kBProgress (2): 233/240 kB | 168 kBProgress (2): 238/240 kB | 168 kBProgress (2): 240 kB | 168 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar (168 kB at 395 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/ST4/4.0.8/ST4-4.0.8.jar (240 kB at 522 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ execs ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ execs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ execs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/src/main/java/de/vandermeer/execs/ExecS.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/src/main/java/de/vandermeer/execs/ExecS.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/src/main/java/de/vandermeer/execs/ExecS.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ execs ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ execs ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/src/test/java/de/vandermeer/execs/Test_ExecS.java:[32,39] cannot find symbol
+  symbol:   variable expectedAppName
+  location: class de.vandermeer.execs.Test_ExecS
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.549 s
+[INFO] Finished at: 2023-06-06T17:12:54-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.6.1:testCompile (default-testCompile) on project execs: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/execs/src/test/java/de/vandermeer/execs/Test_ExecS.java:[32,39] cannot find symbol
+[ERROR]   symbol:   variable expectedAppName
+[ERROR]   location: class de.vandermeer.execs.Test_ExecS
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

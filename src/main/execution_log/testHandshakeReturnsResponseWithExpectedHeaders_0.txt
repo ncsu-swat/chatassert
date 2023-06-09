@@ -1,0 +1,117 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.nanohttpd:nanohttpd-websocket:jar:2.3.2-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 14, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< org.nanohttpd:nanohttpd-websocket >------------------
+[INFO] Building NanoHttpd-Websocket 2.3.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml
+Progress (1): 990 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml (990 B at 1.3 kB/s)
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/nanohttpd-2.3.2-20190703.182211-24.pom
+Progress (1): 924 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/nanohttpd-2.3.2-20190703.182211-24.pom (924 B at 14 kB/s)
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/maven-metadata.xml
+Progress (1): 609 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/maven-metadata.xml (609 B at 9.0 kB/s)
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/nanohttpd-project-2.3.2-20190703.182036-24.pom
+Progress (1): 4.1/14 kBProgress (1): 7.8/14 kBProgress (1): 12/14 kB Progress (1): 14 kB                      Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/nanohttpd-project-2.3.2-20190703.182036-24.pom (14 kB at 161 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.3.0.M2/websocket-client-9.3.0.M2.pom
+Progress (1): 2.7/5.1 kBProgress (1): 5.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.3.0.M2/websocket-client-9.3.0.M2.pom (5.1 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-parent/9.3.0.M2/websocket-parent-9.3.0.M2.pom
+Progress (1): 2.7/2.9 kBProgress (1): 2.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-parent/9.3.0.M2/websocket-parent-9.3.0.M2.pom (2.9 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-project/9.3.0.M2/jetty-project-9.3.0.M2.pom
+Progress (1): 2.7/34 kBProgress (1): 5.5/34 kBProgress (1): 8.2/34 kBProgress (1): 11/34 kB Progress (1): 14/34 kBProgress (1): 16/34 kBProgress (1): 19/34 kBProgress (1): 21/34 kBProgress (1): 24/34 kBProgress (1): 27/34 kBProgress (1): 30/34 kBProgress (1): 32/34 kBProgress (1): 34 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-project/9.3.0.M2/jetty-project-9.3.0.M2.pom (34 kB at 246 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.3.0.M2/jetty-util-9.3.0.M2.pom
+Progress (1): 2.7 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.3.0.M2/jetty-util-9.3.0.M2.pom (2.7 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.3.0.M2/jetty-io-9.3.0.M2.pom
+Progress (1): 1.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.3.0.M2/jetty-io-9.3.0.M2.pom (1.4 kB at 15 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.3.0.M2/websocket-common-9.3.0.M2.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.3.0.M2/websocket-common-9.3.0.M2.pom (2.6 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.3.0.M2/websocket-api-9.3.0.M2.pom
+Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.3.0.M2/websocket-api-9.3.0.M2.pom (2.2 kB at 19 kB/s)
+Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/nanohttpd-2.3.2-20190703.182211-24.jar
+Progress (1): 4.1/53 kBProgress (1): 7.8/53 kBProgress (1): 12/53 kB Progress (1): 16/53 kBProgress (1): 20/53 kBProgress (1): 24/53 kBProgress (1): 28/53 kBProgress (1): 32/53 kBProgress (1): 37/53 kBProgress (1): 41/53 kBProgress (1): 45/53 kBProgress (1): 49/53 kBProgress (1): 52/53 kBProgress (1): 53 kB                      Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/nanohttpd-2.3.2-20190703.182211-24.jar (53 kB at 368 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.3.0.M2/websocket-client-9.3.0.M2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.3.0.M2/jetty-util-9.3.0.M2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.3.0.M2/jetty-io-9.3.0.M2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.3.0.M2/websocket-common-9.3.0.M2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.3.0.M2/websocket-api-9.3.0.M2.jar
+Progress (1): 4.1/366 kBProgress (1): 8.2/366 kBProgress (1): 12/366 kB Progress (1): 16/366 kBProgress (1): 20/366 kBProgress (1): 24/366 kBProgress (1): 28/366 kBProgress (1): 32/366 kBProgress (1): 36/366 kBProgress (1): 40/366 kBProgress (1): 45/366 kBProgress (1): 49/366 kBProgress (1): 53/366 kBProgress (1): 57/366 kBProgress (1): 61/366 kBProgress (1): 65/366 kBProgress (1): 69/366 kBProgress (1): 73/366 kBProgress (1): 77/366 kBProgress (1): 81/366 kBProgress (1): 85/366 kBProgress (1): 90/366 kBProgress (1): 94/366 kBProgress (1): 98/366 kBProgress (1): 102/366 kBProgress (1): 106/366 kBProgress (1): 110/366 kBProgress (1): 114/366 kBProgress (1): 118/366 kBProgress (1): 122/366 kBProgress (1): 126/366 kBProgress (1): 131/366 kBProgress (1): 135/366 kBProgress (1): 139/366 kBProgress (1): 143/366 kBProgress (1): 147/366 kBProgress (1): 151/366 kBProgress (1): 155/366 kBProgress (1): 159/366 kBProgress (1): 163/366 kBProgress (1): 167/366 kBProgress (1): 171/366 kBProgress (1): 176/366 kBProgress (1): 180/366 kBProgress (1): 184/366 kBProgress (1): 188/366 kBProgress (1): 192/366 kBProgress (1): 196/366 kBProgress (1): 200/366 kBProgress (1): 204/366 kBProgress (1): 208/366 kBProgress (1): 212/366 kBProgress (1): 217/366 kBProgress (1): 221/366 kBProgress (1): 225/366 kBProgress (1): 229/366 kBProgress (1): 233/366 kBProgress (1): 237/366 kBProgress (1): 241/366 kBProgress (1): 245/366 kBProgress (2): 245/366 kB | 2.7/34 kBProgress (2): 245/366 kB | 5.5/34 kBProgress (2): 245/366 kB | 8.2/34 kBProgress (2): 245/366 kB | 11/34 kB Progress (2): 245/366 kB | 14/34 kBProgress (2): 245/366 kB | 16/34 kBProgress (2): 245/366 kB | 19/34 kBProgress (2): 245/366 kB | 21/34 kBProgress (2): 245/366 kB | 24/34 kBProgress (2): 245/366 kB | 27/34 kBProgress (2): 245/366 kB | 30/34 kBProgress (2): 249/366 kB | 30/34 kBProgress (2): 253/366 kB | 30/34 kBProgress (2): 258/366 kB | 30/34 kBProgress (2): 262/366 kB | 30/34 kBProgress (2): 266/366 kB | 30/34 kBProgress (2): 270/366 kB | 30/34 kBProgress (2): 270/366 kB | 32/34 kBProgress (2): 274/366 kB | 32/34 kBProgress (2): 278/366 kB | 32/34 kBProgress (2): 278/366 kB | 34 kB   Progress (2): 282/366 kB | 34 kBProgress (2): 286/366 kB | 34 kBProgress (2): 290/366 kB | 34 kBProgress (2): 294/366 kB | 34 kBProgress (2): 298/366 kB | 34 kBProgress (2): 303/366 kB | 34 kBProgress (2): 307/366 kB | 34 kBProgress (2): 311/366 kB | 34 kBProgress (2): 315/366 kB | 34 kBProgress (2): 319/366 kB | 34 kBProgress (2): 323/366 kB | 34 kBProgress (2): 327/366 kB | 34 kBProgress (2): 331/366 kB | 34 kBProgress (2): 335/366 kB | 34 kBProgress (2): 339/366 kB | 34 kBProgress (2): 344/366 kB | 34 kBProgress (2): 348/366 kB | 34 kBProgress (2): 352/366 kB | 34 kBProgress (2): 356/366 kB | 34 kBProgress (2): 360/366 kB | 34 kBProgress (2): 364/366 kB | 34 kBProgress (2): 366 kB | 34 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-client/9.3.0.M2/websocket-client-9.3.0.M2.jar (34 kB at 160 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-util/9.3.0.M2/jetty-util-9.3.0.M2.jar (366 kB at 1.7 MB/s)
+Progress (1): 2.7/108 kBProgress (1): 5.5/108 kBProgress (1): 8.2/108 kBProgress (1): 11/108 kB Progress (1): 14/108 kBProgress (1): 16/108 kBProgress (2): 16/108 kB | 2.7/44 kBProgress (2): 16/108 kB | 5.5/44 kBProgress (2): 16/108 kB | 8.2/44 kBProgress (2): 16/108 kB | 11/44 kB Progress (2): 16/108 kB | 14/44 kBProgress (2): 16/108 kB | 16/44 kBProgress (2): 16/108 kB | 19/44 kBProgress (2): 16/108 kB | 21/44 kBProgress (2): 16/108 kB | 24/44 kBProgress (3): 16/108 kB | 24/44 kB | 2.7/180 kBProgress (3): 16/108 kB | 24/44 kB | 5.5/180 kBProgress (3): 16/108 kB | 27/44 kB | 5.5/180 kBProgress (3): 20/108 kB | 27/44 kB | 5.5/180 kBProgress (3): 24/108 kB | 27/44 kB | 5.5/180 kBProgress (3): 28/108 kB | 27/44 kB | 5.5/180 kBProgress (3): 32/108 kB | 27/44 kB | 5.5/180 kBProgress (3): 32/108 kB | 27/44 kB | 8.2/180 kBProgress (3): 32/108 kB | 30/44 kB | 8.2/180 kBProgress (3): 32/108 kB | 30/44 kB | 11/180 kB Progress (3): 32/108 kB | 32/44 kB | 11/180 kBProgress (3): 32/108 kB | 32/44 kB | 14/180 kBProgress (3): 32/108 kB | 32/44 kB | 16/180 kBProgress (3): 32/108 kB | 35/44 kB | 16/180 kBProgress (3): 32/108 kB | 38/44 kB | 16/180 kBProgress (3): 36/108 kB | 38/44 kB | 16/180 kBProgress (3): 40/108 kB | 38/44 kB | 16/180 kBProgress (3): 45/108 kB | 38/44 kB | 16/180 kBProgress (3): 49/108 kB | 38/44 kB | 16/180 kBProgress (3): 49/108 kB | 41/44 kB | 16/180 kBProgress (3): 49/108 kB | 43/44 kB | 16/180 kBProgress (3): 49/108 kB | 44 kB | 16/180 kB   Progress (3): 53/108 kB | 44 kB | 16/180 kBProgress (3): 57/108 kB | 44 kB | 16/180 kBProgress (3): 61/108 kB | 44 kB | 16/180 kBProgress (3): 65/108 kB | 44 kB | 16/180 kBProgress (3): 69/108 kB | 44 kB | 16/180 kBProgress (3): 73/108 kB | 44 kB | 16/180 kBProgress (3): 77/108 kB | 44 kB | 16/180 kBProgress (3): 81/108 kB | 44 kB | 16/180 kBProgress (3): 81/108 kB | 44 kB | 20/180 kBProgress (3): 81/108 kB | 44 kB | 24/180 kBProgress (3): 81/108 kB | 44 kB | 28/180 kBProgress (3): 81/108 kB | 44 kB | 32/180 kBProgress (3): 85/108 kB | 44 kB | 32/180 kBProgress (3): 90/108 kB | 44 kB | 32/180 kBProgress (3): 94/108 kB | 44 kB | 32/180 kBProgress (3): 98/108 kB | 44 kB | 32/180 kBProgress (3): 102/108 kB | 44 kB | 32/180 kBProgress (3): 106/108 kB | 44 kB | 32/180 kBProgress (3): 108 kB | 44 kB | 32/180 kB    Progress (3): 108 kB | 44 kB | 36/180 kBProgress (3): 108 kB | 44 kB | 40/180 kBProgress (3): 108 kB | 44 kB | 45/180 kBProgress (3): 108 kB | 44 kB | 49/180 kBProgress (3): 108 kB | 44 kB | 53/180 kBProgress (3): 108 kB | 44 kB | 57/180 kBProgress (3): 108 kB | 44 kB | 61/180 kBProgress (3): 108 kB | 44 kB | 65/180 kBProgress (3): 108 kB | 44 kB | 69/180 kBProgress (3): 108 kB | 44 kB | 73/180 kBProgress (3): 108 kB | 44 kB | 77/180 kBProgress (3): 108 kB | 44 kB | 81/180 kBProgress (3): 108 kB | 44 kB | 85/180 kBProgress (3): 108 kB | 44 kB | 90/180 kBProgress (3): 108 kB | 44 kB | 94/180 kBProgress (3): 108 kB | 44 kB | 98/180 kBProgress (3): 108 kB | 44 kB | 102/180 kBProgress (3): 108 kB | 44 kB | 106/180 kBProgress (3): 108 kB | 44 kB | 110/180 kBProgress (3): 108 kB | 44 kB | 114/180 kBProgress (3): 108 kB | 44 kB | 118/180 kBProgress (3): 108 kB | 44 kB | 122/180 kBProgress (3): 108 kB | 44 kB | 126/180 kBProgress (3): 108 kB | 44 kB | 131/180 kB                                         Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-io/9.3.0.M2/jetty-io-9.3.0.M2.jar (108 kB at 255 kB/s)
+Progress (2): 44 kB | 135/180 kBProgress (2): 44 kB | 139/180 kBProgress (2): 44 kB | 143/180 kBProgress (2): 44 kB | 147/180 kB                                Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-api/9.3.0.M2/websocket-api-9.3.0.M2.jar (44 kB at 103 kB/s)
+Progress (1): 151/180 kBProgress (1): 155/180 kBProgress (1): 159/180 kBProgress (1): 163/180 kBProgress (1): 167/180 kBProgress (1): 171/180 kBProgress (1): 176/180 kBProgress (1): 180/180 kBProgress (1): 180 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/websocket/websocket-common/9.3.0.M2/websocket-common-9.3.0.M2.jar (180 kB at 360 kB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nanohttpd-websocket ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ nanohttpd-websocket ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.4.201502262128:prepare-agent (default-prepare-agent) @ nanohttpd-websocket ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/target/jacoco.exec
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd-websocket ---
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/main/java
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java
+[INFO] Scan 13 files header done in 76.349ms.
+[INFO] All files are up-to-date.
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd-websocket ---
+[INFO] Will create or update license file [bsd_3] to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/LICENSE.txt
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ nanohttpd-websocket ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 13
+[INFO] Successfully formatted: 1 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 12 file(s)
+[INFO] Approximate time taken: 0s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ nanohttpd-websocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ nanohttpd-websocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ nanohttpd-websocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ nanohttpd-websocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java/org/nanohttpd/junit/protocols/websockets/WebSocketResponseHandlerTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java/org/nanohttpd/junit/protocols/websockets/WebSocketResponseHandlerTest.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java/org/nanohttpd/junit/protocols/websockets/WebSocketResponseHandlerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java/org/nanohttpd/junit/protocols/websockets/WebSocketResponseHandlerTest.java:[153,62] cannot find symbol
+  symbol:   variable focalMethodObject
+  location: class org.nanohttpd.junit.protocols.websockets.WebSocketResponseHandlerTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.885 s
+[INFO] Finished at: 2023-06-06T17:18:02-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project nanohttpd-websocket: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/websocket/src/test/java/org/nanohttpd/junit/protocols/websockets/WebSocketResponseHandlerTest.java:[153,62] cannot find symbol
+[ERROR]   symbol:   variable focalMethodObject
+[ERROR]   location: class org.nanohttpd.junit.protocols.websockets.WebSocketResponseHandlerTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

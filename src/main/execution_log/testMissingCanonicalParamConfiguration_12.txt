@@ -1,0 +1,70 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< com.digitalpebble.stormcrawler:storm-crawler-core >----------
+[INFO] Building storm-crawler-core 2.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ storm-crawler-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target
+[INFO] 
+[INFO] --- enforcer:3.0.0:enforce (enforce-maven) @ storm-crawler-core ---
+[INFO] 
+[INFO] --- enforcer:3.0.0:enforce (exclude-vulnerable-log4j-versions) @ storm-crawler-core ---
+[INFO] 
+[INFO] --- git-code-format:2.7:install-hooks (install-formatter-hook) @ storm-crawler-core ---
+[INFO] Installing git hooks
+[INFO] Installed git hooks
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ storm-crawler-core ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.2:compile (default-compile) @ storm-crawler-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 101 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/parse/filter/XPathFilter.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/parse/filter/XPathFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/util/Configurable.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/util/Configurable.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ storm-crawler-core ---
+[INFO] Copying 20 resources
+[INFO] 
+[INFO] --- compiler:3.2:testCompile (default-testCompile) @ storm-crawler-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 41 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[112,47] cannot find symbol
+  symbol:   variable expectedResult
+  location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[144,67] cannot find symbol
+  symbol:   method size()
+  location: class java.lang.String[]
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.088 s
+[INFO] Finished at: 2023-06-09T02:48:25-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[112,47] cannot find symbol
+[ERROR]   symbol:   variable expectedResult
+[ERROR]   location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[144,67] cannot find symbol
+[ERROR]   symbol:   method size()
+[ERROR]   location: class java.lang.String[]
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

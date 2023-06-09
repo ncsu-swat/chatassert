@@ -1,0 +1,42 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.yubico:yubico-validation-client2 >----------------
+[INFO] Building Yubico OTP validation client protocol 2 3.0.5
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ yubico-validation-client2 ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ yubico-validation-client2 ---
+[INFO] Copying 2 resources
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:2.0.2:compile (default-compile) @ yubico-validation-client2 ---
+[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ yubico-validation-client2 ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/resources
+[INFO] 
+[INFO] --- compiler:2.0.2:testCompile (default-testCompile) @ yubico-validation-client2 ---
+[INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ yubico-validation-client2 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.yubico.client.v2.YubicoClientTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s - in com.yubico.client.v2.YubicoClientTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.303 s
+[INFO] Finished at: 2023-06-07T23:51:31-04:00
+[INFO] ------------------------------------------------------------------------

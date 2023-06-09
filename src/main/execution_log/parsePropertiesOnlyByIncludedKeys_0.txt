@@ -1,0 +1,401 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for pl.jalokim.propertiestojson:java-properties-to-json:jar:5.2.2
+[WARNING] 'version' contains an expression but should be a constant. @ pl.jalokim.propertiestojson:java-properties-to-json:${main-version}.${minor-version}, /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/pom.xml, line 13, column 14
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] --------< pl.jalokim.propertiestojson:java-properties-to-json >---------
+[INFO] Building java-properties-to-json 5.2.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ java-properties-to-json ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target
+[INFO] 
+[INFO] --- flatten-maven-plugin:1.2.2:clean (flatten.clean) @ java-properties-to-json ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/.flattened-pom.xml
+[INFO] 
+[INFO] --- git-commit-id-plugin:4.0.0:revision (default) @ java-properties-to-json ---
+[INFO] dotGitDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/.git
+[INFO] Collected git.build.user.name with value ishrak
+[INFO] Collected git.build.user.email with value ishrak_6@hotmail.com
+[INFO] Collected git.branch with value 47137e7cdcfc9e003e710e3f60409e451c4f0454
+[INFO] --always = true
+[INFO] --dirty = -dirty
+[INFO] --abbrev = 7
+[INFO] Tag refs [[Ref[refs/tags/v1.1=ae6a50a488fa523840d014ec06f619b69471d7b0], Ref[refs/tags/v1.2=a49cde0a96f1ce4917464c254910ef3a3c38c821], Ref[refs/tags/v1.3=9d072b47e8b3d46cf03b92285348949a44349cd1], Ref[refs/tags/v2.0=0b1438c420a3a7a0d66b97d2d26fed252890823b], Ref[refs/tags/v2.1=09756fbf9434dd78064484b63e2cb24956ff6ed5], Ref[refs/tags/v2.2=226fc1f7ec54ba197283b4b4dcddcb8c54da2983], Ref[refs/tags/v3.0=77b131ba5c2d035bfd89b35462772006d102ed47], Ref[refs/tags/v3.1=699346f4608a816571bd425be2f8c438de95ea50], Ref[refs/tags/v3.2=986198961b507cf4891bf245049b1b39c01678e1], Ref[refs/tags/v4.0=80b47ce193d90e46f64f079ce02a6cf94c06befd], Ref[refs/tags/v5.0.0=18e9817806cf2a8a53921748ac891509084faeb4], Ref[refs/tags/v5.0.1=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d], Ref[refs/tags/v5.1.0=2ee0752354c3e3db4e1070b9f80243cc45f35492], Ref[refs/tags/v5.1.1=5873cb5664a2a6530974bffbb8d548d043f82a2b], Ref[refs/tags/v5.1.2=20c7a147921fcde0f615e4d402d404fc7545b607], Ref[refs/tags/v5.1.3=91a80be6ba97902e5aefc6ca9d47248ba85f769f], Ref[refs/tags/v5.2.0=ed5f7ad19dbeee28b17c11864f655668696bad9d], Ref[refs/tags/v5.2.1=6229375f33b13244dba6de84443ac93db8380d13], Ref[refs/tags/v5.2.2=b286406476e98391dc00bc42575c44a860482ec5], Ref[refs/tags/v5.3.0=ccce80a5a78261247ec7f8040df6468ffd71e0e2]]]
+[INFO] Resolved tag [v1.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:05:18 2018 +0200]], points at [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------] 
+[INFO] Resolved tag [v1.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:10:49 2018 +0200]], points at [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------] 
+[INFO] Resolved tag [v1.3] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:12 2018 +0200]], points at [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------] 
+[INFO] Resolved tag [v2.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:59 2018 +0200]], points at [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------] 
+[INFO] Resolved tag [v2.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:16 2018 +0200]], points at [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------] 
+[INFO] Resolved tag [v2.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:30 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:26:17 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Mon Jul 2 20:54:31 2018 +0200]], points at [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------] 
+[INFO] Resolved tag [v3.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Thu Aug 9 22:29:12 2018 +0200]], points at [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------] 
+[INFO] Resolved tag [v4.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Sat Oct 6 18:21:26 2018 +0200]], points at [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------] 
+[INFO] Resolved tag [v5.0.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Aug 5 20:28:38 2019 +0200]], points at [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------] 
+[INFO] Resolved tag [v5.0.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 8 14:05:32 2019 +0200]], points at [commit a06b71a880684edf006743a190d8daef2b073988 0 ------] 
+[INFO] Resolved tag [v5.1.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 22 20:22:31 2019 +0200]], points at [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------] 
+[INFO] Resolved tag [v5.1.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Oct 21 21:36:21 2019 +0200]], points at [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------] 
+[INFO] Resolved tag [v5.1.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Dec 17 22:39:36 2019 +0100]], points at [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------] 
+[INFO] Resolved tag [v5.1.3] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Apr 28 22:04:00 2020 +0200]], points at [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------] 
+[INFO] Resolved tag [v5.2.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sat Sep 5 14:42:49 2020 +0200]], points at [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------] 
+[INFO] Resolved tag [v5.2.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Jul 21 12:54:50 2021 +0200]], points at [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------] 
+[INFO] Resolved tag [v5.2.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Dec 29 19:17:54 2021 +0100]], points at [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p] 
+[INFO] Resolved tag [v5.3.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Thu Jun 9 22:15:52 2022 +0200]], points at [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------] 
+[INFO] key [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------], tags => [[DatedRevTag{id=18e9817806cf2a8a53921748ac891509084faeb4, tagName='v5.0.0', date=August 5, 2019 at 2:28:38 PM EDT}]] 
+[INFO] key [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------], tags => [[DatedRevTag{id=0b1438c420a3a7a0d66b97d2d26fed252890823b, tagName='v2.0', date=June 13, 2018 at 4:11:59 PM EDT}]] 
+[INFO] key [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------], tags => [[DatedRevTag{id=226fc1f7ec54ba197283b4b4dcddcb8c54da2983, tagName='v2.2', date=June 13, 2018 at 4:12:30 PM EDT}, DatedRevTag{id=77b131ba5c2d035bfd89b35462772006d102ed47, tagName='v3.0', date=June 13, 2018 at 4:26:17 PM EDT}]] 
+[INFO] key [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------], tags => [[DatedRevTag{id=6229375f33b13244dba6de84443ac93db8380d13, tagName='v5.2.1', date=July 21, 2021 at 6:54:50 AM EDT}]] 
+[INFO] key [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------], tags => [[DatedRevTag{id=20c7a147921fcde0f615e4d402d404fc7545b607, tagName='v5.1.2', date=December 17, 2019 at 4:39:36 PM EST}]] 
+[INFO] key [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------], tags => [[DatedRevTag{id=09756fbf9434dd78064484b63e2cb24956ff6ed5, tagName='v2.1', date=June 13, 2018 at 4:12:16 PM EDT}]] 
+[INFO] key [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------], tags => [[DatedRevTag{id=2ee0752354c3e3db4e1070b9f80243cc45f35492, tagName='v5.1.0', date=September 22, 2019 at 2:22:31 PM EDT}]] 
+[INFO] key [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------], tags => [[DatedRevTag{id=ed5f7ad19dbeee28b17c11864f655668696bad9d, tagName='v5.2.0', date=September 5, 2020 at 8:42:49 AM EDT}]] 
+[INFO] key [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------], tags => [[DatedRevTag{id=ae6a50a488fa523840d014ec06f619b69471d7b0, tagName='v1.1', date=June 13, 2018 at 4:05:18 PM EDT}]] 
+[INFO] key [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------], tags => [[DatedRevTag{id=986198961b507cf4891bf245049b1b39c01678e1, tagName='v3.2', date=August 9, 2018 at 4:29:12 PM EDT}]] 
+[INFO] key [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------], tags => [[DatedRevTag{id=80b47ce193d90e46f64f079ce02a6cf94c06befd, tagName='v4.0', date=October 6, 2018 at 12:21:26 PM EDT}]] 
+[INFO] key [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------], tags => [[DatedRevTag{id=ccce80a5a78261247ec7f8040df6468ffd71e0e2, tagName='v5.3.0', date=June 9, 2022 at 4:15:52 PM EDT}]] 
+[INFO] key [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------], tags => [[DatedRevTag{id=a49cde0a96f1ce4917464c254910ef3a3c38c821, tagName='v1.2', date=June 13, 2018 at 4:10:49 PM EDT}]] 
+[INFO] key [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------], tags => [[DatedRevTag{id=5873cb5664a2a6530974bffbb8d548d043f82a2b, tagName='v5.1.1', date=October 21, 2019 at 3:36:21 PM EDT}]] 
+[INFO] key [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------], tags => [[DatedRevTag{id=699346f4608a816571bd425be2f8c438de95ea50, tagName='v3.1', date=July 2, 2018 at 2:54:31 PM EDT}]] 
+[INFO] key [commit a06b71a880684edf006743a190d8daef2b073988 0 ------], tags => [[DatedRevTag{id=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d, tagName='v5.0.1', date=September 8, 2019 at 8:05:32 AM EDT}]] 
+[INFO] key [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------], tags => [[DatedRevTag{id=91a80be6ba97902e5aefc6ca9d47248ba85f769f, tagName='v5.1.3', date=April 28, 2020 at 4:04:00 PM EDT}]] 
+[INFO] key [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p], tags => [[DatedRevTag{id=b286406476e98391dc00bc42575c44a860482ec5, tagName='v5.2.2', date=December 29, 2021 at 1:17:54 PM EST}]] 
+[INFO] key [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------], tags => [[DatedRevTag{id=9d072b47e8b3d46cf03b92285348949a44349cd1, tagName='v1.3', date=June 13, 2018 at 4:11:12 PM EDT}]] 
+[INFO] Created map: [{commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------=[v5.0.0], commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------=[v2.0], commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------=[v3.0, v2.2], commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------=[v5.2.1], commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------=[v5.1.2], commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------=[v2.1], commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------=[v5.1.0], commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------=[v5.2.0], commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------=[v1.1], commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------=[v3.2], commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------=[v4.0], commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------=[v5.3.0], commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------=[v1.2], commit f655d81c0788701c92543d8180ca6701cf340051 0 ------=[v5.1.1], commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------=[v3.1], commit a06b71a880684edf006743a190d8daef2b073988 0 ------=[v5.0.1], commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------=[v5.1.3], commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p=[v5.2.2], commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------=[v1.3]}]
+[INFO] evalCommit is [47137e7cdcfc9e003e710e3f60409e451c4f0454]
+[INFO] The commit we're on is a Tag ([v5.2.2]) and forceLongFormat == false, returning.
+[INFO] Collected git.commit.id.describe with value v5.2.2-dirty
+[INFO] Collected git.commit.id.describe-short with value v5.2.2-dirty
+[INFO] Collected git.commit.id with value 47137e7cdcfc9e003e710e3f60409e451c4f0454
+[INFO] Collected git.commit.id.abbrev with value 47137e7
+[INFO] Collected git.dirty with value true
+[INFO] Collected git.commit.user.name with value mmitura
+[INFO] Collected git.commit.user.email with value mitura.mikolaj@gmail.com
+[INFO] Collected git.commit.message.full with value release v5.2.2
+[INFO] Collected git.commit.message.short with value release v5.2.2
+[INFO] Collected git.commit.time with value 2021-12-29T13:17:54-0500
+[INFO] Collected git.remote.origin.url with value git@github.com:mikolajmitura/java-properties-to-json.git
+[INFO] Collected git.tags with value v5.2.2,v5.3.0
+[INFO] evalCommit is [47137e7cdcfc9e003e710e3f60409e451c4f0454]
+[INFO] Tag refs [[Ref[refs/tags/v1.1=ae6a50a488fa523840d014ec06f619b69471d7b0], Ref[refs/tags/v1.2=a49cde0a96f1ce4917464c254910ef3a3c38c821], Ref[refs/tags/v1.3=9d072b47e8b3d46cf03b92285348949a44349cd1], Ref[refs/tags/v2.0=0b1438c420a3a7a0d66b97d2d26fed252890823b], Ref[refs/tags/v2.1=09756fbf9434dd78064484b63e2cb24956ff6ed5], Ref[refs/tags/v2.2=226fc1f7ec54ba197283b4b4dcddcb8c54da2983], Ref[refs/tags/v3.0=77b131ba5c2d035bfd89b35462772006d102ed47], Ref[refs/tags/v3.1=699346f4608a816571bd425be2f8c438de95ea50], Ref[refs/tags/v3.2=986198961b507cf4891bf245049b1b39c01678e1], Ref[refs/tags/v4.0=80b47ce193d90e46f64f079ce02a6cf94c06befd], Ref[refs/tags/v5.0.0=18e9817806cf2a8a53921748ac891509084faeb4], Ref[refs/tags/v5.0.1=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d], Ref[refs/tags/v5.1.0=2ee0752354c3e3db4e1070b9f80243cc45f35492], Ref[refs/tags/v5.1.1=5873cb5664a2a6530974bffbb8d548d043f82a2b], Ref[refs/tags/v5.1.2=20c7a147921fcde0f615e4d402d404fc7545b607], Ref[refs/tags/v5.1.3=91a80be6ba97902e5aefc6ca9d47248ba85f769f], Ref[refs/tags/v5.2.0=ed5f7ad19dbeee28b17c11864f655668696bad9d], Ref[refs/tags/v5.2.1=6229375f33b13244dba6de84443ac93db8380d13], Ref[refs/tags/v5.2.2=b286406476e98391dc00bc42575c44a860482ec5], Ref[refs/tags/v5.3.0=ccce80a5a78261247ec7f8040df6468ffd71e0e2]]]
+[INFO] Resolved tag [v1.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:05:18 2018 +0200]], points at [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------] 
+[INFO] Resolved tag [v1.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:10:49 2018 +0200]], points at [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------] 
+[INFO] Resolved tag [v1.3] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:12 2018 +0200]], points at [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------] 
+[INFO] Resolved tag [v2.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:59 2018 +0200]], points at [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------] 
+[INFO] Resolved tag [v2.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:16 2018 +0200]], points at [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------] 
+[INFO] Resolved tag [v2.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:30 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:26:17 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Mon Jul 2 20:54:31 2018 +0200]], points at [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------] 
+[INFO] Resolved tag [v3.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Thu Aug 9 22:29:12 2018 +0200]], points at [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------] 
+[INFO] Resolved tag [v4.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Sat Oct 6 18:21:26 2018 +0200]], points at [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------] 
+[INFO] Resolved tag [v5.0.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Aug 5 20:28:38 2019 +0200]], points at [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------] 
+[INFO] Resolved tag [v5.0.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 8 14:05:32 2019 +0200]], points at [commit a06b71a880684edf006743a190d8daef2b073988 0 ------] 
+[INFO] Resolved tag [v5.1.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 22 20:22:31 2019 +0200]], points at [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------] 
+[INFO] Resolved tag [v5.1.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Oct 21 21:36:21 2019 +0200]], points at [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------] 
+[INFO] Resolved tag [v5.1.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Dec 17 22:39:36 2019 +0100]], points at [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------] 
+[INFO] Resolved tag [v5.1.3] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Apr 28 22:04:00 2020 +0200]], points at [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------] 
+[INFO] Resolved tag [v5.2.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sat Sep 5 14:42:49 2020 +0200]], points at [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------] 
+[INFO] Resolved tag [v5.2.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Jul 21 12:54:50 2021 +0200]], points at [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------] 
+[INFO] Resolved tag [v5.2.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Dec 29 19:17:54 2021 +0100]], points at [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p] 
+[INFO] Resolved tag [v5.3.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Thu Jun 9 22:15:52 2022 +0200]], points at [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------] 
+[INFO] key [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------], tags => [[DatedRevTag{id=18e9817806cf2a8a53921748ac891509084faeb4, tagName='v5.0.0', date=August 5, 2019 at 2:28:38 PM EDT}]] 
+[INFO] key [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------], tags => [[DatedRevTag{id=0b1438c420a3a7a0d66b97d2d26fed252890823b, tagName='v2.0', date=June 13, 2018 at 4:11:59 PM EDT}]] 
+[INFO] key [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------], tags => [[DatedRevTag{id=226fc1f7ec54ba197283b4b4dcddcb8c54da2983, tagName='v2.2', date=June 13, 2018 at 4:12:30 PM EDT}, DatedRevTag{id=77b131ba5c2d035bfd89b35462772006d102ed47, tagName='v3.0', date=June 13, 2018 at 4:26:17 PM EDT}]] 
+[INFO] key [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------], tags => [[DatedRevTag{id=6229375f33b13244dba6de84443ac93db8380d13, tagName='v5.2.1', date=July 21, 2021 at 6:54:50 AM EDT}]] 
+[INFO] key [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------], tags => [[DatedRevTag{id=20c7a147921fcde0f615e4d402d404fc7545b607, tagName='v5.1.2', date=December 17, 2019 at 4:39:36 PM EST}]] 
+[INFO] key [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------], tags => [[DatedRevTag{id=09756fbf9434dd78064484b63e2cb24956ff6ed5, tagName='v2.1', date=June 13, 2018 at 4:12:16 PM EDT}]] 
+[INFO] key [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------], tags => [[DatedRevTag{id=2ee0752354c3e3db4e1070b9f80243cc45f35492, tagName='v5.1.0', date=September 22, 2019 at 2:22:31 PM EDT}]] 
+[INFO] key [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------], tags => [[DatedRevTag{id=ed5f7ad19dbeee28b17c11864f655668696bad9d, tagName='v5.2.0', date=September 5, 2020 at 8:42:49 AM EDT}]] 
+[INFO] key [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------], tags => [[DatedRevTag{id=ae6a50a488fa523840d014ec06f619b69471d7b0, tagName='v1.1', date=June 13, 2018 at 4:05:18 PM EDT}]] 
+[INFO] key [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------], tags => [[DatedRevTag{id=986198961b507cf4891bf245049b1b39c01678e1, tagName='v3.2', date=August 9, 2018 at 4:29:12 PM EDT}]] 
+[INFO] key [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------], tags => [[DatedRevTag{id=80b47ce193d90e46f64f079ce02a6cf94c06befd, tagName='v4.0', date=October 6, 2018 at 12:21:26 PM EDT}]] 
+[INFO] key [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------], tags => [[DatedRevTag{id=ccce80a5a78261247ec7f8040df6468ffd71e0e2, tagName='v5.3.0', date=June 9, 2022 at 4:15:52 PM EDT}]] 
+[INFO] key [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------], tags => [[DatedRevTag{id=a49cde0a96f1ce4917464c254910ef3a3c38c821, tagName='v1.2', date=June 13, 2018 at 4:10:49 PM EDT}]] 
+[INFO] key [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------], tags => [[DatedRevTag{id=5873cb5664a2a6530974bffbb8d548d043f82a2b, tagName='v5.1.1', date=October 21, 2019 at 3:36:21 PM EDT}]] 
+[INFO] key [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------], tags => [[DatedRevTag{id=699346f4608a816571bd425be2f8c438de95ea50, tagName='v3.1', date=July 2, 2018 at 2:54:31 PM EDT}]] 
+[INFO] key [commit a06b71a880684edf006743a190d8daef2b073988 0 ------], tags => [[DatedRevTag{id=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d, tagName='v5.0.1', date=September 8, 2019 at 8:05:32 AM EDT}]] 
+[INFO] key [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------], tags => [[DatedRevTag{id=91a80be6ba97902e5aefc6ca9d47248ba85f769f, tagName='v5.1.3', date=April 28, 2020 at 4:04:00 PM EDT}]] 
+[INFO] key [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p], tags => [[DatedRevTag{id=b286406476e98391dc00bc42575c44a860482ec5, tagName='v5.2.2', date=December 29, 2021 at 1:17:54 PM EST}]] 
+[INFO] key [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------], tags => [[DatedRevTag{id=9d072b47e8b3d46cf03b92285348949a44349cd1, tagName='v1.3', date=June 13, 2018 at 4:11:12 PM EDT}]] 
+[INFO] Created map: [{commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------=[v5.0.0], commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------=[v2.0], commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------=[v3.0, v2.2], commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------=[v5.2.1], commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------=[v5.1.2], commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------=[v2.1], commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------=[v5.1.0], commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------=[v5.2.0], commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------=[v1.1], commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------=[v3.2], commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------=[v4.0], commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------=[v5.3.0], commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------=[v1.2], commit f655d81c0788701c92543d8180ca6701cf340051 0 ------=[v5.1.1], commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------=[v3.1], commit a06b71a880684edf006743a190d8daef2b073988 0 ------=[v5.0.1], commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------=[v5.1.3], commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p=[v5.2.2], commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------=[v1.3]}]
+[INFO] Collected git.closest.tag.name with value v5.2.2
+[INFO] evalCommit is [47137e7cdcfc9e003e710e3f60409e451c4f0454]
+[INFO] Tag refs [[Ref[refs/tags/v1.1=ae6a50a488fa523840d014ec06f619b69471d7b0], Ref[refs/tags/v1.2=a49cde0a96f1ce4917464c254910ef3a3c38c821], Ref[refs/tags/v1.3=9d072b47e8b3d46cf03b92285348949a44349cd1], Ref[refs/tags/v2.0=0b1438c420a3a7a0d66b97d2d26fed252890823b], Ref[refs/tags/v2.1=09756fbf9434dd78064484b63e2cb24956ff6ed5], Ref[refs/tags/v2.2=226fc1f7ec54ba197283b4b4dcddcb8c54da2983], Ref[refs/tags/v3.0=77b131ba5c2d035bfd89b35462772006d102ed47], Ref[refs/tags/v3.1=699346f4608a816571bd425be2f8c438de95ea50], Ref[refs/tags/v3.2=986198961b507cf4891bf245049b1b39c01678e1], Ref[refs/tags/v4.0=80b47ce193d90e46f64f079ce02a6cf94c06befd], Ref[refs/tags/v5.0.0=18e9817806cf2a8a53921748ac891509084faeb4], Ref[refs/tags/v5.0.1=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d], Ref[refs/tags/v5.1.0=2ee0752354c3e3db4e1070b9f80243cc45f35492], Ref[refs/tags/v5.1.1=5873cb5664a2a6530974bffbb8d548d043f82a2b], Ref[refs/tags/v5.1.2=20c7a147921fcde0f615e4d402d404fc7545b607], Ref[refs/tags/v5.1.3=91a80be6ba97902e5aefc6ca9d47248ba85f769f], Ref[refs/tags/v5.2.0=ed5f7ad19dbeee28b17c11864f655668696bad9d], Ref[refs/tags/v5.2.1=6229375f33b13244dba6de84443ac93db8380d13], Ref[refs/tags/v5.2.2=b286406476e98391dc00bc42575c44a860482ec5], Ref[refs/tags/v5.3.0=ccce80a5a78261247ec7f8040df6468ffd71e0e2]]]
+[INFO] Resolved tag [v1.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:05:18 2018 +0200]], points at [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------] 
+[INFO] Resolved tag [v1.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:10:49 2018 +0200]], points at [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------] 
+[INFO] Resolved tag [v1.3] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:12 2018 +0200]], points at [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------] 
+[INFO] Resolved tag [v2.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:11:59 2018 +0200]], points at [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------] 
+[INFO] Resolved tag [v2.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:16 2018 +0200]], points at [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------] 
+[INFO] Resolved tag [v2.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:12:30 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Wed Jun 13 22:26:17 2018 +0200]], points at [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------] 
+[INFO] Resolved tag [v3.1] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Mon Jul 2 20:54:31 2018 +0200]], points at [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------] 
+[INFO] Resolved tag [v3.2] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Thu Aug 9 22:29:12 2018 +0200]], points at [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------] 
+[INFO] Resolved tag [v4.0] [PersonIdent[MikoÅaj Mitura, mikolio1@o2.pl, Sat Oct 6 18:21:26 2018 +0200]], points at [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------] 
+[INFO] Resolved tag [v5.0.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Aug 5 20:28:38 2019 +0200]], points at [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------] 
+[INFO] Resolved tag [v5.0.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 8 14:05:32 2019 +0200]], points at [commit a06b71a880684edf006743a190d8daef2b073988 0 ------] 
+[INFO] Resolved tag [v5.1.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sun Sep 22 20:22:31 2019 +0200]], points at [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------] 
+[INFO] Resolved tag [v5.1.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Mon Oct 21 21:36:21 2019 +0200]], points at [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------] 
+[INFO] Resolved tag [v5.1.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Dec 17 22:39:36 2019 +0100]], points at [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------] 
+[INFO] Resolved tag [v5.1.3] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Tue Apr 28 22:04:00 2020 +0200]], points at [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------] 
+[INFO] Resolved tag [v5.2.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Sat Sep 5 14:42:49 2020 +0200]], points at [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------] 
+[INFO] Resolved tag [v5.2.1] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Jul 21 12:54:50 2021 +0200]], points at [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------] 
+[INFO] Resolved tag [v5.2.2] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Wed Dec 29 19:17:54 2021 +0100]], points at [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p] 
+[INFO] Resolved tag [v5.3.0] [PersonIdent[mmitura, mitura.mikolaj@gmail.com, Thu Jun 9 22:15:52 2022 +0200]], points at [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------] 
+[INFO] key [commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------], tags => [[DatedRevTag{id=18e9817806cf2a8a53921748ac891509084faeb4, tagName='v5.0.0', date=August 5, 2019 at 2:28:38 PM EDT}]] 
+[INFO] key [commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------], tags => [[DatedRevTag{id=0b1438c420a3a7a0d66b97d2d26fed252890823b, tagName='v2.0', date=June 13, 2018 at 4:11:59 PM EDT}]] 
+[INFO] key [commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------], tags => [[DatedRevTag{id=226fc1f7ec54ba197283b4b4dcddcb8c54da2983, tagName='v2.2', date=June 13, 2018 at 4:12:30 PM EDT}, DatedRevTag{id=77b131ba5c2d035bfd89b35462772006d102ed47, tagName='v3.0', date=June 13, 2018 at 4:26:17 PM EDT}]] 
+[INFO] key [commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------], tags => [[DatedRevTag{id=6229375f33b13244dba6de84443ac93db8380d13, tagName='v5.2.1', date=July 21, 2021 at 6:54:50 AM EDT}]] 
+[INFO] key [commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------], tags => [[DatedRevTag{id=20c7a147921fcde0f615e4d402d404fc7545b607, tagName='v5.1.2', date=December 17, 2019 at 4:39:36 PM EST}]] 
+[INFO] key [commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------], tags => [[DatedRevTag{id=09756fbf9434dd78064484b63e2cb24956ff6ed5, tagName='v2.1', date=June 13, 2018 at 4:12:16 PM EDT}]] 
+[INFO] key [commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------], tags => [[DatedRevTag{id=2ee0752354c3e3db4e1070b9f80243cc45f35492, tagName='v5.1.0', date=September 22, 2019 at 2:22:31 PM EDT}]] 
+[INFO] key [commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------], tags => [[DatedRevTag{id=ed5f7ad19dbeee28b17c11864f655668696bad9d, tagName='v5.2.0', date=September 5, 2020 at 8:42:49 AM EDT}]] 
+[INFO] key [commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------], tags => [[DatedRevTag{id=ae6a50a488fa523840d014ec06f619b69471d7b0, tagName='v1.1', date=June 13, 2018 at 4:05:18 PM EDT}]] 
+[INFO] key [commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------], tags => [[DatedRevTag{id=986198961b507cf4891bf245049b1b39c01678e1, tagName='v3.2', date=August 9, 2018 at 4:29:12 PM EDT}]] 
+[INFO] key [commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------], tags => [[DatedRevTag{id=80b47ce193d90e46f64f079ce02a6cf94c06befd, tagName='v4.0', date=October 6, 2018 at 12:21:26 PM EDT}]] 
+[INFO] key [commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------], tags => [[DatedRevTag{id=ccce80a5a78261247ec7f8040df6468ffd71e0e2, tagName='v5.3.0', date=June 9, 2022 at 4:15:52 PM EDT}]] 
+[INFO] key [commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------], tags => [[DatedRevTag{id=a49cde0a96f1ce4917464c254910ef3a3c38c821, tagName='v1.2', date=June 13, 2018 at 4:10:49 PM EDT}]] 
+[INFO] key [commit f655d81c0788701c92543d8180ca6701cf340051 0 ------], tags => [[DatedRevTag{id=5873cb5664a2a6530974bffbb8d548d043f82a2b, tagName='v5.1.1', date=October 21, 2019 at 3:36:21 PM EDT}]] 
+[INFO] key [commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------], tags => [[DatedRevTag{id=699346f4608a816571bd425be2f8c438de95ea50, tagName='v3.1', date=July 2, 2018 at 2:54:31 PM EDT}]] 
+[INFO] key [commit a06b71a880684edf006743a190d8daef2b073988 0 ------], tags => [[DatedRevTag{id=9ad18c0b9fa48768dd0bc8e37d894f50ab2df32d, tagName='v5.0.1', date=September 8, 2019 at 8:05:32 AM EDT}]] 
+[INFO] key [commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------], tags => [[DatedRevTag{id=91a80be6ba97902e5aefc6ca9d47248ba85f769f, tagName='v5.1.3', date=April 28, 2020 at 4:04:00 PM EDT}]] 
+[INFO] key [commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p], tags => [[DatedRevTag{id=b286406476e98391dc00bc42575c44a860482ec5, tagName='v5.2.2', date=December 29, 2021 at 1:17:54 PM EST}]] 
+[INFO] key [commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------], tags => [[DatedRevTag{id=9d072b47e8b3d46cf03b92285348949a44349cd1, tagName='v1.3', date=June 13, 2018 at 4:11:12 PM EDT}]] 
+[INFO] Created map: [{commit a94d7b02acaa3aeadb75f93f84715647f5b0aeaa 0 ------=[v5.0.0], commit 56a9c927b15ed0fc9d0513e13195ee2456806de5 0 ------=[v2.0], commit 9a963d6131f709b41592d2fdece53c0b4db919ea 0 ------=[v3.0, v2.2], commit 99adcb4333d7a09314796c315725b053eb3baae5 0 ------=[v5.2.1], commit 8652a0a388c34966ca5ad699c5918a01b284a1dc 0 ------=[v5.1.2], commit 2909d3bd85b245d4caf4807a089ad97bc2f0f3b0 0 ------=[v2.1], commit d9e571ec0b0a1d4c91f1546fd53b268543ae63a6 0 ------=[v5.1.0], commit 81eaf23d632b7cc279c4d249764f7686e00f1ad2 0 ------=[v5.2.0], commit 0f14aab6e4f0d7df8c438f77be65813f8fcd3b55 0 ------=[v1.1], commit 0dcb286f6d19df36df994ecfb10a874a9f5e65a7 0 ------=[v3.2], commit f0ed56c6e6a967664ec0d86b61d476bb2ae4eaa9 0 ------=[v4.0], commit 71dbda70866e293f98af64c0c202d6766b97e64b 0 ------=[v5.3.0], commit 49eecb2ea20b2978a4c54e121c6a2aacf2e4ce87 0 ------=[v1.2], commit f655d81c0788701c92543d8180ca6701cf340051 0 ------=[v5.1.1], commit 4fdc927948178c818105eb0a5eeba315ef77c211 0 ------=[v3.1], commit a06b71a880684edf006743a190d8daef2b073988 0 ------=[v5.0.1], commit f3a0c6533466e2dd561c2fa434e8e808aa77d464 0 ------=[v5.1.3], commit 47137e7cdcfc9e003e710e3f60409e451c4f0454 1640801874 -----p=[v5.2.2], commit 96b4e8b1e6863f79daeeb037529e442fd276607f 0 ------=[v1.3]}]
+[INFO] Collected git.closest.tag.commit.count with value 0
+[INFO] Collected git.total.commit.count with value 202
+[ERROR] Failed to perform fetch
+org.eclipse.jgit.api.errors.TransportException: git@github.com:mikolajmitura/java-properties-to-json.git: Auth fail
+    at org.eclipse.jgit.api.FetchCommand.call (FetchCommand.java:254)
+    at pl.project13.core.JGitProvider.fetch (JGitProvider.java:351)
+    at pl.project13.core.JGitProvider.getAheadBehind (JGitProvider.java:338)
+    at pl.project13.core.GitDataProvider.lambda$memoize$6 (GitDataProvider.java:274)
+    at pl.project13.core.GitDataProvider.lambda$loadGitData$2 (GitDataProvider.java:177)
+    at pl.project13.core.GitDataProvider.maybePut (GitDataProvider.java:257)
+    at pl.project13.core.GitDataProvider.loadGitData (GitDataProvider.java:177)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitDataWithJGit (GitCommitIdMojo.java:639)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitData (GitCommitIdMojo.java:598)
+    at pl.project13.maven.git.GitCommitIdMojo.execute (GitCommitIdMojo.java:489)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:mikolajmitura/java-properties-to-json.git: Auth fail
+    at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession (JschConfigSessionFactory.java:191)
+    at org.eclipse.jgit.transport.SshTransport.getSession (SshTransport.java:140)
+    at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init> (TransportGitSsh.java:280)
+    at org.eclipse.jgit.transport.TransportGitSsh.openFetch (TransportGitSsh.java:170)
+    at org.eclipse.jgit.transport.FetchProcess.executeImp (FetchProcess.java:138)
+    at org.eclipse.jgit.transport.FetchProcess.execute (FetchProcess.java:124)
+    at org.eclipse.jgit.transport.Transport.fetch (Transport.java:1271)
+    at org.eclipse.jgit.api.FetchCommand.call (FetchCommand.java:243)
+    at pl.project13.core.JGitProvider.fetch (JGitProvider.java:351)
+    at pl.project13.core.JGitProvider.getAheadBehind (JGitProvider.java:338)
+    at pl.project13.core.GitDataProvider.lambda$memoize$6 (GitDataProvider.java:274)
+    at pl.project13.core.GitDataProvider.lambda$loadGitData$2 (GitDataProvider.java:177)
+    at pl.project13.core.GitDataProvider.maybePut (GitDataProvider.java:257)
+    at pl.project13.core.GitDataProvider.loadGitData (GitDataProvider.java:177)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitDataWithJGit (GitCommitIdMojo.java:639)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitData (GitCommitIdMojo.java:598)
+    at pl.project13.maven.git.GitCommitIdMojo.execute (GitCommitIdMojo.java:489)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: com.jcraft.jsch.JSchException: Auth fail
+    at com.jcraft.jsch.Session.connect (Session.java:519)
+    at org.eclipse.jgit.transport.JschConfigSessionFactory.getSession (JschConfigSessionFactory.java:145)
+    at org.eclipse.jgit.transport.SshTransport.getSession (SshTransport.java:140)
+    at org.eclipse.jgit.transport.TransportGitSsh$SshFetchConnection.<init> (TransportGitSsh.java:280)
+    at org.eclipse.jgit.transport.TransportGitSsh.openFetch (TransportGitSsh.java:170)
+    at org.eclipse.jgit.transport.FetchProcess.executeImp (FetchProcess.java:138)
+    at org.eclipse.jgit.transport.FetchProcess.execute (FetchProcess.java:124)
+    at org.eclipse.jgit.transport.Transport.fetch (Transport.java:1271)
+    at org.eclipse.jgit.api.FetchCommand.call (FetchCommand.java:243)
+    at pl.project13.core.JGitProvider.fetch (JGitProvider.java:351)
+    at pl.project13.core.JGitProvider.getAheadBehind (JGitProvider.java:338)
+    at pl.project13.core.GitDataProvider.lambda$memoize$6 (GitDataProvider.java:274)
+    at pl.project13.core.GitDataProvider.lambda$loadGitData$2 (GitDataProvider.java:177)
+    at pl.project13.core.GitDataProvider.maybePut (GitDataProvider.java:257)
+    at pl.project13.core.GitDataProvider.loadGitData (GitDataProvider.java:177)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitDataWithJGit (GitCommitIdMojo.java:639)
+    at pl.project13.maven.git.GitCommitIdMojo.loadGitData (GitCommitIdMojo.java:598)
+    at pl.project13.maven.git.GitCommitIdMojo.execute (GitCommitIdMojo.java:489)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+[INFO] Collected git.local.branch.ahead with value NO_REMOTE
+[INFO] Collected git.local.branch.behind with value NO_REMOTE
+[INFO] Collected git.build.time with value 2023-06-07T07:32:37-0400
+[INFO] Collected git.build.version with value 5.2.2
+[INFO] Collected git.build.host with value adminusers-MacBook-Pro.local
+[INFO] including property git.tags in results
+[INFO] including property git.closest.tag.commit.count in results
+[INFO] including property git.build.version in results
+[INFO] including property git.commit.user.name in results
+[INFO] including property git.commit.id.abbrev in results
+[INFO] including property git.branch in results
+[INFO] including property git.build.host in results
+[INFO] including property git.commit.id.describe-short in results
+[INFO] including property git.total.commit.count in results
+[INFO] including property git.commit.id.describe in results
+[INFO] including property git.build.user.email in results
+[INFO] including property git.commit.id in results
+[INFO] including property git.commit.message.short in results
+[INFO] including property git.commit.user.email in results
+[INFO] including property git.closest.tag.name in results
+[INFO] including property git.local.branch.ahead in results
+[INFO] including property git.commit.time in results
+[INFO] including property git.local.branch.behind in results
+[INFO] including property git.build.time in results
+[INFO] including property git.build.user.name in results
+[INFO] including property git.dirty in results
+[INFO] including property git.commit.message.full in results
+[INFO] including property git.remote.origin.url in results
+[INFO] Writing properties file to [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/classes/git.properties] (for module java-properties-to-json)...
+[INFO] 
+[INFO] --- gmavenplus-plugin:1.12.1:addTestSources (default) @ java-properties-to-json ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.7.0:process (process-shared-resources) @ java-properties-to-json ---
+[INFO] Preparing remote bundle pl.jalokim.coderules:code-style-rules:RELEASE
+[INFO] Copying 6 resources from 1 bundle.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ java-properties-to-json ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/resources
+[INFO] 
+[INFO] --- maven-antrun-plugin:3.0.0:run (codeNarcTask) @ java-properties-to-json ---
+[INFO] Executing tasks
+[INFO] Loaded properties file in 33ms; 394 rules
+[INFO] Loading ruleset from [file:////Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/code-style-rules/codenarc/codenarc.xml]
+[INFO] Loading ruleset from [rulesets/basic.xml]
+[INFO] Loading ruleset from [rulesets/braces.xml]
+[INFO] Loading ruleset from [rulesets/formatting.xml]
+[INFO] Loading ruleset from [rulesets/groovyism.xml]
+[INFO] Loading ruleset from [rulesets/imports.xml]
+[INFO] Loading ruleset from [rulesets/naming.xml]
+[INFO] Loading ruleset from [rulesets/unnecessary.xml]
+[INFO] Loading ruleset from [rulesets/unused.xml]
+[INFO] RuleSet configuration properties file [codenarc.properties] not found.
+[INFO] Analysis time=1700ms; Files with analysis errors: 0
+[INFO] Report file [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/CodeNarc.html] created.
+[INFO] Report file [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/CodeNarc.xml] created.
+CodeNarc completed: (p1=0; p2=0; p3=0) 3647ms
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- flatten-maven-plugin:1.2.2:flatten (flatten) @ java-properties-to-json ---
+[INFO] Generating flattened POM of project pl.jalokim.propertiestojson:java-properties-to-json:jar:5.2.2...
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ java-properties-to-json ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 73 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.1:check (default) @ java-properties-to-json ---
+[INFO] Starting audit...
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:11:9: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:14:9: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:18:9: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:21:9: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:22:9: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/path/PathMetadata.java:94:13: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/path/PathMetadata.java:95:13: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/resolvers/hierarchy/JsonTypeResolversHierarchyResolver.java:70:17: '&&' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:24:13: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:25:13: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:26:13: '+' should be on the previous line. [OperatorWrap]
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:27:13: '+' should be on the previous line. [OperatorWrap]
+Audit done.
+[INFO] There are 12 errors reported by Checkstyle 8.29 with /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/java-properties-to-json/target/code-style-rules/checkstyle/checkstyle.xml ruleset.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:[11,9] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:[14,9] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:[18,9] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:[21,9] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/util/exception/ParsePropertiesException.java:[22,9] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/path/PathMetadata.java:[94,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/path/PathMetadata.java:[95,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/resolvers/hierarchy/JsonTypeResolversHierarchyResolver.java:[70,17] (whitespace) OperatorWrap: '&&' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:[24,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:[25,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:[26,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[ERROR] src/main/java/pl/jalokim/propertiestojson/resolvers/primitives/object/HasGenericType.java:[27,13] (whitespace) OperatorWrap: '+' should be on the previous line.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.969 s
+[INFO] Finished at: 2023-06-07T07:32:50-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.1.1:check (default) on project java-properties-to-json: You have 12 Checkstyle violations. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
