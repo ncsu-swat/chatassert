@@ -1,0 +1,72 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------< de.digitalcollections.iiif:iiif-apis >----------------
+[INFO] Building DigitalCollections: IIIF API Library 0.3.9
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ iiif-apis ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target
+[INFO] 
+[INFO] --- jacoco:0.8.6:prepare-agent (pre-unit-test) @ iiif-apis ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/jacoco.exec
+[INFO] 
+[INFO] --- fmt:2.9:format (default) @ iiif-apis ---
+[INFO] Processed 100 files (1 reformatted).
+[INFO] Processed 103 files (1 reformatted).
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ iiif-apis ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ iiif-apis ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 85 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 8
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/main/java/de/digitalcollections/iiif/model/jackson/ProblemHandler.java:[51,17] handleUnexpectedToken(com.fasterxml.jackson.databind.DeserializationContext,java.lang.Class<?>,com.fasterxml.jackson.core.JsonToken,com.fasterxml.jackson.core.JsonParser,java.lang.String) in com.fasterxml.jackson.databind.deser.DeserializationProblemHandler has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/main/java/de/digitalcollections/iiif/model/jackson/ProblemHandler.java:[72,17] handleUnexpectedToken(com.fasterxml.jackson.databind.DeserializationContext,java.lang.Class<?>,com.fasterxml.jackson.core.JsonToken,com.fasterxml.jackson.core.JsonParser,java.lang.String) in com.fasterxml.jackson.databind.deser.DeserializationProblemHandler has been deprecated
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/main/java/de/digitalcollections/iiif/model/ModelUtilities.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/main/java/de/digitalcollections/iiif/model/ModelUtilities.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ iiif-apis ---
+[INFO] Copying 60 resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ iiif-apis ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] bootstrap class path not set in conjunction with -source 8
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/ExternalTest.java:[89,78] SIZE_BY_WH_LISTED in de.digitalcollections.iiif.model.image.ImageApiProfile.Feature has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/JsonMappingTest.java:[114,29] isEqualToComparingFieldByFieldRecursively(java.lang.Object) in org.assertj.core.api.AbstractObjectAssert has been deprecated
+[INFO] 3 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesSerializationTest.java:[78,14] cannot find symbol
+  symbol:   class Assert
+  location: package org.junit
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.302 s
+[INFO] Finished at: 2023-06-09T03:36:22-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project iiif-apis: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesSerializationTest.java:[78,14] cannot find symbol
+[ERROR]   symbol:   class Assert
+[ERROR]   location: package org.junit
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

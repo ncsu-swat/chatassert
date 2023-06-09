@@ -62,6 +62,8 @@ public class ParseUtil {
     }
 
     public static MethodDeclaration parseMethodDeclaration(JavaParser jparser, String methodDeclaration) {
+        System.out.println("\nNew Method:\n" + methodDeclaration);
+
         Optional<MethodDeclaration> optMD = jparser.parseMethodDeclaration(methodDeclaration).getResult();
         if (optMD.isPresent()) {
             // get compilation unit (ast of a file file) for the original file

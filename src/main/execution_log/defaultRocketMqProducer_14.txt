@@ -1,0 +1,66 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------< io.github.rhwayfun:spring-boot-rocketmq-starter >-----------
+[INFO] Building spring-boot-rocketmq-starter 0.0.3.RELEASE
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ spring-boot-rocketmq-starter ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.6.201602180812:prepare-agent (prepare-agent) @ spring-boot-rocketmq-starter ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.6.201602180812/org.jacoco.agent-0.7.6.201602180812-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ spring-boot-rocketmq-starter ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ spring-boot-rocketmq-starter ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[17,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[18,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/config/RocketMqAutoConfiguration.java:[22,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[122,6] cannot find symbol
+  symbol:   class PostConstruct
+  location: class io.github.rhwayfun.springboot.rocketmq.starter.common.AbstractRocketMqConsumer<Topic,Content>
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[140,6] cannot find symbol
+  symbol:   class PreDestroy
+  location: class io.github.rhwayfun.springboot.rocketmq.starter.common.AbstractRocketMqConsumer<Topic,Content>
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/config/RocketMqAutoConfiguration.java:[38,6] cannot find symbol
+  symbol:   class Resource
+  location: class io.github.rhwayfun.springboot.rocketmq.starter.config.RocketMqAutoConfiguration
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.794 s
+[INFO] Finished at: 2023-06-02T03:45:38-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project spring-boot-rocketmq-starter: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[17,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[18,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/config/RocketMqAutoConfiguration.java:[22,24] package javax.annotation does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[122,6] cannot find symbol
+[ERROR]   symbol:   class PostConstruct
+[ERROR]   location: class io.github.rhwayfun.springboot.rocketmq.starter.common.AbstractRocketMqConsumer<Topic,Content>
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/AbstractRocketMqConsumer.java:[140,6] cannot find symbol
+[ERROR]   symbol:   class PreDestroy
+[ERROR]   location: class io.github.rhwayfun.springboot.rocketmq.starter.common.AbstractRocketMqConsumer<Topic,Content>
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/spring-boot-rocketmq-starter/src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/config/RocketMqAutoConfiguration.java:[38,6] cannot find symbol
+[ERROR]   symbol:   class Resource
+[ERROR]   location: class io.github.rhwayfun.springboot.rocketmq.starter.config.RocketMqAutoConfiguration
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,831 @@
+{
+    "projects": [
+        {
+            "userName": "1337joe",
+            "repoName": "cubesensors-for-java",
+            "subRepo": "",
+            "commitSHA": "f3ba432d36b744e68b916682d7ef24afaff447f8",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "TestPressure",
+                    "classPath": "src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java",
+                    "classTests": [
+                        {
+                            "testName": "testToMillibar",
+                            "startLn": 14,
+                            "endLn": 21,
+                            "testMethod": "@Test\n public void testToMillibar ( ) {\n     String expected , actual ; \n     expected = \"STR\" ; \n     actual = Pressure . toMilliBar ( 802 ) ; \n     Assert.assertEquals(expected,actual);\n}",
+                            "oracle": "Assert.assertEquals(expected,actual);",
+                            "oracleLn": 20,
+                            "focalFile": "src/main/java/com/w3asel/cubesensors/api/v1/format/Pressure.java",
+                            "focalName": "toMilliBar",
+                            "focalStartLn": 22,
+                            "focalEndLn": 25,
+                            "focalMethod": " public static String toMilliBar ( final int apiValue ) { \n return String . valueOf ( apiValue ) ; \n } "
+                        },
+                        {
+                            "testName": "testToInHg",
+                            "startLn": 24,
+                            "endLn": 39,
+                            "testMethod": "@Test\n public void testToInHg ( ) {\n     String expected , actual ; \n     expected = \"STR\" ; \n     actual = Pressure . toInHg ( 802 ) ; \n     Assert.assertEquals(expected,actual);\n}",
+                            "oracle": "Assert.assertEquals(expected,actual);",
+                            "oracleLn": 30,
+                            "focalFile": "src/main/java/com/w3asel/cubesensors/api/v1/format/Pressure.java",
+                            "focalName": "toInHg",
+                            "focalStartLn": 32,
+                            "focalEndLn": 34,
+                            "focalMethod": " public static String toInHg ( final int apiValue ) { \n return toInHg ( apiValue , 1 ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "phax",
+            "repoName": "ph-genericode",
+            "subRepo": "",
+            "commitSHA": "5e28716fa68c642a6dec8011346229a00a6721e4",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ExcelSheetToCodeList04Test",
+                    "classPath": "src/test/java/com/helger/genericode/excel/ExcelSheetToCodeList04Test.java",
+                    "classTests": [
+                        {
+                            "testName": "testReadExcel",
+                            "startLn": 44,
+                            "endLn": 73,
+                            "testMethod": "@Test\n public void testReadExcel ( ) throws URISyntaxException {\n     final IReadableResource aXls = new ClassPathResource ( \"STR\" ) ; \n     assertTrue(aXls.exists());\n}",
+                            "oracle": "assertTrue(aXls.exists());",
+                            "oracleLn": 49,
+                            "focalFile": "src/main/java/com/helger/genericode/Genericode04CodeListMarshaller.java",
+                            "focalName": "Genericode04CodeListMarshaller",
+                            "focalStartLn": 34,
+                            "focalEndLn": 37,
+                            "focalMethod": " public Genericode04CodeListMarshaller ( ) { \n super ( CodeListDocument . class , CGenericode . GENERICODE_04_XSDS , o -> new ObjectFactory ( ) . createCodeList ( o ) ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ExcelSheetToCodeList10Test",
+                    "classPath": "src/test/java/com/helger/genericode/excel/ExcelSheetToCodeList10Test.java",
+                    "classTests": [
+                        {
+                            "testName": "testReadExcel",
+                            "startLn": 44,
+                            "endLn": 73,
+                            "testMethod": "@Test\n public void testReadExcel ( ) throws URISyntaxException {\n     final IReadableResource aXls = new ClassPathResource ( \"STR\" ) ; \n     assertTrue(aXls.exists());\n}",
+                            "oracle": "assertTrue(aXls.exists());",
+                            "oracleLn": 49,
+                            "focalFile": "src/main/java/com/helger/genericode/Genericode10CodeListMarshaller.java",
+                            "focalName": "Genericode10CodeListMarshaller",
+                            "focalStartLn": 34,
+                            "focalEndLn": 37,
+                            "focalMethod": " public Genericode10CodeListMarshaller ( ) { \n super ( CodeListDocument . class , CGenericode . GENERICODE_10_XSDS , o -> new ObjectFactory ( ) . createCodeList ( o ) ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "redraiment",
+            "repoName": "jactiverecord",
+            "subRepo": "",
+            "commitSHA": "d051709c93204658e7f2cc96c9898201c7337269",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "TSqlBuilderTest",
+                    "classPath": "src/test/java/me/zzp/ar/sql/TSqlBuilderTest.java",
+                    "before": {
+                        "setupName": "setUpClass",
+                        "startLn": 10,
+                        "endLn": 13,
+                        "setupMethod": "@BeforeClass\n public static void setUpClass ( ) { \n sql = new TSqlBuilder ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testSelectAllFrom",
+                            "startLn": 15,
+                            "endLn": 19,
+                            "testMethod": "@Test\n public void testSelectAllFrom ( ) {\n     assertEquals(\"STR\",sql.select().from(\"STR\").toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.select().from(\"STR\").toString());",
+                            "oracleLn": 17,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testSelectSomeFrom",
+                            "startLn": 21,
+                            "endLn": 24,
+                            "testMethod": "@Test\n public void testSelectSomeFrom ( ) {\n     assertEquals(\"STR\",sql.select(\"STR\",\"STR\").from(\"STR\").toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.select(\"STR\",\"STR\").from(\"STR\").toString());",
+                            "oracleLn": 23,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testWhere",
+                            "startLn": 26,
+                            "endLn": 32,
+                            "testMethod": "@Test\n public void testWhere ( ) {\n     sql . select ( ) . from ( \"STR\" ) . where ( \"STR\" ) ; \n     assertEquals(\"STR\",sql.toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.toString());",
+                            "oracleLn": 29,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testHaving",
+                            "startLn": 34,
+                            "endLn": 42,
+                            "testMethod": "@Test\n public void testHaving ( ) {\n     sql . select ( \"STR\" , \"STR\" ) . from ( \"STR\" ) . groupBy ( \"STR\" ) . having ( \"STR\" ) ; \n     assertEquals(\"STR\",sql.toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.toString());",
+                            "oracleLn": 37,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testSort",
+                            "startLn": 44,
+                            "endLn": 54,
+                            "testMethod": "@Test\n public void testSort ( ) {\n     sql . select ( ) . from ( \"STR\" ) . orderBy ( \"STR\" ) ; \n     assertEquals(\"STR\",sql.toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.toString());",
+                            "oracleLn": 47,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testPaging",
+                            "startLn": 56,
+                            "endLn": 66,
+                            "testMethod": "@Test\n public void testPaging ( ) {\n     sql . select ( ) . from ( \"STR\" ) . limit ( 10 ) ; \n     assertEquals(\"STR\",sql.toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.toString());",
+                            "oracleLn": 59,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testQuery",
+                            "startLn": 68,
+                            "endLn": 80,
+                            "testMethod": "@Test\n public void testQuery ( ) {\n     assertEquals(\"STR\",sql.select(\"STR\",\"STR\").from(\"STR\").where(\"STR\",\"STR\").groupBy(\"STR\").having(\"STR\").orderBy(\"STR\").limit(10).offset(100).toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.select(\"STR\",\"STR\").from(\"STR\").where(\"STR\",\"STR\").groupBy(\"STR\").having(\"STR\").orderBy(\"STR\").limit(10).offset(100).toString());",
+                            "oracleLn": 70,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testUpdate",
+                            "startLn": 82,
+                            "endLn": 87,
+                            "testMethod": "@Test\n public void testUpdate ( ) {\n     assertEquals(\"STR\",sql.update(\"STR\").set(\"STR\").toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.update(\"STR\").set(\"STR\").toString());",
+                            "oracleLn": 84,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testDelete",
+                            "startLn": 89,
+                            "endLn": 93,
+                            "testMethod": "@Test\n public void testDelete ( ) {\n     assertEquals(\"STR\",sql.delete().from(\"STR\").toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.delete().from(\"STR\").toString());",
+                            "oracleLn": 91,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        },
+                        {
+                            "testName": "testInsert",
+                            "startLn": 95,
+                            "endLn": 101,
+                            "testMethod": "@Test\n public void testInsert ( ) {\n     assertEquals(\"STR\",sql.insert().into(\"STR\").values(\"STR\",\"STR\").toString());\n}",
+                            "oracle": "assertEquals(\"STR\",sql.insert().into(\"STR\").values(\"STR\",\"STR\").toString());",
+                            "oracleLn": 97,
+                            "focalFile": "src/main/java/me/zzp/ar/sql/SqlBuilder.java",
+                            "focalName": "toString",
+                            "focalStartLn": 34,
+                            "focalEndLn": 35,
+                            "focalMethod": "@Override\n public String toString ( ) ; \n"
+                        }
+                    ]
+                },
+                {
+                    "className": "SeqTest",
+                    "classPath": "src/test/java/me/zzp/util/SeqTest.java",
+                    "classTests": [
+                        {
+                            "testName": "testJoinListNull",
+                            "startLn": 19,
+                            "endLn": 22,
+                            "testMethod": "@Test\n public void testJoinListNull ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(null,\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(null,\"STR\"));",
+                            "oracleLn": 21,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testJoinListEmpty",
+                            "startLn": 24,
+                            "endLn": 27,
+                            "testMethod": "@Test\n public void testJoinListEmpty ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(Collections.EMPTY_LIST,\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(Collections.EMPTY_LIST,\"STR\"));",
+                            "oracleLn": 26,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testJoinDelimiterNull",
+                            "startLn": 29,
+                            "endLn": 32,
+                            "testMethod": "@Test\n public void testJoinDelimiterNull ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),null));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),null));",
+                            "oracleLn": 31,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testJoinDelimiterEmpty",
+                            "startLn": 34,
+                            "endLn": 37,
+                            "testMethod": "@Test\n public void testJoinDelimiterEmpty ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));",
+                            "oracleLn": 36,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testCommaList",
+                            "startLn": 39,
+                            "endLn": 42,
+                            "testMethod": "@Test\n public void testCommaList ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));",
+                            "oracleLn": 41,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testConditionList",
+                            "startLn": 44,
+                            "endLn": 47,
+                            "testMethod": "@Test\n public void testConditionList ( ) {\n     Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",Seq.join(Arrays.asList(\"STR\",\"STR\",\"STR\"),\"STR\"));",
+                            "oracleLn": 46,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "join",
+                            "focalStartLn": 83,
+                            "focalEndLn": 102,
+                            "focalMethod": " public static String join ( Collection < ? > list , String delimiter ) { \n if ( list == null || list . isEmpty ( ) ) { \n return \"STR\" ; \n } if ( delimiter == null ) { \n delimiter = \"STR\" ; \n } StringBuilder s = new StringBuilder ( ) ; \n boolean first = true ; \n for ( Object e : list ) { \n if ( first ) { \n first = false ; \n } else { \n s . append ( delimiter ) ; \n } s . append ( e ) ; \n } return s . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testConstantMap",
+                            "startLn": 49,
+                            "endLn": 53,
+                            "testMethod": "@Test\n public void testConstantMap ( ) {\n     String [ ] actuals = Seq . map ( Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) , \"STR\" ) . toArray ( new String [ 0 ] ) ; \n     Assert.assertArrayEquals(newString[]{\"STR\",\"STR\",\"STR\"},actuals);\n}",
+                            "oracle": "Assert.assertArrayEquals(newString[]{\"STR\",\"STR\",\"STR\"},actuals);",
+                            "oracleLn": 52,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "map",
+                            "focalStartLn": 256,
+                            "focalEndLn": 262,
+                            "focalMethod": " public static List < String > map ( Collection < ? > from , String format ) { \n List < String > to = new ArrayList < > ( from . size ( ) ) ; \n for ( Object e : from ) { \n to . add ( String . format ( format , e ) ) ; \n } return to ; \n } "
+                        },
+                        {
+                            "testName": "testFormatMap",
+                            "startLn": 55,
+                            "endLn": 59,
+                            "testMethod": "@Test\n public void testFormatMap ( ) {\n     String [ ] actuals = Seq . map ( Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) , \"STR\" ) . toArray ( new String [ 0 ] ) ; \n     Assert.assertArrayEquals(newString[]{\"STR\",\"STR\",\"STR\"},actuals);\n}",
+                            "oracle": "Assert.assertArrayEquals(newString[]{\"STR\",\"STR\",\"STR\"},actuals);",
+                            "oracleLn": 58,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "map",
+                            "focalStartLn": 256,
+                            "focalEndLn": 262,
+                            "focalMethod": " public static List < String > map ( Collection < ? > from , String format ) { \n List < String > to = new ArrayList < > ( from . size ( ) ) ; \n for ( Object e : from ) { \n to . add ( String . format ( format , e ) ) ; \n } return to ; \n } "
+                        },
+                        {
+                            "testName": "testPartition",
+                            "startLn": 61,
+                            "endLn": 73,
+                            "testMethod": "@Test\n public void testPartition ( ) {\n     String [ ] actuals = null ; \n     actuals = Seq . partition ( Arrays . asList ( \"STR\" , \"STR\" , \"STR\" , \"STR\" ) , 2 , \"STR\" ) . toArray ( new String [ 0 ] ) ; \n     Assert.assertArrayEquals(newString[]{\"STR\",\"STR\"},actuals);\n}",
+                            "oracle": "Assert.assertArrayEquals(newString[]{\"STR\",\"STR\"},actuals);",
+                            "oracleLn": 66,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "partition",
+                            "focalStartLn": 271,
+                            "focalEndLn": 282,
+                            "focalMethod": " public static List < String > partition ( Collection < String > from , int n , String delimiter ) { \n List < String > to = new ArrayList < > ( ) ; \n List < String > buffer = new ArrayList < > ( n ) ; \n for ( String e : from ) { \n buffer . add ( e ) ; \n if ( buffer . size ( ) >= n ) { \n to . add ( join ( buffer , delimiter ) ) ; \n buffer . clear ( ) ; \n } } return to ; \n } "
+                        },
+                        {
+                            "testName": "testAssignAt",
+                            "startLn": 75,
+                            "endLn": 86,
+                            "testMethod": "@Test\n public void testAssignAt ( ) {\n     int [ ] a = new int [ 5 ] ; \n     Seq . assignAt ( a , Seq . array ( 0 , 2 , 3 ) , 1 , 3 , 4 ) ; \n     Seq . assignAt ( a , Seq . array ( - 1 , - 4 ) , 5 , 2 ) ; \n     Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);\n}",
+                            "oracle": "Assert.assertArrayEquals(newint[]{1,2,3,4,5},a);",
+                            "oracleLn": 80,
+                            "focalFile": "src/main/java/me/zzp/util/Seq.java",
+                            "focalName": "assignAt",
+                            "focalStartLn": 206,
+                            "focalEndLn": 221,
+                            "focalMethod": " public static int [ ] assignAt ( int [ ] a , Integer [ ] indexes , int ... values ) { \n if ( indexes . length != values . length ) { \n throw new IllegalArgumentException ( String . format ( \"STR\" , indexes . length , values . length ) ) ; \n } for ( int i = 0 ; \n i < indexes . length ; \n i ++ ) { \n int index = indexes [ i ] ; \n if ( 0 <= index && index < a . length ) { \n a [ index ] = values [ i ] ; \n } else if ( - a . length <= index && index < 0 ) { \n a [ a . length + index ] = values [ i ] ; \n } else { \n throw new ArrayIndexOutOfBoundsException ( index ) ; \n } } return a ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "retog",
+            "repoName": "wymiwyg-commons-core",
+            "subRepo": "",
+            "commitSHA": "5b5ba4fef4e810b8cea0ac08ce105fa402eaee3c",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MultiPathNodeTest",
+                    "classPath": "src/test/java/org/wymiwyg/commons/util/dirbrowser/test/MultiPathNodeTest.java",
+                    "classTests": [
+                        {
+                            "testName": "commonPath",
+                            "startLn": 35,
+                            "endLn": 41,
+                            "testMethod": "@Test\n public void commonPath ( ) {\n     MultiPathNode node = new MultiPathNode ( nodeWithPath ( \"STR\" ) , nodeWithPath ( \"STR\" ) , nodeWithPath ( \"STR\" ) ) ; \n     Assert.assertEquals(\"STR\",node.getPath());\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",node.getPath());",
+                            "oracleLn": 40,
+                            "focalFile": "src/main/java/org/wymiwyg/commons/util/dirbrowser/MultiPathNode.java",
+                            "focalName": "getPath",
+                            "focalStartLn": 212,
+                            "focalEndLn": 218,
+                            "focalMethod": " public String getPath ( ) { \n String currentLongest = nodes [ 0 ] . getPath ( ) ; \n for ( int i = 1 ; \n i < nodes . length ; \n i ++ ) { \n currentLongest = getLongestCommonSuffix ( currentLongest , nodes [ i ] . getPath ( ) ) ; \n } return currentLongest ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "rhwayfun",
+            "repoName": "spring-boot-rocketmq-starter",
+            "subRepo": "",
+            "commitSHA": "642a6745434e3f7ea2e6bca42d3b8f450590441c",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "RocketMqAutoConfigurationTest",
+                    "classPath": "src/test/java/io/github/rhwayfun/springboot/rocketmq/starter/config/RocketMqAutoConfigurationTest.java",
+                    "classTests": [
+                        {
+                            "testName": "defaultRocketMqProducer",
+                            "startLn": 40,
+                            "endLn": 54,
+                            "testMethod": "@Test\n public void defaultRocketMqProducer ( ) {\n     load ( \"STR\" + TEST_NAME_SERVER , \"STR\" + TEST_PRODUCER_GROUP ) ; \n     Assert.assertTrue(this.context.containsBean(\"STR\"));\n}",
+                            "oracle": "Assert.assertTrue(this.context.containsBean(\"STR\"));",
+                            "oracleLn": 46,
+                            "focalFile": "src/main/java/io/github/rhwayfun/springboot/rocketmq/starter/common/DefaultRocketMqProducer.java",
+                            "focalName": "getProducer",
+                            "focalStartLn": 69,
+                            "focalEndLn": 71,
+                            "focalMethod": " public DefaultMQProducer getProducer ( ) { \n return producer ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "rockagen",
+            "repoName": "commons-lib",
+            "subRepo": "",
+            "commitSHA": "f37141cf40be79d130db804c39ce61690541d5f1",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "OPLogTest",
+                    "classPath": "src/test/java/com/rockagen/commons/annotation/OPLogTest.java",
+                    "classTests": [
+                        {
+                            "testName": "testDescription",
+                            "startLn": 35,
+                            "endLn": 43,
+                            "testMethod": "@Test\n public void testDescription ( ) throws SecurityException , NoSuchMethodException {\n     Plog annotation = ( Plog ) ClassUtil . getDeclaredMethod ( getClass ( ) , false , \"STR\" ) . getAnnotation ( Plog . class ) ; \n     String value = annotation . value ( ) ; \n     Assert.assertEquals(\"STR\",value);\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",value);",
+                            "oracleLn": 42,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/ClassUtil.java",
+                            "focalName": "getDeclaredMethod",
+                            "focalStartLn": 239,
+                            "focalEndLn": 255,
+                            "focalMethod": " public static Method getDeclaredMethod ( Class < ? > clazz , boolean recursively , String methodName , Class < ? > ... parameterTypes ) { \n try { \n return clazz . getDeclaredMethod ( methodName , parameterTypes ) ; \n } catch ( NoSuchMethodException e ) { \n Class < ? > superClass = clazz . getSuperclass ( ) ; \n if ( superClass != null && recursively ) { \n return getDeclaredMethod ( superClass , true , methodName , parameterTypes ) ; \n } } catch ( SecurityException e ) { \n log . error ( \"STR\" , e . getMessage ( ) , e ) ; \n } return null ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ReflexUtilTest",
+                    "classPath": "src/test/java/com/rockagen/commons/util/ReflexUtilTest.java",
+                    "classTests": [
+                        {
+                            "testName": "testGetInstance",
+                            "startLn": 35,
+                            "endLn": 44,
+                            "testMethod": "@Test\n public void testGetInstance ( ) {\n     Map < String , Object > map = new HashMap < String , Object > ( ) ; \n     map . put ( \"STR\" , \"STR\" ) ; \n     map . put ( \"STR\" , 21 ) ; \n     map . put ( \"STR\" , null ) ; \n     map . put ( \"STR\" , \"STR\" ) ; \n     TestVo obj = ReflexUtil . getBasicInstance ( TestVo . class , map , false ) ; \n     Assert.assertEquals(21,obj.getAge());\n}",
+                            "oracle": "Assert.assertEquals(21,obj.getAge());",
+                            "oracleLn": 43,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/ReflexUtil.java",
+                            "focalName": "getBasicInstance",
+                            "focalStartLn": 427,
+                            "focalEndLn": 449,
+                            "focalMethod": " public static < T > T getBasicInstance ( final Class < T > clazz , final Map < String , Object > paramsMap , boolean accessible ) { \n if ( clazz != null && paramsMap != null && paramsMap . size ( ) > 0 ) { \n T instance = ClassUtil . getInstance ( clazz , accessible ) ; \n for ( Map . Entry < String , Object > entry : paramsMap . entrySet ( ) ) { \n String key = entry . getKey ( ) ; \n if ( CommUtil . isBlank ( key ) ) { \n continue ; \n } key = CommUtil . uncapitalize ( key ) ; \n setFieldValue ( instance , key , entry . getValue ( ) , false ) ; \n } return instance ; \n } else { \n return null ; \n } } "
+                        },
+                        {
+                            "testName": "testIntefaceGenericTypeClass",
+                            "startLn": 110,
+                            "endLn": 116,
+                            "testMethod": "@Test\n public void testIntefaceGenericTypeClass ( ) {\n     Class < ? > [ ] clazz = ReflexUtil . getInterfacesGenricClasses ( TestInClass . class ) ; \n     Class [ ] exp = { \n String . class , Long . class , Integer . class } ; \n     Assert.assertArrayEquals(clazz,exp);\n}",
+                            "oracle": "Assert.assertArrayEquals(clazz,exp);",
+                            "oracleLn": 114,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/ReflexUtil.java",
+                            "focalName": "getInterfacesGenricClasses",
+                            "focalStartLn": 386,
+                            "focalEndLn": 395,
+                            "focalMethod": " public static Class < ? > [ ] getInterfacesGenricClasses ( final Class < ? > clazz ) { \n Type [ ] types = getInterfacesGenricTypes ( clazz ) ; \n Class < ? > [ ] clazzs = new Class < ? > [ types . length ] ; \n for ( int i = 0 ; \n i < types . length ; \n i ++ ) { \n clazzs [ i ] = ( Class < ? > ) types [ i ] ; \n } return clazzs ; \n } "
+                        },
+                        {
+                            "testName": "testSuperClassesGenericTypeClass",
+                            "startLn": 117,
+                            "endLn": 122,
+                            "testMethod": "@Test\n public void testSuperClassesGenericTypeClass ( ) {\n     Class < ? > [ ] clazz = ReflexUtil . getSuperClassGenricClasses ( TestInClass . class ) ; \n     Class [ ] exp = { \n String . class , Long . class } ; \n     Assert.assertArrayEquals(clazz,exp);\n}",
+                            "oracle": "Assert.assertArrayEquals(clazz,exp);",
+                            "oracleLn": 121,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/ReflexUtil.java",
+                            "focalName": "getSuperClassGenricClasses",
+                            "focalStartLn": 278,
+                            "focalEndLn": 287,
+                            "focalMethod": " public static Class < ? > [ ] getSuperClassGenricClasses ( final Class < ? > clazz ) { \n Type [ ] types = getSuperClassGenricTypes ( clazz ) ; \n Class < ? > [ ] clazzs = new Class < ? > [ types . length ] ; \n for ( int i = 0 ; \n i < types . length ; \n i ++ ) { \n clazzs [ i ] = ( Class < ? > ) types [ i ] ; \n } return clazzs ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "CommUtilTest",
+                    "classPath": "src/test/java/com/rockagen/commons/util/CommUtilTest.java",
+                    "classTests": [
+                        {
+                            "testName": "testEscape",
+                            "startLn": 36,
+                            "endLn": 41,
+                            "testMethod": "@Test\n public void testEscape ( ) {\n     Assert.assertEquals(\"STR\",CommUtil.escapeJava(\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.escapeJava(\"STR\"));",
+                            "oracleLn": 38,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "escapeJava",
+                            "focalStartLn": 738,
+                            "focalEndLn": 743,
+                            "focalMethod": " public static String escapeJava ( String str ) { \n if ( isBlank ( str ) ) { \n return str ; \n } return StringEscapeUtils . escapeJava ( str ) ; \n } "
+                        },
+                        {
+                            "testName": "testString",
+                            "startLn": 43,
+                            "endLn": 50,
+                            "testMethod": "@Test\n public void testString ( ) {\n     Assert.assertEquals(\"STR\",CommUtil.subPostfix(\"STR\",0,4,\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.subPostfix(\"STR\",0,4,\"STR\"));",
+                            "oracleLn": 45,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "subPostfix",
+                            "focalStartLn": 567,
+                            "focalEndLn": 582,
+                            "focalMethod": " public static String subPostfix ( String str , int startIndex , int endIndex , String postfix ) { \n if ( isBlank ( str ) ) return \"STR\" ; \n int length = str . length ( ) ; \n if ( length <= startIndex ) { \n return str ; \n } else if ( length <= endIndex ) { \n return str . substring ( startIndex , length ) ; \n } else { \n if ( postfix == null ) { \n postfix = \"STR\" ; \n } return str . substring ( startIndex , endIndex ) + postfix ; \n } } "
+                        },
+                        {
+                            "testName": "testSameChars",
+                            "startLn": 65,
+                            "endLn": 72,
+                            "testMethod": "@Test\n public void testSameChars ( ) {\n     Assert.assertEquals(\"STR\",CommUtil.repeatChar('b',10));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.repeatChar('b',10));",
+                            "oracleLn": 67,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "repeatChar",
+                            "focalStartLn": 1233,
+                            "focalEndLn": 1239,
+                            "focalMethod": " public static String repeatChar ( char cha , int len ) { \n len = len < 0 ? 0 : len ; \n char [ ] c = new char [ len ] ; \n for ( int i = 0 ; \n i < len ; \n i ++ ) c [ i ] = cha ; \n return new String ( c ) ; \n } "
+                        },
+                        {
+                            "testName": "testBC",
+                            "startLn": 74,
+                            "endLn": 79,
+                            "testMethod": "@Test\n public void testBC ( ) {\n     Assert.assertEquals(\"STR\",CommUtil.toDBC(\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.toDBC(\"STR\"));",
+                            "oracleLn": 76,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "toDBC",
+                            "focalStartLn": 982,
+                            "focalEndLn": 1000,
+                            "focalMethod": " public static String toDBC ( String sbcString ) { \n if ( isBlank ( sbcString ) ) { \n return \"STR\" ; \n } StringBuilder sb = new StringBuilder ( ) ; \n for ( int i = 0 ; \n i < sbcString . length ( ) ; \n i ++ ) { \n int index = ArrayUtil . indexOf ( SBC , sbcString . charAt ( i ) ) ; \n if ( index != - 1 ) { \n sb . append ( DBC [ index ] ) ; \n } else { \n sb . append ( sbcString . charAt ( i ) ) ; \n } } return sb . toString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "testHex",
+                            "startLn": 99,
+                            "endLn": 102,
+                            "testMethod": "@Test\n public void testHex ( ) {\n     Assert.assertEquals(\"STR\",CommUtil.hexdump(\"STR\".getBytes()));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.hexdump(\"STR\".getBytes()));",
+                            "oracleLn": 101,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "hexdump",
+                            "focalStartLn": 1178,
+                            "focalEndLn": 1195,
+                            "focalMethod": " public static String hexdump ( final byte [ ] bytes ) { \n if ( bytes == null || bytes . length < 1 ) return \"STR\" ; \n int length = bytes . length ; \n int temp ; \n char [ ] hex = new char [ length * 2 ] ; \n for ( int i = 0 ; \n i < length ; \n i ++ ) { \n temp = bytes [ i ] & 0xFF ; \n hex [ i * 2 ] = HEXARRAY [ temp > > > 4 ] ; \n hex [ i * 2 + 1 ] = HEXARRAY [ temp & 0x0F ] ; \n } return new String ( hex ) ; \n } "
+                        },
+                        {
+                            "testName": "testBitValue",
+                            "startLn": 109,
+                            "endLn": 115,
+                            "testMethod": "@Test\n public void testBitValue ( ) {\n     String bs = \"STR\" ; \n     BitSet b = CommUtil . bitSet ( bs . getBytes ( ) ) ; \n     Assert.assertEquals(\"STR\",CommUtil.hexdump(CommUtil.bitValue(b)));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.hexdump(CommUtil.bitValue(b)));",
+                            "oracleLn": 114,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "hexdump",
+                            "focalStartLn": 1178,
+                            "focalEndLn": 1195,
+                            "focalMethod": " public static String hexdump ( final byte [ ] bytes ) { \n if ( bytes == null || bytes . length < 1 ) return \"STR\" ; \n int length = bytes . length ; \n int temp ; \n char [ ] hex = new char [ length * 2 ] ; \n for ( int i = 0 ; \n i < length ; \n i ++ ) { \n temp = bytes [ i ] & 0xFF ; \n hex [ i * 2 ] = HEXARRAY [ temp > > > 4 ] ; \n hex [ i * 2 + 1 ] = HEXARRAY [ temp & 0x0F ] ; \n } return new String ( hex ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "sharneng",
+            "repoName": "gm4java",
+            "subRepo": "",
+            "commitSHA": "92f3f3b64a45f312ef6978f2367263ec64ff0c04",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "GMProcessFactoryImplTest",
+                    "classPath": "src/test/java/org/gm4java/engine/support/GMProcessFactoryImplTest.java",
+                    "before": {
+                        "setupName": "setUp",
+                        "startLn": 50,
+                        "endLn": 56,
+                        "setupMethod": "@Before\n public void setUp ( ) throws Exception { \n MockitoAnnotations . initMocks ( this ) ; \n when ( factory . getProcess ( Matchers . < String [ ] > anyVararg ( ) ) ) . thenReturn ( mock ( ReaderWriterProcess . class ) ) ; \n when ( factory . getProcess ( Matchers . anyString ( ) , eq ( \"STR\" ) ) ) . thenReturn ( process ) ; \n this . sut = new GMProcessFactoryImpl ( factory , gmPath ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "builder_returnsFactory",
+                            "startLn": 58,
+                            "endLn": 62,
+                            "testMethod": "@Test\n public void builder_returnsFactory ( ) throws Exception {\n     GMProcessFactory sut = GMProcessFactoryImpl . BUILDER . buildFactory ( gmPath ) ; \n     assertThat(sut.getGMPath(),equalTo(gmPath));\n}",
+                            "oracle": "assertThat(sut.getGMPath(),equalTo(gmPath));",
+                            "oracleLn": 61,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMProcessFactory.java",
+                            "focalName": "getGMPath",
+                            "focalStartLn": 47,
+                            "focalEndLn": 48,
+                            "focalMethod": "@Nonnull\n String getGMPath ( ) ; \n"
+                        },
+                        {
+                            "testName": "getVersion_callsGMProcessAndExtractVersion",
+                            "startLn": 76,
+                            "endLn": 85,
+                            "testMethod": "@Test\n public void getVersion_callsGMProcessAndExtractVersion ( ) throws Exception {\n     when ( process . getReader ( ) ) . thenReturn ( new BufferedReader ( new StringReader ( fakeGMOutput ( ) ) ) ) ; \n     DefaultArtifactVersion result = sut . getVersion ( ) ; \n     assertThat(result,notNullValue());\n}",
+                            "oracle": "assertThat(result,notNullValue());",
+                            "oracleLn": 81,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMProcessFactoryImpl.java",
+                            "focalName": "getVersion",
+                            "focalStartLn": 82,
+                            "focalEndLn": 91,
+                            "focalMethod": "@Override\n@Nonnull\n public DefaultArtifactVersion getVersion ( ) { \n try { \n ensureFeatures ( ) ; \n } catch ( IOException e ) { \n throw new RuntimeException ( e . getMessage ( ) , e ) ; \n } return version ; \n } "
+                        },
+                        {
+                            "testName": "getVersion_callsGMProcessOnlyOnce",
+                            "startLn": 87,
+                            "endLn": 99,
+                            "testMethod": "@Test\n public void getVersion_callsGMProcessOnlyOnce ( ) throws Exception {\n     version = \"STR\" ; \n     when ( process . getReader ( ) ) . thenReturn ( new BufferedReader ( new StringReader ( fakeGMOutput ( ) ) ) ) ; \n     DefaultArtifactVersion result = sut . getVersion ( ) ; \n     assertThat(sut.getVersion(),is(result));\n}",
+                            "oracle": "assertThat(sut.getVersion(),is(result));",
+                            "oracleLn": 93,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMProcessFactoryImpl.java",
+                            "focalName": "getVersion",
+                            "focalStartLn": 82,
+                            "focalEndLn": 91,
+                            "focalMethod": "@Override\n@Nonnull\n public DefaultArtifactVersion getVersion ( ) { \n try { \n ensureFeatures ( ) ; \n } catch ( IOException e ) { \n throw new RuntimeException ( e . getMessage ( ) , e ) ; \n } return version ; \n } "
+                        },
+                        {
+                            "testName": "getGMPath_returnsPathPassedToConstructor",
+                            "startLn": 101,
+                            "endLn": 112,
+                            "testMethod": "@Test\n public void getGMPath_returnsPathPassedToConstructor ( ) {\n     String result = sut . getGMPath ( ) ; \n     assertThat(result,equalTo(gmPath));\n}",
+                            "oracle": "assertThat(result,equalTo(gmPath));",
+                            "oracleLn": 105,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMProcessFactoryImpl.java",
+                            "focalName": "getGMPath",
+                            "focalStartLn": 93,
+                            "focalEndLn": 97,
+                            "focalMethod": "@Override\n@Nonnull\n public String getGMPath ( ) { \n return gmPath ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "GMConnectionPoolTest",
+                    "classPath": "src/test/java/org/gm4java/engine/support/GMConnectionPoolTest.java",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 67,
+                        "endLn": 86,
+                        "setupMethod": "@Before\n public void setup ( ) throws Exception { \n config = new GMConnectionPoolConfig ( ) ; \n MockitoAnnotations . initMocks ( this ) ; \n when ( reader . readLine ( ) ) . thenReturn ( \"STR\" ) ; \n when ( process . getWriter ( ) ) . thenReturn ( writer ) ; \n when ( process . getReader ( ) ) . thenReturn ( reader ) ; \n final ArgumentCaptor < String > gmPathCaptor = ArgumentCaptor . forClass ( String . class ) ; \n when ( builder . buildFactory ( gmPathCaptor . capture ( ) ) ) . thenReturn ( factory ) ; \n when ( factory . getProcess ( ) ) . thenReturn ( process ) ; \n when ( factory . getGMPath ( ) ) . then ( new Answer < String > ( ) { \n @Override\n public String answer ( InvocationOnMock invocation ) throws Throwable { \n return gmPathCaptor . getValue ( ) ; \n } } ) ; \n sut = new GMConnectionPool ( config ) ; \n sut . setProcessFactoryBuilder ( builder ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "borrowObject_reusesObjectReturnedToPool",
+                            "startLn": 155,
+                            "endLn": 163,
+                            "testMethod": "@Test\n public void borrowObject_reusesObjectReturnedToPool ( ) throws Exception {\n     PooledGMConnection connection = sut . borrowObject ( ) ; \n     sut . returnObject ( connection ) ; \n     PooledGMConnection connection2 = sut . borrowObject ( ) ; \n     assertThat(connection2,is(connection));\n}",
+                            "oracle": "assertThat(connection2,is(connection));",
+                            "oracleLn": 162,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMConnectionPool.java",
+                            "focalName": "borrowObject",
+                            "focalStartLn": 50,
+                            "focalEndLn": 62,
+                            "focalMethod": "@Override\n@Nonnull\n public PooledGMConnection borrowObject ( ) throws GMServiceException { \n try { \n return super . borrowObject ( ) ; \n } catch ( GMServiceException e ) { \n throw e ; \n } catch ( RuntimeException e ) { \n throw e ; \n } catch ( Exception e ) { \n throw new GMServiceException ( e . getMessage ( ) , e ) ; \n } } "
+                        },
+                        {
+                            "testName": "setTestOnX_noEffect_whenOff",
+                            "startLn": 165,
+                            "endLn": 176,
+                            "testMethod": "@Test\n public void setTestOnX_noEffect_whenOff ( ) throws Exception {\n     when ( reader . readLine ( ) ) . thenThrow ( new IOException ( READER_WRITER_PROCESS_FAILURE ) ) ; \n     sut . setTestOnBorrow ( false ) ; \n     sut . setTestOnReturn ( false ) ; \n     PooledGMConnection connection = sut . borrowObject ( ) ; \n     sut . returnObject ( connection ) ; \n     PooledGMConnection connection2 = sut . borrowObject ( ) ; \n     assertThat(connection2,is(connection));\n}",
+                            "oracle": "assertThat(connection2,is(connection));",
+                            "oracleLn": 175,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMConnectionPool.java",
+                            "focalName": "borrowObject",
+                            "focalStartLn": 50,
+                            "focalEndLn": 62,
+                            "focalMethod": "@Override\n@Nonnull\n public PooledGMConnection borrowObject ( ) throws GMServiceException { \n try { \n return super . borrowObject ( ) ; \n } catch ( GMServiceException e ) { \n throw e ; \n } catch ( RuntimeException e ) { \n throw e ; \n } catch ( Exception e ) { \n throw new GMServiceException ( e . getMessage ( ) , e ) ; \n } } "
+                        },
+                        {
+                            "testName": "setTestOnBorrow_removesTestFailedConnection",
+                            "startLn": 178,
+                            "endLn": 188,
+                            "testMethod": "@Test\n public void setTestOnBorrow_removesTestFailedConnection ( ) throws Exception {\n     when ( reader . readLine ( ) ) . thenReturn ( \"STR\" , \"STR\" , \"STR\" ) ; \n     sut . setTestOnBorrow ( true ) ; \n     PooledGMConnection connection = sut . borrowObject ( ) ; \n     sut . returnObject ( connection ) ; \n     PooledGMConnection connection2 = sut . borrowObject ( ) ; \n     assertThat(connection2,not(is(connection)));\n}",
+                            "oracle": "assertThat(connection2,not(is(connection)));",
+                            "oracleLn": 187,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMConnectionPool.java",
+                            "focalName": "borrowObject",
+                            "focalStartLn": 50,
+                            "focalEndLn": 62,
+                            "focalMethod": "@Override\n@Nonnull\n public PooledGMConnection borrowObject ( ) throws GMServiceException { \n try { \n return super . borrowObject ( ) ; \n } catch ( GMServiceException e ) { \n throw e ; \n } catch ( RuntimeException e ) { \n throw e ; \n } catch ( Exception e ) { \n throw new GMServiceException ( e . getMessage ( ) , e ) ; \n } } "
+                        },
+                        {
+                            "testName": "setTestOnReturn_removesTestFailedConnection",
+                            "startLn": 190,
+                            "endLn": 200,
+                            "testMethod": "@Test\n public void setTestOnReturn_removesTestFailedConnection ( ) throws Exception {\n     when ( reader . readLine ( ) ) . thenReturn ( \"STR\" , \"STR\" ) ; \n     sut . setTestOnReturn ( true ) ; \n     PooledGMConnection connection = sut . borrowObject ( ) ; \n     sut . returnObject ( connection ) ; \n     PooledGMConnection connection2 = sut . borrowObject ( ) ; \n     assertThat(connection2,not(is(connection)));\n}",
+                            "oracle": "assertThat(connection2,not(is(connection)));",
+                            "oracleLn": 199,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMConnectionPool.java",
+                            "focalName": "borrowObject",
+                            "focalStartLn": 50,
+                            "focalEndLn": 62,
+                            "focalMethod": "@Override\n@Nonnull\n public PooledGMConnection borrowObject ( ) throws GMServiceException { \n try { \n return super . borrowObject ( ) ; \n } catch ( GMServiceException e ) { \n throw e ; \n } catch ( RuntimeException e ) { \n throw e ; \n } catch ( Exception e ) { \n throw new GMServiceException ( e . getMessage ( ) , e ) ; \n } } "
+                        },
+                        {
+                            "testName": "setGMPath_changesCommandSendtoGM",
+                            "startLn": 211,
+                            "endLn": 220,
+                            "testMethod": "@Test\n public void setGMPath_changesCommandSendtoGM ( ) throws Exception {\n     final String gmPath = \"STR\" ; \n     sut . setGMPath ( gmPath ) ; \n     sut . borrowObject ( ) ; \n     assertThat(sut.getGMPath(),is(gmPath));\n}",
+                            "oracle": "assertThat(sut.getGMPath(),is(gmPath));",
+                            "oracleLn": 218,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/GMConnectionPool.java",
+                            "focalName": "getGMPath",
+                            "focalStartLn": 90,
+                            "focalEndLn": 92,
+                            "focalMethod": " public String getGMPath ( ) { \n return gmFactory . getGMPath ( ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "PooledGMServiceTest",
+                    "classPath": "src/test/java/org/gm4java/engine/support/PooledGMServiceTest.java",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 60,
+                        "endLn": 65,
+                        "setupMethod": "@Before\n public void setup ( ) throws Exception { \n MockitoAnnotations . initMocks ( this ) ; \n when ( pool . borrowObject ( ) ) . thenReturn ( connection ) ; \n sut = new PooledGMService ( pool ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "getConnection__execute_delegatesToBorrowedConnection",
+                            "startLn": 143,
+                            "endLn": 154,
+                            "testMethod": "@Test\n public void getConnection__execute_delegatesToBorrowedConnection ( ) throws Exception {\n     String expected = \"STR\" ; \n     when ( connection . execute ( gmCommand ) ) . thenReturn ( expected ) ; \n     GMConnection p = sut . getConnection ( ) ; \n     String result = p . execute ( gmCommand ) ; \n     p . close ( ) ; \n     verify ( connection ) . execute ( gmCommand ) ; \n     assertThat(result,is(expected));\n}",
+                            "oracle": "assertThat(result,is(expected));",
+                            "oracleLn": 153,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/BasicGMConnection.java",
+                            "focalName": "execute",
+                            "focalStartLn": 52,
+                            "focalEndLn": 57,
+                            "focalMethod": "@Override\n public final String execute ( @Nonnull\n String command , @CheckForNull\n String ... arguments ) throws IOException , GMException , GMServiceException { \n if ( command == null ) throw new NullPointerException ( \"STR\" ) ; \n return execute ( command , arguments == null || arguments . length == 0 ? empty : Arrays . asList ( arguments ) ) ; \n } "
+                        },
+                        {
+                            "testName": "getConnection__executeByList_delegatesToBorrowedConnection",
+                            "startLn": 156,
+                            "endLn": 168,
+                            "testMethod": "@Test\n public void getConnection__executeByList_delegatesToBorrowedConnection ( ) throws Exception {\n     String expected = \"STR\" ; \n     final List < String > command = Arrays . asList ( gmCommand ) ; \n     when ( connection . execute ( command ) ) . thenReturn ( expected ) ; \n     GMConnection p = sut . getConnection ( ) ; \n     String result = p . execute ( command ) ; \n     p . close ( ) ; \n     verify ( connection ) . execute ( command ) ; \n     assertThat(result,is(expected));\n}",
+                            "oracle": "assertThat(result,is(expected));",
+                            "oracleLn": 167,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/BasicGMConnection.java",
+                            "focalName": "execute",
+                            "focalStartLn": 59,
+                            "focalEndLn": 64,
+                            "focalMethod": "@Override\n public final String execute ( @Nonnull\n List < String > command ) throws IOException , GMException , GMServiceException { \n if ( command == null ) throw new NullPointerException ( \"STR\" ) ; \n if ( command . size ( ) == 0 ) throw new IllegalArgumentException ( \"STR\" ) ; \n return execute ( null , command ) ; \n } "
+                        },
+                        {
+                            "testName": "execute_delegatesToBorrowedConnection",
+                            "startLn": 188,
+                            "endLn": 196,
+                            "testMethod": "@Test\n public void execute_delegatesToBorrowedConnection ( ) throws Exception {\n     String expected = \"STR\" ; \n     when ( connection . execute ( gmCommand ) ) . thenReturn ( expected ) ; \n     String result = sut . execute ( gmCommand ) ; \n     verify ( connection ) . execute ( gmCommand ) ; \n     assertThat(result,is(expected));\n}",
+                            "oracle": "assertThat(result,is(expected));",
+                            "oracleLn": 195,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/BasicGMConnection.java",
+                            "focalName": "execute",
+                            "focalStartLn": 52,
+                            "focalEndLn": 57,
+                            "focalMethod": "@Override\n public final String execute ( @Nonnull\n String command , @CheckForNull\n String ... arguments ) throws IOException , GMException , GMServiceException { \n if ( command == null ) throw new NullPointerException ( \"STR\" ) ; \n return execute ( command , arguments == null || arguments . length == 0 ? empty : Arrays . asList ( arguments ) ) ; \n } "
+                        },
+                        {
+                            "testName": "executeByList_delegatesToBorrowedConnection",
+                            "startLn": 198,
+                            "endLn": 207,
+                            "testMethod": "@Test\n public void executeByList_delegatesToBorrowedConnection ( ) throws Exception {\n     String expected = \"STR\" ; \n     final List < String > command = Arrays . asList ( gmCommand ) ; \n     when ( connection . execute ( command ) ) . thenReturn ( expected ) ; \n     String result = sut . execute ( command ) ; \n     verify ( connection ) . execute ( command ) ; \n     assertThat(result,is(expected));\n}",
+                            "oracle": "assertThat(result,is(expected));",
+                            "oracleLn": 206,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/BasicGMConnection.java",
+                            "focalName": "execute",
+                            "focalStartLn": 59,
+                            "focalEndLn": 64,
+                            "focalMethod": "@Override\n public final String execute ( @Nonnull\n List < String > command ) throws IOException , GMException , GMServiceException { \n if ( command == null ) throw new NullPointerException ( \"STR\" ) ; \n if ( command . size ( ) == 0 ) throw new IllegalArgumentException ( \"STR\" ) ; \n return execute ( null , command ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ReaderWriterProcessImplTest",
+                    "classPath": "src/test/java/org/gm4java/engine/support/ReaderWriterProcessImplTest.java",
+                    "before": {
+                        "setupName": "init",
+                        "startLn": 71,
+                        "endLn": 76,
+                        "setupMethod": "@BeforeClass\n public static void init ( ) throws Exception { \n PowerMockito . mockStatic ( LoggerFactory . class ) ; \n logger = mock ( Logger . class ) ; \n when ( LoggerFactory . getLogger ( ReaderWriterProcessImpl . class ) ) . thenReturn ( logger ) ; \n } @Before\n public void setup ( ) throws Exception { \n reset ( logger ) ; \n MockitoAnnotations . initMocks ( this ) ; \n builder = PowerMockito . mock ( ProcessBuilder . class ) ; \n when ( builder . command ( Matchers . < String [ ] > anyObject ( ) ) ) . thenReturn ( builder ) ; \n when ( builder . redirectErrorStream ( true ) ) . thenReturn ( builder ) ; \n when ( builder . start ( ) ) . thenReturn ( process ) ; \n PowerMockito . whenNew ( ProcessBuilder . class ) . withNoArguments ( ) . thenReturn ( builder ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "getWriter__write_sendStringToStream",
+                            "startLn": 122,
+                            "endLn": 131,
+                            "testMethod": "@Test\n public void getWriter__write_sendStringToStream ( ) throws Exception {\n     ByteArrayOutputStream stream = new ByteArrayOutputStream ( ) ; \n     Writer writer = sut ( mockInput ( ) , stream ) . getWriter ( ) ; \n     writer . write ( text ) ; \n     writer . flush ( ) ; \n     assertThat(stream.toByteArray(),equalTo(text.getBytes()));\n}",
+                            "oracle": "assertThat(stream.toByteArray(),equalTo(text.getBytes()));",
+                            "oracleLn": 130,
+                            "focalFile": "src/main/java/org/gm4java/engine/support/ReaderWriterProcess.java",
+                            "focalName": "getWriter",
+                            "focalStartLn": 42,
+                            "focalEndLn": 43,
+                            "focalMethod": "@Nonnull\n Writer getWriter ( ) ; \n"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -35,12 +35,10 @@ def read_file_(filepath):
 def read_file(filepath, lo=0, hi=0):
     if lo == 0 and hi == 0:
         return read_file_(filepath=filepath)
-    with open(filepath, 'r', encoding='UTF-8') as file:
-        ln = 1
+    with open(filepath, 'r', encoding='UTF-8') as _file:
         res = []
-        while line := file.readline():
-            if ln >= lo and ln <= hi:
+        for (idx, line) in enumerate(_file):
+            if idx+1 >= lo and idx+1 <= hi:
                 res.append(line)
-            ln += 1
         return res
 

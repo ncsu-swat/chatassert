@@ -1,0 +1,55 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< me.zzp:jactiverecord >------------------------
+[INFO] Building jActiveRecord 2.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jactiverecord ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jactiverecord ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jactiverecord ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 34 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/main/java/me/zzp/ar/pool/SingletonPreparedStatement.java: Some input files use or override a deprecated API.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/main/java/me/zzp/ar/pool/SingletonPreparedStatement.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/main/java/me/zzp/ar/Record.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/main/java/me/zzp/ar/Record.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jactiverecord ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jactiverecord ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[47,50] cannot find symbol
+  symbol:   variable Focal
+  location: class me.zzp.util.SeqTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.033 s
+[INFO] Finished at: 2023-06-01T20:08:40-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[47,50] cannot find symbol
+[ERROR]   symbol:   variable Focal
+[ERROR]   location: class me.zzp.util.SeqTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

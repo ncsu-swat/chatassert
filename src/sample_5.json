@@ -1,0 +1,293 @@
+{
+    "projects": [
+        {
+            "userName": "nidi3",
+            "repoName": "graphviz-java",
+            "subRepos": [
+                "graphviz-java",
+                "graphviz-java-min-deps",
+                "graphviz-java-all-j2v8",
+                "graphviz-rough",
+                "graphviz-kotlin"
+            ],
+            "commitSHA": "dcbd021a903a4114dd087ef9acec5650b92c89b2",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "GraphvizServerTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java",
+                    "subRepo": "graphviz-java",
+                    "classTests": [
+                        {
+                            "testName": "cmdLineValueSeparated",
+                            "startLn": 48,
+                            "endLn": 52,
+                            "testMethod": "@Test\n void cmdLineValueSeparated ( ) {\n     final GraphvizServer . CmdOptions opts = GraphvizServer . CmdOptions . parse ( new String [ ] { \n \"STR\" , \"STR\" } ) ; \n     assertEquals(map(\"STR\",\"STR\"),opts.opts);\n}",
+                            "oracle": "assertEquals(map(\"STR\",\"STR\"),opts.opts);",
+                            "oracleLn": 51,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/engine/GraphvizServer.java",
+                            "focalName": "parse",
+                            "focalStartLn": 126,
+                            "focalEndLn": 150,
+                            "focalMethod": " static CmdOptions parse ( String [ ] args ) { \n final CmdOptions options = new CmdOptions ( ) ; \n for ( int i = 0 ; \n i < args . length ; \n i ++ ) { \n if ( args [ i ] . startsWith ( \"STR\" ) ) { \n final int len = args [ i ] . length ( ) ; \n if ( len == 1 ) { \n throw new IllegalArgumentException ( \"STR\" ) ; \n } final String name = args [ i ] . substring ( 1 , 2 ) ; \n String value ; \n if ( len > 2 ) { \n value = args [ i ] . substring ( 2 ) ; \n } else if ( i == args . length - 1 ) { \n value = \"STR\" ; \n } else { \n value = args [ i + 1 ] ; \n i ++ ; \n } options . opts . put ( name , value ) ; \n } else { \n options . args . add ( args [ i ] ) ; \n } } return options ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "AttributeValidatorTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/AttributeValidatorTest.java",
+                    "subRepo": "graphviz-java",
+                    "classTests": [
+                        {
+                            "testName": "wrongScope",
+                            "startLn": 49,
+                            "endLn": 53,
+                            "testMethod": "@Test\n void wrongScope ( ) {\n     assertMessage(ERROR,\"STR\",\"STR\",validate(attr(\"STR\",5),NODE));\n}",
+                            "oracle": "assertMessage(ERROR,\"STR\",\"STR\",validate(attr(\"STR\",5),NODE));",
+                            "oracleLn": 51,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributes.java",
+                            "focalName": "attr",
+                            "focalStartLn": 26,
+                            "focalEndLn": 28,
+                            "focalMethod": " static < F extends For > Attributes < F > attr ( String key , @Nullable\n Object value ) { \n return new MapAttributes < F > ( key , value ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "SerializerTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/model/SerializerTest.java",
+                    "subRepo": "graphviz-java",
+                    "before": {
+                        "setupName": "init",
+                        "startLn": 39,
+                        "endLn": 42,
+                        "setupMethod": "@BeforeEach\n void init ( ) { \n ser . messages . clear ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "privateAttribute",
+                            "startLn": 217,
+                            "endLn": 221,
+                            "testMethod": "@Test\n void privateAttribute ( ) {\n     assertSerialize(graph().graphAttr().with(\"STR\",\"STR\").with(node(\"STR\").with(\"STR\",\"STR\")),\"STR\");\n}",
+                            "oracle": "assertSerialize(graph().graphAttr().with(\"STR\",\"STR\").with(node(\"STR\").with(\"STR\",\"STR\")),\"STR\");",
+                            "oracleLn": 219,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/model/Graph.java",
+                            "focalName": "with",
+                            "focalStartLn": 33,
+                            "focalEndLn": 33,
+                            "focalMethod": " Graph with ( LinkSource ... sources ) ; \n"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "fabric8io",
+            "repoName": "fabric8-maven-plugin",
+            "subRepos": [
+                "core",
+                "enricher/api",
+                "enricher/standard",
+                "enricher/fabric8",
+                "generator/api",
+                "generator/java-exec",
+                "generator/spring-boot",
+                "generator/vertx",
+                "generator/karaf",
+                "generator/wildfly-swarm",
+                "generator/quarkus",
+                "generator/thorntail-v2",
+                "generator/webapp",
+                "generator/openliberty",
+                "watcher/api",
+                "watcher/standard",
+                "enricher/deprecated",
+                "it"
+            ],
+            "commitSHA": "4beae533a97571ddd6a6bc5dfa37c56a028cd3a9",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MavenConfigurationExtractorTest",
+                    "classPath": "enricher/api/src/test/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractorTest.java",
+                    "subRepo": "enricher/api",
+                    "classTests": [
+                        {
+                            "testName": "should_parse_simple_types",
+                            "startLn": 32,
+                            "endLn": 46,
+                            "testMethod": "@Test\n public void should_parse_simple_types ( ) {\n     final Plugin fakePlugin = createFakePlugin ( \"STR\" ) ; \n     final Map < String , Object > config = MavenConfigurationExtractor . extract ( ( Xpp3Dom ) fakePlugin . getConfiguration ( ) ) ; \n     assertThat(config).containsEntry(\"STR\",\"STR\").containsEntry(\"STR\",\"STR\");\n}",
+                            "oracle": "assertThat(config).containsEntry(\"STR\",\"STR\").containsEntry(\"STR\",\"STR\");",
+                            "oracleLn": 36,
+                            "focalFile": "enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java",
+                            "focalName": "extract",
+                            "focalStartLn": 38,
+                            "focalEndLn": 44,
+                            "focalMethod": " public static Map < String , Object > extract ( Xpp3Dom root ) { \n if ( root == null ) { \n return new HashMap < > ( ) ; \n } return getElement ( root ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ProcessorConfigTest",
+                    "classPath": "core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "order",
+                            "startLn": 96,
+                            "endLn": 111,
+                            "testMethod": "@Test\n public void order ( ) {\n     List < TestNamed > data = Arrays . asList ( new TestNamed ( \"STR\" ) , new TestNamed ( \"STR\" ) , new TestNamed ( \"STR\" ) , new TestNamed ( \"STR\" ) ) ; \n     List < String > inc = Arrays . asList ( \"STR\" , \"STR\" ) ; \n     ProcessorConfig pConfig = new ProcessorConfig ( inc , null , null ) ; \n     List < TestNamed > result = pConfig . prepareProcessors ( data , \"STR\" ) ; \n     assertEquals(2,result.size());\n}",
+                            "oracle": "assertEquals(2,result.size());",
+                            "oracleLn": 102,
+                            "focalFile": "core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java",
+                            "focalName": "prepareProcessors",
+                            "focalStartLn": 104,
+                            "focalEndLn": 126,
+                            "focalMethod": " public < T extends Named > List < T > prepareProcessors ( List < T > namedList , String type ) { \n List < T > ret = new ArrayList < > ( ) ; \n Map < String , T > lookup = new HashMap < > ( ) ; \n for ( T named : namedList ) { \n lookup . put ( named . getName ( ) , named ) ; \n } for ( String inc : includes ) { \n if ( use ( inc ) ) { \n T named = lookup . get ( inc ) ; \n if ( named == null ) { \n List < String > keys = new ArrayList < > ( lookup . keySet ( ) ) ; \n Collections . sort ( keys ) ; \n throw new IllegalArgumentException ( \"STR\" + type + \"STR\" + inc + \"STR\" + \"STR\" + type + \"STR\" + StringUtils . join ( keys , \"STR\" ) ) ; \n } ret . add ( named ) ; \n } } return ret ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "PeterisP",
+            "repoName": "morphology",
+            "subRepos": [],
+            "commitSHA": "c0b04dc7292e3be8b62f5ef2490f70b61f7f9cfe",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "TokenizeTest",
+                    "classPath": "src/test/java/lv/semti/morphology/Testi/TokenizeTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setUpBeforeClass",
+                        "startLn": 40,
+                        "endLn": 44,
+                        "setupMethod": "@BeforeClass\n public static void setUpBeforeClass ( ) throws Exception { \n loc\u012bt\u0101js = new Analyzer ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "sentences_isolated_quotes",
+                            "startLn": 865,
+                            "endLn": 873,
+                            "testMethod": "@Test\n public void sentences_isolated_quotes ( ) {\n     LinkedList < LinkedList < Word > > sentences ; \n     sentences = Splitting . tokenizeSentences ( loc\u012bt\u0101js , \"STR\" ) ; \n     assertEquals(1,sentences.size());\n}",
+                            "oracle": "assertEquals(1,sentences.size());",
+                            "oracleLn": 869,
+                            "focalFile": "src/main/java/lv/semti/morphology/analyzer/Splitting.java",
+                            "focalName": "tokenizeSentences",
+                            "focalStartLn": 207,
+                            "focalEndLn": 210,
+                            "focalMethod": " public static LinkedList < LinkedList < Word > > tokenizeSentences ( Analyzer morphoAnalyzer , String paragraph ) { \n return tokenizeSentences ( morphoAnalyzer , paragraph , DEFAULT_SENTENCE_LENGTH_CAP ) ; \n } "
+                        },
+                        {
+                            "testName": "year_numerals",
+                            "startLn": 569,
+                            "endLn": 578,
+                            "testMethod": "@Test\n public void year_numerals ( ) {\n     LinkedList < Word > tokens ; \n     tokens = Splitting . tokenize ( loc\u012bt\u0101js , \"STR\" , false ) ; \n     assertEquals(2,tokens.size());\n}",
+                            "oracle": "assertEquals(2,tokens.size());",
+                            "oracleLn": 573,
+                            "focalFile": "src/main/java/lv/semti/morphology/analyzer/Splitting.java",
+                            "focalName": "tokenize",
+                            "focalStartLn": 186,
+                            "focalEndLn": 205,
+                            "focalMethod": " public static LinkedList < Word > tokenize ( Analyzer morphoAnalyzer , String chunk , boolean bruteSplit ) { \n if ( bruteSplit ) { \n LinkedList < Word > tokens = new LinkedList < Word > ( ) ; \n if ( chunk == null ) return tokens ; \n String [ ] parts_of_string = chunk . trim ( ) . split ( \"STR\" ) ; \n for ( String part : parts_of_string ) { \n if ( part . length ( ) > 0 ) tokens . add ( ( morphoAnalyzer == null ) ? new Word ( part ) : morphoAnalyzer . analyze ( part ) ) ; \n } return tokens ; \n } else { \n return tokenize ( morphoAnalyzer , chunk ) ; \n } } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "NanoHttpd",
+            "repoName": "nanohttpd",
+            "subRepos": [
+                "core",
+                "webserver",
+                "samples",
+                "websocket",
+                "markdown-plugin",
+                "nanolets",
+                "fileupload"
+            ],
+            "commitSHA": "efb2ebf85a2b06f7c508aba9eaad5377e3a01e81",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MimeTest",
+                    "classPath": "core/src/test/java/org/nanohttpd/junit/protocols/http/MimeTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testOverwritenMimeType",
+                            "startLn": 53,
+                            "endLn": 56,
+                            "testMethod": "@Test\n public void testOverwritenMimeType ( ) throws Exception {\n     Assert.assertEquals(\"STR\",NanoHTTPD.getMimeTypeForFile(\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",NanoHTTPD.getMimeTypeForFile(\"STR\"));",
+                            "oracleLn": 55,
+                            "focalFile": "core/src/main/java/org/nanohttpd/protocols/http/NanoHTTPD.java",
+                            "focalName": "getMimeTypeForFile",
+                            "focalStartLn": 292,
+                            "focalEndLn": 299,
+                            "focalMethod": " public static String getMimeTypeForFile ( String uri ) { \n int dot = uri . lastIndexOf ( '.' ) ; \n String mime = null ; \n if ( dot >= 0 ) { \n mime = mimeTypes ( ) . get ( uri . substring ( dot + 1 ) . toLowerCase ( ) ) ; \n } return mime == null ? \"STR\" : mime ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "TestNanolets",
+                    "classPath": "nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java",
+                    "subRepo": "nanolets",
+                    "before": {
+                        "setupName": "setUp",
+                        "startLn": 81,
+                        "endLn": 96,
+                        "setupMethod": "@BeforeClass\n public static void setUp ( ) throws Exception { \n stdIn = new PipedOutputStream ( ) ; \n System . setIn ( new PipedInputStream ( stdIn ) ) ; \n serverStartThread = new Thread ( new Runnable ( ) { \n @Override\n public void run ( ) { \n String [ ] args = { \n } ; \n AppNanolets . main ( args ) ; \n } } ) ; \n serverStartThread . start ( ) ; \n Thread . sleep ( 200 ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testProvidedPriorityRoutePrioritizerNullUri",
+                            "startLn": 476,
+                            "endLn": 482,
+                            "testMethod": "@Test\n public void testProvidedPriorityRoutePrioritizerNullUri ( ) {\n     ProvidedPriorityRoutePrioritizer routePrioritizer = new ProvidedPriorityRoutePrioritizer ( ) ; \n     Assert.assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());\n}",
+                            "oracle": "Assert.assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());",
+                            "oracleLn": 479,
+                            "focalFile": "nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java",
+                            "focalName": "getPrioritizedRoutes",
+                            "focalStartLn": 515,
+                            "focalEndLn": 518,
+                            "focalMethod": "@Override\n public Collection < UriResource > getPrioritizedRoutes ( ) { \n return Collections . unmodifiableCollection ( mappings ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "TeachingKidsProgramming",
+            "repoName": "TeachingKidsProgramming.Source.Java",
+            "subRepos": [],
+            "commitSHA": "c3c808d792c25c14f03c2b3d97adbbd08cacbe24",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "PuzzleTest",
+                    "classPath": "src/test/java/org/teachingextensions/logo/PuzzleTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "different_cells_means_different_puzzle",
+                            "startLn": 96,
+                            "endLn": 102,
+                            "testMethod": "@Test\n public void different_cells_means_different_puzzle ( ) {\n     Puzzle a = new Puzzle ( getSolution ( ) ) ; \n     Puzzle b = new Puzzle ( swap ( getSolution ( ) , 8 , 2 ) ) ; \n     assertNotEquals(a,b);\n}",
+                            "oracle": "assertNotEquals(a,b);",
+                            "oracleLn": 100,
+                            "focalFile": "src/main/java/org/teachingextensions/logo/utils/PuzzleUtils/Puzzle.java",
+                            "focalName": "Puzzle",
+                            "focalStartLn": 15,
+                            "focalEndLn": 18,
+                            "focalMethod": " public Puzzle ( int [ ] cells ) { \n this . cells = cells ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

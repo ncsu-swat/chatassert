@@ -1,0 +1,62 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] -----------------------< io.cucumber:pro-plugin >-----------------------
+[INFO] Building cucumber-pro-plugin 3.0.3-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pro-plugin ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce) @ pro-plugin ---
+[INFO] 
+[INFO] --- jacoco:0.7.9:prepare-agent (pre-unit-test) @ pro-plugin ---
+[INFO] surefireArgLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ pro-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ pro-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.605 s
+[INFO] Finished at: 2023-06-05T13:29:26-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile (default-testCompile) on project pro-plugin: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/environment/CiEnvironmentTest.java:[63,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

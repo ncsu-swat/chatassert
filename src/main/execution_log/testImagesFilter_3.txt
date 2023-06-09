@@ -1,0 +1,110 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------< com.digitalpebble.stormcrawler:storm-crawler-core >----------
+[INFO] Building storm-crawler-core 2.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ storm-crawler-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (enforce-maven) @ storm-crawler-core ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0:enforce (exclude-vulnerable-log4j-versions) @ storm-crawler-core ---
+[INFO] 
+[INFO] --- git-code-format-maven-plugin:2.7:install-hooks (install-formatter-hook) @ storm-crawler-core ---
+[INFO] Installing git hooks
+[INFO] Installed git hooks
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ storm-crawler-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ storm-crawler-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 101 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/parse/filter/XPathFilter.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/parse/filter/XPathFilter.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/util/Configurable.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/main/java/com/digitalpebble/stormcrawler/util/Configurable.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ storm-crawler-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 20 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ storm-crawler-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 41 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ storm-crawler-core ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.digitalpebble.stormcrawler.filtering.RegexFilterTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.615 sec <<< FAILURE!
+testImagesFilter(com.digitalpebble.stormcrawler.filtering.RegexFilterTest)  Time elapsed: 5.573 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.digitalpebble.stormcrawler.filtering.RegexFilterTest.testImagesFilter(RegexFilterTest.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:242)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:137)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Tests in error: 
+  testImagesFilter(com.digitalpebble.stormcrawler.filtering.RegexFilterTest)
+
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.731 s
+[INFO] Finished at: 2023-06-06T09:13:09-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project storm-crawler-core: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

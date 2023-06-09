@@ -1,0 +1,357 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------------< guru.nidi:graphviz-java >-----------------------
+[INFO] Building graphviz-java 0.18.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ graphviz-java ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target
+[INFO] 
+[INFO] --- code-assert:0.9.15:prepare (default) @ graphviz-java ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- snippets:1.0.0:snippets (default) @ graphviz-java ---
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ContextTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SimpleTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgShapeAnalyzerTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgSizeAnalyzerTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/GraphElementFinderTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgElementFinderTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SerializerTest.java
+[INFO] Found 10 snippets.
+[INFO] Replacing README.md
+[WARNING] In file README.md: Snippet 'kotlin' not defined.
+[WARNING] In file README.md: Snippet 'rough' not defined.
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ graphviz-java ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ graphviz-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 130 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ graphviz-java ---
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ graphviz-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 47 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/test-classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.CreationContext
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/CreationContext.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/CreationContext.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.attribute.LinkAttr
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/LinkAttr.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/LinkAttr.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.attribute.ForNodeLink
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/ForNodeLink.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/ForNodeLink.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.engine.Engine
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/Engine.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/Engine.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+  symbol:   variable Engine
+  location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+  symbol:   variable Engine
+  location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+  symbol:   variable Engine
+  location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+  symbol:   variable Engine
+  location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.Port
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.PortNode
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.Port
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.PortNode
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.ThrowingBiConsumer
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.engine.GraphvizServerEngine
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServerEngine.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServerEngine.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingFunction
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingFunction
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingBiConsumer
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/service/CommandRunnerTest.java: cannot access guru.nidi.graphviz.service.CommandBuilder
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/service/CommandBuilder.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/service/CommandBuilder.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/DatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.Datatypes
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/Datatypes.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/Datatypes.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot find symbol
+  symbol:   variable LinkAttr
+  location: class guru.nidi.graphviz.model.ReadmeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot find symbol
+  symbol:   variable Engine
+  location: class guru.nidi.graphviz.model.ReadmeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot access guru.nidi.graphviz.engine.GraphvizPreProcessor
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizPreProcessor.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizPreProcessor.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/ParserTest.java: cannot access guru.nidi.graphviz.parse.Position
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Position.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Position.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/ParserTest.java: cannot access guru.nidi.graphviz.attribute.validate.ValidatorMessage.Position
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ValidatorMessage$Position.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ValidatorMessage$Position.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: cannot find symbol
+  symbol:   variable expectedResult
+  location: class guru.nidi.graphviz.engine.GraphvizTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: cannot find symbol
+  symbol:   variable org
+  location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: incompatible types: guru.nidi.graphviz.engine.GraphvizPreProcessor is not a functional interface
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/EngineResultTest.java: cannot access guru.nidi.graphviz.engine.IOFunction
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/IOFunction.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/IOFunction.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgSizeAnalyzerTest.java: cannot access guru.nidi.graphviz.model.SvgSizeAnalyzer
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/SvgSizeAnalyzer.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/SvgSizeAnalyzer.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/ShapeDatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.ShapeDatatype
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ShapeDatatype.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ShapeDatatype.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/StringFunctionsTest.java: cannot access guru.nidi.graphviz.engine.StringFunctions
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/StringFunctions.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/StringFunctions.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/LexerTest.java: cannot access guru.nidi.graphviz.parse.Lexer
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Lexer.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Lexer.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/PerformanceTest.java: cannot find symbol
+  symbol:   variable CreationContext
+  location: class guru.nidi.graphviz.PerformanceTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/PerformanceTest.java: cannot find symbol
+  symbol:   variable LinkAttr
+  location: class guru.nidi.graphviz.PerformanceTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/FormatTest.java: cannot access guru.nidi.graphviz.engine.SvgSizeAdjuster
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/SvgSizeAdjuster.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/SvgSizeAdjuster.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/EngineTest.java: cannot access guru.nidi.graphviz.engine.GraphvizCmdLineEngine.Option
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizCmdLineEngine$Option.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizCmdLineEngine$Option.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot access guru.nidi.graphviz.engine.GraphvizServer
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServer.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServer.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot find symbol
+  symbol:   variable options
+  location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot find symbol
+  symbol:   method contains(java.lang.String)
+  location: class guru.nidi.graphviz.engine.GraphvizServerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/ColorListDatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.ColorListDatatype
+  bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ColorListDatatype.class
+    unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ColorListDatatype.class
+    Please remove or make sure it appears in the correct subdirectory of the classpath.
+[INFO] 40 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.892 s
+[INFO] Finished at: 2023-06-09T07:24:21-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project graphviz-java: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.CreationContext
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/CreationContext.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/CreationContext.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.attribute.LinkAttr
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/LinkAttr.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/LinkAttr.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.attribute.ForNodeLink
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/ForNodeLink.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/ForNodeLink.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.engine.Engine
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/Engine.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/Engine.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+[ERROR]   symbol:   variable Engine
+[ERROR]   location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+[ERROR]   symbol:   variable Engine
+[ERROR]   location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+[ERROR]   symbol:   variable Engine
+[ERROR]   location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot find symbol
+[ERROR]   symbol:   variable Engine
+[ERROR]   location: class guru.nidi.graphviz.model.ExampleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.Port
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.PortNode
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.Port
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/Port.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.PortNode
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/PortNode.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: cannot access guru.nidi.graphviz.model.ThrowingBiConsumer
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.engine.GraphvizServerEngine
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServerEngine.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServerEngine.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingFunction
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingFunction
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingFunction.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/CodeAnalysisTest.java: cannot access guru.nidi.graphviz.model.ThrowingBiConsumer
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/ThrowingBiConsumer.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/service/CommandRunnerTest.java: cannot access guru.nidi.graphviz.service.CommandBuilder
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/service/CommandBuilder.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/service/CommandBuilder.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/DatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.Datatypes
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/Datatypes.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/Datatypes.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot find symbol
+[ERROR]   symbol:   variable LinkAttr
+[ERROR]   location: class guru.nidi.graphviz.model.ReadmeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot find symbol
+[ERROR]   symbol:   variable Engine
+[ERROR]   location: class guru.nidi.graphviz.model.ReadmeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java: cannot access guru.nidi.graphviz.engine.GraphvizPreProcessor
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizPreProcessor.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizPreProcessor.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/ParserTest.java: cannot access guru.nidi.graphviz.parse.Position
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Position.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Position.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/ParserTest.java: cannot access guru.nidi.graphviz.attribute.validate.ValidatorMessage.Position
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ValidatorMessage$Position.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ValidatorMessage$Position.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: cannot find symbol
+[ERROR]   symbol:   variable expectedResult
+[ERROR]   location: class guru.nidi.graphviz.engine.GraphvizTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: cannot find symbol
+[ERROR]   symbol:   variable org
+[ERROR]   location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizTest.java: incompatible types: guru.nidi.graphviz.engine.GraphvizPreProcessor is not a functional interface
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/EngineResultTest.java: cannot access guru.nidi.graphviz.engine.IOFunction
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/IOFunction.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/IOFunction.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgSizeAnalyzerTest.java: cannot access guru.nidi.graphviz.model.SvgSizeAnalyzer
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/SvgSizeAnalyzer.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/model/SvgSizeAnalyzer.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/ShapeDatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.ShapeDatatype
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ShapeDatatype.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ShapeDatatype.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/StringFunctionsTest.java: cannot access guru.nidi.graphviz.engine.StringFunctions
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/StringFunctions.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/StringFunctions.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/parse/LexerTest.java: cannot access guru.nidi.graphviz.parse.Lexer
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Lexer.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/parse/Lexer.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/PerformanceTest.java: cannot find symbol
+[ERROR]   symbol:   variable CreationContext
+[ERROR]   location: class guru.nidi.graphviz.PerformanceTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/PerformanceTest.java: cannot find symbol
+[ERROR]   symbol:   variable LinkAttr
+[ERROR]   location: class guru.nidi.graphviz.PerformanceTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/FormatTest.java: cannot access guru.nidi.graphviz.engine.SvgSizeAdjuster
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/SvgSizeAdjuster.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/SvgSizeAdjuster.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/EngineTest.java: cannot access guru.nidi.graphviz.engine.GraphvizCmdLineEngine.Option
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizCmdLineEngine$Option.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizCmdLineEngine$Option.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot access guru.nidi.graphviz.engine.GraphvizServer
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServer.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/engine/GraphvizServer.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot find symbol
+[ERROR]   symbol:   variable options
+[ERROR]   location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/engine/GraphvizServerTest.java: cannot find symbol
+[ERROR]   symbol:   method contains(java.lang.String)
+[ERROR]   location: class guru.nidi.graphviz.engine.GraphvizServerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/validate/ColorListDatatypeTest.java: cannot access guru.nidi.graphviz.attribute.validate.ColorListDatatype
+[ERROR]   bad class file: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ColorListDatatype.class
+[ERROR]     unable to access file: java.nio.file.NoSuchFileException: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes/guru/nidi/graphviz/attribute/validate/ColorListDatatype.class
+[ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

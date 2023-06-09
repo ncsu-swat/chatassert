@@ -1,0 +1,76 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.nanohttpd:nanohttpd >-----------------------
+[INFO] Building NanoHttpd-Core 2.3.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nanohttpd ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ nanohttpd ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.4.201502262128:prepare-agent (default-prepare-agent) @ nanohttpd ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/jacoco.exec
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd ---
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java
+[INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java
+[INFO] Scan 54 files header done in 221.054ms.
+[INFO] All files are up-to-date.
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd ---
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ nanohttpd ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 54
+[INFO] Successfully formatted: 0 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 54 file(s)
+[INFO] Approximate time taken: 0s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ nanohttpd ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ nanohttpd ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ nanohttpd ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ nanohttpd ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 28 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.185 s
+[INFO] Finished at: 2023-06-06T17:15:35-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project nanohttpd: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpChunkedResponseTest.java:[65,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

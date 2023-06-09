@@ -1,0 +1,87 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.orientechnologies:orientdb-core >-----------------
+[INFO] Building OrientDB Core 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ orientdb-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target
+[INFO] 
+[INFO] --- buildnumber:1.4:create (default) @ orientdb-core ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686157260170
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco:0.8.5:prepare-agent (default) @ orientdb-core ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dindex.flushAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Dsecurity.userPasswordSaltIterations=10
+ -Dmemory.directMemory.trackMode=true
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- javacc:2.6:jjtree-javacc (jjtree-javacc) @ orientdb-core ---
+[INFO] Skipping - all parsers are up to date
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ orientdb-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java
+[INFO] 10 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.153 s
+[INFO] Finished at: 2023-06-07T13:01:04-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:compile (default-compile) on project orientdb-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/serialization/ODocumentSerializable.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/OEdge.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OAbstractCheckPointStartRecord.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/cache/ORecordCache.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/index/sbtree/local/OSBTreeException.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/paginated/wal/OFileCreatedWALRecordV1.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/impl/local/OSyncSource.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java: error reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java; /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/storage/cluster/OClusterPageDebug.java
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

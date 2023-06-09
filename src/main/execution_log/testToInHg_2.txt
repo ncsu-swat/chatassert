@@ -1,0 +1,48 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.w3asel:cubesensors-for-java >-------------------
+[INFO] Building cubesensors-for-java 0.9.3
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cubesensors-for-java ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ cubesensors-for-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ cubesensors-for-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 21 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ cubesensors-for-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ cubesensors-for-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure_backup.java:[11,8] class TestPressure is public, should be declared in a file named TestPressure.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[11,8] duplicate class: com.w3asel.cubesensors.api.v1.format.TestPressure
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.426 s
+[INFO] Finished at: 2023-06-01T14:58:36-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project cubesensors-for-java: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure_backup.java:[11,8] class TestPressure is public, should be declared in a file named TestPressure.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cubesensors-for-java/src/test/java/com/w3asel/cubesensors/api/v1/format/TestPressure.java:[11,8] duplicate class: com.w3asel.cubesensors.api.v1.format.TestPressure
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

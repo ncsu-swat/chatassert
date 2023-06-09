@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.jcodec:jcodec >--------------------------
+[INFO] Building JCodec 0.2.6-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jcodec ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target
+[INFO] 
+[INFO] --- git-commit-id:2.2.1:revision (default) @ jcodec ---
+[INFO] 
+[INFO] --- jacoco:0.8.5:prepare-agent (default) @ jcodec ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ jcodec ---
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.3:compile (default-compile) @ jcodec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 887 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mps/MPSUtils.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mps/MPSUtils.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/platform/Platform.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/platform/Platform.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ jcodec ---
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- compiler:3.3:testCompile (default-testCompile) @ jcodec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 147 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vp8/BooleanCodingTest.java:[20,39] cannot find symbol
+  symbol:   variable expectedValue
+  location: class org.jcodec.codecs.vp8.BooleanCodingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vp8/BooleanCodingTest.java:[20,77] cannot find symbol
+  symbol:   variable inputValue
+  location: class org.jcodec.codecs.vp8.BooleanCodingTest
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.137 s
+[INFO] Finished at: 2023-06-08T11:50:45-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project jcodec: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vp8/BooleanCodingTest.java:[20,39] cannot find symbol
+[ERROR]   symbol:   variable expectedValue
+[ERROR]   location: class org.jcodec.codecs.vp8.BooleanCodingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vp8/BooleanCodingTest.java:[20,77] cannot find symbol
+[ERROR]   symbol:   variable inputValue
+[ERROR]   location: class org.jcodec.codecs.vp8.BooleanCodingTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

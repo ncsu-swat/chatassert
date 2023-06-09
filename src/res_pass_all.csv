@@ -1,0 +1,4 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testEnvelope	"assertEquals(next.field(""STR""),""STR"");"	assertNotNull(next);	21.27338671684265	0	1	0	0	0
+1	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testDistance	"assertThat(next.<Double>field(""STR"")).isEqualTo(0.0015056772638228177);"	assertNotNull(next);	21.83649706840515	0	1	0	0	0
+3	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testWktPolygon	assertEquals(shapeinstanceofJtsGeometry,true);	assertNotNull(shape);	21.375575065612793	0	1	0	0	0

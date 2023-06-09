@@ -153,8 +153,8 @@ def rouge(data):
 def edit_sim(data):
     score = 0
     for true, pred in zip(data['TrueOracle'], data['GenOracle']):
-        true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
-        pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')).split(' ')
+        true = true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '').replace(' ', '')
+        pred = pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '').replace(' ', '')
 
         score += edit_distance(true, pred)/max(len(true), len(pred))
 
@@ -167,8 +167,8 @@ def main():
     print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
     print('Teco BLEU: {}'.format(bleu(dataTeco)))
 
-    print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
-    print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
+    # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
 
     print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
     print('Teco Rouge: {}'.format(rouge(dataTeco)))

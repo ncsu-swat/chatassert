@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< com.tri-systems.persistence:jpql-querybuilder >------------
+[INFO] Building TRI JPQL Query Builder 1.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ jpql-querybuilder ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target
+[INFO] 
+[INFO] --- enforcer:1.2:enforce (enforce-maven) @ jpql-querybuilder ---
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ jpql-querybuilder ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.1:compile (default-compile) @ jpql-querybuilder ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ jpql-querybuilder ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.1:testCompile (default-testCompile) @ jpql-querybuilder ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/java/com/tri/persistence/jpql/OrderColumnTest.java:[23,56] cannot find symbol
+  symbol:   variable obj1
+  location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/java/com/tri/persistence/jpql/OrderColumnTest.java:[23,63] cannot find symbol
+  symbol:   variable obj2
+  location: class com.tri.persistence.jpql.OrderColumnTest
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.381 s
+[INFO] Finished at: 2023-06-09T11:45:40-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jpql-querybuilder: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/java/com/tri/persistence/jpql/OrderColumnTest.java:[23,56] cannot find symbol
+[ERROR]   symbol:   variable obj1
+[ERROR]   location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/java/com/tri/persistence/jpql/OrderColumnTest.java:[23,63] cannot find symbol
+[ERROR]   symbol:   variable obj2
+[ERROR]   location: class com.tri.persistence.jpql.OrderColumnTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,99 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.rockagen:commons-lib >----------------------
+[INFO] Building commons-lib 0.1.10-RELEASE
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ commons-lib ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ commons-lib ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[40,55] [deprecation] ROUND_HALF_UP in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[175,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[196,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[233,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[270,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ commons-lib ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ commons-lib ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ commons-lib ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.rockagen.commons.util.ReflexUtilTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec <<< FAILURE!
+testSuperClassesGenericTypeClass(com.rockagen.commons.util.ReflexUtilTest)  Time elapsed: 0.107 sec  <<< FAILURE!
+java.lang.AssertionError: expected same:<[Ljava.lang.Class;@7f77e91b> was not:<[Ljava.lang.Class;@44a664f2>
+	at org.junit.Assert.fail(Assert.java:91)
+	at org.junit.Assert.failNotSame(Assert.java:639)
+	at org.junit.Assert.assertSame(Assert.java:578)
+	at org.junit.Assert.assertSame(Assert.java:591)
+	at com.rockagen.commons.util.ReflexUtilTest.testSuperClassesGenericTypeClass(ReflexUtilTest.java:89)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:242)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:137)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   testSuperClassesGenericTypeClass(com.rockagen.commons.util.ReflexUtilTest): expected same:<[Ljava.lang.Class;@7f77e91b> was not:<[Ljava.lang.Class;@44a664f2>
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.330 s
+[INFO] Finished at: 2023-06-02T04:38:32-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project commons-lib: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

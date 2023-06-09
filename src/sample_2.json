@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "userName": "PeterisP",
+            "repoName": "morphology",
+            "subRepos": [],
+            "commitSHA": "c0b04dc7292e3be8b62f5ef2490f70b61f7f9cfe",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MorphologyTest",
+                    "classPath": "src/test/java/lv/semti/morphology/Testi/MorphologyTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setUpBeforeClass",
+                        "startLn": 104,
+                        "endLn": 111,
+                        "setupMethod": "@BeforeClass\n public static void setUpBeforeClass ( ) { \n try { \n loc\u012bt\u0101js = new Analyzer ( false ) ; \n } catch ( Exception e ) { \n e . printStackTrace ( ) ; \n } } @Before\n public void defaultsettings ( ) { \n loc\u012bt\u0101js . defaultSettings ( ) ; \n loc\u012bt\u0101js . setCacheSize ( 0 ) ; \n loc\u012bt\u0101js . clearCache ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "\u0123ener\u0113\u0161anaNezin\u0101miem",
+                            "startLn": 1046,
+                            "endLn": 1067,
+                            "testMethod": "@Test\n public void \u0123ener\u0113\u0161anaNezin\u0101miem ( ) {\n     loc\u012bt\u0101js . enableGuessing = true ; \n     loc\u012bt\u0101js . enableVocative = true ; \n     loc\u012bt\u0101js . guessVerbs = false ; \n     loc\u012bt\u0101js . guessParticiples = false ; \n     loc\u012bt\u0101js . guessAdjectives = false ; \n     loc\u012bt\u0101js . guessInflexibleNouns = true ; \n     loc\u012bt\u0101js . enableAllGuesses = true ; \n     assertTrue(\"STR\".matches(\"STR\"));\n}",
+                            "oracle": "assertTrue(\"STR\".matches(\"STR\"));",
+                            "oracleLn": 1055,
+                            "focalFile": "src/main/java/lv/semti/morphology/analyzer/Analyzer.java",
+                            "focalName": "generateInflections",
+                            "focalStartLn": 639,
+                            "focalEndLn": 641,
+                            "focalMethod": " public ArrayList < Wordform > generateInflections ( String lemma ) { \n return generateInflections ( lemma , false ) ; \n } "
+                        },
+                        {
+                            "testName": "turpms2",
+                            "startLn": 2699,
+                            "endLn": 2704,
+                            "testMethod": "@Test\n public void turpms2 ( ) {\n     Word Turpm\u0101kaj\u0101 = loc\u012bt\u0101js . analyze ( \"STR\" ) ; \n     assertTrue(Turpm\u0101kaj\u0101.isRecognized());\n}",
+                            "oracle": "assertTrue(Turpm\u0101kaj\u0101.isRecognized());",
+                            "oracleLn": 2702,
+                            "focalFile": "src/main/java/lv/semti/morphology/analyzer/Word.java",
+                            "focalName": "isRecognized",
+                            "focalStartLn": 135,
+                            "focalEndLn": 137,
+                            "focalMethod": " public boolean isRecognized ( ) { \n return ! wordforms . isEmpty ( ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
+[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 171 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 135 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/test/BaseThreadStateTest.java:[21,8] class SimulatorPropertiesTest is public, should be declared in a file named SimulatorPropertiesTest.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/DeploymentPlanTest.java:[115,50] cannot find symbol
+  symbol:   method getMachines()
+  location: variable registry of type com.hazelcast.simulator.coordinator.registry.Registry
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/TargetTypeTest.java:[38,62] package WorkerType does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessManagerTest.java:[112,37] cannot find symbol
+  symbol:   method getWorkerProcesses()
+  location: class com.hazelcast.simulator.agent.workerprocess.WorkerProcessManagerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[215,55] cannot find symbol
+  symbol:   method getCloudCredential()
+  location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[157,51] cannot find symbol
+  symbol:   method isAlive()
+  location: variable workerProcess of type com.hazelcast.simulator.agent.workerprocess.WorkerProcess
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/AgentCliTest.java:[40,42] cannot find symbol
+  symbol:   method getAgentIndex()
+  location: class com.hazelcast.simulator.agent.AgentCliTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,37] cannot find symbol
+  symbol:   variable expectedResponse
+  location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,55] cannot find symbol
+  symbol:   variable actualResponse
+  location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/probes/impl/HdrProbeTest.java:[102,39] cannot find symbol
+  symbol:   variable Arrays
+  location: class com.hazelcast.simulator.probes.impl.HdrProbeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/probes/impl/HdrProbeTest.java:[102,63] cannot find symbol
+  symbol:   method getRecorder()
+  location: class com.hazelcast.simulator.probes.impl.HdrProbeTest
+[INFO] 11 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.389 s
+[INFO] Finished at: 2023-06-07T05:53:47-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/test/BaseThreadStateTest.java:[21,8] class SimulatorPropertiesTest is public, should be declared in a file named SimulatorPropertiesTest.java
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/DeploymentPlanTest.java:[115,50] cannot find symbol
+[ERROR]   symbol:   method getMachines()
+[ERROR]   location: variable registry of type com.hazelcast.simulator.coordinator.registry.Registry
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/TargetTypeTest.java:[38,62] package WorkerType does not exist
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessManagerTest.java:[112,37] cannot find symbol
+[ERROR]   symbol:   method getWorkerProcesses()
+[ERROR]   location: class com.hazelcast.simulator.agent.workerprocess.WorkerProcessManagerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[215,55] cannot find symbol
+[ERROR]   symbol:   method getCloudCredential()
+[ERROR]   location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java:[157,51] cannot find symbol
+[ERROR]   symbol:   method isAlive()
+[ERROR]   location: variable workerProcess of type com.hazelcast.simulator.agent.workerprocess.WorkerProcess
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/agent/AgentCliTest.java:[40,42] cannot find symbol
+[ERROR]   symbol:   method getAgentIndex()
+[ERROR]   location: class com.hazelcast.simulator.agent.AgentCliTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,37] cannot find symbol
+[ERROR]   symbol:   variable expectedResponse
+[ERROR]   location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/FailureCollectorTest.java:[135,55] cannot find symbol
+[ERROR]   symbol:   variable actualResponse
+[ERROR]   location: class com.hazelcast.simulator.coordinator.FailureCollectorTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/probes/impl/HdrProbeTest.java:[102,39] cannot find symbol
+[ERROR]   symbol:   variable Arrays
+[ERROR]   location: class com.hazelcast.simulator.probes.impl.HdrProbeTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/probes/impl/HdrProbeTest.java:[102,63] cannot find symbol
+[ERROR]   symbol:   method getRecorder()
+[ERROR]   location: class com.hazelcast.simulator.probes.impl.HdrProbeTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,102 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.orientechnologies:orientdb-object >----------------
+[INFO] Building OrientDB Object 3.0.42
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-object ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-object ---
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686141754483
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-object ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/target/jacoco.exec -ea
+ -Xmx2048m
+ -Dstorage.diskCache.bufferSize=4096
+ -Dmemory.directMemory.trackMode=true
+ -Dstorage.makeFullCheckpointAfterCreate=false
+ -Dstorage.makeFullCheckpointAfterOpen=false
+ -Dstorage.makeFullCheckpointAfterClusterCreate=false
+ -Dstorage.wal.syncOnPageFlush=false
+ -Dstorage.configuration.syncOnUpdate=false
+ -Ddb.makeFullCheckpointOnIndexChange=false
+ -Ddb.makeFullCheckpointOnSchemaChange=false
+ -Djava.util.logging.manager=com.orientechnologies.common.log.ShutdownLogManager
+ -Dstorage.diskCache.checksumMode=storeAndThrow
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ orientdb-object ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-object ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 77 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/main/java/com/orientechnologies/orient/object/serialization/OObjectSerializerContext.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/main/java/com/orientechnologies/orient/object/serialization/OObjectSerializerContext.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/main/java/com/orientechnologies/orient/object/enhancement/OObjectProxyMethodHandler.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/main/java/com/orientechnologies/orient/object/enhancement/OObjectProxyMethodHandler.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-object ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ orientdb-object ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-object ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 29 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/ExactEntity.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/ExactEntity.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/db/OObjectLazyMapTest.java:[84,50] cannot find symbol
+  symbol:   variable iKey
+  location: class com.orientechnologies.orient.object.db.OObjectLazyMapTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/jpa/parsing/PersistenceXMLParsingTest.java:[112,40] cannot find symbol
+  symbol:   method parse(java.net.URL)
+  location: class com.orientechnologies.orient.object.jpa.parsing.PersistenceXMLParsingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/field/OObjectBinaryDataStorageTest.java:[122,50] cannot find symbol
+  symbol:   method getIdentity()
+  location: variable savedRonnie of type com.orientechnologies.orient.object.enhancement.field.Driver
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/field/OObjectBinaryDataStorageTest.java:[122,78] cannot find symbol
+  symbol:   method getIdentity()
+  location: variable loadedRonnie of type com.orientechnologies.orient.object.enhancement.field.Driver
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.990 s
+[INFO] Finished at: 2023-06-07T08:42:41-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-object: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/db/OObjectLazyMapTest.java:[84,50] cannot find symbol
+[ERROR]   symbol:   variable iKey
+[ERROR]   location: class com.orientechnologies.orient.object.db.OObjectLazyMapTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/jpa/parsing/PersistenceXMLParsingTest.java:[112,40] cannot find symbol
+[ERROR]   symbol:   method parse(java.net.URL)
+[ERROR]   location: class com.orientechnologies.orient.object.jpa.parsing.PersistenceXMLParsingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/field/OObjectBinaryDataStorageTest.java:[122,50] cannot find symbol
+[ERROR]   symbol:   method getIdentity()
+[ERROR]   location: variable savedRonnie of type com.orientechnologies.orient.object.enhancement.field.Driver
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/object/src/test/java/com/orientechnologies/orient/object/enhancement/field/OObjectBinaryDataStorageTest.java:[122,78] cannot find symbol
+[ERROR]   symbol:   method getIdentity()
+[ERROR]   location: variable loadedRonnie of type com.orientechnologies.orient.object.enhancement.field.Driver
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

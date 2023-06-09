@@ -18,7 +18,7 @@ public class Main {
         // thisTransformationSampler();        
         // methodTransplantation();
 
-        GatewayServer gatewayServer = new GatewayServer(new MethodInjector());
+        GatewayServer gatewayServer = new GatewayServer(new PY4JGateway());
         gatewayServer.start();
     }
 

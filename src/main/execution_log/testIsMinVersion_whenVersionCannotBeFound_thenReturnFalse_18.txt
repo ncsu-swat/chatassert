@@ -1,0 +1,59 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:driver-hazelcast4plus:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------< com.hazelcast.simulator:driver-hazelcast4plus >------------
+[INFO] Building Simulator Driver Hazelcast 4.x and newer 0.14-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator/0.14-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.hazelcast.simulator:simulator:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): repo2.maven.org: nodename nor servname provided, or not known
+[WARNING] com.hazelcast.simulator:simulator:0.14-SNAPSHOT/maven-metadata.xml failed to transfer from https://repo2.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of backup-repo has elapsed or updates are forced. Original error: Could not transfer metadata com.hazelcast.simulator:simulator:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): repo2.maven.org: nodename nor servname provided, or not known
+Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.hazelcast.simulator:simulator-root:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): repo2.maven.org
+[WARNING] com.hazelcast.simulator:simulator:0.14-SNAPSHOT/maven-metadata.xml failed to transfer from https://repo2.maven.org/maven2/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of backup-repo has elapsed or updates are forced. Original error: Could not transfer metadata com.hazelcast.simulator:simulator:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): repo2.maven.org: nodename nor servname provided, or not known
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ driver-hazelcast4plus ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ driver-hazelcast4plus ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ driver-hazelcast4plus ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 140 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/main/java/com/hazelcast/simulator/tests/map/MapGetVsQueryTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/main/java/com/hazelcast/simulator/tests/map/MapGetVsQueryTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ driver-hazelcast4plus ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ driver-hazelcast4plus ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.492 s
+[INFO] Finished at: 2023-06-08T09:51:00-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project driver-hazelcast4plus: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[37,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

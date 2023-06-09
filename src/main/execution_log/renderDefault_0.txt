@@ -1,0 +1,78 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< com.tri-systems.persistence:jpql-querybuilder >------------
+[INFO] Building TRI JPQL Query Builder 1.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.16/maven-surefire-plugin-2.16.pom
+Progress (1): 2.7/5.0 kBProgress (1): 5.0 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.16/maven-surefire-plugin-2.16.pom (5.0 kB at 8.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.16/surefire-2.16.pom
+Progress (1): 2.7/19 kBProgress (1): 5.5/19 kBProgress (1): 8.2/19 kBProgress (1): 11/19 kB Progress (1): 14/19 kBProgress (1): 16/19 kBProgress (1): 19/19 kBProgress (1): 19 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.16/surefire-2.16.pom (19 kB at 181 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.16/maven-surefire-plugin-2.16.jar
+Progress (1): 2.7/34 kBProgress (1): 5.5/34 kBProgress (1): 8.2/34 kBProgress (1): 11/34 kB Progress (1): 14/34 kBProgress (1): 16/34 kBProgress (1): 19/34 kBProgress (1): 22/34 kBProgress (1): 25/34 kBProgress (1): 27/34 kBProgress (1): 30/34 kBProgress (1): 33/34 kBProgress (1): 34 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.16/maven-surefire-plugin-2.16.jar (34 kB at 425 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.5.0/assertj-core-1.5.0.pom
+Progress (1): 4.1/4.2 kBProgress (1): 4.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.5.0/assertj-core-1.5.0.pom (4.2 kB at 70 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/1.2.2/assertj-parent-pom-1.2.2.pom
+Progress (1): 4.1/9.2 kBProgress (1): 8.2/9.2 kBProgress (1): 9.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/1.2.2/assertj-parent-pom-1.2.2.pom (9.2 kB at 140 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.5.0/assertj-core-1.5.0.jar
+Progress (1): 4.1/576 kBProgress (1): 8.2/576 kBProgress (1): 12/576 kB Progress (1): 16/576 kBProgress (1): 20/576 kBProgress (1): 24/576 kBProgress (1): 28/576 kBProgress (1): 32/576 kBProgress (1): 36/576 kBProgress (1): 40/576 kBProgress (1): 45/576 kBProgress (1): 49/576 kBProgress (1): 53/576 kBProgress (1): 57/576 kBProgress (1): 61/576 kBProgress (1): 65/576 kBProgress (1): 69/576 kBProgress (1): 73/576 kBProgress (1): 77/576 kBProgress (1): 81/576 kBProgress (1): 85/576 kBProgress (1): 90/576 kBProgress (1): 94/576 kBProgress (1): 98/576 kBProgress (1): 102/576 kBProgress (1): 106/576 kBProgress (1): 110/576 kBProgress (1): 114/576 kBProgress (1): 118/576 kBProgress (1): 122/576 kBProgress (1): 126/576 kBProgress (1): 131/576 kBProgress (1): 135/576 kBProgress (1): 139/576 kBProgress (1): 143/576 kBProgress (1): 147/576 kBProgress (1): 151/576 kBProgress (1): 155/576 kBProgress (1): 159/576 kBProgress (1): 163/576 kBProgress (1): 167/576 kBProgress (1): 171/576 kBProgress (1): 176/576 kBProgress (1): 180/576 kBProgress (1): 184/576 kBProgress (1): 188/576 kBProgress (1): 192/576 kBProgress (1): 196/576 kBProgress (1): 200/576 kBProgress (1): 204/576 kBProgress (1): 208/576 kBProgress (1): 212/576 kBProgress (1): 217/576 kBProgress (1): 221/576 kBProgress (1): 225/576 kBProgress (1): 229/576 kBProgress (1): 233/576 kBProgress (1): 237/576 kBProgress (1): 241/576 kBProgress (1): 245/576 kBProgress (1): 249/576 kBProgress (1): 253/576 kBProgress (1): 258/576 kBProgress (1): 262/576 kBProgress (1): 266/576 kBProgress (1): 270/576 kBProgress (1): 274/576 kBProgress (1): 278/576 kBProgress (1): 282/576 kBProgress (1): 286/576 kBProgress (1): 290/576 kBProgress (1): 294/576 kBProgress (1): 298/576 kBProgress (1): 303/576 kBProgress (1): 307/576 kBProgress (1): 311/576 kBProgress (1): 315/576 kBProgress (1): 319/576 kBProgress (1): 323/576 kBProgress (1): 327/576 kBProgress (1): 331/576 kBProgress (1): 335/576 kBProgress (1): 339/576 kBProgress (1): 344/576 kBProgress (1): 348/576 kBProgress (1): 352/576 kBProgress (1): 356/576 kBProgress (1): 360/576 kBProgress (1): 364/576 kBProgress (1): 368/576 kBProgress (1): 372/576 kBProgress (1): 376/576 kBProgress (1): 380/576 kBProgress (1): 384/576 kBProgress (1): 389/576 kBProgress (1): 393/576 kBProgress (1): 397/576 kBProgress (1): 401/576 kBProgress (1): 405/576 kBProgress (1): 409/576 kBProgress (1): 413/576 kBProgress (1): 417/576 kBProgress (1): 421/576 kBProgress (1): 425/576 kBProgress (1): 430/576 kBProgress (1): 434/576 kBProgress (1): 438/576 kBProgress (1): 442/576 kBProgress (1): 446/576 kBProgress (1): 450/576 kBProgress (1): 454/576 kBProgress (1): 458/576 kBProgress (1): 462/576 kBProgress (1): 466/576 kBProgress (1): 470/576 kBProgress (1): 475/576 kBProgress (1): 479/576 kBProgress (1): 483/576 kBProgress (1): 487/576 kBProgress (1): 491/576 kBProgress (1): 495/576 kBProgress (1): 499/576 kBProgress (1): 503/576 kBProgress (1): 507/576 kBProgress (1): 511/576 kBProgress (1): 516/576 kBProgress (1): 520/576 kBProgress (1): 524/576 kBProgress (1): 528/576 kBProgress (1): 532/576 kBProgress (1): 536/576 kBProgress (1): 540/576 kBProgress (1): 544/576 kBProgress (1): 548/576 kBProgress (1): 552/576 kBProgress (1): 557/576 kBProgress (1): 561/576 kBProgress (1): 565/576 kBProgress (1): 569/576 kBProgress (1): 573/576 kBProgress (1): 576 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/1.5.0/assertj-core-1.5.0.jar (576 kB at 3.7 MB/s)
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jpql-querybuilder ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ jpql-querybuilder ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jpql-querybuilder ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jpql-querybuilder ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 18 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/main/java/com/tri/persistence/jpql/WhereItems.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jpql-querybuilder ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jpql-querybuilder ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ jpql-querybuilder ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.16/maven-surefire-common-2.16.pom
+Progress (1): 4.1/6.1 kBProgress (1): 6.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.16/maven-surefire-common-2.16.pom (6.1 kB at 90 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.16/surefire-api-2.16.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.16/surefire-api-2.16.pom (2.3 kB at 35 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.16/surefire-booter-2.16.pom
+Progress (1): 2.8 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.16/surefire-booter-2.16.pom (2.8 kB at 41 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.16/maven-surefire-common-2.16.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.16/surefire-api-2.16.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.16/surefire-booter-2.16.jar
+Progress (1): 4.1/149 kBProgress (1): 8.2/149 kBProgress (1): 12/149 kB Progress (1): 16/149 kBProgress (1): 20/149 kBProgress (1): 24/149 kBProgress (1): 28/149 kBProgress (1): 32/149 kBProgress (1): 36/149 kBProgress (1): 40/149 kBProgress (1): 45/149 kBProgress (1): 49/149 kBProgress (1): 53/149 kBProgress (1): 57/149 kBProgress (1): 61/149 kBProgress (1): 65/149 kBProgress (1): 69/149 kBProgress (1): 73/149 kBProgress (1): 77/149 kBProgress (1): 81/149 kBProgress (1): 85/149 kBProgress (1): 90/149 kBProgress (1): 94/149 kBProgress (1): 98/149 kBProgress (1): 102/149 kBProgress (1): 106/149 kBProgress (1): 110/149 kBProgress (1): 114/149 kBProgress (1): 118/149 kBProgress (1): 122/149 kBProgress (1): 126/149 kBProgress (1): 131/149 kBProgress (1): 135/149 kBProgress (1): 139/149 kBProgress (1): 143/149 kBProgress (1): 147/149 kBProgress (1): 149 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.16/surefire-api-2.16.jar (149 kB at 1.6 MB/s)
+Progress (1): 2.7/40 kBProgress (1): 5.5/40 kBProgress (1): 8.2/40 kBProgress (1): 11/40 kB Progress (1): 14/40 kBProgress (1): 16/40 kBProgress (2): 16/40 kB | 4.1/264 kBProgress (2): 16/40 kB | 8.2/264 kBProgress (2): 16/40 kB | 12/264 kB Progress (2): 16/40 kB | 16/264 kBProgress (2): 19/40 kB | 16/264 kBProgress (2): 22/40 kB | 16/264 kBProgress (2): 25/40 kB | 16/264 kBProgress (2): 27/40 kB | 16/264 kBProgress (2): 30/40 kB | 16/264 kBProgress (2): 33/40 kB | 16/264 kBProgress (2): 36/40 kB | 16/264 kBProgress (2): 36/40 kB | 20/264 kBProgress (2): 36/40 kB | 25/264 kBProgress (2): 36/40 kB | 29/264 kBProgress (2): 36/40 kB | 33/264 kBProgress (2): 38/40 kB | 33/264 kBProgress (2): 40 kB | 33/264 kB   Progress (2): 40 kB | 37/264 kBProgress (2): 40 kB | 41/264 kBProgress (2): 40 kB | 45/264 kBProgress (2): 40 kB | 49/264 kBProgress (2): 40 kB | 53/264 kBProgress (2): 40 kB | 57/264 kBProgress (2): 40 kB | 61/264 kBProgress (2): 40 kB | 66/264 kBProgress (2): 40 kB | 70/264 kBProgress (2): 40 kB | 74/264 kBProgress (2): 40 kB | 78/264 kBProgress (2): 40 kB | 82/264 kB                               Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.16/surefire-booter-2.16.jar (40 kB at 116 kB/s)
+Progress (1): 86/264 kBProgress (1): 90/264 kBProgress (1): 94/264 kBProgress (1): 98/264 kBProgress (1): 102/264 kBProgress (1): 106/264 kBProgress (1): 111/264 kBProgress (1): 115/264 kBProgress (1): 119/264 kBProgress (1): 123/264 kBProgress (1): 127/264 kBProgress (1): 131/264 kBProgress (1): 135/264 kBProgress (1): 139/264 kBProgress (1): 143/264 kBProgress (1): 147/264 kBProgress (1): 152/264 kBProgress (1): 156/264 kBProgress (1): 160/264 kBProgress (1): 164/264 kBProgress (1): 168/264 kBProgress (1): 172/264 kBProgress (1): 176/264 kBProgress (1): 180/264 kBProgress (1): 184/264 kBProgress (1): 188/264 kBProgress (1): 193/264 kBProgress (1): 197/264 kBProgress (1): 201/264 kBProgress (1): 205/264 kBProgress (1): 209/264 kBProgress (1): 213/264 kBProgress (1): 217/264 kBProgress (1): 221/264 kBProgress (1): 225/264 kBProgress (1): 229/264 kBProgress (1): 233/264 kBProgress (1): 238/264 kBProgress (1): 242/264 kBProgress (1): 246/264 kBProgress (1): 250/264 kBProgress (1): 254/264 kBProgress (1): 258/264 kBProgress (1): 262/264 kBProgress (1): 264 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.16/maven-surefire-common-2.16.jar (264 kB at 642 kB/s)
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jpql-querybuilder/target/surefire-reports
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.pom (2.5 kB at 26 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.16/surefire-providers-2.16.pom
+Progress (1): 2.4 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.16/surefire-providers-2.16.pom (2.4 kB at 35 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.jar
+Progress (1): 4.1/64 kBProgress (1): 8.2/64 kBProgress (1): 12/64 kB Progress (1): 16/64 kBProgress (1): 20/64 kBProgress (1): 24/64 kBProgress (1): 28/64 kBProgress (1): 32/64 kBProgress (1): 36/64 kBProgress (1): 40/64 kBProgress (1): 45/64 kBProgress (1): 49/64 kBProgress (1): 53/64 kBProgress (1): 57/64 kBProgress (1): 61/64 kBProgress (1): 64 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.16/surefire-junit4-2.16.jar (64 kB at 775 kB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.tri.persistence.jpql.OrderColumnTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in com.tri.persistence.jpql.OrderColumnTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.445 s
+[INFO] Finished at: 2023-06-07T07:24:46-04:00
+[INFO] ------------------------------------------------------------------------

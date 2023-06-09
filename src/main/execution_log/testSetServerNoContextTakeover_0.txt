@@ -1,0 +1,88 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< org.java-websocket:Java-WebSocket >------------------
+[INFO] Building Java-WebSocket 1.5.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Java-WebSocket ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Java-WebSocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ Java-WebSocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 78 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- bnd-maven-plugin:4.3.1:bnd-process (default) @ Java-WebSocket ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Java-WebSocket ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ Java-WebSocket ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 75 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,12] illegal start of expression
+[INFO] 20 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.239 s
+[INFO] Finished at: 2023-06-06T19:25:14-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project Java-WebSocket: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/HeadersTest.java:[96,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/IncompleteHandshakeExceptionTest.java:[37,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/client/AttachmentTest.java:[61,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue621Test.java:[66,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/issues/Issue609Test.java:[52,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
