@@ -8,4 +8,5 @@ cp=$(<cp.txt)
 rm cp.txt
 
 # run tests
+echo "java processing server waiting for calls..."
 java -cp $cp:target/classes ncsusoftware.Main
