@@ -6,7 +6,7 @@ import json
 filename = "test-focal-oracle.tsv"
 
 ASSERTION_MARK="<AssertPlaceHolder>"
-NUM_QUERIES_EXAMPLE=10
+NUM_QUERIES_EXAMPLE=3
 OUTPUT_FILENAME="output.json"
 
 def incoder_adapter(num_iteration, example):
@@ -40,8 +40,7 @@ with open(filename) as file:
         oras = complete(test, focal, oracle)
         # update dictionary
         dictionary[id] = list(oras)
-
-        break
+        
     # dump output to json file
     with open(OUTPUT_FILENAME, "w") as outfile:
         json.dump(dictionary, outfile, indent=4)        
