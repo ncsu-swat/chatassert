@@ -46,27 +46,40 @@ else:
     model_name = "facebook/incoder-1B"
     kwargs = {}
 
-print("loading model")
-model = AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
-print("loading tokenizer")
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-print("loading complete")
 
-if CUDA:
-    # if you plan to fine-tune the model, you should not use half precision.
-    # model = model.half().cuda()
-    model = model.to(device) # -Marcelo
+model = None
+tokenizer = None
+
+def initialize_incoder():
+    global model
+    global tokenizer
+    print("loading incoder model")
+    model = AutoModelForCausalLM.from_pretrained(model_name, **kwargs)
+    print("loading incoder tokenizer")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    print("loading complete")
+    if CUDA:
+        # if you plan to fine-tune the model, you should not use half precision.
+        # model = model.half().cuda()
+        model = model.to(device) # -Marcelo
 
 # signals the start of a document
 BOS = "<|endoftext|>"
 # signals the end of a generated infill
 EOM = "<|endofmask|>"
 
+def dispose_mem_incoder():
+    global model
+    global tokenizer
+    del model
+    del tokenizer
+    torch.mps.empty_cache()
+
 def make_sentinel(i):
     # signals (1) a location to insert an infill and (2) the start of the infill generation
     return f"<|mask:{i}|>"
 
-def generate(input: str, max_to_generate: int=128, temperature: float=0.2):
+def generate_incoder(input: str, max_to_generate: int=128, temperature: float=0.2):
     """
     Do standard left-to-right completion of the prefix `input` by sampling from the model
     """
@@ -139,7 +152,7 @@ def infill(parts: List[str], max_to_generate: int=128, temperature: float=0.2, e
             complete.append(part)
             prompt += make_sentinel(sentinel_ix)
             # TODO: this is inefficient as it requires re-encoding prefixes repeatedly
-            completion = generate(prompt, max_to_generate, temperature)
+            completion = generate_incoder(prompt, max_to_generate, temperature)
             completion = completion[len(prompt):]
             if EOM not in completion:
                 if VERBOSE:
