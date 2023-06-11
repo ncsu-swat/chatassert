@@ -25,7 +25,19 @@ public class HoleInjectionMain {
         // String s = "Assert.assertEquals(x+1, this.y.z);";
         // String s = "Assert.assertEquals(y, this.y.z);";
         // String s = "Assert.assertEquals(x+1, a.b());";
-        holeInjection(args[0]);
+        // String s = "Assert.assertEquals(a, x(y));";
+
+
+        /**
+         * concatenate arguments passed in 
+         * (bash may split inputs in different parameters)
+         */
+        String s = "";
+        for(int i = 0; i < args.length; i++) {
+            s += args[i];
+        }
+        System.out.println(s.replace(" ", ""));
+        holeInjection(s);
     }
 
     private static void holeInjection(String s) {
@@ -58,6 +70,8 @@ public class HoleInjectionMain {
                 System.out.println(candidate);
             }
 
+        } else {
+            System.out.println("------empty------");
         }
     }
 
