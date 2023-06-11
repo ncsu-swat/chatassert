@@ -218,11 +218,10 @@ def <insert>
     print(result["text"])
     return result["text"]
 
-# def ishrak_example(example, max_to_generate=128, temperature=0.2):
-#     parts = example.split("<insert>")
-#     result = infill(parts, max_to_generate=max_to_generate, temperature=temperature)
-#     return result["text"]
-
+def infill_helper(example, max_to_generate=30, temperature=0.2):
+    parts = example.split("<insert>")
+    result = infill(parts, max_to_generate=max_to_generate, temperature=temperature)
+    return result["text"]
 
 if __name__ == "__main__":
     print("code to docstring test:")

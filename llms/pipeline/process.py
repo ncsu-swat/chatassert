@@ -1,5 +1,5 @@
 import csv
-from incoder.fim import generate_incoder, dispose_mem_incoder, initialize_incoder
+from incoder.main import generate_incoder, dispose_mem_incoder, initialize_incoder
 from starcoder.completion import generate_starcoder, dispose_mem_starcoder, initialize_starcoder
 import sys
 import json
