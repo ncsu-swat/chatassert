@@ -7,25 +7,28 @@ import re
 
 filename = "test-focal-oracle.tsv"
 
-ASSERTION_MARK="<AssertPlaceHolder>"
-NUM_QUERIES_EXAMPLE=1
-OUTPUT_FILENAME="output.json"
+ASSERTION_MARK = "<AssertPlaceHolder>"
+NUM_QUERIES_EXAMPLE = 1
+OUTPUT_FILENAME = "output.json"
+INFILL_MARK = "<insert>"
+
+DEBUG = True
 
 def extract_oracles_from_output(out):
     # sometimes it returns multiple ones...
     return re.findall("Assert[^;]*;", out)
-    # tmp = out[out.find("Assert."):]
-    # ora = tmp[:tmp.find(';')]
-    # ora = ora.replace(" ", "") # remove empty spaces to facilitate deduplication
-    # return ora
 
 def incoder_adapter(num_iteration, example):
+    if DEBUG:
+        print("I", end="")
     # TODO: check if this is reasonable. The default temp value for
     # the example in the incoder repo was 0.2 -Marcelo
     temp = 0.1 + (num_iteration - 1) * 0.05
     return generate_incoder(example, max_to_generate=30, temperature=temp)
 
 def starcoder_adapter(num_iteration, example):
+    if DEBUG:
+        print("S", end="")
     # TODO: check if this is reasonable. The default temp value for
     # the example in the starcoder repo was 1.5 -Marcelo
     temp = 1.4 + (num_iteration - 1) * 0.05    
