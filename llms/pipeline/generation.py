@@ -5,11 +5,11 @@ import sys
 import json
 import re
 
-filename = "test-focal-oracle.tsv"
+INPUT_FILENAME = "generation-input.tsv"
 
 ASSERTION_MARK = "<AssertPlaceHolder>"
 NUM_QUERIES_EXAMPLE = 3
-OUTPUT_FILENAME = "output.json"
+OUTPUT_FILENAME = "generation-output.json"
 INFILL_MARK = "<insert>"
 
 DEBUG = True
@@ -71,7 +71,7 @@ for llm in llms:
     else:
         raise Exception("not implemented")        
 
-    with open(filename) as file:
+    with open(INPUT_FILENAME) as file:
         tsv_file = csv.reader(file, delimiter="\t")
         for line in tsv_file:
             id = line[0]
