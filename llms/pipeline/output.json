@@ -1,88 +1,65 @@
 {
     "1": {
-        "starcoder": [
-            "Assert.assertEquals(expected, actual);"
-        ],
         "incoder": [
             "Assert.assertArrayEquals(expected, actual);"
         ]
     },
     "2": {
-        "starcoder": [
-            "Assert.assertEquals(null, HazelcastStarter.getHazelcastVersionFromJarOrNull(file));"
-        ],
         "incoder": [
             "Assert.assertNull(Hazelcast.getHazelcastVersionFromJarOrNull(file));"
         ]
     },
     "3": {
-        "starcoder": [
-            "Assert.assertEquals(original, doc.field(\"field\"));"
-        ],
         "incoder": [
-            "Assert.assertEquals(original, trackedSet.getOriginal());"
+            "Assert.assertEquals(original, trackedSet.getOriginal());",
+            "Assert.assertEquals(trackedSet.getOriginal(), original);"
         ]
     },
     "4": {
-        "starcoder": [
-            "Assert.assertEquals(\"Turpm\u0101kaj\u0101\", Turpm\u0101kaj\u0101.getLemma());"
-        ],
         "incoder": [
             "Assert.assertEquals(\"Turpm\u0101kaj\u0101\", Turpm\u0101kaj\u0101.getWord());"
         ]
     },
     "5": {
-        "starcoder": [
-            "Assert.assertEquals(OBJECT, byteSerializer.deserializeNative(buffer));"
-        ],
         "incoder": [
+            "Assert.assertEquals(buffer.capacity(), stream.length);",
             "Assert.assertEquals(buffer.limit(), stream.length);",
             "Assert.assertEquals(buffer.capacity(), buffer.limit());",
-            "Assert.assertEquals(buffer.capacity(), stream.length);"
+            "Assert.assertEquals(OBJECT, byteSerializer.deserializeNative(buffer, 0));"
         ]
     },
     "6": {
-        "starcoder": [
-            "Assert.assertFalse(multiKey.equals(new Object()));"
-        ],
         "incoder": [
-            "Assert.assertFalse(multiKey.equals(new OMultiKey(Collections.singletonList(\"b\"))));"
+            "Assert.assertFalse(multiKey.equals(new OMultiKey(Collections.singletonList(\"b\"))));",
+            "Assert.assertFalse(multiKey.equals(new OMultiKey(Collections.singletonList(\"a\"))));"
         ]
     },
     "7": {
-        "starcoder": [
-            "Assert.assertEquals(\"teardown\", method.getName());"
-        ],
         "incoder": [
+            "Assert.assertEquals(method, \"teardown\");",
             "Assert.assertEquals(method, \"testLocalTeardownFilter\");"
         ]
     },
     "8": {
-        "starcoder": [
-            "Assert.assertTrue(manager.isFieldChanged(\"test1\"));",
-            "Assert.assertTrue(manager.isChanged());"
-        ],
         "incoder": [
             "Assert.assertEquals(manager.getDirtyFields().get(\"test1\"), doc);",
             "Assert.assertEquals(manager.getDirtyCount(), 1);"
         ]
     },
     "9": {
-        "starcoder": [
-            "Assert.assertEquals(head.getHead(), Label.of(\"hula\"));"
-        ],
         "incoder": [
-            "Assert.assertEquals(2d, head.yOffset);",
+            "Assert.assertEquals(\"hula\", head.label);",
             "Assert.assertEquals(1d, head.xOffset);",
-            "Assert.assertEquals(\"hula\", head.label);"
+            "Assert.assertEquals(1d, head.getX());",
+            "Assert.assertEquals(2d, head.yOffset);",
+            "Assert.assertEquals(\"hula\", head.getLabel());"
         ]
     },
     "10": {
-        "starcoder": [
-            "Assert.assertEquals(otp, OTPGenerator.generateOTP(otp));"
-        ],
         "incoder": [
-            "Assert.assertEquals(otp, otpUtil.generateOTP(OTPUtil.SHORT_OTP_LENGTH));"
+            "Assert.assertFalse(otp.matches(\"^[0-9]{6}$\"));",
+            "Assert.assertEquals(otp, otpUtil.generateOTP(otp.length()));",
+            "Assert.assertEquals(otp, otpService.generateOTP(otp));"
         ]
     }
 }

@@ -8,7 +8,7 @@ import re
 filename = "test-focal-oracle.tsv"
 
 ASSERTION_MARK = "<AssertPlaceHolder>"
-NUM_QUERIES_EXAMPLE = 1
+NUM_QUERIES_EXAMPLE = 3
 OUTPUT_FILENAME = "output.json"
 INFILL_MARK = "<insert>"
 
@@ -35,10 +35,13 @@ def starcoder_adapter(num_iteration, example):
     return generate_starcoder(example, temperature=temp)
 
 def complete(llm, test, focal, oracle):
+    if DEBUG:    
+        print("C", end="")    
     # completion
     prefix = test[:test.find(ASSERTION_MARK)]+" Assert."
     oras = set() # store in a set to discard duplicates
     for i in range(NUM_QUERIES_EXAMPLE):
+        print(".", end="")
         if llm == "incoder":
             out = incoder_adapter(i, prefix)
             for ora in extract_oracles_from_output(out):
@@ -56,7 +59,7 @@ def complete(llm, test, focal, oracle):
 
 
 dictionary = {}
-llms = ["starcoder", "incoder"]
+llms = ["incoder"] # "starcoder", 
 # need to do one llm at a time (to keep model in memory)
 for llm in llms:
 
@@ -68,7 +71,7 @@ for llm in llms:
     else:
         raise Exception("not implemented")        
 
-    with open(filename) as file:    
+    with open(filename) as file:
         tsv_file = csv.reader(file, delimiter="\t")
         for line in tsv_file:
             id = line[0]
@@ -77,7 +80,7 @@ for llm in llms:
             oracle = line[3] #TODO: refer by column name
             if id == 'Id': # skip line with column names
                 continue
-            if dictionary.get(id) is None:
+            if dictionary.get(id) is None: # first time
                 dictionary[id] = {} # initialize dictionary
             print(id)
             oras = complete(llm, test, focal, oracle)
