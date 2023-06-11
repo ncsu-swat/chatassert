@@ -28,7 +28,7 @@ def dispose_mem_starcoder():
 
 def generate_starcoder(codetocomplete, temperature):
     inputs = tokenizer.encode(codetocomplete, return_tensors="pt").to(device)
-    outputs = model.generate(inputs, temperature=temperature, max_new_tokens=30)
+    outputs = model.generate(inputs, pad_token_id=tokenizer.eos_token_id, temperature=temperature, max_new_tokens=30)
     # clean_up_tokenization_spaces=False prevents a tokenizer edge
     # case which can result in spaces being removed around punctuation
     return [tokenizer.decode(tensor, clean_up_tokenization_spaces=True, skip_special_tokens=True) for tensor in outputs]
