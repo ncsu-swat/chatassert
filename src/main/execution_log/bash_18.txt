@@ -33,7 +33,7 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
+[ERROR] COMPILATION ERROR :
 [INFO] -------------------------------------------------------------
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,56] cannot find symbol
   symbol:   variable org

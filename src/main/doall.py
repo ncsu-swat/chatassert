@@ -177,7 +177,8 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
     try:
         testInjector = javaGateway.entry_point
         testInjector.setFile(file_path)
-        testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>", gpt_oracle))
+        print('\nTEST CODE IN FEEDBACK LOOP: {}\n'.format(test_code))
+        testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>; }", gpt_oracle))
 
         res, output = project.run_test(subRepo, class_name, test_name)
 
@@ -259,7 +260,7 @@ def restore_test_file(file_path):
     backup_file_path = file_path.replace(".java", "") + "_backup.txt"
     shutil.copyfile(backup_file_path, file_path)
 
-def tecofy_testlines(lines, startLn, oracleLn):
+def tecofy_testlines(lines):
     tecofied_lines = []
 
     if len(lines) == 0:
@@ -283,13 +284,7 @@ def tecofy_testlines(lines, startLn, oracleLn):
                     if len(line) > 0:
                         if '*/' in line:
                             if len(line[line.find('*/')+2:]) > 0:
-                                if len(tecofied_lines) == (oracleLn-startLn):
-                                    # Trigger stop
-                                    tecofied_lines.append("<AssertPlaceHolder>;")
-                                    tecofied_lines.append("}")
-                                    i = len(lines)
-                                else:
-                                    tecofied_lines.append(line[line.find('*/')+2:])
+                                tecofied_lines.append(line[line.find('*/')+2:])
                             break
                     i += 1
                     line = lines[i].strip()
@@ -303,14 +298,37 @@ def tecofy_testlines(lines, startLn, oracleLn):
                         if len(lines[i].strip()) > 0 and lines[i].strip()[-1] == ';':
                             break
             
-            if len(tecofied_lines) == (oracleLn-startLn):
-                # Trigger stop
-                tecofied_lines.append("<AssertPlaceHolder>;")
-                tecofied_lines.append("}")
-                break
-            else:
-                tecofied_lines.append(line)
+            tecofied_lines.append(line)
+
     return tecofied_lines
+
+def place_placeholder(tecofied_lines, startLn, oracleLn):
+    # `@Test \n public void testFoo(...) {` VS. `@Test \n public void testFoo(...) \n { ...` VS. `@Test \n public void testFoo(...) \n { \n ...`
+    if '{' in tecofied_lines[1]:
+        oracleLn = oracleLn + 2
+        startLn = startLn + 2
+    elif '{' in tecofied_lines[2]:
+        if len(tecofied_lines[2].strip()) > 1:
+            oracleLn = oracleLn + 2
+            startLn = startLn + 2
+        else:
+            oracleLn = oracleLn + 3
+            startLn = startLn + 3
+
+    placeheld_lines = []
+
+    for line in tecofied_lines:
+        print('LINE: {}'.format(line))
+        print(len(placeheld_lines))
+        print(oracleLn-startLn)
+        if len(placeheld_lines) == (oracleLn-startLn):
+            # Trigger stop
+            placeheld_lines.append("<AssertPlaceHolder>;")
+            placeheld_lines.append("}")
+        else:
+            placeheld_lines.append(line)
+    
+    return placeheld_lines
 
 if __name__ == "__main__":
     v1_flag, v2_flag, mock_flag = False, False, False
@@ -402,7 +420,8 @@ if __name__ == "__main__":
 
                         test_name = test["testName"]
                         test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
-                        test_lines = tecofy_testlines(test_lines, int(test["startLn"]), int(test["oracleLn"]))[0:test["oracleLn"]]
+                        test_lines = tecofy_testlines(test_lines)
+                        test_lines = place_placeholder(test_lines, int(test["startLn"]), int(test["oracleLn"]))
 
                         if len(test_lines) == 0: continue
                                 
@@ -446,6 +465,7 @@ if __name__ == "__main__":
                             if target_number == 0: break # Already produced TARGET_NUMBER of plausible oracles for this test
 
                             res, feedback = None, None
+                            print('\nTEST CODE: {}\n'.format(test_code))
                             if v1_flag: # Single feedback
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
                                 if gpt_oracle is None: continue
@@ -453,6 +473,7 @@ if __name__ == "__main__":
 
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
+                                print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
                                 
                                 # No feedback loop for assertions that contain "STR" since these assertions will not pass anyway
@@ -465,12 +486,12 @@ if __name__ == "__main__":
 
                                 if feedback is not None and len(feedback) > 0:
                                     # Explicitly tell ChatGPT to avoid gpt_oracle
-                                    insert_message(role="assistant", content="AVOID generating the assertion `"+gpt_oracle+"`", which_history="conversation")
+                                    insert_message(role="user", content="AVOID generating the assertion `"+gpt_oracle+"` because it results in a build failure.", which_history="conversation")
 
                                 # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
                                 if len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
                                     # Oracle compiles and runs - add it to main conversation history
-                                    insert_message(role="assistant", content=gpt_oracle, which_history="conversation")
+                                    insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
                                     target_number -= 1
 
                             if res is not None:

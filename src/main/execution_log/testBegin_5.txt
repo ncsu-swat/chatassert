@@ -11,7 +11,7 @@
 [INFO] --- buildnumber:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686267596742
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686331644382
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -104,27 +104,27 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[128,42] cannot find symbol
-  symbol:   variable expected
-  location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[128,52] cannot find symbol
-  symbol:   variable actual
-  location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/sql/OCustomSQLFunctionsTest.java:[50,53] cannot find symbol
+  symbol:   variable org
+  location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/sql/OCustomSQLFunctionsTest.java:[50,102] cannot find symbol
+  symbol:   variable actualValue
+  location: class org.junit.Assert
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.153 s
-[INFO] Finished at: 2023-06-08T19:40:17-04:00
+[INFO] Total time:  25.011 s
+[INFO] Finished at: 2023-06-09T13:27:47-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[128,42] cannot find symbol
-[ERROR]   symbol:   variable expected
-[ERROR]   location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[128,52] cannot find symbol
-[ERROR]   symbol:   variable actual
-[ERROR]   location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/sql/OCustomSQLFunctionsTest.java:[50,53] cannot find symbol
+[ERROR]   symbol:   variable org
+[ERROR]   location: class org.junit.Assert
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/functions/sql/OCustomSQLFunctionsTest.java:[50,102] cannot find symbol
+[ERROR]   symbol:   variable actualValue
+[ERROR]   location: class org.junit.Assert
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -1,77 +1,11 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	assertNotNull(locītājs);	13.085935115814209	0	1	0	0	0
-0	2	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertTrue(locītājs.generateInflections(""ēst"").size() > 0);"	21.1350519657135	0	1	0	0	0
-0	3	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertFalse(locītājs.generateInflections("""").size() > 0);"	14.419651985168457	0	1	0	0	0
-0	4	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertNotEquals(null,locītājs.generateInflections(""ēst""));"	16.782569885253906	0	1	0	0	0
-0	5	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertNotEquals(0,locītājs.generateInflections(""ēst"").size());"	14.400970935821533	0	1	0	0	0
-0	7	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertNotNull(locītājs.generateInflections(""ēst""));"	13.905287027359009	0	1	0	0	0
-0	8	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertTrue(locītājs.generateInflections(""ēst"").size() > 1);"	15.826714992523193	0	1	0	0	0
-0	10	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertTrue(locītājs.generateInflections(""ēst"").get(0).getClass() == Wordform.class);"	17.19069814682007	0	1	0	0	0
-0	12	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertNotNull(locītājs.generateInflections(""ēst"").get(0));"	33.66717505455017	0	1	0	0	0
-0	14	PeterisP/morphology	MorphologyTest	ģenerēšanaNezināmiem	"assertTrue(""STR"".matches(""STR""));"	"assertTrue(locītājs.generateInflections(""ēst"").size() >= 24);"	16.222152948379517	0	1	0	0	0
-1	0	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertNotNull(Turpmākajā);	15.200674772262573	0	1	0	0	0
-1	3	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertNotNull(locītājs);	16.70549201965332	0	1	0	0	0
-1	15	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(word . isRecognized () ) ;);	14.915414094924927	0	1	0	0	0
-1	16	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(Turpmākajā.isRecognized());	21.180598974227905	1	0	0	0	0
-1	20	PeterisP/morphology	MorphologyTest	turpms2	assertTrue(Turpmākajā.isRecognized());	assertTrue(Turpmākajā.isRecognized());	28.355057954788208	1	0	0	0	0
-0	0	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	"assertEquals(createdFrame.get(0).getPayloadData(), ByteBuffer.wrap(Charsetfunctions.utf8Bytes(""Test0"")));"	16.46322727203369	0	1	0	0	0
-0	1	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertTrue(!createdFrame.isEmpty());	13.190566062927246	0	1	0	0	0
-0	2	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertNotNull(createdFrame);	7.467449903488159	0	1	0	0	0
-0	4	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertNotEquals(0, createdFrame.size());	9.025299787521362	0	1	0	0	0
-0	6	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertTrue(createdFrame.get(0) instanceof TextFrame);	14.88275408744812	0	1	0	0	0
-0	7	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertEquals(1, createdFrame.size());	12.483065843582153	1	0	0	0	0
-0	8	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertFalse(createdFrame.isEmpty());	14.422489166259766	0	1	0	0	0
-0	9	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertNotNull(curframe.getPayloadData());	13.807489156723022	0	1	0	0	0
-0	11	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	"assertArrayEquals(Charsetfunctions.utf8Bytes(""Test0""), createdFrame.get(0).getPayloadData().array());"	10.78913402557373	0	1	0	0	0
-0	13	TooTallNate/Java-WebSocket	Draft_6455Test	createFramesText	assertEquals(1,createdFrame.size());	assertNotEquals(null, createdFrame);	11.120564222335815	0	1	0	0	0
-0	0	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertNotNull(testTarget001);	6.919665813446045	0	0	1	0	0
-0	1	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertTrue(testTarget002 instanceof TestClass002);	5.7707679271698	0	0	1	0	0
-0	2	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertEquals(expectedValue, testTarget003.getSomeValue());	6.891655921936035	0	0	1	0	0
-0	3	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertSame(target, target.getSomeValue().getTarget());	5.24224591255188	0	0	1	0	0
-0	4	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertFalse(condition);	4.632663011550903	0	0	1	0	0
-0	5	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertNull(testTarget001.getSomeValue());	4.526617050170898	0	0	1	0	0
-0	6	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertArrayEquals(expectedArray, resultArray);	4.354061841964722	0	0	1	0	0
-0	7	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertNotSame(expected, result);	4.440553188323975	0	0	1	0	0
-0	15	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertThat(resultString, CoreMatchers.containsString(expectedString));	4.842029809951782	0	0	1	0	0
-0	16	amlinv/stat-collection-utils	ObjectQueryPreparerTest	testPrepareObjectQueryWithParameterReplacement	assertSame(this.testTarget002,result.getTarget());	assertNotEquals(expectedValue, testTarget003.getSomeValue());	4.817085027694702	0	0	1	0	0
-0	0	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	assertNotNull(exp);	20.418511867523193	0	1	0	0	0
-0	1	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	assertTrue(exp instanceof RePattern);	11.718684196472168	0	1	0	0	0
-0	2	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	"assertEquals(""[[:upper:]]"", exp.pattern());"	10.509952068328857	0	1	0	0	0
-0	3	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	"assertNotEquals(""[[:digit:]]"", exp.pattern());"	10.52849793434143	0	1	0	0	0
-0	4	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	assertSame(HsrePattern.class, exp.getClass());	21.346341848373413	0	1	0	0	0
-0	5	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	assertFalse(exp.pattern().isEmpty());	15.997370958328247	0	1	0	0	0
-0	6	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	assertTrue(exp.flags().contains(PatternFlags.ADVANCED));	17.013848066329956	0	1	0	0	0
-0	7	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	"assertFalse(exp.pattern(). contains(""(?i)""));"	31.85741114616394	0	1	0	0	0
-0	11	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	"assertNotEquals(null, exp.matcher(""Test""));"	17.426175832748413	0	1	0	0	0
-0	12	basis-technology-corp/tcl-regex-java	RangeTest	testUpper	"assertThat(""STR"",matches(exp));"	"assertTrue(exp.matcher(""T"").matches());"	14.753999948501587	0	1	0	0	0
-0	0	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertTrue(matcher.lookingAt());	17.930943965911865	1	0	0	0	0
-0	1	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertTrue(matcher.lookingAt());	35.15949273109436	1	0	0	0	0
-0	3	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertTrue(matcher.find());	16.879786014556885	0	1	0	0	0
-0	4	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertNotNull(matcher);	33.87916588783264	0	1	0	0	0
-0	5	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertFalse(matcher.matches());	17.660635709762573	0	1	0	0	0
-0	10	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertArrayEquals(new int[] {1,2,3}, new int[] {1,2,3});	14.575681924819946	0	1	0	0	0
-0	13	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	"assertTrue(pattern.toString().contains(""ab""));"	15.459727048873901	0	1	0	0	0
-0	14	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	"assertTrue(matcher.pattern().toString().contains(""ab""));"	13.651745080947876	0	1	0	0	0
-0	16	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	"assertFalse(pattern.toString().contains(""cd""));"	14.702992916107178	0	1	0	0	0
-0	18	basis-technology-corp/tcl-regex-java	MatcherTest	lookingAt	assertTrue(matcher.lookingAt());	assertNotNull(pattern);	15.420089721679688	0	1	0	0	0
-0	0	trautonen/coveralls-maven-plugin	CircleTest	testGetBuildNumber	"assertEquals(""STR"",newCircle(env()).getBuildNumber());"	assertCircuitNbInt_se_Producors() throw Exception {);	118.98246216773987	0	1	0	0	0
-0	0	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertFalse(isValidOTPFormat(otp));	6.949225187301636	0	0	1	0	0
-0	1	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertTrue() statement as follows:);	8.236969947814941	0	0	1	0	0
-0	2	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertEquals() to check the expected result against the actual result as follows:);	11.846944808959961	0	0	1	0	0
-0	3	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertNotNull() to check if the object being tested is not null as follows: );	8.368930101394653	0	0	1	0	0
-0	7	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertNotEquals() to check if two values are not equal as follows:);	5.438711881637573	0	0	1	0	0
-0	8	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertThrows() to check if an expected exception is thrown in the test as follows:);	7.907419204711914	0	0	1	0	0
-0	9	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertArrayEquals() to check if two arrays are the same as follows:);	6.4309070110321045	0	0	1	0	0
-0	10	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertThat() to perform more flexible and powerful assertions with matchers as follows:);	6.105738878250122	0	0	1	0	0
-0	14	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertNotSame() to check if two objects are not the same instance as follows:);	5.280972957611084	0	0	1	0	0
-0	16	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertSame() to check if two objects are the same instance as follows:);	4.226017951965332	0	0	1	0	0
-0	0	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotNull(LoaderUriDownloader.createJsonSchemaFactory(loader));	23.234596014022827	0	0	1	0	0
-0	1	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotNull(LoaderUriDownloader.createJsonSchemaFactory(loader));	26.88806676864624	0	0	1	0	0
-0	2	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertTrue(LoaderUriDownloader.createJsonSchemaFactory(loader) instanceof JsonSchemaFactory);	16.559247255325317	0	0	1	0	0
-0	3	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotEquals(null, LoaderUriDownloader.createJsonSchemaFactory(loader));	15.319468975067139	0	0	1	0	0
-0	4	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertEquals(JsonSchemaFactory.class, LoaderUriDownloader.createJsonSchemaFactory(loader).getClass());	12.748778343200684	0	0	1	0	0
-0	5	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertSame(JsonSchemaFactory.class, LoaderUriDownloader.createJsonSchemaFactory(loader).getClass());	14.646228075027466	0	0	1	0	0
-0	6	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotSame(null, LoaderUriDownloader.createJsonSchemaFactory(loader));	15.590121984481812	0	0	1	0	0
-0	10	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertTrue(LoaderUriDownloader.createJsonSchemaFactory(loader) != null);	14.66703486442566	0	0	1	0	0
-0	12	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotNull(LoaderUriDownloader.createJsonSchemaFactory(loader).getValidator());	16.127343893051147	0	0	1	0	0
-0	16	nidi3/raml-loader	JsonSchemaTest	jsonSchemaWithLoader	assertTrue(validate(factory).isSuccess());	assertNotNull(LoaderUriDownloader.createJsonSchemaFactory(loader));	28.68252682685852	0	0	1	0	0
+0	0	TeachingKidsProgramming/TeachingKidsProgramming.Source.Java	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertFalse(p.isSolved());	9.471014261245728	1	0	0	0	0
+	1	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertNotEquals(0,p.getDistanceToGoal());	9.254640102386475	0	1	0	0	0
+	2	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertTrue(p.getDistanceToGoal()>=0);	8.6878080368042	0	1	0	0	0
+	3	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertNotNull(p);	8.650215148925781	0	1	0	0	0
+	6	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertFalse(p.isSolved());	20.62079906463623	1	0	0	0	0
+	8	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertFalse(p.isSolved());	18.519636869430542	1	0	0	0	0
+	9	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertFalse(p.isSolved());	19.91272497177124	1	0	0	0	0
+	10	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertFalse(p.isSolved());	18.874907970428467	1	0	0	0	0
+	12	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertNotSame(p,null);	8.689007759094238	0	1	0	0	0
+	13	/	PuzzleTest	puzzle_not_solved	assertFalse(p.isSolved());	assertTrue(condition`withthe`condition`beingacomparisonbetween`p.getDistanceToGoal()`andsomeexpectedvalue?Here'sanexample:`p.getDistanceToGoal()<=expectedValue);	8.605086088180542	0	1	0	0	0

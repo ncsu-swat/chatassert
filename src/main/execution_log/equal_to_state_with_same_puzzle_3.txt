@@ -31,7 +31,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.teachingextensions.logo.PuzzleStateTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s - in org.teachingextensions.logo.PuzzleStateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s - in org.teachingextensions.logo.PuzzleStateTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -40,6 +40,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.360 s
-[INFO] Finished at: 2023-06-05T06:01:29-04:00
+[INFO] Total time:  5.086 s
+[INFO] Finished at: 2023-06-16T08:42:55-04:00
 [INFO] ------------------------------------------------------------------------

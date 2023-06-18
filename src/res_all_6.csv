@@ -1,233 +1,29 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	1	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertEquals(expectedUriPath,actualUriPath);	16.51057505607605	0	0	1	0	0
-	11	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertTrue(result.contains(expectedSubstring));	15.84955906867981	0	0	1	0	0
-	12	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertNotNull(result);	11.85870623588562	0	0	1	0	0
-	13	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(result,containsString(expectedSubstring));	10.230058193206787	0	0	1	0	0
-	15	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertSame(expectedUriPath,actualUriPath);	10.096875190734863	0	0	1	0	0
-	17	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertFalse(result.contains(expectedSubstring));	10.104428052902222	0	0	1	0	0
-	19	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertNotEquals(expectedUriPath,actualUriPath);	10.431639909744263	0	0	1	0	0
-	20	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertEquals(expectedResult,result);	11.56511116027832	0	0	1	0	0
-	21	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(result,is(expectedResult));	9.839666843414307	0	0	1	0	0
-	22	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(result,notNullValue());	8.599100828170776	0	0	1	0	0
-	23	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertSame(expectedResult,result);	8.584147930145264	0	0	1	0	0
-	24	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(uuid,is(notNullValue()));	8.726460933685303	0	0	1	0	0
-	25	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertNotEquals(expectedResult,result);	8.464882850646973	0	0	1	0	0
-	26	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(result,is(not(expectedResult)));	8.778070211410522	0	0	1	0	0
-	27	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(uuid,notNullValue(String.class));	9.15044617652893	0	0	1	0	0
-	28	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertThat(result,not(expectedResult));	8.657514095306396	0	0	1	0	0
-	29	/	GraphvizTest	withTotalMemory	"assertThat(result,is(""STR""+""STR""+uriPathOf(newFile(""STR""))+""STR""));"	assertTrue(result.contains(expectedResult));	9.317227125167847	0	0	1	0	0
-1	0	nidi3/graphviz-java	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertEquals(""STR"",""STR"");"	12.536787986755371	0	0	1	0	0
-	1	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertTrue(""STR"");"	11.479727029800415	0	0	1	0	0
-	2	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertNotNull(opts);	9.338171005249023	0	0	1	0	0
-	3	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(opts,is(notNullValue()));	9.367778062820435	0	0	1	0	0
-	4	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertEquals(2,opts.args.size());	12.764606952667236	0	0	1	0	0
-	5	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(options.opts,aMapWithSize(1));	10.283355951309204	0	0	1	0	0
-	6	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertFalse(options.args.isEmpty());	10.908047676086426	0	0	1	0	0
-	7	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertEquals(3,opts.args.size() + opts.opts.size());	14.260020017623901	0	0	1	0	0
-	8	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertNotNull(options);	8.853389263153076	0	0	1	0	0
-	9	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(options.opts,anEmptyMap());	9.701508045196533	0	0	1	0	0
-	10	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertAll(""STR"",() -> 1,opts.opts.size()),);"	15.240356922149658	0	0	1	0	0
-	11	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(opts.args,is(empty()));	9.026145219802856	0	0	1	0	0
-	12	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertEquals(1,opts.args.size());	8.669352054595947	0	0	1	0	0
-	13	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(options.opts,""STR"");"	9.11295223236084	0	0	1	0	0
-	14	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertEquals(""STR"",""STR"");"	9.321445226669312	0	0	1	0	0
-	15	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(opts.opts,""STR"");"	9.52231764793396	0	0	1	0	0
-	16	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(options.args,""STR"");"	9.53186297416687	0	0	1	0	0
-	17	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(options.opts,aMapWithSize(2));	9.046695232391357	0	0	1	0	0
-	18	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertNotEquals(0,opts.args.size());	8.572913885116577	0	0	1	0	0
-	19	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(options.args,""STR"");"	10.171641826629639	0	0	1	0	0
-	20	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertNull(options);	9.411367893218994	0	0	1	0	0
-	21	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertSame(options,opts);	9.067869901657104	0	0	1	0	0
-	22	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(options.opts,aMapWithSize(0));	9.142937898635864	0	0	1	0	0
-	25	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertTrue(""STR"");"	13.060585021972656	0	0	1	0	0
-	26	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertFalse(""STR"");"	9.177818059921265	0	0	1	0	0
-	27	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(options.args,aMapWithSize(1));	9.313202142715454	0	0	1	0	0
-	29	/	GraphvizServerTest	cmdLineArgs	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(opts.opts.size(),equalTo(1));	9.256021976470947	0	0	1	0	0
-2	0	nidi3/graphviz-java	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	"assertEquals(""STR"",""STR"");"	7.418421030044556	0	0	1	0	0
-	2	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNotNull(c);	13.22928524017334	0	0	1	0	0
-	3	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertTrue(condition);	8.434497117996216	0	0	1	0	0
-	4	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNotNull(FOCAL(<input>));	8.551220178604126	0	0	1	0	0
-	5	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNotSame(FOCAL(<input>),FOCAL(<input>));	7.628303050994873	0	0	1	0	0
-	6	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertArrayEquals(new Object[]{},new Object[]{});	8.239021062850952	0	0	1	0	0
-	7	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>),is(not(nullValue())));	6.694357872009277	0	0	1	0	0
-	8	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertSame(FOCAL(<input>),FOCAL(<input>));	7.495387315750122	0	0	1	0	0
-	9	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	"assertThat(FOCAL(<input>).toString(),""STR"");"	7.249942064285278	0	0	1	0	0
-	10	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertTimeout(Duration.ofMillis(100),() -> { });	7.856008768081665	0	0	1	0	0
-	12	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThrows(IllegalArgumentException.class,() -> {);	10.031158685684204	0	0	1	0	0
-	15	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	"assertThat(FOCAL(<input>).toString(),""STR"");"	9.063064098358154	0	0	1	0	0
-	17	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNotEquals(a,b);	7.2991650104522705	0	0	1	0	0
-	18	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>).getHeight(),equalTo(expectedHeight));	9.971822261810303	0	0	1	0	0
-	20	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>).getWidth(),equalTo(expectedWidth));	7.435600280761719	0	0	1	0	0
-	21	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	"assertEquals(""STR"",""STR"");"	8.961529016494751	0	0	1	0	0
-	22	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNull(c);	7.737563848495483	0	0	1	0	0
-	23	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	"assertThat(FOCAL(<input>).toString(),""STR"");"	7.553377151489258	0	0	1	0	0
-	24	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertNotEquals(a,b);	8.032025814056396	0	0	1	0	0
-	25	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>).toString(),equalTo(expectedString));	7.596783876419067	0	0	1	0	0
-	26	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertTrue(T);	7.392410039901733	0	0	1	0	0
-	27	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertFalse(f);	7.821304082870483	0	0	1	0	0
-	28	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>).toString(),not(equalTo(expectedString)));	7.732878923416138	0	0	1	0	0
-	29	/	ColorTest	rgbOk	"assertColor(attr(""STR"",""STR""),Color.rgb(""STR""));"	assertThat(FOCAL(<input>).getAlpha(),equalTo(expectedAlpha));	7.627488136291504	0	0	1	0	0
-0	0	TooTallNate/Java-WebSocket	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	"assertNotNull(""STR"");"	8.0743989944458	0	1	0	0	0
-	1	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertTrue(requestedParameters.containsKey(CLIENT_NO_CONTEXT_TAKEOVER));	6.597545862197876	0	0	1	0	0
-	2	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertFalse(requestedParameters.isEmpty());	6.009955167770386	0	0	1	0	0
-	3	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertEquals(expectedValue,actualValue);	5.629925966262817	0	0	1	0	0
-	4	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertArrayEquals(expectedArray,actualArray);	5.634159088134766	0	0	1	0	0
-	5	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertSame(expectedObject,actualObject);	5.837610960006714	0	0	1	0	0
-	6	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertNotSame(expectedObject,actualObject);	5.8932719230651855	0	0	1	0	0
-	9	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.MatcherexpectedValue,org.hamcrest.CoreMatchers.equalTo()));	6.18687105178833	0	0	1	0	0
-	10	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThrows(IOException.class,() -> { <code under test>; });	6.451456069946289	0	0	1	0	0
-	11	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertNull(actualValue));	5.738875865936279	0	0	1	0	0
-	12	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertNotEquals(expectedValue,actualValue);	6.173149824142456	0	0	1	0	0
-	14	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.Matchers.not(org.hamcrest.CoreMatchers.equalTo(expectedValue))));	6.90068507194519	0	0	1	0	0
-	15	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.CoreMatchers.anyOf(org.hamcrest.CoreMatchers.equalTo(expectedValue), org.hamcrest.CoreMatchers.equalTo(expectedValue))));	7.956337928771973	0	0	1	0	0
-	16	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.CoreMatchers.allOf(org.hamcrest.CoreMatchers.equalTo(expectedValue), org.hamcrest.CoreMatchers.equalTo(expectedValue))));	8.955930948257446	0	0	1	0	0
-	18	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.number.OrderingComparison.comparesEqualTo(expectedValue)));	6.248258113861084	0	0	1	0	0
-	19	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.Matchers.greaterThan(expectedValue)));	6.819077014923096	0	0	1	0	0
-	20	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.Matchers.lessThan(expectedValue)));	7.457220077514648	0	0	1	0	0
-	21	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.Matchers.hasProperty(propertyName, org.hamcrest.CoreMatchers.equalTo(expectedValue))));	6.447738170623779	0	0	1	0	0
-	22	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualValue,org.hamcrest.Matchers.hasItem(org.hamcrest.CoreMatchers.equalTo(expectedValue))));	6.5228071212768555	0	0	1	0	0
-	23	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualCollection,org.hamcrest.Matchers.hasSize(expectedCount)));	6.531270742416382	0	0	1	0	0
-	24	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualString,org.hamcrest.Matchers.containsString(expectedSubString)));	7.217444896697998	0	0	1	0	0
-	25	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualDictionary,org.hamcrest.Matchers.hasKey(org.hamcrest.CoreMatchers.equalTo(expectedKey))));	6.818113803863525	0	0	1	0	0
-	26	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertThat(actualDictionary,org.hamcrest.Matchers.hasValue(org.hamcrest.CoreMatchers.equalTo(expectedValue))));	6.886054992675781	0	0	1	0	0
-	27	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertTimeout(java.time.Duration.ofSeconds(5),() -> { Thread.sleep(10 });	5.823548078536987	0	0	1	0	0
-	28	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertNotNull(expectedObject));	5.8960959911346436	0	0	1	0	0
-	29	/	PerMessageDeflateExtensionTest	testAcceptProvidedExtensionAsServer	"assertTrue(deflateExtension.acceptProvidedExtensionAsServer(""STR""));"	assertNotEquals(expectedValue,actualValue));	7.152127981185913	0	0	1	0	0
-0	0	fabric8io/fabric8-maven-plugin	ProfileUtilTest	simple	assertNotNull(is);	"assertFalse(util.use(""excludedProfile""));"	44.66236710548401	0	0	1	0	0
-	1	/	ProfileUtilTest	simple	assertNotNull(is);	"assertThat(res.getId(),is(""baseProfile""));"	34.75622797012329	0	0	1	0	0
-	2	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(util.use(""includedProfile""));"	20.652213096618652	0	0	1	0	0
-	3	/	ProfileUtilTest	simple	assertNotNull(is);	"assertEquals(""baseProfile"",res.getId());"	19.224363088607788	0	0	1	0	0
-	4	/	ProfileUtilTest	simple	assertNotNull(is);	"assertNotEquals(""excludedProfile"",res.getId());"	24.29009985923767	0	0	1	0	0
-	5	/	ProfileUtilTest	simple	assertNotNull(is);	assertNotNull(res);	19.82185196876526	0	0	1	0	0
-	6	/	ProfileUtilTest	simple	assertNotNull(is);	assertSame(includes,util.getIncludes());	21.58165717124939	0	0	1	0	0
-	7	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(util.use(""development-api""));"	35.74898624420166	0	0	1	0	0
-	8	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(util.use(""inc""));"	26.551782846450806	0	0	1	0	0
-	9	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(util.use(""includedProfile""));"	19.342610359191895	0	0	1	0	0
-	10	/	ProfileUtilTest	simple	assertNotNull(is);	"assertFalse(util.use(""excludedProfile""));"	22.610859155654907	0	0	1	0	0
-	11	/	ProfileUtilTest	simple	assertNotNull(is);	assertEquals(expected,actual);	111.27546882629395	0	0	1	0	0
-	12	/	ProfileUtilTest	simple	assertNotNull(is);	"assertFalse(instanceName.use(""xxxx""));"	31.166343212127686	0	0	1	0	0
-	13	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(profileUtil.use(""myProfile""));"	32.57150220870972	0	0	1	0	0
-	14	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(myObj.use(""included""));"	32.48711681365967	0	0	1	0	0
-	15	/	ProfileUtilTest	simple	assertNotNull(is);	assertEquals(2,paths.size());	39.95001411437988	0	0	1	0	0
-	16	/	ProfileUtilTest	simple	assertNotNull(is);	assertEquals(c,iter.next());	23.492501974105835	0	0	1	0	0
-	17	/	ProfileUtilTest	simple	assertNotNull(is);	assertEquals(expected,actual);	20.72294783592224	0	0	1	0	0
-	18	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(profileUtil.use(""item2"")));"	33.827951192855835	0	0	1	0	0
-	19	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(use(""$toto));"	30.9187331199646	0	0	1	0	0
-	20	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(profileUtil.use(""my_profile""));"	19.251919984817505	0	0	1	0	0
-	21	/	ProfileUtilTest	simple	assertNotNull(is);	assertFalse('false');	17.457502126693726	0	0	1	0	0
-	22	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(use(""someInclude""));"	26.817778825759888	0	0	1	0	0
-	23	/	ProfileUtilTest	simple	assertNotNull(is);	"assertFalse(profileUtil.use(""item_A_exclude,om""));"	24.68446707725525	0	0	1	0	0
-	24	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(new ProfileUtil(Collections.singletonList(FileSupportingTemplate.validLoaded(""/fabric8/config/profiles-lookup-dir/profiles.yaml""))));"	27.816954851150513	0	0	1	0	0
-	25	/	ProfileUtilTest	simple	assertNotNull(is);	"assertTrue(profileUtil.use(""item_A_exclude""));"	20.751505136489868	0	0	1	0	0
-	26	/	ProfileUtilTest	simple	assertNotNull(is);	assertFalse(use(null));	19.767956972122192	0	0	1	0	0
-	27	/	ProfileUtilTest	simple	assertNotNull(is);	assertEquals('[item_A_exclude,item_B_exclude,item_B_include,item_C_include,item_C_exclude,itemA_include,itemD,exclusion,exclusion2]',result.toString());	22.20399808883667	0	0	1	0	0
-	28	/	ProfileUtilTest	simple	assertNotNull(is);	assert_contract_imgAwareClearEncEqualEncoder_g456atcFalseField(){);	72.07692813873291	0	1	0	0	0
-0	0	arnohaase/a-foundation	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertEquals(""STR"",result.trim());"	6.878259897232056	0	0	1	0	0
-	1	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertTrue(""STR"");"	6.439465045928955	0	0	1	0	0
-	2	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertTrue(""STR"");"	6.698837041854858	0	0	1	0	0
-	3	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertSame(expected,result.trim());	9.073588132858276	0	0	1	0	0
-	4	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertFalse(actual);	4.565172910690308	0	0	1	0	0
-	5	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertNotNull(null);	4.763238906860352	0	0	1	0	0
-	6	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual,org.hamcrest.Matchers.is(org.hamcrest.Matchers.not(org.hamcrest.Matchers.nullValue())));	5.3440327644348145	0	0	1	0	0
-	7	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThrows(Exception.class,() -> {<FOCAL>;});	5.074451923370361	0	0	1	0	0
-	8	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertArrayEquals(expectedArray,resultArray);	4.917519807815552	0	0	1	0	0
-	9	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertThat(result.trim(),""STR"");"	6.662837982177734	0	0	1	0	0
-	10	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual,org.hamcrest.Matchers.is(expected));	5.310091972351074	0	0	1	0	0
-	11	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertEquals(""STR"",result.trim());"	5.7986061573028564	0	0	1	0	0
-	12	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertSame(expected,result.trim());	5.540095090866089	0	0	1	0	0
-	13	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertNotEquals(expected,actual.toFixedFormat());	5.880805969238281	0	0	1	0	0
-	14	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual.toFixedFormat(),org.hamcrest.Matchers.equalTo(org.hamcrest.Matchers.equalTo(expected)));	6.270699977874756	0	0	1	0	0
-	15	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertFalse(""STR"");"	6.635937690734863	0	0	1	0	0
-	16	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual,org.hamcrest.Matchers.notNullValue());	5.557888984680176	0	0	1	0	0
-	17	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual.toFixedFormat(),org.hamcrest.Matchers.equalTo(org.hamcrest.Matchers.not(expected))));	5.814136981964111	0	0	1	0	0
-	18	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertNotSame(expected,actual);	5.679793834686279	0	0	1	0	0
-	20	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual.getLength(),org.hamcrest.Matchers.is(org.hamcrest.Matchers.equalTo(expected))));	6.145001411437988	0	0	1	0	0
-	21	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertThat(result.trim(),""STR"");"	6.1469409465789795	0	0	1	0	0
-	22	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual.substring(0),org.hamcrest.Matchers.is(org.hamcrest.Matchers.equalTo(expected))));	6.55244779586792	0	0	1	0	0
-	23	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual,org.hamcrest.Matchers.is(expected));	5.884449005126953	0	0	1	0	0
-	24	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertEquals(expected,actual);	5.551844835281372	0	0	1	0	0
-	25	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	"assertNull(""STR"");"	5.080399990081787	0	0	1	0	0
-	26	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertSame(actual,expected);	5.655739784240723	0	0	1	0	0
-	27	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertFalse(actual);	5.315366983413696	0	0	1	0	0
-	28	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertThat(actual,org.hamcrest.Matchers.equalTo(org.hamcrest.Matchers.notNullValue()));	6.154922008514404	0	0	1	0	0
-	29	/	AJsonSerHelperTest	testArray1	"assertEquals(""STR"",result);"	assertNotEquals(result,expected);	5.709936857223511	0	0	1	0	0
-1	0	arnohaase/a-foundation	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertEquals(expected,result);	5.8511388301849365	0	0	1	0	0
-	1	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	"assertEquals(""STR"",result);"	9.196641683578491	0	0	1	0	0
-	2	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertEquals(expectedOutput,result);	8.924982070922852	0	0	1	0	0
-	3	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	"assertEquals(""STR"",result);"	7.61601710319519	0	0	1	0	0
-	4	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertTrue(booleanValue` or `booleanValue);	5.451891899108887	0	0	1	0	0
-	5	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertNotNull(expected);	5.692482233047485	0	0	1	0	0
-	6	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertNull(expected);	5.318417072296143	0	0	1	0	0
-	7	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	"assertEquals(""STR"",result);"	9.608722925186157	0	0	1	0	0
-	8	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertSame(expected,result);	6.983595132827759	0	0	1	0	0
-	9	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertNotSame(expected,result);	5.473393201828003	0	0	1	0	0
-	10	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(result,is(equalTo(expected)));	8.166780233383179	0	0	1	0	0
-	11	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertEquals(expected,result);	8.569957256317139	0	0	1	0	0
-	12	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertArrayEquals(expectedArray,resultArray);	5.332381963729858	0	0	1	0	0
-	13	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(resultList,is(equalTo(expectedList)));	5.510738372802734	0	0	1	0	0
-	14	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(expected,is(sameInstance(result)));	6.595107078552246	0	0	1	0	0
-	15	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(notNullValue());	5.343040943145752	0	0	1	0	0
-	16	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(result,is(equalToIgnoringCase(expected)));	6.285092115402222	0	0	1	0	0
-	17	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(result,is(instanceOf(expected)));	5.351915121078491	0	0	1	0	0
-	18	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(resultCollection,is(IsIterableContainingInOrder.contains(expectedList)));	5.479922294616699	0	0	1	0	0
-	19	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(result,anything());	5.162165880203247	0	0	1	0	0
-	20	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(hasItems());	5.671453952789307	0	0	1	0	0
-	21	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(is(expected),is(result));	5.852912187576294	0	0	1	0	0
-	22	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(notNullValue(class));	5.305640935897827	0	0	1	0	0
-	23	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(isNull(class));	5.647871971130371	0	0	1	0	0
-	24	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(notNull(class));	5.436185121536255	0	0	1	0	0
-	25	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(nullValue(class));	5.391037940979004	0	0	1	0	0
-	26	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(resultString,org.hamcrest.CoreMatchers.containsString(expectedSubstring));	5.19725489616394	0	0	1	0	0
-	27	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(resultString,hasLength(expectedLength));	5.106844186782837	0	0	1	0	0
-	28	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(resultString,org.hamcrest.CoreMatchers.startsWith(expectedPrefix));	5.4826340675354	0	0	1	0	0
-	29	/	AJsonSerHelperTest	testNegativeNumber1	"assertEquals(""STR"",result);"	assertThat(is(expected),not(is(result)));	5.319756031036377	0	0	1	0	0
-0	0	NanoHttpd/nanohttpd	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertEquals(Collections.emptyList(),new MyClass().getPrioritizedRoutes());	38.7320351600647	0	0	1	0	0
-	1	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertTrue(actualRoutes.containsAll(expectedRoutes));	36.82630777359009	0	0	1	0	0
-	2	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertEquals(Collections.unmodifiableCollection(mappings),new MyClass().getPrioritizedRoutes());	20.443368196487427	0	0	1	0	0
-	3	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNotEquals(Collections.emptyList(),new MyClass().getPrioritizedRoutes());	25.43093204498291	0	0	1	0	0
-	4	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNotNull(new MyClass().getPrioritizedRoutes().iterator().next());	23.99706220626831	0	0	1	0	0
-	5	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertArrayEquals(mappings.toArray(),new MyClass().getPrioritizedRoutes().toArray());	20.204488039016724	0	0	1	0	0
-	6	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNotNull(prioritizer.getPrioritizedRoutes());	23.986231088638306	0	0	1	0	0
-	7	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertTrue(prioritizer.getPrioritizedRoutes().isEmpty());	11.750105142593384	0	0	1	0	0
-	8	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertEquals(0,prioritizer.getPrioritizedRoutes().size());	12.144025802612305	0	0	1	0	0
-	9	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertFalse(prioritizer.getPrioritizedRoutes().iterator().hasNext());	12.22164511680603	0	0	1	0	0
-	10	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNull(prioritizer.getPrioritizedRoutes().iterator().next());	12.225572109222412	0	0	1	0	0
-	11	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertSame(prioritizer.getPrioritizedRoutes(),prioritizer.getPrioritizedRoutes());	11.75998067855835	0	0	1	0	0
-	12	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNotSame(prioritizer.getPrioritizedRoutes(),new ArrayList<UriResource>());	12.155423879623413	0	0	1	0	0
-	13	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertThrows(UnsupportedOperationException.class,() -> prioritizer.getPrioritizedRoutes().add(new UriResource()));	20.644495010375977	0	0	1	0	0
-	14	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertArrayEquals(Collections.emptyList().toArray(),prioritizer.getPrioritizedRoutes().toArray());	14.400573968887329	0	0	1	0	0
-	15	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertSame(0,prioritizer.getPrioritizedRoutes().toArray().length);	12.010605096817017	0	0	1	0	0
-	16	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertNotEquals(0,prioritizer.getPrioritizedRoutes().toArray().length);	11.848112344741821	0	0	1	0	0
-	17	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertTrue(prioritizer.getPrioritizedRoutes() instanceof Collection<?>);	23.151690006256104	0	0	1	0	0
-	18	/	TestNanolets	testRoutePrioritizerRemoveRouteNoRouteMatches	assertEquals(1,prioritizer.getPrioritizedRoutes().size());	assertTrue(prioritizer.getPrioritizedRoutes().isEmpty());	12.105573892593384	0	0	1	0	0
-0	0	amlinv/stat-collection-utils	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertNotNull(result);	3.418252944946289	0	0	1	0	0
-	1	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertTrue(result instanceof JMXMBeanConnection);	4.496246099472046	0	0	1	0	0
-	2	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertNull(result);	3.7334237098693848	0	0	1	0	0
-	4	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	"assertEquals(""expectedUrl"",result.getUrl());"	4.804753065109253	0	0	1	0	0
-	5	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertFalse(result.getConnection().isClosed());	3.823401927947998	0	0	1	0	0
-	6	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertSame(expectedObject,actualObject);	4.252453804016113	0	0	1	0	0
-	7	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertThrows(ExpectedException.class,() -> {);	3.991403818130493	0	0	1	0	0
-	8	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertNotEquals(expectedValue,actualValue);	3.4873111248016357	0	0	1	0	0
-	9	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertArrayEquals(expectedArray,actualArray);	3.103337049484253	0	0	1	0	0
-	10	/	JMXJvmIdConnectionFactoryTest	testCreateConnection	assertSame(result,this.mockJmxMbeanConnection);	assertThat(actual,CoreMatchers.equalTo(expected));	3.4966800212860107	0	0	1	0	0
-1	0	amlinv/stat-collection-utils	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertNotNull(poller.getAttributeInjector());	3.145324945449829	0	0	1	0	0
-	1	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertEquals(expected,actual`);	4.836339235305786	0	0	1	0	0
-	2	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertTrue(condition);	3.5882301330566406	0	0	1	0	0
-	3	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertFalse(condition);	3.3391871452331543	0	0	1	0	0
-	4	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertNotEquals(expected,actual);	3.2658591270446777	0	0	1	0	0
-	5	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertSame(expected,actual);	3.3467001914978027	0	0	1	0	0
-	6	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertNotSame(expected,actual);	3.0157618522644043	0	0	1	0	0
-	7	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertNull(object);	2.999647855758667	0	0	1	0	0
-	8	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertThrows(expectedException,executable);	3.5824079513549805	0	0	1	0	0
-	12	/	JmxAttributePollerTest	testGetSetAttributeInjector	assertNotNull(this.poller.getAttributeInjector());	assertArrayEquals(expectedArray,actualArray);	3.4649620056152344	0	0	1	0	0
-0	0	fizzed/jne	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertNotNull(file);	11.83063793182373	0	1	0	0	0
-	1	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertTrue(file.exists());	13.084820032119751	0	1	0	0	0
-	2	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	"assertEquals(""resource-linux-x64.txt"",file.getName());"	12.270336151123047	0	1	0	0	0
-	3	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertTrue(file.isFile());	13.048555135726929	0	1	0	0	0
-	4	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertNotEquals(null,file);	11.395673036575317	0	1	0	0	0
-	5	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertFalse(file.isDirectory());	11.203421831130981	0	1	0	0	0
-	6	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	"assertSame(file,JNE.findFile(""random-name.txt"", options);"	26.988577127456665	0	0	1	0	0
-	7	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	"assertNull(JNE.findFile(""non-existing-file.txt"",options));"	11.278582096099854	0	1	0	0	0
-	8	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertFalse(file.isHidden());	11.021015882492065	0	1	0	0	0
-	9	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertTrue(file.canRead());	10.993797063827515	0	1	0	0	0
-	10	/	JNETest	findFile	assertThat(file,is(not(nullValue())));	assertTrue(file.canWrite());	10.896945238113403	0	1	0	0	0
+0	0	hazelcast/hazelcast-simulator	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertNotNull(methods);	9.309937238693237	0	0	1	0	0
+	2	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(<expected>,methods.size());	9.573899030685425	0	0	1	0	0
+	3	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() <= 1);	11.314133167266846	0	0	1	0	0
+	5	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(1,methods.size());	8.754235982894897	0	0	1	0	0
+	6	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(method,is(notNullValue()));	12.06260085105896	0	0	1	0	0
+	7	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,hasSize(1));	10.04314374923706	0	0	1	0	0
+	8	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(expectedValue,actualValue);	9.067621946334839	0	0	1	0	0
+	9	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.isEmpty());	10.89053988456726	0	0	1	0	0
+	10	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.size() > 1);	11.087098836898804	0	0	1	0	0
+	11	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat()` method from JUnit to check if the `size()` method of `methods` is equal to a certain expected value? For example:);	9.632966995239258	0	0	1	0	0
+	12	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat( methods.size() <= 1));	8.801888704299927	0	0	1	0	0
+	13	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(expectedValue,actualValue);	11.40933895111084	0	0	1	0	0
+	14	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.size(),is(lessThanOrEqualTo(1)));	9.91113805770874	0	0	1	0	0
+	15	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.iterator().next(),is(notNullValue()));	9.10819411277771	0	0	1	0	0
+	16	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.iterator().next()));	7.7582480907440186	0	0	1	0	0
+	17	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,contains(instanceOf(Method.class)));	10.526789903640747	0	0	1	0	0
+	18	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,allOf(notNullValue(), hasSize(lessThanOrEqualTo(1)), contains(instanceOf(Method.class))));	10.2813241481781	0	0	1	0	0
+	19	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.size(),either(is(0)).or(is(1)));	9.225879907608032	0	0	1	0	0
+	20	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,allOf(notNullValue(), hasSize(lessThanOrEqualTo(1)), contains(instanceOf(Method.class))));	9.453204154968262	0	0	1	0	0
+	21	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() == 0 || methods.size() == 1);	9.197699785232544	0	0	1	0	0
+	22	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(1,methods.size()), is(true));	8.57448410987854	0	0	1	0	0
+	23	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	"assertThat(""STR"",methods.size(),lessThanOrEqualTo(1));"	9.119203805923462	0	0	1	0	0
+	24	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() == 0 || methods.size() == 1);	8.454071044921875	0	0	1	0	0
+	25	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,is(iterableWithSize(lessThanOrEqualTo(1))));	8.406983137130737	0	0	1	0	0
+	26	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods)));	7.821176052093506	0	0	1	0	0
+	27	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,hasSize(lessThanOrEqualTo(1)));	9.57891321182251	0	0	1	0	0
+	28	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.isEmpty() || methods.size() == 1);	8.093073844909668	0	0	1	0	0
+	29	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.isEmpty());	8.780578851699829	0	0	1	0	0

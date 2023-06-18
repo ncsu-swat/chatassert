@@ -26,21 +26,21 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[42,76] cannot find symbol
-  symbol:   method is(long)
-  location: class org.teachingextensions.logo.PuzzleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[46,38] cannot find symbol
+  symbol:   method hasFirstName(java.lang.String)
+  location: variable p of type org.teachingextensions.logo.utils.PuzzleUtils.Puzzle
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.245 s
-[INFO] Finished at: 2023-06-05T06:09:19-04:00
+[INFO] Total time:  4.592 s
+[INFO] Finished at: 2023-06-18T01:42:42-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project TeachingKidsProgramming: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[42,76] cannot find symbol
-[ERROR]   symbol:   method is(long)
-[ERROR]   location: class org.teachingextensions.logo.PuzzleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[46,38] cannot find symbol
+[ERROR]   symbol:   method hasFirstName(java.lang.String)
+[ERROR]   location: variable p of type org.teachingextensions.logo.utils.PuzzleUtils.Puzzle
 [ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 

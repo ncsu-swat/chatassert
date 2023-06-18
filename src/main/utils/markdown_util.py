@@ -14,7 +14,7 @@ assertions_nargs = {
 def extract_assertion(text):
     print('\nRESPONSE: \n{}\n'.format(text))
 
-    assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\)[\s]*[;\n\{]", text)
+    assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\);|assert[\S]+[\s]*\([\s\S]+\)[\r\n]*|assert[\S]+[\s]*\([\s\S]+\)[`]*", text)
 
     if assertStatement is None:
         return None
@@ -27,7 +27,7 @@ def extract_assertions(text):
 
     asserts = []
     for line in assertStatements:
-        assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\)[\s]*[;\n\{]", line)
+        assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\);|assert[\S]+[\s]*\([\s\S]+\)[\r\n]*|assert[\S]+[\s]*\([\s\S]+\)[`]*", line)
         if assertStatement is not None: asserts.append(clean_args(abstract_string_literals(assertStatement.group(0))))
 
     return asserts

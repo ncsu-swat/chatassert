@@ -23,8 +23,6 @@
 [INFO] --- compiler:3.2:testCompile (default-testCompile) @ TeachingKidsProgramming ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 52 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleStateTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleStateTest.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleStateTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] 
 [INFO] --- surefire:3.0.0:test (default-test) @ TeachingKidsProgramming ---
 [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
@@ -33,7 +31,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.teachingextensions.logo.PuzzleStateTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in org.teachingextensions.logo.PuzzleStateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in org.teachingextensions.logo.PuzzleStateTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -42,6 +40,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.558 s
-[INFO] Finished at: 2023-06-05T06:01:11-04:00
+[INFO] Total time:  5.092 s
+[INFO] Finished at: 2023-06-16T08:42:36-04:00
 [INFO] ------------------------------------------------------------------------

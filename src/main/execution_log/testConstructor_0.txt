@@ -1,55 +1,49 @@
 [INFO] Scanning for projects...
-[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
 [INFO] 
-[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
-[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO] -----------------< org.java-websocket:Java-WebSocket >------------------
+[INFO] Building Java-WebSocket 1.5.2-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
+[INFO] --- clean:3.2.0:clean (default-clean) @ Java-WebSocket ---
 [INFO] 
-[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] --- resources:3.3.0:resources (default-resources) @ Java-WebSocket ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/resources
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 10 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] --- compiler:3.7.0:compile (default-compile) @ Java-WebSocket ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 171 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/utils/PropertyBindingSupport.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/PropertyBinding.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 78 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: Recompile with -Xlint:deprecation for details.
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 9 resources
+[INFO] --- bnd:4.3.1:bnd-process (default) @ Java-WebSocket ---
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ Java-WebSocket ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ Java-WebSocket ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 135 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] Compiling 75 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/test-classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,12] illegal start of expression
 [INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.933 s
-[INFO] Finished at: 2023-06-07T06:19:20-04:00
+[INFO] Total time:  3.826 s
+[INFO] Finished at: 2023-06-09T19:49:03-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/provisioner/ProvisionerCliTest.java:[48,12] illegal start of expression
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project Java-WebSocket: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/exceptions/InvalidHandshakeExceptionTest.java:[39,12] illegal start of expression
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

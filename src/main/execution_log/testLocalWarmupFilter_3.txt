@@ -38,24 +38,19 @@
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,37] cannot find symbol
   symbol:   variable methods
   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,46] cannot find symbol
-  symbol:   method hasSize(int)
-  location: class com.hazelcast.simulator.utils.AnnotationFilterTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.295 s
-[INFO] Finished at: 2023-06-09T01:27:37-04:00
+[INFO] Total time:  4.973 s
+[INFO] Finished at: 2023-06-18T01:36:35-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,37] cannot find symbol
 [ERROR]   symbol:   variable methods
 [ERROR]   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,46] cannot find symbol
-[ERROR]   symbol:   method hasSize(int)
-[ERROR]   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -35,9 +35,9 @@ with open('../../teco_eval/teco/input/gold_stmts.jsonl', 'r') as goldsFile:
     golds = [json.loads(line) for line in goldsFile]
 
 # Oracle line numbers in AST without comments
-oracleLns = None
+evalLocs = None
 with open('../../teco_eval/teco/input/eval_locs.jsonl', 'r') as evalLocsFile:
-    oracleLns = [json.loads(line)[1] for line in evalLocsFile]
+    evalLocs = [json.loads(line)[1] for line in evalLocsFile]
 
 # Focal paths and methods
 focalPaths, focalMethods = None, None
@@ -83,13 +83,12 @@ def buildTestClassJson(currentLineNumber):
     return testClass
 
 # Method to create nested test json object
-def buildTestJson(currentLineNumber):
+def buildTestJson(currentLineNumber, testClass):
     # Teco saves all strings as STR in the AST to make the problem easy. To compare head to head with Teco, we will use the pretty printed version of the Teco provided setup, test, focal method ASTs (which include STR tags instead of string literals). Later, for GEPETO we will use the setup, test, focal method from the actual source code using the saved line numbers to test with the string literals. 
-
     test = dict()
 
     test['testName'] = testPaths[currentLineNumber].split('/')[-1].split('#')[1].split('(')[0]
-    testSignature = testSignatures[currentLineNumber] # No [0] since each test signature's AST in test_sign.jsonl is a 1d array
+    testSignature = testSignatures[currentLineNumber]
     testAST = AST.deserialize(testSignature)
     test['startLn'] = testAST.get_lineno_range()[0]
     test['endLn'] = testAST.get_lineno_range()[1]
@@ -105,7 +104,7 @@ def buildTestJson(currentLineNumber):
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
-    test['oracleLn'] = test['startLn'] + 2 + len(testMethod) # + 2 because of the @Test annotation and the test method signature
+    test['oracleLn'] = test['startLn'] + evalLocs[1] # + 2 because of the @Test annotation and the test method signature
 
     # Add focal method
     test['focalFile'] = ''
@@ -131,7 +130,7 @@ def findSubRepoForTest(fileName):
     gitURL = "git@github.com:{}/{}.git".format(project['userName'], project['repoName'])
     
     if not os.path.exists('tmp/repos/{}'.format(project['repoName'])):
-        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], 'tmp')
+        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], '../../tmp')
         tmpProj.init_env()
 
     def walker(subRepo, root, searchFile):
@@ -145,7 +144,7 @@ def findSubRepoForTest(fileName):
                     return subRepo
             return None
     for subRepo in project['subRepos']:
-        retSubRepo = walker(subRepo, os.path.join('tmp/repos/{}'.format(project['repoName']), subRepo), fileName)
+        retSubRepo = walker(subRepo, os.path.join('../../tmp/repos/{}'.format(project['repoName']), subRepo), fileName)
         if retSubRepo is not None:
             # print('RET: {}\n'.format(retSubRepo))
             return retSubRepo
@@ -277,7 +276,7 @@ for predId, pred in enumerate(preds):
         
         # Add test
         testClass['classTests'] = []
-        test = buildTestJson(currentLineNumber)
+        test = buildTestJson(currentLineNumber, testClass)
         
         testClass['classTests'].append(test)
         project['allTests'].append(testClass)
@@ -293,7 +292,7 @@ for predId, pred in enumerate(preds):
         for tClass in project['allTests']:
             if tClass['className'] == testClass['className']: # Test class exists
                 # Add test
-                tClass['classTests'].append(buildTestJson(currentLineNumber))
+                tClass['classTests'].append(buildTestJson(currentLineNumber, tClass))
                 testClassFound = True
         if not testClassFound: # Test class does not exist
             # Add test class
@@ -301,7 +300,7 @@ for predId, pred in enumerate(preds):
 
             # Add test
             testClass['classTests'] = []
-            test = buildTestJson(currentLineNumber)
+            test = buildTestJson(currentLineNumber, testClass)
             
             testClass['classTests'].append(test)
             project['allTests'].append(testClass)

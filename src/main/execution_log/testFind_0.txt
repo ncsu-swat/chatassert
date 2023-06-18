@@ -5,16 +5,15 @@
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ a-foundation ---
+[INFO] --- clean:3.2.0:clean (default-clean) @ a-foundation ---
 [INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/target
 [INFO] 
-[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ a-foundation ---
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ a-foundation ---
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ a-foundation ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] --- resources:3.3.0:resources (default-resources) @ a-foundation ---
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ a-foundation ---
+[INFO] --- compiler:3.1:compile (default-compile) @ a-foundation ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 113 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/target/classes
 [INFO] -------------------------------------------------------------
@@ -95,8 +94,8 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.008 s
-[INFO] Finished at: 2023-06-06T19:58:17-04:00
+[INFO] Total time:  2.797 s
+[INFO] Finished at: 2023-06-09T19:29:18-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project a-foundation: Compilation failure: Compilation failure: 
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/concurrent/SharedQueueNonblockPushBlockPopImpl.java:[4,16] cannot find symbol

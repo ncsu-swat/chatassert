@@ -1,94 +1,48 @@
 [INFO] Scanning for projects...
 [INFO] 
-[INFO] -----------------< org.java-websocket:Java-WebSocket >------------------
-[INFO] Building Java-WebSocket 1.5.2-SNAPSHOT
+[INFO] --------------------------< gov.adlnet:jxapi >--------------------------
+[INFO] Building jXAPI 2.0.1
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Java-WebSocket ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target
+[INFO] --- clean:3.2.0:clean (default-clean) @ jxapi ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/target
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Java-WebSocket ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/resources
+[INFO] --- resources:3.3.0:resources (default-resources) @ jxapi ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ Java-WebSocket ---
+[INFO] --- compiler:3.1:compile (default-compile) @ jxapi ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 78 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: Recompile with -Xlint:deprecation for details.
+[INFO] Compiling 34 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/target/classes
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
-[INFO] --- bnd-maven-plugin:4.3.1:bnd-process (default) @ Java-WebSocket ---
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ jxapi ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/resources
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Java-WebSocket ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ Java-WebSocket ---
+[INFO] --- compiler:3.1:testCompile (default-testCompile) @ jxapi ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 75 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/example/AutobahnServerTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/example/AutobahnServerTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Java-WebSocket ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.java_websocket.protocols.ProtocolTest
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE!
-testToString(org.java_websocket.protocols.ProtocolTest)  Time elapsed: 0.006 sec  <<< ERROR!
-java.lang.IllegalArgumentException
-	at org.java_websocket.protocols.Protocol.<init>(Protocol.java:52)
-	at org.java_websocket.protocols.ProtocolTest.testToString(ProtocolTest.java:85)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:242)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:137)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-
-
-Results :
-
-Tests in error: 
-  testToString(org.java_websocket.protocols.ProtocolTest)
-
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-
+[INFO] Compiling 33 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.432 s
-[INFO] Finished at: 2023-06-05T22:24:27-04:00
+[INFO] Total time:  2.124 s
+[INFO] Finished at: 2023-06-09T20:49:55-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project Java-WebSocket: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/surefire-reports for the individual test results.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jxapi: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jxapi/src/test/java/gov/adlnet/xapi/StatementTest.java:[310,12] illegal start of expression
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

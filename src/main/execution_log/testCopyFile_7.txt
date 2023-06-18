@@ -1,0 +1,47 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< io.openliberty.tools:ci.common >-------------------
+[INFO] Building ci.common 1.8.18
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ ci.common ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ ci.common ---
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ ci.common ---
+[INFO] Copying 62 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ ci.common ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running io.openliberty.tools.common.plugins.util.DevUtilTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s - in io.openliberty.tools.common.plugins.util.DevUtilTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.460 s
+[INFO] Finished at: 2023-06-09T18:54:18-04:00
+[INFO] ------------------------------------------------------------------------

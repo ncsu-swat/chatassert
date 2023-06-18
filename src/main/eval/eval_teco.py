@@ -12,23 +12,27 @@ def writeTecoPreds():
     with open('../../teco_eval/teco/input/id.jsonl', 'r') as ids_file,\
          open('../../teco_eval/teco/input/gold_stmts.jsonl', 'r') as golds_file,\
          open('../../teco_eval/teco/output/preds.jsonl', 'r') as preds_file,\
+         open('../../teco_eval/teco/input/proj_name.jsonl', 'r') as proj_file,\
+         open('../../teco_eval/teco/input/test_mkey.jsonl', 'r') as test_file,\
          open('../../teco_eval/teco/output/preds_processed.csv', 'w+') as preds_csv:
         
         ids = [json.loads(line) for line in ids_file]
         ids2lines = {id:i for (i, id) in enumerate(ids)}
 
+        proj = [json.loads(line) for line in proj_file]
+        tests = [json.loads(line) for line in test_file]
         golds = [json.loads(line) for line in golds_file]
         preds = [json.loads(line) for line in preds_file]
 
         csvWriter = csv.writer(preds_csv, delimiter='\t')
-        csvWriter.writerow(['TestID', 'NumPreds', 'TrueOracle', 'GenOracle', 'Correct'])
+        csvWriter.writerow(['TestID', 'OracleID', 'Project', 'ClassName#TestName', 'TrueOracle', 'GenOracle', 'Correct'])
         for (i, pred) in enumerate(preds):
             for topPred in pred['topk']:
                 # print(str(i), ''.join(gold).replace('Assert.', ''), ''.join(topPred['toks']).replace('Assert.', ''))
                 goldAssert = clean_args(''.join(golds[ids2lines[pred['data_id']]]).replace('org.junit.Assert.', '').replace('Assert.', ''))
                 predAssert = clean_args(''.join(topPred['toks']).replace('org.junit.Assert.', '').replace('Assert.', ''))
                 isCorrect = 1 if goldAssert.strip()==predAssert.strip() else 0
-                csvWriter.writerow("{}\t{}\t{}\t{}\t{}".format(str(i), str(len(pred['topk'])), goldAssert, predAssert, str(isCorrect)).split('\t'))
+                csvWriter.writerow("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(str(i), str(len(pred['topk'])), proj[ids2lines[pred["data_id"]]], tests[ids2lines[pred["data_id"]]].split('/')[-1].split('(')[0], goldAssert, predAssert, str(isCorrect)).split('\t'))
 
 def eval():
     global corr_count

@@ -35,27 +35,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,94] cannot find symbol
-  symbol:   class Prepare
-  location: class org.junit.Assert
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,56] cannot find symbol
-  symbol:   variable method
-  location: class org.junit.Assert
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,38] cannot find symbol
+  symbol:   variable methods
+  location: class com.hazelcast.simulator.utils.AnnotationFilterTest
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.248 s
-[INFO] Finished at: 2023-06-09T01:28:34-04:00
+[INFO] Total time:  5.051 s
+[INFO] Finished at: 2023-06-18T01:37:38-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,94] cannot find symbol
-[ERROR]   symbol:   class Prepare
-[ERROR]   location: class org.junit.Assert
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,56] cannot find symbol
-[ERROR]   symbol:   variable method
-[ERROR]   location: class org.junit.Assert
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,38] cannot find symbol
+[ERROR]   symbol:   variable methods
+[ERROR]   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

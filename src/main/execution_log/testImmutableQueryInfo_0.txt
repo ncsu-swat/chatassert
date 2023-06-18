@@ -20,10 +20,10 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.601 s
-[INFO] Finished at: 2023-06-06T19:55:58-04:00
+[INFO] Total time:  0.997 s
+[INFO] Finished at: 2023-06-09T21:27:46-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal on project stat-collection-utils: Could not resolve dependencies for project com.amlinv:stat-collection-utils:jar:2.0.1-SNAPSHOT: Could not find artifact com.sun:tools:jar:1.4.2 at specified path /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/../lib/tools.jar -> [Help 1]
+[ERROR] Failed to execute goal on project stat-collection-utils: Could not resolve dependencies for project com.amlinv:stat-collection-utils:jar:2.0.1-SNAPSHOT: The following artifacts could not be resolved: com.sun:tools:jar:1.4.2: Could not find artifact com.sun:tools:jar:1.4.2 at specified path /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/../lib/tools.jar -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.

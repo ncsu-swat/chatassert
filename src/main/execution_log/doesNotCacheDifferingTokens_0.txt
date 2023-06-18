@@ -5,22 +5,19 @@
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dropwizard-auth-jwt ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/target
+[INFO] --- clean:3.2.0:clean (default-clean) @ dropwizard-auth-jwt ---
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ dropwizard-auth-jwt ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] --- resources:3.3.0:resources (default-resources) @ dropwizard-auth-jwt ---
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ dropwizard-auth-jwt ---
+[INFO] --- compiler:3.3:compile (default-compile) @ dropwizard-auth-jwt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/target/classes
 [INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ dropwizard-auth-jwt ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ dropwizard-auth-jwt ---
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ dropwizard-auth-jwt ---
+[INFO] --- compiler:3.3:testCompile (default-testCompile) @ dropwizard-auth-jwt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/example/SecuredResource.java: Some input files use or override a deprecated API.
@@ -28,20 +25,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/JwtCachingAuthenticatorTest.java:[90,57] cannot find symbol
-  symbol:   variable focal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/JwtCachingAuthenticatorTest.java:[90,38] cannot find symbol
+  symbol:   variable cache
   location: class com.github.toastshaman.dropwizard.auth.jwt.JwtCachingAuthenticatorTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.231 s
-[INFO] Finished at: 2023-06-06T19:19:32-04:00
+[INFO] Total time:  2.871 s
+[INFO] Finished at: 2023-06-09T21:07:24-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project dropwizard-auth-jwt: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/JwtCachingAuthenticatorTest.java:[90,57] cannot find symbol
-[ERROR]   symbol:   variable focal
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/dropwizard-auth-jwt/src/test/java/com/github/toastshaman/dropwizard/auth/jwt/JwtCachingAuthenticatorTest.java:[90,38] cannot find symbol
+[ERROR]   symbol:   variable cache
 [ERROR]   location: class com.github.toastshaman.dropwizard.auth.jwt.JwtCachingAuthenticatorTest
 [ERROR] 
 [ERROR] -> [Help 1]

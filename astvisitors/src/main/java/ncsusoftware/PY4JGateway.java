@@ -40,7 +40,7 @@ public class PY4JGateway{
     public int inject(String methodName, String newMethod){
         MethodDeclaration newMD = null;
         try{
-            System.out.println("Injecting: " + methodName);
+            System.out.println("\n\nInjecting: " + methodName);
 
             newMD = ParseUtil.parseMethodDeclaration(this.jParser, newMethod);
             MethodInjectorTransformer mi = new MethodInjectorTransformer(methodName, newMD);

@@ -118,7 +118,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Finished at: 2023-06-06T07:00:40-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeKeyTest.java:[70,39] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeKeyTest.java:[70,39] clear
 [ERROR]   symbol:   variable Collections
 [ERROR]   location: class com.orientechnologies.orient.core.index.OCompositeKeyTest
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/tx/DuplicateNonUniqueIndexChangesTxTest.java:[128,64] cannot find symbol
