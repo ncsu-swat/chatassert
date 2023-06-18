@@ -1,15 +1,12 @@
 package ncsusoftware;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AnotherTest 
-    extends TestCase
-{
+public class AnotherTest {
 
     String somefield;
 
@@ -20,17 +17,14 @@ public class AnotherTest
      *
      * @param testName name of the test case
      */
-    public AnotherTest( String testName )
-    {
-        super( testName );
-    }
+    public AnotherTest( String testName) {    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
+    
+    @Test
+    public void testOther()
     {
-        return new TestSuite( AppTest.class );
+        int w = 98;
+        Assert.assertTrue( true );
     }
 
     @org.junit.Test
@@ -38,6 +32,8 @@ public class AnotherTest
     {
         /** local variables **/
         int x = 98;
-        assertTrue( true );
+        String y = "Hello World";
+        Object z = new Object();
+        Assert.assertTrue( true );
     }
 }
