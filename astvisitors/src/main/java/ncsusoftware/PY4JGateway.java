@@ -4,10 +4,6 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 
-import com.github.javaparser.ast.stmt.Statement;
-import com.github.javaparser.ast.stmt.AssertStmt;
-import com.github.javaparser.ParseResult;
-
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;

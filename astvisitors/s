@@ -10,3 +10,11 @@ rm cp.txt
 # run tests
 echo "java processing server waiting for calls..."
 java -cp $cp:target/classes ncsusoftware.Main
+
+
+# ## demo on how to call code for "hole injection"
+# java -cp $cp:target/classes ncsusoftware.HoleInjectionMain "Assert.assertEquals(OBJECT, byteSerializer.deserializeNative(buffer));" > out.txt
+# echo "---"
+# cat out.txt
+# echo "---"
+# rm out.txt

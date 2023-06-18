@@ -1,0 +1,66 @@
+{
+    "1": {
+        "incoder": [
+            "Assert.assertArrayEquals(expected, actual);"
+        ]
+    },
+    "2": {
+        "incoder": [
+            "Assert.assertNull(getHazelcastVersionFromJarOrNull(file));",
+            "Assert.assertNull(Hazelcast.getHazelcastVersionFromJarOrNull(file));"
+        ]
+    },
+    "3": {
+        "incoder": [
+            "Assert.assertEquals(trackedSet.getOriginal(), original);",
+            "Assert.assertEquals(original, trackedSet.getOriginal());"
+        ]
+    },
+    "4": {
+        "incoder": [
+            "Assert.assertEquals(\"Turpm\u0101kaj\u0101\", Turpm\u0101kaj\u0101.getWord());"
+        ]
+    },
+    "5": {
+        "incoder": [
+            "Assert.assertEquals(buffer.capacity(), buffer.limit());",
+            "Assert.assertEquals(OBJECT, byteSerializer.deserializeNative(buffer, 0));",
+            "Assert.assertEquals(buffer.array(), stream);",
+            "Assert.assertEquals(buffer.capacity(), stream.length);",
+            "Assert.assertEquals(buffer.limit(), stream.length);"
+        ]
+    },
+    "6": {
+        "incoder": [
+            "Assert.assertFalse(multiKey.equals(new Object()));",
+            "Assert.assertFalse(multiKey.equals(new OMultiKey(Collections.singletonList(\"b\"))));"
+        ]
+    },
+    "7": {
+        "incoder": [
+            "Assert.assertEquals(method, \"teardown\");",
+            "Assert.assertEquals(method, \"testLocalTeardownFilter\");"
+        ]
+    },
+    "8": {
+        "incoder": [
+            "Assert.assertEquals(manager.getDirtyFields().get(\"test1\"), doc);",
+            "Assert.assertEquals(manager.getDirtyCount(), 1);"
+        ]
+    },
+    "9": {
+        "incoder": [
+            "Assert.assertEquals(\"hula\", head.label);",
+            "Assert.assertEquals(1d, head.xOffset);",
+            "Assert.assertEquals(\"hula\", head.getLabel());",
+            "Assert.assertEquals(1d, head.getX());",
+            "Assert.assertEquals(2d, head.yOffset);"
+        ]
+    },
+    "10": {
+        "incoder": [
+            "Assert.assertEquals(otp, OTP.generateOTP(OTP.generateOTP(otp)));",
+            "Assert.assertEquals(otp, otpService.generateOTP(otp));"
+        ]
+    }
+}
