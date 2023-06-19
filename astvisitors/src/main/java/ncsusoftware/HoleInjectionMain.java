@@ -41,7 +41,6 @@ public class HoleInjectionMain {
     }
 
     private static void holeInjection(String s) {
-        
         JavaParser jparser = new JavaParser();
         Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(s).getResult();
         if (optStmt.isPresent()) {
@@ -51,6 +50,7 @@ public class HoleInjectionMain {
 
             HoleInjectionTransformer holeInjector = new HoleInjectionTransformer(stmt.toString());
             stmt.accept(holeInjector, null);
+            
             /** sort the list of candidates */
             Comparator<String> comp = new Comparator<String>() {
                 @Override

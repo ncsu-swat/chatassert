@@ -17,6 +17,9 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
     public Map<String, String> fieldDeclarations = new HashMap<String, String>();
     public Map<String, String> helperMethodDeclarations = new HashMap<String, String>();
     public Map<String, String> localVariableDeclarations = new HashMap<String, String>();
+    
+    public List<String> allFillers = new ArrayList<String>();
+    public List<String> primitiveTypes = ["byte", "short", "int", "long", "float", "double", "boolean", "char"]
 
     String testName; 
 
@@ -29,6 +32,10 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
         super.visit(n, arg);
         for (VariableDeclarator vd : n.getVariables()) {
             fieldDeclarations.put(vd.getName().toString(), n.getElementType().asString());
+            
+            if !primitiveTypes.contains(n.getElementType().asString()){
+                allFillers.add(vd.getName().toString());
+            }
         }
     }
 
@@ -55,6 +62,10 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
         /** only print if monitoring method body */
         if (monitorMethodBody) {
             localVariableDeclarations.put(n.getNameAsString(), n.getTypeAsString());
+            
+            if !primitiveTypes.contains(n.getTypeAsString()){
+                allFillers.add(n.getNameAsString());
+            }
         }
     }
 

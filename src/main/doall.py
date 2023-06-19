@@ -171,13 +171,28 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     return res, feedback, gpt_oracle
 
+def check_fix_method_not_found(gpt_oracle, feedback, file_path):
+    fuzzed_mutants = []
+
+    jGateway = javaGateway.entry_point
+    jGateway.setFile(file_path)
+
+    checkIfMethodNotFound = re.search(r'\s*symbol:\s*method\s*([^\s\(]+)\(', feedback)
+    methodNotFound = checkIfMethodNotFound.group(1) if checkIfMethodNotFound is not None else ""
+    holedAssertion = jGateway.prefixHoleForMethodNotFound(gpt_oracle, methodNotFound)
+
+    
+
+    print('\n\nHOLED: {}\n\n'.format(holedAssertion))
+
 def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
     res, feedback = None, None
     # Check if the oracle is plausible (using py4j and Java Method Injector)
     try:
+        gpt_oracle = "assertEquals(\"STR\", get_name());"
+
         testInjector = javaGateway.entry_point
         testInjector.setFile(file_path)
-        print('\nTEST CODE IN FEEDBACK LOOP: {}\n'.format(test_code))
         testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>; }", gpt_oracle))
 
         res, output = project.run_test(subRepo, class_name, test_name)

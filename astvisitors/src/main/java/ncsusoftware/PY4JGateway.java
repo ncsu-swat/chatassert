@@ -4,6 +4,7 @@ import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 
+import java.util.Optional;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileWriter;
@@ -64,10 +65,31 @@ public class PY4JGateway{
         return 0;
     }
 
-    public int abstractString(String expr){
-        
+    public String prefixHoleForMethodNotFound(String assertion, String methodNotFound){
+        JavaParser jparser = new JavaParser();
+        Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(assertion).getResult();
+        if (optStmt.isPresent()) {
+            com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
+            // ParseUtil.printTypesContentsRecursively(stmt);
 
-        return 0;
+            PrefixInjectionTransformer holeInjector = new PrefixInjectionTransformer(stmt.toString(), methodNotFound);
+            stmt.accept(holeInjector, null);
+
+            if(holeInjector.replacements.size() > 0){
+                return holeInjector.replacements.get(0);
+            }else{
+                return assertion;
+            }
+        } else {
+            return assertion;
+        }
+    }
+
+    public List<String> findHoleFillers(String testMethodName){
+        IdFinderVisitor visitor = new IdFinderVisitor(testMethodName);
+        this.cu.accept(visitor, null);
+
+        return visitor.allFillers;
     }
 }
 

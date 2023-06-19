@@ -1,29 +1,3 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	hazelcast/hazelcast-simulator	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertNotNull(methods);	9.309937238693237	0	0	1	0	0
-	2	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(<expected>,methods.size());	9.573899030685425	0	0	1	0	0
-	3	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() <= 1);	11.314133167266846	0	0	1	0	0
-	5	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(1,methods.size());	8.754235982894897	0	0	1	0	0
-	6	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(method,is(notNullValue()));	12.06260085105896	0	0	1	0	0
-	7	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,hasSize(1));	10.04314374923706	0	0	1	0	0
-	8	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(expectedValue,actualValue);	9.067621946334839	0	0	1	0	0
-	9	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.isEmpty());	10.89053988456726	0	0	1	0	0
-	10	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.size() > 1);	11.087098836898804	0	0	1	0	0
-	11	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat()` method from JUnit to check if the `size()` method of `methods` is equal to a certain expected value? For example:);	9.632966995239258	0	0	1	0	0
-	12	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat( methods.size() <= 1));	8.801888704299927	0	0	1	0	0
-	13	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertEquals(expectedValue,actualValue);	11.40933895111084	0	0	1	0	0
-	14	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.size(),is(lessThanOrEqualTo(1)));	9.91113805770874	0	0	1	0	0
-	15	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.iterator().next(),is(notNullValue()));	9.10819411277771	0	0	1	0	0
-	16	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.iterator().next()));	7.7582480907440186	0	0	1	0	0
-	17	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,contains(instanceOf(Method.class)));	10.526789903640747	0	0	1	0	0
-	18	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,allOf(notNullValue(), hasSize(lessThanOrEqualTo(1)), contains(instanceOf(Method.class))));	10.2813241481781	0	0	1	0	0
-	19	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods.size(),either(is(0)).or(is(1)));	9.225879907608032	0	0	1	0	0
-	20	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,allOf(notNullValue(), hasSize(lessThanOrEqualTo(1)), contains(instanceOf(Method.class))));	9.453204154968262	0	0	1	0	0
-	21	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() == 0 || methods.size() == 1);	9.197699785232544	0	0	1	0	0
-	22	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(1,methods.size()), is(true));	8.57448410987854	0	0	1	0	0
-	23	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	"assertThat(""STR"",methods.size(),lessThanOrEqualTo(1));"	9.119203805923462	0	0	1	0	0
-	24	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.size() == 0 || methods.size() == 1);	8.454071044921875	0	0	1	0	0
-	25	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,is(iterableWithSize(lessThanOrEqualTo(1))));	8.406983137130737	0	0	1	0	0
-	26	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods)));	7.821176052093506	0	0	1	0	0
-	27	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertThat(methods,hasSize(lessThanOrEqualTo(1)));	9.57891321182251	0	0	1	0	0
-	28	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(methods.isEmpty() || methods.size() == 1);	8.093073844909668	0	0	1	0	0
-	29	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertFalse(methods.isEmpty());	8.780578851699829	0	0	1	0	0
+0	0	hazelcast/hazelcast-simulator	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertNotNull(method);	10.201122045516968	0	0	1	0	0
+	1	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(<condition>));	8.11895489692688	0	0	1	0	0

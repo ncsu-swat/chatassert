@@ -1,0 +1,3 @@
+assertEquals("STR",get_name());
+assertEquals("STR", <insert>);
+assertEquals(<insert>, get_name());
