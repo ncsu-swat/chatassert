@@ -151,6 +151,11 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)
 
+    print('\n\nHERE HERE HERE\n\n')
+
+    gpt_oracle = "assertEquals(\"STR\", get_name());"
+    check_fix_method_not_found(gateway, gpt_oracle, feedback, file_path, test_name)
+
     for feedback_id in range(FEEDBACK_BUDGET):
         # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
         if feedback is not None:
@@ -171,19 +176,25 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     return res, feedback, gpt_oracle
 
-def check_fix_method_not_found(gpt_oracle, feedback, file_path):
+def check_fix_method_not_found(java_gateway, gpt_oracle, feedback, file_path, test_name):
     fuzzed_mutants = []
 
-    jGateway = javaGateway.entry_point
+    jGateway = java_gateway.entry_point
     jGateway.setFile(file_path)
 
+    # Creating prefix holes for method calls that were not found in a test method during compilation
     checkIfMethodNotFound = re.search(r'\s*symbol:\s*method\s*([^\s\(]+)\(', feedback)
     methodNotFound = checkIfMethodNotFound.group(1) if checkIfMethodNotFound is not None else ""
     holedAssertion = jGateway.prefixHoleForMethodNotFound(gpt_oracle, methodNotFound)
 
-    
+    # Checking if we need fillers
+    if '<insert>' in holedAssertion:
+        # We need fillers - get the possible fillers
+        holeFillers = list(jGateway.findHoleFillers(test_name))
 
-    print('\n\nHOLED: {}\n\n'.format(holedAssertion))
+        # Fill holes
+        for holeFiller in holeFillers:
+            fuzzed_mutants.append(holedAssertion.replace('<insert>', holeFiller))
 
 def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
     res, feedback = None, None
@@ -214,6 +225,9 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
                     elif (err_line > 2) and (i+err_line < len(output_lines)):
                         if ("[ERROR]" in output_lines[i+err_line]) or ("[INFO]" in output_lines[i+err_line]) or ("[WARNING]" in output_lines[i+err_line]):
                             feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(err_msg.replace("[ERROR]", ""))
+
+                            check_fix_method_not_found(javaGateway, gpt_oracle, feedback, file_path, test_name)
+
                             break
                         else:
                             err_msg += " " + output_lines[i+err_line]
@@ -333,9 +347,6 @@ def place_placeholder(tecofied_lines, startLn, oracleLn):
     placeheld_lines = []
 
     for line in tecofied_lines:
-        print('LINE: {}'.format(line))
-        print(len(placeheld_lines))
-        print(oracleLn-startLn)
         if len(placeheld_lines) == (oracleLn-startLn):
             # Trigger stop
             placeheld_lines.append("<AssertPlaceHolder>;")
