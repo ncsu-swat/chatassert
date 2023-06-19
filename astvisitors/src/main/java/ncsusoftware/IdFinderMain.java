@@ -25,6 +25,10 @@ public class IdFinderMain {
         System.out.println(visitor.localVariableDeclarations);
     }
 
+    public void foo() {
+        // HA!
+    }
+
         
     
 
