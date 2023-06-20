@@ -7,13 +7,18 @@ from path_config import TMP_DIR
 import re
 import xml.etree.ElementTree as et
 
+from index_item import IndexItem
+
 class Project():
-    def __init__(self, project_name, subDir="", project_url="", cur_com="", base_dir=TMP_DIR):
+    def __init__(self, project_name, subDir="", project_url="", cur_com="", java_gateway=None, base_dir=TMP_DIR):
         self.project_name = project_name
         self.sub_dir = subDir
         self.project_url = project_url        
         self.cur_com = cur_com 
         self.repo_dir = os.path.join(base_dir, "repos", project_name)
+        self.java_gateway = java_gateway
+
+        self.index = dict()
 
     def init_env(self): 
         # delete folder if it exists
@@ -42,6 +47,28 @@ class Project():
         for elem in root.iter('artifactId'):
             print(elem.attrib)
 
+    def index_project(self):
+        jGateway = self.java_gateway.entry_point
+        indexed_methods = dict(jGateway.indexMethods(self.repo_dir))
+
+        for (key, value) in indexed_methods.items():
+            if key not in self.index: self.index[key] = []
+
+            value = list(value)
+            for v in value:
+                class_name = v[0]
+                class_path = v[1]
+                start_ln = v[2]
+                end_ln = v[3]
+
+                item = IndexItem(key, class_name, class_path, start_ln, end_ln)
+                self.index[key].append(item)
+
+        # Debugging
+        # for (key, value) in self.index.items():
+        #     print('Method: {}'.format(key))
+        #     for index_item in value:
+        #         print(index_item)
 
     def run_test(self, subRepo, className, testName):
         res_dict = {"build_failure": False, "tests": 0, "failures": 0, "errors": 0}

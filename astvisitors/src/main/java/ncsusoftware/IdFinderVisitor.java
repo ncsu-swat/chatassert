@@ -4,6 +4,9 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -19,7 +22,7 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
     public Map<String, String> localVariableDeclarations = new HashMap<String, String>();
     
     public List<String> allFillers = new ArrayList<String>();
-    public List<String> primitiveTypes = ["byte", "short", "int", "long", "float", "double", "boolean", "char"]
+    public List<String> primitiveTypes = Arrays.asList("byte", "short", "int", "long", "float", "double", "boolean", "char");
 
     String testName; 
 
@@ -33,7 +36,7 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
         for (VariableDeclarator vd : n.getVariables()) {
             fieldDeclarations.put(vd.getName().toString(), n.getElementType().asString());
             
-            if !primitiveTypes.contains(n.getElementType().asString()){
+            if(!primitiveTypes.contains(n.getElementType().asString())){
                 allFillers.add(vd.getName().toString());
             }
         }
@@ -63,7 +66,7 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
         if (monitorMethodBody) {
             localVariableDeclarations.put(n.getNameAsString(), n.getTypeAsString());
             
-            if !primitiveTypes.contains(n.getTypeAsString()){
+            if(!primitiveTypes.contains(n.getTypeAsString())){
                 allFillers.add(n.getNameAsString());
             }
         }

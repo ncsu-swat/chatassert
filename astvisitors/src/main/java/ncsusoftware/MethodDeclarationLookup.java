@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 
 import java.lang.reflect.Method; // <== Using reflection to find type!
 
@@ -16,9 +18,9 @@ public class MethodDeclarationLookup {
     public static void main(String[] args) throws ClassNotFoundException, IOException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 
         /** these are example inputs */
-        String source = "/Users/damorim/projects/code-oraclegen/astvisitors";
-        List<String> typeNames = Arrays.asList(new String[]{"Examples", "IdFinderMain"}); // <= you should use app names extracted with idfinder        
-        String methodName = "foo";
+        String source = "/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator";
+        List<String> typeNames = Arrays.asList(new String[]{"Worker", "WorkerOperationProcessor"}); // <= you should use app names extracted with idfinder        
+        String methodName = "shutdown";
 
         List<Class<?>> appClassesOfInterest = findClassesOfInterest(source, typeNames);
         for (Class<?> c: appClassesOfInterest) {
@@ -31,6 +33,44 @@ public class MethodDeclarationLookup {
 
     }
 
+    public static Map<String, List<String>> indexClassesToMethods(String source){
+        Map<String, List<String>> classesToMethods = new HashMap<String, List<String>>();
+        List<Class<?>> appAllClasses = findClassesFromSource(source);
+        
+        for (Class<?> c: appAllClasses) {
+            String fullName = c.getName();
+            String cname = fullName.substring(fullName.lastIndexOf(".")+1);
+
+            List<String> listOfMethodsInClass = new ArrayList<String>();
+            for (Method m : c.getMethods()) {
+                System.out.println(cname + ": " + m.getName());
+
+                listOfMethodsInClass.add(m.getName());
+            }
+            classesToMethods.put(cname, listOfMethodsInClass);
+        }
+
+        return classesToMethods;
+    }
+
+    public static Map<String, List<String>> indexMethodsToClasses(String source){
+        Map<String, List<String>> methodsToClasses = new HashMap<String, List<String>>();
+        List<Class<?>> appAllClasses = findClassesFromSource(source);
+        for (Class<?> c: appAllClasses) {
+            String fullName = c.getName();
+            String cname = fullName.substring(fullName.lastIndexOf(".")+1);
+
+            for (Method m : c.getMethods()) {
+                if(methodsToClasses.containsKey(m.getName())){
+                    methodsToClasses.get(m.getName()).add(cname);
+                }else{
+                    methodsToClasses.put(m.getName(), new ArrayList<String>());
+                }
+            }
+        }
+
+        return methodsToClasses;
+    }
 
     /******** utility functions */
 
@@ -49,21 +89,30 @@ public class MethodDeclarationLookup {
         return appClassesOfInterest;
     }    
 
-
-    private static List<Class<?>> findClassesFromSource(String source) throws FileNotFoundException, IOException, ClassNotFoundException {
+    private static List<Class<?>> findClassesFromSource(String source) {
         List<Class<?>> appClasses = new ArrayList<Class<?>>();
-        for (File f : listFilesForFolder(new File(source), ".java")) {
-            // System.out.println(f);
-            String fileName = f.getName();
-            String className = fileName.substring(fileName.lastIndexOf("/")+1, fileName.lastIndexOf(".")).trim();
-            String packageLine = readPackageLine(f);
-            String packageName = packageLine.substring(packageLine.indexOf(" "), packageLine.indexOf(";")).trim();            
-            // System.out.println(packageName+"."+className);
-            /** skip test classes */
-            if (className.contains("Test")) continue;
-            Class<?> clazz = Class.forName(packageName+"."+className);
-            appClasses.add(clazz);
+        try{
+            for (File f : listFilesForFolder(new File(source), ".java")) {
+                System.out.println(f);
+
+                String fileName = f.getName();
+                String className = fileName.substring(fileName.lastIndexOf("/")+1, fileName.lastIndexOf(".")).trim();
+                String packageLine = readPackageLine(f);
+                String packageName = packageLine.substring(packageLine.indexOf(" "), packageLine.indexOf(";")).trim();            
+                // System.out.println(packageName+"."+className);
+                /** skip test classes */
+                if (className.contains("Test")) continue;
+                Class<?> clazz = Class.forName(packageName+"."+className);
+                appClasses.add(clazz);
+            }
+        }catch(FileNotFoundException e){
+            System.out.println("Method Declaration Lookup EXCEPTION: " + e.toString());
+        }catch(IOException e){
+            System.out.println("Method Declaration Lookup EXCEPTION: " + e.toString());
+        }catch(ClassNotFoundException e){
+            System.out.println("Method Declaration Lookup EXCEPTION: " + e.toString());
         }
+        
         return appClasses;
     }
 

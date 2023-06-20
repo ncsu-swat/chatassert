@@ -34,7 +34,7 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 15  # Maximum number of interactions
+MAX_INTERACTION = 10  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
 FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
@@ -385,9 +385,11 @@ if __name__ == "__main__":
                     os.system('rm -rf ../tmp/repos/{}'.format(repoName))
                 
                 # create project object
-                project = Project(repoName, "", gitURL, commit)
+                project = Project(repoName, "", gitURL, commit, gateway)
                 # clone the project
                 project.init_env()
+                # index the project
+                project.index_project()
 
                 testId = 0
                 for testClass in allTests:

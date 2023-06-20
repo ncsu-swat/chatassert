@@ -1,3 +1,1 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	hazelcast/hazelcast-simulator	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertNotNull(method);	10.201122045516968	0	0	1	0	0
-	1	/	AnnotationFilterTest	testLocalWarmupFilter	"assertEquals(""STR"",method.getName());"	assertTrue(<condition>));	8.11895489692688	0	0	1	0	0
