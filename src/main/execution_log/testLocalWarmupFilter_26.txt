@@ -37,20 +37,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,29] cannot find symbol
-  symbol:   method get_name()
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,40] cannot find symbol
+  symbol:   variable methodsIterator
   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.125 s
-[INFO] Finished at: 2023-06-19T13:09:59-04:00
+[INFO] Total time:  4.439 s
+[INFO] Finished at: 2023-06-20T00:56:19-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,29] cannot find symbol
-[ERROR]   symbol:   method get_name()
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,40] cannot find symbol
+[ERROR]   symbol:   variable methodsIterator
 [ERROR]   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
 [ERROR] 
 [ERROR] -> [Help 1]

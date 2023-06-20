@@ -34,25 +34,35 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,29] cannot find symbol
-  symbol:   method get_name()
-  location: class com.hazelcast.simulator.utils.AnnotationFilterTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ simulator ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.hazelcast.simulator.utils.AnnotationFilterTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec <<< FAILURE! - in com.hazelcast.simulator.utils.AnnotationFilterTest
+testLocalWarmupFilter(com.hazelcast.simulator.utils.AnnotationFilterTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+java.lang.AssertionError
+	at com.hazelcast.simulator.utils.AnnotationFilterTest.testLocalWarmupFilter(AnnotationFilterTest.java:31)
+
+
+Results :
+
+Failed tests: 
+  AnnotationFilterTest.testLocalWarmupFilter:31
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.797 s
-[INFO] Finished at: 2023-06-19T13:10:25-04:00
+[INFO] Total time:  6.469 s
+[INFO] Finished at: 2023-06-20T00:57:11-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java:[31,29] cannot find symbol
-[ERROR]   symbol:   method get_name()
-[ERROR]   location: class com.hazelcast.simulator.utils.AnnotationFilterTest
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project simulator: There are test failures.
 [ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

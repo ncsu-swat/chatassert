@@ -16,6 +16,7 @@ from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
 from utils.markdown_util import extract_assertion, abstract_string_literals, check_commutative_equal
 from utils.prompt_generator_util import get_vulnerable_function_attributes
+from utils.repair_util import adhoc_repair
 from utils.mock_gpt import mock_response
 
 from py4j.java_gateway import JavaGateway
@@ -33,7 +34,7 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 30  # Maximum number of interactions
+MAX_INTERACTION = 15  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
 FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
@@ -151,16 +152,22 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)
 
-    print('\n\nHERE HERE HERE\n\n')
-
-    gpt_oracle = "assertEquals(\"STR\", get_name());"
-    check_fix_method_not_found(gateway, gpt_oracle, feedback, file_path, test_name)
-
     for feedback_id in range(FEEDBACK_BUDGET):
         # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
         if feedback is not None:
-            if len(feedback) > 0 and (feedback_id < FEEDBACK_BUDGET-1): 
+            if len(feedback) > 0:
+                # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
+                fuzzed_mutants = adhoc_repair(gateway, gpt_oracle, feedback, file_path, test_name)
+
+                for mutant in fuzzed_mutants:
+                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, mutant)
+                    if feedback is not None and len(feedback)==0:
+                        # Mutant causes successful build without any feedback. So, select this mutant as gpt_oracle
+                        gpt_oracle = mutant
+                        break
+
                 insert_message(role="assistant", content=gpt_oracle, which_history="feedback")
+                insert_message(role="user", content=feedback, which_history="feedback")
 
                 fixed_gpt_oracle = get_gpt_oracle(mock_flag=mock_flag, test_name=test_name, temperature=1.5, which_history="feedback")
                 if fixed_gpt_oracle is None: continue
@@ -176,32 +183,10 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     return res, feedback, gpt_oracle
 
-def check_fix_method_not_found(java_gateway, gpt_oracle, feedback, file_path, test_name):
-    fuzzed_mutants = []
-
-    jGateway = java_gateway.entry_point
-    jGateway.setFile(file_path)
-
-    # Creating prefix holes for method calls that were not found in a test method during compilation
-    checkIfMethodNotFound = re.search(r'\s*symbol:\s*method\s*([^\s\(]+)\(', feedback)
-    methodNotFound = checkIfMethodNotFound.group(1) if checkIfMethodNotFound is not None else ""
-    holedAssertion = jGateway.prefixHoleForMethodNotFound(gpt_oracle, methodNotFound)
-
-    # Checking if we need fillers
-    if '<insert>' in holedAssertion:
-        # We need fillers - get the possible fillers
-        holeFillers = list(jGateway.findHoleFillers(test_name))
-
-        # Fill holes
-        for holeFiller in holeFillers:
-            fuzzed_mutants.append(holedAssertion.replace('<insert>', holeFiller))
-
 def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
     res, feedback = None, None
     # Check if the oracle is plausible (using py4j and Java Method Injector)
     try:
-        gpt_oracle = "assertEquals(\"STR\", get_name());"
-
         testInjector = javaGateway.entry_point
         testInjector.setFile(file_path)
         testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>; }", gpt_oracle))
@@ -225,9 +210,6 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
                     elif (err_line > 2) and (i+err_line < len(output_lines)):
                         if ("[ERROR]" in output_lines[i+err_line]) or ("[INFO]" in output_lines[i+err_line]) or ("[WARNING]" in output_lines[i+err_line]):
                             feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(err_msg.replace("[ERROR]", ""))
-
-                            check_fix_method_not_found(javaGateway, gpt_oracle, feedback, file_path, test_name)
-
                             break
                         else:
                             err_msg += " " + output_lines[i+err_line]
@@ -265,11 +247,6 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
                     if not message_found:
                         print('\n\n!!! Could not retrieve test error message (report not found in xml) !!!\n\n')
                 break
-
-        if len(feedback) > 0:
-            # print('\nFEEDBACK: {}\n'.format(feedback))
-            insert_message(role="user", content=feedback, which_history="feedback")
-
     except Exception as e:
         print('Exception: {}'.format(e))
         return None, None
@@ -448,31 +425,14 @@ if __name__ == "__main__":
                         test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
                         test_lines = tecofy_testlines(test_lines)
                         test_lines = place_placeholder(test_lines, int(test["startLn"]), int(test["oracleLn"]))
-
                         if len(test_lines) == 0: continue
-                                
                         test_code = " ".join(test_lines)
-                        # test_code = test["testMethod"]
 
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
                         focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
-                        # focal_code = test["focalMethod"]
-
-                        # RQ1. Exp1. Rewrite the original source code to comply with Teco's formatting (e.g. no comments, string literals are replaced by STR)
-                        # testInjector = gateway.entry_point
-                        # testInjector.setFile(filePath)
-                        # testInjector.inject(test_name, test_code)
-                        # if before_name != "":
-                        #     testInjector.inject(before_name, before_code)
-
-                        # focalInjector = gateway.entry_point
-                        # focalInjector.setFile(focal_path)
-                        # focalInjector.inject(focal_name, focal_code)
 
                         oracle_code = test['oracle']
-
-                        # print('\n\nTEST CODE: {}\nORACLE CODE: {}\nTEST CODE: {}\n\n'.format(''.join(test_lines), oracle_code, test_code))
 
                         conversation_history = [
                             {"role": "system", "content": SYSTEM_ROLE},
@@ -502,13 +462,9 @@ if __name__ == "__main__":
                                 print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
                                 
-                                # No feedback loop for assertions that contain "STR" since these assertions will not pass anyway
-                                if "\"STR\"" in oracle_code:
-                                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
-                                    gpt_oracle = abstract_string_literals(gpt_oracle)
-                                else:
-                                    res, feedback, gpt_oracle = follow_up(mock_flag, gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
-                                    if gpt_oracle is None: continue
+                                # Follow-up with feedback loop
+                                res, feedback, gpt_oracle = follow_up(mock_flag, gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+                                if gpt_oracle is None: continue
 
                                 if feedback is not None and len(feedback) > 0:
                                     # Explicitly tell ChatGPT to avoid gpt_oracle
@@ -520,16 +476,30 @@ if __name__ == "__main__":
                                     insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
                                     target_number -= 1
 
+                            # Convert string literals to STR tag for evaluation
+                            if "\"STR\"" in gpt_oracle:
+                                gpt_oracle = abstract_string_literals(gpt_oracle)
+                                if gpt_oracle is None or len(gpt_oracle)==0:
+                                    continue
+
                             if res is not None:
                                 csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"
-                                
-                                # if res["tests"] == 0:
-                                #     raise Exception("unexpected: could not find tests in this project")
 
                                 if res["build_failure"]:
                                     print("Build failure has occurred")
                                     build_err += 1
                                     csv_buildErr = "1"
+
+                                    oracle_code = oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
+                                    gpt_oracle = check_commutative_equal(gpt_oracle, oracle_code).replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
+                                    
+                                    if gpt_oracle == oracle_code:
+                                        corr += 1
+                                        csv_corr = "1"
+                                    else:
+                                        incorr += 1
+                                        csv_incorr = "1"
+                                
                                 elif res["failures"]+res["errors"] == 0:
                                     print("Plausible oracle detected")
                                     
@@ -543,7 +513,6 @@ if __name__ == "__main__":
                                         incorr += 1
                                         csv_incorr = "1"
 
-                                    # break # DONE with this oracle
                                 elif res["errors"] > 0:
                                     print('Test error has occurred')
                                     run_err += 1
