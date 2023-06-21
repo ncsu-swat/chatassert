@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-lucene ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686005090283
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1687360668366
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -35,7 +35,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 4 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-lucene ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-lucene ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 105 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java: Some input files use or override a deprecated API.
@@ -49,41 +49,30 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 23 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-lucene ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-lucene ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 133 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/lucene/test/BaseLuceneTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/lucene/test/BaseLuceneTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/LuceneSpatialFunctionAsGeoJSONTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/LuceneSpatialFunctionAsGeoJSONTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/functions/LuceneSpatialIntersectsTest.java:[48,44] cannot find symbol
-  symbol:   variable expectedArray
-  location: class com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/functions/LuceneSpatialIntersectsTest.java:[48,59] cannot find symbol
-  symbol:   variable resultArray
-  location: class com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
-[INFO] 2 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-lucene ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.388 s - in com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
+Shutting down OrientDB engine and checking for direct memory leaks...
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.780 s
-[INFO] Finished at: 2023-06-05T18:44:55-04:00
+[INFO] Total time:  17.053 s
+[INFO] Finished at: 2023-06-21T11:18:04-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-lucene: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/functions/LuceneSpatialIntersectsTest.java:[48,44] cannot find symbol
-[ERROR]   symbol:   variable expectedArray
-[ERROR]   location: class com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene/src/test/java/com/orientechnologies/spatial/functions/LuceneSpatialIntersectsTest.java:[48,59] cannot find symbol
-[ERROR]   symbol:   variable resultArray
-[ERROR]   location: class com.orientechnologies.spatial.functions.LuceneSpatialIntersectsTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -5,7 +5,7 @@ from utils.file_util import delete_folder
 import os
 from path_config import TMP_DIR
 import re
-import xml.etree.ElementTree as et
+import xml.etree.ElementTree as ET
 
 from index_item import IndexItem
 
@@ -18,7 +18,17 @@ class Project():
         self.repo_dir = os.path.join(base_dir, "repos", project_name)
         self.java_gateway = java_gateway
 
-        self.index = dict()
+        # clone the project
+        self.init_env()
+
+        # java_gateway will be not None when invoked from doall.py script
+        if java_gateway is not None:
+            # index the project
+            self.index = dict()
+            self.index_project()
+        
+            # modify pom
+            self.modify_pom()
 
     def init_env(self): 
         # delete folder if it exists
@@ -39,7 +49,7 @@ class Project():
         # print("Done.")
 
     def ensure_dependencies(self):
-        pom = et.parse(os.path.join(self.repo_dir, 'pom.xml'))
+        pom = ET.parse(os.path.join(self.repo_dir, 'pom.xml'))
         root = pom.getroot()
 
         print(root.attrib)
@@ -69,6 +79,74 @@ class Project():
         #     print('Method: {}'.format(key))
         #     for index_item in value:
         #         print(index_item)
+
+    def modify_pom(self):
+        self.add_maven_compiler_plugin()
+
+    def add_maven_compiler_plugin(self, compiler_version='3.8.1', java_version='1.8'):
+        ET.register_namespace('', 'http://maven.apache.org/POM/4.0.0')
+
+        poms = set([os.path.join(self.repo_dir, r) for (r, ds, fs) in os.walk(self.repo_dir) for fn in fs if fn=='pom.xml'])
+        
+        for pom_file in poms:
+            compiler_plugin_found = False
+
+            if pom_file is None: break
+
+            pom = ET.parse(os.path.join(pom_file, 'pom.xml'))
+            root = pom.getroot()
+
+            # Backing-up existing pom.xml as old_pom.xml
+            pom.write(os.path.join(pom_file, 'old_pom.xml'))
+
+            # Find the curly brace prefix
+            pom_link = re.search(r'({.*}).*', root.tag)
+            if pom_link is not None: pom_link = pom_link.group(1)
+
+            for item in root.findall('{}build/{}plugins'.format(pom_link, pom_link)):
+                for child in item:
+                    artifactId = child.find('{}artifactId'.format(pom_link))
+                    if artifactId is not None and 'maven-compiler-plugin' in artifactId.text:
+                        compiler_plugin_found = True
+
+                        version = child.find('{}version'.format(pom_link))
+                        if version is not None: version.text = compiler_version
+                        else: ET.SubElement(child, '{}version'.format(pom_link)).text = compiler_version
+
+                        configuration = child.find('{}configuration'.format(pom_link))
+                        if configuration is not None:
+                            source = configuration.find('{}source'.format(pom_link))
+                            target = configuration.find('{}target'.format(pom_link))
+                            
+                            if source is not None: source.text = java_version
+                            else: ET.SubElement(configuration, '{}source'.format(pom_link)).text = java_version
+
+                            if target is not None: target.text = java_version
+                            else: ET.SubElement(configuration, '{}target'.format(pom_link)).text = java_version
+                        else:
+                            ET.SubElement(child, '{}configuration'.format(pom_link))
+                            ET.SubElement(child.find('{}configuration'.format(pom_link)), '{}source'.format(pom_link)).text = java_version
+                            ET.SubElement(child.find('{}configuration'.format(pom_link)), '{}target'.format(pom_link)).text = java_version
+                        
+                        break
+
+            if not compiler_plugin_found:
+                plugin, configuration = None, None
+
+                if root.find('{}build/{}plugins'.format(pom_link, pom_link)) is not None:
+                    plugin = ET.SubElement(root.find('{}build/{}plugins'.format(pom_link, pom_link)), '{}plugin'.format(pom_link))
+                
+                if plugin is not None:
+                    groupId = ET.SubElement(plugin, '{}groupId'.format(pom_link)).text = 'org.apache.maven.plugins'
+                    artifactId = ET.SubElement(plugin, '{}artifactId'.format(pom_link)).text = 'maven-compiler-plugin'
+                    version = ET.SubElement(plugin, '{}version'.format(pom_link)).text = compiler_version
+                    configuration = ET.SubElement(plugin, '{}configuration'.format(pom_link))
+                
+                if configuration is not None:
+                    source = ET.SubElement(configuration, '{}source'.format(pom_link)).text = java_version
+                    target = ET.SubElement(configuration, '{}target'.format(pom_link)).text = java_version
+
+            pom.write(os.path.join(pom_file, 'pom.xml'))
 
     def run_test(self, subRepo, className, testName):
         res_dict = {"build_failure": False, "tests": 0, "failures": 0, "errors": 0}

@@ -104,7 +104,7 @@ def buildTestJson(currentLineNumber, testClass):
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
-    test['oracleLn'] = test['startLn'] + evalLocs[1] # + 2 because of the @Test annotation and the test method signature
+    test['oracleLn'] = evalLocs[currentLineNumber] # + 2 because of the @Test annotation and the test method signature
 
     # Add focal method
     test['focalFile'] = ''
@@ -129,9 +129,8 @@ def buildTestJson(currentLineNumber, testClass):
 def findSubRepoForTest(fileName):
     gitURL = "git@github.com:{}/{}.git".format(project['userName'], project['repoName'])
     
-    if not os.path.exists('tmp/repos/{}'.format(project['repoName'])):
-        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], '../../tmp')
-        tmpProj.init_env()
+    if not os.path.exists('../../tmp/repos/{}'.format(project['repoName'])):
+        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], None, '../../tmp')
 
     def walker(subRepo, root, searchFile):
         for root, dirs, files in os.walk(root):

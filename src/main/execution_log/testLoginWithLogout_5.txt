@@ -15,8 +15,8 @@
 [INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/jacoco.exec
 [INFO] 
 [INFO] --- fmt-maven-plugin:2.9:format (default) @ iiif-apis ---
-[INFO] Processed 100 files (1 reformatted).
-[INFO] Processed 103 files (1 reformatted).
+[INFO] Processed 100 files (0 reformatted).
+[INFO] Processed 103 files (0 reformatted).
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ iiif-apis ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -38,48 +38,29 @@
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ iiif-apis ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 18 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/test-classes
-[INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
 [WARNING] bootstrap class path not set in conjunction with -source 8
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/ExternalTest.java:[89,78] SIZE_BY_WH_LISTED in de.digitalcollections.iiif.model.image.ImageApiProfile.Feature has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/JsonMappingTest.java:[114,29] isEqualToComparingFieldByFieldRecursively(java.lang.Object) in org.assertj.core.api.AbstractObjectAssert has been deprecated
-[INFO] 3 warnings 
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,44] cannot find symbol
-  symbol:   variable expectedOutput
-  location: class de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,60] cannot find symbol
-  symbol:   variable actualOutput
-  location: class de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,18] cannot find symbol
-  symbol:   class Assert
-  location: package org.junit
-[INFO] 3 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ iiif-apis ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.597 s - in de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:report (default) @ iiif-apis ---
+[INFO] Loading execution data file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/jacoco.exec
+[INFO] Analyzed bundle 'DigitalCollections: IIIF API Library' with 81 classes
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.990 s
-[INFO] Finished at: 2023-06-05T09:29:16-04:00
+[INFO] Total time:  13.357 s
+[INFO] Finished at: 2023-06-21T10:02:02-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project iiif-apis: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,44] cannot find symbol
-[ERROR]   symbol:   variable expectedOutput
-[ERROR]   location: class de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,60] cannot find symbol
-[ERROR]   symbol:   variable actualOutput
-[ERROR]   location: class de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[85,18] cannot find symbol
-[ERROR]   symbol:   class Assert
-[ERROR]   location: package org.junit
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

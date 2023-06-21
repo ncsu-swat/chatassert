@@ -1,6 +1,271 @@
 {
     "projects": [
         {
+            "userName": "hazelcast",
+            "repoName": "hazelcast-simulator",
+            "subRepos": [
+                "archetype",
+                "simulator",
+                "drivers/driver-hazelcast4plus",
+                "drivers/driver-hazelcast3",
+                "drivers/driver-ignite2",
+                "drivers/driver-infinispan9",
+                "drivers/driver-infinispan10",
+                "drivers/driver-infinispan11",
+                "drivers/driver-couchbase",
+                "drivers/driver-memcached",
+                "drivers/driver-mongodb",
+                "drivers/driver-lettuce5",
+                "drivers/driver-lettucecluster5",
+                "drivers/driver-jedis3"
+            ],
+            "commitSHA": "7f0c13f66a81ce27911109e4118f7405483931dc",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "AnnotationFilterTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/utils/AnnotationFilterTest.java",
+                    "subRepo": "simulator",
+                    "classTests": [
+                        {
+                            "testName": "testLocalTeardownFilter",
+                            "startLn": 18,
+                            "endLn": 26,
+                            "testMethod": "@Test\n public void testLocalTeardownFilter ( ) {\n     Method method = new AnnotatedMethodRetriever ( AnnotationTestClass . class , Teardown . class ) . withVoidReturnType ( ) . withFilter ( new TeardownFilter ( false ) ) . find ( ) ; \n     assertEquals(\"STR\",method.getName());\n}",
+                            "oracle": "assertEquals(\"STR\",method.getName());",
+                            "oracleLn": 1,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/utils/AnnotatedMethodRetriever.java",
+                            "focalName": "find",
+                            "focalStartLn": 68,
+                            "focalEndLn": 79,
+                            "focalMethod": " public Method find ( ) { \n List < Method > methods = findAll ( ) ; \n switch ( methods . size ( ) ) { \n case 0 : return null ; \n case 1 : return methods . iterator ( ) . next ( ) ; \n default : throw new ReflectionException ( format ( \"STR\" , clazz . getName ( ) , annotationClazz . getName ( ) ) ) ; \n } } "
+                        }
+                    ]
+                },
+                {
+                    "className": "MetronomeSupplierTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/worker/testcontainer/MetronomeSupplierTest.java",
+                    "subRepo": "simulator",
+                    "classTests": [
+                        {
+                            "testName": "withCustomMetronome",
+                            "startLn": 73,
+                            "endLn": 86,
+                            "testMethod": "@Test\n public void withCustomMetronome ( ) {\n     PropertyBinding propertyBinding = new PropertyBinding ( new TestCase ( \"STR\" ) . setProperty ( \"STR\" , \"STR\" ) . setProperty ( \"STR\" , BusySpinningMetronome . class ) ) ; \n     MetronomeSupplier supplier = new MetronomeSupplier ( \"STR\" , propertyBinding , 1 ) ; \n     Metronome m = supplier . get ( ) ; \n     assertEquals(BusySpinningMetronome.class,m.getClass());\n}",
+                            "oracle": "assertEquals(BusySpinningMetronome.class,m.getClass());",
+                            "oracleLn": 3,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/worker/testcontainer/MetronomeSupplier.java",
+                            "focalName": "get",
+                            "focalStartLn": 128,
+                            "focalEndLn": 140,
+                            "focalMethod": "@Override\n public Metronome get ( ) { \n if ( metronomeClass == EmptyMetronome . class ) { \n return EmptyMetronome . INSTANCE ; \n } try { \n Constructor < ? extends Metronome > constructor = metronomeClass . getConstructor ( Metronome . class ) ; \n return constructor . newInstance ( masterMetronome ) ; \n } catch ( Exception e ) { \n throw new RuntimeException ( e ) ; \n } } "
+                        }
+                    ]
+                },
+                {
+                    "className": "BuildInfoUtilsTest",
+                    "classPath": "drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java",
+                    "subRepo": "drivers/driver-hazelcast4plus",
+                    "classTests": [
+                        {
+                            "testName": "testGetHazelcastVersionFromJarOrNull_whenInvalidPath_thenReturnNull",
+                            "startLn": 79,
+                            "endLn": 83,
+                            "testMethod": "@Test\n public void testGetHazelcastVersionFromJarOrNull_whenInvalidPath_thenReturnNull ( ) {\n     File file = new File ( \"STR\" ) . getAbsoluteFile ( ) ; \n     assertNull(getHazelcastVersionFromJarOrNull(file.getAbsolutePath()));\n}",
+                            "oracle": "assertNull(getHazelcastVersionFromJarOrNull(file.getAbsolutePath()));",
+                            "oracleLn": 1,
+                            "focalFile": "drivers/driver-hazelcast4plus/src/main/java/com/hazelcast/simulator/utils/BuildInfoUtils.java",
+                            "focalName": "getHazelcastVersionFromJarOrNull",
+                            "focalStartLn": 65,
+                            "focalEndLn": 78,
+                            "focalMethod": " static String getHazelcastVersionFromJarOrNull ( String classPath ) { \n try { \n List < File > jarFiles = getFilesFromClassPath ( classPath ) ; \n for ( File jarFile : jarFiles ) { \n String version = getVersion ( jarFile ) ; \n if ( version != null ) { \n return version ; \n } } } catch ( UncheckedIOException ignored ) { \n ignore ( ignored ) ; \n } return null ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "WorkerProcessFailureMonitorTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/agent/workerprocess/WorkerProcessFailureMonitorTest.java",
+                    "subRepo": "simulator",
+                    "before": {
+                        "setupName": "before",
+                        "startLn": 64,
+                        "endLn": 79,
+                        "setupMethod": "@Before\n public void before ( ) { \n File simulatorHome = setupFakeEnvironment ( ) ; \n workersHome = new File ( simulatorHome , \"STR\" ) ; \n failureHandler = mock ( WorkerProcessFailureHandler . class ) ; \n Server server = mock ( Server . class ) ; \n workerProcessManager = new WorkerProcessManager ( server , SimulatorAddress . fromString ( \"STR\" ) , \"STR\" ) ; \n workerProcessFailureMonitor = new WorkerProcessFailureMonitor ( failureHandler , workerProcessManager , DEFAULT_LAST_SEEN_TIMEOUT_SECONDS , DEFAULT_CHECK_INTERVAL ) ; \n workerProcessFailureMonitor . start ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testRun_shouldContinueAfterExceptionDuringDetection",
+                            "startLn": 104,
+                            "endLn": 122,
+                            "testMethod": "@ Test ( timeout = DEFAULT_TIMEOUT ) public void testRun_shouldContinueAfterExceptionDuringDetection ( ) {\n     WorkerProcess workerProcess = addRunningWorkerProcess ( ) ; \n     Process process = workerProcess . getProcess ( ) ; \n     reset ( process ) ; \n     when ( process . exitValue ( ) ) . thenThrow ( new IllegalArgumentException ( \"STR\" ) ) ; \n     sleepMillis ( 5 * DEFAULT_SLEEP_TIME ) ; \n     ensureExistingFile ( workerProcess . getWorkerHome ( ) , \"STR\" ) ; \n     assertTrueEventually(newAssertTask(){@Overridepublicvoidrun()throwsException{assertFailureType(failureHandler,WORKER_OOME);}});\n}",
+                            "oracle": "assertTrueEventually(newAssertTask(){@Overridepublicvoidrun()throwsException{assertFailureType(failureHandler,WORKER_OOME);}});",
+                            "oracleLn": 6,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/utils/FileUtils.java",
+                            "focalName": "ensureExistingFile",
+                            "focalStartLn": 237,
+                            "focalEndLn": 239,
+                            "focalMethod": " public static File ensureExistingFile ( File parent , String fileName ) { \n return ensureExistingFile ( new File ( parent , fileName ) ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "WizardUtilsTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/wizard/WizardUtilsTest.java",
+                    "subRepo": "simulator",
+                    "before": {
+                        "setupName": "before",
+                        "startLn": 34,
+                        "endLn": 38,
+                        "setupMethod": "@Before\n public void before ( ) throws Exception { \n parent = new File ( \"STR\" ) . getAbsoluteFile ( ) ; \n ensureExistingDirectory ( parent ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testGetFileFromUrl_fromJarFile",
+                            "startLn": 140,
+                            "endLn": 148,
+                            "testMethod": "@Test\n public void testGetFileFromUrl_fromJarFile ( ) throws Exception {\n     URL url = new URL ( \"STR\" ) ; \n     File file = WizardUtils . getFileFromUrl ( url , \"STR\" ) ; \n     assertNotNull(file);\n}",
+                            "oracle": "assertNotNull(file);",
+                            "oracleLn": 2,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/wizard/WizardUtils.java",
+                            "focalName": "getFileFromUrl",
+                            "focalStartLn": 128,
+                            "focalEndLn": 159,
+                            "focalMethod": " static File getFileFromUrl ( URL url , String className ) { \n String extURL = url . toExternalForm ( ) ; \n if ( extURL . endsWith ( \"STR\" ) ) { \n extURL = extURL . substring ( 0 , extURL . lastIndexOf ( '/' ) ) ; \n } else { \n String suffix = \"STR\" + className . replace ( \"STR\" , \"STR\" ) + \"STR\" ; \n extURL = extURL . replace ( suffix , \"STR\" ) ; \n if ( extURL . startsWith ( \"STR\" ) && extURL . endsWith ( \"STR\" ) ) { \n extURL = extURL . substring ( FILE_EXTENSION_LENGTH , extURL . lastIndexOf ( '/' ) ) ; \n } } try { \n url = new URL ( extURL ) ; \n } catch ( MalformedURLException e ) { \n EmptyStatement . ignore ( e ) ; \n } try { \n return new File ( url . toURI ( ) ) ; \n } catch ( Exception ignored ) { \n return new File ( url . getPath ( ) ) ; \n } } "
+                        }
+                    ]
+                },
+                {
+                    "className": "UuidUtilTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/utils/UuidUtilTest.java",
+                    "subRepo": "simulator",
+                    "classTests": [
+                        {
+                            "testName": "testNewUnsecureUUID",
+                            "startLn": 41,
+                            "endLn": 48,
+                            "testMethod": "@Test\n public void testNewUnsecureUUID ( ) {\n     UUID uuid = newUnsecureUUID ( ) ; \n     assertNotNull(uuid);\n}",
+                            "oracle": "assertNotNull(uuid);",
+                            "oracleLn": 1,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/utils/UuidUtil.java",
+                            "focalName": "newUnsecureUUID",
+                            "focalStartLn": 84,
+                            "focalEndLn": 86,
+                            "focalMethod": " public static UUID newUnsecureUUID ( ) { \n return getUUID ( THREAD_LOCAL_UNSECURE_RANDOM . get ( ) ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "dbmdz",
+            "repoName": "iiif-apis",
+            "subRepos": [],
+            "commitSHA": "9cee1ae168e761f2d3f78b2204d6a55416ecb1af",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "SpecExamplesSerializationTest",
+                    "classPath": "src/test/java/de/digitalcollections/iiif/model/presentation/SpecExamplesSerializationTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 48,
+                        "endLn": 51,
+                        "setupMethod": "@BeforeEach\n public void setup ( ) { \n mapper = new IiifObjectMapper ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testImageResource",
+                            "startLn": 303,
+                            "endLn": 315,
+                            "testMethod": "@Test\n public void testImageResource ( ) throws Exception {\n     Annotation anno = new Annotation ( \"STR\" , Motivation . PAINTING ) ; \n     anno . setOn ( new Canvas ( \"STR\" ) ) ; \n     ImageContent img = new ImageContent ( \"STR\" ) ; \n     img . setWidth ( 1500 ) ; \n     img . setHeight ( 2000 ) ; \n     img . addService ( new ImageService ( \"STR\" , ImageApiProfile . LEVEL_TWO ) ) ; \n     anno . setResource ( img ) ; \n     assertSerializationEqualsSpec(anno,\"STR\");\n}",
+                            "oracle": "assertSerializationEqualsSpec(anno,\"STR\");",
+                            "oracleLn": 7,
+                            "focalFile": "src/main/java/de/digitalcollections/iiif/model/openannotation/Annotation.java",
+                            "focalName": "setResource",
+                            "focalStartLn": 47,
+                            "focalEndLn": 49,
+                            "focalMethod": " public void setResource ( Resource resource ) { \n this . resource = resource ; \n } "
+                        },
+                        {
+                            "testName": "testGenericService",
+                            "startLn": 91,
+                            "endLn": 100,
+                            "testMethod": "@Test\n public void testGenericService ( ) throws Exception {\n     GenericService service = new GenericService ( \"STR\" , \"STR\" , \"STR\" ) ; \n     service . setLabel ( new PropertyValue ( \"STR\" ) ) ; \n     assertSerializationEqualsSpec(service,\"STR\");\n}",
+                            "oracle": "assertSerializationEqualsSpec(service,\"STR\");",
+                            "oracleLn": 2,
+                            "focalFile": "src/main/java/de/digitalcollections/iiif/model/Service.java",
+                            "focalName": "setLabel",
+                            "focalStartLn": 85,
+                            "focalEndLn": 87,
+                            "focalMethod": " public void setLabel ( PropertyValue label ) { \n this . label = label ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "SpecExamplesDeserializationTest",
+                    "classPath": "src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 19,
+                        "endLn": 22,
+                        "setupMethod": "@BeforeEach\n public void setup ( ) { \n mapper = new IiifObjectMapper ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testLoginWithLogout",
+                            "startLn": 82,
+                            "endLn": 89,
+                            "testMethod": "@Test\n public void testLoginWithLogout ( ) throws IOException {\n     AccessCookieService authService = readFromResources ( \"STR\" , AccessCookieService . class ) ; \n     assertThat(authService.getServices()).hasSize(2);\n}",
+                            "oracle": "assertThat(authService.getServices()).hasSize(2);",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/de/digitalcollections/iiif/model/auth/AccessCookieService.java",
+                            "focalName": "getServices",
+                            "focalStartLn": 169,
+                            "focalEndLn": 171,
+                            "focalMethod": " public List < AuthService > getServices ( ) { \n return services ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "sharneng",
+            "repoName": "gm4java",
+            "subRepos": [],
+            "commitSHA": "92f3f3b64a45f312ef6978f2367263ec64ff0c04",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "GMOperationTest",
+                    "classPath": "src/test/java/org/gm4java/im4java/GMOperationTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 29,
+                        "endLn": 32,
+                        "setupMethod": "@Before\n public void setup ( ) { \n sut = new GMOperation ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "rotate_Annotation_HeightLargerThanWidth",
+                            "startLn": 174,
+                            "endLn": 178,
+                            "testMethod": "@Test\n public void rotate_Annotation_HeightLargerThanWidth ( ) {\n     sut . rotate ( 90.0 , RotationAnnotation . HeightExceedsWidthOnly ) ; \n     assertThat(sut.getCmdArgs(),hasItem(\"STR\"));\n}",
+                            "oracle": "assertThat(sut.getCmdArgs(),hasItem(\"STR\"));",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/org/gm4java/im4java/GMOperation.java",
+                            "focalName": "rotate",
+                            "focalStartLn": 225,
+                            "focalEndLn": 233,
+                            "focalMethod": " public GMOperation rotate ( final double degrees , final RotationAnnotation annotation ) { \n if ( annotation == null ) { \n throw new IllegalArgumentException ( \"STR\" ) ; \n } final List < String > args = getCmdArgs ( ) ; \n args . add ( \"STR\" ) ; \n args . add ( String . format ( Locale . ENGLISH , \"STR\" , degrees , annotation . asAnnotation ( ) ) ) ; \n return this ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "userName": "orientechnologies",
             "repoName": "orientdb",
             "subRepos": [
@@ -25,6 +290,131 @@
             "buildSystem": "mvn",
             "allTests": [
                 {
+                    "className": "TrackedSetTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/db/record/TrackedSetTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testReturnOriginalState",
+                            "startLn": 298,
+                            "endLn": 328,
+                            "testMethod": "@Test\n public void testReturnOriginalState ( ) {\n     final ODocument doc = new ODocument ( ) ; \n     final OTrackedSet < String > trackedSet = new OTrackedSet < String > ( doc ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     final Set < String > original = new HashSet < String > ( trackedSet ) ; \n     final List < OMultiValueChangeEvent < String , String > > firedEvents = new ArrayList < OMultiValueChangeEvent < String , String > > ( ) ; \n     trackedSet . addChangeListener ( new OMultiValueChangeListener < String , String > ( ) { \n public void onAfterRecordChanged ( final OMultiValueChangeEvent < String , String > event ) { \n firedEvents . add ( event ) ; \n } } ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . remove ( \"STR\" ) ; \n     trackedSet . remove ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . remove ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     trackedSet . add ( \"STR\" ) ; \n     Assert.assertEquals(original,trackedSet.returnOriginalState(firedEvents));\n}",
+                            "oracle": "Assert.assertEquals(original,trackedSet.returnOriginalState(firedEvents));",
+                            "oracleLn": 18,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/db/record/OTrackedSet.java",
+                            "focalName": "returnOriginalState",
+                            "focalStartLn": 189,
+                            "focalEndLn": 210,
+                            "focalMethod": " public Set < T > returnOriginalState ( final List < OMultiValueChangeEvent < T , T > > multiValueChangeEvents ) { \n final Set < T > reverted = new HashSet < T > ( this ) ; \n final ListIterator < OMultiValueChangeEvent < T , T > > listIterator = multiValueChangeEvents . listIterator ( multiValueChangeEvents . size ( ) ) ; \n while ( listIterator . hasPrevious ( ) ) { \n final OMultiValueChangeEvent < T , T > event = listIterator . previous ( ) ; \n switch ( event . getChangeType ( ) ) { \n case ADD : reverted . remove ( event . getKey ( ) ) ; \n break ; \n case REMOVE : reverted . add ( event . getOldValue ( ) ) ; \n break ; \n default : throw new IllegalArgumentException ( \"STR\" + event . getChangeType ( ) ) ; \n } } return reverted ; \n } "
+                        },
+                        {
+                            "testName": "testClearOne",
+                            "startLn": 211,
+                            "endLn": 249,
+                            "testMethod": "@Test\n public void testClearOne ( ) {\n     final ODocument doc = new ODocument ( ) ; \n     ORecordInternal . unsetDirty ( doc ) ; \n     Assert.assertFalse(doc.isDirty());\n}",
+                            "oracle": "Assert.assertFalse(doc.isDirty());",
+                            "oracleLn": 2,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/record/ORecordAbstract.java",
+                            "focalName": "isDirty",
+                            "focalStartLn": 156,
+                            "focalEndLn": 158,
+                            "focalMethod": " public boolean isDirty ( ) { \n return _dirty ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ODirtyManagerTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/db/record/impl/ODirtyManagerTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testSetToNullLink",
+                            "startLn": 69,
+                            "endLn": 79,
+                            "testMethod": "@Test\n public void testSetToNullLink ( ) {\n     ODocument doc = new ODocument ( ) ; \n     doc . field ( \"STR\" , \"STR\" ) ; \n     ODocument doc2 = new ODocument ( ) ; \n     doc . field ( \"STR\" , doc2 ) ; \n     doc . field ( \"STR\" , ( Object ) null ) ; \n     ODirtyManager manager = ORecordInternal . getDirtyManager ( doc ) ; \n     assertEquals(2,manager.getNewRecords().size());\n}",
+                            "oracle": "assertEquals(2,manager.getNewRecords().size());",
+                            "oracleLn": 6,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/record/impl/ODirtyManager.java",
+                            "focalName": "getNewRecords",
+                            "focalStartLn": 63,
+                            "focalEndLn": 65,
+                            "focalMethod": " public Set < ORecord > getNewRecords ( ) { \n return getReal ( ) . newRecords ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "DoubleSerializerTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 38,
+                        "endLn": 41,
+                        "setupMethod": "@Before\n public void beforeClass ( ) { \n doubleSerializer = new ODoubleSerializer ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testFieldSize",
+                            "startLn": 43,
+                            "endLn": 46,
+                            "testMethod": "@Test\n public void testFieldSize ( ) {\n     Assert.assertEquals(doubleSerializer.getObjectSize(null),FIELD_SIZE);\n}",
+                            "oracle": "Assert.assertEquals(doubleSerializer.getObjectSize(null),FIELD_SIZE);",
+                            "oracleLn": 0,
+                            "focalFile": "core/src/main/java/com/orientechnologies/common/serialization/types/ODoubleSerializer.java",
+                            "focalName": "getObjectSize",
+                            "focalStartLn": 45,
+                            "focalEndLn": 47,
+                            "focalMethod": " public int getObjectSize ( Double object , Object ... hints ) { \n return DOUBLE_SIZE ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OLucenePerFieldAnalyzerWrapperTest",
+                    "classPath": "lucene/src/test/java/com/orientechnologies/lucene/analyzer/OLucenePerFieldAnalyzerWrapperTest.java",
+                    "subRepo": "lucene",
+                    "classTests": [
+                        {
+                            "testName": "shouldReturnCustomAnalyzerForEachField",
+                            "startLn": 28,
+                            "endLn": 42,
+                            "testMethod": "@Test\n public void shouldReturnCustomAnalyzerForEachField ( ) throws Exception {\n     OLucenePerFieldAnalyzerWrapper analyzer = new OLucenePerFieldAnalyzerWrapper ( new StandardAnalyzer ( ) ) ; \n     analyzer . add ( \"STR\" , new EnglishAnalyzer ( ) ) ; \n     analyzer . add ( \"STR\" , new ItalianAnalyzer ( ) ) ; \n     assertThat(analyzer.getWrappedAnalyzer(\"STR\")).isNotNull();\n}",
+                            "oracle": "assertThat(analyzer.getWrappedAnalyzer(\"STR\")).isNotNull();",
+                            "oracleLn": 3,
+                            "focalFile": "lucene/src/main/java/com/orientechnologies/lucene/analyzer/OLucenePerFieldAnalyzerWrapper.java",
+                            "focalName": "getWrappedAnalyzer",
+                            "focalStartLn": 47,
+                            "focalEndLn": 51,
+                            "focalMethod": "@Override\n protected Analyzer getWrappedAnalyzer ( String fieldName ) { \n Analyzer analyzer = fieldAnalyzers . get ( fieldName ) ; \n return ( analyzer != null ) ? analyzer : defaultAnalyzer ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OETLLogTransformerTest",
+                    "classPath": "etl/src/test/java/com/orientechnologies/orient/etl/transformer/OETLLogTransformerTest.java",
+                    "subRepo": "etl",
+                    "before": {
+                        "setupName": "redirectSysOutToByteBuff",
+                        "startLn": 39,
+                        "endLn": 51,
+                        "setupMethod": "@Before\n public void redirectSysOutToByteBuff ( ) { \n sysOut = System . err ; \n output = new ByteArrayOutputStream ( ) ; \n System . setErr ( new PrintStream ( output , true ) ) ; \n Logger . getLogger ( \"STR\" ) . addHandler ( new ConsoleHandler ( ) ) ; \n OLogManager . instance ( ) . installCustomFormatter ( ) ; \n } @Before\n public void configureProcessor ( ) throws Throwable { \n OLogManager . instance ( ) . installCustomFormatter ( ) ; \n OETLComponentFactory factory = new OETLComponentFactory ( ) . registerLoader ( OETLStubLoader . class ) . registerExtractor ( OETLStubRandomExtractor . class ) ; \n configurator = new OETLProcessorConfigurator ( factory ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testPostfix",
+                            "startLn": 72,
+                            "endLn": 83,
+                            "testMethod": "@Test\n public void testPostfix ( ) throws Exception {\n     String cfgJson = \"STR\" + \"STR\" + \"STR\" + \"STR\" ; \n     configure ( cfgJson ) ; \n     proc . execute ( ) ; \n     String out = output . toString ( ) ; \n     assertThat(out).contains(\"STR\");\n}",
+                            "oracle": "assertThat(out).contains(\"STR\");",
+                            "oracleLn": 4,
+                            "focalFile": "etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java",
+                            "focalName": "execute",
+                            "focalStartLn": 172,
+                            "focalEndLn": 177,
+                            "focalMethod": " public void execute ( ) { \n configure ( ) ; \n begin ( ) ; \n runExtractorAndPipeline ( ) ; \n end ( ) ; \n } "
+                        }
+                    ]
+                },
+                {
                     "className": "OPropertyListIndexDefinitionTest",
                     "classPath": "core/src/test/java/com/orientechnologies/orient/core/index/OPropertyListIndexDefinitionTest.java",
                     "subRepo": "core",
@@ -41,7 +431,7 @@
                             "endLn": 426,
                             "testMethod": "@Test\n public void testProcessChangeEventUpdateConvertValues ( ) {\n     final Map < Object , Integer > keysToAdd = new HashMap < Object , Integer > ( ) ; \n     final Map < Object , Integer > keysToRemove = new HashMap < Object , Integer > ( ) ; \n     final OMultiValueChangeEvent < Integer , String > multiValueChangeEvent = new OMultiValueChangeEvent < Integer , String > ( OMultiValueChangeEvent . OChangeType . UPDATE , 0 , \"STR\" , \"STR\" ) ; \n     propertyIndex . processChangeEvent ( multiValueChangeEvent , keysToAdd , keysToRemove ) ; \n     final Map < Object , Integer > addedKeys = new HashMap < Object , Integer > ( ) ; \n     addedKeys . put ( 41 , 1 ) ; \n     final Map < Object , Integer > removedKeys = new HashMap < Object , Integer > ( ) ; \n     removedKeys . put ( 42 , 1 ) ; \n     Assert.assertEquals(keysToAdd,addedKeys);\n}",
                             "oracle": "Assert.assertEquals(keysToAdd,addedKeys);",
-                            "oracleLn": 419,
+                            "oracleLn": 8,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OPropertyListIndexDefinition.java",
                             "focalName": "processChangeEvent",
                             "focalStartLn": 92,
@@ -67,7 +457,7 @@
                             "endLn": 89,
                             "testMethod": "@Test\n public void testNullKeyExclusive ( ) {\n     manager . acquireExclusiveLock ( null ) ; \n     final Lock lock = manager . acquireExclusiveLock ( null ) ; \n     assertEquals(2,wrapper(lock).getLockCount());\n}",
                             "oracle": "assertEquals(2,wrapper(lock).getLockCount());",
-                            "oracleLn": 84,
+                            "oracleLn": 2,
                             "focalFile": "core/src/main/java/com/orientechnologies/common/concur/lock/OOneEntryPerKeyLockManager.java",
                             "focalName": "getLockCount",
                             "focalStartLn": 285,
@@ -93,7 +483,7 @@
                             "endLn": 492,
                             "testMethod": "@Test\n public void testOperatorPriority3 ( ) {\n     List < ODocument > qResult = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     List < ODocument > qResult2 = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     List < ODocument > qResult3 = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     List < ODocument > qResult4 = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     List < ODocument > qResult5 = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     assertEquals(qResult.size(),qResult2.size());\n}",
                             "oracle": "assertEquals(qResult.size(),qResult2.size());",
-                            "oracleLn": 472,
+                            "oracleLn": 5,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/command/OCommandRequest.java",
                             "focalName": "execute",
                             "focalStartLn": 30,
@@ -119,7 +509,7 @@
                             "endLn": 160,
                             "testMethod": "@Test\n public void shouldSaveDocuments ( ) {\n     configure ( \"STR\" + \"STR\" + name . getMethodName ( ) + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" ) ; \n     proc . execute ( ) ; \n     ODatabaseDocument db = proc . getLoader ( ) . getPool ( ) . acquire ( ) ; \n     List < ? > res = db . query ( new OSQLSynchQuery < ODocument > ( \"STR\" ) ) ; \n     assertThat(res.size()).isEqualTo(1);\n}",
                             "oracle": "assertThat(res.size()).isEqualTo(1);",
-                            "oracleLn": 146,
+                            "oracleLn": 4,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/db/ODatabase.java",
                             "focalName": "query",
                             "focalStartLn": 830,
@@ -145,7 +535,7 @@
                             "endLn": 85,
                             "testMethod": "@Test\n public void createNoTxPool ( ) {\n     OrientGraph graph = new OrientGraph ( \"STR\" ) ; \n     graph . shutdown ( ) ; \n     OrientGraphFactory factory = new OrientGraphFactory ( \"STR\" ) ; \n     factory . setupPool ( 5 , 10 ) ; \n     OrientBaseGraph g = factory . getNoTx ( ) ; \n     assertSame(g,OrientBaseGraph.getActiveGraph());\n}",
                             "oracle": "assertSame(g,OrientBaseGraph.getActiveGraph());",
-                            "oracleLn": 79,
+                            "oracleLn": 5,
                             "focalFile": "graphdb/src/main/java/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.java",
                             "focalName": "getActiveGraph",
                             "focalStartLn": 260,
@@ -171,7 +561,7 @@
                             "endLn": 312,
                             "testMethod": "@Test\n public void testCustomNullValueInCell ( ) {\n     String cfgJson = \"STR\" ; \n     configure ( cfgJson ) ; \n     proc . execute ( ) ; \n     List < ODocument > res = getResult ( ) ; \n     assertFalse(res.isEmpty());\n}",
                             "oracle": "assertFalse(res.isEmpty());",
-                            "oracleLn": 306,
+                            "oracleLn": 4,
                             "focalFile": "etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java",
                             "focalName": "execute",
                             "focalStartLn": 172,
@@ -197,7 +587,7 @@
                             "endLn": 54,
                             "testMethod": "@Test\n public void testFetchChaninedIndex ( ) {\n     OClass baseClass = db . getMetadata ( ) . getSchema ( ) . createClass ( \"STR\" ) ; \n     OProperty propr = baseClass . createProperty ( \"STR\" , OType . LINK ) ; \n     OClass linkedClass = db . getMetadata ( ) . getSchema ( ) . createClass ( \"STR\" ) ; \n     OProperty id = linkedClass . createProperty ( \"STR\" , OType . STRING ) ; \n     id . createIndex ( INDEX_TYPE . UNIQUE ) ; \n     propr . setLinkedClass ( linkedClass ) ; \n     propr . createIndex ( INDEX_TYPE . NOTUNIQUE ) ; \n     ODocument doc = new ODocument ( linkedClass ) ; \n     doc . field ( \"STR\" , \"STR\" ) ; \n     db . save ( doc ) ; \n     ODocument doc1 = new ODocument ( baseClass ) ; \n     doc1 . field ( \"STR\" , doc ) ; \n     db . save ( doc1 ) ; \n     List < ODocument > res = db . query ( new OSQLSynchQuery ( \"STR\" ) ) ; \n     assertEquals(0,res.size());\n}",
                             "oracle": "assertEquals(0,res.size());",
-                            "oracleLn": 45,
+                            "oracleLn": 14,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/db/ODatabase.java",
                             "focalName": "query",
                             "focalStartLn": 830,
@@ -217,7 +607,7 @@
                             "endLn": 76,
                             "testMethod": "@Test\n public void testParentConfig ( ) {\n     OrientDBConfig parent = OrientDBConfig . builder ( ) . addConfig ( OGlobalConfiguration . DB_POOL_MAX , 20 ) . addAttribute ( ATTRIBUTES . VALIDATION , true ) . build ( ) ; \n     OrientDBConfig settings = OrientDBConfig . builder ( ) . addConfig ( OGlobalConfiguration . CLIENT_CONNECTION_STRATEGY , \"STR\" ) . addAttribute ( ATTRIBUTES . VALIDATION , false ) . build ( ) ; \n     settings . setParent ( parent ) ; \n     assertEquals(settings.getConfigurations().getValue(OGlobalConfiguration.DB_POOL_MAX),(Integer)20);\n}",
                             "oracle": "assertEquals(settings.getConfigurations().getValue(OGlobalConfiguration.DB_POOL_MAX),(Integer)20);",
-                            "oracleLn": 66,
+                            "oracleLn": 3,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/config/OContextConfiguration.java",
                             "focalName": "getValue",
                             "focalStartLn": 69,
@@ -243,7 +633,7 @@
                             "endLn": 63,
                             "testMethod": "@Test\n public void testIntersectsIndex ( ) {\n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     List < ODocument > execute = db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     Assert.assertEquals(execute.size(),1);\n}",
                             "oracle": "Assert.assertEquals(execute.size(),1);",
-                            "oracleLn": 56,
+                            "oracleLn": 6,
                             "focalFile": "core/src/main/java/com/orientechnologies/orient/core/command/OCommandRequest.java",
                             "focalName": "execute",
                             "focalStartLn": 30,
@@ -269,7 +659,7 @@
                             "endLn": 259,
                             "testMethod": "@Test\n public void testGeometryCollection ( ) throws IOException {\n     OGeometryCollectionShapeBuilder builder = new OGeometryCollectionShapeBuilder ( OShapeFactory . INSTANCE ) ; \n     ODocument geometryCollection = geometryCollection ( ) ; \n     GeometryCollection collection = createGeometryCollection ( ) ; \n     String m1 = builder . asText ( geometryCollection ) ; \n     String m2 = collection . toText ( ) ; \n     Assert.assertEquals(m2,m1);\n}",
                             "oracle": "Assert.assertEquals(m2,m1);",
-                            "oracleLn": 256,
+                            "oracleLn": 5,
                             "focalFile": "lucene/src/main/java/com/orientechnologies/spatial/shape/OShapeBuilder.java",
                             "focalName": "asText",
                             "focalStartLn": 101,
@@ -295,7 +685,7 @@
                             "endLn": 106,
                             "testMethod": "@Test\n public void testSerializeWALChanges ( ) {\n     final int serializationOffset = 5 ; \n     ByteBuffer buffer = ByteBuffer . allocateDirect ( FIELD_SIZE + serializationOffset ) . order ( ByteOrder . nativeOrder ( ) ) ; \n     byte [ ] data = new byte [ FIELD_SIZE ] ; \n     floatSerializer . serializeNative ( OBJECT , data , 0 ) ; \n     OWALChanges walChanges = new OWALChangesTree ( ) ; \n     walChanges . setBinaryValue ( buffer , data , serializationOffset ) ; \n     Assert.assertEquals(floatSerializer.getObjectSizeInByteBuffer(buffer,walChanges,serializationOffset),FIELD_SIZE);\n}",
                             "oracle": "Assert.assertEquals(floatSerializer.getObjectSizeInByteBuffer(buffer,walChanges,serializationOffset),FIELD_SIZE);",
-                            "oracleLn": 101,
+                            "oracleLn": 6,
                             "focalFile": "core/src/main/java/com/orientechnologies/common/serialization/types/OFloatSerializer.java",
                             "focalName": "getObjectSizeInByteBuffer",
                             "focalStartLn": 135,
@@ -315,7 +705,7 @@
                             "endLn": 45,
                             "testMethod": "@Test\n public void testEqualsDifferentClass ( ) {\n     final OMultiKey multiKey = new OMultiKey ( Collections . singletonList ( \"STR\" ) ) ; \n     assertFalse(multiKey.equals(\"STR\"));\n}",
                             "oracle": "assertFalse(multiKey.equals(\"STR\"));",
-                            "oracleLn": 44,
+                            "oracleLn": 1,
                             "focalFile": "core/src/main/java/com/orientechnologies/common/util/OMultiKey.java",
                             "focalName": "equals",
                             "focalStartLn": 65,
@@ -346,7 +736,7 @@
                             "endLn": 65,
                             "testMethod": "@Test\n public void testFromJavaUtil ( ) {\n     final AList < String > l = AList . < String > nil ( ) . cons ( \"STR\" ) . cons ( \"STR\" ) . cons ( \"STR\" ) ; \n     final AList < String > l2 = AList . create ( Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) ) ; \n     final AList < String > l3 = AList . create ( ( Iterable < String > ) Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) ) ; \n     assertEquals(l,l2);\n}",
                             "oracle": "assertEquals(l,l2);",
-                            "oracleLn": 59,
+                            "oracleLn": 3,
                             "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/AList.java",
                             "focalName": "create",
                             "focalStartLn": 44,
@@ -366,7 +756,7 @@
                             "endLn": 114,
                             "testMethod": "@Test\n public void testFlatMapTokens ( ) {\n     final AFunction1NoThrow < String , List < String > > tokens = new AFunction1NoThrow < String , List < String > > ( ) { \n @Override\n public List < String > apply ( String param ) { \n return Arrays . asList ( param . split ( \"STR\" ) ) ; \n } } ; \n     assertEquals(Arrays.<String>asList(),ACollectionHelper.flatMap(Arrays.<String>asList(),tokens));\n}",
                             "oracle": "assertEquals(Arrays.<String>asList(),ACollectionHelper.flatMap(Arrays.<String>asList(),tokens));",
-                            "oracleLn": 105,
+                            "oracleLn": 1,
                             "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/ACollectionHelper.java",
                             "focalName": "flatMap",
                             "focalStartLn": 197,
@@ -386,7 +776,7 @@
                             "endLn": 89,
                             "testMethod": "@Test\n@Override\n public void testFlatMapOption ( ) {\n     final AFunction1NoThrow < String , AOption < String > > uppercaseFirst = new AFunction1NoThrow < String , AOption < String > > ( ) { \n @Override\n public AOption < String > apply ( String param ) { \n if ( Character . isUpperCase ( param . charAt ( 0 ) ) ) return AOption . some ( param . substring ( 0 , 1 ) ) ; \n return AOption . none ( ) ; \n } } ; \n     assertEquals(createColl(),create().flatMap(uppercaseFirst));\n}",
                             "oracle": "assertEquals(createColl(),create().flatMap(uppercaseFirst));",
-                            "oracleLn": 77,
+                            "oracleLn": 1,
                             "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/ACollection.java",
                             "focalName": "flatMap",
                             "focalStartLn": 61,
@@ -423,7 +813,7 @@
                             "endLn": 62,
                             "testMethod": "@Test\n public void loadKeyStoreFromResources ( ) throws Exception {\n     String keyStorePath = \"STR\" ; \n     InputStream resourceAsStream = this . getClass ( ) . getResourceAsStream ( keyStorePath ) ; \n     assertNotNull(resourceAsStream);\n}",
                             "oracle": "assertNotNull(resourceAsStream);",
-                            "oracleLn": 58,
+                            "oracleLn": 2,
                             "focalFile": "core/src/main/java/org/nanohttpd/protocols/http/NanoHTTPD.java",
                             "focalName": "makeSSLSocketFactory",
                             "focalStartLn": 267,
@@ -452,7 +842,7 @@
                             "endLn": 42,
                             "testMethod": "@Test\n public void testAvailabilityCheck ( ) {\n     Assert.assertTrue(testFunctionAvailable(false));\n}",
                             "oracle": "Assert.assertTrue(testFunctionAvailable(false));",
-                            "oracleLn": 35,
+                            "oracleLn": 0,
                             "focalFile": "src/main/java/com/alipay/remoting/rpc/RpcClient.java",
                             "focalName": "shutdown",
                             "focalStartLn": 99,
@@ -478,7 +868,7 @@
                             "endLn": 195,
                             "testMethod": "@Test\n public void testRemoveConnWithSpecifiedPoolkey ( ) {\n     Connection conn1 = getAConn ( ) ; \n     conn1 . addPoolKey ( \"STR\" ) ; \n     Connection conn2 = getAConn ( ) ; \n     conn2 . addPoolKey ( \"STR\" ) ; \n     cm . add ( conn1 ) ; \n     cm . add ( conn2 ) ; \n     Assert.assertEquals(2,cm.count(poolKey));\n}",
                             "oracle": "Assert.assertEquals(2,cm.count(poolKey));",
-                            "oracleLn": 192,
+                            "oracleLn": 6,
                             "focalFile": "src/main/java/com/alipay/remoting/DefaultConnectionManager.java",
                             "focalName": "count",
                             "focalStartLn": 370,
@@ -513,7 +903,7 @@
                             "endLn": 33,
                             "testMethod": "@Test\n void mlabel ( ) {\n     assertEquals(attrs(attr(\"STR\",\"STR\"),attr(\"STR\",\"STR\")),Records.mLabel(\"STR\"));\n}",
                             "oracle": "assertEquals(attrs(attr(\"STR\",\"STR\"),attr(\"STR\",\"STR\")),Records.mLabel(\"STR\"));",
-                            "oracleLn": 32,
+                            "oracleLn": 0,
                             "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Records.java",
                             "focalName": "mLabel",
                             "focalStartLn": 35,
@@ -533,7 +923,7 @@
                             "endLn": 48,
                             "testMethod": "@Test\n void attrHead ( ) {\n     final EndLabel head = EndLabel . head ( Label . of ( \"STR\" ) , 1d , 2d ) ; \n     assertEquals(attrs(attr(\"STR\",head),attr(\"STR\",1d),attr(\"STR\",2d)),attrs(head));\n}",
                             "oracle": "assertEquals(attrs(attr(\"STR\",head),attr(\"STR\",1d),attr(\"STR\",2d)),attrs(head));",
-                            "oracleLn": 46,
+                            "oracleLn": 1,
                             "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributes.java",
                             "focalName": "attrs",
                             "focalStartLn": 34,
@@ -562,7 +952,7 @@
                             "endLn": 90,
                             "testMethod": "@Test\n public void testToString ( ) throws Exception {\n     Protocol protocol0 = new Protocol ( \"STR\" ) ; \n     assertEquals(\"STR\",protocol0.getProvidedProtocol());\n}",
                             "oracle": "assertEquals(\"STR\",protocol0.getProvidedProtocol());",
-                            "oracleLn": 87,
+                            "oracleLn": 1,
                             "focalFile": "src/main/java/org/java_websocket/protocols/Protocol.java",
                             "focalName": "getProvidedProtocol",
                             "focalStartLn": 72,
@@ -582,7 +972,7 @@
                             "endLn": 132,
                             "testMethod": "@Test\n public void testIsServerNoContextTakeover ( ) {\n     PerMessageDeflateExtension deflateExtension = new PerMessageDeflateExtension ( ) ; \n     assertTrue(deflateExtension.isServerNoContextTakeover());\n}",
                             "oracle": "assertTrue(deflateExtension.isServerNoContextTakeover());",
-                            "oracleLn": 131,
+                            "oracleLn": 1,
                             "focalFile": "src/main/java/org/java_websocket/extensions/permessage_deflate/PerMessageDeflateExtension.java",
                             "focalName": "isServerNoContextTakeover",
                             "focalStartLn": 79,
@@ -611,7 +1001,7 @@
                             "endLn": 63,
                             "testMethod": "@Test\n public void testGetName ( ) {\n     assertEquals(\"STR\",newAppveyor(env()).getName());\n}",
                             "oracle": "assertEquals(\"STR\",newAppveyor(env()).getName());",
-                            "oracleLn": 62,
+                            "oracleLn": 0,
                             "focalFile": "src/main/java/org/eluder/coveralls/maven/plugin/service/Appveyor.java",
                             "focalName": "getName",
                             "focalStartLn": 56,
@@ -646,7 +1036,7 @@
                             "endLn": 2623,
                             "testMethod": "@Test\n public void multistem_generateinflections ( ) {\n     List < Wordform > sair\u0161ana = loc\u012bt\u0101js . generateInflectionsFromParadigm ( \"STR\" , 15 , \"STR\" , \"STR\" , \"STR\" ) ; \n     List < Wordform > laivas_ir\u0161ana = loc\u012bt\u0101js . generateInflectionsFromParadigm ( \"STR\" , 15 , \"STR\" , \"STR\" , \"STR\" ) ; \n     AttributeValues pagaatne = new AttributeValues ( ) ; \n     pagaatne . addAttribute ( AttributeNames . i_PartOfSpeech , AttributeNames . v_Verb ) ; \n     pagaatne . addAttribute ( AttributeNames . i_Person , \"STR\" ) ; \n     pagaatne . addAttribute ( AttributeNames . i_Izteiksme , AttributeNames . v_Iisteniibas ) ; \n     pagaatne . addAttribute ( AttributeNames . i_Laiks , AttributeNames . v_Pagaatne ) ; \n     assertInflection(sair\u0161ana,pagaatne,\"STR\");\n}",
                             "oracle": "assertInflection(sair\u0161ana,pagaatne,\"STR\");",
-                            "oracleLn": 2612,
+                            "oracleLn": 7,
                             "focalFile": "src/main/java/lv/semti/morphology/attributes/AttributeValues.java",
                             "focalName": "addAttribute",
                             "focalStartLn": 71,
@@ -659,7 +1049,7 @@
                             "endLn": 2846,
                             "testMethod": "@Test\n public void aizkost ( ) {\n     List < Wordform > aizkost = loc\u012bt\u0101js . generateInflections ( \"STR\" ) ; \n     AttributeValues tu = new AttributeValues ( ) ; \n     tu . addAttribute ( AttributeNames . i_PartOfSpeech , AttributeNames . v_Verb ) ; \n     tu . addAttribute ( AttributeNames . i_Person , \"STR\" ) ; \n     tu . addAttribute ( AttributeNames . i_Laiks , AttributeNames . v_Tagadne ) ; \n     tu . addAttribute ( AttributeNames . i_Number , AttributeNames . v_Singular ) ; \n     assertInflection(aizkost,tu,\"STR\");\n}",
                             "oracle": "assertInflection(aizkost,tu,\"STR\");",
-                            "oracleLn": 2840,
+                            "oracleLn": 6,
                             "focalFile": "src/main/java/lv/semti/morphology/attributes/AttributeValues.java",
                             "focalName": "addAttribute",
                             "focalStartLn": 71,
@@ -672,7 +1062,7 @@
                             "endLn": 1211,
                             "testMethod": "@Test\n public void cache ( ) {\n     loc\u012bt\u0101js . setCacheSize ( 1000 ) ; \n     loc\u012bt\u0101js . enableGuessing = true ; \n     loc\u012bt\u0101js . enableVocative = true ; \n     loc\u012bt\u0101js . guessVerbs = false ; \n     loc\u012bt\u0101js . guessParticiples = false ; \n     loc\u012bt\u0101js . guessAdjectives = false ; \n     loc\u012bt\u0101js . guessInflexibleNouns = true ; \n     loc\u012bt\u0101js . enableAllGuesses = true ; \n     Word v\u0101rds = loc\u012bt\u0101js . analyze ( \"STR\" ) ; \n     assertTrue(v\u0101rds.isRecognized());\n}",
                             "oracle": "assertTrue(v\u0101rds.isRecognized());",
-                            "oracleLn": 1204,
+                            "oracleLn": 9,
                             "focalFile": "src/main/java/lv/semti/morphology/analyzer/Word.java",
                             "focalName": "isRecognized",
                             "focalStartLn": 135,
@@ -718,7 +1108,7 @@
                             "endLn": 56,
                             "testMethod": "@Test\n public void testNamespaceExtraction ( ) throws IOException {\n     prepareParserBolt ( \"STR\" ) ; \n     Metadata metadata = new Metadata ( ) ; \n     parse ( \"STR\" , \"STR\" , metadata ) ; \n     Assert.assertEquals(1,output.getEmitted().size());\n}",
                             "oracle": "Assert.assertEquals(1,output.getEmitted().size());",
-                            "oracleLn": 51,
+                            "oracleLn": 3,
                             "focalFile": "core/src/main/java/com/digitalpebble/stormcrawler/Metadata.java",
                             "focalName": "Metadata",
                             "focalStartLn": 45,
@@ -738,7 +1128,7 @@
                             "endLn": 145,
                             "testMethod": "@Test\n public void testBothAnchorAndQueryFilter ( ) throws MalformedURLException {\n     URLFilter urlFilter = createFilter ( true , queryParamsToFilter ) ; \n     URL testSourceUrl = new URL ( \"STR\" ) ; \n     String testUrl = \"STR\" ; \n     String expectedResult = \"STR\" ; \n     String normalizedUrl = urlFilter . filter ( testSourceUrl , new Metadata ( ) , testUrl ) ; \n     assertEquals(\"STR\",expectedResult,normalizedUrl);\n}",
                             "oracle": "assertEquals(\"STR\",expectedResult,normalizedUrl);",
-                            "oracleLn": 144,
+                            "oracleLn": 5,
                             "focalFile": "core/src/main/java/com/digitalpebble/stormcrawler/filtering/URLFilter.java",
                             "focalName": "filter",
                             "focalStartLn": 35,
@@ -751,7 +1141,7 @@
                             "endLn": 125,
                             "testMethod": "@Test\n public void testRemoveDupeQueryParams ( ) throws MalformedURLException {\n     URLFilter urlFilter = createFilter ( queryParamsToFilter ) ; \n     URL testSourceUrl = new URL ( \"STR\" ) ; \n     String testUrl = \"STR\" ; \n     String expectedResult = \"STR\" ; \n     String normalizedUrl = urlFilter . filter ( testSourceUrl , new Metadata ( ) , testUrl ) ; \n     assertEquals(\"STR\",expectedResult,normalizedUrl);\n}",
                             "oracle": "assertEquals(\"STR\",expectedResult,normalizedUrl);",
-                            "oracleLn": 124,
+                            "oracleLn": 5,
                             "focalFile": "core/src/main/java/com/digitalpebble/stormcrawler/filtering/URLFilter.java",
                             "focalName": "filter",
                             "focalStartLn": 35,

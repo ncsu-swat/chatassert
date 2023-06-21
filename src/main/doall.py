@@ -14,7 +14,7 @@ from path_config import DATA_DIR,API_KEY_FILEPATH,CONFIG_DIR, PRO_DIR
 from utils.file_util import read_file
 from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
-from utils.markdown_util import extract_assertion, abstract_string_literals, check_commutative_equal
+from utils.markdown_util import extract_assertion, abstract_string_literals, check_commutative_equal, get_assert_type
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 from utils.repair_util import adhoc_repair
 from utils.mock_gpt import mock_response
@@ -34,11 +34,13 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 10  # Maximum number of interactions
+MAX_INTERACTION = 30  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
-FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
+FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
+
+common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
 
 global conversation_history, feedback_history
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
@@ -146,7 +148,7 @@ def ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code):
 
     return gpt_oracle
 
-def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, className, test_name, test_code, gpt_oracle):
+def follow_up(mock_flag, gateway, project, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle):
     # Adding the original assertion generation prompt in the feedback chain to give ChatGPT more content
     insert_message(role="user", content=conversation_history[1]["content"], which_history="feedback")
 
@@ -154,12 +156,14 @@ def follow_up(mock_flag, gateway, oracle_id, project, file_path, subRepo, classN
 
     for feedback_id in range(FEEDBACK_BUDGET):
         # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
+        print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
         if feedback is not None:
             if len(feedback) > 0:
                 # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
-                fuzzed_mutants = adhoc_repair(gateway, gpt_oracle, feedback, file_path, test_name)
+                fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name)
 
                 for mutant in fuzzed_mutants:
+                    print('FOLLOW-UP MUTANT: {}'.format(mutant))
                     res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, mutant)
                     if feedback is not None and len(feedback)==0:
                         # Mutant causes successful build without any feedback. So, select this mutant as gpt_oracle
@@ -309,25 +313,21 @@ def tecofy_testlines(lines):
     return tecofied_lines
 
 def place_placeholder(tecofied_lines, startLn, oracleLn):
+    offset = 2
+    
     # `@Test \n public void testFoo(...) {` VS. `@Test \n public void testFoo(...) \n { ...` VS. `@Test \n public void testFoo(...) \n { \n ...`
-    if '{' in tecofied_lines[1]:
-        oracleLn = oracleLn + 2
-        startLn = startLn + 2
-    elif '{' in tecofied_lines[2]:
-        if len(tecofied_lines[2].strip()) > 1:
-            oracleLn = oracleLn + 2
-            startLn = startLn + 2
-        else:
-            oracleLn = oracleLn + 3
-            startLn = startLn + 3
+    if '{' in tecofied_lines[2]:
+        if len(tecofied_lines[2].strip()) == 1:
+            offset = 3
 
     placeheld_lines = []
 
     for line in tecofied_lines:
-        if len(placeheld_lines) == (oracleLn-startLn):
+        if len(placeheld_lines) == (oracleLn+offset):
             # Trigger stop
             placeheld_lines.append("<AssertPlaceHolder>;")
             placeheld_lines.append("}")
+            break
         else:
             placeheld_lines.append(line)
     
@@ -341,10 +341,10 @@ if __name__ == "__main__":
         MAX_INTERACTION = 1
     if 'v2' in arg: 
         v2_flag = True
-        MAX_INTERACTION = 30
+        # Default MAX_INTERACTION
     if 'mock' in arg: 
         mock_flag = True
-        MAX_INTERACTION = 30
+        MAX_INTERACTION = 3
 
     # Input data sample id (e.g. sample_1.json)
     sample_id = sys.argv[-1]
@@ -386,10 +386,6 @@ if __name__ == "__main__":
                 
                 # create project object
                 project = Project(repoName, "", gitURL, commit, gateway)
-                # clone the project
-                project.init_env()
-                # index the project
-                project.index_project()
 
                 testId = 0
                 for testClass in allTests:
@@ -423,6 +419,7 @@ if __name__ == "__main__":
                         # Restore test file from backup
                         restore_test_file(filePath)
 
+                        # Get Test Code
                         test_name = test["testName"]
                         test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
                         test_lines = tecofy_testlines(test_lines)
@@ -430,11 +427,16 @@ if __name__ == "__main__":
                         if len(test_lines) == 0: continue
                         test_code = " ".join(test_lines)
 
+                        # Get Focal Code
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
                         focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
 
+                        # Get Oracle Code
                         oracle_code = test['oracle']
+
+                        # Will not run for assertThat and helper assertions
+                        if get_assert_type(oracle_code) not in common_assertion_kinds: continue
 
                         conversation_history = [
                             {"role": "system", "content": SYSTEM_ROLE},
@@ -465,7 +467,7 @@ if __name__ == "__main__":
                                 if gpt_oracle is None: continue
                                 
                                 # Follow-up with feedback loop
-                                res, feedback, gpt_oracle = follow_up(mock_flag, gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+                                res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
                                 if gpt_oracle is None: continue
 
                                 if feedback is not None and len(feedback) > 0:
@@ -478,11 +480,8 @@ if __name__ == "__main__":
                                     insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
                                     target_number -= 1
 
-                            # Convert string literals to STR tag for evaluation
-                            if "\"STR\"" in gpt_oracle:
-                                gpt_oracle = abstract_string_literals(gpt_oracle)
-                                if gpt_oracle is None or len(gpt_oracle)==0:
-                                    continue
+                            # If a string literal is present in the generated oracle, convert the string literal to abstract STR tag
+                            if '"' in gpt_oracle: gpt_oracle = abstract_string_literals(gpt_oracle)
 
                             if res is not None:
                                 csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"
@@ -526,12 +525,12 @@ if __name__ == "__main__":
 
                                 end_time = time.time()
 
-                                if feedback is not None and len(feedback) == 0:
+                                if not res['build_failure']:
                                     resPassWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
                                     first_pass_case_done = True
-                                
-                                resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
-                                first_case_done = True
+                                else:
+                                    resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
+                                    first_case_done = True
                         testId += 1
 
                                 # input('\n\nENTER A KEY')

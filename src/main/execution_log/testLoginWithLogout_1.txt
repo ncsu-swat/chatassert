@@ -15,31 +15,8 @@
 [INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/jacoco.exec
 [INFO] 
 [INFO] --- fmt-maven-plugin:2.9:format (default) @ iiif-apis ---
-[WARNING] Failed to format file '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java'.
-com.google.googlejavaformat.java.FormatterException: 78:10: error: illegal start of expression
-    at com.google.googlejavaformat.java.FormatterException.fromJavacDiagnostics (FormatterException.java:50)
-    at com.google.googlejavaformat.java.Formatter.format (Formatter.java:151)
-    at com.google.googlejavaformat.java.Formatter.getFormatReplacements (Formatter.java:258)
-    at com.google.googlejavaformat.java.Formatter.formatSource (Formatter.java:234)
-    at com.google.googlejavaformat.java.Formatter.formatSource (Formatter.java:202)
-    at com.coveo.AbstractFMT.formatSourceFile (AbstractFMT.java:206)
-    at com.coveo.AbstractFMT.lambda$formatSourceFilesInDirectory$1 (AbstractFMT.java:155)
-    at java.util.stream.ForEachOps$ForEachOp$OfRef.accept (ForEachOps.java:183)
-    at java.util.stream.ReferencePipeline$2$1.accept (ReferencePipeline.java:177)
-    at java.util.stream.ReferencePipeline$2$1.accept (ReferencePipeline.java:177)
-    at java.util.stream.ReferencePipeline$3$1.accept (ReferencePipeline.java:195)
-    at java.util.stream.ReferencePipeline$2$1.accept (ReferencePipeline.java:177)
-    at java.util.ArrayList$ArrayListSpliterator.forEachRemaining (ArrayList.java:1655)
-    at java.util.stream.AbstractPipeline.copyInto (AbstractPipeline.java:484)
-    at java.util.stream.ForEachOps$ForEachTask.compute (ForEachOps.java:290)
-    at java.util.concurrent.CountedCompleter.exec (CountedCompleter.java:746)
-    at java.util.concurrent.ForkJoinTask.doExec (ForkJoinTask.java:290)
-    at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec (ForkJoinPool.java:1020)
-    at java.util.concurrent.ForkJoinPool.scan (ForkJoinPool.java:1656)
-    at java.util.concurrent.ForkJoinPool.runWorker (ForkJoinPool.java:1594)
-    at java.util.concurrent.ForkJoinWorkerThread.run (ForkJoinWorkerThread.java:183)
-[INFO] Processed 100 files (0 reformatted).
-[INFO] Processed 102 files (0 reformatted).
+[INFO] Processed 100 files (1 reformatted).
+[INFO] Processed 103 files (1 reformatted).
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ iiif-apis ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -61,36 +38,29 @@ com.google.googlejavaformat.java.FormatterException: 78:10: error: illegal start
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ iiif-apis ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 18 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/test-classes
-[INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
 [WARNING] bootstrap class path not set in conjunction with -source 8
-[INFO] 1 warning
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,12] illegal start of expression
-[INFO] 4 errors 
-[INFO] -------------------------------------------------------------
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/ExternalTest.java:[89,78] SIZE_BY_WH_LISTED in de.digitalcollections.iiif.model.image.ImageApiProfile.Feature has been deprecated
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/JsonMappingTest.java:[114,29] isEqualToComparingFieldByFieldRecursively(java.lang.Object) in org.assertj.core.api.AbstractObjectAssert has been deprecated
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ iiif-apis ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.622 s - in de.digitalcollections.iiif.model.auth.SpecExamplesDeserializationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:report (default) @ iiif-apis ---
+[INFO] Loading execution data file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/target/jacoco.exec
+[INFO] Analyzed bundle 'DigitalCollections: IIIF API Library' with 81 classes
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.480 s
-[INFO] Finished at: 2023-06-05T09:27:34-04:00
+[INFO] Total time:  13.360 s
+[INFO] Finished at: 2023-06-21T10:00:51-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project iiif-apis: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/iiif-apis/src/test/java/de/digitalcollections/iiif/model/auth/SpecExamplesDeserializationTest.java:[78,12] illegal start of expression
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

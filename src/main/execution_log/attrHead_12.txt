@@ -49,80 +49,74 @@
 [INFO] Compiling 47 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java uses unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/RecordsTest.java:[17,25] no suitable method found for assertEquals(no arguments)
-    method org.junit.Assert.assertEquals(java.lang.String,java.lang.Object,java.lang.Object) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.Object,java.lang.Object) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.String,double,double,double) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.String,float,float,float) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(long,long) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.String,long,long) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(double,double) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.String,double,double) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(double,double,double) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(float,float,float) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.String,java.lang.Object[],java.lang.Object[]) is not applicable
-      (actual and formal argument lists differ in length)
-    method org.junit.Assert.assertEquals(java.lang.Object[],java.lang.Object[]) is not applicable
-      (actual and formal argument lists differ in length)
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/EndLabelTest.java:[31,66] cannot find symbol
-  symbol:   class Foo
-  location: class guru.nidi.graphviz.attribute.EndLabelTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/EndLabelTest.java:[31,51] guru.nidi.graphviz.attribute.Attributes is abstract; cannot be instantiated
-[INFO] 3 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphviz-java ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running guru.nidi.graphviz.attribute.EndLabelTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in guru.nidi.graphviz.attribute.EndLabelTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.9.15:assert (default) @ graphviz-java ---
+[INFO] Loading execution data file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
+[INFO] Analyzed bundle 'graphviz-java' with 152 classes
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running guru.nidi.graphviz.CodeCoverage
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.098 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.083 s  <<< FAILURE!
+java.lang.AssertionError: 
+Enough code coverage
+Expected: Has enough test coverage.
+     but: Found unsatisfied test coverage requirements:
+Analyzed coverage types:                                    BRANCH       LINE         METHOD       
+guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
+	at guru.nidi.graphviz.CodeCoverage.coverage(CodeCoverage.java:38)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CodeCoverage.coverage:38 Enough code coverage
+Expected: Has enough test coverage.
+     but: Found unsatisfied test coverage requirements:
+Analyzed coverage types:                                    BRANCH       LINE         METHOD       
+guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.458 s
-[INFO] Finished at: 2023-06-05T22:15:28-04:00
+[INFO] Total time:  19.434 s
+[INFO] Finished at: 2023-06-21T12:29:20-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project graphviz-java: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/RecordsTest.java:[17,25] no suitable method found for assertEquals(no arguments)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,java.lang.Object,java.lang.Object) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.Object,java.lang.Object) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,double,double,double) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,float,float,float) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(long,long) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,long,long) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(double,double) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,double,double) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(double,double,double) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(float,float,float) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.String,java.lang.Object[],java.lang.Object[]) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR]     method org.junit.Assert.assertEquals(java.lang.Object[],java.lang.Object[]) is not applicable
-[ERROR]       (actual and formal argument lists differ in length)
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/EndLabelTest.java:[31,66] cannot find symbol
-[ERROR]   symbol:   class Foo
-[ERROR]   location: class guru.nidi.graphviz.attribute.EndLabelTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/attribute/EndLabelTest.java:[31,51] guru.nidi.graphviz.attribute.Attributes is abstract; cannot be instantiated
+[ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

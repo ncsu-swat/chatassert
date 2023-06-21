@@ -1,0 +1,162 @@
+{
+    "projects": [
+        {
+            "userName": "Yubico",
+            "repoName": "yubico-java-client",
+            "subRepos": [
+                "v2client",
+                "jaas",
+                "demo-server"
+            ],
+            "commitSHA": "e21fb672e290a118f7420daaf81ccb96d319d52c",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "YubicoClientTest",
+                    "classPath": "v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java",
+                    "subRepo": "v2client",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 66,
+                        "endLn": 69,
+                        "setupMethod": "@Before\n public void setup ( ) { \n client = YubicoClient . getClient ( this . clientId , apiKey ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testShortOTP",
+                            "startLn": 117,
+                            "endLn": 121,
+                            "testMethod": "@Test\n public void testShortOTP ( ) {\n     String otp = \"STR\" ; \n     assertFalse(YubicoClient.isValidOTPFormat(otp));\n}",
+                            "oracle": "assertFalse(YubicoClient.isValidOTPFormat(otp));",
+                            "oracleLn": 1,
+                            "focalFile": "v2client/src/main/java/com/yubico/client/v2/YubicoClient.java",
+                            "focalName": "isValidOTPFormat",
+                            "focalStartLn": 222,
+                            "focalEndLn": 233,
+                            "focalMethod": " public static boolean isValidOTPFormat ( String otp ) { \n if ( otp == null ) { \n return false ; \n } int len = otp . length ( ) ; \n for ( char c : otp . toCharArray ( ) ) { \n if ( c < 0x20 || c > 0x7E ) { \n return false ; \n } } return OTP_MIN_LEN <= len && len <= OTP_MAX_LEN ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "arnohaase",
+            "repoName": "a-foundation",
+            "subRepos": [
+                "a-foundation"
+            ],
+            "commitSHA": "f3eef2ca89d67775f202a4c28140230a6229291e",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "AListTest",
+                    "classPath": "a-foundation/src/test/java/com/ajjpj/afoundation/collection/immutable/AListTest.java",
+                    "subRepo": "a-foundation",
+                    "classTests": [
+                        {
+                            "testName": "testFromJavaUtil",
+                            "startLn": 54,
+                            "endLn": 65,
+                            "testMethod": "@Test\n public void testFromJavaUtil ( ) {\n     final AList < String > l = AList . < String > nil ( ) . cons ( \"STR\" ) . cons ( \"STR\" ) . cons ( \"STR\" ) ; \n     final AList < String > l2 = AList . create ( Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) ) ; \n     final AList < String > l3 = AList . create ( ( Iterable < String > ) Arrays . asList ( \"STR\" , \"STR\" , \"STR\" ) ) ; \n     assertEquals(l,l2);\n}",
+                            "oracle": "assertEquals(l,l2);",
+                            "oracleLn": 3,
+                            "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/AList.java",
+                            "focalName": "create",
+                            "focalStartLn": 44,
+                            "focalEndLn": 57,
+                            "focalMethod": " public static < T > AList < T > create ( Iterable < T > elements ) { \n if ( elements instanceof AList ) { \n return ( AList < T > ) elements ; \n } if ( elements instanceof List ) { \n return create ( ( List < T > ) elements ) ; \n } AList < T > result = nil ( ) ; \n for ( T el : elements ) { \n result = result . cons ( el ) ; \n } return result . reverse ( ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "orientechnologies",
+            "repoName": "orientdb",
+            "subRepos": [
+                "test-commons",
+                "core",
+                "client",
+                "object",
+                "tools",
+                "server",
+                "security",
+                "graphdb",
+                "tests",
+                "distributed",
+                "lucene",
+                "jdbc",
+                "etl",
+                "distribution",
+                "distribution-tp2",
+                "crashtests"
+            ],
+            "commitSHA": "2cabb46c9581572b7f46724864f02d9c688070c5",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "CompactedLinkSerializerTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/CompactedLinkSerializerTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testSerializeThreeBytesInByteBuffer",
+                            "startLn": 140,
+                            "endLn": 157,
+                            "testMethod": "@Test\n public void testSerializeThreeBytesInByteBuffer ( ) {\n     final OCompactedLinkSerializer linkSerializer = new OCompactedLinkSerializer ( ) ; \n     final ORecordId rid = new ORecordId ( 123 , 65628 ) ; \n     final int size = linkSerializer . getObjectSize ( rid ) ; \n     ByteBuffer buffer = ByteBuffer . allocate ( size + 1 ) ; \n     buffer . position ( 1 ) ; \n     linkSerializer . serializeInByteBufferObject ( rid , buffer ) ; \n     buffer . position ( 1 ) ; \n     Assert.assertEquals(size,linkSerializer.getObjectSizeInByteBuffer(buffer));\n}",
+                            "oracle": "Assert.assertEquals(size,linkSerializer.getObjectSizeInByteBuffer(buffer));",
+                            "oracleLn": 143,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/serialization/serializer/binary/impl/OCompactedLinkSerializer.java",
+                            "focalName": "getObjectSizeInByteBuffer",
+                            "focalStartLn": 176,
+                            "focalEndLn": 179,
+                            "focalMethod": "@Override\n public int getObjectSizeInByteBuffer ( ByteBuffer buffer ) { \n return buffer . get ( buffer . position ( ) + OShortSerializer . SHORT_SIZE ) + OByteSerializer . BYTE_SIZE + OShortSerializer . SHORT_SIZE ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "cucumber-ltd",
+            "repoName": "cucumber-pro-plugin-jvm",
+            "subRepos": [],
+            "commitSHA": "a09ee0b1682d3cd8b68c240820e647d4515e931f",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ConfigTest",
+                    "classPath": "src/test/java/io/cucumber/pro/config/ConfigTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "gets_deep_value",
+                            "startLn": 28,
+                            "endLn": 37,
+                            "testMethod": "@Test\n public void gets_deep_value ( ) {\n     Config root = new Config ( ) ; \n     Config one = root . getChild ( \"STR\" ) ; \n     Config two = one . getChild ( \"STR\" ) ; \n     two . set ( \"STR\" , \"STR\" ) ; \n     assertEquals(\"STR\",root.getString(\"STR\"));\n}",
+                            "oracle": "assertEquals(\"STR\",root.getString(\"STR\"));",
+                            "oracleLn": 31,
+                            "focalFile": "src/main/java/io/cucumber/pro/config/Config.java",
+                            "focalName": "getString",
+                            "focalStartLn": 17,
+                            "focalEndLn": 19,
+                            "focalMethod": " public String getString ( String key ) { \n return getIn ( normalize ( key ) , false ) . getString ( ) ; \n } "
+                        },
+                        {
+                            "testName": "has_yaml_representation",
+                            "startLn": 66,
+                            "endLn": 87,
+                            "testMethod": "@Test\n public void has_yaml_representation ( ) {\n     Config config = new Config ( ) ; \n     config . set ( \"STR\" , \"STR\" ) ; \n     config . set ( \"STR\" , \"STR\" ) ; \n     config . set ( \"STR\" , \"STR\" ) ; \n     config . set ( \"STR\" , \"STR\" ) ; \n     String expected = \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" + \"STR\" ; \n     assertEquals(expected,config.toYaml(\"STR\"));\n}",
+                            "oracle": "assertEquals(expected,config.toYaml(\"STR\"));",
+                            "oracleLn": 69,
+                            "focalFile": "src/main/java/io/cucumber/pro/config/Config.java",
+                            "focalName": "toYaml",
+                            "focalStartLn": 100,
+                            "focalEndLn": 108,
+                            "focalMethod": " public String toYaml ( String rootKey ) { \n try { \n StringBuilder out = new StringBuilder ( ) ; \n this . print ( 0 , rootKey , out ) ; \n return out . toString ( ) ; \n } catch ( IOException e ) { \n throw new RuntimeException ( e ) ; \n } } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

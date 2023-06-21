@@ -2,9 +2,15 @@ import pandas as pd
 pd.set_option('display.max_colwidth', None)
 pd.set_option('display.max_columns', None)
 
+import sys
+sys.path.append('../utils')
+from markdown_util import get_assert_type
+
 TECO = 0
 TATU = 1
 BR = 2
+
+common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
 
 teco_cnt, tatu_cnt, br_cnt = 0, 0, 0
 teco_tatu_cnt, teco_br_cnt, tatu_br_cnt = 0, 0, 0
@@ -18,34 +24,40 @@ br = pd.read_csv('../../data/venn/oragen-res-batch-sort.tsv', sep='\t')
 def teco_fn(df_slice):
     global corr_dict
     classTestName = df_slice['ClassName#TestName'].iloc[0]
-    
-    if classTestName not in corr_dict: 
-        corr_dict[classTestName] = []
-    else:
-        print(classTestName)
+    assertType = get_assert_type(df_slice['TrueOracle'].iloc[0])
 
-    for (idx, row) in df_slice.iterrows():
-        if row['Correct'] == 1:
-            corr_dict[classTestName].append(TECO)
-            break
+    if assertType in common_assertion_kinds:
+        if classTestName not in corr_dict: 
+            corr_dict[classTestName] = []
+        else:
+            print(classTestName)
+
+        for (idx, row) in df_slice.iterrows():
+            if row['Correct'] == 1:
+                corr_dict[classTestName].append(TECO)
+                break
 
 def tatu_fn(df_slice):
     global corr_dict
     classTestName = df_slice['ClassName#TestName'].iloc[0]
+    assertType = get_assert_type(df_slice['TrueOracle'].iloc[0])
 
-    for (idx, row) in df_slice.iterrows():
-        if row['Correct'] == 1:
-            corr_dict[classTestName].append(TATU)
-            break
+    if assertType in common_assertion_kinds:
+        for (idx, row) in df_slice.iterrows():
+            if row['Correct'] == 1:
+                corr_dict[classTestName].append(TATU)
+                break
 
 def br_fn(df_slice):
     global corr_dict
     classTestName = df_slice['ClassName#TestName'].iloc[0]
+    assertType = get_assert_type(df_slice['TrueOracle'].iloc[0])
 
-    for (idx, row) in df_slice.iterrows():
-        if row['Correct'] == 1:
-            corr_dict[classTestName].append(BR)
-            break
+    if assertType in common_assertion_kinds:
+        for (idx, row) in df_slice.iterrows():
+            if row['Correct'] == 1:
+                corr_dict[classTestName].append(BR)
+                break
 
 tatu['ClassName#TestName'] = tatu['ClassName'] + '#' + tatu['TestName']
 br['ClassName#TestName'] = br['ClassName'] + '#' + br['TestName']
