@@ -225,7 +225,7 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
 
             # Test failure
             if "test failures" in output_lines[i].lower():
-                report_dir = os.path.join(project.repo_dir, 'target/surefire-reports/')
+                report_dir = os.path.join(project.repo_dir, subRepo, 'target/surefire-reports/')
                 report_path = None
                 for r_path in os.listdir(report_dir):
                     if (class_name + '.xml') in r_path:

@@ -1,0 +1,122 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------------< guru.nidi:graphviz-java >-----------------------
+[INFO] Building graphviz-java 0.18.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphviz-java ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.9.15:prepare (default) @ graphviz-java ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- snippets-maven-plugin:1.0.0:snippets (default) @ graphviz-java ---
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ContextTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SimpleTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgShapeAnalyzerTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgSizeAnalyzerTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/GraphElementFinderTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SvgElementFinderTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ReadmeTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SerializerTest.java
+[INFO] Found 10 snippets.
+[INFO] Replacing README.md
+[WARNING] In file README.md: Snippet 'kotlin' not defined.
+[WARNING] In file README.md: Snippet 'rough' not defined.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphviz-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphviz-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 130 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphviz-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphviz-java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 47 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphviz-java ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running guru.nidi.graphviz.attribute.RecordsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s - in guru.nidi.graphviz.attribute.RecordsTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.9.15:assert (default) @ graphviz-java ---
+[INFO] Loading execution data file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
+[INFO] Analyzed bundle 'graphviz-java' with 152 classes
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running guru.nidi.graphviz.CodeCoverage
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.098 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.083 s  <<< FAILURE!
+java.lang.AssertionError: 
+Enough code coverage
+Expected: Has enough test coverage.
+     but: Found unsatisfied test coverage requirements:
+Analyzed coverage types:                                    BRANCH       LINE         METHOD       
+guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
+	at guru.nidi.graphviz.CodeCoverage.coverage(CodeCoverage.java:38)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CodeCoverage.coverage:38 Enough code coverage
+Expected: Has enough test coverage.
+     but: Found unsatisfied test coverage requirements:
+Analyzed coverage types:                                    BRANCH       LINE         METHOD       
+guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
+guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.343 s
+[INFO] Finished at: 2023-06-21T16:08:00-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

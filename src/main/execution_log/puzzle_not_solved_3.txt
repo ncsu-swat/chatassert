@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.teachingextensions.logo.PuzzleTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.797 s
-[INFO] Finished at: 2023-06-21T15:42:00-04:00
+[INFO] Total time:  4.428 s
+[INFO] Finished at: 2023-06-21T15:57:03-04:00
 [INFO] ------------------------------------------------------------------------
