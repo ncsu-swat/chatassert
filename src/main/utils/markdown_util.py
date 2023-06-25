@@ -109,22 +109,6 @@ def clean_args(assertStatement):
 
     return 'org.junit.Assert.' + finalAssertStatement.replace('( ', '(')
 
-# Abstracting string literals in the assert statement by replacing string literals with "STR"
-def abstract_string_literals(assertStatement):
-    assertType = get_assert_type(assertStatement)
-    args = get_assert_args(assertStatement)
-
-    finalAssertStatement = assertType + "("
-    for (i, arg) in enumerate(args):
-        if "\"" in arg:
-            args[i] = "\"STR\""
-        finalAssertStatement += args[i]
-        if i < len(args)-1:
-            finalAssertStatement += ','
-    finalAssertStatement += ");"
-
-    return finalAssertStatement
-
 # Check if commutating args of assertEquals gives exact match
 def check_commutative_equal(gpt_oracle, oracle_code):
     gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()

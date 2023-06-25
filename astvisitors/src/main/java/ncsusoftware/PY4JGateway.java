@@ -3,6 +3,7 @@ package ncsusoftware;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.expr.StringLiteralExpr;
 
 import java.util.Optional;
 import java.util.Scanner;
@@ -146,6 +147,43 @@ public class PY4JGateway{
         // }
 
         return methodsToClasses;
+    }
+
+    public Map<String, String> lhs2rhs(String source){
+        JavaParser jparser = new JavaParser();
+        Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(source).getResult();
+
+        AssignExprVisitor visitor = new AssignExprVisitor();
+
+        if (optStmt.isPresent()) {
+            com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
+
+            // for debugging:
+            // ParseUtil.printTypesContentsRecursively(stmt);
+
+            stmt.accept(visitor, null);
+        }
+
+        return visitor.lhs2rhs;
+    }
+
+    public String abstractStringLiterals(String assertion){
+        JavaParser jparser = new JavaParser();
+        Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(assertion).getResult();
+
+        String abstractString = assertion;
+
+        if (optStmt.isPresent()) {
+            com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
+
+            // for debugging:
+            // ParseUtil.printTypesContentsRecursively(stmt);
+
+            stmt.walk(StringLiteralExpr.class, e -> e.setString("STR"));
+            abstractString = stmt.toString();
+        }
+
+        return abstractString;
     }
 }
 

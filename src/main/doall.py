@@ -14,7 +14,7 @@ from path_config import DATA_DIR,API_KEY_FILEPATH,CONFIG_DIR, PRO_DIR
 from utils.file_util import read_file
 from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
-from utils.markdown_util import extract_assertion, abstract_string_literals, check_commutative_equal, get_assert_type
+from utils.markdown_util import extract_assertion, check_commutative_equal, get_assert_type
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 from utils.repair_util import adhoc_repair
 from utils.mock_gpt import mock_response
@@ -480,8 +480,9 @@ if __name__ == "__main__":
                                     insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
                                     target_number -= 1
 
-                            # If a string literal is present in the generated oracle, convert the string literal to abstract STR tag
-                            if '"' in gpt_oracle: gpt_oracle = abstract_string_literals(gpt_oracle)
+                            # Convert the string literals in the generated assertion, to abstract STR tag
+                            gpt_oracle = gateway.entry_point.abstractStringLiterals(gpt_oracle)
+                            print("ABSTRACT STRING LITERAL: {}".format(gpt_oracle))
 
                             if res is not None:
                                 csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"

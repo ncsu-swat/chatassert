@@ -3,16 +3,20 @@ import csv
 import random
 import os
 import sys
+import math
 
 import pandas as pd
 pd.options.display.max_colwidth = 500
 
+from markdown_util import get_assert_type
 from file_util import read_file
 
 from AST import AST
 
 sys.path.append('../') # Since Project module is in the parent directory
 from project import Project
+
+common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
 
 #-------------------------------------------
 
@@ -175,13 +179,63 @@ def countTecoStrs():
                     break
 
 def sampleTeco():
+    def getGoldKind(id):
+        oracle = ''.join(golds[id])
+        return get_assert_type(oracle)
+
     all_preds = None
-    sample_size = 350
+    atleast_nsamples = 350
+    sample_ids = set()
+
+    unique_projects = set(projects)
+    nsamples_per_project = math.ceil(atleast_nsamples/len(unique_projects))
+
+    # Initializing map between unique project and the corresponding line numbers
+    sample_dict = dict()
+    for proj in unique_projects: sample_dict[proj] = []
+
+    # Mapping between unique project and the corresponding line numbers
+    for (idx, proj) in enumerate(projects): sample_dict[proj].append(idx)
+
+    # Unique random sampling nsamples_per_project
+    for proj in unique_projects:
+        # print('Project: {} --- Len: {}'.format(proj, len(sample_dict[proj])))
+
+        if len(sample_dict[proj]) <= nsamples_per_project:
+            for val in sample_dict[proj]: 
+                sample_ids.add(val)
+        else:
+            for val in random.sample(sample_dict[proj], nsamples_per_project):
+                sample_ids.add(val)
+
+    # *** MAKE SURE TO REMOVE ASSERT THAT AND HELPER ASSERTIONS ***
+    for id in sample_ids.copy():
+        if getGoldKind(id) not in common_assertion_kinds: 
+            sample_ids.remove(id)
+
+    # Fill up the remaining slots up to atleast_nsamples
+    _r = 0
+    nrems = atleast_nsamples-len(sample_ids)
+    while _r < nrems:
+        _sample_id = random.randint(0, len(projects)-1)
+        if _sample_id not in sample_ids:
+            if getGoldKind(_sample_id) not in common_assertion_kinds:
+                continue
+            _r += 1
+            sample_ids.add(_sample_id)
+
+    # Check if weird assertions are not included
+    for id in sample_ids:
+        print(getGoldKind(id))
+
+    # Check if a total of atleast_nsamples are collected
+    print(len(sample_ids))
+
+    sample_ids = list(sample_ids)
+    random.shuffle(sample_ids)
     with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as allPredsFile, open('../../teco_eval/teco/output/preds.jsonl', 'w+') as predsFile:
         all_preds = [json.loads(line) for line in allPredsFile]
-        random.shuffle(all_preds)
-        idxs = random.sample(range(len(all_preds)), sample_size)
-        for idx in idxs:
+        for idx in sample_ids:
             predsFile.write(json.dumps(all_preds[idx]) + '\n')
 
 # Check to see if the total number of tests retrieved is equal to the total number of predictions from teco
