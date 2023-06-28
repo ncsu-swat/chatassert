@@ -16,7 +16,7 @@ from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
 from utils.markdown_util import extract_assertion, check_commutative_equal, get_assert_type
 from utils.prompt_generator_util import get_vulnerable_function_attributes
-from utils.repair_util import adhoc_repair
+from utils.repair_util import adhoc_repair, check_and_fix_lhs2rhs
 from utils.mock_gpt import mock_response
 
 from py4j.java_gateway import JavaGateway
@@ -160,7 +160,7 @@ def follow_up(mock_flag, gateway, project, oracle_id, file_path, subRepo, classN
         if feedback is not None:
             if len(feedback) > 0:
                 # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
-                fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name)
+                fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name, test_code)
 
                 for mutant in fuzzed_mutants:
                     print('FOLLOW-UP MUTANT: {}'.format(mutant))
@@ -193,7 +193,7 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
     try:
         testInjector = javaGateway.entry_point
         testInjector.setFile(file_path)
-        testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>; }", gpt_oracle))
+        testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>;", gpt_oracle))
 
         res, output = project.run_test(subRepo, class_name, test_name)
 
@@ -359,7 +359,7 @@ if __name__ == "__main__":
     gateway = JavaGateway()
     assertionTypes = ['assertEquals', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals', 'assertThat']
 
-    with open(os.path.join(PRO_DIR, "res_all_{}.csv".format(sample_id)), "w+") as resAll, open(os.path.join(PRO_DIR, "res_pass_{}.csv".format(sample_id)), "w+") as resPass:
+    with open(os.path.join(PRO_DIR, "res/res_all/res_all_{}.csv".format(sample_id)), "w+") as resAll, open(os.path.join(PRO_DIR, "res/res_pass/res_pass_{}.csv".format(sample_id)), "w+") as resPass:
         resAllWriter = csv.writer(resAll, delimiter='\t')
         resPassWriter = csv.writer(resPass, delimiter='\t')
 
@@ -407,7 +407,7 @@ if __name__ == "__main__":
                     if "after" in testClass:
                         after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
 
-                    # run the tests before anlyzing to make sure that there are tests and that the tests pass
+                    # # Run the tests before anlyzing to make sure that there are tests and that the tests pass
                     # res = project.run_tests()
                     # if res["tests"] == 0:
                     #     raise Exception("unexpected: could not find tests in this project")
@@ -444,6 +444,7 @@ if __name__ == "__main__":
 
                         first_pass_case_done, first_case_done = False, False
                         target_number = TARGET_NUMBER
+                        already_gen_oras = set()
                         # for variantId, assertion_type in enumerate(assertionTypes):                            
                         for oracle_id in range(MAX_INTERACTION):
                             start_time = time.time()
@@ -459,30 +460,38 @@ if __name__ == "__main__":
                             if v1_flag: # Single feedback
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
                                 if gpt_oracle is None: continue
-                                res, feedback = collect_feedback(gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+
+                                if gpt_oracle not in already_gen_oras:
+                                    already_gen_oras.add(gpt_oracle)
+                                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
 
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
                                 print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
+
+                                if gpt_oracle not in already_gen_oras:
+                                    already_gen_oras.add(gpt_oracle)
                                 
-                                # Follow-up with feedback loop
-                                res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
-                                if gpt_oracle is None: continue
+                                    # Follow-up with feedback loop
+                                    res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+                                    if gpt_oracle is None: continue
 
-                                if feedback is not None and len(feedback) > 0:
-                                    # Explicitly tell ChatGPT to avoid gpt_oracle
-                                    insert_message(role="user", content="AVOID generating the assertion `"+gpt_oracle+"` because it results in a build failure.", which_history="conversation")
+                                    if feedback is not None and len(feedback) > 0:
+                                        # Explicitly tell ChatGPT to avoid gpt_oracle
+                                        insert_message(role="user", content="AVOID generating the assertion `"+gpt_oracle+"` because it results in a build failure.", which_history="conversation")
 
-                                # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
-                                if len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
-                                    # Oracle compiles and runs - add it to main conversation history
-                                    insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
-                                    target_number -= 1
+                                    # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
+                                    if len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
+                                        # Oracle compiles and runs - add it to main conversation history
+                                        insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
+                                        target_number -= 1
 
                             # Convert the string literals in the generated assertion, to abstract STR tag
                             gpt_oracle = gateway.entry_point.abstractStringLiterals(gpt_oracle)
-                            print("ABSTRACT STRING LITERAL: {}".format(gpt_oracle))
+
+                            # Apply assignment heuristics (lhs = rhs -> replace rhs with lhs in the assertion)
+                            gpt_oracle = check_and_fix_lhs2rhs(gateway, gpt_oracle, test_code)
 
                             if res is not None:
                                 csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"

@@ -1,13 +1,14 @@
 import re
 import random
 
-def adhoc_repair(java_gateway, project, gpt_oracle, feedback, file_path, test_name):
+def adhoc_repair(java_gateway, project, gpt_oracle, feedback, file_path, test_name, test_code):
     fuzzed_mutants = []
 
     fuzzed_mutants += check_and_fix_method_not_found(java_gateway, project, gpt_oracle, feedback, file_path, test_name)
 
     return fuzzed_mutants
 
+# Identifier heuristics
 def check_and_fix_method_not_found(java_gateway, project, gpt_oracle, feedback, file_path, test_name):
     fuzzed_mutants = []
 
@@ -36,5 +37,17 @@ def check_and_fix_method_not_found(java_gateway, project, gpt_oracle, feedback, 
         random.shuffle(fuzzed_mutants)
 
     return fuzzed_mutants
+
+# Assignment heuristics
+def check_and_fix_lhs2rhs(java_gateway, gpt_oracle, test_code):
+    lhs2rhs_dict = java_gateway.entry_point.lhs2rhs(test_code)
+
+    gpt_oracle = gpt_oracle.replace(' ', '')
+    for (k, v) in lhs2rhs_dict.items():
+        k = k.replace(' ', '')
+        v = v.replace(' ', '')
+        gpt_oracle = gpt_oracle.replace(k, v)
+
+    return gpt_oracle
 
     
