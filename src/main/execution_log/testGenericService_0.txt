@@ -47,8 +47,8 @@
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running de.digitalcollections.iiif.model.annex.SpecExamplesDeserializationTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.658 s - in de.digitalcollections.iiif.model.annex.SpecExamplesDeserializationTest
+[INFO] Running de.digitalcollections.iiif.model.annex.SpecExamplesSerializationTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.68 s - in de.digitalcollections.iiif.model.annex.SpecExamplesSerializationTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -61,6 +61,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.630 s
-[INFO] Finished at: 2023-06-07T04:56:53-04:00
+[INFO] Total time:  13.509 s
+[INFO] Finished at: 2023-06-21T09:57:27-04:00
 [INFO] ------------------------------------------------------------------------

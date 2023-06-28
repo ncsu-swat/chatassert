@@ -12,7 +12,7 @@
 [INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
 [INFO] Copying 70 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ TeachingKidsProgramming ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ TeachingKidsProgramming ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 328 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/main/java/org/teachingextensions/logo/utils/PuzzleUtils/PuzzleBoard.java: Some input files use or override a deprecated API.
@@ -22,64 +22,26 @@
 [INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
 [INFO] Copying 57 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ TeachingKidsProgramming ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ TeachingKidsProgramming ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 52 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/test-classes
-[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleStateTest.java:[148,113] incompatible types: java.util.Stack<java.lang.Object> cannot be converted to java.util.Stack<org.teachingextensions.logo.utils.PuzzleUtils.PuzzleState.Direction>
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/utils/tests/AngleCalculatorTest.java:[11,39] cannot find symbol
-  symbol:   variable expectedValue
-  location: class org.teachingextensions.logo.utils.tests.AngleCalculatorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/utils/tests/AngleCalculatorTest.java:[11,54] cannot find symbol
-  symbol:   method getDegreesWith0North()
-  location: class org.teachingextensions.logo.utils.tests.AngleCalculatorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[45,52] cannot find symbol
-  symbol:   class ClassName
-  location: class org.teachingextensions.logo.PuzzleTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingkidsprogramming/recipes/completed/FizzBuzzTDDTest.java:[47,51] cannot find symbol
-  symbol:   method convert(int)
-  location: class org.teachingkidsprogramming.recipes.completed.FizzBuzzTDDTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/tests/VirtualProctorTest.java:[28,78] cannot find symbol
-  symbol:   method getFullName()
-  location: class org.teachingextensions.logo.tests.VirtualProctorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/tests/TurtleTest.java:[40,45] cannot find symbol
-  symbol:   method getAngleInDegrees()
-  location: class org.teachingextensions.logo.tests.TurtleTest
-[INFO] 7 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ TeachingKidsProgramming ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.teachingextensions.logo.PuzzleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.144 s
-[INFO] Finished at: 2023-06-06T19:17:50-04:00
+[INFO] Total time:  5.440 s
+[INFO] Finished at: 2023-06-21T17:16:27-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project TeachingKidsProgramming: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleStateTest.java:[148,113] incompatible types: java.util.Stack<java.lang.Object> cannot be converted to java.util.Stack<org.teachingextensions.logo.utils.PuzzleUtils.PuzzleState.Direction>
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/utils/tests/AngleCalculatorTest.java:[11,39] cannot find symbol
-[ERROR]   symbol:   variable expectedValue
-[ERROR]   location: class org.teachingextensions.logo.utils.tests.AngleCalculatorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/utils/tests/AngleCalculatorTest.java:[11,54] cannot find symbol
-[ERROR]   symbol:   method getDegreesWith0North()
-[ERROR]   location: class org.teachingextensions.logo.utils.tests.AngleCalculatorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[45,52] cannot find symbol
-[ERROR]   symbol:   class ClassName
-[ERROR]   location: class org.teachingextensions.logo.PuzzleTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingkidsprogramming/recipes/completed/FizzBuzzTDDTest.java:[47,51] cannot find symbol
-[ERROR]   symbol:   method convert(int)
-[ERROR]   location: class org.teachingkidsprogramming.recipes.completed.FizzBuzzTDDTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/tests/VirtualProctorTest.java:[28,78] cannot find symbol
-[ERROR]   symbol:   method getFullName()
-[ERROR]   location: class org.teachingextensions.logo.tests.VirtualProctorTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/tests/TurtleTest.java:[40,45] cannot find symbol
-[ERROR]   symbol:   method getAngleInDegrees()
-[ERROR]   location: class org.teachingextensions.logo.tests.TurtleTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

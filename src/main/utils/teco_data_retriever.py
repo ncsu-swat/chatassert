@@ -3,16 +3,20 @@ import csv
 import random
 import os
 import sys
+import math
 
 import pandas as pd
 pd.options.display.max_colwidth = 500
 
+from markdown_util import get_assert_type
 from file_util import read_file
 
 from AST import AST
 
 sys.path.append('../') # Since Project module is in the parent directory
 from project import Project
+
+common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
 
 #-------------------------------------------
 
@@ -35,9 +39,9 @@ with open('../../teco_eval/teco/input/gold_stmts.jsonl', 'r') as goldsFile:
     golds = [json.loads(line) for line in goldsFile]
 
 # Oracle line numbers in AST without comments
-oracleLns = None
+evalLocs = None
 with open('../../teco_eval/teco/input/eval_locs.jsonl', 'r') as evalLocsFile:
-    oracleLns = [json.loads(line)[1] for line in evalLocsFile]
+    evalLocs = [json.loads(line)[1] for line in evalLocsFile]
 
 # Focal paths and methods
 focalPaths, focalMethods = None, None
@@ -83,13 +87,12 @@ def buildTestClassJson(currentLineNumber):
     return testClass
 
 # Method to create nested test json object
-def buildTestJson(currentLineNumber):
+def buildTestJson(currentLineNumber, testClass):
     # Teco saves all strings as STR in the AST to make the problem easy. To compare head to head with Teco, we will use the pretty printed version of the Teco provided setup, test, focal method ASTs (which include STR tags instead of string literals). Later, for GEPETO we will use the setup, test, focal method from the actual source code using the saved line numbers to test with the string literals. 
-
     test = dict()
 
     test['testName'] = testPaths[currentLineNumber].split('/')[-1].split('#')[1].split('(')[0]
-    testSignature = testSignatures[currentLineNumber] # No [0] since each test signature's AST in test_sign.jsonl is a 1d array
+    testSignature = testSignatures[currentLineNumber]
     testAST = AST.deserialize(testSignature)
     test['startLn'] = testAST.get_lineno_range()[0]
     test['endLn'] = testAST.get_lineno_range()[1]
@@ -105,7 +108,7 @@ def buildTestJson(currentLineNumber):
 
     # Add oracle (remove later, use oracle line)
     test['oracle'] = "".join(golds[currentLineNumber])
-    test['oracleLn'] = test['startLn'] + 2 + len(testMethod) # + 2 because of the @Test annotation and the test method signature
+    test['oracleLn'] = evalLocs[currentLineNumber] # + 2 because of the @Test annotation and the test method signature
 
     # Add focal method
     test['focalFile'] = ''
@@ -130,9 +133,8 @@ def buildTestJson(currentLineNumber):
 def findSubRepoForTest(fileName):
     gitURL = "git@github.com:{}/{}.git".format(project['userName'], project['repoName'])
     
-    if not os.path.exists('tmp/repos/{}'.format(project['repoName'])):
-        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], 'tmp')
-        tmpProj.init_env()
+    if not os.path.exists('../../tmp/repos/{}'.format(project['repoName'])):
+        tmpProj = Project(project['repoName'], '', gitURL, project['commitSHA'], None, '../../tmp')
 
     def walker(subRepo, root, searchFile):
         for root, dirs, files in os.walk(root):
@@ -145,7 +147,7 @@ def findSubRepoForTest(fileName):
                     return subRepo
             return None
     for subRepo in project['subRepos']:
-        retSubRepo = walker(subRepo, os.path.join('tmp/repos/{}'.format(project['repoName']), subRepo), fileName)
+        retSubRepo = walker(subRepo, os.path.join('../../tmp/repos/{}'.format(project['repoName']), subRepo), fileName)
         if retSubRepo is not None:
             # print('RET: {}\n'.format(retSubRepo))
             return retSubRepo
@@ -177,13 +179,63 @@ def countTecoStrs():
                     break
 
 def sampleTeco():
+    def getGoldKind(id):
+        oracle = ''.join(golds[id])
+        return get_assert_type(oracle)
+
     all_preds = None
-    sample_size = 350
+    atleast_nsamples = 350
+    sample_ids = set()
+
+    unique_projects = set(projects)
+    nsamples_per_project = math.ceil(atleast_nsamples/len(unique_projects))
+
+    # Initializing map between unique project and the corresponding line numbers
+    sample_dict = dict()
+    for proj in unique_projects: sample_dict[proj] = []
+
+    # Mapping between unique project and the corresponding line numbers
+    for (idx, proj) in enumerate(projects): sample_dict[proj].append(idx)
+
+    # Unique random sampling nsamples_per_project
+    for proj in unique_projects:
+        # print('Project: {} --- Len: {}'.format(proj, len(sample_dict[proj])))
+
+        if len(sample_dict[proj]) <= nsamples_per_project:
+            for val in sample_dict[proj]: 
+                sample_ids.add(val)
+        else:
+            for val in random.sample(sample_dict[proj], nsamples_per_project):
+                sample_ids.add(val)
+
+    # *** MAKE SURE TO REMOVE ASSERT THAT AND HELPER ASSERTIONS ***
+    for id in sample_ids.copy():
+        if getGoldKind(id) not in common_assertion_kinds: 
+            sample_ids.remove(id)
+
+    # Fill up the remaining slots up to atleast_nsamples
+    _r = 0
+    nrems = atleast_nsamples-len(sample_ids)
+    while _r < nrems:
+        _sample_id = random.randint(0, len(projects)-1)
+        if _sample_id not in sample_ids:
+            if getGoldKind(_sample_id) not in common_assertion_kinds:
+                continue
+            _r += 1
+            sample_ids.add(_sample_id)
+
+    # Check if weird assertions are not included
+    for id in sample_ids:
+        print(getGoldKind(id))
+
+    # Check if a total of atleast_nsamples are collected
+    print(len(sample_ids))
+
+    sample_ids = list(sample_ids)
+    random.shuffle(sample_ids)
     with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as allPredsFile, open('../../teco_eval/teco/output/preds.jsonl', 'w+') as predsFile:
         all_preds = [json.loads(line) for line in allPredsFile]
-        random.shuffle(all_preds)
-        idxs = random.sample(range(len(all_preds)), sample_size)
-        for idx in idxs:
+        for idx in sample_ids:
             predsFile.write(json.dumps(all_preds[idx]) + '\n')
 
 # Check to see if the total number of tests retrieved is equal to the total number of predictions from teco
@@ -277,7 +329,7 @@ for predId, pred in enumerate(preds):
         
         # Add test
         testClass['classTests'] = []
-        test = buildTestJson(currentLineNumber)
+        test = buildTestJson(currentLineNumber, testClass)
         
         testClass['classTests'].append(test)
         project['allTests'].append(testClass)
@@ -293,7 +345,7 @@ for predId, pred in enumerate(preds):
         for tClass in project['allTests']:
             if tClass['className'] == testClass['className']: # Test class exists
                 # Add test
-                tClass['classTests'].append(buildTestJson(currentLineNumber))
+                tClass['classTests'].append(buildTestJson(currentLineNumber, tClass))
                 testClassFound = True
         if not testClassFound: # Test class does not exist
             # Add test class
@@ -301,7 +353,7 @@ for predId, pred in enumerate(preds):
 
             # Add test
             testClass['classTests'] = []
-            test = buildTestJson(currentLineNumber)
+            test = buildTestJson(currentLineNumber, testClass)
             
             testClass['classTests'].append(test)
             project['allTests'].append(testClass)

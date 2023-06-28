@@ -6,7 +6,6 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ci.common ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ci.common ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -27,29 +26,23 @@
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ci.common ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtilTest.java:[242,37] cannot find symbol
-  symbol:   method containsIgnoreCase(java.util.List<java.lang.String>,java.util.List<java.lang.String>)
-  location: class io.openliberty.tools.common.plugins.util.InstallFeatureUtilTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ci.common ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running io.openliberty.tools.common.plugins.util.DevUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.955 s
-[INFO] Finished at: 2023-06-06T18:44:18-04:00
+[INFO] Total time:  3.587 s
+[INFO] Finished at: 2023-06-22T05:32:27-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project ci.common: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtilTest.java:[242,37] cannot find symbol
-[ERROR]   symbol:   method containsIgnoreCase(java.util.List<java.lang.String>,java.util.List<java.lang.String>)
-[ERROR]   location: class io.openliberty.tools.common.plugins.util.InstallFeatureUtilTest
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

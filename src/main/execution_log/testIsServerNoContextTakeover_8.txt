@@ -12,7 +12,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ Java-WebSocket ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ Java-WebSocket ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 78 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/main/java/org/java_websocket/drafts/Draft.java uses or overrides a deprecated API.
@@ -24,7 +24,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ Java-WebSocket ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ Java-WebSocket ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 75 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/Java-WebSocket/src/test/java/org/java_websocket/example/AutobahnServerTest.java: Some input files use or override a deprecated API.
@@ -37,7 +37,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.java_websocket.extensions.PerMessageDeflateExtensionTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec
 
 Results :
 
@@ -46,6 +46,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.423 s
-[INFO] Finished at: 2023-06-05T22:27:10-04:00
+[INFO] Total time:  4.328 s
+[INFO] Finished at: 2023-06-21T12:33:54-04:00
 [INFO] ------------------------------------------------------------------------

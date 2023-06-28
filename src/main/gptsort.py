@@ -7,6 +7,7 @@ import csv
 import re
 import shutil
 import xml.etree.ElementTree as ET
+from random import randint
 
 from utils.gpt_util import if_exceed_token_limit
 from project import Project
@@ -62,7 +63,7 @@ def shuffle_organization():
         org_counter[current_org] = 0
         current_org = (current_org + 1) % len(org_counter)
 
-def ask(test_name, before_code, test_code, focal_code):
+def ask(test_name, before_code, test_code, focal_code, oracle_code):
     global conversation_history
     
     # Add user input to the conversation history                                                                                                                                                          
@@ -74,9 +75,11 @@ def ask(test_name, before_code, test_code, focal_code):
         pass
 
     gpt_oracles = get_gpt_oracles(test_name=test_name)
-    if gpt_oracles is None: return None, None
+    if gpt_oracles is None or len(gpt_oracles) == 0: return None, None
 
     # Sort
+    gpt_oracles[randint(0, len(gpt_oracles)-1)] = oracle_code # JUSTSORT (ground truth is always in the prediction)
+
     prompt = prompt_generator(SORT, before_code, test_code, focal_code, gpt_oracles)
     insert_message(role="user", content=prompt, which_history="conversation")
 
@@ -238,9 +241,9 @@ if __name__ == "__main__":
 
     with open(os.path.join(PRO_DIR, "res_sorted_{}.csv".format(sample_id)), "w+") as res:
         resWriter = csv.writer(res, delimiter='\t')
-        resWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Corr", "Sorted", "Time"])
+        resWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Correct", "Sorted", "Time"])
 
-        testId = 21
+        testId = 0
         corr = 0
 
         configuration_file = os.path.join(PRO_DIR, "sample_{}.json".format(sample_id))
@@ -300,25 +303,11 @@ if __name__ == "__main__":
                         test_lines = tecofy_testlines(test_lines, int(test["startLn"]), int(test["oracleLn"]))[0:test["oracleLn"]]
 
                         if len(test_lines) == 0: continue
-                                
                         test_code = " ".join(test_lines)
-                        # test_code = test["testMethod"]
 
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
                         focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
-                        # focal_code = test["focalMethod"]
-
-                        # RQ1. Exp1. Rewrite the original source code to comply with Teco's formatting (e.g. no comments, string literals are replaced by STR)
-                        # testInjector = gateway.entry_point
-                        # testInjector.setFile(filePath)
-                        # testInjector.inject(test_name, test_code)
-                        # if before_name != "":
-                        #     testInjector.inject(before_name, before_code)
-
-                        # focalInjector = gateway.entry_point
-                        # focalInjector.setFile(focal_path)
-                        # focalInjector.inject(focal_name, focal_code)
 
                         oracle_code = test['oracle']
 
@@ -335,7 +324,7 @@ if __name__ == "__main__":
 
                         res, feedback = None, None
                         
-                        gpt_oracles, sort_status = ask(test_name, before_code, test_code, focal_code)
+                        gpt_oracles, sort_status = ask(test_name, before_code, test_code, focal_code, oracle_code)
                         if gpt_oracles is None or len(gpt_oracles)==0: continue
                         
                         end_time = time.time()
@@ -346,7 +335,7 @@ if __name__ == "__main__":
                             if gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip() == oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip():
                                 corr = 1
 
-                            resWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(corr), str(sort_status), str(end_time-start_time)).split('\t'))
+                            resWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId, oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(corr), str(sort_status), str(end_time-start_time)).split('\t'))
                             first_case_done = True
 
                         # res, feedback = collect_feedback(gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)

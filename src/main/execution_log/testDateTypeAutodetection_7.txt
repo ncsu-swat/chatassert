@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-etl ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686044297079
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1687418708828
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -38,7 +38,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-etl ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-etl ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 67 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLComponentFactory.java: Some input files use or override a deprecated API.
@@ -52,7 +52,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 11 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-etl ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-etl ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 17 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/loader/OETLOrientDBLoaderTest.java: Some input files use or override a deprecated API.
@@ -65,7 +65,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.999 s - in com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.214 s - in com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest
 Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] 
 [INFO] Results:
@@ -75,6 +75,6 @@ Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.445 s
-[INFO] Finished at: 2023-06-06T05:38:31-04:00
+[INFO] Total time:  11.890 s
+[INFO] Finished at: 2023-06-22T03:25:19-04:00
 [INFO] ------------------------------------------------------------------------

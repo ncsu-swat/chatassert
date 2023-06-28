@@ -27,7 +27,7 @@
 [INFO] Copying 1 resource
 [INFO] Copying 3 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ bolt ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bolt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 168 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractBoltClient.java: Some input files use or override a deprecated API.
@@ -39,7 +39,7 @@
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 [INFO] Copying 6 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ bolt ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bolt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 106 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/utiltest/RemotingUtilTest.java: Some input files use or override a deprecated API.
@@ -53,7 +53,7 @@
 -------------------------------------------------------
 Running com.alipay.remoting.inner.connection.RpcConnectionManagerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.366 sec - in com.alipay.remoting.inner.connection.RpcConnectionManagerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.293 sec - in com.alipay.remoting.inner.connection.RpcConnectionManagerTest
 
 Results :
 
@@ -62,6 +62,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.039 s
-[INFO] Finished at: 2023-06-05T21:43:31-04:00
+[INFO] Total time:  11.997 s
+[INFO] Finished at: 2023-06-21T11:58:05-04:00
 [INFO] ------------------------------------------------------------------------

@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] -----------------------< io.cucumber:pro-plugin >-----------------------
+[INFO] Building cucumber-pro-plugin 3.0.3-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ pro-plugin ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce) @ pro-plugin ---
+[INFO] 
+[INFO] --- jacoco:0.7.9:prepare-agent (pre-unit-test) @ pro-plugin ---
+[INFO] surefireArgLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ pro-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.0:testCompile (default-testCompile) @ pro-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.0:test (default-test) @ pro-plugin ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.228 s
+[INFO] Finished at: 2023-06-09T21:15:09-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project pro-plugin: No tests were executed!  (Set -DfailIfNoTests=false to ignore this error.) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

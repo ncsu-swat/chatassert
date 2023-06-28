@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686054514361
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1687419989863
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -43,7 +43,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 11 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
@@ -93,75 +93,31 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 5 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/sbtree/local/ONullBucketTest.java:[78,42] cannot find symbol
-  symbol:   variable expected
-  location: class com.orientechnologies.orient.core.storage.index.sbtree.local.ONullBucketTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeKeyTest.java:[70,39] cannot find symbol
-  symbol:   variable Collections
-  location: class com.orientechnologies.orient.core.index.OCompositeKeyTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/tx/DuplicateNonUniqueIndexChangesTxTest.java:[128,64] cannot find symbol
-  symbol:   method iterator()
-  location: class java.lang.Object
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/security/symmetrickey/OSymmetricKeyTest.java:[37,50] method decrypt in class com.orientechnologies.orient.core.security.symmetrickey.OSymmetricKey cannot be applied to given types;
-  required: java.lang.String
-  found: java.lang.String,java.lang.String
-  reason: actual and formal argument lists differ in length
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/security/symmetrickey/OSymmetricKeyTest.java:[37,25] no suitable method found for assertThat(java.lang.String)
-    method org.junit.Assert.<T>assertThat(T,org.hamcrest.Matcher<? super T>) is not applicable
-      (cannot infer type-variable(s) T
-        (actual and formal argument lists differ in length))
-    method org.junit.Assert.<T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) is not applicable
-      (cannot infer type-variable(s) T
-        (actual and formal argument lists differ in length))
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OSelectStatementExecutionTest.java:[1889,48] cannot find symbol
-  symbol:   method size()
-  location: variable result of type com.orientechnologies.orient.core.sql.executor.OResultSet
-[INFO] 6 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-core ---
+[WARNING] The system property security.userPasswordSaltIterations is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.orient.core.storage.index.sbtree.local.ONullBucketTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in com.orientechnologies.orient.core.storage.index.sbtree.local.ONullBucketTest
+Shutting down OrientDB engine and checking for direct memory leaks...
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.550 s
-[INFO] Finished at: 2023-06-06T08:28:55-04:00
+[INFO] Total time:  31.564 s
+[INFO] Finished at: 2023-06-22T03:47:00-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/storage/index/sbtree/local/ONullBucketTest.java:[78,42] cannot find symbol
-[ERROR]   symbol:   variable expected
-[ERROR]   location: class com.orientechnologies.orient.core.storage.index.sbtree.local.ONullBucketTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OCompositeKeyTest.java:[70,39] cannot find symbol
-[ERROR]   symbol:   variable Collections
-[ERROR]   location: class com.orientechnologies.orient.core.index.OCompositeKeyTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/tx/DuplicateNonUniqueIndexChangesTxTest.java:[128,64] cannot find symbol
-[ERROR]   symbol:   method iterator()
-[ERROR]   location: class java.lang.Object
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/security/symmetrickey/OSymmetricKeyTest.java:[37,50] method decrypt in class com.orientechnologies.orient.core.security.symmetrickey.OSymmetricKey cannot be applied to given types;
-[ERROR]   required: java.lang.String
-[ERROR]   found: java.lang.String,java.lang.String
-[ERROR]   reason: actual and formal argument lists differ in length
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/security/symmetrickey/OSymmetricKeyTest.java:[37,25] no suitable method found for assertThat(java.lang.String)
-[ERROR]     method org.junit.Assert.<T>assertThat(T,org.hamcrest.Matcher<? super T>) is not applicable
-[ERROR]       (cannot infer type-variable(s) T
-[ERROR]         (actual and formal argument lists differ in length))
-[ERROR]     method org.junit.Assert.<T>assertThat(java.lang.String,T,org.hamcrest.Matcher<? super T>) is not applicable
-[ERROR]       (cannot infer type-variable(s) T
-[ERROR]         (actual and formal argument lists differ in length))
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OSelectStatementExecutionTest.java:[1889,48] cannot find symbol
-[ERROR]   symbol:   method size()
-[ERROR]   location: variable result of type com.orientechnologies.orient.core.sql.executor.OResultSet
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

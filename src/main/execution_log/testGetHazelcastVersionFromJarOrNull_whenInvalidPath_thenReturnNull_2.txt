@@ -36,34 +36,22 @@ Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simul
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/tests/helpers/KeyUtilsTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/HazelcastUtilsTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/HazelcastUtilsTest.java uses unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/HazelcastUtilsTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[80,39] cannot find symbol
-  symbol:   variable expectedVersion
-  location: class com.hazelcast.simulator.utils.BuildInfoUtilsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[80,89] cannot find symbol
-  symbol:   variable classPath
-  location: class com.hazelcast.simulator.utils.BuildInfoUtilsTest
-[INFO] 2 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ driver-hazelcast4plus ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.hazelcast.simulator.utils.BuildInfoUtilsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec - in com.hazelcast.simulator.utils.BuildInfoUtilsTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.014 s
-[INFO] Finished at: 2023-06-05T07:54:18-04:00
+[INFO] Total time:  4.951 s
+[INFO] Finished at: 2023-06-21T09:47:16-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project driver-hazelcast4plus: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[80,39] cannot find symbol
-[ERROR]   symbol:   variable expectedVersion
-[ERROR]   location: class com.hazelcast.simulator.utils.BuildInfoUtilsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java:[80,89] cannot find symbol
-[ERROR]   symbol:   variable classPath
-[ERROR]   location: class com.hazelcast.simulator.utils.BuildInfoUtilsTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

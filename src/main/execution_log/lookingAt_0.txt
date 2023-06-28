@@ -10,7 +10,6 @@
 [INFO] -------------------------------[ bundle ]-------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ tcl-regex ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-dependency-convergence) @ tcl-regex ---
 [INFO] Skipping Rule Enforcement.
@@ -21,7 +20,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1686096749244
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1687390614450
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -60,46 +59,25 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ tcl-regex ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/SmpTest.java:[56,53] cannot find symbol
-  symbol:   method is(boolean)
-  location: class com.basistech.tclre.SmpTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/SimpleTest.java:[152,59] cannot find symbol
-  symbol:   method focalMatch(int)
-  location: interface com.basistech.tclre.ReMatcher
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RangeTest.java:[63,59] cannot find symbol
-  symbol:   variable pattern
-  location: class com.basistech.tclre.RangeTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RangeTest.java:[63,115] cannot find symbol
-  symbol:   variable actual
-  location: class com.basistech.tclre.RangeTest
-[INFO] 4 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ tcl-regex ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running apitests.MatcherTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s - in apitests.MatcherTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.16:check (animal-sniffer) @ tcl-regex ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.270 s
-[INFO] Finished at: 2023-06-06T20:12:32-04:00
+[INFO] Total time:  7.878 s
+[INFO] Finished at: 2023-06-21T19:37:00-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/SmpTest.java:[56,53] cannot find symbol
-[ERROR]   symbol:   method is(boolean)
-[ERROR]   location: class com.basistech.tclre.SmpTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/SimpleTest.java:[152,59] cannot find symbol
-[ERROR]   symbol:   method focalMatch(int)
-[ERROR]   location: interface com.basistech.tclre.ReMatcher
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RangeTest.java:[63,59] cannot find symbol
-[ERROR]   symbol:   variable pattern
-[ERROR]   location: class com.basistech.tclre.RangeTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RangeTest.java:[63,115] cannot find symbol
-[ERROR]   symbol:   variable actual
-[ERROR]   location: class com.basistech.tclre.RangeTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

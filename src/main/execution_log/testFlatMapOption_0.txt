@@ -14,9 +14,13 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ a-foundation ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ a-foundation ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 113 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/MapAsSetWrapper.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/MapAsSetWrapper.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/ATry.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/ATry.java: Recompile with -Xlint:unchecked for details.
 [INFO] -------------------------------------------------------------
 [WARNING] COMPILATION WARNING : 
 [INFO] -------------------------------------------------------------
@@ -44,11 +48,7 @@
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/concurrent/SharedQueueNonBlockingImpl.java:[153,26] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/concurrent/SharedQueueNonBlockingImpl.java:[163,29] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/concurrent/SharedQueueNonBlockingImpl.java:[165,23] sun.misc.Unsafe is internal proprietary API and may be removed in a future release
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/MapAsSetWrapper.java: Some input files use or override a deprecated API.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/MapAsSetWrapper.java: Recompile with -Xlint:deprecation for details.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/ATry.java: Some input files use unchecked or unsafe operations.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/collection/immutable/ATry.java: Recompile with -Xlint:unchecked for details.
-[INFO] 28 warnings 
+[INFO] 24 warnings 
 [INFO] -------------------------------------------------------------
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
@@ -95,10 +95,10 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.353 s
-[INFO] Finished at: 2023-06-06T20:04:10-04:00
+[INFO] Total time:  2.376 s
+[INFO] Finished at: 2023-06-21T11:45:03-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project a-foundation: Compilation failure: Compilation failure: 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project a-foundation: Compilation failure: Compilation failure: 
 [ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/a-foundation/a-foundation/src/main/java/com/ajjpj/afoundation/concurrent/SharedQueueNonblockPushBlockPopImpl.java:[4,16] cannot find symbol
 [ERROR]   symbol:   class Contended
 [ERROR]   location: package sun.misc

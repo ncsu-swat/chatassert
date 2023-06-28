@@ -1,0 +1,150 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------------< guru.nidi.raml:raml-loader >---------------------
+[INFO] Building raml-loader 1.0.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ raml-loader ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target
+[INFO] 
+[INFO] --- code-assert:0.0.12:prepare (default) @ raml-loader ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- resources:3.3.0:resources (default-resources) @ raml-loader ---
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/classes
+[INFO] 
+[INFO] --- resources:3.3.0:testResources (default-testResources) @ raml-loader ---
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- tools:1.0.20:backport7to6 (default) @ raml-loader ---
+[INFO] Backporting classes in /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/classes
+[INFO] raml-loader/target/classes/guru/nidi/loader/repository/RepositoryEntry.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/repository/RepositoryLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/repository/RepositoryResponse.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/InterceptingLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/ClassPathLoader$Factory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/LoaderInterceptor.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/CompositeLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/ClassPathLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/FileLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/FileLoader$Factory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/UriLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/basic/CachingLoaderInterceptor.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/Loader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/GithubLoader$Factory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/GithubLoader$1.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/SimpleUrlFetcher.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/GithubLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/UrlLoader$HttpsFactory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/UrlFetcher.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/BasicAuthUrlLoader$1.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/BasicAuthUrlLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/UrlLoader$HttpFactory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/FormLoginUrlFetcher.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/url/UrlLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/ResourceNotFoundException.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/xml/LoaderLSResourceResolver.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/jsonschema/LoaderUriDownloader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/raml/RamlLoad.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/raml/LoaderRamlResourceLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/raml/RamlCache$PreloadedLoader.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/use/raml/RamlCache.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/LoaderFactory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/LoadingException.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiLoader$DesignerFactory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiPortalFilesResponse.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiDesignerFilesResponse.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiLoader$PortalFactory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiPortalFile.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiLoader$1.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiPortalDirectory.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiDesignerFile.class converted.
+[INFO] raml-loader/target/classes/guru/nidi/loader/apidesigner/ApiLoader.class converted.
+[INFO] 
+[INFO] --- surefire:2.20:test (default-test) @ raml-loader ---
+[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[WARNING] Corrupted stdin stream in forked JVM 1. See the dump file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire-reports/2023-06-09T19-26-12_437-jvmRun1.dumpstream
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.564 s
+[INFO] Finished at: 2023-06-09T19:26:17-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.20:test (default-test) on project raml-loader: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire/surefirebooter1793552047093482109.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire 2023-06-09T19-26-12_437-jvmRun1 surefire6585870965544888549tmp surefire_02093076163513832879tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 134
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire/surefirebooter1793552047093482109.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/surefire 2023-06-09T19-26-12_437-jvmRun1 surefire6585870965544888549tmp surefire_02093076163513832879tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 134
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:679)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:533)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:279)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:243)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1077)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:907)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:785)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:342)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:330)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:213)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:175)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:76)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:163)
+[ERROR] 	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:160)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:827)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:272)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:195)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

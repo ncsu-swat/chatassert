@@ -14,7 +14,7 @@ assertions_nargs = {
 def extract_assertion(text):
     print('\nRESPONSE: \n{}\n'.format(text))
 
-    assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\)[\s]*[;\n\{]", text)
+    assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\);|assert[\S]+[\s]*\([\s\S]+\)[\r\n]*|assert[\S]+[\s]*\([\s\S]+\)[`]*", text)
 
     if assertStatement is None:
         return None
@@ -27,7 +27,7 @@ def extract_assertions(text):
 
     asserts = []
     for line in assertStatements:
-        assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\)[\s]*[;\n\{]", line)
+        assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\);|assert[\S]+[\s]*\([\s\S]+\)[\r\n]*|assert[\S]+[\s]*\([\s\S]+\)[`]*", line)
         if assertStatement is not None: asserts.append(clean_args(abstract_string_literals(assertStatement.group(0))))
 
     return asserts
@@ -108,22 +108,6 @@ def clean_args(assertStatement):
     finalAssertStatement += ');'
 
     return 'org.junit.Assert.' + finalAssertStatement.replace('( ', '(')
-
-# Abstracting string literals in the assert statement by replacing string literals with "STR"
-def abstract_string_literals(assertStatement):
-    assertType = get_assert_type(assertStatement)
-    args = get_assert_args(assertStatement)
-
-    finalAssertStatement = assertType + "("
-    for (i, arg) in enumerate(args):
-        if "\"" in arg:
-            args[i] = "\"STR\""
-        finalAssertStatement += args[i]
-        if i < len(args)-1:
-            finalAssertStatement += ','
-    finalAssertStatement += ");"
-
-    return finalAssertStatement
 
 # Check if commutating args of assertEquals gives exact match
 def check_commutative_equal(gpt_oracle, oracle_code):

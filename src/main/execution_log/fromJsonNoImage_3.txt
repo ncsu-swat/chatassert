@@ -8,14 +8,14 @@
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ graphviz-java ---
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphviz-java ---
 [INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target
 [INFO] 
-[INFO] --- code-assert:0.9.15:prepare (default) @ graphviz-java ---
+[INFO] --- code-assert-maven-plugin:0.9.15:prepare (default) @ graphviz-java ---
 [INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
 [INFO] Wrote argLine to target/coverageOptions.txt
 [INFO] 
-[INFO] --- snippets:1.0.0:snippets (default) @ graphviz-java ---
+[INFO] --- snippets-maven-plugin:1.0.0:snippets (default) @ graphviz-java ---
 [INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ContextTest.java
 [INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/SimpleTest.java
 [INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java
@@ -30,65 +30,49 @@
 [WARNING] In file README.md: Snippet 'kotlin' not defined.
 [WARNING] In file README.md: Snippet 'rough' not defined.
 [INFO] 
-[INFO] --- resources:3.3.0:resources (default-resources) @ graphviz-java ---
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphviz-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- compiler:3.8.1:compile (default-compile) @ graphviz-java ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphviz-java ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 130 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Attributed.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
-[INFO] --- resources:3.3.0:testResources (default-testResources) @ graphviz-java ---
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphviz-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 9 resources
 [INFO] 
-[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ graphviz-java ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphviz-java ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 47 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java uses unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/src/test/java/guru/nidi/graphviz/model/ExampleTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
-[INFO] --- surefire:2.22.2:test (default-test) @ graphviz-java ---
-[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.pom
-Progress (1): 0.7/7.0 kBProgress (1): 2.1/7.0 kBProgress (1): 3.5/7.0 kBProgress (1): 3.5/7.0 kBProgress (1): 4.8/7.0 kBProgress (1): 6.2/7.0 kBProgress (1): 7.0 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.pom (7.0 kB at 11 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.pom
-Progress (1): 0.7/2.2 kBProgress (1): 2.1/2.2 kBProgress (1): 2.2 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.pom (2.2 kB at 21 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.pom
-Progress (1): 0.7/2.4 kBProgress (1): 2.1/2.4 kBProgress (1): 2.4 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.pom (2.4 kB at 24 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.pom
-Progress (1): 0.7/2.0 kBProgress (1): 2.0 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.pom (2.0 kB at 21 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar
-Progress (1): 0.7/135 kBProgress (1): 2.1/135 kBProgress (1): 3.5/135 kBProgress (1): 4.1/135 kBProgress (1): 5.5/135 kBProgress (1): 6.9/135 kBProgress (1): 8.2/135 kBProgress (1): 9.6/135 kBProgress (1): 11/135 kB Progress (1): 12/135 kBProgress (1): 13/135 kBProgress (1): 14/135 kBProgress (1): 14/135 kBProgress (1): 15/135 kBProgress (1): 17/135 kBProgress (1): 17/135 kBProgress (1): 18/135 kBProgress (1): 20/135 kBProgress (1): 21/135 kBProgress (1): 22/135 kBProgress (1): 24/135 kBProgress (1): 25/135 kBProgress (1): 26/135 kBProgress (1): 28/135 kBProgress (1): 29/135 kBProgress (1): 31/135 kBProgress (1): 32/135 kBProgress (1): 33/135 kBProgress (1): 35/135 kBProgress (1): 36/135 kBProgress (1): 37/135 kBProgress (1): 39/135 kBProgress (1): 40/135 kBProgress (1): 41/135 kBProgress (1): 42/135 kBProgress (1): 44/135 kBProgress (1): 44/135 kBProgress (1): 45/135 kBProgress (1): 46/135 kBProgress (1): 48/135 kBProgress (1): 49/135 kBProgress (1): 50/135 kBProgress (1): 52/135 kBProgress (1): 53/135 kBProgress (1): 55/135 kBProgress (1): 56/135 kBProgress (1): 57/135 kBProgress (1): 59/135 kBProgress (1): 60/135 kBProgress (1): 61/135 kBProgress (1): 62/135 kBProgress (1): 63/135 kBProgress (1): 64/135 kBProgress (2): 64/135 kB | 0.7/66 kBProgress (2): 64/135 kB | 2.1/66 kBProgress (2): 64/135 kB | 3.5/66 kBProgress (2): 64/135 kB | 4.8/66 kBProgress (2): 64/135 kB | 6.2/66 kBProgress (2): 64/135 kB | 7.6/66 kBProgress (2): 64/135 kB | 9.0/66 kBProgress (2): 65/135 kB | 9.0/66 kBProgress (2): 65/135 kB | 10/66 kB Progress (2): 66/135 kB | 10/66 kBProgress (2): 66/135 kB | 12/66 kBProgress (2): 66/135 kB | 13/66 kBProgress (2): 67/135 kB | 13/66 kBProgress (2): 69/135 kB | 13/66 kBProgress (2): 70/135 kB | 13/66 kBProgress (2): 72/135 kB | 13/66 kBProgress (2): 73/135 kB | 13/66 kBProgress (2): 74/135 kB | 13/66 kBProgress (2): 76/135 kB | 13/66 kBProgress (2): 77/135 kB | 13/66 kBProgress (2): 78/135 kB | 13/66 kBProgress (2): 80/135 kB | 13/66 kBProgress (2): 81/135 kB | 13/66 kBProgress (2): 82/135 kB | 13/66 kBProgress (2): 84/135 kB | 13/66 kBProgress (2): 85/135 kB | 13/66 kBProgress (2): 87/135 kB | 13/66 kBProgress (2): 88/135 kB | 13/66 kBProgress (2): 89/135 kB | 13/66 kBProgress (2): 91/135 kB | 13/66 kBProgress (2): 92/135 kB | 13/66 kBProgress (2): 93/135 kB | 13/66 kBProgress (2): 95/135 kB | 13/66 kBProgress (2): 96/135 kB | 13/66 kBProgress (2): 97/135 kB | 13/66 kBProgress (2): 99/135 kB | 13/66 kBProgress (2): 99/135 kB | 13/66 kBProgress (2): 100/135 kB | 13/66 kBProgress (2): 102/135 kB | 13/66 kBProgress (2): 103/135 kB | 13/66 kBProgress (2): 104/135 kB | 13/66 kBProgress (2): 106/135 kB | 13/66 kBProgress (2): 107/135 kB | 13/66 kBProgress (2): 108/135 kB | 13/66 kBProgress (2): 110/135 kB | 13/66 kBProgress (2): 110/135 kB | 14/66 kBProgress (2): 111/135 kB | 14/66 kBProgress (2): 111/135 kB | 15/66 kBProgress (2): 112/135 kB | 15/66 kBProgress (2): 112/135 kB | 17/66 kBProgress (2): 114/135 kB | 17/66 kBProgress (2): 114/135 kB | 18/66 kBProgress (2): 115/135 kB | 18/66 kBProgress (2): 117/135 kB | 18/66 kBProgress (2): 118/135 kB | 18/66 kBProgress (2): 119/135 kB | 18/66 kBProgress (2): 121/135 kB | 18/66 kBProgress (2): 122/135 kB | 18/66 kBProgress (2): 123/135 kB | 18/66 kBProgress (2): 125/135 kB | 18/66 kBProgress (2): 126/135 kB | 18/66 kBProgress (2): 127/135 kB | 18/66 kBProgress (2): 129/135 kB | 18/66 kBProgress (2): 130/135 kB | 18/66 kBProgress (2): 130/135 kB | 20/66 kBProgress (2): 132/135 kB | 20/66 kBProgress (2): 132/135 kB | 21/66 kBProgress (2): 133/135 kB | 21/66 kBProgress (2): 133/135 kB | 22/66 kBProgress (2): 134/135 kB | 22/66 kBProgress (2): 134/135 kB | 24/66 kBProgress (2): 135 kB | 24/66 kB                                   Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-engine/1.3.1/junit-platform-engine-1.3.1.jar (135 kB at 637 kB/s)
-Progress (1): 25/66 kBProgress (1): 27/66 kBProgress (1): 28/66 kBProgress (1): 29/66 kBProgress (1): 31/66 kBProgress (1): 32/66 kBProgress (1): 33/66 kBProgress (1): 35/66 kBProgress (1): 36/66 kBProgress (1): 38/66 kBProgress (1): 39/66 kBProgress (1): 40/66 kBProgress (1): 42/66 kBProgress (1): 43/66 kBProgress (1): 44/66 kBProgress (1): 46/66 kBProgress (1): 47/66 kBProgress (1): 48/66 kBProgress (1): 50/66 kBProgress (1): 51/66 kBProgress (1): 52/66 kBProgress (1): 54/66 kBProgress (1): 55/66 kBProgress (1): 57/66 kBProgress (1): 58/66 kBProgress (1): 59/66 kBProgress (1): 61/66 kBProgress (1): 62/66 kBProgress (1): 63/66 kBProgress (1): 65/66 kBProgress (1): 66/66 kBProgress (1): 66 kB                      Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/surefire/surefire-junit-platform/2.22.2/surefire-junit-platform-2.22.2.jar (66 kB at 264 kB/s)
-Progress (1): 0.7/78 kBProgress (1): 1.4/78 kBProgress (1): 2.8/78 kBProgress (1): 4.2/78 kBProgress (1): 5.5/78 kBProgress (1): 6.9/78 kBProgress (2): 6.9/78 kB | 1.4/95 kBProgress (2): 6.9/78 kB | 2.8/95 kBProgress (2): 6.9/78 kB | 4.1/95 kBProgress (2): 8.3/78 kB | 4.1/95 kBProgress (2): 9.6/78 kB | 4.1/95 kBProgress (2): 11/78 kB | 4.1/95 kB Progress (2): 11/78 kB | 5.5/95 kBProgress (2): 12/78 kB | 5.5/95 kBProgress (2): 12/78 kB | 6.9/95 kBProgress (2): 14/78 kB | 6.9/95 kBProgress (2): 14/78 kB | 8.2/95 kBProgress (2): 15/78 kB | 8.2/95 kBProgress (2): 15/78 kB | 9.6/95 kBProgress (2): 15/78 kB | 11/95 kB Progress (2): 15/78 kB | 12/95 kBProgress (2): 16/78 kB | 12/95 kBProgress (2): 18/78 kB | 12/95 kBProgress (2): 18/78 kB | 13/95 kBProgress (2): 18/78 kB | 14/95 kBProgress (2): 18/78 kB | 15/95 kBProgress (2): 18/78 kB | 15/95 kBProgress (2): 18/78 kB | 15/95 kBProgress (2): 18/78 kB | 17/95 kBProgress (2): 18/78 kB | 18/95 kBProgress (2): 18/78 kB | 20/95 kBProgress (2): 18/78 kB | 21/95 kBProgress (2): 18/78 kB | 22/95 kBProgress (2): 18/78 kB | 24/95 kBProgress (2): 18/78 kB | 25/95 kBProgress (2): 18/78 kB | 26/95 kBProgress (2): 18/78 kB | 28/95 kBProgress (2): 18/78 kB | 29/95 kBProgress (2): 18/78 kB | 31/95 kBProgress (2): 20/78 kB | 31/95 kBProgress (2): 20/78 kB | 32/95 kBProgress (2): 21/78 kB | 32/95 kBProgress (2): 21/78 kB | 33/95 kBProgress (2): 21/78 kB | 35/95 kBProgress (2): 21/78 kB | 36/95 kBProgress (2): 22/78 kB | 36/95 kBProgress (2): 24/78 kB | 36/95 kBProgress (2): 24/78 kB | 37/95 kBProgress (2): 24/78 kB | 39/95 kBProgress (2): 25/78 kB | 39/95 kBProgress (2): 26/78 kB | 39/95 kBProgress (2): 26/78 kB | 40/95 kBProgress (2): 26/78 kB | 41/95 kBProgress (2): 28/78 kB | 41/95 kBProgress (2): 29/78 kB | 41/95 kBProgress (2): 29/78 kB | 42/95 kBProgress (2): 31/78 kB | 42/95 kBProgress (2): 31/78 kB | 44/95 kBProgress (2): 31/78 kB | 45/95 kBProgress (2): 32/78 kB | 45/95 kBProgress (2): 33/78 kB | 45/95 kBProgress (2): 35/78 kB | 45/95 kBProgress (2): 35/78 kB | 46/95 kBProgress (2): 35/78 kB | 48/95 kBProgress (2): 35/78 kB | 49/95 kBProgress (2): 36/78 kB | 49/95 kBProgress (2): 36/78 kB | 50/95 kBProgress (2): 37/78 kB | 50/95 kBProgress (2): 37/78 kB | 52/95 kBProgress (2): 39/78 kB | 52/95 kBProgress (2): 39/78 kB | 53/95 kBProgress (2): 40/78 kB | 53/95 kBProgress (2): 42/78 kB | 53/95 kBProgress (2): 43/78 kB | 53/95 kBProgress (2): 43/78 kB | 54/95 kBProgress (2): 43/78 kB | 56/95 kBProgress (2): 43/78 kB | 57/95 kBProgress (2): 44/78 kB | 57/95 kBProgress (2): 46/78 kB | 57/95 kBProgress (2): 47/78 kB | 57/95 kBProgress (2): 47/78 kB | 59/95 kBProgress (2): 48/78 kB | 59/95 kBProgress (2): 48/78 kB | 60/95 kBProgress (2): 48/78 kB | 61/95 kBProgress (2): 50/78 kB | 61/95 kBProgress (2): 51/78 kB | 61/95 kBProgress (2): 52/78 kB | 61/95 kBProgress (2): 52/78 kB | 63/95 kBProgress (2): 52/78 kB | 64/95 kBProgress (2): 53/78 kB | 64/95 kBProgress (2): 55/78 kB | 64/95 kBProgress (2): 56/78 kB | 64/95 kBProgress (2): 56/78 kB | 65/95 kBProgress (2): 58/78 kB | 65/95 kBProgress (2): 58/78 kB | 65/95 kBProgress (2): 59/78 kB | 65/95 kBProgress (2): 60/78 kB | 65/95 kBProgress (2): 60/78 kB | 67/95 kBProgress (2): 62/78 kB | 67/95 kBProgress (2): 62/78 kB | 68/95 kBProgress (2): 63/78 kB | 68/95 kBProgress (2): 63/78 kB | 70/95 kBProgress (2): 64/78 kB | 70/95 kBProgress (2): 64/78 kB | 71/95 kBProgress (2): 64/78 kB | 72/95 kBProgress (2): 64/78 kB | 74/95 kBProgress (2): 64/78 kB | 75/95 kBProgress (2): 64/78 kB | 76/95 kBProgress (2): 64/78 kB | 78/95 kBProgress (2): 64/78 kB | 79/95 kBProgress (2): 64/78 kB | 80/95 kBProgress (2): 64/78 kB | 82/95 kBProgress (2): 64/78 kB | 83/95 kBProgress (2): 64/78 kB | 85/95 kBProgress (2): 64/78 kB | 86/95 kBProgress (2): 64/78 kB | 87/95 kBProgress (2): 64/78 kB | 89/95 kBProgress (2): 64/78 kB | 90/95 kBProgress (2): 64/78 kB | 91/95 kBProgress (2): 64/78 kB | 93/95 kBProgress (2): 64/78 kB | 94/95 kBProgress (2): 64/78 kB | 95 kB                                 Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-launcher/1.3.1/junit-platform-launcher-1.3.1.jar (95 kB at 197 kB/s)
-Progress (1): 64/78 kBProgress (1): 66/78 kBProgress (1): 67/78 kBProgress (1): 68/78 kBProgress (1): 70/78 kBProgress (1): 71/78 kBProgress (1): 73/78 kBProgress (1): 74/78 kBProgress (1): 75/78 kBProgress (1): 77/78 kBProgress (1): 78 kB                      Downloaded from jcenter: https://jcenter.bintray.com/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar (78 kB at 158 kB/s)
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphviz-java ---
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.engine.OptionsTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in guru.nidi.graphviz.engine.OptionsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s - in guru.nidi.graphviz.engine.OptionsTest
 [INFO] 
 [INFO] Results:
 [INFO] 
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
-[INFO] --- code-assert:0.9.15:assert (default) @ graphviz-java ---
+[INFO] --- code-assert-maven-plugin:0.9.15:assert (default) @ graphviz-java ---
 [INFO] Loading execution data file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-java/target/jacoco.exec
 [INFO] Analyzed bundle 'graphviz-java' with 152 classes
-[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.CodeCoverage
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.106 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
-[ERROR] coverage  Time elapsed: 0.091 s  <<< FAILURE!
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.109 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.093 s  <<< FAILURE!
 java.lang.AssertionError: 
 Enough code coverage
 Expected: Has enough test coverage.
@@ -96,7 +80,7 @@ Expected: Has enough test coverage.
 Analyzed coverage types:                                    BRANCH       LINE         METHOD       
 guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
-guru.nidi.graphviz.engine                                     1 / 75       8 / 75       8 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
@@ -112,7 +96,7 @@ Expected: Has enough test coverage.
 Analyzed coverage types:                                    BRANCH       LINE         METHOD       
 guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
-guru.nidi.graphviz.engine                                     1 / 75       8 / 75       8 / 75     
+guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.model                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
@@ -122,8 +106,8 @@ guru.nidi.graphviz.service                                    0 / 75       0 / 7
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.455 s
-[INFO] Finished at: 2023-06-06T18:15:59-04:00
+[INFO] Total time:  19.468 s
+[INFO] Finished at: 2023-06-22T05:29:55-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
 [ERROR] 

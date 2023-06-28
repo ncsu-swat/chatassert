@@ -43,32 +43,15 @@ Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simul
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.utils.BuildInfoUtilsTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec <<< FAILURE! - in com.hazelcast.simulator.utils.BuildInfoUtilsTest
-testGetHazelcastVersionFromJarOrNull_whenInvalidPath_thenReturnNull(com.hazelcast.simulator.utils.BuildInfoUtilsTest)  Time elapsed: 0.017 sec  <<< FAILURE!
-java.lang.AssertionError
-	at com.hazelcast.simulator.utils.BuildInfoUtilsTest.testGetHazelcastVersionFromJarOrNull_whenInvalidPath_thenReturnNull(BuildInfoUtilsTest.java:80)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec - in com.hazelcast.simulator.utils.BuildInfoUtilsTest
 
 Results :
 
-Failed tests: 
-  BuildInfoUtilsTest.testGetHazelcastVersionFromJarOrNull_whenInvalidPath_thenReturnNull:80
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.091 s
-[INFO] Finished at: 2023-06-05T07:54:02-04:00
+[INFO] Total time:  4.925 s
+[INFO] Finished at: 2023-06-21T09:47:07-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project driver-hazelcast4plus: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/drivers/driver-hazelcast4plus/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -41,7 +41,7 @@
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire-reports/2023-06-06T20-15-29_343-jvmRun1.dumpstream
+[WARNING] Corrupted STDOUT by directly writing to native stream in forked JVM 1. See FAQ web page and the dump file /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire-reports/2023-06-21T19-03-17_011-jvmRun1.dumpstream
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -50,19 +50,19 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.280 s
-[INFO] Finished at: 2023-06-06T20:15:34-04:00
+[INFO] Total time:  8.444 s
+[INFO] Finished at: 2023-06-21T19:03:22-04:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.0:test (default-test) on project pro-plugin: There are test failures.
 [ERROR] 
 [ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
 [ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
-[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire/surefirebooter15310669055058259599.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire 2023-06-06T20-15-29_343-jvmRun1 surefire18223514230101505068tmp surefire_018182995562891454336tmp
+[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire/surefirebooter14225225216758732681.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire 2023-06-21T19-03-17_011-jvmRun1 surefire4924594808864622354tmp surefire_07366090133460841999tmp
 [ERROR] Error occurred in starting fork, check output in log
 [ERROR] Process Exit Code: 134
 [ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
-[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire/surefirebooter15310669055058259599.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire 2023-06-06T20-15-29_343-jvmRun1 surefire18223514230101505068tmp surefire_018182995562891454336tmp
+[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire/surefirebooter14225225216758732681.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/cucumber-pro-plugin-jvm/target/surefire 2023-06-21T19-03-17_011-jvmRun1 surefire4924594808864622354tmp surefire_07366090133460841999tmp
 [ERROR] Error occurred in starting fork, check output in log
 [ERROR] Process Exit Code: 134
 [ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:671)

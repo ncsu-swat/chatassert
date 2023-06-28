@@ -43,7 +43,7 @@ Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simul
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.utils.BuildInfoUtilsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec - in com.hazelcast.simulator.utils.BuildInfoUtilsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec - in com.hazelcast.simulator.utils.BuildInfoUtilsTest
 
 Results :
 
@@ -52,6 +52,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.855 s
-[INFO] Finished at: 2023-06-05T07:58:13-04:00
+[INFO] Total time:  5.032 s
+[INFO] Finished at: 2023-06-21T09:48:11-04:00
 [INFO] ------------------------------------------------------------------------

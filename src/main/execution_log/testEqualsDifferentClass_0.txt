@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1686145758804
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1687361255088
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -43,7 +43,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 11 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
@@ -93,71 +93,31 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 5 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[36,40] cannot find symbol
-  symbol:   method getNativeByteBuffer()
-  location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,39] cannot find symbol
-  symbol:   variable DOUBLE_SIZE
-  location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,104] cannot find symbol
-  symbol:   variable OFFSET
-  location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,52] cannot find symbol
-  symbol:   variable focal
-  location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/OUTFSerializerTest.java:[61,37] cannot find symbol
-  symbol:   method deserializeFromByteBufferObject(java.nio.ByteBuffer)
-  location: class com.orientechnologies.common.serialization.types.OUTFSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/OURLHelperTest.java:[64,49] cannot find symbol
-  symbol:   method getType()
-  location: class com.orientechnologies.orient.core.OURLHelperTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[41,46] cannot find symbol
-  symbol:   method getFirstValue(java.lang.String[])
-  location: class com.orientechnologies.common.collection.OMultiValueTest
-[INFO] 7 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-core ---
+[WARNING] The system property security.userPasswordSaltIterations is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.common.util.OMultiKeyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s - in com.orientechnologies.common.util.OMultiKeyTest
+Shutting down OrientDB engine and checking for direct memory leaks...
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.682 s
-[INFO] Finished at: 2023-06-07T09:49:40-04:00
+[INFO] Total time:  30.901 s
+[INFO] Finished at: 2023-06-21T11:28:04-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/directmemory/OByteBufferPoolTest.java:[36,40] cannot find symbol
-[ERROR]   symbol:   method getNativeByteBuffer()
-[ERROR]   location: class com.orientechnologies.common.directmemory.OByteBufferPoolTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,39] cannot find symbol
-[ERROR]   symbol:   variable DOUBLE_SIZE
-[ERROR]   location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,104] cannot find symbol
-[ERROR]   symbol:   variable OFFSET
-[ERROR]   location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/DoubleSerializerTest.java:[95,52] cannot find symbol
-[ERROR]   symbol:   variable focal
-[ERROR]   location: class com.orientechnologies.common.serialization.types.DoubleSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/serialization/types/OUTFSerializerTest.java:[61,37] cannot find symbol
-[ERROR]   symbol:   method deserializeFromByteBufferObject(java.nio.ByteBuffer)
-[ERROR]   location: class com.orientechnologies.common.serialization.types.OUTFSerializerTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/OURLHelperTest.java:[64,49] cannot find symbol
-[ERROR]   symbol:   method getType()
-[ERROR]   location: class com.orientechnologies.orient.core.OURLHelperTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/common/collection/OMultiValueTest.java:[41,46] cannot find symbol
-[ERROR]   symbol:   method getFirstValue(java.lang.String[])
-[ERROR]   location: class com.orientechnologies.common.collection.OMultiValueTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
