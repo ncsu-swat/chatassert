@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688062169257
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688062637853
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -63,27 +63,22 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,37] cannot find symbol
-  symbol:   variable actualColor
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,45] cannot find symbol
+  symbol:   variable color
   location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,57] cannot find symbol
-  symbol:   variable actualColor
-  location: class com.basistech.tclre.ColorMapTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.402 s
-[INFO] Finished at: 2023-06-30T00:09:32+06:00
+[INFO] Total time:  4.850 s
+[INFO] Finished at: 2023-06-30T00:17:20+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,37] cannot find symbol
-[ERROR]   symbol:   variable actualColor
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,45] cannot find symbol
+[ERROR]   symbol:   variable color
 [ERROR]   location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,57] cannot find symbol
-[ERROR]   symbol:   variable actualColor
-[ERROR]   location: class com.basistech.tclre.ColorMapTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

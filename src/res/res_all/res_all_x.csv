@@ -1,0 +1,2 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	orientechnologies/orientdb	ODirtyManagerTest	testSetToNullLink	assertEquals(2,manager.getNewRecords().size());	assertEquals(0,manager.getNewRecords().size());	191.8250560760498	0	1	1	0	0

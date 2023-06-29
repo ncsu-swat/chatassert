@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688061506185
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688063316234
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -60,25 +60,30 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ tcl-regex ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ tcl-regex ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running apitests.MatcherTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in apitests.MatcherTest
-[INFO] 
-[INFO] Results:
-[INFO] 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] 
-[INFO] --- animal-sniffer-maven-plugin:1.16:check (animal-sniffer) @ tcl-regex ---
-[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.713 s
-[INFO] Finished at: 2023-06-29T23:58:31+06:00
+[INFO] Total time:  3.929 s
+[INFO] Finished at: 2023-06-30T00:28:38+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

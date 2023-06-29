@@ -41,13 +41,19 @@ MODEL_NAME = "gpt-3.5-turbo"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
 
 common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
+status_count = {
+    'total': 0,
+    'comp_err': 0,
+    'test_err': 0,
+    'test_fail': 0
+}
 
 global conversation_history, feedback_history
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
     if interact_index == 0:
         #  Try next: Follow the rules <RULES>, where <RULES>:\n\nRule 1. DO NOT MODIFY TEST PREFIX.\nRule 2. DO NOT ASSUME ANYTHING IF IT IS NOT GIVEN.\nRule 3. DO NOT USE THE STRING LITERAL \"<FOCAL>\" IN THE GENERATED ASSERTION.\nRule 4. PAY ATTENTION TO VARIABLES IN THE TEST PREFIX.\n
         return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate only one org.junit.Assert statement, where,\n\n<SETUP>: ```{}```\n\n<TEST>: ```{}```\n\n<FOCAL>: ```{}```\n".format(setup, test, focal)
-    elif interact_index > 0:
+    else:
         return "Can you generate another type of assertion?"
 
 def shuffle_organization():
@@ -72,6 +78,11 @@ def interact_with_openai(temperature=1, which_history="conversation"):
     # Get the model's response  
     while(True):
         try:
+            # print('\n~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#\n')
+            # print('HISTORY:')
+            # print(history)
+            # print('~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#\n')
+
             # Function for interacting with the API                                                                                                                                                                   
             response = openai.ChatCompletion.create(
                 model=MODEL_NAME,
@@ -145,6 +156,7 @@ def ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code):
         pass
 
     gpt_oracle = get_gpt_oracle(mock_flag=mock_flag, test_name=test_name)
+    status_count['total'] += 1
 
     return gpt_oracle
 
@@ -206,6 +218,8 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
         for i in range(len(output_lines)):
             # Compilation error
             if "COMPILATION ERROR" in output_lines[i]:
+                status_count['comp_err'] += 1
+
                 err_msg = ""
                 err_line = 2
                 while(i+err_line < len(output_lines)): # Get the next 5 lines until we get a line with INFO or ERROR or WARNING
@@ -241,6 +255,9 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
                     for item in root.findall("./testcase"):
                         for child in item:
                             if child.tag == "failure" or child.tag == "error":
+                                if child.tag == "failure": status_count['test_fail'] += 1
+                                elif child.tag == "error": status_count['test_err'] += 1
+
                                 err_msg = child.attrib['message'] if 'message' in child.attrib else child.text.split('\n')[0]
                                 feedback = "I am getting the following test {}: \n{}\nCan you please fix the generated assert statement?".format(child.tag, err_msg)
                                 message_found = True
@@ -467,6 +484,9 @@ if __name__ == "__main__":
 
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
+
+                                gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
+
                                 print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
 
@@ -549,3 +569,5 @@ if __name__ == "__main__":
                     # break
 
             print('\n---------------------\nCorrect: {}\nIncorrect: {}\nBuild Error: {}\nTest Error: {}\nTest Failure: {}\n---------------------\n'.format(str(corr), str(incorr), str(build_err), str(run_err), str(test_failure)))
+            print('STATUS COUNT: ')
+            print(status_count)

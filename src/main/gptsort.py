@@ -18,6 +18,7 @@ from utils.file_util import extract_content_within_line_range, read_file
 from utils.markdown_util import extract_assertions, abstract_string_literals, check_commutative_equal
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 from utils.mock_gpt import mock_response
+from utils.repair_util import adhoc_repair, check_and_fix_lhs2rhs
 
 from py4j.java_gateway import JavaGateway
 from subprocess import Popen
@@ -34,22 +35,22 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 30  # Maximum number of interactions
+MAX_INTERACTION = 10  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
-FEEDBACK_BUDGET = 2 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
+FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
 
-ASK, SORT = 0, 1
+SORT = 0
 SORTED, UNSORTED = 1, 0
 
 global conversation_history, feedback_history
 
 def prompt_generator(interact_index=None, setup="", test="", focal="", sorting_candidates=None):
     if interact_index == 0:
-        return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate 30 different org.junit.Assert statements, where,\n\n<SETUP>:\n```{}```\n\n<TEST>:\n```{}```\n\n<FOCAL>:\n```{}```\n".format(setup, test, focal)
+        return "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, generate {} different org.junit.Assert statements, where,\n\n<SETUP>:\n```{}```\n\n<TEST>:\n```{}```\n\n<FOCAL>:\n```{}```\n".format(MAX_INTERACTION, setup, test, focal)
     elif interact_index == 1 and sorting_candidates is not None:
-        prompt = "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, sort the 30 different org.junit.Assert statements <ASSERTS> based on how good they fit the test method, where,\n\n<SETUP>:\n```{}```\n\n<TEST>:\n```{}```\n\n<FOCAL>:\n```{}```\n<ASSERTS>:\n".format(setup, test, focal)
+        prompt = "Given the setup code <SETUP>, test prefix <TEST>, and focal method <FOCAL>, sort the {} different org.junit.Assert statements <ASSERTS> based on how good they fit the test method, where,\n\n<SETUP>:\n```{}```\n\n<TEST>:\n```{}```\n\n<FOCAL>:\n```{}```\n<ASSERTS>:\n".format(setup, test, focal)
         for (i, assertion) in enumerate(sorting_candidates):
             prompt += "\t```{}```\n".format(assertion)
         return prompt
@@ -77,21 +78,24 @@ def ask(test_name, before_code, test_code, focal_code, oracle_code):
     gpt_oracles = get_gpt_oracles(test_name=test_name)
     if gpt_oracles is None or len(gpt_oracles) == 0: return None, None
 
-    # Sort
-    gpt_oracles[randint(0, len(gpt_oracles)-1)] = oracle_code # JUSTSORT (ground truth is always in the prediction)
+    if SORT == 1:
+        # Just sort
+        # gpt_oracles[randint(0, len(gpt_oracles)-1)] = oracle_code # JUSTSORT (ground truth is always in the prediction)
 
-    prompt = prompt_generator(SORT, before_code, test_code, focal_code, gpt_oracles)
-    insert_message(role="user", content=prompt, which_history="conversation")
+        prompt = prompt_generator(SORT, before_code, test_code, focal_code, gpt_oracles)
+        insert_message(role="user", content=prompt, which_history="conversation")
 
-    sorted_gpt_oracles = get_gpt_oracles(test_name=test_name)[0:TARGET_NUMBER]
-    if sorted_gpt_oracles is None or len(sorted_gpt_oracles) == 0:
-        # Try one more time
         sorted_gpt_oracles = get_gpt_oracles(test_name=test_name)[0:TARGET_NUMBER]
+        if sorted_gpt_oracles is None or len(sorted_gpt_oracles) == 0:
+            # Try one more time
+            sorted_gpt_oracles = get_gpt_oracles(test_name=test_name)[0:TARGET_NUMBER]
 
-    if sorted_gpt_oracles is None or len(sorted_gpt_oracles) == 0:
-        return gpt_oracles[0:TARGET_NUMBER], UNSORTED
+        if sorted_gpt_oracles is None or len(sorted_gpt_oracles) == 0:
+            return gpt_oracles[0:TARGET_NUMBER], UNSORTED
 
-    return sorted_gpt_oracles, SORTED
+        return sorted_gpt_oracles, SORTED
+    else:
+        return gpt_oracles, UNSORTED
 
 def interact_with_openai(temperature=1, which_history="conversation"):
     global history, conversation_history, feedback_history
@@ -298,17 +302,20 @@ if __name__ == "__main__":
                         # Restore test file from backup
                         restore_test_file(filePath)
 
+                        # Get Test Code
                         test_name = test["testName"]
                         test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
-                        test_lines = tecofy_testlines(test_lines, int(test["startLn"]), int(test["oracleLn"]))[0:test["oracleLn"]]
-
+                        test_lines = tecofy_testlines(test_lines)
+                        test_lines = place_placeholder(test_lines, int(test["startLn"]), int(test["oracleLn"]))
                         if len(test_lines) == 0: continue
                         test_code = " ".join(test_lines)
 
+                        # Get Focal Code
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
                         focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
 
+                        # Get Oracle Code
                         oracle_code = test['oracle']
 
                         # print('\n\nTEST CODE: {}\nORACLE CODE: {}\nTEST CODE: {}\n\n'.format(''.join(test_lines), oracle_code, test_code))
