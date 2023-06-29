@@ -1,2 +1,0 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	basis-technology-corp/tcl-regex-java	ColorMapTest	testEmpty	assertEquals(Constants.WHITE,runtime(cm).getcolor('a'));	assertEquals(expectedValue,cm.getcolor(charToCheck));	10.496596336364746	0	1	0	0	0

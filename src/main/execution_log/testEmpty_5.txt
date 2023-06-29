@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688062197844
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688061445217
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -60,30 +60,30 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ tcl-regex ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] cannot find symbol
-  symbol:   variable expectedColorValue
-  location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,61] getcolor(int) has private access in com.basistech.tclre.ColorMap
-[INFO] 2 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ tcl-regex ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.basistech.tclre.ColorMapTest
+[ERROR] WARNING: An illegal reflective access operation has occurred
+[ERROR] WARNING: Illegal reflective access by org.mockito.cglib.core.ReflectUtils$2 (file:/Users/adminuser/.m2/repository/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+[ERROR] WARNING: Please consider reporting this to the maintainers of org.mockito.cglib.core.ReflectUtils$2
+[ERROR] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[ERROR] WARNING: All illegal access operations will be denied in a future release
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.237 s - in com.basistech.tclre.ColorMapTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.16:check (animal-sniffer) @ tcl-regex ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.390 s
-[INFO] Finished at: 2023-06-30T00:10:00+06:00
+[INFO] Total time:  6.885 s
+[INFO] Finished at: 2023-06-29T23:57:30+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] cannot find symbol
-[ERROR]   symbol:   variable expectedColorValue
-[ERROR]   location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,61] getcolor(int) has private access in com.basistech.tclre.ColorMap
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

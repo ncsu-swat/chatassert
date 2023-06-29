@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688062197844
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688062237366
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -63,23 +63,23 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] getcolor(int) has private access in com.basistech.tclre.ColorMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,65] cannot find symbol
   symbol:   variable expectedColorValue
   location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,61] getcolor(int) has private access in com.basistech.tclre.ColorMap
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.390 s
-[INFO] Finished at: 2023-06-30T00:10:00+06:00
+[INFO] Total time:  4.318 s
+[INFO] Finished at: 2023-06-30T00:10:40+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,39] getcolor(int) has private access in com.basistech.tclre.ColorMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,65] cannot find symbol
 [ERROR]   symbol:   variable expectedColorValue
 [ERROR]   location: class com.basistech.tclre.ColorMapTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[64,61] getcolor(int) has private access in com.basistech.tclre.ColorMap
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
