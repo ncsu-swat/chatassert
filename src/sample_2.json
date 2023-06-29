@@ -270,7 +270,7 @@
                             "testMethod": "@Test\n void cmdLineSimple ( ) {\n     final GraphvizServer . CmdOptions opts = GraphvizServer . CmdOptions . parse ( new String [ ] { \n \"STR\" } ) ; \n     assertEquals(map(\"STR\",\"STR\"),opts.opts);\n}",
                             "oracle": "assertEquals(map(\"STR\",\"STR\"),opts.opts);",
                             "oracleLn": 1,
-                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/engine/GraphvizServer$CmdOptions.java",
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/engine/GraphvizServer.java",
                             "focalName": "parse",
                             "focalStartLn": 126,
                             "focalEndLn": 150,

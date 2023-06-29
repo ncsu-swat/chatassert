@@ -1,0 +1,16 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	TooTallNate/Java-WebSocket	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertNotNull(draft_6455.getExtension());	10.694365978240967	1	0	0	0	0
+	1	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertNull(draft_6455.getExtension());	9.056228876113892	0	1	0	0	0
+	2	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertTrue(draft_6455.getExtension()instanceofIExtension);	7.412829875946045	0	1	0	0	0
+	3	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertFalse(draft_6455.getExtension()==null`isaplausibledraft_6455.getExtension()==null);	8.901211023330688	0	1	0	0	0
+	4	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertEquals(expectedExtension,draft_6455.getExtension()`isaplausibleexpectedExtension);	9.699962854385376	0	1	0	0	0
+	5	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertNotEquals(unexpectedExtension,draft_6455.getExtension())`isaplausibleunexpectedExtension,draft_6455.getExtension()));	9.50468397140503	0	1	0	0	0
+	6	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertSame(expectedExtension,draft_6455.getExtension())`isaplausibleexpectedExtension`isaplausibleexpectedExtension,draft_6455.getExtension())`isaplausibleexpectedExtension);	9.339870929718018	0	1	0	0	0
+	7	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertNotSame(unexpectedExtension,draft_6455.getExtension())`isaplausibleunexpectedExtension`isaplausibleunexpectedExtension,draft_6455.getExtension())`isaplausibleunexpectedExtension`isaplausibleunexpectedExtension,draft_6455.getExtension())`isaplausibleunexpectedExtension`isaplausibleunexpectedExtension,draft_6455.getExtension())`isaplausibleunexpectedExtension);	11.645367860794067	0	1	0	0	0
+	9	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertTrue(true)`isaplausibletrue));	7.742758750915527	0	1	0	0	0
+	10	/	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	???;	7.450226306915283	0	1	0	0	0
+1	0	TooTallNate/Java-WebSocket	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	"assertNotNull(""STR"",webSocketImpl);"	assertEquals(webSocketImpl,focal.createWebSocket(webSocketAdapter,newDraft_6455()));	7.837060928344727	0	1	0	0	0
+	1	/	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	"assertNotNull(""STR"",webSocketImpl);"	assertNotNull(webSocketImpl);	7.4554572105407715	0	1	0	0	0
+	2	/	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	"assertNotNull(""STR"",webSocketImpl);"	assertTrue(webSocketImplinstanceofWebSocketImpl);	8.489586353302002	0	1	0	0	0
+	3	/	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	"assertNotNull(""STR"",webSocketImpl);"	assertNotSame(webSocketImpl,focal.createWebSocket(webSocketAdapter,newDraft_6455()));	9.010538816452026	0	1	0	0	0
+	4	/	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	"assertNotNull(""STR"",webSocketImpl);"	assertSame(webSocketImpl,focal.createWebSocket(webSocketAdapter,newDraft_6455()));	10.033236026763916	0	1	0	0	0

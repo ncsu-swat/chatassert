@@ -1,0 +1,50 @@
+{
+    "projects": [
+        {
+            "userName": "orientechnologies",
+            "repoName": "orientdb",
+            "subRepos": [
+                "test-commons",
+                "core",
+                "client",
+                "object",
+                "tools",
+                "server",
+                "security",
+                "graphdb",
+                "tests",
+                "distributed",
+                "lucene",
+                "jdbc",
+                "etl",
+                "distribution",
+                "distribution-tp2",
+                "crashtests"
+            ],
+            "commitSHA": "2cabb46c9581572b7f46724864f02d9c688070c5",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ODirtyManagerTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/db/record/impl/ODirtyManagerTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testSetToNullLink",
+                            "startLn": 69,
+                            "endLn": 79,
+                            "testMethod": "@Test\n public void testSetToNullLink ( ) {\n     ODocument doc = new ODocument ( ) ; \n     doc . field ( \"STR\" , \"STR\" ) ; \n     ODocument doc2 = new ODocument ( ) ; \n     doc . field ( \"STR\" , doc2 ) ; \n     doc . field ( \"STR\" , ( Object ) null ) ; \n     ODirtyManager manager = ORecordInternal . getDirtyManager ( doc ) ; \n     assertEquals(2,manager.getNewRecords().size());\n}",
+                            "oracle": "assertEquals(2,manager.getNewRecords().size());",
+                            "oracleLn": 6,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/record/impl/ODirtyManager.java",
+                            "focalName": "getNewRecords",
+                            "focalStartLn": 63,
+                            "focalEndLn": 65,
+                            "focalMethod": " public Set < ORecord > getNewRecords ( ) { \n return getReal ( ) . newRecords ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

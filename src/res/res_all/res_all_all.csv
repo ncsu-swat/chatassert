@@ -1,0 +1,125 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testEnvelope	"assertEquals(next.field(""STR""),""STR"");"	assertNotNull(next);	21.27338671684265	0	1	0	0	0
+1	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testDistance	"assertThat(next.<Double>field(""STR"")).isEqualTo(0.0015056772638228177);"	assertNotNull(next);	21.83649706840515	0	1	0	0	0
+3	0	orientechnologies/orientdb	LuceneSpatialMiscFunctionsTest	testWktPolygon	assertEquals(shapeinstanceofJtsGeometry,true);	assertNotNull(shape);	21.375575065612793	0	1	0	0	0
+4	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testDatetime	assertTrue(comparator.isEqual(field(OType.DATETIME,now),field(OType.STRING,format.format(now))));	assertTrue(isEqual(new OBinaryField(new Date(10l)), new OBinaryField(now)));	26.450119972229004	0	0	1	0	0
+5	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testBinary	assertTrue(comparator.isEqual(field(OType.BINARY,b1),field(OType.BINARY,b1)));	assertTrue(isEqual(new OBinaryField(b1), new OBinaryField(b1))));	23.68205690383911	0	0	1	0	0
+6	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testLinks	assertTrue(comparator.isEqual(field(OType.LINK,newORecordId(1,2)),field(OType.LINK,newORecordId(1,2))));	assertEquals(iFirstValue.byteValue(),iSecondValue.byteValue());	32.027889013290405	0	0	1	0	0
+7	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testDecimal	assertTrue(comparator.isEqual(field(OType.DECIMAL,newBigDecimal(10)),field(OType.DECIMAL,newBigDecimal(10))));	"assertThat(isEqual(new OBinaryField(""1010""), new OBinaryField(""1010""))).isTrue();"	27.186537265777588	0	0	1	0	0
+8	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testBoolean	assertTrue(comparator.isEqual(field(OType.BOOLEAN,true),field(OType.BOOLEAN,true)));	assertTrue(isEqual(firstValue, secondValue));	31.13756012916565	0	0	1	0	0
+9	0	orientechnologies/orientdb	BinaryComparatorEqualsTest	testBinaryFieldCopy	assertEquals(f.type,OType.BYTE);	assertEquals(f.copy().getBytes(),bytes.copy());	25.968740940093994	0	0	1	0	0
+10	0	orientechnologies/orientdb	CommandSerializationUTF8Test	testRightSerializationEncoding	assertEquals(query.toStream().length,66);	assertNotNull(byteArray);	30.06415295600891	0	0	1	0	0
+11	0	orientechnologies/orientdb	OJsonWithCustom	testCustomField	"assertEquals(doc.<String>field(""STR""),doc1.field(""STR""));"	assertEquals(doc.<RET_FIELD_VALUE>,doc1.<RET_FIELD_VALUE>);	27.457947969436646	0	0	1	0	0
+12	0	orientechnologies/orientdb	OJsonWithCustom	testCustomFieldDisabled	"assertEquals(doc.<String>field(""STR""),doc1.field(""STR""));"	"assertEquals(value,""expectedValue"");"	25.533329963684082	0	0	1	0	0
+13	0	orientechnologies/orientdb	OChainIndexFetchTest	testFetchChaninedIndex	assertEquals(0,res.size());	assertTrue(res.isEmpty());	25.331251859664917	0	0	1	0	0
+14	0	orientechnologies/orientdb	NestedInsertTest	testEmbeddedValueDate	assertNotNull(embedded);	assertNotNull(embedded);	25.414772033691406	0	0	1	0	0
+15	0	orientechnologies/orientdb	NestedInsertTest	testLinkedNested	assertNotNull(ln);	"assertEquals(""a name"",ln.field(""name""));"	25.668349027633667	0	0	1	0	0
+16	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetTypedPropertyOfTypeAny	assertEquals(setValue,value);	assertEquals(setValue,value);	24.665225982666016	0	0	1	0	0
+17	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetTypedFiledSimple	assertEquals(setValue,value);	assertEquals(setValue,value);	25.032279014587402	0	0	1	0	0
+18	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetFieldNamesFromEmbedded	"assertTrue(fieldNames.contains(""STR""));"	"assertEquals(new HashSet<>(Arrays.asList(""TestField"", ""TestField2"")),fieldNames);"	25.433130979537964	0	0	1	0	0
+19	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetTypedFieldFromEmbedded	assertEquals(setValue,testValue);	assertEquals(setValue,testValue);	25.53731083869934	0	0	1	0	0
+20	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetTypedEmbeddedFromEmbedded	assertEquals(setValue,testValue);	"assertNotNull(serializer.deserializeFieldFromEmbedded(embeddedBytesViaGet.getBytes(), embeddedBytesViaGet.getOffset(),""InnerTestFields"", rootBytes[0]));"	26.336108684539795	0	0	1	0	0
+21	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetFieldFromEmbeddedList	assertEquals(setValue,deserializedValue);	assertEquals(setValue,deserializedValue);	27.614649057388306	0	0	1	0	0
+22	0	orientechnologies/orientdb	ORecordSerializerBinaryTest	testGetFieldFromEmbeddedMap	assertEquals(setValue,deserializedValue);	assertEquals(setValue,deserializedValue);	26.225893259048462	0	0	1	0	0
+23	0	orientechnologies/orientdb	DateBinaryComparatorTest	testDateJavaClassPreparedStatement	assertTrue(result.size()==1);	assertNotNull(result);	26.314672708511353	0	0	1	0	0
+24	0	orientechnologies/orientdb	OCommandExecutorSQLCreateLinkTest	testBasic	assertEquals(result.size(),2);	assertEquals(2,result.size());	290.47823882102966	0	0	1	0	0
+25	0	orientechnologies/orientdb	OCommandExecutorSQLCreateLinkTest	testInverse	assertEquals(result.size(),2);	assertEquals(2,result.size());	5743.0958342552185	0	0	1	0	0
+26	0	orientechnologies/orientdb	OResultSerializationTest	testSimpleEmbeddedDoc	assertEquals(document.getPropertyNames(),extr.getPropertyNames());	"assertEquals(2,extr.getProperty(""embed"").getPropertyNames().size());"	48.63412690162659	0	0	1	0	0
+27	0	orientechnologies/orientdb	OResultSerializationTest	testMapOfEmbeddedDocument	assertEquals(1,mapS.size());	assertNotNull(mapS);	26.042766094207764	0	0	1	0	0
+28	0	orientechnologies/orientdb	OCommandExecutorSQLDropPropertyTest	testIfExists	"assertTrue(schema.getClass(""STR"").existsProperty(""STR""));"	"assertTrue(testIfExistsClass.existsProperty(""name""));"	27.06211495399475	0	0	1	0	0
+29	0	orientechnologies/orientdb	OClassImplTest	testSetAbstractClusterNotChanged	assertEquals(oClass.getDefaultClusterId(),oldClusterId);	assertEquals(oldClusterId,oClass.getDefaultClusterId());	33.44522714614868	0	0	1	0	0
+30	0	orientechnologies/orientdb	OClassImplTest	testSetAbstractShouldCreateNewClusters	assertFalse(oClass.getDefaultClusterId()==-1);	assertEquals(1,oClass.getDefaultClusterId());	32.22106313705444	0	0	1	0	0
+31	0	orientechnologies/orientdb	OClassImplTest	testCreateNoLinkedClass	"assertNotNull(oClass.getProperty(""STR""));"	"assertNotNull(oClass.getProperty(""some""));"	24.505228996276855	0	0	1	0	0
+32	0	orientechnologies/orientdb	OClassImplTest	testCreatePropertyIdKeep	assertEquals(id,prop.getId());	assertEquals(id,prop.getId());	23.924368143081665	0	0	1	0	0
+34	0	orientechnologies/orientdb	OClassImplTest	testChangeTypeProperty	assertNotEquals(id,prop.getId());	assertEquals(id,prop.getId());	25.490882873535156	0	0	1	0	0
+35	0	orientechnologies/orientdb	OClassImplTest	testRenameBackProperty	assertNotEquals(id,prop.getId());	"assertEquals(""test1"",oClass.getProperty(id).getName());"	24.103924989700317	0	0	1	0	0
+36	0	orientechnologies/orientdb	OClassImplTest	testFindById	assertEquals(prop.getId(),global.getId());	assertNotNull(db);	24.96252202987671	0	0	1	0	0
+37	0	orientechnologies/orientdb	OClassImplTest	testFindByIdDrop	assertEquals(id,global.getId());	assertNull(global);	28.655526161193848	0	0	1	0	0
+38	0	orientechnologies/orientdb	OClassImplTest	testTypeAny	assertEquals(result.size(),1);	assertTrue(result.size() == 1);	31.75040602684021	0	0	1	0	0
+39	0	orientechnologies/orientdb	OClassImplTest	testAlterCustomAttributeInClass	"assertEquals(""STR"",oClass.getCustom(""STR""));"	"assertEquals(""value1"",result);"	34.6365909576416	0	0	1	0	0
+40	0	orientechnologies/orientdb	OCommandExecutorSQLCreateClassTest	testCreateWithSuperclasses	assertNotNull(userVertex);	assertNotNull(userVertex);	33.97503113746643	0	0	1	0	0
+41	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testQuery	assertEquals(qResult.size(),3);	assertNotNull(qResult);	27.998247861862183	0	0	1	0	0
+42	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testTx	assertNotNull(qResult);	"assertNotNull(qResult.field(""test""));"	29.95018696784973	0	0	1	0	0
+43	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testReturnExpanded	assertNotNull(qResult);	"assertEquals(""sql script test"",jsonObject.getString(""test""));"	29.492342948913574	0	0	1	0	0
+45	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testReturnObject	assertNotNull(result);	assertEquals(1,result.size());	29.019563913345337	0	0	1	0	0
+46	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIncrementAndLet	"assertThat(qResult.get(0).<Long>field(""STR"")).isEqualTo(4L);"	"assertEquals(4,qResult.get(0).<Integer>field(""weight"").intValue());"	27.618331909179688	0	0	1	0	0
+47	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIf1	assertNotNull(qResult);	"assertEquals(""OK"",qResult.toString());"	26.419228076934814	0	0	1	0	0
+48	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIf2	assertNotNull(qResult);	"assertEquals(""OK"",qResult.toString());"	26.098236083984375	0	0	1	0	0
+49	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIf3	assertNotNull(qResult);	"assertEquals(""OK"",qResult);"	26.641841888427734	0	0	1	0	0
+50	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testNestedIf2	assertNotNull(qResult);	"assertEquals(""OK"",focalMethod.execute());"	26.78993511199951	0	0	1	0	0
+51	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testNestedIf3	assertNotNull(qResult);	"assertEquals(""OK"",qResult.toString());"	26.34628987312317	0	0	1	0	0
+52	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIfRealQuery	assertNotNull(qResult);	"assert.assertEquals(""FAIL"",qResult);"	24.063472270965576	0	0	1	0	0
+53	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testIfMultipleStatements	assertNotNull(qResult);	"assertEquals(""OK"",qResult.toString());"	28.44119119644165	0	0	1	0	0
+54	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testScriptSubContext	assertNotNull(qResult);	assertThrows(com.orientechnologies.orient.core.exception.OCommandExecutionException.class,() -> {);	28.411250114440918	0	0	1	0	0
+55	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testQuotedRegex	assertEquals(result.size(),1);	assertNotNull(result);	24.936161994934082	0	0	1	0	0
+56	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testParameters1	assertTrue(rs.hasNext());	assertEquals(1,1);	24.090298175811768	0	0	1	0	0
+57	0	orientechnologies/orientdb	OCommandExecutorSQLScriptTest	testPositionalParameters	assertTrue(rs.hasNext());	assertTrue(rs.hasNext());	23.279995918273926	0	0	1	0	0
+58	0	orientechnologies/orientdb	ODocumentFieldConversionTest	testConversionAlsoWithWrongType	"assertTrue(doc.field(""STR"")instanceofFloat);"	"assertEquals(2,doc.field(""float""));"	23.404167890548706	0	0	1	0	0
+61	0	orientechnologies/orientdb	TestNullLinkInCollection	testLinkListRemovedRecord	"assertNull(((List)res.get(0).field(""STR"")).get(0));"	"assertTrue(res.get(0).field(""items"") instanceof List<?>);"	25.589346885681152	0	0	1	0	0
+62	0	orientechnologies/orientdb	TestNullLinkInCollection	testLinkSetRemovedRecord	"assertNull(((Set)res.get(0).field(""STR"")).iterator().next());"	assertEquals(1,res.size());	28.28946304321289	0	0	1	0	0
+63	0	orientechnologies/orientdb	CheckClassTypeStepTest	shouldCheckSubclasses	assertEquals(0,result.stream().count());	assertNotNull(database);	25.17706608772278	0	0	1	0	0
+64	0	orientechnologies/orientdb	CheckClassTypeStepTest	shouldCheckOneType	assertEquals(0,result.stream().count());	assertThat(result.spliterator().getExactSizeIfKnown()).isEqualTo(20);	25.525097131729126	0	0	1	0	0
+65	0	orientechnologies/orientdb	CheckClusterTypeStepTest	shouldCheckClusterType	assertEquals(0,result.stream().count());	assertTrue(result.stream().isParallel());	25.509053945541382	0	0	1	0	0
+66	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testSimpleEmbeddedDoc	assertEquals(document.fields(),extr.fields());	assertEquals(expectedFieldSize,fields());	25.20131516456604	0	0	1	0	0
+67	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testlistOfList	assertEquals(extr.fields(),document.fields());	assertEquals(_fieldSize,0);	22.97964072227478	0	0	1	0	0
+68	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testArrayOfArray	assertEquals(extr.fields(),document.fields());	assertEquals(0,fields());	25.003231048583984	0	0	1	0	0
+69	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testEmbeddedListOfEmbeddedMap	assertEquals(extr.fields(),document.fields());	"assertEquals(2,extr.field(""list"").size());"	25.349871158599854	0	0	1	0	0
+70	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testDocumentWithCostum	assertEquals(extr.getClassName(),document.getClassName());	assertEquals(true,_className != null);	24.792217254638672	0	0	1	0	0
+71	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testDocumentWithCostumDocument	assertEquals(extr.getClassName(),document.getClassName());	assertNotNull(extr.getClassName());	24.62048101425171	0	0	1	0	0
+72	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testSerializableValue	"assertNotNull(extr.field(""STR""));"	"assertNotNull(extr.field(""seri""));"	24.373401880264282	0	0	1	0	0
+73	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testFieldNames	assertNotNull(fields);	"assertArrayEquals(""b"",""c""});"	28.73812198638916	0	0	1	0	0
+74	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testFieldNamesRaw	assertNotNull(fields);	"assertArrayEquals(""b"",""c"" });"	31.492228984832764	0	0	1	0	0
+75	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testPartial	"assertEquals(document.field(""STR""),extr.<Object>field(""STR""));"	"assertEquals(""name"",extr.field(""name""));"	24.40577006340027	0	0	1	0	0
+76	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testWithRemove	"assertEquals(document.field(""STR""),extr.<Object>field(""STR""));"	"assertEquals(""name"",extr.field(""name""));"	24.668314933776855	0	0	1	0	0
+77	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testPartialCustom	"assertEquals(document.field(""STR""),extr.<Object>field(""STR""));"	"assertEquals(20,document.field(""age""));"	24.612606287002563	0	0	1	0	0
+78	0	orientechnologies/orientdb	ODocumentSchemalessBinarySerializationTest	testListOfMapsWithNull	assertEquals(extr.fields(),document.fields());	assertEquals(expected,actual);	24.93736481666565	0	0	1	0	0
+79	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testBasicCreateProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertNotNull(nameProperty);	24.448757648468018	0	0	1	0	0
+80	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testBasicUnsafeCreateProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertEquals(PROP_NAME,nameProperty.getName());	24.706897974014282	0	0	1	0	0
+81	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreatePropertyWithLinkedClass	assertEquals(nameProperty.getName(),PROP_DIVISION);	assertNotNull(nameProperty);	24.914582014083862	0	0	1	0	0
+82	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreatePropertyWithEmbeddedType	assertEquals(nameProperty.getName(),PROP_OFFICERS);	assertNotNull(nameProperty);	24.869658946990967	0	0	1	0	0
+83	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateMandatoryProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertEquals(PROP_NAME,nameProperty.getName());	24.771967887878418	0	0	1	0	0
+84	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateNotNullProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertNotNull(nameProperty);	24.806580066680908	0	0	1	0	0
+85	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateReadOnlyProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertTrue(nameProperty.isReadonly());	25.13974618911743	0	0	1	0	0
+86	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateReadOnlyFalseProperty	assertEquals(nameProperty.getName(),PROP_NAME);	assertEquals(PROP_NAME,nameProperty.getName());	24.583574056625366	0	0	1	0	0
+87	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateMandatoryPropertyWithEmbeddedType	assertEquals(nameProperty.getName(),PROP_OFFICERS);	assertEquals(PROP_OFFICERS,nameProperty.getName());	25.16804790496826	0	0	1	0	0
+88	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testCreateUnsafePropertyWithEmbeddedType	assertEquals(nameProperty.getName(),PROP_OFFICERS);	assertNotNull(nameProperty);	29.32905125617981	0	0	1	0	0
+89	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testComplexCreateProperty	assertEquals(nameProperty.getName(),PROP_OFFICERS);	assertNotNull(nameProperty);	26.34484076499939	0	0	1	0	0
+90	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testLinkedTypeDefaultAndMinMaxUnsafeProperty	assertEquals(idProperty.getName(),PROP_ID);	assertEquals(PROP_ID,idProperty.getName());	23.86734890937805	0	0	1	0	0
+91	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testDefaultAndMinMaxUnsafeProperty	assertEquals(idProperty.getName(),PROP_ID);	assertNotNull(FOCAL);	22.942378997802734	0	0	1	0	0
+92	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testExtraSpaces	assertEquals(idProperty.getName(),PROP_ID);	assertNotNull(idProperty);	25.4865620136261	0	0	1	0	0
+93	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testNonStrict	assertEquals(idProperty.getName(),PROP_ID);	assertEquals(expectedName,<FOCAL>());	21.694440841674805	0	0	1	0	0
+94	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testMandatoryAsLinkedName	assertEquals(idProperty.getName(),PROP_ID);	assertNotNull(idProperty.getMandatory());	25.652307987213135	0	0	1	0	0
+95	0	orientechnologies/orientdb	OCommandExecutorSQLCreatePropertyTest	testIfNotExists	assertEquals(property.getName(),PROP_NAME);	"assertEquals(""name"",property.getName());"	24.695197820663452	0	0	1	0	0
+96	0	orientechnologies/orientdb	OCommandExecutorSQLUpdateTest	testSingleQuoteInNamedParameter	"assertEquals(queried.field(""STR""),""STR"");"	"assertEquals(""initial value"",field(""text""));"	24.775973796844482	0	0	1	0	0
+98	0	orientechnologies/orientdb	OCommandExecutorSQLUpdateTest	testQuotesInJson	"assertEquals(queried.field(""STR""),""STR"");"	"assertNotNull(queried.field(""value""));"	26.87439799308777	0	0	1	0	0
+99	0	orientechnologies/orientdb	OCommandExecutorSQLUpdateTest	testDottedTargetInScript	assertNotNull(result);	assertEquals(1,result.size());	27.234626054763794	0	0	1	0	0
+100	0	orientechnologies/orientdb	CountFromIndexStepTest	shouldCountRecordsOfIndex	assertEquals(20,(long)result.next().getProperty(ALIAS));	assertEquals(20,getProperty(indexName).count());	23.66385507583618	0	0	1	0	0
+101	0	orientechnologies/orientdb	OAlterSequenceStatementExecutionTest	testSetIncrement	assertNotNull(result);	assertNotNull(result);	22.462926149368286	0	0	1	0	0
+102	0	orientechnologies/orientdb	OBeginStatementExecutionTest	testBegin	assertTrue(db.getTransaction()==null||!db.getTransaction().isActive());	assertFalse(db.getTransaction().isActive());	28.624701976776123	0	0	1	0	0
+103	0	orientechnologies/orientdb	OCommitStatementExecutionTest	testBegin	assertTrue(db.getTransaction()==null||!db.getTransaction().isActive());	assertFalse(db.getTransaction().isActive());	33.18345594406128	0	0	1	0	0
+104	0	orientechnologies/orientdb	OAlterDatabaseStatementExecutionTest	testSetProperty	assertNotNull(result);	assertEquals(12,currentValue);	34.39114785194397	0	0	1	0	0
+105	0	orientechnologies/orientdb	OAlterPropertyStatementExecutionTest	testSetProperty	assertNotNull(result);	"assertEquals(""30"",currentValue);"	32.52290630340576	0	0	1	0	0
+106	0	orientechnologies/orientdb	OAlterPropertyStatementExecutionTest	testSetCustom	assertNotNull(result);	"assertEquals(""baz"",currentValue);"	35.12448787689209	0	0	1	0	0
+108	0	orientechnologies/orientdb	OConsoleStatementExecutionTest	testLog	assertNotNull(result);	"assertEquals(""console.log 'foo bar'"",result.getExecutionPlan().get().toString());"	34.79924774169922	0	0	1	0	0
+109	0	orientechnologies/orientdb	OCreateFunctionStatementExecutionTest	testPlain	assertTrue(result.hasNext());	assertTrue(result.hasNext());	33.56502294540405	0	0	1	0	0
+110	0	orientechnologies/orientdb	OCreateClassStatementExecutionTest	testPlain	assertNotNull(clazz);	assertNotNull(result);	32.5618679523468	0	0	1	0	0
+111	0	orientechnologies/orientdb	OCreateClassStatementExecutionTest	testAbstract	assertNotNull(clazz);	assertEquals(className,clazz.getName());	30.91138195991516	0	0	1	0	0
+112	0	orientechnologies/orientdb	OCreateClassStatementExecutionTest	testCluster	assertNotNull(clazz);	assertNotNull(clazz);	37.226500034332275	0	0	1	0	0
+113	0	orientechnologies/orientdb	OCreateClassStatementExecutionTest	testClusters	assertNotNull(clazz);	assertEquals(className,clazz.getName());	32.490188121795654	0	0	1	0	0
+114	0	orientechnologies/orientdb	OCreateClassStatementExecutionTest	testIfNotExists	assertNotNull(clazz);	assertTrue(clazz.getName().equals(className));	38.9041850566864	0	0	1	0	0
+115	0	orientechnologies/orientdb	OCreateClusterStatementExecutionTest	testPlain	assertTrue(db.getClusterIdByName(clusterName)>0);	"assertEquals(""<expected_cluster_id>"",getClusterIdByName(clusterName));"	43.80318880081177	0	0	1	0	0
+116	0	orientechnologies/orientdb	OCreateClusterStatementExecutionTest	testWithNumber	assertTrue(db.getClusterIdByName(clusterName)>0);	assertEquals(1000,getClusterIdByName(clusterName));	36.3309440612793	0	0	1	0	0
+117	0	orientechnologies/orientdb	OCreateClusterStatementExecutionTest	testBlob	assertTrue(db.getClusterIdByName(clusterName)>0);	assertNotNull(result);	37.61181688308716	0	0	1	0	0
+118	0	orientechnologies/orientdb	OCreateClusterStatementExecutionTest	testIfNotExists	assertTrue(db.getClusterIdByName(clusterName)>0);	assertFalse(result.hasNext());	35.376041889190674	0	0	1	0	0
+119	0	orientechnologies/orientdb	OCreateIndexStatementExecutionTest	testPlain	"assertNull(db.getMetadata().getIndexManager().getIndex(className+""STR""));"	"assertNull(db.getMetadata().getIndexManager().getIndex(""testPlain.name""));"	36.322991132736206	0	0	1	0	0
+120	0	orientechnologies/orientdb	OCreateIndexStatementExecutionTest	testIfNotExists	"assertNull(db.getMetadata().getIndexManager().getIndex(className+""STR""));"	"assertNotNull(db.getMetadata().getIndexManager().getIndex(className + "".name""));"	26.134037017822266	0	0	1	0	0
+121	0	orientechnologies/orientdb	OCreateLinkStatementExecutionTest	testBasic	assertTrue(result.hasNext());	assertEquals(true,focalClass.hasNext());	48.33927392959595	0	0	1	0	0
+122	0	orientechnologies/orientdb	OCreateUserStatementExecutionTest	testPlain	assertTrue(result.hasNext());	assertTrue(result.hasnext());	41.11598205566406	0	0	1	0	0
+123	0	orientechnologies/orientdb	OCreateSequenceStatementExecutionTest	testSimple	assertTrue(results.hasNext());	assertTrue(hasNext());	31.993054151535034	0	0	1	0	0
+124	0	orientechnologies/orientdb	OCreateSequenceStatementExecutionTest	testIncrement	assertTrue(results.hasNext());	"assertNotNull(results.next().getProperty(""val""));"	32.40781807899475	0	0	1	0	0
+125	0	orientechnologies/orientdb	OCreateSequenceStatementExecutionTest	testStart	assertTrue(results.hasNext());	assertFalse(results.hasNext());	29.723884105682373	0	0	1	0	0
+126	0	orientechnologies/orientdb	OCreateSequenceStatementExecutionTest	testStartIncrement	assertTrue(results.hasNext());	"assertEquals(4,results.next().getProperty(""val""));"	33.33633899688721	0	0	1	0	0
+127	0	orientechnologies/orientdb	OCreateSequenceStatementExecutionTest	testCreateSequenceIfNotExists	assertFalse(result.hasNext());	"assertFalse(db.getMetadata().getSequenceLibrary().exists(""SequenceIfNotExists""));"	37.74724006652832	0	0	1	0	0
+128	0	orientechnologies/orientdb	OAlterClassStatementExecutionTest	testName1	assertNull(schema.getClass(className));	"assertNotNull(db.getMetadata().getSchema().getClass(""testName1_new""));"	37.52791976928711	0	0	1	0	0
+129	0	orientechnologies/orientdb	OAlterClassStatementExecutionTest	testShortName	"assertEquals(className+""STR"",clazz.getShortName());"	"assertEquals(className + ""_new"",clazz.getShortName());"	34.09339642524719	0	0	1	0	0
+130	0	orientechnologies/orientdb	OAlterClassStatementExecutionTest	testSuperclass	assertTrue(schema.getClass(className).getSuperClasses().contains(superclass));	assertEquals(1,getSuperClasses().size());	38.31440210342407	0	0	1	0	0

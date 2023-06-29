@@ -1,0 +1,194 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	1	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertEquals(expected,opts.opts);	19.99730110168457	0	0	1	0	0
+	2	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertNotNull(""STR"");"	14.849700212478638	0	0	1	0	0
+	4	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertEquals(""STR"");"	12.656379222869873	0	0	1	0	0
+	5	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertEquals(expectedValue,actualValue);	8.509233951568604	0	0	1	0	0
+	6	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertTrue(condition`);	10.122976064682007	0	0	1	0	0
+	7	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(""STR"",""STR"");"	17.368922233581543	0	0	1	0	0
+	9	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertFalse(condition);	8.808167934417725	0	0	1	0	0
+	12	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertNotEquals(unexpected,actualValue);	9.108144998550415	0	0	1	0	0
+	14	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertSame(expected,actual);	9.741756916046143	0	0	1	0	0
+	15	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertArrayEquals(expectedArray,resultArray);	9.787114143371582	0	0	1	0	0
+	18	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(objectUnderTest,instanceOf(expectedType.class));	9.484471082687378	0	0	1	0	0
+	22	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(objectUnderTest,is(not(nullValue())));	11.569401979446411	0	0	1	0	0
+	23	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertTrue(""STR"");"	17.95318603515625	0	0	1	0	0
+	24	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	"assertThat(""STR"",""STR"");"	10.087895631790161	0	0	1	0	0
+	27	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertArrayEquals(expected,resultArray);	9.554459810256958	0	0	1	0	0
+	28	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(expected,is(not(nullValue())));	11.077908992767334	0	0	1	0	0
+	29	/	GraphvizServerTest	cmdLineValueSeparated	"assertEquals(map(""STR"",""STR""),opts.opts);"	assertThat(expected,org.hamcrest.Matchers.greaterThan(actual));	11.222539186477661	0	0	1	0	0
+1	0	nidi3/graphviz-java	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	"assertThrows(IllegalArgumentException.class,""STR"");"	12.593369960784912	0	0	1	0	0
+	1	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	"assertNotNull(""STR"");"	12.599886894226074	0	0	1	0	0
+	2	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertTrue(expression);	11.080603122711182	0	0	1	0	0
+	3	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertFalse(expression);	8.012158155441284	0	0	1	0	0
+	4	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertArrayEquals(expectedArray,actualArray);	8.053589105606079	0	0	1	0	0
+	5	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertEquals(expected,actual);	7.8673999309539795	0	0	1	0	0
+	6	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertSame(expected,actual);	8.505614042282104	0	0	1	0	0
+	7	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertNotSame(expected,actual);	8.432178974151611	0	0	1	0	0
+	9	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	"assertNull(""STR"");"	8.736337900161743	0	0	1	0	0
+	11	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertThat(actual,org.junit.matchers.Matcher.expression);	8.62436294555664	0	0	1	0	0
+	13	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertArrayEquals(expectedArray,actualArray);	8.93734097480774	0	0	1	0	0
+	14	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertNotEquals(expected,actual);	11.402408361434937	0	0	1	0	0
+	15	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertThrows(class,EXPECTED_MSG,() -> { // block of code });	9.686947107315063	0	0	1	0	0
+	16	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertLinesMatch(expectedList,actualList);	9.289551019668579	0	0	1	0	0
+	17	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertTimeout(org.junit.jupiter.api.Assertions.Timeout.of(Duration.ofSeconds(duration)),executable);	9.008442163467407	0	0	1	0	0
+	18	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertTimeoutPreemptively(org.junit.jupiter.api.Assertions.Timeout.of(Duration.ofSeconds(duration)),executable);	9.966458797454834	0	0	1	0	0
+	19	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertDoesNotThrow(() -> { // block of code });	8.413206100463867	0	0	1	0	0
+	20	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertIterableEquals(expectedList,actualList);	8.29567003250122	0	0	1	0	0
+	21	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertNotEquals(expected,actual);	8.224640130996704	0	0	1	0	0
+	22	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertEquals(expected,actual);	16.435585021972656	0	0	1	0	0
+	23	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertThat(actual,org.junit.matchers.Matcher.expression));	7.51764988899231	0	0	1	0	0
+	24	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertNotSame(expected,actual);	8.192610740661621	0	0	1	0	0
+	25	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertSame(expected,actual);	8.869253158569336	0	0	1	0	0
+	27	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	assertNotEquals(expected,actual);	8.235478162765503	0	0	1	0	0
+	28	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	"assertThat(""STR"",notNullValue());"	8.431153059005737	0	0	1	0	0
+	29	/	AttributeValidatorTest	wrongScope	"assertMessage(ERROR,""STR"",""STR"",validate(attr(""STR"",5),NODE));"	"assertThat(""STR"",nullValue());"	8.39834976196289	0	0	1	0	0
+2	0	nidi3/graphviz-java	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertEquals(0,ser.messages.size());	11.789361715316772	0	0	1	0	0
+	1	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertTrue(ser.messages.isEmpty());	12.855855941772461	0	0	1	0	0
+	2	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertNotNull(graph);	8.916642189025879	0	0	1	0	0
+	3	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertSame(0,ser.messages.size());	7.549598932266235	0	0	1	0	0
+	4	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertEquals(0,graph.getNodes().size());	8.937560081481934	0	0	1	0	0
+	5	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages,is(empty()));	10.461958885192871	0	0	1	0	0
+	6	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertArrayEquals(null,order);	7.558596849441528	0	0	1	0	0
+	7	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertNotEquals(0,graph.getNodes().size());	7.9652321338653564	0	0	1	0	0
+	9	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertTrue(graph.getNodes().isEmpty());	10.96225118637085	0	0	1	0	0
+	10	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(0,is(equalTo(ser.messages.size())));	7.87005090713501	0	0	1	0	0
+	11	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages.isEmpty()));	7.523593902587891	0	0	1	0	0
+	12	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(graph.getNodes().size(),not(org.hamcrest.Matchers.equalTo(0))));	8.707940816879272	0	0	1	0	0
+	13	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(graph.getNodes().size(),is(equalTo(0)));	8.360522985458374	0	0	1	0	0
+	14	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(org.junit.ser.messages,hasSize(equalTo(0))));	9.659430980682373	0	0	1	0	0
+	15	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(graph.getNodes(),org.hamcrest.Matchers.<Node>iterableWithSize(0));	10.541906833648682	0	0	1	0	0
+	16	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages.size(),is(org.hamcrest.Matchers.equalTo(0)));	9.23478889465332	0	0	1	0	0
+	18	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(graph.getEdges()));	7.9029059410095215	0	0	1	0	0
+	19	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	"assertThat(ser.messages,""STR"");"	12.795244932174683	0	0	1	0	0
+	20	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	"assertThat(graph.toString(),""STR"");"	8.762276887893677	0	0	1	0	0
+	21	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(0,is(equalTo(0)));	8.172924995422363	0	0	1	0	0
+	22	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(0,is(0));	8.95780086517334	0	0	1	0	0
+	23	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(0,is(equalTo(0)));	8.451080083847046	0	0	1	0	0
+	25	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(0,is(org.hamcrest.Matchers.not(0)));	8.810296058654785	0	0	1	0	0
+	26	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(graph.getNodes(),containsInAnyOrder(expectedNodes));	10.057168245315552	0	0	1	0	0
+	27	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages.get(0),org.hamcrest.Matchers.contains(0));	8.057263851165771	0	0	1	0	0
+	28	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages.contains(0),is(true));	8.278664827346802	0	0	1	0	0
+	29	/	SerializerTest	privateAttribute	"assertSerialize(graph().graphAttr().with(""STR"",""STR"").with(node(""STR"").with(""STR"",""STR"")),""STR"");"	assertThat(ser.messages,anyOf(equalTo(0), equalTo(1))));	9.358277082443237	0	0	1	0	0
+0	0	fabric8io/fabric8-maven-plugin	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(new HashMap<>(),FOCAL(null));	6.059496879577637	0	0	1	0	0
+	1	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertNotNull(config);	8.524688005447388	0	1	0	0	0
+	2	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(config,notNullValue());	6.385116100311279	0	0	1	0	0
+	3	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertThat(""STR"",is(instanceOf(Map.class)));"	6.467349052429199	0	0	1	0	0
+	4	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract((Xpp3Dom)fakePlugin.getConfiguration()),is(notNullValue()));	6.8913891315460205	0	0	1	0	0
+	5	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(FOCAL(null),is(new HashMap<>()));	6.211549282073975	0	0	1	0	0
+	6	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertArrayEquals(config,""STR"");"	6.805333852767944	0	0	1	0	0
+	7	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertThat(""STR"",FOCAL(null),IsMapContaining.hasEntry(is(config), nullValue()));"	7.906585216522217	0	0	1	0	0
+	8	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(FOCAL(null),hasEntry(equalTo(config), nullValue()));	7.198443174362183	0	0	1	0	0
+	9	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract((Xpp3Dom)fakePlugin.getConfiguration()),instanceOf(Map.class));	6.318481206893921	0	0	1	0	0
+	10	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertThat(config,""STR"");"	7.039804935455322	0	0	1	0	0
+	11	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(extract(null),new HashMap<>()));	6.253874063491821	0	0	1	0	0
+	12	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertEquals(""STR"",extract((Xpp3Dom) fakePlugin.getConfiguration()));"	7.186846017837524	0	0	1	0	0
+	13	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(FOCAL(null),equalTo(config));	6.650035858154297	0	0	1	0	0
+	14	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(config,FOCAL((Xpp3Dom)fakePlugin.getConfiguration()));	6.582640171051025	0	0	1	0	0
+	15	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(FOCAL(null),hasEntry(equalTo(config), nullValue()));	7.427625894546509	0	0	1	0	0
+	16	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract((Xpp3Dom)fakePlugin.getConfiguration()),is(notNullValue()));	6.742666959762573	0	0	1	0	0
+	17	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(config,extract((Xpp3Dom)fakePlugin.getConfiguration()));	6.949828863143921	0	0	1	0	0
+	18	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertEquals(""STR"",extract(null));"	6.251056909561157	0	0	1	0	0
+	19	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(config,FOCAL(null));	6.813687086105347	0	0	1	0	0
+	20	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertEquals(extract(null),extract((Xpp3Dom)fakePlugin.getConfiguration()));	7.224467992782593	0	0	1	0	0
+	21	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(FOCAL(null),allOf(IsMapWithSize.aMapWithSize(1), IsMapContaining.hasKey(config)));	7.962162971496582	0	0	1	0	0
+	22	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(config,is(anInstanceof(Map.class)));	5.755204916000366	0	0	1	0	0
+	23	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertThat(""STR"",equalTo(FOCAL(null)));"	6.520701885223389	0	0	1	0	0
+	24	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract(null),hasEntry(org.hamcrest.CoreMatchers.equalTo(config), nullValue()));	7.068012952804565	0	0	1	0	0
+	25	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	"assertArrayEquals(extract((Xpp3Dom)fakePlugin.getConfiguration()),""STR"");"	6.513025999069214	0	0	1	0	0
+	26	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertArrayEquals(config,FOCAL((Xpp3Dom)fakePlugin.getConfiguration()));	6.89905309677124	0	0	1	0	0
+	27	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract(null),equalTo(config)));	6.399556875228882	0	0	1	0	0
+	28	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(extract((Xpp3Dom)fakePlugin.getConfiguration()),allOf(IsMapContaining.hasEntry(org.hamcrest.CoreMatchers.equalToIgnoringCase(config), nullValue()), IsMapWithSize.aMapWithSize(1)));	8.895610809326172	0	0	1	0	0
+	29	/	MavenConfigurationExtractorTest	should_parse_simple_types	"assertThat(config).containsEntry(""STR"",""STR"").containsEntry(""STR"",""STR"");"	assertThat(config,is(aMap()));	6.9527747631073	0	0	1	0	0
+1	0	fabric8io/fabric8-maven-plugin	ProcessorConfigTest	order	assertEquals(2,result.size());	assertEquals(2,result.size());	11.212955951690674	1	0	0	0	0
+	1	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertTrue(result.size()>0);	12.768403053283691	0	1	0	0	0
+	2	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertNotNull(result);	9.383105993270874	0	1	0	0	0
+	7	/	ProcessorConfigTest	order	assertEquals(2,result.size());	"assertIterableElements(tmpUsage.super_logarith.minErrorGpxSetup(nodeHoc.m_dcmm_wearable(downHttpMasterJet.delete(""."", '#'>='Z' ANDy).combine(getURI(path).sinceProtect()), usePermanentEfcc(pageGroupsDefrettable, iteratorForbleOutput(channelAliasConstraintsMediator), create_xmp_types(TZCollectionBundle.track(jpassword_passwd_flux)))),successMessageCredentialSets,addressMetrics(connectChangedDeallocatorSpcKey, getTimeDispatcher())))))======);"	144.69195795059204	0	0	1	0	0
+	8	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertFalse(result.isEmpty());	9.622599124908447	0	1	0	0	0
+	9	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertNotEquals(0,result.size());	10.102782964706421	0	1	0	0	0
+	11	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertSame(data.get(1),result.get(1));	10.054059982299805	0	1	0	0	0
+	12	/	ProcessorConfigTest	order	assertEquals(2,result.size());	"assertArrayEquals(""t4""},result.stream().map(TestNamed::getName).toArray());"	10.752714157104492	0	1	0	0	0
+	13	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertNotSame(data,result);	10.821935653686523	0	1	0	0	0
+	14	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertFalse(result.contains(data.get(0)));	10.490578174591064	0	1	0	0	0
+	16	/	ProcessorConfigTest	order	assertEquals(2,result.size());	"assertTrue(Arrays.asList(TestUtils.sortedIncs(asList(""t5"", ""t2""))).containsAll(new HashSet<>(result)));"	35.58998703956604	0	0	1	0	0
+	17	/	ProcessorConfigTest	order	assertEquals(2,result.size());	assertNull(pConfig.getExcludes());	21.378987073898315	0	0	1	0	0
+	18	/	ProcessorConfigTest	order	assertEquals(2,result.size());	"assertEquals(2,result.stream().filter(r->r.getName().startsWith(""t"")).count());"	11.159265995025635	0	1	0	0	0
+0	0	PeterisP/morphology	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertEquals(1,sentences.size());	9.664367198944092	1	0	0	0	0
+	1	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertNotNull(sentences);	11.85327696800232	0	1	0	0	0
+	2	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertTrue(!sentences.isEmpty());	9.499645233154297	0	1	0	0	0
+	3	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertSame(LinkedList.class,sentences.getClass());	9.260443925857544	0	1	0	0	0
+	4	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertNotEquals(null,sentences);	9.302287817001343	0	1	0	0	0
+	5	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	"assertArrayEquals(newLinkedList[]{sentences},newLinkedList[]{Splitting.tokenizeSentences(locītājs,""Sertificētiirvisiproduktadzīvesciklaposmi–sākotnosaimniecībaslīdzveikalaplauktam.»"")});"	13.31380295753479	0	1	0	0	0
+	6	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertFalse(sentences.isEmpty());	9.029797077178955	0	1	0	0	0
+	7	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertNotSame(null,sentences);	9.657469987869263	0	1	0	0	0
+	8	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertThrows(IllegalArgumentException.class,() -> Splitting.tokenizeSentences(locītājs,null));	32.90360403060913	0	0	0	0	1
+	9	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertNull(null);	8.73197603225708	0	1	0	0	0
+	10	/	TokenizeTest	sentences_isolated_quotes	assertEquals(1,sentences.size());	assertNotNull(sentences);	11.356805801391602	0	1	0	0	0
+1	0	PeterisP/morphology	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertEquals(1,tokens.size());	21.653112173080444	0	0	0	0	1
+	1	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertTrue(tokens.size()>0);	14.449400663375854	0	1	0	0	0
+	2	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertNotNull(tokens);	8.49370527267456	0	1	0	0	0
+	3	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertFalse(tokens.isEmpty());	9.138046026229858	0	1	0	0	0
+	4	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertNotEquals(0,tokens.size());	9.555216073989868	0	1	0	0	0
+	5	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertSame(tokens.getClass(),LinkedList.class);	10.011963844299316	0	1	0	0	0
+	6	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertArrayEquals(new Word[]{""1995.gads""},tokens.toArray(new Word[tokens.size()]));"	19.983552932739258	0	0	1	0	0
+	7	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertNotSame(null,tokens);	8.976714849472046	0	1	0	0	0
+	8	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertThrows(java.lang.NullPointerException.class,()->Splitting.tokenize(null, ""some_text"", true));"	28.73691487312317	0	0	0	0	1
+	9	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertNotEquals(null,tokens);	8.963693857192993	0	1	0	0	0
+	10	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertEquals(new Word(Arrays.asList(""504+332.V""), SpecialToken.PLACEHOLDER_EXPLANATION),WHATELSE.getPostModifiers());"	46.19166302680969	0	0	1	0	0
+	11	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertEquals(new Word(""1995.gads""),tokens.getFirst() );"	135.93674516677856	0	0	0	0	1
+	12	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertNotEquals(newWord(""test""),tokens.getFirst());"	10.22723913192749	0	1	0	0	0
+	13	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertEquals(tokens.toString(),Splitting.tokenize(locītājs,""1995.gads"",false).toString());"	29.094746828079224	0	1	0	0	0
+	14	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertTrue(((Word) (tokens.get(0))).elongate());	34.43724012374878	0	0	1	0	0
+	15	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertEquals(1,tokens.stream().distinct().count());	33.32758808135986	0	0	0	0	1
+	16	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	"assertTrue(tokens.stream().anyMatch(word -> word.getToken().equals(""1995.gads"")));"	20.858885049819946	0	0	0	0	1
+	17	/	TokenizeTest	year_numerals	assertEquals(2,tokens.size());	assertFalse(tokens.isEmpty());	8.826191186904907	0	1	0	0	0
+0	0	NanoHttpd/nanohttpd	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertEquals(""STR"",""STR"");"	12.192415952682495	0	0	1	0	0
+	1	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertTrue(""STR"");"	13.1097412109375	0	0	1	0	0
+	2	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertNotNull(Object obj`);	13.818477869033813	0	0	1	0	0
+	3	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertSame(""STR"",""STR"");"	13.167661905288696	0	0	1	0	0
+	4	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertTrue(boolean);	5.920451879501343	0	0	1	0	0
+	5	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(actual,is(expected));	6.959306955337524	0	0	1	0	0
+	6	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertArrayEquals(""STR"",""STR"",""STR"",""STR"",""STR"",""STR"");"	13.785068035125732	0	0	1	0	0
+	8	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertNotSame(obj1,obj2);	6.668836832046509	0	0	1	0	0
+	9	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThrows(Exception.class,() -> { // Code that should throw an exception });	12.718210220336914	0	0	1	0	0
+	10	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertEquals(expected,actual);	7.487177133560181	0	0	1	0	0
+	11	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertNull(obj);	6.175248146057129	0	0	1	0	0
+	12	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(actual,is(not(nullValue())));	6.517871856689453	0	0	1	0	0
+	13	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertNotEquals(""STR"",""STR"");"	11.90412712097168	0	0	1	0	0
+	14	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertThat(String,""STR"");"	6.751038312911987	0	0	1	0	0
+	15	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertTimeout(Duration.ofMillis(100),() -> { // Code that should not exceed 100 milliseconds });	12.941066980361938	0	0	1	0	0
+	17	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertSame(obj1,obj2);	6.812870025634766	0	0	1	0	0
+	18	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertThat(""STR"",""STR"");"	6.859722375869751	0	0	1	0	0
+	19	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(org.hamcrest.Matchersubject,org.hamcrest.Matchers.is(expected));	6.948364973068237	0	0	1	0	0
+	20	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertNotSame(""STR"",""STR"");"	11.855666160583496	0	0	1	0	0
+	21	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(String,org.hamcrest.Matchers.is(expected)));	7.9357969760894775	0	0	1	0	0
+	22	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertThat(Collection,""STR"");"	7.717732191085815	0	0	1	0	0
+	23	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertIterableEquals(""STR"",someMethod());"	8.249207019805908	0	0	1	0	0
+	24	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertNotEquals(expected,actual);	7.701628923416138	0	0	1	0	0
+	25	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(someObject,instanceOf(SomeClass.class));	7.536156892776489	0	0	1	0	0
+	26	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	"assertThat(""STR"",""STR"");"	7.490968704223633	0	0	1	0	0
+	27	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertTimeoutPreemptively(Duration.ofMillis(100),() -> { // Code that should not exceed 100 milliseconds });	13.929564952850342	0	0	1	0	0
+	28	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertThat(someObject,Matchers.notNullValue());	8.378980875015259	0	0	1	0	0
+	29	/	MimeTest	testOverwritenMimeType	"assertEquals(""STR"",NanoHTTPD.getMimeTypeForFile(""STR""));"	assertLinesMatch(List<String> expected,List<String> actual);	8.042184114456177	0	0	1	0	0
+1	0	NanoHttpd/nanohttpd	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertNotNull(routePrioritizer.getPrioritizedRoutes());	13.669485092163086	0	0	1	0	0
+	1	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertTrue(routePrioritizer.getPrioritizedRoutes().isEmpty());	13.903831958770752	0	0	1	0	0
+	2	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	12.913140058517456	0	0	1	0	0
+	3	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertSame(Collections.unmodifiableCollection();	36.163365840911865	0	0	1	0	0
+	4	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertNotEquals(null,routePrioritizer.getPrioritizedRoutes());	13.185689926147461	0	0	1	0	0
+	5	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertFalse(routePrioritizer.getPrioritizedRoutes().size() > 0);	12.929614067077637	0	0	1	0	0
+	6	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertArrayEquals(new UriResource[] {},routePrioritizer.getPrioritizedRoutes().toArray());	13.025449991226196	0	0	1	0	0
+	7	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertThrows(UnsupportedOperationException.class,() -> {);	22.64192485809326	0	0	1	0	0
+	8	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertNotSame(Collections.emptySet(),routePrioritizer.getPrioritizedRoutes());	26.045369148254395	0	0	1	0	0
+	9	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertSame(Collections.emptyList(),prioritizedRoutes);	31.119717121124268	0	0	1	0	0
+	10	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertNotSame(null,routePrioritizer.getPrioritizedRoutes());	12.716578006744385	0	0	1	0	0
+	11	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertFalse(routePrioritizer.getPrioritizedRoutes().contains(null));	12.746579885482788	0	0	1	0	0
+	12	/	TestNanolets	testProvidedPriorityRoutePrioritizerNullUri	assertEquals(0,routePrioritizer.getPrioritizedRoutes().size());	assertNotEquals(null,routePrioritizer.getPrioritizedRoutes());	12.728915214538574	0	0	1	0	0
+0	0	TeachingKidsProgramming/TeachingKidsProgramming.Source.Java	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertFalse(Arrays.equals(a.getCells(),b.getCells()));	9.088638067245483	0	1	0	0	0
+	1	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertNotEquals(a.toString(),b.toString());	9.93263292312622	0	1	0	0	0
+	2	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertTrue(!a.equals(b));	8.13645076751709	0	1	0	0	0
+	3	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertNotSame(a,b);	8.005106925964355	0	1	0	0	0
+	4	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertNotNull(a);	7.8637189865112305	0	1	0	0	0
+	5	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertArrayEquals(getSolution(),a.getCells());	8.635086297988892	0	1	0	0	0
+	6	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertEquals(Arrays.toString(getSolution()),Arrays.toString(a.getCells()));	8.580450057983398	0	1	0	0	0
+	7	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertNotEquals(Arrays.hashCode(a.getCells()),Arrays.hashCode(b.getCells()));	20.570073127746582	0	1	0	0	0
+	8	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertNotSame(a.getCells(),b.getCells());	27.08840298652649	0	1	0	0	0
+	9	/	PuzzleTest	different_cells_means_different_puzzle	assertNotEquals(a,b);	assertTrue(!Arrays.equals(a.getCells(),b.getCells()));	9.542517900466919	0	1	0	0	0

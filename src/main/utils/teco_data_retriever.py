@@ -272,7 +272,7 @@ isChunking = True if 'chunk' in sys.argv else False
 # Predictions
 preds = None
 if not isChunking:
-    with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as predsFile:
+    with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
         preds = [json.loads(line) for line in predsFile]
 else:
     with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
@@ -281,7 +281,7 @@ else:
 #-------------------------------------------------
 
 projectsList = []
-chunkList = [[],[],[],[],[],[],[]] # 6 chunks with 50 each
+chunkList = [[],[],[],[],[],[],[]] # 7 chunks with 50 each
 currentChunk = -1
 
 for predId, pred in enumerate(preds):

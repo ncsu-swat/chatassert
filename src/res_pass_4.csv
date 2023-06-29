@@ -1,2 +1,0 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	hazelcast/hazelcast-simulator	RegistryTest	testAddTests_testIdFixing	"assertEquals(""STR"",test1.getId());"	"assertEquals(""STR"",focalObj.getId());"	9.617229223251343	0	1	0	0	0
