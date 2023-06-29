@@ -325,8 +325,7 @@ def place_placeholder(tecofied_lines, startLn, oracleLn):
     for line in tecofied_lines:
         if len(placeheld_lines) == (oracleLn+offset):
             # Trigger stop
-            placeheld_lines.append("<AssertPlaceHolder>;")
-            placeheld_lines.append("}")
+            placeheld_lines.append("<AssertPlaceHolder>; \n }")
             break
         else:
             placeheld_lines.append(line)
