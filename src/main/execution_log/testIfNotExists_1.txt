@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1687382906150
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1688067946178
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -107,8 +107,8 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running com.orientechnologies.orient.core.sql.executor.OCreateIndexStatementExecutionTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.194 s - in com.orientechnologies.orient.core.sql.executor.OCreateIndexStatementExecutionTest
+[INFO] Running com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreatePropertyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.16 s - in com.orientechnologies.orient.core.sql.OCommandExecutorSQLCreatePropertyTest
 Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] 
 [INFO] Results:
@@ -118,6 +118,6 @@ Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  33.607 s
-[INFO] Finished at: 2023-06-21T17:28:58-04:00
+[INFO] Total time:  35.566 s
+[INFO] Finished at: 2023-06-30T01:46:20+06:00
 [INFO] ------------------------------------------------------------------------
