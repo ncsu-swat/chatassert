@@ -1,0 +1,46 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< gov.adlnet:jxapi >--------------------------
+[INFO] Building jXAPI 2.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jxapi ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jxapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ jxapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 34 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/src/main/java/gov/adlnet/xapi/client/StatementClient.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jxapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jxapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 33 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jxapi ---
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jxapi/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running gov.adlnet.xapi.SubStatementTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.163 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.914 s
+[INFO] Finished at: 2023-06-30T10:30:06-04:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,52 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
+[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 171 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 135 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/fake/FakeDriver.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/fake/FakeDriver.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ simulator ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.hazelcast.simulator.common.AgentsFileTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.208 sec - in com.hazelcast.simulator.common.AgentsFileTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.386 s
+[INFO] Finished at: 2023-07-01T17:43:54-04:00
+[INFO] ------------------------------------------------------------------------

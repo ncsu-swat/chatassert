@@ -1,0 +1,131 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< org.jcodec:jcodec >--------------------------
+[INFO] Building JCodec 0.2.6-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jcodec ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.1:revision (default) @ jcodec ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ jcodec ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jcodec ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ jcodec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 887 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mp4/QTTimeUtil.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mp4/QTTimeUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/main/java/org/jcodec/platform/Platform.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/main/java/org/jcodec/platform/Platform.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jcodec ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jcodec ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 147 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vpx/vp9/ModeInfoTest.java:[57,25] no suitable method found for assertArrayEquals(java.lang.Integer[])
+    method org.junit.Assert.assertArrayEquals(java.lang.String,java.lang.Object[],java.lang.Object[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.Object[],java.lang.Object[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,boolean[],boolean[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(boolean[],boolean[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,byte[],byte[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(byte[],byte[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,char[],char[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(char[],char[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,short[],short[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(short[],short[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,int[],int[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(int[],int[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,long[],long[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(long[],long[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,double[],double[],double) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(double[],double[],double) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(java.lang.String,float[],float[],float) is not applicable
+      (actual and formal argument lists differ in length)
+    method org.junit.Assert.assertArrayEquals(float[],float[],float) is not applicable
+      (actual and formal argument lists differ in length)
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  27.779 s
+[INFO] Finished at: 2023-06-30T14:10:15-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vpx/vp9/ModeInfoTest.java:[57,25] no suitable method found for assertArrayEquals(java.lang.Integer[])
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,java.lang.Object[],java.lang.Object[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.Object[],java.lang.Object[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,boolean[],boolean[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(boolean[],boolean[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,byte[],byte[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(byte[],byte[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,char[],char[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(char[],char[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,short[],short[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(short[],short[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,int[],int[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(int[],int[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,long[],long[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(long[],long[]) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,double[],double[],double) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(double[],double[],double) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(java.lang.String,float[],float[],float) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     method org.junit.Assert.assertArrayEquals(float[],float[],float) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

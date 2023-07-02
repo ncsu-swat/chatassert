@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< io.fabric8:fabric8-maven-plugin-enricher-api >------------
+[INFO] Building Fabric8 Maven :: Enricher :: API 4.4.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.0:resources (default-resources) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/main/java/io/fabric8/maven/enricher/api/util/MavenConfigurationExtractor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.0:testResources (default-testResources) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fabric8-maven-plugin-enricher-api ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java:[31,82] type io.fabric8.maven.core.util.Configs.Key does not take parameters
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.433 s
+[INFO] Finished at: 2023-06-30T14:47:58-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project fabric8-maven-plugin-enricher-api: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/enricher/api/src/test/java/io/fabric8/maven/enricher/api/EnricherConfigTest.java:[31,82] type io.fabric8.maven.core.util.Configs.Key does not take parameters
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

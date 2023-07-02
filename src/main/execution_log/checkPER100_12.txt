@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.github:moneytostr >------------------------
+[INFO] Building moneytostr 1.18-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ moneytostr ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.3:prepare-agent (prepare-agent) @ moneytostr ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/target/jacoco.exec,excludes=**/MoneyToStrApp*.class
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ moneytostr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ moneytostr ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ moneytostr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ moneytostr ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ moneytostr ---
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/moneytostr-russian/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.moneytostr.MoneyToStrTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.283 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.304 s
+[INFO] Finished at: 2023-07-01T17:48:04-04:00
+[INFO] ------------------------------------------------------------------------

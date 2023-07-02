@@ -1,0 +1,63 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] -----------------------< io.cucumber:pro-plugin >-----------------------
+[INFO] Building cucumber-pro-plugin 3.0.3-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ pro-plugin ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ pro-plugin ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.9:prepare-agent (pre-unit-test) @ pro-plugin ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] surefireArgLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/target/coverage-reports/jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ pro-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/main/java/io/cucumber/pro/config/loaders/YamlConfigLoader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ pro-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ pro-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/JsonReporterTest.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/JsonReporterTest.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/JsonReporterTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/results/CucumberProResultsUrlBuilderTest.java:[15,88] cannot find symbol
+  symbol:   variable projectName
+  location: class io.cucumber.pro.results.CucumberProResultsUrlBuilderTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.409 s
+[INFO] Finished at: 2023-06-30T14:57:56-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile (default-testCompile) on project pro-plugin: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/cucumber-pro-plugin-jvm/src/test/java/io/cucumber/pro/results/CucumberProResultsUrlBuilderTest.java:[15,88] cannot find symbol
+[ERROR]   symbol:   variable projectName
+[ERROR]   location: class io.cucumber.pro.results.CucumberProResultsUrlBuilderTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

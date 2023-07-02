@@ -2,25 +2,25 @@
 [INFO] 
 [INFO] -----------------< com.orientechnologies:orientdb-etl >-----------------
 [INFO] Building OrientDB ETL 3.0.42
-[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ orientdb-etl ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/target
 [INFO] 
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-etl ---
-[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1688066621286
+[INFO] Executing: /bin/sh -c cd '/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1688070065261
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
-[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl
+[INFO] Executing: /bin/sh -c cd '/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl' && 'git' 'rev-parse' '--verify' 'HEAD'
+[INFO] Working directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl
 [INFO] Storing buildScmBranch: UNKNOWN
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-etl ---
-[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/jacoco.exec -ea -Xmx2048m -Dstorage.diskCache.bufferSize=4096
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/target/jacoco.exec -ea -Xmx2048m -Dstorage.diskCache.bufferSize=4096
  -Dindex.flushAfterCreate=false
  -Dstorage.makeFullCheckpointAfterCreate=false
  -Dstorage.makeFullCheckpointAfterOpen=false
@@ -40,11 +40,12 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-etl ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 67 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLComponentFactory.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLComponentFactory.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 67 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/target/classes
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/transformer/OETLAbstractLookupTransformer.java:[91,20] <RET>query(com.orientechnologies.orient.core.query.OQuery<?>,java.lang.Object...) in com.orientechnologies.orient.core.db.ODatabase has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/listener/OETLScriptImporterListener.java:[99,16] <RET>command(com.orientechnologies.orient.core.command.OCommandRequest) in com.orientechnologies.orient.core.db.ODatabase has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/transformer/OETLCommandTransformer.java:[101,27] <RET>command(com.orientechnologies.orient.core.command.OCommandRequest) in com.orientechnologies.orient.core.db.ODatabase has been deprecated
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/main/java/com/orientechnologies/orient/etl/OETLProcessor.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-bundle-plugin:3.5.0:manifest (bundle-manifest) @ orientdb-etl ---
 [INFO] 
@@ -54,40 +55,101 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-etl ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 17 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/loader/OETLOrientDBLoaderTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/loader/OETLOrientDBLoaderTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-etl ---
-[WARNING] The system property security.userPasswordSaltIterations is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.437 s <<< FAILURE! - in com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest
-[ERROR] testFloat(com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest)  Time elapsed: 4.335 s  <<< FAILURE!
-java.lang.AssertionError: Use assertEquals(expected, actual, delta) to compare floating-point numbers
-	at com.orientechnologies.orient.etl.extractor.OETLCSVExtractorTest.testFloat(OETLCSVExtractorTest.java:123)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Failures: 
-[ERROR]   OETLCSVExtractorTest.testFloat:123 Use assertEquals(expected, actual, delta) to compare floating-point numbers
-[INFO] 
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-[INFO] 
+[INFO] Compiling 17 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[122,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[122,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[124,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,11] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,64] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[136,64] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[147,27] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[159,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[171,66] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[183,28] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[194,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[205,25] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[216,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[227,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[236,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[248,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[261,42] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[274,47] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[287,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[300,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[313,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[326,43] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[340,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[353,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[366,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[377,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[388,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[399,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[410,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[425,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[438,35] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[450,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[460,2] reached end of file while parsing
+[INFO] 41 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.268 s
-[INFO] Finished at: 2023-06-30T01:23:55+06:00
+[INFO] Total time:  6.655 s
+[INFO] Finished at: 2023-06-29T16:21:11-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project orientdb-etl: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/etl/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-etl: Compilation failure: Compilation failure: 
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[120,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[121,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[122,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[122,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[124,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,11] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[125,64] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[136,64] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[147,27] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[159,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[171,66] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[183,28] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[194,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[205,25] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[216,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[227,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[236,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[248,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[261,42] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[274,47] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[287,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[300,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[313,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[326,43] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[340,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[353,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[366,36] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[377,34] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[388,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[399,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[410,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[425,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[438,35] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[450,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/orientdb/etl/src/test/java/com/orientechnologies/orient/etl/extractor/OETLCSVExtractorTest.java:[460,2] reached end of file while parsing
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

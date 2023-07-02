@@ -1,0 +1,48 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.tradier:dropwizard-raven:jar:1.1.0 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] --------------------< com.tradier:dropwizard-raven >--------------------
+[INFO] Building Dropwizard Raven 1.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ dropwizard-raven ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/dropwizard-raven/target
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ dropwizard-raven ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ dropwizard-raven ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ dropwizard-raven ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 4 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/dropwizard-raven/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ dropwizard-raven ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/dropwizard-raven/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ dropwizard-raven ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/dropwizard-raven/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ dropwizard-raven ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.tradier.raven.filters.DroppingRavenLoggingFilterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 sec - in com.tradier.raven.filters.DroppingRavenLoggingFilterTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.305 s
+[INFO] Finished at: 2023-06-30T15:23:01-04:00
+[INFO] ------------------------------------------------------------------------

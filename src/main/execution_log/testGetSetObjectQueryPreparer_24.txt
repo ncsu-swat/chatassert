@@ -1,0 +1,66 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.amlinv:stat-collection-utils:jar:2.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-source-plugin is missing. @ line 127, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 113, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ------------------< com.amlinv:stat-collection-utils >------------------
+[INFO] Building Statistics Collection Utilities 2.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ stat-collection-utils ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ stat-collection-utils ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ stat-collection-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 27 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/main/java/com/amlinv/jmxutil/connection/impl/JolokiaConnection.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/main/java/com/amlinv/jmxutil/connection/impl/JolokiaConnection.java uses unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/main/java/com/amlinv/jmxutil/connection/impl/JolokiaConnection.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ stat-collection-utils ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ stat-collection-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/test/java/com/amlinv/jmxutil/connection/impl/JolokiaConnectionTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/test/java/com/amlinv/jmxutil/connection/impl/JolokiaConnectionTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/test/java/com/amlinv/jmxutil/polling/JmxAttributePollerTest.java:[137,40] cannot find symbol
+  symbol:   variable actualValue
+  location: class com.amlinv.jmxutil.polling.JmxAttributePollerTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.832 s
+[INFO] Finished at: 2023-07-01T20:36:50-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project stat-collection-utils: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/stat-collection-utils/src/test/java/com/amlinv/jmxutil/polling/JmxAttributePollerTest.java:[137,40] cannot find symbol
+[ERROR]   symbol:   variable actualValue
+[ERROR]   location: class com.amlinv.jmxutil.polling.JmxAttributePollerTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

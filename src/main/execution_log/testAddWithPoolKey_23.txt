@@ -1,0 +1,66 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.alipay.sofa:bolt >------------------------
+[INFO] Building com.alipay.sofa:bolt 1.6.4
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ bolt ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ bolt ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 274
+[INFO] Successfully formatted: 0 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 274 file(s)
+[INFO] Approximate time taken: 4s
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
+[INFO] Updating license headers...
+[WARNING] Unknown file extension: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/LICENSE
+[INFO] Updating license header in: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/connection/RpcConnectionManagerTest.java
+[WARNING] Unknown file extension: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/HEADER
+[WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 168 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractRemotingServer.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractRemotingServer.java: Recompile with -Xlint:deprecation for details.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 106 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/connection/RpcConnectionManagerTest.java:[17,1] class, interface, or enum expected
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.209 s
+[INFO] Finished at: 2023-07-01T18:15:41-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project bolt: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/connection/RpcConnectionManagerTest.java:[17,1] class, interface, or enum expected
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

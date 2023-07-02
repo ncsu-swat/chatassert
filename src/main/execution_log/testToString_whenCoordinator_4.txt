@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
+[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 171 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 135 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[105,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[105,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[107,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[113,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[118,43] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[123,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[128,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,13] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,45] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,78] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[137,2] reached end of file while parsing
+[INFO] 19 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.031 s
+[INFO] Finished at: 2023-06-29T19:42:40-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[105,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[105,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[107,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[108,41] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[113,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[118,43] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[123,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[128,38] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,13] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,45] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[132,78] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[137,2] reached end of file while parsing
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

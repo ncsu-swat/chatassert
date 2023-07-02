@@ -2,11 +2,13 @@
 [INFO] 
 [INFO] ----------------< io.fabric8:fabric8-maven-plugin-core >----------------
 [INFO] Building Fabric8 Maven :: Core 4.4.1
-[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
+Downloading from maven-central-plugin-snapshots: https://oss.sonatype.org/content/repositories/snapshots/junit/junit-dep/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/junit/junit-dep/maven-metadata.xml
+Progress (1): 563 B                   Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit-dep/maven-metadata.xml (563 B at 743 B/s)
+[WARNING] The artifact junit:junit-dep:jar:4.11-beta-1 has been relocated to junit:junit:jar:4.11-beta-1: The artifact junit:junit does not contain Hamcrest anymore but declares a dependency to Hamcrest. Thus, junit:junit-dep has become obsolete.
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ fabric8-maven-plugin-core ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.0:resources (default-resources) @ fabric8-maven-plugin-core ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -16,20 +18,20 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.0:copy-resources (copy-resources) @ fabric8-maven-plugin-core ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/resources/META-INF/plexus
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/resources/META-INF/plexus
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ fabric8-maven-plugin-core ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 107 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target/classes
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[181,85] daemonSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[183,86] deployments() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[185,86] replicaSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesClientUtil.java:[76,51] deployments() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesClientUtil.java:[78,51] replicaSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/ResourceUtil.java:[97,46] WRITE_EMPTY_JSON_ARRAYS in com.fasterxml.jackson.databind.SerializationFeature has been deprecated
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesResourceUtil.java:[430,40] getItems() in io.fabric8.kubernetes.api.model.BaseKubernetesListFluentImpl has been deprecated
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 107 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/target/classes
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesClientUtil.java:[76,51] deployments() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesClientUtil.java:[78,51] replicaSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesResourceUtil.java:[430,40] getItems() in io.fabric8.kubernetes.api.model.BaseKubernetesListFluentImpl has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/ResourceUtil.java:[97,46] WRITE_EMPTY_JSON_ARRAYS in com.fasterxml.jackson.databind.SerializationFeature has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[181,85] daemonSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[183,86] deployments() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[185,86] replicaSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/access/ClusterAccess.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/access/ClusterAccess.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- plexus-component-metadata:2.0.0:generate-metadata (default) @ fabric8-maven-plugin-core ---
 [INFO] Discovered 1 component descriptors(s)
@@ -38,53 +40,59 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] ignoreDelta true
 [INFO] Copying 33 resources
+[INFO] Copying file META-INF/fabric8/profiles.yml
+[INFO] Copying file fabric8/simple-rc.json
+[INFO] Copying file fabric8/simple-bla.yaml
 [INFO] Copying file fabric8/invalid-config-svc.yaml
+[INFO] Copying file fabric8/config/profiles-lookup-dir/profiles.yaml
+[INFO] Copying file fabric8/config/ProcessorConfigTest.yml
+[INFO] Copying file fabric8/config/ProfileTest.yml
+[INFO] Copying file fabric8/config/ProfileUtilTest-multiple.yml
 [INFO] Copying file fabric8/job.yml
 [INFO] Copying file fabric8/svc.yml
-[INFO] Copying file fabric8/simple-rc.json
-[INFO] Copying file fabric8/simple-rc.yaml
-[INFO] Copying file fabric8/named-svc.yaml
-[INFO] Copying file fabric8/config/ProfileUtilTest-multiple.yml
-[INFO] Copying file fabric8/config/ProcessorConfigTest.yml
-[INFO] Copying file fabric8/config/profiles-lookup-dir/profiles.yaml
-[INFO] Copying file fabric8/config/ProfileTest.yml
-[INFO] Copying file fabric8/simple-bla.yaml
-[INFO] Copying file fabric8/rc.yml
 [INFO] Copying file fabric8/read-dir/pong-rc.yaml
 [INFO] Copying file fabric8/read-dir/pong-svc.yaml
 [INFO] Copying file fabric8/contains_no_kind.yml
 [INFO] Copying file fabric8/contains_kind.yml
+[INFO] Copying file fabric8/named-svc.yaml
+[INFO] Copying file fabric8/simple-rc.yaml
+[INFO] Copying file fabric8/rc.yml
 [INFO] Copying file util/invalid-application.yml
-[INFO] Copying file util/test-application-with-multiple-profiles.yml
-[INFO] Copying file util/test-application.properties
-[INFO] Copying file util/test-application.yml
 [INFO] Copying file util/project-default.yml
-[INFO] Copying file META-INF/fabric8/profiles.yml
-[INFO] Copying file validations/openshift-invalid-deploymentconfig.yml
+[INFO] Copying file util/test-application.properties
+[INFO] Copying file util/test-application-with-multiple-profiles.yml
+[INFO] Copying file util/test-application.yml
 [INFO] Copying file validations/kubernetes-deploy-invalid.yml
+[INFO] Copying file validations/kubernetes/deployment.yml
+[INFO] Copying file validations/kubernetes/svc.yml
+[INFO] Copying file validations/kubernetes-deploy.yml
+[INFO] Copying file validations/openshift-deploymentconfig.yml
 [INFO] Copying file validations/openshift/svc.yml
 [INFO] Copying file validations/openshift/deploymentconfig.yml
-[INFO] Copying file validations/kubernetes-deploy.yml
-[INFO] Copying file validations/kubernetes/svc.yml
-[INFO] Copying file validations/kubernetes/deployment.yml
-[INFO] Copying file validations/openshift-deploymentconfig.yml
+[INFO] Copying file validations/openshift-invalid-deploymentconfig.yml
+[INFO] Copying file service/test-services
 [INFO] Copying file service/test-services-default
 [INFO] Copying file service/error-services
-[INFO] Copying file service/test-services
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fabric8-maven-plugin-core ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 51 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 51 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ fabric8-maven-plugin-core ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom
+Progress (1): 2.7/3.1 kBProgress (1): 3.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.pom (3.1 kB at 38 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.1/surefire-providers-2.22.1.pom (2.5 kB at 45 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar
+Progress (1): 2.7/85 kBProgress (1): 5.5/85 kBProgress (1): 8.2/85 kBProgress (1): 11/85 kB Progress (1): 14/85 kBProgress (1): 16/85 kBProgress (1): 20/85 kBProgress (1): 24/85 kBProgress (1): 28/85 kBProgress (1): 32/85 kBProgress (1): 36/85 kBProgress (1): 40/85 kBProgress (1): 45/85 kBProgress (1): 49/85 kBProgress (1): 53/85 kBProgress (1): 57/85 kBProgress (1): 61/85 kBProgress (1): 65/85 kBProgress (1): 69/85 kBProgress (1): 73/85 kBProgress (1): 77/85 kBProgress (1): 81/85 kBProgress (1): 85 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.1/surefire-junit4-2.22.1.jar (85 kB at 813 kB/s)
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running io.fabric8.maven.core.util.KindAndNameTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s - in io.fabric8.maven.core.util.KindAndNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s - in io.fabric8.maven.core.util.KindAndNameTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -93,6 +101,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.191 s
-[INFO] Finished at: 2023-06-30T11:58:50+06:00
+[INFO] Total time:  16.202 s
+[INFO] Finished at: 2023-06-30T14:17:57-04:00
 [INFO] ------------------------------------------------------------------------

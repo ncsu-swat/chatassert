@@ -2,11 +2,10 @@
 [INFO] 
 [INFO] ------------< org.eluder.coveralls:coveralls-maven-plugin >-------------
 [INFO] Building coveralls-maven-plugin 4.4.0-SNAPSHOT
-[INFO]   from pom.xml
 [INFO] ----------------------------[ maven-plugin ]----------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ coveralls-maven-plugin ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ coveralls-maven-plugin ---
 [INFO] 
@@ -17,11 +16,11 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ coveralls-maven-plugin ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/main/resources
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/main/resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ coveralls-maven-plugin ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 54 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target/classes
+[INFO] Compiling 54 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/target/classes
 [INFO] 
 [INFO] --- maven-plugin-plugin:3.5.2:descriptor (default-descriptor) @ coveralls-maven-plugin ---
 [INFO] Using 'UTF-8' encoding to read mojo source files.
@@ -41,26 +40,47 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ coveralls-maven-plugin ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 44 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 44 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/target/test-classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,129] 'void' type not allowed here
-[INFO] 1 error
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[45,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[45,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[47,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[53,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[58,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[65,35] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[74,2] reached end of file while parsing
+[INFO] 14 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.411 s
-[INFO] Finished at: 2023-06-30T12:40:41+06:00
+[INFO] Total time:  9.016 s
+[INFO] Finished at: 2023-07-01T20:45:59-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,129] 'void' type not allowed here
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[45,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[45,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[47,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[48,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[53,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[58,37] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[65,35] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[74,2] reached end of file while parsing
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

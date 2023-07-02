@@ -2,23 +2,20 @@
 [INFO] 
 [INFO] -------------------< io.openliberty.tools:ci.common >-------------------
 [INFO] Building ci.common 1.8.18
-[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ci.common ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ci.common ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/resources
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ci.common ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/classes
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Some input files use or override a deprecated API.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/InstallFeatureUtil.java: Recompile with -Xlint:deprecation for details.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java uses unchecked or unsafe operations.
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: Recompile with -Xlint:unchecked for details.
+[INFO] Compiling 26 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target/classes
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java uses unchecked or unsafe operations.
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ci.common ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -26,16 +23,16 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ci.common ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/test-classes
+[INFO] Compiling 12 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target/test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ci.common ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/surefire-reports
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target/surefire-reports
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
 Running io.openliberty.tools.common.plugins.util.DevUtilTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.142 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.177 sec
 
 Results :
 
@@ -44,6 +41,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.104 s
-[INFO] Finished at: 2023-06-30T12:06:35+06:00
+[INFO] Total time:  4.664 s
+[INFO] Finished at: 2023-06-30T15:10:55-04:00
 [INFO] ------------------------------------------------------------------------

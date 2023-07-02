@@ -1,0 +1,57 @@
+[INFO] Scanning for projects...
+[WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -----------------< com.hazelcast.simulator:simulator >------------------
+[INFO] Building Simulator Tool 0.14-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 171 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/main/java/com/hazelcast/simulator/worker/Worker.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ simulator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ simulator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 135 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/FailureTypeTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/fake/FakeDriver.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/fake/FakeDriver.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ simulator ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19.1/surefire-junit4-2.19.1.pom
+Progress (1): 2.7/3.3 kBProgress (1): 3.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19.1/surefire-junit4-2.19.1.pom (3.3 kB at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19.1/surefire-providers-2.19.1.pom
+Progress (1): 2.6 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.19.1/surefire-providers-2.19.1.pom (2.6 kB at 56 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19.1/surefire-junit4-2.19.1.jar
+Progress (1): 4.1/75 kBProgress (1): 8.2/75 kBProgress (1): 12/75 kB Progress (1): 16/75 kBProgress (1): 20/75 kBProgress (1): 25/75 kBProgress (1): 29/75 kBProgress (1): 33/75 kBProgress (1): 37/75 kBProgress (1): 41/75 kBProgress (1): 45/75 kBProgress (1): 49/75 kBProgress (1): 53/75 kBProgress (1): 57/75 kBProgress (1): 61/75 kBProgress (1): 66/75 kBProgress (1): 70/75 kBProgress (1): 74/75 kBProgress (1): 75 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.19.1/surefire-junit4-2.19.1.jar (75 kB at 955 kB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.hazelcast.simulator.utils.CommonUtils_SleepTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec - in com.hazelcast.simulator.utils.CommonUtils_SleepTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.059 s
+[INFO] Finished at: 2023-06-29T19:35:31-04:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,52 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< io.openliberty.tools:ci.common >-------------------
+[INFO] Building ci.common 1.8.18
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ci.common ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ci.common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 26 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target/classes
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java uses unchecked or unsafe operations.
+[WARNING] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/main/java/io/openliberty/tools/common/plugins/util/ServerFeatureUtil.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ci.common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 62 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ci.common ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/DevUtilTest.java:[121,40] cannot find symbol
+  symbol:   variable serverEnvFile
+  location: class io.openliberty.tools.common.plugins.util.DevUtilTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.844 s
+[INFO] Finished at: 2023-06-30T15:06:31-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project ci.common: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/DevUtilTest.java:[121,40] cannot find symbol
+[ERROR]   symbol:   variable serverEnvFile
+[ERROR]   location: class io.openliberty.tools.common.plugins.util.DevUtilTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

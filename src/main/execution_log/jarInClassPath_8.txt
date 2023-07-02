@@ -1,0 +1,144 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------------< guru.nidi.raml:raml-loader >---------------------
+[INFO] Building raml-loader 1.0.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ raml-loader ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/target
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.0.12:prepare (default) @ raml-loader ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ raml-loader ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 31 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/target/classes
+[INFO] 
+[INFO] --- maven-jdeps-plugin:3.0.0:jdkinternals (default) @ raml-loader ---
+[INFO] 
+classes -> /home/ihayet/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar
+classes -> /home/ihayet/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar
+classes -> /home/ihayet/.m2/repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar
+classes -> /home/ihayet/.m2/repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar
+classes -> /home/ihayet/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.4.4/jackson-databind-2.4.4.jar
+classes -> /home/ihayet/.m2/repository/com/github/fge/json-schema-core/1.2.5/json-schema-core-1.2.5.jar
+classes -> /home/ihayet/.m2/repository/com/github/fge/json-schema-validator/2.2.6/json-schema-validator-2.2.6.jar
+classes -> /home/ihayet/.m2/repository/org/raml/raml-parser-2/1.0.0/raml-parser-2-1.0.0.jar
+classes -> /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.342.b07-1.el7_9.x86_64/jre/lib/rt.jar
+classes -> /home/ihayet/.m2/repository/org/raml/yagi/1.0.0/yagi-1.0.0.jar
+   guru.nidi.loader (classes)
+      -> java.io                                            
+      -> java.lang                                          
+   guru.nidi.loader.apidesigner (classes)
+      -> guru.nidi.loader                                   classes
+      -> guru.nidi.loader.repository                        classes
+      -> guru.nidi.loader.url                               classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> java.net                                           
+      -> java.util                                          
+      -> org.apache.http                                    httpcore-4.4.1.jar
+      -> org.apache.http.message                            httpcore-4.4.1.jar
+   guru.nidi.loader.basic (classes)
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> java.net                                           
+      -> java.util                                          
+      -> java.util.regex                                    
+   guru.nidi.loader.repository (classes)
+      -> com.fasterxml.jackson.databind                     jackson-databind-2.4.4.jar
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> java.nio.charset                                   
+      -> java.util                                          
+   guru.nidi.loader.url (classes)
+      -> com.fasterxml.jackson.databind                     jackson-databind-2.4.4.jar
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> java.nio.charset                                   
+      -> java.text                                          
+      -> java.util                                          
+      -> javax.net.ssl                                      
+      -> org.apache.commons.codec.binary                    commons-codec-1.9.jar
+      -> org.apache.commons.io.input                        commons-io-2.4.jar
+      -> org.apache.http                                    httpcore-4.4.1.jar
+      -> org.apache.http.client.entity                      httpclient-4.4.1.jar
+      -> org.apache.http.client.methods                     httpclient-4.4.1.jar
+      -> org.apache.http.conn.ssl                           httpclient-4.4.1.jar
+      -> org.apache.http.impl.client                        httpclient-4.4.1.jar
+      -> org.apache.http.message                            httpcore-4.4.1.jar
+      -> org.apache.http.util                               httpcore-4.4.1.jar
+   guru.nidi.loader.use.jsonschema (classes)
+      -> com.github.fge.jsonschema.cfg                      json-schema-validator-2.2.6.jar
+      -> com.github.fge.jsonschema.core.load.configuration  json-schema-core-1.2.5.jar
+      -> com.github.fge.jsonschema.core.load.download       json-schema-core-1.2.5.jar
+      -> com.github.fge.jsonschema.core.load.uri            json-schema-core-1.2.5.jar
+      -> com.github.fge.jsonschema.core.report              json-schema-core-1.2.5.jar
+      -> com.github.fge.jsonschema.main                     json-schema-validator-2.2.6.jar
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> java.net                                           
+   guru.nidi.loader.use.raml (classes)
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> org.raml.v2.api                                    raml-parser-2-1.0.0.jar
+      -> org.raml.v2.api.loader                             yagi-1.0.0.jar
+   guru.nidi.loader.use.xml (classes)
+      -> guru.nidi.loader                                   classes
+      -> java.io                                            
+      -> java.lang                                          
+      -> javax.xml                                          
+      -> javax.xml.validation                               
+      -> org.w3c.dom                                        
+      -> org.w3c.dom.bootstrap                              
+      -> org.w3c.dom.ls
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ raml-loader ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/LoaderTest.java:[59,40] cannot find symbol
+  symbol:   variable object
+  location: class guru.nidi.loader.basic.LoaderTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.987 s
+[INFO] Finished at: 2023-07-01T19:35:45-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project raml-loader: Compilation failure
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/LoaderTest.java:[59,40] cannot find symbol
+[ERROR]   symbol:   variable object
+[ERROR]   location: class guru.nidi.loader.basic.LoaderTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,84 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.alipay.sofa:bolt >------------------------
+[INFO] Building com.alipay.sofa:bolt 1.6.4
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ bolt ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ bolt ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 274
+[INFO] Successfully formatted: 1 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 273 file(s)
+[INFO] Approximate time taken: 4s
+[INFO] 
+[INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
+[INFO] Updating license headers...
+[WARNING] Unknown file extension: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/LICENSE
+[WARNING] Unknown file extension: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/HEADER
+[WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 168 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractRemotingServer.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractRemotingServer.java: Recompile with -Xlint:deprecation for details.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Some input files use unchecked or unsafe operations.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/rpc/protocol/RpcRequestProcessor.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ bolt ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bolt ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 106 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/rpc/connectionmanage/ScheduledDisconnectStrategyTest.java: Some input files use or override a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/rpc/connectionmanage/ScheduledDisconnectStrategyTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ bolt ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.pom
+Progress (1): 2.7/6.3 kBProgress (1): 5.5/6.3 kBProgress (1): 6.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.pom (6.3 kB at 9.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.pom
+Progress (1): 2.3 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.pom (2.3 kB at 25 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.pom
+Progress (1): 2.7/2.9 kBProgress (1): 2.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.pom (2.9 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.jar
+Progress (1): 2.7/274 kBProgress (1): 5.5/274 kBProgress (1): 8.2/274 kBProgress (1): 11/274 kB Progress (1): 14/274 kBProgress (1): 16/274 kBProgress (1): 20/274 kBProgress (1): 24/274 kBProgress (1): 28/274 kBProgress (1): 32/274 kBProgress (1): 36/274 kBProgress (1): 40/274 kBProgress (1): 45/274 kBProgress (1): 49/274 kBProgress (1): 53/274 kBProgress (1): 57/274 kBProgress (1): 61/274 kBProgress (1): 65/274 kBProgress (1): 69/274 kBProgress (1): 73/274 kBProgress (1): 77/274 kBProgress (1): 81/274 kBProgress (1): 85/274 kBProgress (1): 90/274 kBProgress (1): 94/274 kBProgress (1): 98/274 kBProgress (1): 102/274 kBProgress (1): 106/274 kBProgress (1): 110/274 kBProgress (1): 114/274 kBProgress (1): 118/274 kBProgress (1): 122/274 kBProgress (1): 126/274 kBProgress (1): 131/274 kBProgress (1): 135/274 kBProgress (1): 139/274 kBProgress (1): 143/274 kBProgress (1): 147/274 kBProgress (1): 151/274 kBProgress (1): 155/274 kBProgress (1): 159/274 kBProgress (1): 163/274 kBProgress (1): 167/274 kBProgress (1): 171/274 kBProgress (1): 176/274 kBProgress (1): 180/274 kBProgress (1): 184/274 kBProgress (1): 188/274 kBProgress (1): 192/274 kBProgress (1): 196/274 kBProgress (2): 196/274 kB | 2.7/40 kBProgress (2): 200/274 kB | 2.7/40 kBProgress (2): 204/274 kB | 2.7/40 kBProgress (2): 208/274 kB | 2.7/40 kBProgress (3): 208/274 kB | 2.7/40 kB | 2.7/148 kBProgress (3): 208/274 kB | 5.5/40 kB | 2.7/148 kBProgress (3): 212/274 kB | 5.5/40 kB | 2.7/148 kBProgress (3): 212/274 kB | 8.2/40 kB | 2.7/148 kBProgress (3): 212/274 kB | 8.2/40 kB | 5.5/148 kBProgress (3): 212/274 kB | 11/40 kB | 5.5/148 kB Progress (3): 217/274 kB | 11/40 kB | 5.5/148 kBProgress (3): 217/274 kB | 14/40 kB | 5.5/148 kBProgress (3): 217/274 kB | 14/40 kB | 8.2/148 kBProgress (3): 217/274 kB | 16/40 kB | 8.2/148 kBProgress (3): 221/274 kB | 16/40 kB | 8.2/148 kBProgress (3): 221/274 kB | 19/40 kB | 8.2/148 kBProgress (3): 221/274 kB | 19/40 kB | 11/148 kB Progress (3): 225/274 kB | 19/40 kB | 11/148 kBProgress (3): 225/274 kB | 19/40 kB | 14/148 kBProgress (3): 225/274 kB | 22/40 kB | 14/148 kBProgress (3): 225/274 kB | 22/40 kB | 16/148 kBProgress (3): 229/274 kB | 22/40 kB | 16/148 kBProgress (3): 229/274 kB | 25/40 kB | 16/148 kBProgress (3): 229/274 kB | 27/40 kB | 16/148 kBProgress (3): 233/274 kB | 27/40 kB | 16/148 kBProgress (3): 233/274 kB | 27/40 kB | 20/148 kBProgress (3): 233/274 kB | 30/40 kB | 20/148 kBProgress (3): 233/274 kB | 30/40 kB | 24/148 kBProgress (3): 237/274 kB | 30/40 kB | 24/148 kBProgress (3): 237/274 kB | 30/40 kB | 28/148 kBProgress (3): 237/274 kB | 33/40 kB | 28/148 kBProgress (3): 237/274 kB | 33/40 kB | 32/148 kBProgress (3): 241/274 kB | 33/40 kB | 32/148 kBProgress (3): 241/274 kB | 36/40 kB | 32/148 kBProgress (3): 245/274 kB | 36/40 kB | 32/148 kBProgress (3): 245/274 kB | 38/40 kB | 32/148 kBProgress (3): 245/274 kB | 40 kB | 32/148 kB   Progress (3): 249/274 kB | 40 kB | 32/148 kBProgress (3): 253/274 kB | 40 kB | 32/148 kBProgress (3): 257/274 kB | 40 kB | 32/148 kBProgress (3): 262/274 kB | 40 kB | 32/148 kBProgress (3): 266/274 kB | 40 kB | 32/148 kBProgress (3): 270/274 kB | 40 kB | 32/148 kBProgress (3): 274/274 kB | 40 kB | 32/148 kBProgress (3): 274 kB | 40 kB | 32/148 kB    Progress (3): 274 kB | 40 kB | 36/148 kBProgress (3): 274 kB | 40 kB | 40/148 kBProgress (3): 274 kB | 40 kB | 45/148 kBProgress (3): 274 kB | 40 kB | 49/148 kBProgress (3): 274 kB | 40 kB | 53/148 kBProgress (3): 274 kB | 40 kB | 57/148 kBProgress (3): 274 kB | 40 kB | 61/148 kBProgress (3): 274 kB | 40 kB | 65/148 kBProgress (3): 274 kB | 40 kB | 69/148 kBProgress (3): 274 kB | 40 kB | 73/148 kBProgress (3): 274 kB | 40 kB | 77/148 kBProgress (3): 274 kB | 40 kB | 81/148 kBProgress (3): 274 kB | 40 kB | 85/148 kBProgress (3): 274 kB | 40 kB | 90/148 kBProgress (3): 274 kB | 40 kB | 94/148 kBProgress (3): 274 kB | 40 kB | 98/148 kB                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.jar (40 kB at 190 kB/s)
+Progress (2): 274 kB | 102/148 kBProgress (2): 274 kB | 106/148 kBProgress (2): 274 kB | 110/148 kBProgress (2): 274 kB | 114/148 kBProgress (2): 274 kB | 118/148 kBProgress (2): 274 kB | 122/148 kBProgress (2): 274 kB | 126/148 kBProgress (2): 274 kB | 131/148 kBProgress (2): 274 kB | 135/148 kBProgress (2): 274 kB | 139/148 kBProgress (2): 274 kB | 143/148 kBProgress (2): 274 kB | 147/148 kBProgress (2): 274 kB | 148 kB                                 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.jar (274 kB at 1.2 MB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.jar (148 kB at 521 kB/s)
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/sofa-bolt/target/surefire-reports
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.pom (2.5 kB at 22 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom
+Progress (1): 2.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom (2.5 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.jar
+Progress (1): 4.1/68 kBProgress (1): 8.2/68 kBProgress (1): 12/68 kB Progress (1): 16/68 kBProgress (1): 20/68 kBProgress (1): 24/68 kBProgress (1): 28/68 kBProgress (1): 32/68 kBProgress (1): 36/68 kBProgress (1): 40/68 kBProgress (1): 45/68 kBProgress (1): 49/68 kBProgress (1): 53/68 kBProgress (1): 57/68 kBProgress (1): 61/68 kBProgress (1): 65/68 kBProgress (1): 68 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.18.1/surefire-junit4-2.18.1.jar (68 kB at 660 kB/s)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.alipay.remoting.inner.connection.RpcConnectionManagerTest
+Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.239 sec - in com.alipay.remoting.inner.connection.RpcConnectionManagerTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.263 s
+[INFO] Finished at: 2023-07-01T17:53:13-04:00
+[INFO] ------------------------------------------------------------------------

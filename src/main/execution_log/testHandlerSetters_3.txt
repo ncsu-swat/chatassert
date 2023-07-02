@@ -1,0 +1,96 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< org.nanohttpd:nanohttpd-nanolets >------------------
+[INFO] Building NanoHttpd-nano application server 2.3.2-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nanohttpd-nanolets ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.0:enforce (enforce-maven) @ nanohttpd-nanolets ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.4.201502262128:prepare-agent (default-prepare-agent) @ nanohttpd-nanolets ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd-nanolets ---
+[INFO] Will search files to update from root /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/main/java
+[INFO] Will search files to update from root /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/test/java
+[INFO] Scan 3 files header done in 100.335ms.
+[INFO] All files are up-to-date.
+[INFO] 
+[INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd-nanolets ---
+[INFO] 
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ nanohttpd-nanolets ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 3
+[INFO] Successfully formatted: 1 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 2 file(s)
+[INFO] Approximate time taken: 0s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ nanohttpd-nanolets ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/main/resources
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ nanohttpd-nanolets ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ nanohttpd-nanolets ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ nanohttpd-nanolets ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target/test-classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ nanohttpd-nanolets ---
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.nanohttpd.junit.router.TestNanolets
+
+Running! Point your browers to http://localhost:9090/ 
+
+Server started, Hit Enter to stop.
+
+Server stopped.
+
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.142 sec <<< FAILURE! - in org.nanohttpd.junit.router.TestNanolets
+testHandlerSetters(org.nanohttpd.junit.router.TestNanolets)  Time elapsed: 0.036 sec  <<< ERROR!
+java.lang.NoSuchFieldException: notImplementedHandler
+	at java.lang.Class.getDeclaredField(Class.java:2070)
+	at org.nanohttpd.junit.router.TestNanolets.testHandlerSetters(TestNanolets.java:523)
+
+
+Results :
+
+Tests in error: 
+  TestNanolets.testHandlerSetters:523 Â» NoSuchField notImplementedHandler
+
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.763 s
+[INFO] Finished at: 2023-07-01T20:41:49-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project nanohttpd-nanolets: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/nanohttpd/nanolets/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

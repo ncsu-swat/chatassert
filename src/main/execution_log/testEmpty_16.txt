@@ -1,0 +1,137 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[WARNING] The project com.basistech.tclre:tcl-regex:bundle:0.14.3 uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] -------------------< com.basistech.tclre:tcl-regex >--------------------
+[INFO] Building tcl-regex 0.14.3
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ tcl-regex ---
+[INFO] Deleting /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-dependency-convergence) @ tcl-regex ---
+[INFO] Skipping Rule Enforcement.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M3:enforce (enforce-maven) @ tcl-regex ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.4:create (default) @ tcl-regex ---
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1688081190673
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] ShortRevision tag detected. The value is '8'.
+[INFO] Executing: /bin/sh -c cd '/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
+[INFO] Working directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:prepare-agent (default-prepare-agent) @ tcl-regex ---
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+[INFO] argLine set to -javaagent:/home/ihayet/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ tcl-regex ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ tcl-regex ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 33 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/classes
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/main/java/com/basistech/tclre/Locale.java: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/main/java/com/basistech/tclre/Locale.java uses or overrides a deprecated API.
+[INFO] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/main/java/com/basistech/tclre/Locale.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:copy-dependencies (copy-bundles) @ tcl-regex ---
+[INFO] Copying icu4j-59.1.jar to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/bundles/icu4j-59.1.jar
+[INFO] Copying fastutil-8.4.0.jar to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/bundles/fastutil-8.4.0.jar
+[INFO] Copying guava-26.0-jre.jar to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/bundles/guava-26.0-jre.jar
+[INFO] Copying log4j-1.2.17.jar to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/bundles/log4j-1.2.17.jar
+[INFO] Copying args4j-2.33.jar to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/bundles/args4j-2.33.jar
+[INFO] 
+[INFO] --- depends-maven-plugin:1.4.0:generate-depends-file (generate-depends-file) @ tcl-regex ---
+[INFO] Created: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/classes/META-INF/maven/dependencies.properties
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ tcl-regex ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ tcl-regex ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 16 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[47,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[47,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[49,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,33] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,41] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,50] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,42] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,51] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,27] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,37] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,46] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,39] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,48] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,50] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,59] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,39] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,48] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[166,2] reached end of file while parsing
+[INFO] 28 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.132 s
+[INFO] Finished at: 2023-06-29T19:26:36-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,9] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,10] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,11] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[46,12] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[47,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[47,6] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[49,10] : expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,5] illegal start of expression
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,11] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,33] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,41] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[50,50] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,32] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,42] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[60,51] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,27] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,37] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[76,46] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,39] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[96,48] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,40] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,50] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[116,59] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,29] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,39] not a statement
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[142,48] ';' expected
+[ERROR] /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/ColorMapTest.java:[166,2] reached end of file while parsing
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

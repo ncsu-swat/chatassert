@@ -2,11 +2,9 @@
 [INFO] 
 [INFO] -----------------------< com.fluenda:parcefone >------------------------
 [INFO] Building ParCEFone 2.1.0
-[INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ parcefone ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ parcefone ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -14,8 +12,7 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ parcefone ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/classes
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
+[INFO] Compiling 5 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ParCEFone/target/classes
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ parcefone ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -23,36 +20,25 @@
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ parcefone ---
 [INFO] Changes detected - recompiling the module!
-[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/test-classes
-[INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
-[INFO] 1 warning
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[223,44] error: cannot find symbol
-  symbol:   method getRecords()
-  location: variable event of type CommonEvent
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] Compiling 2 source files to /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ParCEFone/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ parcefone ---
+[INFO] Surefire report directory: /mnt/beegfs/ihayet/ogpt/oragen/src/tmp/repos/ParCEFone/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.fluenda.parcefone.parser.CEFParserTest
+0    [main] ERROR com.fluenda.parcefone.parser.CEFParser  â com.fluenda.parcefone.event.CEFHandlingException: Error setting value to field rt
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.262 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.622 s
-[INFO] Finished at: 2023-06-30T12:27:07+06:00
+[INFO] Total time:  4.971 s
+[INFO] Finished at: 2023-07-01T20:03:13-04:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project parcefone: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[223,44] error: cannot find symbol
-[ERROR]   symbol:   method getRecords()
-[ERROR]   location: variable event of type CommonEvent
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
