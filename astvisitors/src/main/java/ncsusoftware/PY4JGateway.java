@@ -5,6 +5,8 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.StringLiteralExpr;
 
+import java.lang.Exception;
+
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.List;
@@ -32,12 +34,15 @@ public class PY4JGateway{
     }
 
     public int setFile(String filePath) throws FileNotFoundException{
-        this.filePath = filePath;
-        String content = new Scanner(new File(this.filePath)).useDelimiter("\\Z").next();
+        try {
+          this.filePath = filePath;
+          String content = new Scanner(new File(this.filePath)).useDelimiter("\\Z").next();
 
-        this.jParser = new JavaParser();
-        this.cu = ParseUtil.parseCompilationUnit(jParser, content);
-
+          this.jParser = new JavaParser();
+          this.cu = ParseUtil.parseCompilationUnit(jParser, content);
+        } catch(Exception e) {
+          e.printStackTrace();
+        }
         return 0;
     }
 
@@ -54,6 +59,8 @@ public class PY4JGateway{
         }catch(RuntimeException e){
             System.out.println("Exception has occurred - {}".format(e.toString()));
             return -1;
+        }catch(Exception e){
+            e.printStackTrace();
         }
 
         return 0;
@@ -129,6 +136,7 @@ public class PY4JGateway{
                     }
                 }
             }catch(Exception e){
+                e.printStackTrace();
                 System.out.println("Indexing exception: " + e.toString());
             }   
         }

@@ -1,4 +1,0 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	Yubico/yubico-java-client	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertTrue(isValidOTPFormat(otp));	5.747480154037476	0	1	0	0	0
-	1	/	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	assertFalse(isValidOTPFormat(null)`tocheckthecasewheretheOTPisnull.);	10.798189878463745	0	1	0	0	0
-	2	/	YubicoClientTest	testShortOTP	assertFalse(YubicoClient.isValidOTPFormat(otp));	"assertFalse(""STR"");"	5.821905136108398	0	1	0	0	0

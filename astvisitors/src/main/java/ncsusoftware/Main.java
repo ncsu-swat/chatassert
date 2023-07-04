@@ -1,5 +1,6 @@
 package ncsusoftware;
 
+import java.lang.Exception;
 import py4j.GatewayServer;
 
 public class Main {
@@ -9,8 +10,12 @@ public class Main {
         // Examples.thisTransformationSampler();        
         // Examples.methodTransplantation();
 
-        GatewayServer gatewayServer = new GatewayServer(new PY4JGateway());
-        gatewayServer.start();
+        try {
+          GatewayServer gatewayServer = new GatewayServer(new PY4JGateway());
+          gatewayServer.start();
+        } catch(Exception e){
+          e.printStackTrace();
+        }
     }
 
 

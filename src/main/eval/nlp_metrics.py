@@ -158,7 +158,7 @@ def edit_sim(data):
 
         score += edit_distance(true, pred)/max(len(true), len(pred))
 
-    return score/len(data)
+    return 1-score/len(data)
 
 def main():
     dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestID', 'TrueOracle', 'GenOracle'])

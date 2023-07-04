@@ -53,6 +53,26 @@ public class ParseUtil {
     }
 
     public static com.github.javaparser.ast.CompilationUnit parseCompilationUnit(JavaParser jparser, String content) {
+        // Removing comments from the beginning of the file (to eliminate parse errors - known issue - check JavaParser GitHub issues
+        int startIndex = 0;
+        int i = 0;
+        for(i=0; i<content.length()-1; i++){
+          if(content.charAt(i) == '/' && content.charAt(i+1) == '*'){
+            i += 2;
+            while(true){
+              if(content.charAt(i) == '*' && content.charAt(i+1) == '/'){
+                startIndex = i+2;
+                break;
+              }else{
+                i++;
+              }
+            }
+          }
+          if(startIndex > 0) break;
+        }
+ 	content = content.substring(startIndex);
+        //------------------------------------------------------------------
+
         Optional<CompilationUnit> optCU = jparser.parse(content).getResult();
         if (optCU.isPresent()) {
             // get compilation unit (ast of a file file) for the original file
