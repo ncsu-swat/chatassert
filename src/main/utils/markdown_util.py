@@ -21,13 +21,14 @@ def extract_assertion(text):
     return clean_args(assertStatement.group(0))
 
 def extract_assertions(text):
-    print('\nRESPONSE: \n{}\n'.format(text))
+    # print('\nRESPONSE: \n{}\n'.format(text))
 
     assertStatements = text.split('\n')
 
     asserts = []
     for line in assertStatements:
         assertStatement = extract_assertion(line)
+        asserts.append(assertStatement)
 
     return asserts
 

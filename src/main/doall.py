@@ -37,7 +37,7 @@ openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key
 MAX_INTERACTION = 30  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
 FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
-MODEL_NAME = "gpt-3.5-turbo"
+MODEL_NAME = "gpt-3.5-turbo-16k"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
 
 common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
@@ -48,7 +48,7 @@ status_count = {
     'test_fail': 0
 }
 
-global conversation_history, feedback_history
+global conversation_history, feedback_history, abstraction_history
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
     if interact_index == 0:
         #  Try next: Follow the rules <RULES>, where <RULES>:\n\nRule 1. DO NOT MODIFY TEST PREFIX.\nRule 2. DO NOT ASSUME ANYTHING IF IT IS NOT GIVEN.\nRule 3. DO NOT USE THE STRING LITERAL \"<FOCAL>\" IN THE GENERATED ASSERTION.\nRule 4. PAY ATTENTION TO VARIABLES IN THE TEST PREFIX.\n
@@ -70,6 +70,7 @@ def interact_with_openai(temperature=1, which_history="conversation"):
 
     if which_history == "conversation": history = conversation_history
     elif which_history == "feedback": history = feedback_history
+    elif which_history == "abstraction": history = abstraction_history
 
     # Increase current organization's interaction counter for shuffle tracking
     openai.organization = orgs[current_org]
@@ -78,11 +79,6 @@ def interact_with_openai(temperature=1, which_history="conversation"):
     # Get the model's response  
     while(True):
         try:
-            # print('\n~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#\n')
-            # print('HISTORY:')
-            # print(history)
-            # print('~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#\n')
-
             # Function for interacting with the API                                                                                                                                                                   
             response = openai.ChatCompletion.create(
                 model=MODEL_NAME,
@@ -278,6 +274,7 @@ def insert_message(role, content, which_history):
     global conversation_history, feedback_history
     if which_history == "conversation": conversation_history.append({"role": role, "content": content})
     elif which_history == "feedback": feedback_history.append({"role": role, "content": content})
+    elif which_history == "abstraction": abstraction_history.append({"role": role, "content": content})
 
 def backup_test_file(file_path):
     backup_file_path = file_path.replace(".java", "") + "_backup.txt"
@@ -485,7 +482,7 @@ if __name__ == "__main__":
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
 
-                                gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
+                                # gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
 
                                 print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
@@ -556,10 +553,10 @@ if __name__ == "__main__":
                                 end_time = time.time()
 
                                 if not res['build_failure']:
-                                    resPassWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
+                                    resPassWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
                                     first_pass_case_done = True
                                 else:
-                                    resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "", oracle_id, userName if oracle_id==0 else "", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
+                                    resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
                                     first_case_done = True
                         testId += 1
 

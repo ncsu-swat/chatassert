@@ -4,7 +4,7 @@ import json
 import pandas as pd
 
 sys.path.append('../utils')
-from markdown_util import clean_args, abstract_string_literals, check_commutative_equal
+from markdown_util import clean_args, check_commutative_equal
 
 global corr_count
 
@@ -29,8 +29,14 @@ def writeTecoPreds():
         for (i, pred) in enumerate(preds):
             for topPred in pred['topk']:
                 # print(str(i), ''.join(gold).replace('Assert.', ''), ''.join(topPred['toks']).replace('Assert.', ''))
-                goldAssert = clean_args(''.join(golds[ids2lines[pred['data_id']]]).replace('org.junit.Assert.', '').replace('Assert.', ''))
-                predAssert = clean_args(''.join(topPred['toks']).replace('org.junit.Assert.', '').replace('Assert.', ''))
+                goldAssert = clean_args(''.join(golds[ids2lines[pred['data_id']]]))
+                goldAssert = goldAssert.replace('org.junit.Assert.', '').replace('Assert.', '')
+                
+                predAssert = check_commutative_equal(clean_args(''.join(topPred['toks']).replace('org.junit.Assert.', '').replace('Assert.', '')), goldAssert)
+                
+                print('Gold: ' + goldAssert)
+                print('Pred: ' + predAssert)
+
                 isCorrect = 1 if goldAssert.strip()==predAssert.strip() else 0
                 csvWriter.writerow("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(str(i), str(len(pred['topk'])), proj[ids2lines[pred["data_id"]]], tests[ids2lines[pred["data_id"]]].split('/')[-1].split('(')[0], goldAssert, predAssert, str(isCorrect)).split('\t'))
 
