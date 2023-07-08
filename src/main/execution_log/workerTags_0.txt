@@ -7,7 +7,6 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
 [INFO] 
 [INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
 [INFO] 
@@ -41,7 +40,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 sec - in com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec - in com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
 
 Results :
 
@@ -50,6 +49,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.013 s
-[INFO] Finished at: 2023-07-08T10:24:53+06:00
+[INFO] Total time:  6.085 s
+[INFO] Finished at: 2023-07-08T17:51:50+06:00
 [INFO] ------------------------------------------------------------------------

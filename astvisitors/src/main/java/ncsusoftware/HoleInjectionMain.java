@@ -26,7 +26,7 @@ public class HoleInjectionMain {
         // String s = "Assert.assertEquals(y, this.y.z);";
         // String s = "Assert.assertEquals(x+1, a.b());";
         // String s = "Assert.assertEquals(a, x(y));";
-
+        // String s = "Assert.assertEquals(3,count(poolKey));";
 
         /**
          * concatenate arguments passed in 
@@ -48,28 +48,31 @@ public class HoleInjectionMain {
             // for debugging:
             // ParseUtil.printTypesContentsRecursively(stmt);
 
+            // PrefixHoleInjectionTransformer holeInjector = new PrefixHoleInjectionTransformer(stmt.toString(), "count");
             HoleInjectionTransformer holeInjector = new HoleInjectionTransformer(stmt.toString());
             stmt.accept(holeInjector, null);
             
             /** sort the list of candidates */
-            Comparator<String> comp = new Comparator<String>() {
-                @Override
-                public int compare(String o1, String o2) {
-                    int x = o1.length();
-                    int y = o2.length();
-                    return  (x > y) ? 1: (x < y) ? -1: 0;
-                }
-            };
+            // Comparator<String> comp = new Comparator<String>() {
+            //     @Override
+            //     public int compare(String o1, String o2) {
+            //         int x = o1.length();
+            //         int y = o2.length();
+            //         return  (x > y) ? 1: (x < y) ? -1: 0;
+            //     }
+            // };
 
-            Collections.sort(holeInjector.replacements, comp);
-            /** print the list of candidates */
-            for (String candidate : holeInjector.replacements) {
-                /** hacks! discard special cases */                
-                if (candidate.equals("<insert>;")) continue;
-                if (candidate.contains("<insert>.")) continue;
-                if (candidate.contains("\"<insert>\"")) continue;
-                System.out.println(candidate);
-            }
+            // Collections.sort(holeInjector.replacements, comp);
+            // /** print the list of candidates */
+            // for (String candidate : holeInjector.replacements) {
+            //     /** hacks! discard special cases */                
+            //     if (candidate.equals("<insert>;")) continue;
+            //     if (candidate.contains("<insert>.")) continue;
+            //     if (candidate.contains("\"<insert>\"")) continue;
+            //     System.out.println(candidate);
+            // }
+
+            System.out.println(holeInjector.replacements);
 
         } else {
             System.out.println("------empty------");

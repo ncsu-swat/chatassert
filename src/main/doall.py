@@ -36,7 +36,7 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 5  # Maximum number of interactions
+MAX_INTERACTION = 30  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
 FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo-16k"

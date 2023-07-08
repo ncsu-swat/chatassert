@@ -1,9 +1,11 @@
 package ncsusoftware;
 
-import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
+import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
+import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.SimpleName;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 
@@ -21,16 +23,22 @@ public class PrefixHoleInjectionTransformer extends VoidVisitorAdapter<Void> {
     public void visit(final MethodCallExpr n, final Void arg) {
         super.visit(n, arg);
 
+        String s = "";
         if(n.getName().asString().equals(methodNotFound)){
             this.original = this.original.replaceAll(" ", "");
-            String scope = n.getScope().get().toString();
-            scope = scope.replaceAll("\\.", "~");
+            Optional<Expression> scopeExpr = n.getScope();
+            if(scopeExpr.isPresent()){
+                String scope = scopeExpr.get().toString();
+                scope = scope.replaceAll("\\.", "~");
 
-            String s = this.original.replaceAll("\\.", "~");
-            while(s.contains(scope)){
-                s = s.replace(scope, "<insert>");
+                s = this.original.replaceAll("\\.", "~");
+                while(s.contains(scope)){
+                    s = s.replace(scope, "<insert>");
+                }
+                s = s.replaceAll("~", ".");
+            }else{
+                s = this.original.replace(n.toString(), "<insert>." + n.toString());
             }
-            s = s.replaceAll("~", ".");
             
             addReplacement(s);
         }

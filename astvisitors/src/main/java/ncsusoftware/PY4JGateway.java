@@ -157,8 +157,12 @@ public class PY4JGateway{
 
         // Adding name of the focal method as one of the hole fillers
         JavaParser jparser = new JavaParser();
-        MethodDeclaration md = jparser.parseMethodDeclaration(focalMethod).getResult().get();
-        visitor.allFillers.add(md.getName().asString());
+        Optional<MethodDeclaration> optMd = jparser.parseMethodDeclaration(focalMethod).getResult();
+        MethodDeclaration md = null;
+        if(optMd.isPresent()){
+            md = optMd.get();
+            visitor.allFillers.add(md.getName().asString());
+        }
 
         return visitor.allFillers;
     }

@@ -37,21 +37,21 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/WorkerQueryTest.java:[80,61] cannot find symbol
-  symbol:   variable workerData
-  location: class com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/WorkerQueryTest.java:[80,74] cannot find symbol
+  symbol:   method getTargetType()
+  location: variable List of type com.hazelcast.simulator.coordinator.registry.WorkerData
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.637 s
-[INFO] Finished at: 2023-07-08T10:30:26+06:00
+[INFO] Total time:  4.851 s
+[INFO] Finished at: 2023-07-08T17:52:33+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/WorkerQueryTest.java:[80,61] cannot find symbol
-[ERROR]   symbol:   variable workerData
-[ERROR]   location: class com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/registry/WorkerQueryTest.java:[80,74] cannot find symbol
+[ERROR]   symbol:   method getTargetType()
+[ERROR]   location: variable List of type com.hazelcast.simulator.coordinator.registry.WorkerData
 [ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
