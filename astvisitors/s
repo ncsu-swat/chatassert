@@ -9,7 +9,7 @@ rm cp.txt
 
 # run tests
 echo "java processing server waiting for calls..."
-java -cp $cp:target/classes ncsusoftware.AbstractionMain
+java -cp $cp:target/classes ncsusoftware.Main
 
 
 # ## demo on how to call code for "hole injection"

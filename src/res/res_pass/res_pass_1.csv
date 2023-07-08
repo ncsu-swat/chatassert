@@ -1,0 +1,4 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	0	hazelcast/hazelcast-simulator	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertNotNull(result);	119.8962140083313	0	1	0	0	0
+/	1	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(2,result.size());	18.745401859283447	0	1	0	0	0
+/	3	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertFalse(result.isEmpty());	17.863334894180298	0	1	0	0	0

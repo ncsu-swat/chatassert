@@ -24,7 +24,13 @@
     <dependency>
       <groupId>com.github.javaparser</groupId>
       <artifactId>javaparser-core</artifactId>
-      <version>3.25.3</version>
+      <version>3.25.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.javaparser</groupId>
+      <artifactId>javaparser-symbol-solver-core</artifactId>
+      <version>LATEST</version>
     </dependency>
 
     <dependency>
@@ -32,6 +38,14 @@
       <artifactId>py4j</artifactId>
       <version>0.10.9.4</version>
     </dependency>
+
+    <!-- Dummy dependency to check if JavaSymbolSolver would work with dependecy jars -->
+    <dependency>
+        <groupId>info.debatty</groupId>
+        <artifactId>java-string-similarity</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+
 
   </dependencies>
 </project>

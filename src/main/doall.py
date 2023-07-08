@@ -17,6 +17,8 @@ from utils.file_util import extract_content_within_line_range, read_file
 from utils.markdown_util import extract_assertion, check_commutative_equal, get_assert_type
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 from utils.repair_util import adhoc_repair, check_and_fix_lhs2rhs
+from utils.abstraction_util import fetch_abstraction_targets, generate_abstraction_prompts
+
 from utils.mock_gpt import mock_response
 
 from py4j.java_gateway import JavaGateway
@@ -34,11 +36,12 @@ current_org = 0
 
 # Setup                                                                                                                                                                                                       
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key                                                                                                                                                   
-MAX_INTERACTION = 30  # Maximum number of interactions
+MAX_INTERACTION = 5  # Maximum number of interactions
 TARGET_NUMBER = 10 # Number of oracles to be generated
 FEEDBACK_BUDGET = 3 # Maximum number of retries based on compilation and execution feedback                                                                                                                                                         
 MODEL_NAME = "gpt-3.5-turbo-16k"
 SYSTEM_ROLE = "You are a programmer who is proficient in Java programming languge"
+ABSTRACTION = True
 
 common_assertion_kinds = ['assertEquals', 'assertNotEquals', 'assertSame', 'assertNotSame', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals']
 status_count = {
@@ -65,7 +68,7 @@ def shuffle_organization():
         current_org = (current_org + 1) % len(org_counter)
 
 def interact_with_openai(temperature=1, which_history="conversation"):
-    global history, conversation_history, feedback_history
+    global history, conversation_history, feedback_history, abstraction_history
     global openai, orgs, org_counter, current_org
 
     if which_history == "conversation": history = conversation_history
@@ -91,6 +94,8 @@ def interact_with_openai(temperature=1, which_history="conversation"):
                 result += choice.message.content
             break
         except Exception as e: 
+            print(e)
+
             sum = 0
             for message in history:
                 sum += len(message['content'])/4 # OpenAI considers one token to consist of ~4 characters (ref. OpenAI website)
@@ -98,7 +103,7 @@ def interact_with_openai(temperature=1, which_history="conversation"):
             print("\n!!! Interaction Exception !!!")
             # Interaction exception can be either due to "exceeding token limit" or "exceeding rate limit"
             print("Message length: {}".format(sum))
-            if sum > 3096:
+            if sum > 16000:
                 # Preemptively resetting conversation history to avoid future interaction exception due to exceeding token limit
                 if which_history == "conversation":
                     conversation_history = [
@@ -156,7 +161,7 @@ def ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code):
 
     return gpt_oracle
 
-def follow_up(mock_flag, gateway, project, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle):
+def follow_up(mock_flag, gateway, project, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle, focal_code):
     # Adding the original assertion generation prompt in the feedback chain to give ChatGPT more content
     insert_message(role="user", content=conversation_history[1]["content"], which_history="feedback")
 
@@ -168,7 +173,7 @@ def follow_up(mock_flag, gateway, project, oracle_id, file_path, subRepo, classN
         if feedback is not None:
             if len(feedback) > 0:
                 # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
-                fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name, test_code)
+                fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
 
                 for mutant in fuzzed_mutants:
                     print('FOLLOW-UP MUTANT: {}'.format(mutant))
@@ -271,7 +276,7 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
     return res, feedback
 
 def insert_message(role, content, which_history):
-    global conversation_history, feedback_history
+    global conversation_history, feedback_history, abstraction_history
     if which_history == "conversation": conversation_history.append({"role": role, "content": content})
     elif which_history == "feedback": feedback_history.append({"role": role, "content": content})
     elif which_history == "abstraction": abstraction_history.append({"role": role, "content": content})
@@ -365,13 +370,12 @@ if __name__ == "__main__":
 
     print('SAMPLE: sample_{}.json'.format(sample_id))
 
-    global conversation_history, feedback_history
+    global conversation_history, feedback_history, abstraction_history
     conversation_history = [
         {"role": "system", "content": SYSTEM_ROLE},
     ]
 
     gateway = JavaGateway()
-
     assertionTypes = ['assertEquals', 'assertTrue', 'assertFalse', 'assertNull', 'assertNotNull', 'assertArrayEquals', 'assertThat']
 
     with open(os.path.join(PRO_DIR, "res/res_all/res_all_{}.csv".format(sample_id)), "w+") as resAll, open(os.path.join(PRO_DIR, "res/res_pass/res_pass_{}.csv".format(sample_id)), "w+") as resPass:
@@ -408,6 +412,7 @@ if __name__ == "__main__":
                     classPath = testClass["classPath"]
                     filePath = os.path.join(project.repo_dir, classPath)
                     classTests = testClass["classTests"]
+                    subRepo = testClass["subRepo"]
 
                     backup_test_file(filePath)
 
@@ -421,6 +426,8 @@ if __name__ == "__main__":
                         before_code = testClass["before"]["setupMethod"]
                     if "after" in testClass:
                         after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
+
+                    depPaths = list(project.list_dependencies(subRepo))
 
                     # # Run the tests before anlyzing to make sure that there are tests and that the tests pass
                     # res = project.run_tests()
@@ -446,6 +453,47 @@ if __name__ == "__main__":
                         focal_name = test["focalName"]
                         focal_path = os.path.join(project.repo_dir, test["focalFile"])
                         focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
+
+                        # Get Abstraction
+                        if ABSTRACTION:
+                            print('Running Abstraction Queries. Please wait for ChatGPT to build a knowledge base.\n')
+                            abstraction_history = [
+                                {'role': 'system', 'content': SYSTEM_ROLE}
+                            ]
+                            abstraction_length = 0
+
+                            # fetch methods and classes
+                            meta = fetch_abstraction_targets(filePath, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_code.replace("<AssertPlaceHolder>;", ""))
+
+                            # get a list of abstraction prompts for each line (one line can have multiple abstraction prompts):
+                            abstraction_prompts = generate_abstraction_prompts(meta)
+
+                            # Introducing the task to ChatGPT and mimicking its response from the WebUI
+                            insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='conversation')
+                            insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='conversation')
+
+                            insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='abstraction')
+                            insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='abstraction')
+                            for prompt in abstraction_prompts:
+                                # insert prompt into abstraction_history
+                                insert_message('user', prompt, 'abstraction')
+
+                                # interact with open ai about abstraction
+                                abstraction_response = interact_with_openai(which_history='abstraction')
+
+                                # remove last message from abstraction_history
+                                abstraction_history.pop()
+
+                                # insert response into abstraction_history and conversation_history
+                                insert_message(role='assistant', content=abstraction_response, which_history='abstraction')
+                                insert_message(role='assistant', content=abstraction_response, which_history='conversation')
+
+                                # keep track of cummulative response length
+                                abstraction_length += len(abstraction_response)
+
+                                # if cummulative response length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
+                                if abstraction_length > 12288:
+                                    break
 
                         # Get Oracle Code
                         oracle_code = test['oracle']
@@ -478,7 +526,7 @@ if __name__ == "__main__":
 
                                 if gpt_oracle not in already_gen_oras:
                                     already_gen_oras.add(gpt_oracle)
-                                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+                                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)
 
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(mock_flag, oracle_id, test_name, before_code, test_code, focal_code)
@@ -492,7 +540,7 @@ if __name__ == "__main__":
                                     already_gen_oras.add(gpt_oracle)
                                 
                                     # Follow-up with feedback loop
-                                    res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, testClass['subRepo'], className, test_name, test_code, gpt_oracle)
+                                    res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
                                     if gpt_oracle is None: continue
 
                                     if feedback is not None and len(feedback) > 0:
@@ -560,6 +608,8 @@ if __name__ == "__main__":
                                     resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
                                     first_case_done = True
                         testId += 1
+
+                        exit(0)
 
                                 # input('\n\nENTER A KEY')
                     #         break

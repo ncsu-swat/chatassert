@@ -7,12 +7,12 @@ import java.util.List;
 import com.github.javaparser.ast.expr.SimpleName;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 
-public class PrefixInjectionTransformer extends VoidVisitorAdapter<Void> {
+public class PrefixHoleInjectionTransformer extends VoidVisitorAdapter<Void> {
 
     String original, methodNotFound;
     List<String> replacements = new ArrayList<String>();
 
-    PrefixInjectionTransformer(String assertion, String methodNotFound) {
+    PrefixHoleInjectionTransformer(String assertion, String methodNotFound) {
         this.original = assertion;
         this.methodNotFound = methodNotFound;
     }
@@ -21,10 +21,17 @@ public class PrefixInjectionTransformer extends VoidVisitorAdapter<Void> {
     public void visit(final MethodCallExpr n, final Void arg) {
         super.visit(n, arg);
 
-        String methodNameToCheck = n.toString().substring(0, n.toString().indexOf("("));
+        if(n.getName().asString().equals(methodNotFound)){
+            this.original = this.original.replaceAll(" ", "");
+            String scope = n.getScope().get().toString();
+            scope = scope.replaceAll("\\.", "~");
 
-        if(methodNameToCheck.equals(methodNotFound)){
-            String s = original.replaceAll(methodNotFound, "<insert>."+methodNotFound);
+            String s = this.original.replaceAll("\\.", "~");
+            while(s.contains(scope)){
+                s = s.replace(scope, "<insert>");
+            }
+            s = s.replaceAll("~", ".");
+            
             addReplacement(s);
         }
     }

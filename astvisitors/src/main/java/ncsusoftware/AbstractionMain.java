@@ -28,7 +28,7 @@ public class AbstractionMain {
             AbstractionVisitor abstractionVisitor = new AbstractionVisitor();
             stmt.accept(abstractionVisitor, null);
 
-            System.out.println(abstractionVisitor.methodsAndClasses);
+            System.out.println(abstractionVisitor.perLine);
         } else {
             System.out.println("------empty------");
         }

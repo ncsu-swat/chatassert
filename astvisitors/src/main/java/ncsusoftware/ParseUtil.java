@@ -67,10 +67,13 @@ public class ParseUtil {
                 i++;
               }
             }
+          }else{
+            break;
           }
           if(startIndex > 0) break;
         }
- 	content = content.substring(startIndex);
+ 	    content = content.substring(startIndex);
+        
         //------------------------------------------------------------------
 
         Optional<CompilationUnit> optCU = jparser.parse(content).getResult();

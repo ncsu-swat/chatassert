@@ -1,6 +1,10 @@
 import tiktoken
 
-MODEL_MAX_TOKEN={'gpt-3.5-turbo':4000,'gpt-4':8000}
+MODEL_MAX_TOKEN={
+    'gpt-3.5-turbo':4096,
+    'gpt-4':8000,
+    'gpt-3.5-turbo-16k': 16384
+}
 
 def num_tokens_from_string(query: str, model_name: str) -> int:
     """Returns the number of tokens in a text string."""

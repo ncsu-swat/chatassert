@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 from index_item import IndexItem
 
 class Project():
-    def __init__(self, project_name, subDir="", project_url="", cur_com="", java_gateway=None, base_dir=TMP_DIR):
+    def __init__(self, project_name="", subDir="", project_url="", cur_com="", java_gateway=None, base_dir=TMP_DIR):
         self.project_name = project_name
         self.sub_dir = subDir
         self.project_url = project_url        
@@ -23,30 +23,80 @@ class Project():
 
         # java_gateway will be not None when invoked from doall.py script
         if java_gateway is not None:
-            # index the project
-            self.index = dict()
-            self.index_project()
+            # index the project ( Deprecated )
+            # self.index = dict()
+            # self.index_project()
         
             # modify pom
             self.modify_pom()
 
     def init_env(self): 
         # delete folder if it exists
-        delete_folder(self.repo_dir)
+        # delete_folder(self.repo_dir) # Commenting to avoid repeated downloads
 
-        # cloning the repo
-        print("Cloning the repo to {}...".format(self.repo_dir))
-        clone_repo(self.repo_dir, self.project_url)
+        if not os.path.exists(self.repo_dir):
+            # cloning the repo
+            print("Cloning the repo to {}...".format(self.repo_dir))
+            clone_repo(self.repo_dir, self.project_url)
 
-        # reset
-        print("Reseting the repo to {}...".format(self.cur_com))
-        reset_repo(self.repo_dir, self.cur_com)
-        print("Done.")
+            # reset
+            print("Reseting the repo to {}...".format(self.cur_com))
+            reset_repo(self.repo_dir, self.cur_com)
+            print("Done.")
 
-        # ensure dependencies and plugins
-        # print("Ensuring dependencies and plugins")
-        # self.ensure_dependencies()
-        # print("Done.")
+            # ensure dependencies and plugins
+            # print("Ensuring dependencies and plugins")
+            # self.ensure_dependencies()
+            # print("Done.")
+
+    # This method lists all the jars associated with the dependencies of a particular sub-module of this project
+    def list_dependencies(self, subRepo=""):
+        dependencies = []
+
+        ET.register_namespace('', 'http://maven.apache.org/POM/4.0.0')
+
+        pom = ET.parse(os.path.join(self.repo_dir, subRepo, 'pom.xml'))
+        root = pom.getroot()
+
+        # Find the curly brace prefix
+        pom_link = re.search(r'({.*}).*', root.tag)
+        if pom_link is not None: pom_link = pom_link.group(1)
+
+        for item in root.findall('{}dependencies'.format(pom_link, pom_link)):
+            for child in item:
+                groupId = child.find('{}groupId'.format(pom_link))
+                if groupId is not None:
+                    artifactId = child.find('{}artifactId'.format(pom_link)).text
+                    version = child.find('{}version'.format(pom_link)).text
+                    target_jar = artifactId + '-' + version + '.jar'
+                    path = os.path.join(os.path.expanduser('~'), '.m2/repository')
+                    
+                    for _p in groupId.text.split('.'):
+                        path = os.path.join(path, _p)
+                    
+                    temp = []
+                    for root, dirs, files in os.walk(path, topdown=True):
+                        for _file in files:
+                            if _file.startswith(artifactId) and _file.endswith('.jar'):
+                                temp.append(os.path.join(root, _file))
+
+                    if 'LATEST' in version:
+                        temp_path_dict = dict()
+                        for temp_path in temp:
+                            if temp_path.endswith('.jar') and artifactId in temp_path:
+                                temp_path_version = temp_path.split('-')[-1].split('.jar')[0]
+                                
+                                if artifactId not in temp_path_dict: temp_path_dict[artifactId] = []
+                                temp_path_dict[artifactId].append([temp_path_version, temp_path])
+                        for k, v in temp_path_dict.items():
+                            sorted(v, key=lambda _v: _v[0], reverse=True) # Sort by version number
+                            dependencies.append(v[0][1])
+                    else:
+                        for temp_path in temp:
+                            if target_jar in temp_path:
+                                dependencies.append(temp_path)
+
+        return dependencies
 
     def ensure_dependencies(self):
         pom = ET.parse(os.path.join(self.repo_dir, 'pom.xml'))
@@ -71,6 +121,7 @@ class Project():
                 start_ln = v[2]
                 end_ln = v[3]
 
+                # Convert IndexItem to a list for duplicate keys
                 item = IndexItem(key, class_name, class_path, start_ln, end_ln)
                 self.index[key].append(item)
 
@@ -210,4 +261,3 @@ class Project():
         # write array to file
         with open(filepath, 'w') as file:
             file.writelines(data)
-

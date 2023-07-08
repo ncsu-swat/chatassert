@@ -3,7 +3,18 @@ package ncsusoftware;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.stmt.Statement;
+import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.expr.StringLiteralExpr;
+import com.github.javaparser.resolution.TypeSolver;
+import com.github.javaparser.StaticJavaParser;
+
+import com.github.javaparser.symbolsolver.resolution.typesolvers.ReflectionTypeSolver;
+import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver;
+import com.github.javaparser.symbolsolver.resolution.typesolvers.JarTypeSolver;
+import com.github.javaparser.symbolsolver.resolution.typesolvers.CombinedTypeSolver;
+import com.github.javaparser.symbolsolver.JavaSymbolSolver;
+// import com.github.javaparser.symbolsolver.javaparser.Navigator;
 
 import java.lang.Exception;
 
@@ -14,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -86,7 +98,7 @@ public class PY4JGateway{
             com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
             // ParseUtil.printTypesContentsRecursively(stmt);
 
-            PrefixInjectionTransformer holeInjector = new PrefixInjectionTransformer(stmt.toString(), methodNotFound);
+            PrefixHoleInjectionTransformer holeInjector = new PrefixHoleInjectionTransformer(stmt.toString(), methodNotFound);
             stmt.accept(holeInjector, null);
 
             if(holeInjector.replacements.size() > 0){
@@ -99,9 +111,54 @@ public class PY4JGateway{
         }
     }
 
-    public List<String> findHoleFillers(String testMethodName){
+    public String variableHoleForVariableNotFound(String assertion, String variableNotFound){
+        JavaParser jparser = new JavaParser();
+        Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(assertion).getResult();
+        if (optStmt.isPresent()) {
+            com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
+            // ParseUtil.printTypesContentsRecursively(stmt);
+
+            VariableHoleInjectionTransformer holeInjector = new VariableHoleInjectionTransformer(stmt.toString(), variableNotFound);
+            stmt.accept(holeInjector, null);
+
+            if(holeInjector.replacements.size() > 0){
+                return holeInjector.replacements.get(0);
+            }else{
+                return assertion;
+            }
+        } else {
+            return assertion;
+        }
+    }
+
+    public String prefixHoleForFocalKeyword(String assertion){
+        JavaParser jparser = new JavaParser();
+        Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(assertion).getResult();
+        if (optStmt.isPresent()) {
+            com.github.javaparser.ast.stmt.Statement stmt = optStmt.get();
+            // ParseUtil.printTypesContentsRecursively(stmt);
+
+            FocalHoleInjectionTransformer holeInjector = new FocalHoleInjectionTransformer(stmt.toString());
+            stmt.accept(holeInjector, null);
+
+            if(holeInjector.replacements.size() > 0){
+                return holeInjector.replacements.get(0);
+            }else{
+                return assertion;
+            }
+        } else {
+            return assertion;
+        }
+    }
+
+    public List<String> findHoleFillers(String testMethodName, String focalMethod){
         IdFinderVisitor visitor = new IdFinderVisitor(testMethodName);
         this.cu.accept(visitor, null);
+
+        // Adding name of the focal method as one of the hole fillers
+        JavaParser jparser = new JavaParser();
+        MethodDeclaration md = jparser.parseMethodDeclaration(focalMethod).getResult().get();
+        visitor.allFillers.add(md.getName().asString());
 
         return visitor.allFillers;
     }
@@ -192,6 +249,60 @@ public class PY4JGateway{
         }
 
         return abstractString;
+    }
+
+    public Map<Integer, Map<String, Map<String, Map<String, String>>>> fetchMethodsClasses(String test_code, String file_path, String dir_path, ArrayList<String> dep_path) throws FileNotFoundException {
+        // dir_path should be .../src/main/java
+
+        CombinedTypeSolver combinedTypeSolver = new CombinedTypeSolver();
+        
+        // ReflectionTypeSolver (for java standard library packages)
+        TypeSolver reflectionTypeSolver = new ReflectionTypeSolver();
+        combinedTypeSolver.add(reflectionTypeSolver);
+        
+        //JarTypeSolver (for dependency jars)
+        for(String jarPath: dep_path){
+            try{
+                combinedTypeSolver.add(JarTypeSolver.getJarTypeSolver(jarPath));
+            }catch(Exception e){
+                e.printStackTrace();
+            }            
+        }
+        
+        // JavaParserTypeSolver (for application and test code)
+        TypeSolver javaParserTypeSolverMain = new JavaParserTypeSolver(new File(dir_path + "/main/java"));
+        TypeSolver javaParserTypeSolverTest = new JavaParserTypeSolver(new File(dir_path + "/test/java"));
+        combinedTypeSolver.add(javaParserTypeSolverMain);
+        combinedTypeSolver.add(javaParserTypeSolverTest);
+
+        JavaSymbolSolver javaSymbolSolver = new JavaSymbolSolver(combinedTypeSolver);
+        StaticJavaParser.getParserConfiguration().setSymbolResolver(javaSymbolSolver);
+
+        //------------------------------------------------------------------------------
+
+        AbstractionVisitor abstractionVisitor = new AbstractionVisitor();
+
+        CompilationUnit cu = StaticJavaParser.parse(new File(file_path));
+        MethodDeclaration md = StaticJavaParser.parseMethodDeclaration(test_code);
+
+        cu.walk(MethodDeclaration.class, _md -> {
+            if(_md.getNameAsString().equals(md.getNameAsString())){
+                _md.setBody(md.getBody().get());
+
+                // Using AtomicReference to pass visitor argument because local variable in a lambda expression needs to be final and we need to update the lineCounter. So, the AtomicReference can be final but the Integer it holds can be modified. It's like a wrapper to update lineCounter from within the lambda expression. AtomicReference is used as a wrapper instead of Object class so that the code is robust in parallel execution (if implemented sometime).
+                final AtomicReference<Integer> lineCounter = new AtomicReference<>(Integer.valueOf(0));
+                _md.getBody().get().walk(Statement.class, stmt-> {
+                    if(lineCounter.get() > 0){
+                        stmt.accept(abstractionVisitor, lineCounter.get());
+                    }
+                    lineCounter.set(lineCounter.get() + 1);
+                });
+            }
+        });
+
+        // System.out.println(abstractionVisitor.perLine);
+
+        return abstractionVisitor.perLine;
     }
 }
 

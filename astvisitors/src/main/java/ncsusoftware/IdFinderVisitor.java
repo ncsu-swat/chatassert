@@ -12,6 +12,7 @@ import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.TypeDeclaration;
 import com.github.javaparser.ast.body.VariableDeclarator;
+import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.nodeTypes.NodeWithName;
 import com.github.javaparser.ast.stmt.LocalClassDeclarationStmt;
 
@@ -70,6 +71,14 @@ public class IdFinderVisitor extends VoidVisitorAdapter<Void> {
                 allFillers.add(n.getNameAsString());
             }
         }
+    }
+
+    @Override
+    public void visit(final ClassOrInterfaceType n, final Void arg) {
+        super.visit(n, arg);
+        
+        // Fuzzing with Class or Interface names for static methods
+        allFillers.add(n.getName().asString());
     }
 
 }

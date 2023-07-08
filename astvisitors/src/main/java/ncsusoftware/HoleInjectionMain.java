@@ -13,7 +13,7 @@ public class HoleInjectionMain {
         // test cases... :-/
         // String s =  "Assert.assertEquals(head.getHead(), Label.of(\"hula\"));";
         // String s = "Assert.assertEquals(method, \"testLocalTeardownFilter\");";
-        // String s = "Assert.assertEquals(OBJECT, byteSerializer.deserializeNative(buffer));";
+        // String s = "Assert.assertEquals(OBJECT, foo.byteSerializer.deserializeNative(buffer).serializeNative(buffer));";
         // String s = "Assert.assertEquals(\"Turpm\u0101kaj\u0101\", Turpm\u0101kaj\u0101.getLemma());";
         // String s = "Assert.assertEquals(null, HazelcastStarter.getHazelcastVersionFromJarOrNull(file));";
         // String s = "Assert.assertEquals(1, a(w,t));";        
@@ -60,6 +60,7 @@ public class HoleInjectionMain {
                     return  (x > y) ? 1: (x < y) ? -1: 0;
                 }
             };
+
             Collections.sort(holeInjector.replacements, comp);
             /** print the list of candidates */
             for (String candidate : holeInjector.replacements) {

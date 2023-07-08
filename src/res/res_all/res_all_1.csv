@@ -1,0 +1,2 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+0	2	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(true,result.contains(workerData));	314.4894948005676	0	1	1	0	0
