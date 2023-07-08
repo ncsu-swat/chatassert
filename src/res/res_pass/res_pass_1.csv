@@ -1,2 +1,11 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	0	hazelcast/hazelcast-simulator	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(2,result.size());	10.682739019393921	0	1	0	0	0
+0	0	hazelcast/hazelcast-simulator	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(2,result.size());	19.083552837371826	0	1	0	0	0
+/	1	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertTrue(!result.isEmpty());	8.980324029922485	0	1	0	0	0
+/	2	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertNotNull(result);	8.751796960830688	0	1	0	0	0
+/	3	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(2,result.size());	91.69796299934387	0	1	0	0	0
+/	4	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertFalse(result.isEmpty());	8.621230840682983	0	1	0	0	0
+/	5	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertEquals(result,query.execute(list));	128.02699899673462	0	1	0	0	0
+/	6	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertNotEquals(0,result.size()`isaplausible0);	8.69373083114624	0	1	0	0	0
+/	7	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertSame(list,query.execute(list)`isaplausiblelist);	9.459187030792236	0	1	0	0	0
+/	8	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertFalse(result.contains(null)`isaplausibleresult.contains(null));	9.759371995925903	0	1	0	0	0
+/	11	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertNotSame(list,result);	9.344624042510986	0	1	0	0	0

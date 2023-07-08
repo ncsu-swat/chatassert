@@ -41,7 +41,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec - in com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec - in com.hazelcast.simulator.coordinator.registry.WorkerQueryTest
 
 Results :
 
@@ -50,6 +50,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.317 s
-[INFO] Finished at: 2023-07-08T18:15:17+06:00
+[INFO] Total time:  6.013 s
+[INFO] Finished at: 2023-07-08T18:19:06+06:00
 [INFO] ------------------------------------------------------------------------

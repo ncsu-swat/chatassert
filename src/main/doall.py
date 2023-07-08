@@ -610,8 +610,6 @@ if __name__ == "__main__":
                                     first_case_done = True
                         testId += 1
 
-                        exit(0)
-
                                 # input('\n\nENTER A KEY')
                     #         break
                     #     break

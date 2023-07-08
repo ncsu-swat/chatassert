@@ -1,2 +1,1 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
-0	1	//	WorkerQueryTest	workerTags	assertEquals(asList(list.get(0),list.get(2)),result);	assertTrue(result.stream().anyMatch(workerData->workerData.getTargetType()==TargetType.CLIENT));	29.569807052612305	0	1	1	0	0
