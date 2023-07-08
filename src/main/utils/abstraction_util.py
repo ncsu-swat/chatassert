@@ -20,32 +20,35 @@ def fetch_abstraction_targets(file_path, src_path, dep_paths, test_code):
     # Retrieving dictionary of method calls and classes metadata for each line in the test prefix
     java_dict = dict(gateway.entry_point.fetchMethodsClasses(test_code, file_path, src_path, dep_path_java_list))
 
-    # Retrieving class body
-    class_body = dict()
-    for lineNumber, methodOrClass in java_dict.items():
-        for k, v in methodOrClass.items():
-            if k=='classes':
-                for className, classDetails in v.items():
-                    mainPath = os.path.join(src_path, 'main/java', classDetails['package'].replace('.', '/'))
-                    testPath = os.path.join(src_path, 'test/java', classDetails['package'].replace('.', '/'))
+    if java_dict is not None:
+        # Retrieving class body
+        class_body = dict()
+        for lineNumber, methodOrClass in java_dict.items():
+            for k, v in methodOrClass.items():
+                if k=='classes':
+                    for className, classDetails in v.items():
+                        mainPath = os.path.join(src_path, 'main/java', classDetails['package'].replace('.', '/'))
+                        testPath = os.path.join(src_path, 'test/java', classDetails['package'].replace('.', '/'))
 
-                    for root, dirs, files in os.walk(mainPath):
-                        for f in files:
-                            if f.endswith(classDetails['class'] + '.java'):
-                                with open(os.path.join(root, f), 'r') as classSource:
-                                    class_body[classDetails['class']] = classSource.read()
+                        for root, dirs, files in os.walk(mainPath):
+                            for f in files:
+                                if f.endswith(classDetails['class'] + '.java'):
+                                    with open(os.path.join(root, f), 'r') as classSource:
+                                        class_body[classDetails['class']] = classSource.read()
 
-                    for root, dirs, files in os.walk(testPath):
-                        for f in files:
-                            if f.endswith(classDetails['class'] + '.java'):
-                                with open(os.path.join(root, f), 'r') as classSource:
-                                    class_body[classDetails['class']] = classSource.read()
+                        for root, dirs, files in os.walk(testPath):
+                            for f in files:
+                                if f.endswith(classDetails['class'] + '.java'):
+                                    with open(os.path.join(root, f), 'r') as classSource:
+                                        class_body[classDetails['class']] = classSource.read()
 
-    meta = dict()
-    meta['lines'] = java_dict
-    meta['classBody'] = class_body
+        meta = dict()
+        meta['lines'] = java_dict
+        meta['classBody'] = class_body
 
-    return meta
+        return meta
+    
+    return None
 
 def generate_abstraction_prompts(meta):
     abstraction_prompts = []

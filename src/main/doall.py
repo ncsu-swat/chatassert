@@ -465,35 +465,36 @@ if __name__ == "__main__":
                             # fetch methods and classes
                             meta = fetch_abstraction_targets(filePath, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_code.replace("<AssertPlaceHolder>;", ""))
 
-                            # get a list of abstraction prompts for each line (one line can have multiple abstraction prompts):
-                            abstraction_prompts = generate_abstraction_prompts(meta)
+                            if meta is not None:
+                                # get a list of abstraction prompts for each line (one line can have multiple abstraction prompts):
+                                abstraction_prompts = generate_abstraction_prompts(meta)
 
-                            # Introducing the task to ChatGPT and mimicking its response from the WebUI
-                            insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='conversation')
-                            insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='conversation')
+                                # Introducing the task to ChatGPT and mimicking its response from the WebUI
+                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='conversation')
+                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='conversation')
 
-                            insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='abstraction')
-                            insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='abstraction')
-                            for prompt in abstraction_prompts:
-                                # insert prompt into abstraction_history
-                                insert_message('user', prompt, 'abstraction')
+                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='abstraction')
+                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='abstraction')
+                                for prompt in abstraction_prompts:
+                                    # insert prompt into abstraction_history
+                                    insert_message('user', prompt, 'abstraction')
 
-                                # interact with open ai about abstraction
-                                abstraction_response = interact_with_openai(which_history='abstraction')
+                                    # interact with open ai about abstraction
+                                    abstraction_response = interact_with_openai(which_history='abstraction')
 
-                                # remove last message from abstraction_history
-                                abstraction_history.pop()
+                                    # remove last message from abstraction_history
+                                    abstraction_history.pop()
 
-                                # insert response into abstraction_history and conversation_history
-                                insert_message(role='assistant', content=abstraction_response, which_history='abstraction')
-                                insert_message(role='assistant', content=abstraction_response, which_history='conversation')
+                                    # insert response into abstraction_history and conversation_history
+                                    insert_message(role='assistant', content=abstraction_response, which_history='abstraction')
+                                    insert_message(role='assistant', content=abstraction_response, which_history='conversation')
 
-                                # keep track of cummulative response length
-                                abstraction_length += len(abstraction_response)
+                                    # keep track of cummulative response length
+                                    abstraction_length += len(abstraction_response)
 
-                                # if cummulative response length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
-                                if abstraction_length > 12288:
-                                    break
+                                    # if cummulative response length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
+                                    if abstraction_length > 12288:
+                                        break
 
                         # Get Oracle Code
                         oracle_code = test['oracle']
