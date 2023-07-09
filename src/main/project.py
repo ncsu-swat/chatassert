@@ -9,6 +9,8 @@ import xml.etree.ElementTree as ET
 
 from index_item import IndexItem
 
+from git import Repo
+
 class Project():
     def __init__(self, project_name="", subDir="", project_url="", cur_com="", java_gateway=None, base_dir=TMP_DIR):
         self.project_name = project_name
@@ -32,9 +34,9 @@ class Project():
 
     def init_env(self): 
         # delete folder if it exists
-        # delete_folder(self.repo_dir) # Commenting to avoid repeated downloads
+        delete_folder(self.repo_dir) # Commenting to avoid repeated downloads
 
-        if not os.path.exists(self.repo_dir):
+        if True:
             # cloning the repo
             print("Cloning the repo to {}...".format(self.repo_dir))
             clone_repo(self.repo_dir, self.project_url)

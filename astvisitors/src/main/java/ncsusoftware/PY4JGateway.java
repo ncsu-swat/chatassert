@@ -2,10 +2,14 @@ package ncsusoftware;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.stmt.Statement;
 import com.github.javaparser.ast.stmt.BlockStmt;
+import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.StringLiteralExpr;
+import com.github.javaparser.ast.expr.AnnotationExpr;
+import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.resolution.TypeSolver;
 import com.github.javaparser.StaticJavaParser;
 
@@ -279,6 +283,80 @@ public class PY4JGateway{
         return "";
     }
 
+    public String removeAssertionMessage(String assertion){
+        try{
+            ArrayList<String> categoryOne = new ArrayList<>(Arrays.asList("assertArrayEquals", "assertEquals", "assertNotEquals", "assertSame", "assertNotSame"));
+            ArrayList<String> categoryTwo = new ArrayList<>(Arrays.asList("assertTrue", "assertFalse", "assertNull", "assertNotNull"));
+
+            JavaParser jparser = new JavaParser();
+            Optional<com.github.javaparser.ast.stmt.Statement> assertionOpt = jparser.parseStatement(assertion).getResult();
+
+            if(assertionOpt.isPresent()){
+                MethodCallExpr assertionMethodCall = assertionOpt.get().asExpressionStmt().getExpression().asMethodCallExpr();
+                NodeList<Expression> oldArgs = assertionMethodCall.getArguments();
+
+                if(categoryOne.contains(assertionMethodCall.getName().asString())){
+                    if(oldArgs.size() == 3){
+                        if(oldArgs.get(0).isStringLiteralExpr()){
+                            // Removing assertion error message
+                            NodeList<Expression> newArgs = new NodeList<>(oldArgs.get(1), oldArgs.get(2));
+                            assertionMethodCall.setArguments(newArgs);
+                        }else if(oldArgs.get(2).isDoubleLiteralExpr()){
+                            // Removing assertion delta
+                            NodeList<Expression> newArgs = new NodeList<>(oldArgs.get(0), oldArgs.get(1));
+                            assertionMethodCall.setArguments(newArgs);
+                        }
+                    }else if(oldArgs.size() == 4){
+                        // Removing assertion error message and assertion delta
+                        NodeList<Expression> newArgs = new NodeList<>(oldArgs.get(1), oldArgs.get(2));
+                        assertionMethodCall.setArguments(newArgs);
+                    }
+                }else if(categoryTwo.contains(assertionMethodCall.getName().asString())){
+                    if(oldArgs.size() == 2){
+                        if(oldArgs.get(0).isStringLiteralExpr()){
+                            // Removing assertion error message
+                            NodeList<Expression> newArgs = new NodeList<>(oldArgs.get(1));
+                            assertionMethodCall.setArguments(newArgs);
+                        }
+                    }
+                }
+
+                return assertionMethodCall.toString() + ";"; // Converting MethodCallExpr into a statement
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return assertion;
+    }
+
+    public String commutateAssertEquals(String assertion){
+        try{
+            // Assuming that the input assertion will always be of type assertEquals (ensure from Python client)
+            JavaParser jparser = new JavaParser();
+            Optional<com.github.javaparser.ast.stmt.Statement> assertionOpt = jparser.parseStatement(assertion).getResult();
+
+            if(assertionOpt.isPresent()){
+                MethodCallExpr assertionMethodCall = assertionOpt.get().asExpressionStmt().getExpression().asMethodCallExpr();
+
+                if(assertionMethodCall.getName().asString().equals("assertEquals")){
+                    NodeList<Expression> oldArgs = assertionMethodCall.getArguments();
+
+                    if(oldArgs.size() == 2){
+                        NodeList<Expression> newArgs = new NodeList<>(oldArgs.get(1), oldArgs.get(0));
+                        assertionMethodCall.setArguments(newArgs);
+
+                        return assertionMethodCall.toString() + ";"; // Converting MethodCallExpr into a statement
+                    }
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return assertion;
+    }
+
     public Map<Integer, Map<String, Map<String, Map<String, String>>>> fetchMethodsClasses(String test_code, String file_path, String dir_path, ArrayList<String> dep_path) throws FileNotFoundException {
         // dir_path should be .../src/main/java
         try{
@@ -336,6 +414,43 @@ public class PY4JGateway{
         }
 
         return null;
+    }
+
+    public String removeTestMethodsFromTestClass(String source, String test_code){
+        try{
+            JavaParser jparser = new JavaParser();
+            CompilationUnit cu = ParseUtil.parseCompilationUnit(jparser, source);
+            Optional<MethodDeclaration> testMethodOpt = jparser.parseMethodDeclaration(test_code).getResult();
+
+            if(testMethodOpt.isPresent()){
+                // At first, we try to remove the exact test method that we are currently generating the assertion for, from the test class (to eliminate test dataset leakage)
+                MethodDeclaration testMethod = testMethodOpt.get();
+                
+                cu.walk(MethodDeclaration.class, md -> {
+                    if(md.getName().asString().equals(testMethod.getName().asString())){
+                        md.getParentNode().get().remove(md);
+                    }
+                });
+            }else{
+                // If we are unable to parse the test_code, then we try to remove all the test methods from the test class (to eliminate dataset leakage)
+                cu.walk(MethodDeclaration.class, md -> {
+                    for(AnnotationExpr annExpr: md.getAnnotations()){
+                        if(annExpr.getName().asString().contains("Test")){
+                            md.getParentNode().get().remove(md);
+                        }
+                    }
+                });
+            }
+
+            System.out.println(cu.toString());
+            
+            return cu.toString();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return source;
     }
 }
 

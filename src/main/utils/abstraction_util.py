@@ -18,9 +18,10 @@ def fetch_abstraction_targets(file_path, src_path, dep_paths, test_code):
     dep_path_java_list = ListConverter().convert(dep_paths, gateway._gateway_client)
 
     # Retrieving dictionary of method calls and classes metadata for each line in the test prefix
-    java_dict = dict(gateway.entry_point.fetchMethodsClasses(test_code, file_path, src_path, dep_path_java_list))
-
+    java_dict = gateway.entry_point.fetchMethodsClasses(test_code, file_path, src_path, dep_path_java_list)
     if java_dict is not None:
+        java_dict = dict(java_dict)
+
         # Retrieving class body
         class_body = dict()
         for lineNumber, methodOrClass in java_dict.items():
@@ -30,11 +31,13 @@ def fetch_abstraction_targets(file_path, src_path, dep_paths, test_code):
                         mainPath = os.path.join(src_path, 'main/java', classDetails['package'].replace('.', '/'))
                         testPath = os.path.join(src_path, 'test/java', classDetails['package'].replace('.', '/'))
 
+                        # Removing the particular test method from the class body so that when we are asking ChatGPT to explain the class, we don't inadvertently leak the test method containing the actual assertion
                         for root, dirs, files in os.walk(mainPath):
                             for f in files:
                                 if f.endswith(classDetails['class'] + '.java'):
                                     with open(os.path.join(root, f), 'r') as classSource:
-                                        class_body[classDetails['class']] = classSource.read()
+                                        # Before asking ChatGPT to explain a test class, we are removing the current test method from the test class in order to avoid inadvertent leakage of test dataset (if test_code cannot be parsed, then all the test methods in the test class are removed)
+                                        class_body[classDetails['class']] = gateway.entry_point.removeTestMethodsFromTestClass(classSource.read(), test_code)
 
                         for root, dirs, files in os.walk(testPath):
                             for f in files:

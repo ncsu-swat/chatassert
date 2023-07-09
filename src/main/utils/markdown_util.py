@@ -1,15 +1,5 @@
 import re
-
-assertions_nargs = {
-    'assertEquals': 2,
-    'assertNotEquals': 2,
-    'assertArrayEquals': 2,
-    'assertSame': 2,
-    'assertTrue': 1,
-    'assertFalse': 1,
-    'assertNull': 1,
-    'assertNotNull': 1
-}
+from py4j.java_gateway import JavaGateway
 
 def extract_assertion(text):
     print('\nRESPONSE: \n{}\n'.format(text))
@@ -75,51 +65,44 @@ def get_assert_args(assertStatement):
 
     return args
 
-# Removing assertion error message and delta for assertEquals
-def clean_args(assertStatement):
+# Removing assertion error message and delta for assertEquals and cleaning "` is a plausible ..." noise in the ChatGPT response
+def clean_args(gpt_oracle):
     # print("\nCLEANING: \n{}\n".format(assertStatement))
+    
+    gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "")
+    gpt_oracle = gpt_oracle.replace("Assert.", "")
+    gpt_oracle = gpt_oracle.replace(" ", "").strip()
 
-    assertType = get_assert_type(assertStatement)
-    args = get_assert_args(assertStatement)
+    # Cleaning cases where ChatGPT often produces assertions that look like the following: assertEquals(1, foo.bar()` is a plausible foo.bar());
+    tempAssert = gpt_oracle
+    if "`isaplausible" in tempAssert:
+        idx = tempAssert.find('`isaplausible')
+        gpt_oracle = tempAssert[0:idx] + ');'
 
-    if assertType in assertions_nargs.keys():
-        if len(args) == assertions_nargs[assertType]+1:
-            # Check if first arg is string
-            if "\"" in args[0]:
-                # First arg is a string
-                args.pop(0)
-            # Else last arg is delta
-            else:
-                # First arg is not a string, so last arg must be delta
-                args.pop(-1)
-        # Else args must contain both string message and delta
-        elif len(args) == assertions_nargs[assertType]+2:
-            args.pop(0)
-            args.pop(-1)
+    # Cleaning assertion error message and delta for assertionEquals of double variables
+    gateway = JavaGateway()
+    gpt_oracle = gateway.entry_point.removeAssertionMessage(gpt_oracle)
 
-    finalAssertStatement = assertType + '('
-    for (i, arg) in enumerate(args):
-        finalAssertStatement += arg
-        if i < len(args)-1:
-            finalAssertStatement += ','
+    print(gpt_oracle)
 
-    if len(finalAssertStatement.split('\n')) > 1:
-        finalAssertStatement = finalAssertStatement.split('\n')[0]
-    finalAssertStatement += ');'
-
-    return 'org.junit.Assert.' + finalAssertStatement.replace('( ', '(')
+    return 'org.junit.Assert.' + gpt_oracle
 
 # Check if commutating args of assertEquals gives exact match
 def check_commutative_equal(gpt_oracle, oracle_code):
-    gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
-    oracle_code = oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
+    gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "")
+    gpt_oracle = gpt_oracle.replace("Assert.", "")
+    gpt_oracle = gpt_oracle.replace(" ", "").strip()
 
-    assertType = get_assert_type(gpt_oracle)
-    args = get_assert_args(gpt_oracle)
+    oracle_code = oracle_code.replace("org.junit.Assert.", "")
+    oracle_code = oracle_code.replace("Assert.", "")
+    oracle_code = oracle_code.replace(" ", "").strip()
 
-    if assertType == "assertEquals":
-        if len(args) == 2:
-            finalAssertStatement = assertType + "(" + args[1] + "," + args[0] + ");"
-            if finalAssertStatement == oracle_code: return finalAssertStatement
+    if 'assertEquals' in gpt_oracle:
+        gateway = JavaGateway()
+        commutated_assertion = gateway.entry_point.commutateAssertEquals(gpt_oracle)
+        commutated_assertion = commutated_assertion.replace(' ', '')
+
+        if commutated_assertion == oracle_code:
+            return commutated_assertion
 
     return gpt_oracle

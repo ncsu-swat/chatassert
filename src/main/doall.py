@@ -608,6 +608,11 @@ if __name__ == "__main__":
                                 else:
                                     resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
                                     first_case_done = True
+
+                        # Restore test file from backup
+                        restore_test_file(filePath)
+
+                        # Increment test counter
                         testId += 1
 
                                 # input('\n\nENTER A KEY')
