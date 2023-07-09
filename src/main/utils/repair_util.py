@@ -19,7 +19,8 @@ def fuzz(java_gateway, project, gpt_oracle, feedback, file_path, test_name, foca
     # Creating prefix holes for method calls that were not found in a test method during compilation
     checkIfMethodNotFound = re.search(r'\s*symbol:\s*method\s*([^\s\(]+)\(', feedback)
     methodNotFound = checkIfMethodNotFound.group(1) if checkIfMethodNotFound is not None else ""
-    holed_assertions.add(jGateway.prefixHoleForMethodNotFound(gpt_oracle, methodNotFound))
+    if not 'assert' in methodNotFound:
+        holed_assertions.add(jGateway.prefixHoleForMethodNotFound(gpt_oracle, methodNotFound))
 
     # Creating prefix holes if 'focal' keyword is present in the assertion
     holed_assertions.add(jGateway.prefixHoleForFocalKeyword(gpt_oracle))
