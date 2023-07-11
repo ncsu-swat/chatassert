@@ -191,57 +191,6 @@ public class PY4JGateway{
         return new ArrayList<String>();
     }
 
-    public Map<String, List<String[]>> indexMethods(String source){
-        Map<String, List<String[]>> methodsToClasses = new HashMap<String, List<String[]>>();
-        List<String> allJavaFiles = MethodDeclarationVisitor.listFiles(source);
-
-        for (String javaFile: allJavaFiles){
-            try{
-                String content = new Scanner(new File(javaFile)).useDelimiter("\\Z").next();
-                JavaParser jparser = new JavaParser();
-                // compilation unit of the original file
-                CompilationUnit cu = ParseUtil.parseCompilationUnit(jparser, content);
-
-                MethodDeclarationVisitor visitor = new MethodDeclarationVisitor();
-                visitor.visit(cu, null);
-
-                String className = javaFile.substring(javaFile.lastIndexOf("/")+1, javaFile.lastIndexOf(".")).trim();
-                for(int i=0; i<visitor.methods.size(); i++){
-                    String methodName = (visitor.methods.get(i))[0];
-                    String startLn = (visitor.methods.get(i))[1];
-                    String endLn = (visitor.methods.get(i))[2];
-
-                    if (methodsToClasses.containsKey(methodName)){
-                        methodsToClasses.get(methodName).add(new String[]{ className, javaFile, startLn, endLn });
-                    }else{
-                        List<String[]> listToAdd = new ArrayList<String[]>();
-                        listToAdd.add(new String[]{ className, javaFile, startLn, endLn });
-                        
-                        methodsToClasses.put(methodName, listToAdd);
-                    }
-                }
-            }catch(Exception e){
-                e.printStackTrace();
-                System.out.println("Indexing exception: " + e.toString());
-            }   
-        }
-
-        // Debugging
-        // for(String methodName: methodsToClasses.keySet()){
-        //     System.out.println("Method: " + methodName);
-            
-        //     for(int i=0; i<methodsToClasses.get(methodName).size(); i++){
-        //         System.out.println("Class: " + methodsToClasses.get(methodName).get(i)[0]);
-        //         System.out.println("Path: " + methodsToClasses.get(methodName).get(i)[1]);
-        //         System.out.println("Start: " + methodsToClasses.get(methodName).get(i)[2]);
-        //         System.out.println("End: " + methodsToClasses.get(methodName).get(i)[3]);
-        //         System.out.println("");
-        //     }
-        // }
-
-        return methodsToClasses;
-    }
-
     public Map<String, String> lhs2rhs(String source){
         JavaParser jparser = new JavaParser();
         Optional<com.github.javaparser.ast.stmt.Statement> optStmt = jparser.parseStatement(source).getResult();
@@ -441,8 +390,6 @@ public class PY4JGateway{
                     }
                 });
             }
-
-            System.out.println(cu.toString());
             
             return cu.toString();
 

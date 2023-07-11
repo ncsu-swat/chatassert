@@ -1,1 +1,11 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
+0	0	adlnet/jxapi	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,actual);	5.883363962173462	0	0
+/	1	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertTrue(actual.contains(expected));	5.408155918121338	0	0
+0	3	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertNotNull(actual);	5.07978081703186	1	0
+/	4	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertFalse(actual.isEmpty());	5.095290899276733	0	0
+/	5	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,actual);	12.154413223266602	0	0
+/	7	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertSame(expected,actual);	5.850121974945068	0	0
+/	9	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,activityDefinition.getType());	62.67032194137573	0	0
+/	14	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,actual);	67.32631516456604	0	0
+/	17	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,actual);	45.438799142837524	0	0
+/	19	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertEquals(expected,actual);	23.636803150177002	0	0

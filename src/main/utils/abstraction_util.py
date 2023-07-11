@@ -56,6 +56,8 @@ def fetch_abstraction_targets(file_path, src_path, dep_paths, test_code):
 def generate_abstraction_prompts(meta):
     abstraction_prompts = []
     done_set = set()
+
+    # We prioritize the abstraction queries that are related to method calls and variable updates
     for lineNumber, line in meta['lines'].items():
         for methodOrClass, details in line.items():
             # generate prompt
@@ -67,7 +69,15 @@ def generate_abstraction_prompts(meta):
                         done_set.add(classDotMethodName)
                     else:
                         abstraction_prompts.append('Take note that in line {}, method {} from class {} is invoked.'.format(str(lineNumber), methodDetails['name'], methodDetails['class']))
-            elif methodOrClass=='classes':
+            elif methodOrClass=='vars':
+                for varName, varDetails in details.items():
+                    # Asking to tell the updated value of an assigned local variable or global variable
+                    abstraction_prompts.append('After executing line {}, what is the updated value of variable {}?'.format(str(lineNumber), varName))
+
+    # Abstraction queries related to object instantiation is being performed after we are done with all the method calls and variable udpates related abstraction queries so that we don't run out of token limit due to large class source code
+    for lineNumber, line in meta['lines'].items():
+        for methodOrClass, details in line.items():
+            if methodOrClass=='classes':
                 for className, classDetails in details.items():
                     # Asking to explain class body if the class if from the application package. meta['classBody'] is a cache containing the code of the unique classes that are declared in the prefix.
                     if className in meta['classBody'] and className not in done_set:
@@ -75,10 +85,6 @@ def generate_abstraction_prompts(meta):
                         done_set.add(className)
                     else:
                         abstraction_prompts.append('Take note that in line {}, an object of class {} is created.'.format(str(lineNumber), className))
-            elif methodOrClass=='vars':
-                for varName, varDetails in details.items():
-                    # Asking to tell the updated value of an assigned local variable or global variable
-                    abstraction_prompts.append('After executing line {}, what is the updated value of variable {}?'.format(str(lineNumber), varName))
 
     return abstraction_prompts
 

@@ -52,6 +52,8 @@ status_count = {
 }
 
 global conversation_history, feedback_history, abstraction_history
+global first_case_done, first_pass_case_done
+
 def prompt_generator(interact_index=None, setup="", test="", focal=""):
     if interact_index == 0:
         #  Try next: Follow the rules <RULES>, where <RULES>:\n\nRule 1. DO NOT MODIFY TEST PREFIX.\nRule 2. DO NOT ASSUME ANYTHING IF IT IS NOT GIVEN.\nRule 3. DO NOT USE THE STRING LITERAL \"<FOCAL>\" IN THE GENERATED ASSERTION.\nRule 4. PAY ATTENTION TO VARIABLES IN THE TEST PREFIX.\n
@@ -116,6 +118,11 @@ def interact_with_openai(temperature=1, which_history="conversation"):
                         {"role": "system", "content": SYSTEM_ROLE}
                     ]
                     history = feedback_history
+                elif which_history == "abstraction":
+                    abstraction_history = [
+                        {"role": "system", "content": SYSTEM_ROLE}
+                    ]
+                    history = abstraction_history
 
             else:
                 print("Potentially rate limit exceeded - Sleeping for 20s\n")
@@ -352,6 +359,45 @@ def place_placeholder(tecofied_lines, startLn, oracleLn):
     
     return placeheld_lines
 
+def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_name, class_name, test_name, gpt_oracle, oracle_code, start_time, end_time, feedback):
+    global first_case_done, first_pass_case_done
+
+    # Convert the string literals in the generated assertion, to abstract STR tag
+    gpt_oracle = gateway.entry_point.abstractStringLiterals(gpt_oracle)
+    # Apply assignment heuristics (lhs = rhs -> replace rhs with lhs in the assertion)
+    gpt_oracle = check_and_fix_lhs2rhs(gateway, gpt_oracle, test_code)
+
+    # Removing org.junit.Assert. substring, Assert. substring and empty spaces in both gpt_oracle, and in the original assertion
+    gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "")
+    gpt_oracle = gpt_oracle.replace("Assert.", "")
+    gpt_oracle = gpt_oracle.replace(" ", "")
+    gpt_oracle = gpt_oracle.strip()
+    gpt_oracle = check_commutative_equal(gpt_oracle, oracle_code)
+
+    oracle_code = oracle_code.replace("org.junit.Assert.", "")
+    oracle_code = oracle_code.replace("Assert.", "")
+    oracle_code = oracle_code.replace(" ", "")
+    oracle_code = oracle_code.strip()
+
+    if feedback is not None and len(feedback.strip()) > 0:
+        # Build failure since len(feedback) > 0
+        if gpt_oracle == oracle_code and oracle_id < 10:
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
+            first_pass_case_done = True
+        else:
+            res_all.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
+            first_case_done = True
+
+    elif len(gpt_oracle) > 0 and feedback is not None and len(feedback.strip()) == 0:
+        # Successful build since len(feedback) == 0
+        if gpt_oracle == oracle_code:
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
+            first_pass_case_done = True
+        else:
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
+            first_case_done = True
+    
+
 if __name__ == "__main__":
     v1_flag, v2_flag, mock_flag = False, False, False
     arg = " ".join(sys.argv)
@@ -367,9 +413,9 @@ if __name__ == "__main__":
 
     # Input data sample id (e.g. sample_1.json)
     sample_id = sys.argv[-1]
-
     print('SAMPLE: sample_{}.json'.format(sample_id))
 
+    testId = 0
     global conversation_history, feedback_history, abstraction_history
     conversation_history = [
         {"role": "system", "content": SYSTEM_ROLE},
@@ -382,8 +428,8 @@ if __name__ == "__main__":
         resAllWriter = csv.writer(resAll, delimiter='\t')
         resPassWriter = csv.writer(resPass, delimiter='\t')
 
-        resAllWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
-        resPassWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "Incorr", "BuildErr", "RunErr", "TestFailure"])
+        resAllWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
+        resPassWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
 
         corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
@@ -399,14 +445,13 @@ if __name__ == "__main__":
                 commit = project_data["commitSHA"]
                 allTests = project_data["allTests"]
                 
-                # removing existing repo
-                if repoName in os.listdir('../tmp/repos'):
-                    os.system('rm -rf ../tmp/repos/{}'.format(repoName))
+                # # removing existing repo
+                # if repoName in os.listdir('../tmp/repos'):
+                #     os.system('rm -rf ../tmp/repos/{}'.format(repoName))
                 
                 # create project object
                 project = Project(repoName, "", gitURL, commit, gateway)
 
-                testId = 0
                 for testClass in allTests:
                     className = testClass["className"]
                     classPath = testClass["classPath"]
@@ -427,14 +472,11 @@ if __name__ == "__main__":
                     if "after" in testClass:
                         after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
 
-                    depPaths = list(project.list_dependencies(subRepo))
+                    # Make sure that all dependencies are added to pom.xml
+                    project.ensure_dependencies(subRepo)
 
-                    # # Run the tests before anlyzing to make sure that there are tests and that the tests pass
-                    # res = project.run_tests()
-                    # if res["tests"] == 0:
-                    #     raise Exception("unexpected: could not find tests in this project")
-                    # if res["failures"]+res["errors"] > 0:
-                    #     raise Exception("expecting all tests to pass")
+                    # Fetch dependency jar paths to pass to the JarTypeSolver
+                    depPaths = list(project.list_dependencies(subRepo))
                             
                     print("\n-----------------------------------------\nAnalyzing Oracles for Test Class: {}\n-----------------------------------------\n".format(className))
                     for test in classTests:
@@ -482,6 +524,10 @@ if __name__ == "__main__":
                                     # interact with open ai about abstraction
                                     abstraction_response = interact_with_openai(which_history='abstraction')
 
+                                    # check if adding the current response to the abstraction message history will overflow our token limits allocated for abstraction. # if cummulative response token length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
+                                    if (abstraction_length + len(abstraction_response))/4 > 12288:
+                                        break
+
                                     # remove last message from abstraction_history
                                     abstraction_history.pop()
 
@@ -489,12 +535,8 @@ if __name__ == "__main__":
                                     insert_message(role='assistant', content=abstraction_response, which_history='abstraction')
                                     insert_message(role='assistant', content=abstraction_response, which_history='conversation')
 
-                                    # keep track of cummulative response length
+                                    # keep track of cummulative response token length
                                     abstraction_length += len(abstraction_response)
-
-                                    # if cummulative response length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
-                                    if abstraction_length > 12288:
-                                        break
 
                         # Get Oracle Code
                         oracle_code = test['oracle']
@@ -506,11 +548,14 @@ if __name__ == "__main__":
                             {"role": "system", "content": SYSTEM_ROLE},
                         ]
 
+                        global first_case_done, first_pass_case_done
                         first_pass_case_done, first_case_done = False, False
                         target_number = TARGET_NUMBER
                         already_gen_oras = set()
                         # for variantId, assertion_type in enumerate(assertionTypes):                            
                         for oracle_id in range(MAX_INTERACTION):
+                            print('\nORACLE ID: {}\n'.format(oracle_id))
+
                             start_time = time.time()
 
                             feedback_history = [
@@ -534,7 +579,7 @@ if __name__ == "__main__":
 
                                 # gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
 
-                                print("\nGPT ORACLE: {}\n".format(gpt_oracle))
+                                # print("\nGPT ORACLE: {}\n".format(gpt_oracle))
                                 if gpt_oracle is None: continue
 
                                 if gpt_oracle not in already_gen_oras:
@@ -542,6 +587,8 @@ if __name__ == "__main__":
                                 
                                     # Follow-up with feedback loop
                                     res, feedback, gpt_oracle = follow_up(mock_flag, gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
+                                    print('\n\nFEEDBACK:\n' + str(feedback))
+
                                     if gpt_oracle is None: continue
 
                                     if feedback is not None and len(feedback) > 0:
@@ -549,65 +596,13 @@ if __name__ == "__main__":
                                         insert_message(role="user", content="AVOID generating the assertion `"+gpt_oracle+"` because it results in a build failure.", which_history="conversation")
 
                                     # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
-                                    if len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
+                                    elif len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
                                         # Oracle compiles and runs - add it to main conversation history
                                         insert_message(role="user", content="GOOD. `"+gpt_oracle+"` is a plausible assertion. So, AVOID generating the assertion `"+gpt_oracle+"` again because you have already generated it.", which_history="conversation")
                                         target_number -= 1
 
-                            # Convert the string literals in the generated assertion, to abstract STR tag
-                            gpt_oracle = gateway.entry_point.abstractStringLiterals(gpt_oracle)
-
-                            # Apply assignment heuristics (lhs = rhs -> replace rhs with lhs in the assertion)
-                            gpt_oracle = check_and_fix_lhs2rhs(gateway, gpt_oracle, test_code)
-
-                            if res is not None:
-                                csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure = "0", "0", "0", "0", "0"
-
-                                if res["build_failure"]:
-                                    print("Build failure has occurred")
-                                    build_err += 1
-                                    csv_buildErr = "1"
-
-                                    oracle_code = oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
-                                    gpt_oracle = check_commutative_equal(gpt_oracle, oracle_code).replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
-                                    
-                                    if gpt_oracle == oracle_code:
-                                        corr += 1
-                                        csv_corr = "1"
-                                    else:
-                                        incorr += 1
-                                        csv_incorr = "1"
-                                
-                                elif res["failures"]+res["errors"] == 0:
-                                    print("Plausible oracle detected")
-                                    
-                                    oracle_code = oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
-                                    gpt_oracle = check_commutative_equal(gpt_oracle, oracle_code).replace("org.junit.Assert.", "").replace("Assert.", "").replace(" ", "").strip()
-                                    
-                                    if gpt_oracle == oracle_code:
-                                        corr += 1
-                                        csv_corr = "1"
-                                    else:
-                                        incorr += 1
-                                        csv_incorr = "1"
-
-                                elif res["errors"] > 0:
-                                    print('Test error has occurred')
-                                    run_err += 1
-                                    csv_runErr = "1"
-                                elif res["failures"] > 0:
-                                    print('Test failure has occurred')
-                                    test_failure += 1
-                                    csv_testFailure = "1"
-
-                                end_time = time.time()
-
-                                if not res['build_failure']:
-                                    resPassWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
-                                    first_pass_case_done = True
-                                else:
-                                    resAllWriter.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), gpt_oracle.replace("org.junit.Assert.", "").replace("Assert.", "").strip(), str(end_time-start_time), csv_corr, csv_incorr, csv_buildErr, csv_runErr, csv_testFailure).split('\t'))
-                                    first_case_done = True
+                            # Write results to csv file
+                            write_res(gateway, resPassWriter, resAllWriter, testId, oracle_id, userName, repoName, className, test_name, gpt_oracle, oracle_code, start_time, time.time(), feedback)
 
                         # Restore test file from backup
                         restore_test_file(filePath)
@@ -615,11 +610,4 @@ if __name__ == "__main__":
                         # Increment test counter
                         testId += 1
 
-                                # input('\n\nENTER A KEY')
-                    #         break
-                    #     break
-                    # break
-
-            print('\n---------------------\nCorrect: {}\nIncorrect: {}\nBuild Error: {}\nTest Error: {}\nTest Failure: {}\n---------------------\n'.format(str(corr), str(incorr), str(build_err), str(run_err), str(test_failure)))
-            print('STATUS COUNT: ')
-            print(status_count)
+                        exit(0)

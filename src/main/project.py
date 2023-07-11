@@ -7,10 +7,6 @@ from path_config import TMP_DIR
 import re
 import xml.etree.ElementTree as ET
 
-from index_item import IndexItem
-
-from git import Repo
-
 class Project():
     def __init__(self, project_name="", subDir="", project_url="", cur_com="", java_gateway=None, base_dir=TMP_DIR):
         self.project_name = project_name
@@ -25,18 +21,14 @@ class Project():
 
         # java_gateway will be not None when invoked from doall.py script
         if java_gateway is not None:
-            # index the project ( Deprecated )
-            # self.index = dict()
-            # self.index_project()
-        
             # modify pom
             self.modify_pom()
 
     def init_env(self): 
-        # delete folder if it exists
+        # # delete folder if it exists
         delete_folder(self.repo_dir) # Commenting to avoid repeated downloads
 
-        if True:
+        if not os.path.exists(self.repo_dir):
             # cloning the repo
             print("Cloning the repo to {}...".format(self.repo_dir))
             clone_repo(self.repo_dir, self.project_url)
@@ -100,38 +92,51 @@ class Project():
 
         return dependencies
 
-    def ensure_dependencies(self):
-        pom = ET.parse(os.path.join(self.repo_dir, 'pom.xml'))
+    def ensure_dependencies(self, subRepo=""):
+        ET.register_namespace('', 'http://maven.apache.org/POM/4.0.0')
+
+        pom_file = os.path.join(self.repo_dir, subRepo, 'pom.xml')
+        pom = ET.parse(pom_file)
         root = pom.getroot()
 
-        print(root.attrib)
+        # Find the curly brace prefix
+        pom_link = re.search(r'({.*}).*', root.tag)
+        if pom_link is not None: pom_link = pom_link.group(1)
 
-        for elem in root.iter('artifactId'):
-            print(elem.attrib)
+        deps_to_add = [
+            {
+                'groupId': 'javax.xml.bind',
+                'artifactId': 'jaxb-api',
+                'version': '2.3.0'
+            }
+        ]
 
-    def index_project(self):
-        jGateway = self.java_gateway.entry_point
-        indexed_methods = dict(jGateway.indexMethods(self.repo_dir))
+        for dep in deps_to_add:
+            dep_exists = False
+            for item in root.findall('{}dependencies'.format(pom_link, pom_link)):
+                for child in item:
+                    groupId = child.find('{}groupId'.format(pom_link))
+                    if groupId is not None:
+                        artifactId = child.find('{}artifactId'.format(pom_link)).text
+                        version = child.find('{}version'.format(pom_link)).text
+                    
+                        if groupId.text == dep['groupId']:
+                            dep_exists = True
+                            break
+                if dep_exists:
+                    break
 
-        for (key, value) in indexed_methods.items():
-            if key not in self.index: self.index[key] = []
+            if not dep_exists:
+                dependency = ET.SubElement(root.find('{}dependencies'.format(pom_link)), '{}dependency'.format(pom_link))
+                
+                groupId = ET.SubElement(dependency, '{}groupId'.format(pom_link))
+                groupId.text = dep['groupId']
+                artifactId = ET.SubElement(dependency, '{}artifactId'.format(pom_link))
+                artifactId.text = dep['artifactId']
+                version = ET.SubElement(dependency, '{}version'.format(pom_link))
+                version.text = dep['version']
 
-            value = list(value)
-            for v in value:
-                class_name = v[0]
-                class_path = v[1]
-                start_ln = v[2]
-                end_ln = v[3]
-
-                # Convert IndexItem to a list for duplicate keys
-                item = IndexItem(key, class_name, class_path, start_ln, end_ln)
-                self.index[key].append(item)
-
-        # Debugging
-        # for (key, value) in self.index.items():
-        #     print('Method: {}'.format(key))
-        #     for index_item in value:
-        #         print(index_item)
+        pom.write(os.path.join(pom_file))
 
     def modify_pom(self):
         self.add_maven_compiler_plugin()
@@ -142,6 +147,7 @@ class Project():
         poms = set([os.path.join(self.repo_dir, r) for (r, ds, fs) in os.walk(self.repo_dir) for fn in fs if fn=='pom.xml'])
         
         for pom_file in poms:
+            print(pom_file)
             compiler_plugin_found = False
 
             if pom_file is None: break
@@ -190,14 +196,20 @@ class Project():
                     plugin = ET.SubElement(root.find('{}build/{}plugins'.format(pom_link, pom_link)), '{}plugin'.format(pom_link))
                 
                 if plugin is not None:
-                    groupId = ET.SubElement(plugin, '{}groupId'.format(pom_link)).text = 'org.apache.maven.plugins'
-                    artifactId = ET.SubElement(plugin, '{}artifactId'.format(pom_link)).text = 'maven-compiler-plugin'
-                    version = ET.SubElement(plugin, '{}version'.format(pom_link)).text = compiler_version
+                    groupId = ET.SubElement(plugin, '{}groupId'.format(pom_link))
+                    groupId.text = 'org.apache.maven.plugins'
+                    artifactId = ET.SubElement(plugin, '{}artifactId'.format(pom_link))
+                    artifactId.text = 'maven-compiler-plugin'
+                    version = ET.SubElement(plugin, '{}version'.format(pom_link))
+                    version.text = compiler_version
+                    
                     configuration = ET.SubElement(plugin, '{}configuration'.format(pom_link))
                 
                 if configuration is not None:
-                    source = ET.SubElement(configuration, '{}source'.format(pom_link)).text = java_version
-                    target = ET.SubElement(configuration, '{}target'.format(pom_link)).text = java_version
+                    source = ET.SubElement(configuration, '{}source'.format(pom_link))
+                    source.text = java_version
+                    target = ET.SubElement(configuration, '{}target'.format(pom_link))
+                    target.text = java_version
 
             pom.write(os.path.join(pom_file, 'pom.xml'))
 

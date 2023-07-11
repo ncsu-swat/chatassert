@@ -1,1 +1,11 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
+/	1	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertFalse(vārds.wordforms.isEmpty());	156.46009993553162	0	0
+/	2	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertEquals(false,vārds.wordforms.isEmpty());	17.302685022354126	0	0
+/	3	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertNotNull(vārds.wordforms);	8.950681924819946	0	0
+/	4	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertNotEquals(0,vārds.wordforms.size());	9.793226718902588	0	0
+/	5	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertTrue(vārds.wordforms.size()>0);	9.825707912445068	0	0
+/	6	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertEquals(true,vārds.wordforms.size()>0);	9.619246006011963	0	0
+/	9	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertNotSame(0,vārds.wordforms.size());	9.993961811065674	0	0
+0	24	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertTrue(vārds.isRecognized());	209.3764910697937	1	0
+/	25	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertEquals(true,vārds.isRecognized());	9.272711992263794	0	0
+/	26	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertSame(true,vārds.isRecognized());	9.486520051956177	0	0

@@ -1,1 +1,2 @@
-TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	Incorr	BuildErr	RunErr	TestFailure
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
+/	2	//	ActivityDefinitionTest	testSetType	assertNotNull(actual);	assertNotEquals(expected,actual);	15.207557201385498	0	0

@@ -4,11 +4,31 @@ from py4j.java_gateway import JavaGateway
 def extract_assertion(text):
     print('\nRESPONSE: \n{}\n'.format(text))
 
-    assertStatement = re.search(r"assert[\S]+[\s]*\([\s\S]+\);", text)
+    text = text.replace(' ', '')
+    common_asserts = [ 'assertEquals\(', 'assertNotEquals\(', 'assertSame\(', 'assertNotSame\(', 'assertArrayEquals\(', 'assertTrue\(', 'assertFalse\(', 'assertNull\(', 'assertNotNull\(' ]
 
-    if assertStatement is None:
-        return None
-    return clean_args(assertStatement.group(0))
+    assertion_stop = -1
+    for common_assert in common_asserts:
+        for _match in re.finditer(common_assert, text):
+            assertion_start = _match.start(0)
+            assertion_stop = -1
+            parenthesis_counter = 0
+            i = _match.end(0)-1
+            while i+1 < len(text):
+                if text[i] == '(':
+                    parenthesis_counter += 1
+                elif text[i] == ')':
+                    parenthesis_counter -= 1
+                
+                if parenthesis_counter == 0 and i > assertion_start-1:
+                    if text[i+1] == ';':
+                        assertion_stop = i+2
+                        break                
+                i += 1
+    if assertion_stop != -1:
+        return clean_args(text[assertion_start:assertion_stop])
+    
+    return None
 
 def extract_assertions(text):
     # print('\nRESPONSE: \n{}\n'.format(text))
@@ -106,3 +126,4 @@ def check_commutative_equal(gpt_oracle, oracle_code):
             return commutated_assertion
 
     return gpt_oracle
+    
