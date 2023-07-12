@@ -117,8 +117,10 @@ class Project():
                 for child in item:
                     groupId = child.find('{}groupId'.format(pom_link))
                     if groupId is not None:
-                        artifactId = child.find('{}artifactId'.format(pom_link)).text
-                        version = child.find('{}version'.format(pom_link)).text
+                        artifactId = child.find('{}artifactId'.format(pom_link))
+                        if artifactId is not None: artifactId = artifactId.text
+                        version = child.find('{}version'.format(pom_link))
+                        if version is not None: version = version.text
                     
                         if groupId.text == dep['groupId']:
                             dep_exists = True

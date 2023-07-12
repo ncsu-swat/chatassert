@@ -97,16 +97,13 @@ def interact_with_openai(temperature=1, which_history="conversation"):
             break
         except Exception as e: 
             print(e)
-
-            # sum = 0
-            # for message in history:
-            #     sum += len(message['content'])/4 # OpenAI considers one token to consist of ~4 characters (ref. OpenAI website)
+            
             all_messages = [message['content'] for message in history]
             all_messages_string = ' '.join(all_messages)
 
             print("\n!!! Interaction Exception !!!")
             # Interaction exception can be either due to "exceeding token limit" or "exceeding rate limit"
-            print("Message length: {}".format(sum))
+            # print("Message length: {}".format(sum))
             if if_exceed_token_limit(all_messages_string, 'gpt-3.5-turbo-16k'):
                 # Preemptively resetting conversation history to avoid future interaction exception due to exceeding token limit
                 if which_history == "conversation":
@@ -617,4 +614,4 @@ if __name__ == "__main__":
                         # Increment test counter
                         testId += 1
 
-                        exit(0)
+                        # exit(0)
