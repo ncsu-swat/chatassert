@@ -98,14 +98,16 @@ def interact_with_openai(temperature=1, which_history="conversation"):
         except Exception as e: 
             print(e)
 
-            sum = 0
-            for message in history:
-                sum += len(message['content'])/4 # OpenAI considers one token to consist of ~4 characters (ref. OpenAI website)
+            # sum = 0
+            # for message in history:
+            #     sum += len(message['content'])/4 # OpenAI considers one token to consist of ~4 characters (ref. OpenAI website)
+            all_messages = [message['content'] for message in history]
+            all_messages_string = ' '.join(all_messages)
 
             print("\n!!! Interaction Exception !!!")
             # Interaction exception can be either due to "exceeding token limit" or "exceeding rate limit"
             print("Message length: {}".format(sum))
-            if sum > 16000:
+            if if_exceed_token_limit(all_messages_string, 'gpt-3.5-turbo-16k'):
                 # Preemptively resetting conversation history to avoid future interaction exception due to exceeding token limit
                 if which_history == "conversation":
                     conversation_history = [
@@ -510,6 +512,7 @@ if __name__ == "__main__":
                             if meta is not None:
                                 # get a list of abstraction prompts for each line (one line can have multiple abstraction prompts):
                                 abstraction_prompts = generate_abstraction_prompts(meta)
+                                print(abstraction_prompts)
 
                                 # Introducing the task to ChatGPT and mimicking its response from the WebUI
                                 insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='conversation')
@@ -518,11 +521,15 @@ if __name__ == "__main__":
                                 insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='abstraction')
                                 insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='abstraction')
                                 for prompt in abstraction_prompts:
+                                    print('LENGTH OF ABSTRACTION HISTORY: {}\n'.format(len(abstraction_history)))
+                                    print('ABSTRACTION HISTORY: {}\n'.format(abstraction_history))
+
                                     # insert prompt into abstraction_history
                                     insert_message('user', prompt, 'abstraction')
 
                                     # interact with open ai about abstraction
                                     abstraction_response = interact_with_openai(which_history='abstraction')
+                                    print('ABSTRACTION RESPONSE: {}\n'.format(abstraction_response))
 
                                     # check if adding the current response to the abstraction message history will overflow our token limits allocated for abstraction. # if cummulative response token length exceeds 12288 (3/4 of token limit 16384), stop and leave the remaining 4096 tokens for the assertion query and feedback cycle
                                     if (abstraction_length + len(abstraction_response))/4 > 12288:

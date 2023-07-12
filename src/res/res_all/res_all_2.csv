@@ -1,3 +1,1 @@
 TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
-0	0	PeterisP/morphology	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertTrue(!locītājs.wordforms.isEmpty());	210.45313477516174	0	0
-/	10	//	MorphologyTest	gunta19dec_3	assertTrue(vārds.isRecognized());	assertFalse(!vārds.wordforms.isEmpty());	36.56031322479248	0	0

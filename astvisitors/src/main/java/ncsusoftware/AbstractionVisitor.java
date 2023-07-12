@@ -18,13 +18,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.github.javaparser.resolution.declarations.ResolvedMethodDeclaration;
+import com.github.javaparser.resolution.declarations.ResolvedConstructorDeclaration;
 import com.github.javaparser.resolution.types.ResolvedReferenceType;
 
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.body.ConstructorDeclaration;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.AssignExpr;
+import com.github.javaparser.ast.expr.ObjectCreationExpr;
 
 public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
     /*
@@ -93,7 +96,7 @@ public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
             String _class = reMethodDecl.getClassName();
             String _body = "";
 
-            Optional<MethodDeclaration> opt = n.resolve().toAst(MethodDeclaration.class);
+            Optional<MethodDeclaration> opt = reMethodDecl.toAst(MethodDeclaration.class);
             if(opt.isPresent()){
                 _body = opt.get().toString();
             }
@@ -106,6 +109,7 @@ public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
 
             if(!perLine.containsKey(lineCounter)){
                 perLine.put(lineCounter, new LinkedHashMap<String, Map<String, Map<String, String>>>());
+                perLine.get(lineCounter).put("constructors", new LinkedHashMap<String, Map<String, String>>());
                 perLine.get(lineCounter).put("methods", new LinkedHashMap<String, Map<String, String>>());
                 perLine.get(lineCounter).put("classes", new LinkedHashMap<String, Map<String, String>>());
                 perLine.get(lineCounter).put("vars", new LinkedHashMap<String, Map<String, String>>());
@@ -115,6 +119,46 @@ public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
             perLine.get(lineCounter).get("methods").put(key, callDetailsMap);
         }catch(Exception e){
             System.out.println("\nException when resolving type of " + n.getName().asString() + "\n");
+            // e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void visit(final ObjectCreationExpr n, final Integer lineCounter) {
+        super.visit(n, lineCounter);
+
+        Map<String, String> callDetailsMap = new LinkedHashMap<>();
+        try{
+            ResolvedConstructorDeclaration reConstructorDecl = n.resolve();
+            String _constructorName = reConstructorDecl.getName();
+            String _path = reConstructorDecl.getQualifiedName();
+            String _package = reConstructorDecl.getPackageName();
+            String _class = reConstructorDecl.getClassName();
+            String _body = "";
+
+            Optional<ConstructorDeclaration> opt = reConstructorDecl.toAst(ConstructorDeclaration.class);
+            if(opt.isPresent()){
+                _body = opt.get().toString();
+            }
+
+            callDetailsMap.put("path", _path);
+            callDetailsMap.put("package", _package);
+            callDetailsMap.put("class", _class);
+            callDetailsMap.put("name", _constructorName);
+            callDetailsMap.put("body", _body);
+
+            if(!perLine.containsKey(lineCounter)){
+                perLine.put(lineCounter, new LinkedHashMap<String, Map<String, Map<String, String>>>());
+                perLine.get(lineCounter).put("constructors", new LinkedHashMap<String, Map<String, String>>());
+                perLine.get(lineCounter).put("methods", new LinkedHashMap<String, Map<String, String>>());
+                perLine.get(lineCounter).put("classes", new LinkedHashMap<String, Map<String, String>>());
+                perLine.get(lineCounter).put("vars", new LinkedHashMap<String, Map<String, String>>());
+            }
+            
+            String key = _class + "." + _constructorName;
+            perLine.get(lineCounter).get("constructors").put(key, callDetailsMap);
+        }catch(Exception e){
+            System.out.println("\nException when resolving type of " + "constructor" + "\n");
             // e.printStackTrace();
         }
     }
@@ -141,6 +185,7 @@ public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
 
                 if(!perLine.containsKey(lineCounter)){
                     perLine.put(lineCounter, new LinkedHashMap<String, Map<String, Map<String, String>>>());
+                    perLine.get(lineCounter).put("constructors", new LinkedHashMap<String, Map<String, String>>());
                     perLine.get(lineCounter).put("methods", new LinkedHashMap<String, Map<String, String>>());
                     perLine.get(lineCounter).put("classes", new LinkedHashMap<String, Map<String, String>>());
                     perLine.get(lineCounter).put("vars", new LinkedHashMap<String, Map<String, String>>());
@@ -160,6 +205,7 @@ public class AbstractionVisitor extends VoidVisitorAdapter<Integer> {
         
         if(!perLine.containsKey(lineCounter)){
             perLine.put(lineCounter, new LinkedHashMap<String, Map<String, Map<String, String>>>());
+            perLine.get(lineCounter).put("constructors", new LinkedHashMap<String, Map<String, String>>());
             perLine.get(lineCounter).put("methods", new LinkedHashMap<String, Map<String, String>>());
             perLine.get(lineCounter).put("classes", new LinkedHashMap<String, Map<String, String>>());
             perLine.get(lineCounter).put("vars", new LinkedHashMap<String, Map<String, String>>());

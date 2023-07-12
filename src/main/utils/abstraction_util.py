@@ -61,9 +61,17 @@ def generate_abstraction_prompts(meta):
     for lineNumber, line in meta['lines'].items():
         for methodOrClass, details in line.items():
             # generate prompt
-            if methodOrClass=='methods':
+            if methodOrClass=='constructors':
+                for classDotConstructorName, constructorDetails in details.items():
+                    # Asking to explain constructor body if the constructor is from the application package. If the constructor is from the application package, the dictionary key "body" will have the constructor body (ref. AbstractionVisitor class in Java).
+                    if len(constructorDetails['body']) > 0 and classDotConstructorName not in done_set:
+                        abstraction_prompts.append('In line {}, an object of class {} is instantiated. Can you explain the following constructor code?\n```{}```\n'.format(str(lineNumber), constructorDetails['class'], constructorDetails['body']))
+                        done_set.add(classDotConstructorName)
+                    else:
+                        abstraction_prompts.append('Take note that in line {}, constructor {} from class {} is invoked.'.format(str(lineNumber), constructorDetails['name'], constructorDetails['class']))
+            elif methodOrClass=='methods':
                 for classDotMethodName, methodDetails in details.items():
-                    # Asking to explain method body if the method if from the application package. If the method is from the application package, the dictionary key "body" will have the method body (ref. AbstractionVisitor class in Java).
+                    # Asking to explain method body if the method is from the application package. If the method is from the application package, the dictionary key "body" will have the method body (ref. AbstractionVisitor class in Java).
                     if len(methodDetails['body']) > 0 and classDotMethodName not in done_set:
                         abstraction_prompts.append('In line {}, method {} of class {} is invoked. Can you explain the following method code?\n```{}```\n'.format(str(lineNumber), methodDetails['name'], methodDetails['class'], methodDetails['body']))
                         done_set.add(classDotMethodName)
