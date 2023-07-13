@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 from nltk import edit_distance
 from bleu import corpus_bleu, SmoothingFunction
@@ -5,7 +6,8 @@ import weighted_ngram_match
 import syntax_match
 import dataflow_match
 
-from rouge_score import rouge_scorer
+from rouge import Rouge
+sys.setrecursionlimit(12250000)
 
 def spacify(line):
     testString = []
@@ -89,7 +91,7 @@ def prepare_refs_hyps(data):
         references.append(refs)
         hypotheses.append(spacify(df_slice.iloc[0]['TrueOracle'].replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', '')))
         
-    data.groupby(['TestID']).apply(group)
+    data.groupby(['ClassName#TestName']).apply(group)
 
     return references, hypotheses
 
@@ -139,16 +141,19 @@ def code_bleu(data):
     return code_bleu_score
 
 def rouge(data):
-    score = 0
-    scorer = rouge_scorer.RougeScorer(['rougeL'])
+    references, hypotheses = prepare_refs_hyps(data)
+    all_refs_list = []
 
-    for true, pred in zip(data['TrueOracle'], data['GenOracle']):
-        true = spacify(true.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', ''))
-        pred = spacify(pred.replace('org.junit.Assert.', '').replace('org.junit.', '').replace('Assert.', ''))
-        
-        score = scorer.score(true, pred)['rougeL'][2] # 2 for fmeasure
+    for per_test_refs in references:
+        all_refs_list.append(' '.join(per_test_refs))
+    all_refs = ' '.join(all_refs_list)
 
-    return score/len(data)
+    all_hyps = ' '.join(hypotheses)
+
+    rouge = Rouge()
+    scores = rouge.get_scores(all_hyps, all_refs, avg=True)
+
+    return scores["rouge-l"]['f'] * 100.0
 
 def edit_sim(data):
     score = 0
@@ -161,19 +166,21 @@ def edit_sim(data):
     return 1-score/len(data)
 
 def main():
-    dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestID', 'TrueOracle', 'GenOracle'])
-    dataTeco = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t', usecols=['TestID', 'TrueOracle', 'GenOracle'])
+    dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
+    dataTeco = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t', usecols=['ClassName#TestName', 'TrueOracle', 'GenOracle'])
 
-    print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
-    print('Teco BLEU: {}'.format(bleu(dataTeco)))
+    dataOGPT['ClassName#TestName'] = dataOGPT['TestClass'] + '#' + dataOGPT['TestName']
 
-    # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
-    # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    # print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
+    # print('Teco BLEU: {}'.format(bleu(dataTeco)))
 
-    print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
-    print('Teco Rouge: {}'.format(rouge(dataTeco)))
+    print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
+    print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
 
-    print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
-    print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
+    # print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
+    # print('Teco Rouge: {}'.format(rouge(dataTeco)))
+
+    # print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
+    # print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
 
 main()

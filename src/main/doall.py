@@ -512,11 +512,11 @@ if __name__ == "__main__":
                                 print(abstraction_prompts)
 
                                 # Introducing the task to ChatGPT and mimicking its response from the WebUI
-                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='conversation')
-                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='conversation')
+                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a JUnit assertion. Alright?', which_history='conversation')
+                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a JUnit assertion.', which_history='conversation')
 
-                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a correct and compilable JUnit assertion. Alright?', which_history='abstraction')
-                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a correct and compilable JUnit assertion.', which_history='abstraction')
+                                insert_message(role='user', content='I will ask you to explain a few methods and classes. I will also walk you through the steps of a Java test method prefix. Then, given a setup method, test prefix and a focal method, I will ask you to generate a JUnit assertion. Alright?', which_history='abstraction')
+                                insert_message(role='assistant', content='Yes. I will explain the methods and classes that you give me. I will pay close attention to the steps you describe. If you give me the test prefix and a focal method, I will generate a JUnit assertion.', which_history='abstraction')
                                 for prompt in abstraction_prompts:
                                     print('LENGTH OF ABSTRACTION HISTORY: {}\n'.format(len(abstraction_history)))
                                     print('ABSTRACTION HISTORY: {}\n'.format(abstraction_history))
