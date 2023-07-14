@@ -288,7 +288,7 @@ public class PY4JGateway{
             if(assertionOpt.isPresent()){
                 MethodCallExpr assertionMethodCall = assertionOpt.get().asExpressionStmt().getExpression().asMethodCallExpr();
 
-                if(assertionMethodCall.getName().asString().equals("assertEquals")){
+                if(assertionMethodCall.getName().asString().contains("Equals")){
                     NodeList<Expression> oldArgs = assertionMethodCall.getArguments();
 
                     if(oldArgs.size() == 2){
