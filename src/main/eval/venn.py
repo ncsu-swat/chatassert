@@ -75,13 +75,17 @@ with open('../../data/venn/res/only-teco.tsv', 'w+') as onlyTeco, open('../../da
             teco_tatu_cnt += 1
             continue
 
-        if TECO in corr_arr and TATU not in corr_arr:
+        elif TECO in corr_arr and TATU not in corr_arr:
             teco_cnt += 1
             onlyTeco.write('{}\t{}\n'.format(classTestName, teco[teco['ClassName#TestName']==classTestName].iloc[0]['TrueOracle']))
             continue
 
-        if TATU in corr_arr and TECO not in corr_arr:
+        elif TATU in corr_arr and TECO not in corr_arr:
             tatu_cnt += 1
+            continue
+
+        elif TECO not in corr_arr and TATU not in corr_arr:
+            none.write('{}\t{}\n'.format(classTestName, teco[teco['ClassName#TestName']==classTestName].iloc[0]['TrueOracle']))
             continue
 
     # for (classTestName, corr_arr) in corr_dict.items():

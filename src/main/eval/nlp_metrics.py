@@ -168,19 +168,31 @@ def edit_sim(data):
 def main():
     dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
     dataTeco = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t', usecols=['ClassName#TestName', 'TrueOracle', 'GenOracle'])
+    dataBatch = pd.read_csv('../../prelim_res_batch.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
+    dataBatchFuzz = pd.read_csv('../../prelim_res_batch_fuzz.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
 
     dataOGPT['ClassName#TestName'] = dataOGPT['TestClass'] + '#' + dataOGPT['TestName']
+    dataBatch['ClassName#TestName'] = dataBatch['TestClass'] + '#' + dataBatch['TestName']
+    dataBatchFuzz['ClassName#TestName'] = dataBatchFuzz['TestClass'] + '#' + dataBatchFuzz['TestName']
 
     # print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
     # print('Teco BLEU: {}'.format(bleu(dataTeco)))
+    print('Batch BLEU: {}'.format(bleu(dataBatch)))
+    print('Batch-Fuzz BLEU: {}'.format(bleu(dataBatchFuzz)))
 
-    print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
-    print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
+    # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
+    print('Batch CodeBLEU: {}'.format(code_bleu(dataBatch)))
+    print('Batch-Fuzz CodeBLEU: {}'.format(code_bleu(dataBatchFuzz)))
 
     # print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
     # print('Teco Rouge: {}'.format(rouge(dataTeco)))
+    print('Batch Rouge: {}'.format(rouge(dataBatch)))
+    print('Batch-Fuzz Rouge: {}'.format(rouge(dataBatchFuzz)))
 
     # print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
     # print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
+    print('Batch Edit Distance: {}'.format(edit_sim(dataBatch)))
+    print('Batch-Fuzz Edit Distance: {}'.format(edit_sim(dataBatchFuzz)))
 
 main()

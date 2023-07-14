@@ -1,0 +1,48 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
+0	5	//	Draft_6455Test	testGetExtension	assertNotNull(draft_6455.getExtension());	assertEquals(expectedExtension,draft_6455.getExtension());	296.39997696876526	0	0
+1	0	TooTallNate/Java-WebSocket	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertNotNull(FOCAL.createWebSocket(newCustomWebSocketAdapter(),newDraft_6455()));	496.4131410121918	0	0
+/	1	//	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertNotNull(newDefaultSSLWebSocketServerFactory().createWebSocket(webSocketAdapter,newDraft_6455()));	143.60828495025635	0	0
+/	8	//	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertTrue(webSocketImplinstanceofMyWebSocketImpl);	378.4810039997101	0	0
+/	16	//	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertNotNull(webSocketAdapterinstanceofCustomWebSocketAdapter);	377.3331518173218	0	0
+/	19	//	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertNotEquals(WebSocketImpl.class,webSocketImpl.getClass());	29.300379991531372	0	0
+/	28	//	DefaultSSLWebSocketServerFactoryTest	testCreateWebSocket	assertNotNull(webSocketImpl);	assertTrue(webSocketImplinstanceofFOCAL);	145.23064184188843	0	0
+2	0	redraiment/jactiverecord	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",FOCAL(Collections.emptyList(),""STR""));"	32.845585107803345	0	0
+/	1	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",FOCAL.join(testList,null));"	39.49119520187378	0	0
+/	3	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertTrue(join(testList,""STR"").startsWith(""STR""));"	55.40827298164368	0	0
+/	4	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertEquals(expected,FOCAL.join(list,delimiter));	54.24486994743347	0	0
+/	5	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	???;	55.727702140808105	0	0
+/	7	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	???;	41.57184910774231	0	0
+/	8	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",result);"	40.42946100234985	0	0
+/	9	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertEquals(expectedValue,result);	41.15583801269531	0	0
+/	10	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertEquals(expected,result);	42.744428873062134	0	0
+/	13	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",FOCAL.join(list,delimiter));"	60.615854024887085	0	0
+/	14	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",FOCAL.join(list,delimiter));"	69.68668389320374	0	0
+/	15	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertNotEquals(""STR"",FOCAL.join(null,delimiter));"	55.84444522857666	0	0
+/	16	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertNotEquals(""STR"",FOCAL.join(list,delimiter));"	46.79279923439026	0	0
+/	17	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertTrue(SeqTest.join(list,delimiter).contains(element1));	47.84425091743469	0	0
+/	20	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertNotNull(SeqUtil.join(list,delimiter));	48.3901891708374	0	0
+/	22	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	???;	49.97956395149231	0	0
+/	23	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertEquals(""STR"",FOCAL.join(someList,""STR""));"	64.21914005279541	0	0
+/	24	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertFalse(SeqTest.join(someList,""STR"").isEmpty());"	46.83206582069397	0	0
+/	25	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	assertEquals(expectedList.toString(),FOCAL.join(Arrays.asList(inputlist),delimiter));	47.61993193626404	0	0
+/	26	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	???;	41.166417837142944	0	0
+/	27	//	SeqTest	testJoinDelimiterNull	"assertEquals(""STR"",Seq.join(Arrays.asList(""STR"",""STR"",""STR""),null));"	"assertTrue(FOCAL+""(null,\""delimiter\"").isEmpty());"	39.72145938873291	0	0
+3	0	adlnet/jxapi	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual);	22.483731985092163	0	0
+/	2	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertNotEquals(Double.valueOf(expected),Double.valueOf(actual));	22.078450918197632	0	0
+/	3	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual);	23.214778184890747	0	0
+/	5	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual);	50.08300590515137	0	0
+/	9	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual);	22.811434984207153	0	0
+/	10	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual,delta);	78.22349786758423	0	0
+/	20	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	assertEquals(expected,actual,delta);	46.81166887283325	0	0
+/	24	//	ScoreTest	testSetRaw	assertEquals(expected,actual,0);	"assertArrayEquals(...)`.Tryreplacingtheplaceholder<AssertPlaceHolder>withtheupdatedassertstatementshownbelow:
+
+```java
+assertEquals(expected,actual,delta_tolerance);"	42.905925989151	0	0
+/	3	//	ResultTest	testGetDuration	assertNotNull(actual);	assertNotEquals(expected,actual);	21.661893844604492	0	0
+7	0	open-korean-text/open-korean-text	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertEquals(""STR"",FOCAL.normalize(""STR"").toString());"	852.7383008003235	0	0
+/	1	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertEquals(OpenKoreanTextProcessor.normalize(newStringBuilder(""STR"").toString()),FOCAL.normalize(newStringBuilder(""STR"").toString()));"	816.1683919429779	0	0
+/	2	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertEquals(""STR"",focalNormalizedName.toString());"	1034.7796080112457	0	0
+/	3	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertEquals(""STR"",normalize(text).toString());"	654.2179200649261	0	0
+/	4	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertEquals(""STR"",normalizedText.toString());"	658.0789380073547	0	0
+/	5	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertNotNull(FOCAL.normalize(""STR""));"	954.1641600131989	0	0
+/	6	//	OpenKoreanProcessorJavaTest	testNormalize	"assertEquals(""STR"",OpenKoreanTextProcessorJava.normalize(""STR""));"	"assertTrue(FOCAL.normalize(""STR"").toString().length()>0);"	625.6012148857117	0	0

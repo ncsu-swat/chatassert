@@ -1,0 +1,103 @@
+[INFO] Scanning for projects...
+[WARNING] The project org.openkoreantext:open-korean-text:jar:2.3.2-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[INFO] 
+[INFO] ----------------< org.openkoreantext:open-korean-text >-----------------
+[INFO] Building Open Korean Text Processor 2.3.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ open-korean-text ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ open-korean-text ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:add-source (scala-compile-first) @ open-korean-text ---
+[INFO] Add Source directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala
+[INFO] Add Test Source directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/scala
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:compile (scala-compile-first) @ open-korean-text ---
+[WARNING]  Expected all dependencies to require Scala version: 2.12.4
+[WARNING]  org.openkoreantext:open-korean-text:2.3.2-SNAPSHOT requires scala version: 2.12.4
+[WARNING]  org.scalatest:scalatest_2.12:3.0.5 requires scala version: 2.12.4
+[WARNING]  org.scalactic:scalactic_2.12:3.0.5 requires scala version: 2.12.4
+[WARNING]  org.scala-lang:scala-reflect:2.12.4 requires scala version: 2.12.4
+[WARNING]  org.scala-lang.modules:scala-xml_2.12:1.0.6 requires scala version: 2.12.0
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java:-1: info: compiling
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala:-1: info: compiling
+[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes at 1689338095200
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala/org/openkoreantext/processor/OpenKoreanTextProcessor.scala:178: warning: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses
+[WARNING]     KoreanDictionaryProvider.koreanDictionary
+[WARNING]                              ^
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala/org/openkoreantext/processor/OpenKoreanTextProcessor.scala:183: warning: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses
+[WARNING]     KoreanDictionaryProvider.properNouns
+[WARNING]                              ^
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala/org/openkoreantext/processor/normalizer/KoreanNormalizer.scala:88: warning: match may not be exhaustive.
+[WARNING] It would fail on the following input: (_, _)
+[WARNING]     typoDictionaryByLength.foldLeft(chunk) {
+[WARNING]                                            ^
+[WARNING] three warnings found
+[INFO] prepare-compile in 0 s
+[INFO] compile in 7 s
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ open-korean-text ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default) @ open-korean-text ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ open-korean-text ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- scala-maven-plugin:3.2.0:testCompile (scala-test-compile) @ open-korean-text ---
+[WARNING]  Expected all dependencies to require Scala version: 2.12.4
+[WARNING]  org.openkoreantext:open-korean-text:2.3.2-SNAPSHOT requires scala version: 2.12.4
+[WARNING]  org.scalatest:scalatest_2.12:3.0.5 requires scala version: 2.12.4
+[WARNING]  org.scalactic:scalactic_2.12:3.0.5 requires scala version: 2.12.4
+[WARNING]  org.scala-lang:scala-reflect:2.12.4 requires scala version: 2.12.4
+[WARNING]  org.scala-lang.modules:scala-xml_2.12:1.0.6 requires scala version: 2.12.0
+[WARNING] Multiple versions of scala libraries detected!
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java:-1: info: compiling
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/scala:-1: info: compiling
+[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes at 1689338104115
+[INFO] prepare-compile in 0 s
+[INFO] compile in 6 s
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ open-korean-text ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[33,40] cannot find symbol
+  symbol:   variable FOCAL
+  location: class org.openkoreantext.processor.OpenKoreanProcessorJavaTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.700 s
+[INFO] Finished at: 2023-07-14T18:35:10+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project open-korean-text: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[33,40] cannot find symbol
+[ERROR]   symbol:   variable FOCAL
+[ERROR]   location: class org.openkoreantext.processor.OpenKoreanProcessorJavaTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
