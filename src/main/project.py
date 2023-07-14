@@ -56,7 +56,7 @@ class Project():
         pom_link = re.search(r'({.*}).*', root.tag)
         if pom_link is not None: pom_link = pom_link.group(1)
 
-        for item in root.findall('{}dependencies'.format(pom_link, pom_link)):
+        for item in root.findall('{}dependencies'.format(pom_link)):
             for child in item:
                 groupId = child.find('{}groupId'.format(pom_link))
                 if groupId is not None:
@@ -135,7 +135,11 @@ class Project():
                     break
 
             if not dep_exists:
-                dependency = ET.SubElement(root.find('{}dependencies'.format(pom_link)), '{}dependency'.format(pom_link))
+                dependencies = root.find('{}dependencies'.format(pom_link))
+                if dependencies is None:
+                    dependencies = ET.SubElement(root, '{}dependencies'.format(pom_link))
+               
+                dependency = ET.SubElement(dependencies, '{}dependency'.format(pom_link))
                 
                 groupId = ET.SubElement(dependency, '{}groupId'.format(pom_link))
                 groupId.text = dep['groupId']

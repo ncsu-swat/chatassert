@@ -53,7 +53,7 @@
 -------------------------------------------------------
 Running com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.526 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.568 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 
 Results :
 
@@ -62,6 +62,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.872 s
-[INFO] Finished at: 2023-07-13T15:56:43+06:00
+[INFO] Total time:  13.686 s
+[INFO] Finished at: 2023-07-13T20:44:33+06:00
 [INFO] ------------------------------------------------------------------------

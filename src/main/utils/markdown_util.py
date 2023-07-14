@@ -103,8 +103,6 @@ def clean_args(gpt_oracle):
     gateway = JavaGateway()
     gpt_oracle = gateway.entry_point.removeAssertionMessage(gpt_oracle)
 
-    print(gpt_oracle)
-
     return 'org.junit.Assert.' + gpt_oracle
 
 # Check if commutating args of assertEquals gives exact match
@@ -117,7 +115,7 @@ def check_commutative_equal(gpt_oracle, oracle_code):
     oracle_code = oracle_code.replace("Assert.", "")
     oracle_code = oracle_code.replace(" ", "").strip()
 
-    if 'assertEquals' in gpt_oracle:
+    if 'Equals' in gpt_oracle:
         gateway = JavaGateway()
         commutated_assertion = gateway.entry_point.commutateAssertEquals(gpt_oracle)
         commutated_assertion = commutated_assertion.replace(' ', '')

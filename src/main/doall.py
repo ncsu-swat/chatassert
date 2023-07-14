@@ -14,7 +14,7 @@ from path_config import DATA_DIR,API_KEY_FILEPATH,CONFIG_DIR, PRO_DIR
 from utils.file_util import read_file
 from utils.git_util import get_parent_commit
 from utils.file_util import extract_content_within_line_range, read_file
-from utils.markdown_util import extract_assertion, check_commutative_equal, get_assert_type
+from utils.markdown_util import extract_assertion, clean_args, check_commutative_equal, get_assert_type
 from utils.prompt_generator_util import get_vulnerable_function_attributes
 from utils.repair_util import adhoc_repair, check_and_fix_lhs2rhs
 from utils.abstraction_util import fetch_abstraction_targets, generate_abstraction_prompts
@@ -373,6 +373,7 @@ def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_na
     gpt_oracle = gpt_oracle.strip()
     gpt_oracle = check_commutative_equal(gpt_oracle, oracle_code)
 
+    oracle_code = clean_args(oracle_code) # Checking wihout optional assertion message
     oracle_code = oracle_code.replace("org.junit.Assert.", "")
     oracle_code = oracle_code.replace("Assert.", "")
     oracle_code = oracle_code.replace(" ", "")
@@ -444,9 +445,9 @@ if __name__ == "__main__":
                 commit = project_data["commitSHA"]
                 allTests = project_data["allTests"]
                 
-                # # removing existing repo
-                # if repoName in os.listdir('../tmp/repos'):
-                #     os.system('rm -rf ../tmp/repos/{}'.format(repoName))
+                # removing existing repo
+                if repoName in os.listdir('../tmp/repos'):
+                    os.system('rm -rf ../tmp/repos/{}'.format(repoName))
                 
                 # create project object
                 project = Project(repoName, "", gitURL, commit, gateway)

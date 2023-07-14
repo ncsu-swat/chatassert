@@ -18,8 +18,8 @@
 [INFO] 
 [INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
 [INFO] Updating license headers...
-[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
 [WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/HEADER
+[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
 [WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
@@ -53,7 +53,7 @@
 -------------------------------------------------------
 Running com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.481 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.515 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 
 Results :
 
@@ -62,6 +62,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.771 s
-[INFO] Finished at: 2023-07-13T15:57:31+06:00
+[INFO] Total time:  13.628 s
+[INFO] Finished at: 2023-07-13T20:46:12+06:00
 [INFO] ------------------------------------------------------------------------

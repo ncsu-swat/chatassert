@@ -18,8 +18,8 @@
 [INFO] 
 [INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
 [INFO] Updating license headers...
-[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
 [WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/HEADER
+[WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
 [WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
@@ -53,36 +53,15 @@
 -------------------------------------------------------
 Running com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.514 sec <<< FAILURE! - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
-testInvokeContextCustomSerializer_SYNC(com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest)  Time elapsed: 5.513 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<null> but was:<HELLO WORLD! I'm server returnRANDOM>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest.testInvokeContextCustomSerializer_SYNC(ClassCustomSerializerTest.java:375)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.517 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 
 Results :
 
-Failed tests: 
-  ClassCustomSerializerTest.testInvokeContextCustomSerializer_SYNC:375 expected:<null> but was:<HELLO WORLD! I'm server returnRANDOM>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.916 s
-[INFO] Finished at: 2023-07-13T15:58:36+06:00
+[INFO] Total time:  13.563 s
+[INFO] Finished at: 2023-07-13T20:52:57+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project bolt: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

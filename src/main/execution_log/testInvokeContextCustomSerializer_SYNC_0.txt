@@ -6,7 +6,6 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ bolt ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target
 [INFO] 
 [INFO] --- maven-java-formatter-plugin:0.4:format (default) @ bolt ---
 [INFO] Using 'UTF-8' encoding to format source files.
@@ -14,12 +13,15 @@
 [INFO] Successfully formatted: 1 file(s)
 [INFO] Fail to format        : 0 file(s)
 [INFO] Skipped               : 273 file(s)
-[INFO] Approximate time taken: 1s
+[INFO] Approximate time taken: 2s
 [INFO] 
 [INFO] --- license-maven-plugin:3.0:format (default) @ bolt ---
 [INFO] Updating license headers...
 [WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/LICENSE
 [WARNING] Unknown file extension: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/HEADER
+[INFO] Updating license header in: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/rpc/serializer/ClassCustomSerializerTest_backup.txt
+[INFO] Updating license header in: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/pom.xml
+[INFO] Updating license header in: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/old_pom.xml
 [WARNING] Unable to find a comment style definition for some files. You may want to add a custom mapping for the relevant file extensions.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ bolt ---
@@ -53,7 +55,7 @@
 -------------------------------------------------------
 Running com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.511 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.503 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 
 Results :
 
@@ -62,6 +64,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.175 s
-[INFO] Finished at: 2023-07-13T15:38:59+06:00
+[INFO] Total time:  13.051 s
+[INFO] Finished at: 2023-07-13T20:43:09+06:00
 [INFO] ------------------------------------------------------------------------
