@@ -2,8 +2,6 @@ import re
 from py4j.java_gateway import JavaGateway
 
 def extract_assertion(text):
-    print('\nRESPONSE: \n{}\n'.format(text))
-
     text = text.replace(' ', '')
     common_asserts = [ 'assertEquals\(', 'assertNotEquals\(', 'assertSame\(', 'assertNotSame\(', 'assertArrayEquals\(', 'assertTrue\(', 'assertFalse\(', 'assertNull\(', 'assertNotNull\(' ]
 
@@ -85,7 +83,7 @@ def get_assert_args(assertStatement):
 
     return args
 
-# Removing assertion error message and delta for assertEquals and cleaning "` is a plausible ..." noise in the ChatGPT response
+# Removing assertion error message and delta for assertEquals, assertNotEquals, assertArrayEquals and cleaning "` is a plausible ..." noise in the ChatGPT response
 def clean_args(gpt_oracle):
     # print("\nCLEANING: \n{}\n".format(assertStatement))
     

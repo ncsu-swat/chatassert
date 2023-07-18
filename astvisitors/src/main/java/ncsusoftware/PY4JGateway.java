@@ -49,7 +49,7 @@ public class PY4JGateway{
         setFile(filePath);
     }
 
-    public int setFile(String filePath) throws FileNotFoundException{
+    public int setFile(String filePath){
         try {
           this.filePath = filePath;
           String content = new Scanner(new File(this.filePath)).useDelimiter("\\Z").next();
@@ -308,6 +308,11 @@ public class PY4JGateway{
 
     public Map<Integer, Map<String, Map<String, Map<String, String>>>> fetchMethodsClasses(String test_code, String file_path, String dir_path, ArrayList<String> dep_path) throws FileNotFoundException {
         // dir_path should be .../src/main/java
+        System.out.println("File path: " + file_path);
+        System.out.println("Src path: " + dir_path);
+        System.out.println("Dep paths: " + dep_path);
+        System.out.println("Test code: " + test_code);
+
         try{
             CombinedTypeSolver combinedTypeSolver = new CombinedTypeSolver();
         
@@ -340,12 +345,14 @@ public class PY4JGateway{
             CompilationUnit cu = StaticJavaParser.parse(new File(file_path));
             MethodDeclaration md = StaticJavaParser.parseMethodDeclaration(test_code);
 
+            // Using AtomicReference to pass visitor argument because local variable in a lambda expression needs to be final and we need to update the lineCounter. So, the AtomicReference can be final but the Integer it holds can be modified. It's like a wrapper to update lineCounter from within the lambda expression. AtomicReference is used as a wrapper instead of Object class so that the code is robust in parallel execution (if implemented sometime).
+            final AtomicReference<Integer> lineCounter = new AtomicReference<>(Integer.valueOf(0));
+
             cu.walk(MethodDeclaration.class, _md -> {
                 if(_md.getNameAsString().equals(md.getNameAsString())){
                     _md.setBody(md.getBody().get());
 
-                    // Using AtomicReference to pass visitor argument because local variable in a lambda expression needs to be final and we need to update the lineCounter. So, the AtomicReference can be final but the Integer it holds can be modified. It's like a wrapper to update lineCounter from within the lambda expression. AtomicReference is used as a wrapper instead of Object class so that the code is robust in parallel execution (if implemented sometime).
-                    final AtomicReference<Integer> lineCounter = new AtomicReference<>(Integer.valueOf(0));
+                    lineCounter.set(Integer.valueOf(0));
                     _md.getBody().get().walk(Statement.class, stmt-> {
                         if(lineCounter.get() > 0){
                             stmt.accept(abstractionVisitor, lineCounter.get());
@@ -356,8 +363,13 @@ public class PY4JGateway{
             });
 
             // System.out.println(abstractionVisitor.perLine);
+            
+            if(lineCounter.get() == 0){
+                return null;
+            }else{
+                return abstractionVisitor.perLine;
+            }
 
-            return abstractionVisitor.perLine;
         }catch(Exception e){
             e.printStackTrace();
         }

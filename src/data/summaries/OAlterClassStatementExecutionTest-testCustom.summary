@@ -1,0 +1,114 @@
+0. In line 2, method `getMetadata` of class `ODatabase` is invoked.
+1. The given code snippet defines a method named `getMetadata()`. Here is the explanation of the code:
+
+- This method belongs to a class named `ODatabase`.
+- The method has a return type of `OMetadata`.
+- The method is invoked on an instance of the `ODatabase` class, retrieving the metadata for that database.
+- The method does not accept any parameters.
+- The method is annotated with the JavaDoc comment, stating that the return value is an instance of `OMetadata` and it will never be null.
+- It returns the metadata associated with the current database.
+  
+In summary, this method retrieves the metadata associated with the `ODatabase` instance.
+2. In line 2, method `getSchema` of class `OMetadata` is invoked.
+3. Certainly! The provided method code defines a method named `getSchema()` with the following details:
+
+- The method has a return type of `OSchema`.
+- It belongs to a class named `OMetadata`.
+- The method does not accept any parameters.
+- When invoked, this method retrieves the schema associated with the `OMetadata` instance.
+- The returned value is an instance of `OSchema`, which represents the schema of the database.
+- Since the code only specifies the method signature and not the implementation details, it's important to ensure that the `OMetadata` class has a method implementation for `getSchema()`.
+
+In summary, this method retrieves the schema associated with the `OMetadata` instance from the database.
+4. In line 3, method `createClass` of class `OSchema` is invoked.
+5. Yes, certainly! Here is the explanation of the provided method code:
+
+- The code defines a method named `createClass()` with the following details:
+  - The method belongs to a class named `OSchema`.
+  - It has a return type of `OClass`.
+  - The method expects one parameter of type `String` named `iClassName`.
+- When this method is invoked, it creates a new class in the database schema with the given class name (`iClassName`). 
+- The method then returns an instance of `OClass`, which represents the newly created class.
+
+In summary, the `createClass()` method creates a new class in the database schema with the provided class name and returns the created class as an instance of `OClass`.
+6. In line 4, method `command` of class `ODatabase` is invoked.
+7. Certainly! Here is the explanation of the provided method code:
+
+- The code defines a default method named `command()` with the following details:
+  - The method belongs to a class and it's not explicitly specified in the code snippet, so we can assume it's part of some interface or superclass.
+  - The method has a return type of `OResultSet`.
+  - The method expects two parameters:
+    - `query`: A `String` representing the command to be executed.
+    - `args`: An array of `Object` representing the query arguments.
+  - The method throws two exceptions: `OCommandSQLParsingException` and `OCommandExecutionException`.
+  - The method is marked as `default`, indicating it provides a default implementation that can be overridden in implementing classes.
+- When this method is invoked, it executes a generic command against the associated database. The command may or may not be idempotent (produce the same result regardless of how many times it is executed).
+- The result of executing this command is an `OResultSet`, which represents the result set of the command.
+- It's important to note that the method implementation provided in the code snippet simply throws an `UnsupportedOperationException`. This implies that the actual behavior of the method needs to be implemented in a subclass or overriding class.
+
+In summary, the `command()` method executes a generic command against the database and returns an `OResultSet` representing the result of the command. However, the provided code snippet only includes the method signature and throws an `UnsupportedOperationException`, so the actual implementation needs to be added in a subclass.
+8. In line 5, method `reload` of class `OSchema` is invoked.
+9. Certainly! Here is the explanation of the provided method code:
+
+- The code defines a method named `reload()` with the following details:
+  - The method belongs to a class, and the class itself is not specified in the given code snippet.
+  - The method has a generic return type `RET`, which extends `ODocumentWrapper`. The `RET` type represents the specific subclass or implementation based on the context.
+- When this method is invoked, it reloads the state of the instance on which the method is called.
+- The method does not accept any parameters.
+- The return type `RET` suggests that this method returns an instance of the same class (or a subclass) as the one on which it is invoked.
+  
+In summary, the `reload()` method is responsible for reloading the state of the current instance. It returns an instance of the same class (or a subclass) based on the generic type `RET` that extends `ODocumentWrapper`.
+10. In line 6, method `getClass` of class `OSchema` is invoked.
+11. Certainly! The provided method code defines a method named `getClass()` with the following details:
+
+- This method is a member of the class `OSchema`.
+- It has a return type of `OClass`, representing an instance of a class in the schema.
+- The method accepts one parameter of type `String` named `iClassName`, which specifies the name of the class to retrieve.
+- The method is annotated with a JavaDoc comment, providing further explanation and details about its behavior.
+- Within the JavaDoc comment, the method is described to return the instance of `OClass` associated with the given class name.
+- If the requested class is not already configured in the schema, and the database has an entity manager with the class registered, the method dynamically creates a schema class for it.
+- If neither the database nor the entity manager has a registered class with the specified name, the method returns `null`.
+
+In summary, the `getClass()` method in the `OSchema` class retrieves an `OClass` instance associated with a given class name. If the class does not exist in the schema and the database has a registered entity manager for the class, it is dynamically created. If the class is not configured or registered, the method returns `null`.
+12. Take note that in line 1, an object of class `String` is created.
+13. In line 2, an object of class `OSchema` is instantiated
+14. The provided code represents an interface named `OSchema` in the package `com.orientechnologies.orient.core.metadata.schema`. Here is an explanation of the code:
+
+- The code begins with some licensing information and package declaration.
+- The interface `OSchema` declares several methods related to the schema management functionality of OrientDB.
+- It includes methods for creating, dropping, and retrieving classes (`OClass`) within the schema.
+- There are also methods for checking the existence of a class, getting classes relying on a cluster, and retrieving global properties and their related functionalities.
+- The interface also includes deprecated methods (`create()`, `getVersion()`, `save()`) and comments indicating the compatibility changes.
+- Some methods are generic, allowing the return type to be specified by the caller, typically extending `ODocumentWrapper`.
+- The interface includes JavaDoc comments explaining the purpose and behavior of each method.
+- The interface does not provide any implementation details as it is an abstraction defining the contract for classes implementing it.
+
+In summary, the `OSchema` interface provides a contract for managing the schema of a database in OrientDB, defining methods for creating, dropping, retrieving classes, and other related functionalities.
+15. In line 4, an object of class `OResultSet` is instantiated
+16. The provided code represents an interface named `OResultSet`. Here is an explanation of the code:
+
+- The code begins with the package declaration and imports statements.
+- The interface `OResultSet` defines the contract for a result set in the SQL executor module of OrientDB.
+- It extends `Spliterator<OResult>`, `Iterator<OResult>`, and `AutoCloseable` interfaces.
+- The interface declares several methods related to iterating over and managing the result set.
+- The methods include the standard iterator methods like `hasNext()` and `next()`.
+- It also provides additional methods like `remove()`, `close()`, and `getExecutionPlan()`.
+- There are default methods for handling the result set as a stream.
+- The interface includes JavaDoc comments explaining the purpose and behavior of each method.
+- The interface also includes comments indicating that specific methods should be implemented in subclasses or implementers.
+
+In summary, the `OResultSet` interface defines the contract for working with a result set in the SQL executor module of OrientDB. It provides methods for iterating over the result set, handling execution plans, closing the result set, and converting it to streams of different element types.
+17. In line 6, an object of class `OClass` is instantiated
+18. The provided class code represents an interface named `OClass`. Here is an explanation of the code:
+
+- The code begins with some licensing information and package declaration.
+- The interface `OClass` is defined in the package `com.orientechnologies.orient.core.metadata.schema`.
+- The interface declares various methods and attributes related to managing and working with schema classes in OrientDB.
+- It includes methods for managing class properties, clusters, inheritance, indexes, and other class-related operations.
+- The interface includes nested enums `ATTRIBUTES` and `INDEX_TYPE`, representing different attributes and types related to schema classes.
+- It also includes constants representing the class names for edges (`EDGE_CLASS_NAME`) and vertices (`VERTEX_CLASS_NAME`) in OrientDB.
+- The interface extends `Comparable<OClass>`, allowing instances of classes implementing this interface to be compared with each other.
+- The interface includes JavaDoc comments explaining the purpose and behavior of each method, attribute, and constant.
+
+In summary, the `OClass` interface defines a contract for working with schema classes in OrientDB. It provides methods for managing properties, clusters, indexes, inheritance, and other operations related to schema classes in the database.
+

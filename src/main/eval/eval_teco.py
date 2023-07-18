@@ -29,10 +29,17 @@ def writeTecoPreds():
         for (i, pred) in enumerate(preds):
             for topPred in pred['topk']:
                 # print(str(i), ''.join(gold).replace('Assert.', ''), ''.join(topPred['toks']).replace('Assert.', ''))
-                goldAssert = clean_args(''.join(golds[ids2lines[pred['data_id']]]))
-                goldAssert = goldAssert.replace('org.junit.Assert.', '').replace('Assert.', '')
-                
-                predAssert = check_commutative_equal(clean_args(''.join(topPred['toks']).replace('org.junit.Assert.', '').replace('Assert.', '')), goldAssert)
+                goldAssert = clean_args(' '.join(golds[ids2lines[pred['data_id']]]))
+                # goldAssert = ''.join(golds[ids2lines[pred['data_id']]])
+                goldAssert = goldAssert.replace('org.junit.Assert.', '')
+                goldAssert = goldAssert.replace('Assert.', '')
+                goldAssert = goldAssert.replace(' ', '')
+
+                predAssert = check_commutative_equal(clean_args(' '.join(topPred['toks'])), goldAssert)
+                # predAssert = ''.join(topPred['toks'])
+                predAssert = predAssert.replace('org.junit.Assert.', '')
+                predAssert = predAssert.replace('Assert.', '')
+                predAssert = predAssert.replace(' ', '')
                 
                 print('Gold: ' + goldAssert)
                 print('Pred: ' + predAssert)
@@ -44,8 +51,9 @@ def eval():
     global corr_count
 
     corr_count = 0
-    total_samples = 350
     preds_processed = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t')
+    total_samples = 350
+    print(len(preds_processed))
 
     def acc_at_ten(df_slice):
         for (idx, row) in df_slice.iterrows():

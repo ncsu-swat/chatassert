@@ -16,7 +16,7 @@ class Project():
         self.repo_dir = os.path.join(base_dir, "repos", project_name)
         self.java_gateway = java_gateway
 
-        # clone the project
+        # # clone the project
         self.init_env()
 
         # java_gateway will be not None when invoked from doall.py script

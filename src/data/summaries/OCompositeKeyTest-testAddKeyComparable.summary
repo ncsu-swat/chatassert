@@ -1,0 +1,95 @@
+0. In line 1, an object of class `OCompositeKey` is instantiated.
+1. Certainly! 
+
+The code you provided is a constructor for the class `OCompositeKey`. Constructors are special methods that are used to initialize objects of a class when they are created.
+
+Let's break down the constructor code:
+
+```java
+public OCompositeKey() {
+    this.keys = new ArrayList<Object>();
+    this.comparator = ODefaultComparator.INSTANCE;
+}
+```
+
+- `public` indicates that this constructor can be accessed from anywhere in the program.
+
+- `OCompositeKey()` is the name of the constructor, which matches the name of the class. This constructor has no parameters, so it is a default constructor.
+
+- `this.keys = new ArrayList<Object>();` creates a new `ArrayList` object named `keys` and assigns it to the `keys` instance variable of the `OCompositeKey` class. The `ArrayList` will hold objects of type `Object`.
+
+- `this.comparator = ODefaultComparator.INSTANCE;` assigns the `ODefaultComparator.INSTANCE` to the `comparator` instance variable of the `OCompositeKey` class. `ODefaultComparator.INSTANCE` is an instance of the `ODefaultComparator` class, and this line establishes a reference to that instance.
+
+In summary, when an object of the `OCompositeKey` class is created using this constructor, it will initialize an empty `ArrayList` called `keys` and assign the default comparator from `ODefaultComparator` to the `comparator` variable.
+2. In line 2, method `addKey` of class `OCompositeKey` is invoked.
+3. Certainly! Let's break down the `addKey` method code:
+
+```java
+/**
+ * Add new key value to the list of already registered values.
+ * <p>
+ * If passed in value is {@link OCompositeKey} itself then its values will be copied in current index. But key itself will not be
+ * added.
+ *
+ * @param key Key to add.
+ */
+public void addKey(final Object key) {
+    if (key instanceof OCompositeKey) {
+        final OCompositeKey compositeKey = (OCompositeKey) key;
+        for (final Object inKey : compositeKey.keys) {
+            addKey(inKey);
+        }
+    } else {
+        keys.add(key);
+    }
+}
+```
+
+This is a method named `addKey` belonging to the class `OCompositeKey`.
+
+- `public void` indicates that the method has a `void` return type and can be accessed from anywhere in the program.
+
+- `addKey` is the name of the method.
+
+- `(final Object key)` is the parameter that the method takes. It receives an argument of type `Object` named `key`.
+
+- The method documentation provides an overview of what the method does. It states that the method adds a new key value to the list of already registered values. If the passed-in `key` is an instance of `OCompositeKey` itself, its values will be copied in the current index, but the key itself will not be added.
+
+- Inside the method, we have an `if` statement that checks if `key` is an instance of the `OCompositeKey` class using the `instanceof` keyword.
+
+- If the condition is `true`, meaning `key` is an instance of `OCompositeKey`, then it creates a local variable `compositeKey` of type `OCompositeKey` and assigns `key` to it by casting (`(OCompositeKey) key`). 
+
+- Then, it loops through each `inKey` in the `keys` list of `compositeKey` using a for-each loop.
+
+- For each `inKey`, it recursively invokes the `addKey` method passing `inKey` as an argument. This allows the values of `inKey` to be added to the current `OCompositeKey` object.
+
+- If the condition in the `if` statement is `false`, meaning `key` is not an instance of `OCompositeKey`, then it adds the `key` to the `keys` list of the current object using the `keys.add(key)` statement.
+
+In summary, the `addKey` method in the `OCompositeKey` class is responsible for adding new key values to the list of already registered values. If the input `key` is an instance of `OCompositeKey`, the method recursively expands and adds the underlying keys.
+4. In line 1, an object of class `OCompositeKey` is instantiated
+5. The code you provided is the definition of the Java class `OCompositeKey`. Let's break it down:
+
+- The class is defined as `public class OCompositeKey` and it implements the `Comparable<OCompositeKey>`, `Serializable`, and `ODocumentSerializable` interfaces.
+
+- The class has a `private final List<Object> keys` field, which is a list that holds the composite key values.
+
+- The class also has a `private final transient Comparator<Object> comparator` field, which is a comparator used for comparing the key values.
+
+- The class defines three constructors:
+  - The first constructor `public OCompositeKey(final List<?> keys)` takes a list of key values and initializes the `keys` list with the values from the input list.
+  - The second constructor `public OCompositeKey(final Object... keys)` takes a variable number of key values and initializes the `keys` list with the values from the input.
+  - The third constructor `public OCompositeKey()` initializes an empty `keys` list.
+
+- The class provides methods like `reset()`, `getKeys()`, and `addKey()`:
+  - The `reset()` method clears the `keys` list for reuse.
+  - The `getKeys()` method returns an unmodifiable view of the `keys` list.
+  - The `addKey()` method adds a new key value to the list of already registered values. If the passed-in value is an instance of `OCompositeKey`, its values will be copied in the current index (but the key itself will not be added).
+
+- The class implements the `compareTo()` method from the `Comparable` interface to allow comparison between `OCompositeKey` objects. It performs a partial comparison of two composite keys by comparing their common subset of keys.
+
+- The class also overrides the `equals()`, `hashCode()`, and `toString()` methods inherited from the `Object` class.
+
+- Lastly, the class implements the `ODocumentSerializable` interface, which provides methods for converting the class instance to and from an `ODocument` representation.
+
+Overall, the `OCompositeKey` class is a container for a list of heterogeneous values that are stored in an index as composite keys. It provides methods for managing the composite keys, comparing them, and converting them to and from an `ODocument` representation.
+
