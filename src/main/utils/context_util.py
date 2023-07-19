@@ -66,11 +66,11 @@ class Context:
         self.history.pop()
 
     def reset(self):
-        if self.name == Context.SUMMARIZATION_CONTEXT:
+        if self.name == Context.SUMMARIZATION_CONTEXT_NAME:
             self.remove_from(Context.MSG_SUMM_MOCK_SEED_RESPONSE_INDX + 1)
-        elif self.name == Context.GENERATION_CONTEXT:
+        elif self.name == Context.GENERATION_CONTEXT_NAME:
             self.remove_from(Context.MSG_GEN_SEED_EXT_INDX + 1)
-        elif self.name == Context.FEEDBACK_CONTEXT:
+        elif self.name == Context.FEEDBACK_CONTEXT_NAME:
             self.remove_from(Context.MSG_FEED_SEED_EXT_INDX + 1)
 
     def show(self):

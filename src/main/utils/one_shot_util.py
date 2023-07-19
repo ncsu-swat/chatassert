@@ -9,8 +9,8 @@ from numpy.linalg import norm
 from transformers import AutoTokenizer, AutoModel
 import torch
 
-from unixcoder import UniXcoder
-from file_util import read_file
+from utils.unixcoder import UniXcoder
+from utils.file_util import read_file
 
 from py4j.java_gateway import JavaGateway
 
