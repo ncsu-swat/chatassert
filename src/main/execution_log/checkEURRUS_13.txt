@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.github:moneytostr >------------------------
+[INFO] Building moneytostr 1.18-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ moneytostr ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/target
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.3:prepare-agent (prepare-agent) @ moneytostr ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/target/jacoco.exec,excludes=**/MoneyToStrApp*.class
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ moneytostr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ moneytostr ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/src/main/java/com/github/moneytostr/MoneyToStrApp.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ moneytostr ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ moneytostr ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ moneytostr ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/moneytostr-russian/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.github.moneytostr.MoneyToStrTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.462 s
+[INFO] Finished at: 2023-07-19T15:41:43+06:00
+[INFO] ------------------------------------------------------------------------

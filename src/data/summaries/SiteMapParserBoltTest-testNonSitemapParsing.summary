@@ -1,0 +1,65 @@
+0. In line 1, method `prepareParserBolt` of class `ParsingTester` is invoked.
+1. Certainly! 
+
+The code snippet you provided is a method called `prepareParserBolt` within a class named `ParsingTester`. 
+
+This method takes a parameter `configFile` of type `String`. The access modifier `protected` indicates that this method can only be accessed within the class itself or its subclasses. 
+
+Inside the method, the `prepareParserBolt` method is called again, but with two arguments this time. The first argument `configFile` is passed as it is, but the second argument `new HashMap()` is actually creating a new empty `HashMap` object. The `new` keyword is used to instantiate an object.
+
+So, in summary, the `prepareParserBolt` method is being invoked with one argument `configFile`, and it then calls another version of itself with two arguments, `configFile` and a new `HashMap` object.
+2. In line 2, an object of class `Metadata` is instantiated.
+3. Certainly!
+
+The code snippet you provided is a constructor for the `Metadata` class. A constructor is a special type of method that is called when an object of a class is created using the `new` keyword.
+
+In this case, the constructor `public Metadata()` has no parameters, which means it can be called without any arguments. 
+
+Inside the constructor, there is a single line of code: `md = new HashMap<>();`. This line of code is responsible for instantiating a new `HashMap` object and assigning it to the instance variable `md`. 
+
+The `new` keyword is used to create a new object of the `HashMap` class, and the `<>` is the diamond operator used for type inference, which means it will infer the type based on the context. In this case, it will infer the type from the left-hand side of the assignment (i.e., the `md` variable).
+
+So, whenever a new `Metadata` object is created using the `new` keyword, the constructor will be called, which in turn creates a new `HashMap` object and assigns it to the `md` instance variable.
+4. In line 2, method `parse` of class `ParsingTester` is invoked.
+5. Certainly!
+
+The code snippet you provided is a method called `parse` within a class named `ParsingTester`. 
+
+This method has four parameters: `url` of type `String`, `filename` of type `String`, `metadata` of type `Metadata`, and it returns `void` (meaning it doesn't return any value). The access modifier `protected` indicates that this method can only be accessed within the class itself or its subclasses. 
+
+Inside the method, there are several steps being performed:
+
+1. The `readContent` method is called with the `filename` parameter. This method reads the content of the specified file and returns it as an array of bytes.
+
+2. A mock object of type `Tuple` is created. A mock object is a dummy implementation of a class or interface that allows you to simulate the behavior of real objects during testing.
+
+3. Using the created mock object, certain behaviors are defined using the `when` method from the Mockito framework. The `when` method sets up a specific behavior for a method call on the mock object. In this case, the `when` method is used to set up the behavior of the `getBinaryByField`, `getStringByField`, and `getValueByField` methods when called on the `tuple` object.
+
+4. The `getBinaryByField` method is set up to return the `content` array obtained from reading the file. The `getStringByField` method is set up to return the `url` parameter. The `getValueByField` method is set up to return the `metadata` parameter.
+
+5. Finally, the `execute` method of the `bolt` object (which is not shown in the provided code snippet) is called with the `tuple` as an argument. This will execute the logic of the `bolt` object, passing in the mocked tuple object.
+
+In summary, the `parse` method takes in a `url`, `filename`, and `metadata`, reads the content of a file, creates a mock tuple object, sets up specific behaviors for various method calls on the tuple object using Mockito framework, and finally executes the logic of an unknown `bolt` object with the mocked tuple object.
+6. In line 2, an object of class `Metadata` is instantiated
+7. The provided code represents a Java class named `CommaSeparatedToMultivaluedMetadata`, which is a subclass of the `ParseFilter` class.
+
+This class is responsible for converting single metadata values containing comma-separated values into multiple values with the same key. It can be useful, for example, when dealing with keyword tags.
+
+Here is a breakdown of the code:
+
+1. The class imports several dependencies, including `Metadata`, `ParseFilter`, `ParseResult`, and `JsonNode`.
+
+2. The class begins with a class-level comment that provides licensing information and a link to the Apache License.
+
+3. The class is declared within the package `com.digitalpebble.stormcrawler.parse.filter`.
+
+4. The class extends the `ParseFilter` class, indicating that it is a specialized type of parse filter.
+
+5. The class has a private instance variable `keys`, which is a set of strings representing the keys for which the single metadata values should be converted into multiple values.
+
+6. The `configure` method is overridden from the superclass `ParseFilter`. It takes in the Storm config and filter parameters as arguments and is responsible for configuring the filter. It retrieves the "keys" parameter from the filter parameters, which is expected to be a JSON array or a single JSON string. If it is an array, it iterates over its elements and adds each element as a key to the `keys` set. If it is a single string, it adds that string as a key to the `keys` set.
+
+7. The `filter` method is overridden from the superclass `ParseFilter`. It takes in the URL, content, parsed document, and `ParseResult` object as arguments. It is responsible for applying the filter on the parsed document. Inside the method, it retrieves the metadata of the given URL from the `ParseResult` object. For each key in the `keys` set, it retrieves the first value associated with the key from the metadata. If the value is null, it continues to the next key. Otherwise, it removes the key and its associated value from the metadata. Then, it splits the retrieved value using a regular expression pattern that splits on comma-separated values. Lastly, it adds the split values as individual metadata values with the same key.
+
+In summary, the `CommaSeparatedToMultivaluedMetadata` class is a parse filter that converts single metadata values containing comma-separated values into multiple values with the same key, allowing for easier handling of keyword tags or similar use cases.
+

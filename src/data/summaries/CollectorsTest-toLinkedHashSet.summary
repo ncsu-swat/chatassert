@@ -1,0 +1,7 @@
+0. Take note that in line 1, constructor `LinkedHashSet` from class `LinkedHashSet` is invoked.
+1. Take note that in line 2, method `add` from class `HashSet` is invoked.
+2. Take note that in line 3, method `add` from class `HashSet` is invoked.
+3. Take note that in line 4, method `add` from class `HashSet` is invoked.
+4. Take note that in line 1, an object of class `LinkedHashSet` is created.
+5. Take note that in line 1, an object of class `Integer` is created.
+

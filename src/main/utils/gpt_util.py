@@ -83,7 +83,7 @@ def interact_with_openai(temperature=1, context=None):
             break
         
         except openai.error.InvalidRequestError as inv_err:
-            if "maximum context length" in inv_err and "reduce" in inv_err:
+            if "maximum context length" in str(inv_err) and "reduce" in str(inv_err):
                 print("\n!! Token Limit Exceeded !!\n")
                 context.reset() # Resetting context in a type-specific way (check context_util.py for details)
         

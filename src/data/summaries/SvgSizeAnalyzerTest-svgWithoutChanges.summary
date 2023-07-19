@@ -1,0 +1,32 @@
+0. In line 1, method `svg` of class `SvgSizeAnalyzer` is invoked.
+1. The method `svg` is a public static method of the class `SvgSizeAnalyzer`. It takes a parameter `svg` of type `String`. This method returns an object of type `SvgSizeAnalyzer`.
+
+Inside the method, on line 2, a new object of `SvgSizeAnalyzer` is created using the constructor `SvgSizeAnalyzer(SVG_PATTERN, svg)`. The `SVG_PATTERN` is likely a constant field defined in the `SvgSizeAnalyzer` class, representing a regular expression pattern. It is being passed as the first argument to the constructor, and `svg` is being passed as the second argument.
+
+So, when the `svg` method is called, it returns a new instance of `SvgSizeAnalyzer` that is initialized with the `SVG_PATTERN` and the provided `svg` string.
+2. In line 1, an object of class `SvgSizeAnalyzer` is instantiated
+3. This code defines the class `SvgSizeAnalyzer` in the package `guru.nidi.graphviz.model`. It performs analysis on SVG (Scalable Vector Graphics) files to retrieve information about the size and transformations applied to the SVG.
+
+Here is a breakdown of the class:
+
+- The class starts with a comment block, providing information about the copyright and license.
+- The class imports the `javax.annotation.Nullable` annotation, `java.util.regex.Matcher`, `java.util.regex.Pattern`, and the static `Pattern.DOTALL` field.
+- The class definition is `public` and `final`, indicating that it cannot be subclassed.
+- The class has several private instance variables (`Matcher matcher`, `Integer width`, `Integer height`, `Double scaleX`, `Double scaleY`, `Double rotate`, `Double translateX`, `Double translateY`) and all of them are nullable.
+
+Next, the class includes the following methods:
+
+- `public static SvgSizeAnalyzer svg(String svg)` is a static method that takes an SVG string as an argument and returns a new instance of `SvgSizeAnalyzer` using the provided SVG and the `SVG_PATTERN` defined in the class.
+- `public static SvgSizeAnalyzer transform(String transform)` is another static method that takes a transformation string as an argument and returns a new instance of `SvgSizeAnalyzer` using the provided transformation and the `TRANSFORM_PATTERN` defined in the class.
+- `private SvgSizeAnalyzer(Pattern pattern, String input)` is a private constructor that takes a pattern and an input string. It initializes the `matcher` variable by creating a matcher object using the pattern and input. If the matcher does not find a match, it throws an `IllegalArgumentException`.
+- `public String getSvg()` returns the SVG string after modification. It constructs the modified SVG string using the captured groups from the `SVG_PATTERN`, `width`, `height`, `between`, and `transform`.
+- `public String getTransform()` returns the transformation string using the captured groups from the `TRANSFORM_PATTERN`, `scaleX`, `scaleY`, `rotate`, `translateX`, and `translateY`.
+- `public int getWidth()`, `public int getHeight()`, and `public String getUnit()` return the parsed values of width, height, and unit from the `SVG_PATTERN`, respectively.
+- `public double getScaleX()`, `public double getScaleY()`, `public double getRotate()`, `public double getTranslateX()`, and `public double getTranslateY()` return the parsed values of scaleX, scaleY, rotate, translateX, and translateY from the `TRANSFORM_PATTERN`, respectively.
+- `public void setSize(int width, int height)` sets the width and height of the SVG.
+- `public void setScale(double scaleX, double scaleY)` sets the scaleX and scaleY values of the transformation.
+- `public void setRotate(double rotate)` sets the rotate value of the transformation.
+- `public void setTranslate(double translateX, double translateY)` sets the translateX and translateY values of the transformation.
+
+The class provides methods to analyze and modify SVG strings by extracting information about size and transformations.
+

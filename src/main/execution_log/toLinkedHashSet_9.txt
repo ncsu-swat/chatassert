@@ -1,0 +1,69 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.tendiwa:collections-utils:jar:1.0-SNAPSHOT
+[WARNING] Reporting configuration should be done in <reporting> section, not in maven-site-plugin <configuration> as reportPlugins parameter.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< org.tendiwa:collections-utils >--------------------
+[INFO] Building Collections utilities 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ collections-utils ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create (jcabi-build-number) @ collections-utils ---
+[INFO] ShortRevision tag detected. The value is '7'.
+[INFO] Executing: /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils && git rev-parse --verify --short=7 HEAD
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils
+[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-19T13:58:11
+[WARNING] Cannot get the branch information from the git repository: 
+Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+
+[INFO] ShortRevision tag detected. The value is '7'.
+[INFO] Executing: /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils && git rev-parse --verify --short=7 HEAD
+[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.3:create-timestamp (jcabi-build-number) @ collections-utils ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ collections-utils ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ collections-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ collections-utils ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ collections-utils ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ collections-utils ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/surefire-reports
+[INFO] parallel='all', perCoreThreadCount=true, threadCount=4, useUnlimitedThreads=false, threadCountSuites=0, threadCountClasses=0, threadCountMethods=0, parallelOptimized=true
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.tenidwa.collections.utils.CollectorsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in org.tenidwa.collections.utils.CollectorsTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.577 s
+[INFO] Finished at: 2023-07-19T13:58:15+06:00
+[INFO] ------------------------------------------------------------------------

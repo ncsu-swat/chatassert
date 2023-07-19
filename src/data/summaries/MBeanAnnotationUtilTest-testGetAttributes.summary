@@ -1,0 +1,24 @@
+0. In line 1, method `getAttributes` of class `MBeanAnnotationUtil` is invoked.
+1. Sure! Let's go through the code step by step:
+
+1. The method `getAttributes` of class `MBeanAnnotationUtil` is defined as `public static`, which means it can be accessed from any other class without creating an instance of `MBeanAnnotationUtil`.
+
+2. The method takes an `Object` parameter called `mbeanLocation`.
+
+3. Inside the method, a new `TreeMap` object is created to store the attributes as keys and corresponding methods as values. The resulting map will have its keys ordered in natural order.
+
+4. The `getMethods` method is invoked on the `getClass()` method of `mbeanLocation`. This returns an array of `Method` objects representing all the public methods of the class that `mbeanLocation` belongs to.
+
+5. A for-each loop is used to iterate over each `Method` object in the `methods` array.
+
+6. For each method, the `getAnnotation` method is called with `MBeanAttribute` class as an argument to check if the method has the `MBeanAttribute` annotation.
+
+7. If the method has the `MBeanAttribute` annotation (i.e., `attribute` is not null), the name of the attribute is retrieved using `attribute.name()` and the method is added to the `result` map with the attribute name as the key and the method as the value.
+
+8. After all methods are processed, the `result` map is returned.
+
+In summary, this method takes an object, `mbeanLocation`, and returns a `Map` containing the names of attributes as keys and the corresponding methods as values. It uses the `MBeanAttribute` annotation to identify the methods that represent attributes.
+2. Take note that in line 1, an object of class `String` is created.
+3. Take note that in line 1, an object of class `Method` is created.
+4. Take note that in line 1, an object of class `Map` is created.
+

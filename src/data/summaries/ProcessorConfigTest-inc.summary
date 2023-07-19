@@ -1,0 +1,118 @@
+0. In line 1, an object of class `ProcessorConfig` is instantiated.
+1. Certainly! Let's breakdown the constructor code step by step:
+
+```public ProcessorConfig(List<String> includes, Set<String> excludes, Map<String, TreeMap> config) {```
+
+- This line of code defines a constructor for the `ProcessorConfig` class. It takes three parameters: `includes`, `excludes`, and `config`. The constructor initializes the `includes`, `excludes`, and `config` variables when an object of `ProcessorConfig` is instantiated.
+
+```this.includes = includes != null ? includes : Collections.<String>emptyList();```
+
+- In this line of code, the `includes` instance variable is assigned the value of the `includes` parameter if `includes` is not `null`. Otherwise, it is assigned an empty list using the `Collections.emptyList()` method.
+
+```this.excludes = excludes != null ? excludes : Collections.<String>emptySet();```
+
+- This line of code assigns the value of the `excludes` variable. Similar to the previous line, it checks if `excludes` is `null` first. If it is not `null`, the `excludes` instance variable is assigned the `excludes` parameter value. Otherwise, it is assigned an empty set using the `Collections.emptySet()` method.
+
+```if (config != null) {
+    this.config = config;
+}```
+
+- This code block checks if the `config` parameter is not `null`. If `config` is not `null`, the `config` instance variable is assigned the `config` parameter value.
+
+Overall, this constructor allows an object of the `ProcessorConfig` class to be instantiated with optional values for `includes`, `excludes`, and `config`. If these values are provided, they are assigned to the corresponding instance variables. If any of these values are `null`, appropriate default values (an empty list or set) are assigned to them.
+2. In line 2, method `getAllTestData` of class `ProcessorConfigTest` is invoked.
+3. Certainly! Let's break down the method code step by step:
+
+```private List<TestNamed> getAllTestData() {```
+
+- This line of code defines a private method named `getAllTestData` which returns a `List` of objects of type `TestNamed`.
+
+```return Arrays.asList(new TestNamed("i2"), new TestNamed("i1"), new TestNamed("i3"), new TestNamed("e1"));```
+
+- This line of code creates a new `List` using the `Arrays.asList` method. Inside the method call, four instances of the `TestNamed` class are created with the provided string arguments: "i2", "i1", "i3", and "e1". These instances are then added to the newly created list.
+
+Overall, this method returns a `List` containing four `TestNamed` objects with different string values.
+4. In line 2, method `prepareProcessors` of class `ProcessorConfig` is invoked.
+5. Certainly! Let's analyze the method code step by step:
+
+```/**
+ * Order elements according to the order provided by the include statements.
+ * If no includes has been configured, return the given list unaltered.
+ * Otherwise arrange the elements from the list in to the include order and return a new
+ * list.
+ *
+ * If an include specifies an element which does not exist, an exception is thrown.
+ *
+ * @param namedList the list to order
+ * @param type a description used in an error message (like 'generator' or 'enricher')
+ * @param <T> the concrete type
+ * @return the ordered list according to the algorithm described above
+ * @throws IllegalArgumentException if the includes reference a non-existing element
+ */
+public <T extends Named> List<T> prepareProcessors(List<T> namedList, String type) {
+    // Creating a new ArrayList to store the ordered list
+    List<T> ret = new ArrayList<>();
+    // Creating a new HashMap to lookup elements by their name
+    Map<String, T> lookup = new HashMap<>();
+    
+    // Adding elements to the lookup map
+    for (T named : namedList) {
+        lookup.put(named.getName(), named);
+    }
+    
+    // Iterating over each include statement
+    for (String inc : includes) {
+        // Checking if the include should be used
+        if (use(inc)) {
+            // Retrieving the element from the lookup map
+            T named = lookup.get(inc);
+            // Checking if the element exists
+            if (named == null) {
+                // Generating an error message
+                List<String> keys = new ArrayList<>(lookup.keySet());
+                Collections.sort(keys);
+                throw new IllegalArgumentException("No " + type + " with name '" + inc + "' found to include. " + "Please check spelling in your profile / config and your project dependencies. Included " + type + "s: " + StringUtils.join(keys, ", "));
+            }
+            // Adding the element to the ordered list
+            ret.add(named);
+        }
+    }
+    
+    // Returning the ordered list
+    return ret;
+}```
+
+This method is used to order elements based on the order specified by the `includes` statement. Here's a breakdown of the code:
+
+- The method takes two parameters: `namedList`, which is the list to be ordered, and `type`, a description used in an error message.
+- The method returns a new `List` (`ret`) containing the ordered elements.
+- Inside the method, a `HashMap` named `lookup` is created to store the elements from the `namedList` parameter, where the key is the name of the element.
+- The method iterates over each include statement in the `includes` list.
+- For each include, it checks if it should be used (`use(inc)`). If it should be used, it retrieves the element with the corresponding name from the `lookup` map.
+- If the named element is `null`, it means the element specified in the include statement does not exist. In this case, an `IllegalArgumentException` is thrown with an error message indicating the missing element.
+- If the named element exists, it is added to the `ret` list.
+- Finally, the `ret` list containing the ordered elements is returned.
+
+Overall, this method orders elements from the `namedList` based on the order specified by the `includes` statement, and returns the ordered list. If an element specified in the include statement is missing, an exception is thrown.
+6. In line 1, an object of class `ProcessorConfig` is instantiated
+7. This Java class is named `ProcessorConfig` and is part of the package `io.fabric8.maven.core.config`. Here's a breakdown of the class code:
+
+- The class is marked with a JavaDoc comment that provides licensing information and a brief description.
+- The package statement specifies the package to which this class belongs.
+- The class imports various classes from different packages, including `java.util`, `com.fasterxml.jackson.annotation`, and `org.apache.commons.lang3`.
+- The class is defined as public and has the name `ProcessorConfig`.
+- The class has a static constant field named `EMPTY`, which is of type `ProcessorConfig`. This constant represents an empty `ProcessorConfig`.
+- The class declares a parameterless constructor `public ProcessorConfig()`, which initializes the `includes`, `excludes`, and `config` variables with empty collections.
+- The class declares a constructor `public ProcessorConfig(List<String> includes, Set<String> excludes, Map<String, TreeMap> config)`. This constructor allows the `includes`, `excludes`, and `config` variables to be initialized with provided values.
+- The class declares several instance variables: `includes` of type `List<String>`, `excludes` of type `Set<String>`, and `config` of type `Map<String, TreeMap>`.
+- The class defines a method named `getConfig` that retrieves a specific value from the `config` map based on the `name` and `key` parameters.
+- The class defines a method named `getConfigMap` that returns the full configuration as an unmodifiable map of string-string values for a specific `name`.
+- The class defines a method named `prepareProcessors`, which orders elements from a provided list according to the order specified by `includes`. This method returns the ordered list based on the algorithm described in the comment.
+- The class defines a method named `use` that checks whether a specific include should be used based on the `excludes` and `includes` lists.
+- The class defines two static methods: `cloneProcessorConfig` and `mergeProcessorConfigs`. These methods are used to create a copy of a `ProcessorConfig` object and merge multiple `ProcessorConfig` objects, respectively.
+- The class also contains several private helper methods that are used internally, such as `mergeIncludes`, `mergeExcludes`, `removeDups`, and `mergeConfig`.
+
+Overall, this class represents a configuration for enrichers and generators. It provides methods for retrieving and managing the configuration, ordering elements, and merging multiple configurations.
+8. Take note that in line 2, an object of class `TestNamed` is created.
+9. Take note that in line 2, an object of class `List` is created.
+

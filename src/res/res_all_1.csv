@@ -1,0 +1,2 @@
+TestID	VariantID	Project	TestClass	TestName	TrueOracle	GenOracle	Time	Corr	BuildErr
+0	0	nidi3/raml-loader	LoaderTest	jarInClassPathNotModified	"assertNull(newClassPathLoader(""STR"").fetchResource(""STR"",newDate(130,0,0).getTime()-1));"	"assertNotNull(newClassPathLoader(""STR"").fetchResource(""STR"",-1));"	235.11170601844788	0	0

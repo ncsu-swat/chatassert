@@ -1,0 +1,36 @@
+0. Take note that in line 1, constructor `DefaultExtension` from class `DefaultExtension` is invoked.
+1. In line 1, an object of class `DefaultExtension` is instantiated
+2. This code defines a class called `DefaultExtension` in the package `org.java_websocket.extensions`. 
+
+The class implements the `IExtension` interface, which means it provides implementations for all the methods defined in that interface.
+
+The `DefaultExtension` class does not contain any instance variables or fields.
+
+The methods defined in the class are as follows:
+
+- `decodeFrame(Framedata inputFrame)`: This method takes a `Framedata` object as a parameter and is used to decode the frame. In the given code, it does not perform any operations and just contains a comment indicating that there is nothing to do.
+
+- `encodeFrame(Framedata inputFrame)`: This method takes a `Framedata` object as a parameter and is used to encode the frame. Similar to the `decodeFrame` method, it does not perform any operations.
+
+- `acceptProvidedExtensionAsServer(String inputExtension)`: This method takes a string parameter representing the requested extension and returns a boolean value indicating whether the server accepts the extension. In the given code, it always returns `true`, meaning the server accepts any provided extension.
+
+- `acceptProvidedExtensionAsClient(String inputExtension)`: This method works similar to `acceptProvidedExtensionAsServer`, but it determines whether the client accepts the provided extension.
+
+- `isFrameValid(Framedata inputFrame)`: This method takes a `Framedata` object as a parameter and checks if the frame is valid. If any of the reserved bits (RSV1, RSV2, or RSV3) are set, it throws an `InvalidFrameException`.
+
+- `getProvidedExtensionAsClient()`: This method returns a string representation of the extension provided by the client. In the given code, it always returns an empty string.
+
+- `getProvidedExtensionAsServer()`: This method works similar to `getProvidedExtensionAsClient`, but it returns the extension provided by the server.
+
+- `copyInstance()`: This method creates a new instance of the `DefaultExtension` class and returns it.
+
+- `reset()`: This method is used to reset the internal state of the extension. In the given code, it does not perform any operations.
+
+- `toString()`: This method returns the simple name of the class as a string representation.
+
+- `hashCode()`: This method returns the hash code of the class.
+
+- `equals(Object o)`: This method checks if the given object is equal to the current instance of the class by comparing their classes.
+
+The class also contains a comment at the top regarding copyright and permission to use the software.
+

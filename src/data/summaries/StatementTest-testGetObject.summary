@@ -1,0 +1,102 @@
+0. In line 1, an object of class `Activity` is instantiated.
+1. Certainly! 
+
+The code you provided is a constructor method for the `Activity` class. Constructors are special methods that are used to create and initialize objects of a class. 
+
+In this constructor, there is one parameter `id` of type `String`. When an object of the `Activity` class is created using this constructor, a value for the `id` is passed as an argument.
+
+The constructor sets the value of the `id` instance variable in the `Activity` class to the value passed as an argument. The `this` keyword is used to refer to the current object, i.e., the object being created.
+
+So, when the constructor is called, the value of `id` passed as an argument is assigned to the `id` variable in the `Activity` object.
+
+For example, if you create an object of the `Activity` class like this: 
+
+```Activity activity = new Activity("123");```
+
+The constructor will set the `id` variable of the `activity` object to "123".
+2. Take note that in line 1, method `randomUUID` from class `UUID` is invoked.
+3. Take note that in line 1, method `toString` from class `UUID` is invoked.
+4. In line 2, method `setObject` of class `Statement` is invoked.
+5. Certainly! The code you provided is a method definition for the `setObject` method. 
+
+This method has one parameter `object` of type `IStatementObject`, which means it expects an object that implements the `IStatementObject` interface.
+
+The purpose of this method is to set the value of the `object` instance variable in the class. The `this` keyword is used to refer to the current object, i.e., the object on which the method is being invoked.
+
+Inside the method, the value of the `object` parameter is assigned to the `object` variable of the current object.
+
+In other words, when you call this method on an instance of the class, you pass an object of type `IStatementObject` as an argument, and that object becomes the value of the `object` variable for that instance.
+
+For example, if you have an instance of the class called `statement` and you call the `setObject` method like this:
+
+```statement.setObject(someObject);```
+
+The `someObject` will be assigned to the `object` variable of the `statement` object.
+6. In line 3, method `getObject` of class `Statement` is invoked.
+7. Certainly! 
+
+The code you provided defines a method named `getObject` in the class `Statement`. 
+
+This method has a return type of `IStatementObject`, which means it is expected to return an object that implements the `IStatementObject` interface.
+
+The purpose of this method is to retrieve the value of the `object` instance variable in the class.
+
+Inside the method, the `return` keyword is used to specify the value that should be returned when the method is called. In this case, it returns the value stored in the `object` variable.
+
+So, when you call this method on an instance of the class, it will return the `object` that was previously set using the `setObject` method.
+
+For example, if you have an instance of the class called `statement` and you call the `getObject` method like this:
+
+```IStatementObject obj = statement.getObject();```
+
+The `obj` variable will store the value of the `object` variable from the `statement` object.
+8. In line 1, an object of class `Activity` is instantiated
+9. Certainly! 
+
+The code you provided is a class definition for the `Activity` class. Here's an explanation of the different parts of this class:
+
+1. Package Declaration: 
+   - `package gov.adlnet.xapi.model;`
+   - This line specifies the package in which the class is defined.
+
+2. Import Statements: 
+   - `import com.google.gson.JsonElement;`
+   - `import com.google.gson.JsonObject;`
+   - These lines import required classes from the `com.google.gson` package.
+
+3. Class Declaration: 
+   - `public class Activity implements IStatementObject`
+   - This line declares the class named `Activity` and indicates that it implements the `IStatementObject` interface.
+
+4. Constant Declaration: 
+   - `public static final String ACTIVITY = "Activity";`
+   - This line declares a public constant variable named `ACTIVITY` of type `String`, which is set to the value "Activity".
+
+5. Instance Variables: 
+   - `private String id;`
+   - `private ActivityDefinition definition;`
+   - These lines declare private instance variables named `id` and `definition`.
+
+6. Constructors: 
+   - `public Activity()`
+   - `public Activity(String id)`
+   - `public Activity(String id, ActivityDefinition definition)`
+   - These lines define the constructors for the `Activity` class. The first constructor is a default constructor with no parameters. The second constructor takes a `String` parameter `id` and assigns it to the `id` instance variable. The third constructor takes a `String` parameter `id` and an `ActivityDefinition` parameter `definition`, and assigns both values to their respective instance variables.
+
+7. Getter and Setter Methods:
+   - `public String getObjectType()`
+   - `public String getId()`
+   - `public void setId(String id)`
+   - `public ActivityDefinition getDefinition()`
+   - `public void setDefinition(ActivityDefinition definition)`
+   - These methods provide access to the private instance variables. The getter methods return the value of the corresponding variable, and the setter methods set the value of the corresponding variable.
+
+8. Other Methods:
+   - `public JsonElement serialize()`
+   - `public String toString()`
+   - `public String toString(String langMap)`
+   - These methods perform various operations. The `serialize` method creates and returns a `JsonElement` object representing the `Activity` instance. The `toString` methods override the default `toString` method inherited from `Object` class and provide custom string representations of the `Activity` instance.
+
+Overall, the `Activity` class represents an activity object and provides methods to access and modify its properties. It also provides methods to serialize the object and generate string representations.
+10. Take note that in line 3, an object of class `Activity` is created.
+

@@ -1,0 +1,78 @@
+0. Take note that in line 1, constructor `HashMap` from class `HashMap` is invoked.
+1. Take note that in line 2, method `put` from class `Map` is invoked.
+2. Take note that in line 3, method `put` from class `Map` is invoked.
+3. In line 4, an object of class `Metadata` is instantiated.
+4. This constructor code defines a constructor method for the class `Metadata`. The constructor is named `Metadata` and has no parameters.
+
+Inside the constructor, a new instance of the `HashMap` class is created and assigned to the variable `md`. The `HashMap` constructor being invoked is likely the default constructor, which creates an empty `HashMap`.
+
+Overall, this constructor initializes the `Metadata` object by creating a new `HashMap` and assigning it to the `md` variable.
+5. In line 5, method `setValue` of class `Metadata` is invoked.
+6. The code you provided defines a method named `setValue` in the class `Metadata`. 
+
+The method takes two parameters: a `String` key and a `String` value. The purpose of this method is to set the value for a given key in the `Metadata` object.
+
+Before setting the value, the method calls another method named `checkLockException`. The details of this method are not provided, but it seems that it is performing some kind of lock checking.
+
+After the lock check, the method uses the `put` method of the `md` HashMap object (which was created in the constructor) to store the value. The key is passed as the first parameter and the value is stored as an array of Strings using the new keyword.
+
+In summary, this `setValue` method in the `Metadata` class updates the value for a given key by storing it in the `md` HashMap object.
+7. In line 6, method `prepareIndexerBolt` of class `IndexerTester` is invoked.
+8. Certainly! The code you provided defines a method named `prepareIndexerBolt` in the class `IndexerTester`. 
+
+This method takes a single parameter, which is a `Map` object named `config`.
+
+Inside the method, there is a call to the `prepare` method of an instance variable named `bolt`. The `prepare` method takes three parameters: `config`, `TestUtil.getMockedTopologyContext()`, and a new `OutputCollector` object instantiated with the `output` object.
+
+Based on the provided code, we can infer that the `bolt` variable is an instance of a class that has a `prepare` method and that `TestUtil.getMockedTopologyContext()` and `OutputCollector(output)` are providing the necessary arguments for the `prepare` method.
+
+In summary, this `prepareIndexerBolt` method in the `IndexerTester` class is responsible for calling the `prepare` method of the `bolt` object and passing the `config`, a mocked topology context, and an output collector as parameters.
+9. In line 7, method `index` of class `IndexerTester` is invoked.
+10. Certainly! The code you provided defines a method named `index` in the `IndexerTester` class.
+
+This method takes two parameters: a `String` named `url` and a `Metadata` object named `metadata`.
+
+Inside the method, a new `Tuple` object is created using the `mock` method, which creates a mock object of the `Tuple` class. This allows you to simulate the behavior of a `Tuple` object for testing purposes.
+
+The `when` method is then used to specify the behavior of the `Tuple` object when certain methods are called on it. In this case, `when(tuple.getStringByField("url"))` specifies that when the `getStringByField` method is called on the `tuple` object with the argument "url", it should return the `url` parameter that was passed into the `index` method. Similarly, `when(tuple.getValueByField("metadata"))` specifies that when the `getValueByField` method is called on the `tuple` object with the argument "metadata", it should return the `metadata` parameter that was passed into the `index` method.
+
+Finally, the `execute` method of the `bolt` object is called and passed the `tuple` object. Based on the code provided, it seems that the `bolt` object is an instance of a class that has an `execute` method.
+
+In summary, this `index` method in the `IndexerTester` class creates a mock `Tuple` object, specifies the behavior of its methods, and then calls the `execute` method of the `bolt` object with the `Tuple` object.
+11. In line 8, method `returnFields` of class `DummyIndexer` is invoked.
+12. Certainly! 
+
+The code you provided defines a method named `returnFields` in a class called `DummyIndexer`. The method has a return type of `Map<String, String>`, indicating that it returns a mapping of keys to values, where both the keys and values are of type `String`.
+
+Inside the method, there is a simple statement that returns a variable named `fields`. The `fields` variable is of type `Map<String, String>`, indicating that it is a mapping of keys to values where both the keys and values are of type `String`.
+
+Therefore, this `returnFields` method simply returns the `fields` variable, which is expected to be a `Map<String, String>`. If this method is invoked, it will return the current state of the `fields` map as it exists at that point in time.
+
+In summary, this method allows external code to access and retrieve the `fields` map from an instance of the `DummyIndexer` class.
+13. Take note that in line 1, an object of class `HashMap` is created.
+14. Take note that in line 1, an object of class `Map` is created.
+15. In line 4, an object of class `Metadata` is instantiated
+16. The given code represents the class `CommaSeparatedToMultivaluedMetadata`, which extends the abstract class `ParseFilter`. Here's an explanation of its functionality:
+
+- The class is in the package `com.digitalpebble.stormcrawler.parse.filter`.
+- It imports several classes from different packages, including `com.digitalpebble.stormcrawler.Metadata`, `com.digitalpebble.stormcrawler.parse.ParseFilter`, `com.digitalpebble.stormcrawler.parse.ParseResult`, and `com.fasterxml.jackson.databind.JsonNode`.
+- The class declares an instance variable `keys`, which is a `Set<String>` to store the keys that will be processed.
+- The class overrides the `configure` method from the `ParseFilter` class. This method takes `stormConf` and `filterParams` as parameters and is responsible for configuring the filter with any required parameters. It checks if the `keys` parameter is provided in the `filterParams`, and if so, it adds the keys to the `keys` set variable.
+- The class also overrides the `filter` method from the `ParseFilter` class. This method takes `url`, `content`, `doc`, and `parse` as input parameters. It retrieves the `Metadata` object for the given URL from the `parse` parameter. It then iterates over each key in the `keys` set and retrieves the corresponding value from the metadata. If the value is not null, it removes the key from the metadata and splits the value into multiple values based on comma separation. Each split value is added back to the metadata with the same key.
+- The class does not define any constructors.
+
+In summary, the `CommaSeparatedToMultivaluedMetadata` class is a implementation of a `ParseFilter` used to split comma-separated values in a single metadata field into multiple values for the same key.
+17. In line 8, an object of class `DummyIndexer` is instantiated
+18. This is a class named `DummyIndexer` that extends the `AbstractIndexerBolt` class. Here's an explanation of its functionality:
+
+- The class is in the `com.digitalpebble.stormcrawler.indexer` package.
+- It imports several classes from different packages, including `com.digitalpebble.stormcrawler.Metadata`, `com.digitalpebble.stormcrawler.indexing.AbstractIndexerBolt`, `java.util.HashMap`, `java.util.Iterator`, `java.util.Map`, `org.apache.commons.lang.StringUtils`, `org.apache.storm.task.OutputCollector`, `org.apache.storm.task.TopologyContext`, and `org.apache.storm.tuple.Tuple`.
+- The class declares two instance variables: `_collector`, which is an `OutputCollector` object, and `fields`, which is a `Map<String, String>` object to store field-value pairs.
+- The class overrides the `prepare` method from the `AbstractIndexerBolt` class. This method is called during the initialization phase of the bolt and is responsible for setting up any necessary resources. In this case, it calls the `prepare` method of the superclass, sets the `_collector` instance variable, and instantiates the `fields` map.
+- The class overrides the `execute` method from the `AbstractIndexerBolt` class. This method is called for each input tuple received by the bolt. It retrieves the `Metadata` object from the tuple, filters the document based on the metadata, and checks if the document should be kept. If the document is not to be kept, it acknowledges the tuple and returns. Otherwise, it processes the text, URL, and metadata fields and populates the `fields` map accordingly.
+- The class defines a private method named `trimValue` which trims a given value to a maximum of 100 characters, appending the length if it exceeds the limit.
+- The class also provides a public method named `returnFields` which simply returns the `fields` map.
+
+19. Take note that in line 8, an object of class `String` is created.
+20. Take note that in line 8, an object of class `Map` is created.
+

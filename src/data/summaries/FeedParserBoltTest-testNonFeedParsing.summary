@@ -1,0 +1,49 @@
+0. In line 1, method `prepareParserBolt` of class `ParsingTester` is invoked.
+1. Sure! 
+
+The method `prepareParserBolt` is defined as a protected method, which means it can only be accessed within the same package or by subclasses of the `ParsingTester` class. It has a parameter of type `String` called `configFile`.
+
+In this method, another method with the same name `prepareParserBolt` is invoked, but with two arguments: `configFile` and `new HashMap()`. This `new HashMap()` creates an empty HashMap object.
+
+So, the first line of the `prepareParserBolt` method is invoking the overloaded version of `prepareParserBolt` with two parameters: `configFile` and an empty HashMap.
+2. In line 2, an object of class `Metadata` is instantiated.
+3. Certainly!
+
+The code you provided is a constructor for the `Metadata` class. Constructors are special methods that are used to create and initialize objects of a class. 
+
+In this constructor, the `Metadata` class initializes a HashMap object named `md`. The line `md = new HashMap<>();` is creating a new empty HashMap and assigning it to the variable `md`. 
+
+By invoking this constructor, an object of the `Metadata` class is created, and the `md` HashMap is initialized as an empty HashMap.
+4. In line 2, method `parse` of class `ParsingTester` is invoked.
+5. Certainly! Let's break down the method code step by step:
+
+1. The method `parse` is defined as a protected method, which means it can only be accessed within the same package or by subclasses of the `ParsingTester` class. It has three parameters of type `String`, namely `url`, `filename`, and `metadata`. It also throws an `IOException`.
+
+2. The `readContent` method is invoked with the `filename` parameter passed as an argument. The return value of `readContent` is assigned to the `content` variable of type `byte[]`.
+
+3. A mock object of the `Tuple` class is created using the `mock` method. The `Tuple` class is typically used in Apache Storm or similar frameworks. 
+
+4. The `when` method is called on the `tuple` object to define the behavior of method calls on this mock object. `when(tuple.getBinaryByField("content")).thenReturn(content)` indicates that when the `getBinaryByField` method is called on the `tuple` object with the argument "content", it should return the `content` array.
+
+5. Similarly, `when(tuple.getStringByField("url")).thenReturn(url)` indicates that when the `getStringByField` method is called on the `tuple` object with the argument "url", it should return the `url` value.
+
+6. `when(tuple.getValueByField("metadata")).thenReturn(metadata)` sets up the behavior for the `getValueByField` method call on the `tuple` object, returning the `metadata` object.
+
+7. Finally, the `execute` method is invoked on the `bolt` object (which is assumed to be an instance of some class). The `tuple` object is passed as an argument to the `execute` method.
+
+Overall, this code segment prepares a `Tuple` mock object with specified behaviors for its methods, and then it invokes the `execute` method on a `bolt` object, passing the prepared `tuple` object as an argument.
+6. In line 2, an object of class `Metadata` is instantiated
+7. Sure! Let's go through the provided class code step by step:
+
+1. This class is named `CommaSeparatedToMultivaluedMetadata` and it belongs to the package `com.digitalpebble.stormcrawler.parse.filter`.
+
+2. The class extends the `ParseFilter` class, which likely defines some common functionality for parsing filters in the provided application. 
+
+3. The class contains a private field `keys` of type `Set<String>`. This set will store the keys for which single metadata with comma-separated values will be transformed into multiple values.
+
+4. There is an `@Override` annotation before the `configure` method declaration. This indicates that this method is overriding a method from the superclass. The `configure` method takes parameters of type `Map` and `JsonNode` and is responsible for configuring the filter based on the provided parameters. It processes the `filterParams` parameter to extract the keys and stores them in the `keys` set.
+
+5. Another `@Override` annotation marks the `filter` method, which takes parameters of types `String`, `byte[]`, `DocumentFragment`, and `ParseResult`. This method is responsible for filtering and modifying the metadata based on the specified keys. It retrieves the metadata from the `parse` parameter, processes each key in the `keys` set, splits the value of the key by commas, and adds each split value as a separate metadata value with the same key.
+
+Overall, this class is a parse filter that takes single metadata values containing comma-separated values and converts them into multiple values for the same key. It splits the values and adds each split value as a separate metadata value.
+
