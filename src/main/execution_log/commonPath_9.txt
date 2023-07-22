@@ -1,0 +1,100 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.wymiwyg:wymiwyg-commons-core:bundle:0.9-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.felix:maven-bundle-plugin is missing. @ line 63, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------< org.wymiwyg:wymiwyg-commons-core >------------------
+[INFO] Building WYMIWYG Commons Core 0.9-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ wymiwyg-commons-core ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ wymiwyg-commons-core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ wymiwyg-commons-core ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 50 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/src/main/java/org/wymiwyg/commons/util/arguments/ArgumentHandler.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/src/main/java/org/wymiwyg/commons/util/arguments/ArgumentHandler.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ wymiwyg-commons-core ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ wymiwyg-commons-core ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 4 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ wymiwyg-commons-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.wymiwyg.commons.util.dirbrowser.test.MultiPathNodeTest
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.069 s <<< FAILURE! - in org.wymiwyg.commons.util.dirbrowser.test.MultiPathNodeTest
+[ERROR] org.wymiwyg.commons.util.dirbrowser.test.MultiPathNodeTest.commonPath  Time elapsed: 0.044 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.base/java.lang.String.substring(String.java:1841)
+	at org.wymiwyg.commons.util.dirbrowser.test.MultiPathNodeTest.commonPath(MultiPathNodeTest.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.internal.runners.TestMethod.invoke(TestMethod.java:59)
+	at org.junit.internal.runners.MethodRoadie.runTestMethod(MethodRoadie.java:98)
+	at org.junit.internal.runners.MethodRoadie$2.run(MethodRoadie.java:79)
+	at org.junit.internal.runners.MethodRoadie.runBeforesThenTestThenAfters(MethodRoadie.java:87)
+	at org.junit.internal.runners.MethodRoadie.runTest(MethodRoadie.java:77)
+	at org.junit.internal.runners.MethodRoadie.run(MethodRoadie.java:42)
+	at org.junit.internal.runners.JUnit4ClassRunner.invokeTestMethod(JUnit4ClassRunner.java:88)
+	at org.junit.internal.runners.JUnit4ClassRunner.runMethods(JUnit4ClassRunner.java:51)
+	at org.junit.internal.runners.JUnit4ClassRunner$1.run(JUnit4ClassRunner.java:44)
+	at org.junit.internal.runners.ClassRoadie.runUnprotected(ClassRoadie.java:27)
+	at org.junit.internal.runners.ClassRoadie.runProtected(ClassRoadie.java:37)
+	at org.junit.internal.runners.JUnit4ClassRunner.run(JUnit4ClassRunner.java:42)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   MultiPathNodeTest.commonPath:17 Â» StringIndexOutOfBounds String index out of range: -1
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.028 s
+[INFO] Finished at: 2023-07-21T09:20:03+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.0:test (default-test) on project wymiwyg-commons-core: 
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/wymiwyg-commons-core/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

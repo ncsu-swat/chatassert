@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running gov.adlnet.xapi.ActivityDefinitionTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.927 s
-[INFO] Finished at: 2023-07-11T06:13:39+06:00
+[INFO] Total time:  6.088 s
+[INFO] Finished at: 2023-07-22T01:38:40+06:00
 [INFO] ------------------------------------------------------------------------

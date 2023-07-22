@@ -1,0 +1,39 @@
+0. Take note that in line 1, constructor `HashMap` from class `HashMap` is invoked.
+1. Take note that in line 2, constructor `TreeMap` from class `TreeMap` is invoked.
+2. Take note that in line 3, method `put` from class `TreeMap` is invoked.
+3. Take note that in line 4, method `put` from class `Map` is invoked.
+4. Take note that in line 5, constructor `ProcessorConfig` from class `ProcessorConfig` is invoked.
+5. Take note that in line 5, constructor `Configuration$Builder` from class `Configuration.Builder` is invoked.
+6. In line 5, an object of class `EnricherConfig` is instantiated.
+7. This constructor is defined for the class `EnricherConfig`. It takes two parameters: `name`, which is a `String` representing the name of the enricher, and `configuration`, which is an object of class `Configuration`.
+
+In the body of the constructor, it initializes the instance variables `name` and `configuration` with the values passed as arguments. The `this` keyword is used to refer to the instance variables of the object being created. 
+
+By using this constructor, you can create an `EnricherConfig` object by providing the name and configuration as arguments.
+8. Take note that in line 5, method `processorConfig` from class `Configuration.Builder` is invoked.
+9. Take note that in line 5, method `build` from class `Configuration.Builder` is invoked.
+10. Take note that in line 1, an object of class `HashMap` is created.
+11. Take note that in line 1, an object of class `String` is created.
+12. Take note that in line 1, an object of class `TreeMap` is created.
+13. Take note that in line 1, an object of class `Map` is created.
+14. Take note that in line 2, an object of class `TreeMap` is created.
+15. Take note that in line 5, an object of class `ProcessorConfig` is created.
+16. Take note that in line 5, an object of class `Configuration` is created.
+17. Take note that in line 5, an object of class `Builder` is created.
+18. In line 5, an object of class `EnricherConfig` is instantiated
+19. This code represents the definition of the `EnricherConfig` class. Here is a summary of what each part does:
+
+- The code is inside the package `io.fabric8.maven.enricher.api`.
+- The class has two imports: `java.util.Map` and three classes from other packages: `ProcessorConfig` from `io.fabric8.maven.core.config`, `Configuration` from `io.fabric8.maven.core.model`, and `Configs` from `io.fabric8.maven.core.util`.
+- The class `EnricherConfig` is declared as `public`.
+- It has two instance variables: `name`, which is a `String` representing the name of the enricher, and `configuration`, which is an object of class `Configuration`.
+- The class has a constructor that takes the `name` and `configuration` as parameters and initializes the instance variables.
+- It provides several methods:
+  - `get` method with a `Configs.Key` parameter, which returns the configuration value corresponding to the given key. If the value is not found, it returns the default value associated with the key.
+  - `getRawConfig` method, which returns the raw configuration as a `Map<String, String>`. If no configuration is available, it returns an empty map.
+  - Another overloaded `get` method with `Configs.Key` and `String` parameters, which returns the configuration value corresponding to the given key. If the value is not found, it checks project properties to get the value. If no value is found, it returns the default value.
+- The class has a constant `ENRICHER_PROP_PREFIX` as a `String` which represents the prefix for enricher properties.
+- The class also includes a header comment about the license and author.
+
+This class represents a configuration object for an enricher, providing methods to retrieve configuration values and access the raw configuration map.
+

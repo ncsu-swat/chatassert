@@ -1,0 +1,59 @@
+0. Take note that in line 1, constructor `Config` from class `Config` is invoked.
+1. Take note that in line 2, constructor `StringReader` from class `StringReader` is invoked.
+2. In line 2, an object of class `YamlConfigLoader` is instantiated.
+3. The code you provided is a constructor for the class `YamlConfigLoader`. It takes a parameter of type `Reader` named `reader`. 
+Inside the constructor, the `YAML.load()` method is called and it takes the `reader` object as an argument. The `YAML.load()` method is responsible for parsing the YAML content from the `reader` and returning a `Map` object which is then assigned to the `map` field of the `YamlConfigLoader` class using the `this` keyword.
+4. In line 2, method `load` of class `YamlConfigLoader` is invoked.
+5. Certainly! The provided code is a method called `load` inside the `YamlConfigLoader` class, which overrides a method defined in a superclass (or interface) named `ConfigLoader`. 
+
+The `load` method has a single parameter of type `Config` named `config`. It does not have a return type (`void`).
+
+Inside the method, the `populate` method is called and it takes two arguments: `config` and `map`. The `populate` method is responsible for populating the `config` object with data from the `map`. The actual implementation details of the `populate` method are not shown in the code snippet provided.
+
+In summary, the `load` method in the `YamlConfigLoader` class serves as an implementation of the `load` method defined in the `ConfigLoader` superclass or interface. It populates the provided `config` object with data from the `map` field of the `YamlConfigLoader` class.
+6. Take note that in line 3, constructor `StringReader` from class `StringReader` is invoked.
+7. Take note that in line 3, constructor `YamlConfigLoader` from class `YamlConfigLoader` is invoked.
+8. Take note that in line 3, method `load` from class `YamlConfigLoader` is invoked.
+9. In line 1, an object of class `Config` is instantiated
+10. Sure, the provided code is a class called `Config` in the package `io.cucumber.pro.config`. Here's a summary of the class:
+
+- The class represents a nested configuration where the keys are hierarchical.
+- It has two private fields: `valueByProperty` and `configByProperty`. Both fields are `Map` objects used to store values and child configurations respectively.
+- The class provides various getter and setter methods for retrieving and updating configuration values.
+- The `setValue` method is intended for internal use by loaders to set values.
+- The `getChild` method is used to get or create a child configuration under a given property.
+- The `getValue` method returns the value associated with a given property.
+- The `getIn` method is used to retrieve values based on a given normalized key. It handles traversing the hierarchy of configurations and throws exceptions if the key is not found.
+- The `setIn` method is used to set values based on a given normalized key. It also handles traversing the hierarchy of configurations.
+- The `toYaml` method converts the configuration to a YAML string. It recursively prints the configuration and its children in YAML format.
+- The `print` method is a helper method used by `toYaml` to recursively print the configuration in a readable format, indenting the entries accordingly.
+- The `indent` method is used to insert indentation in the printed YAML output.
+- The `toPath` method splits a given key into a list of strings, using the dot character as a separator.
+- The `normalize` method converts a key to a normalized form by replacing underscores with dots and converting the key to lowercase.
+
+In summary, the `Config` class represents a hierarchical configuration with various methods to manipulate and access the configuration values. It also provides functionality to convert the configuration to YAML format.
+11. Take note that in line 2, an object of class `StringReader` is created.
+12. In line 2, an object of class `YamlConfigLoader` is instantiated
+13. Certainly! The provided code defines a class `YamlConfigLoader` in the package `io.cucumber.pro.config.loaders`. Here's a summary of the class:
+
+- The class implements the `ConfigLoader` interface, which suggests that it provides functionality to load configurations into a `Config` object.
+- It imports the necessary classes from the `io.cucumber.pro.config` package, including the `Config` class and the `RealValue` class, as well as the `Yaml` class from the `org.yaml.snakeyaml` package.
+- The class has two fields:
+  - The `YAML` field is a static constant of type `Yaml` and is used to parse YAML content.
+  - The `map` field is a `Map` object that stores the parsed YAML content.
+
+- The class has a constructor that takes a `Reader` object as a parameter. Inside the constructor, it loads the YAML content from the `reader` using the `YAML.load()` method and assigns it to the `map` field.
+
+- The class implements the `load` method specified by the `ConfigLoader` interface. The `load` method takes a `Config` object as an argument and populates it based on the parsed YAML content stored in the `map` field. It does this by invoking the `populate` method with the `Config` object and the `map` as arguments.
+
+- The `populate` method is a private helper method that recursively populates the `Config` object. It iterates over the entries in the `map` and handles various value types:
+  - If the value is `null`, it sets the property in the `config` to null using `config.setNull(property)`.
+  - If the value is a string, boolean, or integer, it sets the corresponding `RealValue` in the `config` using `config.setValue(property, RealValue.fromX(value))`.
+  - If the value is another `Map`, it creates a child configuration `Config` object using `config.getChild(property)` and recursively calls the `populate` method with the child configuration and the nested `Map` as arguments.
+  - If the value is of any other unsupported type, it throws a `RuntimeException` indicating the unsupported YAML type.
+
+In summary, the `YamlConfigLoader` class provides functionality to load YAML configurations into a `Config` object. It uses the `Yaml` library to parse the YAML content and recursively populates the `Config` object with the parsed values.
+14. Take note that in line 3, an object of class `StringReader` is created.
+15. Take note that in line 3, an object of class `YamlConfigLoader` is created.
+16. Take note that in line 4, an object of class `String` is created.
+

@@ -1,0 +1,24 @@
+0. In line 1, method `toCreateIndexDDL` of class `OPropertyMapIndexDefinition` is invoked.
+1. The given method `toCreateIndexDDL` is declared with the return type `String`, and it overrides a method from the superclass (or interface) that the class `OPropertyMapIndexDefinition` extends or implements.
+
+The method takes three parameters:
+1. `indexName` (type: `String`) - represents the desired name for the index.
+2. `indexType` (type: `String`) - represents the type of index to be created.
+3. `engine` (type: `String`) - represents the engine to be used for the index.
+
+Inside the method, a `StringBuilder` named `ddl` is created to construct the DDL (Data Definition Language) statement for creating the index. The DDL statement is then returned as a string.
+
+In the method body, the steps are as follows:
+1. Initialize `ddl` with the string `"create index `" using the `StringBuilder` constructor.
+2. Append the `indexName` parameter to `ddl`, followed by the string "`` on `"` to start defining the index name and target class.
+3. Append the value of the `className` field (presumably a class name) to `ddl`, then append the string "` `" to separate the class name from the indexing field.
+4. Append the value of the `field` field (presumably the name of the field to be indexed) to `ddl`, followed by the string "`"`` to close the field name.
+5. Inside an if-else statement, check the value of `indexBy` (presumably an enum type). If it equals `INDEX_BY.KEY`, append the string "` by key`" to `ddl`. Otherwise, append the string "` by value`".
+6. Append the closing parenthesis and space to `ddl`.
+7. Append the `indexType` parameter to `ddl` to specify the type of index (e.g., "BTREE", "HASH").
+8. Finally, return the `ddl` string by calling the `toString` method on the `StringBuilder` object.
+
+Overall, this method constructs a DDL statement for creating an index on a specified field of a given class, with options to define the index type and engine. The resulting DDL string can be used to create the index in a database.
+2. Take note that in line 1, method `toLowerCase` from class `String` is invoked.
+3. Take note that in line 1, an object of class `String` is created.
+

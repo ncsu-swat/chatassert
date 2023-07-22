@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-graphdb ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689657554575
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689983801305
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -66,17 +66,34 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running com.orientechnologies.orient.graph.sql.OMatchStatementExecutionNewTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.098 s - in com.orientechnologies.orient.graph.sql.OMatchStatementExecutionNewTest
-Shutting down OrientDB engine and checking for direct memory leaks...
+[INFO] Running com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.222 s <<< FAILURE! - in com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] testMaxDepthArrow(com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest)  Time elapsed: 0.06 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest.testMaxDepthArrow(OMatchStatementExecutionTest.java:406)
+
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[ERROR] Failures: 
+[ERROR]   OMatchStatementExecutionTest.testMaxDepthArrow:406
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.318 s
-[INFO] Finished at: 2023-07-18T11:19:31+06:00
+[INFO] Total time:  18.561 s
+[INFO] Finished at: 2023-07-22T05:56:58+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project orientdb-graphdb: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

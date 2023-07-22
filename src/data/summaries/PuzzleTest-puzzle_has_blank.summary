@@ -1,0 +1,26 @@
+0. In line 1, an object of class `Puzzle` is instantiated.
+1. Certainly! 
+
+The given code defines a constructor for the class `Puzzle`. This constructor takes in an integer array `cells` as its parameter. 
+
+In the constructor body, you can see the statement `this.cells = cells;`. 
+
+Here, `this.cells` refers to the instance variable `cells` of the class `Puzzle`, while `cells` without `this` refers to the parameter `cells` passed to the constructor. 
+
+In simple terms, this statement assigns the value of the parameter `cells` to the instance variable `this.cells`. This allows us to initialize the `cells` attribute of the newly created `Puzzle` object with the provided array.
+2. In line 1, method `getSolution` of class `PuzzleTest` is invoked.
+3. Certainly! 
+
+The given code defines a private static method `getSolution()` that returns an integer array.
+
+In the method body, you can see the statement `return new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };`.
+
+This statement creates a new integer array with the values `{ 0, 1, 2, 3, 4, 5, 6, 7, 8 }`. 
+
+The `new int[]` part indicates the creation of a new integer array object, and the values within the curly braces `{}` represent the elements of the array.
+
+Finally, the whole array is returned as the result of the `getSolution()` method.
+
+Essentially, this method is used to retrieve a pre-defined solution for a puzzle represented by an integer array.
+4. Take note that in line 1, an object of class `Puzzle` is created.
+

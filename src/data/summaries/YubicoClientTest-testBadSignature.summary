@@ -1,0 +1,57 @@
+0. In line 2, method `setKey` of class `YubicoClient` is invoked.
+1. The given method is named `setKey` and it belongs to the `YubicoClient` class. It takes a `String` parameter named `key`. This method is used to set an API key for signing requests in the YubicoClient class. 
+
+The `@param` tag in the comments indicates that the `key` parameter is the YKVAL client key.
+
+The `@see` tag in the comments indicates that there is another method named `setClientId` in the `YubicoClient` class which is related to setting the client ID for the YubicoClient.
+
+Inside the method, `this.key` represents an instance variable of the `YubicoClient` class and it is assigned the value obtained by decoding the `key` parameter. The `Base64.decodeBase64` method is used to decode the `key` parameter, which is first converted to bytes using the `getBytes` method.
+
+In summary, this method sets the API key for the YubicoClient by decoding the provided `key` parameter and assigning it to the `key` instance variable.
+2. In line 3, method `verify` of class `YubicoClient` is invoked.
+3. The given method is named `verify` and it is part of the `YubicoClient` class. It is an abstract method, denoted by the `abstract` keyword. This means that the method does not have an implementation in the `YubicoClient` class but will be implemented in its subclasses.
+
+The method takes a parameter called `otp`, which represents a YubiKey OTP (One-Time Password).
+
+The method returns an object of type `VerificationResponse`, which represents the result of the webservice validation operation.
+
+The method can throw three exceptions:
+- `YubicoVerificationException` is thrown for validation errors, such as when the validation servers are unreachable.
+- `YubicoValidationFailure` is thrown for validation failures, such as when the OTPs in the request and response do not match.
+- `IllegalArgumentException` is thrown for arguments that are not correctly formatted OTP strings.
+
+The method consists only of the method signature, without any implementation details. The `abstract` keyword indicates that the subclasses of `YubicoClient` must provide an implementation for this method.
+
+In summary, this method is used to verify a YubiKey OTP by making a webservice call to Yubico validation servers. It returns the result of the validation operation and can throw exceptions for various validation errors or incorrect arguments.
+4. Take note that in line 1, an object of class `String` is created.
+5. In line 3, an object of class `VerificationResponse` is instantiated
+6. The given code represents an interface named `VerificationResponse` that describes the response received from the Yubico server during validation of a YubiKey OTP (One-Time Password).
+
+This interface declares several methods that define the properties and attributes of the response. Let's go through each method:
+
+- `boolean isOk()`: This method returns a boolean value indicating whether the response status from the server was OK, representing a valid OTP.
+
+- `String getH()`: This method returns the signature of the response, which has the same API key as the request.
+
+- `String getT()`: This method returns the UTC timestamp from the server when the response was processed.
+
+- `ResponseStatus getStatus()`: This method returns the server's response status to the request. `ResponseStatus` is an enum that defines different possible response statuses.
+
+- `String getTimestamp()`: This method returns the internal timestamp from the YubiKey 8hz timer.
+
+- `String getSessioncounter()`: This method returns the non-volatile counter that is incremented on power-up.
+
+- `String getSessionuse()`: This method returns the volatile counter that is incremented on each button-press and starts at 0 after power-up.
+
+- `String getSl()`: This method returns the amount of synchronization the server achieved before sending the response, represented in percentage.
+
+- `String getOtp()`: This method echoes back the OTP from the request and should match.
+
+- `String getNonce()`: This method echoes back the nonce from the request and should match.
+
+- `Map<String, String> getKeyValueMap()`: This method returns all parameters from the response as a map.
+
+- `String getPublicId()`: This method returns the public ID of the returned OTP.
+
+The comments in the code provide some additional information about each method and its purpose. This interface represents the structure of the response object and provides methods to access the different attributes of the response received from the Yubico server during OTP validation.
+

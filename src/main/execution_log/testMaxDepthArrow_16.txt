@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-graphdb ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689662727621
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689985196626
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -60,25 +60,36 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/ODeleteEdgeStatementExecutionTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java:[586,45] cannot find symbol
-  symbol:   method isEmpty()
-  location: variable qResult of type com.orientechnologies.orient.core.sql.executor.OResultSet
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-graphdb ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.709 s <<< FAILURE! - in com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] testMaxDepthArrow(com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest)  Time elapsed: 0.088 s  <<< FAILURE!
+java.lang.AssertionError: expected:<true> but was:<false>
+	at com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest.testMaxDepthArrow(OMatchStatementExecutionTest.java:406)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   OMatchStatementExecutionTest.testMaxDepthArrow:406 expected:<true> but was:<false>
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.044 s
-[INFO] Finished at: 2023-07-18T12:45:33+06:00
+[INFO] Total time:  19.126 s
+[INFO] Finished at: 2023-07-22T06:20:14+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-graphdb: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java:[586,45] cannot find symbol
-[ERROR]   symbol:   method isEmpty()
-[ERROR]   location: variable qResult of type com.orientechnologies.orient.core.sql.executor.OResultSet
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project orientdb-graphdb: There are test failures.
 [ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

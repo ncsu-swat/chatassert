@@ -1,0 +1,37 @@
+0. In line 1, method `analyze` of class `Analyzer` is invoked.
+1. This method is called `analyze` and it belongs to the class `Analyzer`. 
+
+It performs a morphological analysis of a token (represented by a string) based on the configuration parameters set in the `Analyzer` object. The purpose is to determine possible analysis options for the given token.
+
+Here is a breakdown of the method code:
+
+- The method takes a `word` parameter, which is the token string to be analyzed.
+- The `word` is then trimmed to remove leading or trailing spaces.
+- The method checks if the `word` has already been cached in a `wordCache`. If it has, the cached `Word` object is returned.
+- If the `word` is not found in the cache, a new `Word` object called `rezults` is created with the original `word` as the input.
+- The method then checks if the `word` contains any uppercase letters. If it does, it determines the letter case (either `AttributeNames.v_FirstUpper` or `AttributeNames.v_AllUpper`).
+- Next, the method calls the `analyzeLowercase` method, passing the lowercase version of the `word` and the original `word` as arguments. The `analyzeLowercase` method is responsible for the actual analysis.
+- For each `vārdforma` (word form) in the `lowercase.wordforms`, the `rezults` object's `wordform` is set to the original `word` (trimmed). Additionally, the `vārdforma` is attributed with the `AttributeNames.i_CapitalLetters` attribute and its corresponding letter case.
+- If the `word` consists only of lowercase letters, the `analyzeLowercase` method is called with the original `word` as the input.
+- After the analysis is done, the `rezults` object is cloned and stored in the `wordCache`.
+- Finally, the `rezults` object is returned.
+
+Overall, this method performs a morphological analysis of a token, taking into account caching, capitalization, and delegating the actual analysis to the `analyzeLowercase` method.
+2. In line 1, an object of class `Word` is instantiated
+3. This code defines a class called `Word`. Here is a summary of its features:
+
+- The `Word` class represents a morphologically analyzed token with potentially multiple variants of analysis.
+- It extends the `Observable` class, allowing objects of this class to be observed.
+- The class has a private field called `token`, which stores the token string.
+- It also has a field called `wordforms`, which is an `ArrayList` of `Wordform` objects representing the different analysis variants.
+- The class has a field called `correctWordform` of type `Wordform`, which represents the correct analysis for the token.
+- The class provides several constructors, allowing an instance of `Word` to be created with a token string or a `Node` object.
+- The class implements various methods like `toString()`, `clone()`, `equals()`, and `hashCode()`, which override the corresponding methods in the `Object` class.
+- The class provides methods for adding wordforms, filtering wordforms by attributes, and getting the total count of wordforms.
+- It also provides methods for setting and getting the correct wordform.
+- The class has methods for printing the analysis details to a `PrintWriter` or a `PrintStream`.
+- Additional methods are provided for converting the `Word` object to XML or JSON format.
+- Finally, the class has methods for checking if a word form has a specific attribute and for describing the word and its analysis.
+
+Overall, the `Word` class encapsulates the analysis of a token and provides methods for manipulating and accessing the analysis variants.
+

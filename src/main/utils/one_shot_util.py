@@ -64,7 +64,7 @@ def find_similar(target_class, target_name, target_code):
             max_sim = cos_sim
             max_sim_method = test_method
 
-    if max_sim > 0.5:
+    if max_sim > 0.9:
         return max_sim_method
     else:
         return None

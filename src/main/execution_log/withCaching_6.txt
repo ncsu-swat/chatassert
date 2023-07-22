@@ -1,0 +1,63 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ------------------< io.arivera.oss:embedded-rabbitmq >------------------
+[INFO] Building Embedded RabbitMQ 1.5.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ embedded-rabbitmq ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce) @ embedded-rabbitmq ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.7.7.201606060606:prepare-agent (prepare-agent) @ embedded-rabbitmq ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.7.201606060606/org.jacoco.agent-0.7.7.201606060606-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/target/jacoco.exec,excludes=io/arivera/oss/embedded/rabbitmq/apache/**:io/arivera/oss/embedded/rabbitmq/util/*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ embedded-rabbitmq ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ embedded-rabbitmq ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 46 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/main/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqDiagnostics.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/main/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqDiagnostics.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/main/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqDiagnostics.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ embedded-rabbitmq ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ embedded-rabbitmq ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/OfficialArtifactRepositoryTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/OfficialArtifactRepositoryTest.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/OfficialArtifactRepositoryTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqPluginsTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqPluginsTest.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/bin/RabbitMqPluginsTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/bin/LoggingProcessListenerTest.java:[57,19] reference to debug is ambiguous
+  both method debug(java.lang.String,java.lang.Object...) in org.slf4j.Logger and method debug(java.lang.String,java.lang.Throwable) in org.slf4j.Logger match
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.341 s
+[INFO] Finished at: 2023-07-21T05:56:20+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project embedded-rabbitmq: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/embedded-rabbitmq/src/test/java/io/arivera/oss/embedded/rabbitmq/bin/LoggingProcessListenerTest.java:[57,19] reference to debug is ambiguous
+[ERROR]   both method debug(java.lang.String,java.lang.Object...) in org.slf4j.Logger and method debug(java.lang.String,java.lang.Throwable) in org.slf4j.Logger match
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

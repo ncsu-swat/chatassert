@@ -49,27 +49,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,44] cannot find symbol
-  symbol:   variable Map
-  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,49] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,44] cannot find symbol
+  symbol:   variable Bamboo
+  location: class org.eluder.coveralls.maven.plugin.service.BambooTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,52] cannot find symbol
   symbol:   variable actualArray
-  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+  location: class org.eluder.coveralls.maven.plugin.service.BambooTest
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.703 s
-[INFO] Finished at: 2023-07-19T09:46:08+06:00
+[INFO] Total time:  5.539 s
+[INFO] Finished at: 2023-07-21T08:13:22+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,44] cannot find symbol
-[ERROR]   symbol:   variable Map
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,49] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,44] cannot find symbol
+[ERROR]   symbol:   variable Bamboo
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.BambooTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,52] cannot find symbol
 [ERROR]   symbol:   variable actualArray
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.BambooTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

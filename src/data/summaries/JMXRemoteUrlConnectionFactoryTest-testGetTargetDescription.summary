@@ -1,0 +1,4 @@
+0. Take note that in line 1, method `toString` from class `JMXServiceURL` is invoked.
+1. Take note that in line 1, method `when` from class `Mockito` is invoked.
+2. Take note that in line 1, method `thenReturn` from class `OngoingStubbing` is invoked.
+

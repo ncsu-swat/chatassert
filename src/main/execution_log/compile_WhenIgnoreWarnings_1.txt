@@ -1,0 +1,56 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------< org.mdkt.compiler:InMemoryJavaCompiler >---------------
+[INFO] Building InMemoryJavaCompiler 1.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ InMemoryJavaCompiler ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ InMemoryJavaCompiler ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ InMemoryJavaCompiler ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ InMemoryJavaCompiler ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ InMemoryJavaCompiler ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java uses or overrides a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,37] cannot find symbol
+  symbol:   variable objectToCheckinstanceofClassName
+  location: class org.mdkt.compiler.InMemoryJavaCompilerTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.035 s
+[INFO] Finished at: 2023-07-21T13:26:17+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project InMemoryJavaCompiler: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,37] cannot find symbol
+[ERROR]   symbol:   variable objectToCheckinstanceofClassName
+[ERROR]   location: class org.mdkt.compiler.InMemoryJavaCompilerTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

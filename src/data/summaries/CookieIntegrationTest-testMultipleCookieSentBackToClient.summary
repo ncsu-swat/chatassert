@@ -1,0 +1,49 @@
+0. In line 1, an object of class `Cookie` is instantiated.
+1. Sure! This is a constructor for the `Cookie` class that takes three parameters: `name` of type `String`, `value` of type `String`, and `numDays` of type `int`.
+
+Within the constructor, the `this` keyword is used to refer to the instance of the `Cookie` object being created. 
+
+The first line `this.n = name;` assigns the value of the `name` parameter to the instance variable `n` of the `Cookie` object. Similarly, the second line `this.v = value;` assigns the value of the `value` parameter to the instance variable `v` of the `Cookie` object.
+
+The third line `this.e = getHTTPTime(numDays);` invokes the `getHTTPTime` method with the `numDays` parameter, and assigns the returned value to the instance variable `e` of the `Cookie` object. The exact implementation of the `getHTTPTime` method is not shown here, but it is expected to return some value that represents a HTTP time based on the `numDays` parameter.
+
+Ultimately, this constructor initializes the `n`, `v`, and `e` instance variables of the `Cookie` object being created with the provided values as per the parameters.
+2. Take note that in line 1, method `add` from class `List` is invoked.
+3. Take note that in line 2, constructor `Cookie` from class `Cookie` is invoked.
+4. Take note that in line 2, method `add` from class `List` is invoked.
+5. Take note that in line 3, constructor `Cookie` from class `Cookie` is invoked.
+6. Take note that in line 3, method `add` from class `List` is invoked.
+7. Take note that in line 4, constructor `Cookie` from class `Cookie` is invoked.
+8. Take note that in line 4, method `add` from class `List` is invoked.
+9. Take note that in line 5, constructor `HttpGet` from class `HttpGet` is invoked.
+10. Take note that in line 6, constructor `BasicResponseHandler` from class `BasicResponseHandler` is invoked.
+11. In line 1, an object of class `Cookie` is instantiated
+12. This is the code for the `Cookie` class in the `org.nanohttpd.protocols.http.content` package. Let's go through the code step by step:
+
+- The class begins with some header comments that provide copyright information and licensing details.
+
+- The `import` statements are used to import necessary classes and packages for the implementation of the `Cookie` class.
+
+- The `Cookie` class is a representation of a simple cookie. The header comments state that this is old code and may have flaws.
+
+- The class starts by declaring a static method `getHTTPTime(int days)`. This method is used to get the HTTP time with an offset (specified in days) from the current system time. It creates a `Calendar` instance, sets the time zone to GMT, adds the specified number of days to the current date, and returns the formatted date string in the format "EEE, dd MMM yyyy HH:mm:ss z".
+
+- The class then declares three private instance variables: `n`, `v`, and `e`, which represent the name, value, and expiration date of the cookie, respectively.
+
+- There are three different constructors defined for the `Cookie` class. The first constructor takes two parameters, `name` and `value`, and sets the `e` instance variable to the default expiration date, which is 30 days from the current system time.
+
+- The second constructor takes three parameters, `name`, `value`, and `numDays`. It sets the `n`, `v`, and `e` instance variables based on the provided values and calculates the expiration date using the `getHTTPTime` method.
+
+- The third constructor takes three parameters, `name`, `value`, and `expires`. It sets the `n`, `v`, and `e` instance variables based on the provided values.
+
+- The class includes a `getHTTPHeader` method that returns a formatted string representing the cookie in an HTTP header format. It uses a formatting string `%s=%s; expires=%s` and the `String.format` method to substitute the instance variable values into the format string.
+
+That's the summary of the `Cookie` class. It represents a simple cookie and provides methods to get the HTTP time, set the cookie values and expiration, and get the cookie representation in an HTTP header format.
+13. Take note that in line 2, an object of class `Cookie` is created.
+14. Take note that in line 3, an object of class `Cookie` is created.
+15. Take note that in line 4, an object of class `Cookie` is created.
+16. Take note that in line 5, an object of class `HttpGet` is created.
+17. Take note that in line 6, an object of class `BasicResponseHandler` is created.
+18. Take note that in line 6, an object of class `String` is created.
+19. Take note that in line 6, an object of class `ResponseHandler` is created.
+

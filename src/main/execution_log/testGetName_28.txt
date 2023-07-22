@@ -49,27 +49,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,39] cannot find symbol
-  symbol:   variable expectedValue
-  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,54] cannot find symbol
-  symbol:   method getHashMap()
-  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,40] cannot find symbol
+  symbol:   variable String
+  location: class org.eluder.coveralls.maven.plugin.service.BambooTest
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.665 s
-[INFO] Finished at: 2023-07-19T09:52:27+06:00
+[INFO] Total time:  6.241 s
+[INFO] Finished at: 2023-07-21T08:26:05+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,39] cannot find symbol
-[ERROR]   symbol:   variable expectedValue
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,54] cannot find symbol
-[ERROR]   symbol:   method getHashMap()
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,40] cannot find symbol
+[ERROR]   symbol:   variable String
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.BambooTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

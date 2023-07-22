@@ -1,0 +1,34 @@
+0. In line 1, method `empty` of class `AHashMap` is invoked.
+1. This method is called `empty` and it belongs to the class `AHashMap`. It is a static method, which means it can be called without creating an instance of the class.
+
+The method takes a parameter named `equality` of type `AEquality`. It returns an instance of `AHashMap` with the given equality strategy. The purpose of this method is to create an empty `AHashMap` instance while allowing for internal reuse of already existing empty map instances.
+
+The method begins with a `SuppressWarnings` annotation to suppress unchecked warnings for type casting.
+
+Next, the method checks the value of the `equality` parameter using conditional statements. If the value is equal to `AEquality.EQUALS`, it returns a pre-instantiated empty map instance named `emptyEquals`. It does a type cast to the generic types `K` and `V`.
+
+Similarly, if the `equality` parameter is equal to `AEquality.IDENTITY`, it returns a pre-instantiated empty map instance named `emptyIdentity`.
+
+If none of the above conditions match, it creates a new instance of `AHashMap` using the provided equality strategy and returns it.
+
+Overall, this method provides a way to obtain an empty `AHashMap` instance by utilizing pre-instantiated objects based on the value of the `equality` parameter.
+2. Take note that in line 2, constructor `String` from class `String` is invoked.
+3. Take note that in line 3, constructor `String` from class `String` is invoked.
+4. Take note that in line 4, constructor `String` from class `String` is invoked.
+5. Take note that in line 1, an object of class `String` is created.
+6. In line 1, an object of class `AMap` is instantiated
+7. This is the interface definition for an immutable map class called `AMap`. Here are some key points about this class:
+
+- The `AMap` interface is located in the package `com.ajjpj.afoundation.collection.immutable`.
+- It imports other classes like `AEquality`, `AFunction1`, `Iterator`, and `Map`.
+- The interface extends `Iterable<AMapEntry<K, V>>` and `Serializable`.
+- The interface provides factory methods to create instances of `AMap`, such as `empty()` and `fromJava()`.
+- The interface defines various methods for working with the map, including operations like `size()`, `containsKey()`, `containsValue()`, `get()`, `updated()`, `removed()`, and more.
+- The interface also provides methods for obtaining keys, values, and iterators for the map.
+- There are methods for converting the `AMap` to a `java.util.Map` and for setting default values.
+
+Overall, this interface defines the contract for an immutable map class, specifying the methods that can be used to access and manipulate the map's contents. It also allows for interoperability with the `java.util.Map` interface.
+8. Take note that in line 2, an object of class `String` is created.
+9. Take note that in line 3, an object of class `String` is created.
+10. Take note that in line 4, an object of class `String` is created.
+

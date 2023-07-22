@@ -1,0 +1,52 @@
+0. In line 1, an object of class `Puzzle` is instantiated.
+1. Certainly! The code you provided is a constructor for the `Puzzle` class. Constructors are special methods that are used to initialize objects of a class. 
+
+In this case, the constructor takes an array of integers as a parameter named `cells`. 
+
+The line `this.cells = cells;` assigns the value of the `cells` parameter to the `cells` instance variable of the `Puzzle` object. The use of `this` keyword is necessary to distinguish between the parameter and the instance variable with the same name.
+
+This constructor is used to create a new `Puzzle` object and assign the array of integers to the `cells` instance variable of that object.
+2. In line 1, method `getSolution` of class `PuzzleTest` is invoked.
+3. Certainly! 
+
+The code snippet you provided is a method called `getSolution` inside a class called `PuzzleTest`. Here's an explanation of the code:
+
+- `private static` - This method is declared as `private`, meaning it can only be accessed within the same class. The `static` keyword indicates that the method belongs to the class itself rather than an instance of the class.
+
+- `int[]` - This indicates that the method returns an integer array.
+
+- `getSolution()` - This is the method name.
+
+- `return new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8 };` - This line creates a new integer array and initializes it with the values 0, 1, 2, 3, 4, 5, 6, 7, and 8. The `new int[]` part indicates the creation of a new integer array, and the values are enclosed within curly braces `{}`.
+
+Therefore, when the `getSolution` method is invoked, it will return a new integer array with the values specified in the code snippet.
+4. In line 1, method `swap` of class `PuzzleTest` is invoked.
+5. Certainly! Let's break down the code snippet:
+
+- `private static` - This method is declared as `private`, meaning it can only be accessed within the same class. The `static` keyword indicates that the method belongs to the class itself rather than an instance of the class.
+
+- `int[]` - This indicates that the method returns an integer array.
+
+- `swap` - This is the method name.
+
+- `(int[] cells, int i, int j)` - These are the method parameters. It takes three arguments: `cells`, `i`, and `j`. 
+
+Now, let's go through the code inside the method step by step:
+
+- `int[] copy = Arrays.copyOf(cells, cells.length);` - This line creates a new integer array named `copy` with the same length as the `cells` array and initializes it with the same values as the `cells` array. The `Arrays.copyOf` method is used to create a new array with the copied values.
+
+- `int x = copy[i];` - This line assigns the value at the index `i` of the `copy` array to the variable `x`.
+
+- `copy[i] = copy[j];` - This line assigns the value at the index `j` of the `copy` array to the index `i` of the `copy` array.
+
+- `copy[j] = x;` - This line assigns the value stored in `x` (the original value at index `i`) to the index `j` of the `copy` array. This effectively swaps the values at indices `i` and `j` in the `copy` array.
+
+- `return copy;` - This line returns the modified `copy` array.
+
+Therefore, when the `swap` method is invoked and provided with an array (`cells`) and two indices (`i` and `j`), it will create a copy of the array, swap the values at the specified indices, and return the modified copy of the array.
+6. Take note that in line 2, constructor `Puzzle` from class `Puzzle` is invoked.
+7. Take note that in line 2, method `getSolution` from class `PuzzleTest` is invoked.
+8. Take note that in line 2, method `swap` from class `PuzzleTest` is invoked.
+9. Take note that in line 1, an object of class `Puzzle` is created.
+10. Take note that in line 2, an object of class `Puzzle` is created.
+

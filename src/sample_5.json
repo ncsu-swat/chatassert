@@ -1,6 +1,70 @@
 {
     "projects": [
         {
+            "userName": "hazelcast",
+            "repoName": "hazelcast-simulator",
+            "subRepos": [
+                "archetype",
+                "simulator",
+                "drivers/driver-hazelcast4plus",
+                "drivers/driver-hazelcast3",
+                "drivers/driver-ignite2",
+                "drivers/driver-infinispan9",
+                "drivers/driver-infinispan10",
+                "drivers/driver-infinispan11",
+                "drivers/driver-couchbase",
+                "drivers/driver-memcached",
+                "drivers/driver-mongodb",
+                "drivers/driver-lettuce5",
+                "drivers/driver-lettucecluster5",
+                "drivers/driver-jedis3"
+            ],
+            "commitSHA": "7f0c13f66a81ce27911109e4118f7405483931dc",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "CommonUtils_SleepTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/utils/CommonUtils_SleepTest.java",
+                    "subRepo": "simulator",
+                    "classTests": [
+                        {
+                            "testName": "testSleepRandomNanosMinDelayZero",
+                            "startLn": 173,
+                            "endLn": 182,
+                            "testMethod": "@Test\n public void testSleepRandomNanosMinDelayZero ( ) {\n     long started = System . nanoTime ( ) ; \n     sleepRandomNanos ( new Random ( ) , 0 ) ; \n     long duration = System . nanoTime ( ) - started ; \n     long durationLimit = ONE_SECOND_TO_NANOS ; \n     assertTrue(format(\"STR\",duration),duration>0);\n}",
+                            "oracle": "assertTrue(format(\"STR\",duration),duration>0);",
+                            "oracleLn": 4,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/utils/CommonUtils.java",
+                            "focalName": "sleepRandomNanos",
+                            "focalStartLn": 223,
+                            "focalEndLn": 229,
+                            "focalMethod": " public static void sleepRandomNanos ( Random random , long maxDelayNanos ) { \n if ( maxDelayNanos <= 0 ) { \n return ; \n } long randomValue = Math . abs ( random . nextLong ( ) + 1 ) ; \n sleepNanos ( randomValue % maxDelayNanos ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "SimulatorAddressTest",
+                    "classPath": "simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java",
+                    "subRepo": "simulator",
+                    "classTests": [
+                        {
+                            "testName": "testToString_whenCoordinator",
+                            "startLn": 108,
+                            "endLn": 111,
+                            "testMethod": "@Test\n public void testToString_whenCoordinator ( ) {\n     assertEquals(\"STR\",coordinatorAddress().toString());\n}",
+                            "oracle": "assertEquals(\"STR\",coordinatorAddress().toString());",
+                            "oracleLn": 0,
+                            "focalFile": "simulator/src/main/java/com/hazelcast/simulator/protocol/core/SimulatorAddress.java",
+                            "focalName": "toString",
+                            "focalStartLn": 162,
+                            "focalEndLn": 171,
+                            "focalMethod": "@Override\n public String toString ( ) { \n if ( addressLevel == COORDINATOR ) { \n return COORDINATOR_STRING ; \n } else if ( addressLevel == AGENT ) { \n return \"STR\" + agentIndex ; \n } else { \n return \"STR\" + agentIndex + \"STR\" + workerIndex ; \n } } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "userName": "orientechnologies",
             "repoName": "orientdb",
             "subRepos": [
@@ -24,6 +88,260 @@
             "commitSHA": "2cabb46c9581572b7f46724864f02d9c688070c5",
             "buildSystem": "mvn",
             "allTests": [
+                {
+                    "className": "OAlterClassStatementExecutionTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/sql/executor/OAlterClassStatementExecutionTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 19,
+                        "endLn": 23,
+                        "setupMethod": "@BeforeClass\n public static void beforeClass ( ) { \n db = new ODatabaseDocumentTx ( \"STR\" ) ; \n db . create ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCustom",
+                            "startLn": 181,
+                            "endLn": 191,
+                            "testMethod": "@Test\n public void testCustom ( ) {\n     String className = \"STR\" ; \n     OSchema schema = db . getMetadata ( ) . getSchema ( ) ; \n     schema . createClass ( className ) ; \n     OResultSet result = db . command ( \"STR\" + className + \"STR\" ) ; \n     schema . reload ( ) ; \n     OClass clazz = schema . getClass ( className ) ; \n     Assert.assertEquals(\"STR\",clazz.getCustom(\"STR\"));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",clazz.getCustom(\"STR\"));",
+                            "oracleLn": 6,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/metadata/schema/OClass.java",
+                            "focalName": "getCustom",
+                            "focalStartLn": 437,
+                            "focalEndLn": 437,
+                            "focalMethod": " String getCustom ( String iName ) ; \n"
+                        }
+                    ]
+                },
+                {
+                    "className": "OPropertyMapIndexDefinitionTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 23,
+                        "endLn": 27,
+                        "setupMethod": "@Before\n public void beforeClass ( ) { \n mapToTest . put ( \"STR\" , 1 ) ; \n mapToTest . put ( \"STR\" , 2 ) ; \n } @Before\n public void beforeMethod ( ) { \n propertyIndexByKey = new OPropertyMapIndexDefinition ( \"STR\" , \"STR\" , OType . STRING , OPropertyMapIndexDefinition . INDEX_BY . KEY ) ; \n propertyIndexByIntegerKey = new OPropertyMapIndexDefinition ( \"STR\" , \"STR\" , OType . INTEGER , OPropertyMapIndexDefinition . INDEX_BY . KEY ) ; \n propertyIndexByValue = new OPropertyMapIndexDefinition ( \"STR\" , \"STR\" , OType . INTEGER , OPropertyMapIndexDefinition . INDEX_BY . VALUE ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCreateValueByKeyTwoParameters",
+                            "startLn": 63,
+                            "endLn": 74,
+                            "testMethod": "@Test\n public void testCreateValueByKeyTwoParameters ( ) {\n     final Object result = propertyIndexByKey . createValue ( Arrays . asList ( mapToTest , \"STR\" ) ) ; \n     Assert.assertTrue(resultinstanceofCollection);\n}",
+                            "oracle": "Assert.assertTrue(resultinstanceofCollection);",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinition.java",
+                            "focalName": "createValue",
+                            "focalStartLn": 64,
+                            "focalEndLn": 76,
+                            "focalMethod": "@Override\n public Object createValue ( List < ? > params ) { \n if ( ! ( params . get ( 0 ) instanceof Map ) ) return null ; \n final Collection < ? > mapParams = extractMapParams ( ( Map < ? , ? > ) params . get ( 0 ) ) ; \n final List < Object > result = new ArrayList < Object > ( mapParams . size ( ) ) ; \n for ( final Object mapParam : mapParams ) { \n result . add ( createSingleValue ( mapParam ) ) ; \n } return result ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OPropertyIndexDefinitionTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/index/OPropertyIndexDefinitionTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeMethod",
+                        "startLn": 17,
+                        "endLn": 20,
+                        "setupMethod": "@Before\n public void beforeMethod ( ) { \n propertyIndex = new OPropertyIndexDefinition ( \"STR\" , \"STR\" , OType . INTEGER ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testGetTypes",
+                            "startLn": 74,
+                            "endLn": 79,
+                            "testMethod": "@Test\n public void testGetTypes ( ) {\n     final OType [ ] result = propertyIndex . getTypes ( ) ; \n     Assert.assertEquals(result.length,1);\n}",
+                            "oracle": "Assert.assertEquals(result.length,1);",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OPropertyIndexDefinition.java",
+                            "focalName": "getTypes",
+                            "focalStartLn": 133,
+                            "focalEndLn": 135,
+                            "focalMethod": " public OType [ ] getTypes ( ) { \n return new OType [ ] { \n keyType } ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OCompositeKeyTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/index/OCompositeKeyTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testAddKeyComparable",
+                            "startLn": 64,
+                            "endLn": 72,
+                            "testMethod": "@Test\n public void testAddKeyComparable ( ) {\n     final OCompositeKey compositeKey = new OCompositeKey ( ) ; \n     compositeKey . addKey ( \"STR\" ) ; \n     assertEquals(compositeKey.getKeys().size(),1);\n}",
+                            "oracle": "assertEquals(compositeKey.getKeys().size(),1);",
+                            "oracleLn": 2,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OCompositeKey.java",
+                            "focalName": "getKeys",
+                            "focalStartLn": 73,
+                            "focalEndLn": 75,
+                            "focalMethod": " public List < Object > getKeys ( ) { \n return Collections . unmodifiableList ( keys ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "LuceneGeoUpdateTest",
+                    "classPath": "lucene/src/test/java/com/orientechnologies/spatial/LuceneGeoUpdateTest.java",
+                    "subRepo": "lucene",
+                    "before": {
+                        "setupName": "setupDatabase",
+                        "startLn": 45,
+                        "endLn": 75,
+                        "setupMethod": "@Before\n public void setupDatabase ( ) throws Throwable { \n String config = System . getProperty ( \"STR\" , \"STR\" ) ; \n String path ; \n if ( \"STR\" . equals ( config ) || \"STR\" . equals ( config ) ) { \n type = ODatabaseType . PLOCAL ; \n path = \"STR\" ; \n } else { \n type = ODatabaseType . MEMORY ; \n path = \"STR\" ; \n } context = new OrientDB ( path , OrientDBConfig . defaultConfig ( ) ) ; \n if ( context . exists ( name . getMethodName ( ) ) ) { \n context . drop ( name . getMethodName ( ) ) ; \n } context . create ( name . getMethodName ( ) , type ) ; \n db = context . open ( name . getMethodName ( ) , \"STR\" , \"STR\" ) ; \n db . set ( ODatabase . ATTRIBUTES . MINIMUMCLUSTERS , 8 ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testUpdate",
+                            "startLn": 30,
+                            "endLn": 48,
+                            "testMethod": "@Test\n public void testUpdate ( ) {\n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     OIndex < ? > index = db . getMetadata ( ) . getIndexManager ( ) . getIndex ( \"STR\" ) ; \n     db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n     Assert.assertEquals(2,index.getSize());\n}",
+                            "oracle": "Assert.assertEquals(2,index.getSize());",
+                            "oracleLn": 6,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OIndex.java",
+                            "focalName": "getSize",
+                            "focalStartLn": 115,
+                            "focalEndLn": 115,
+                            "focalMethod": " long getSize ( ) ; \n"
+                        }
+                    ]
+                },
+                {
+                    "className": "OSQLFunctionAbsoluteValueTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/sql/functions/math/OSQLFunctionAbsoluteValueTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "setup",
+                        "startLn": 26,
+                        "endLn": 29,
+                        "setupMethod": "@Before\n public void setup ( ) { \n function = new OSQLFunctionAbsoluteValue ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testPositiveBigDecimal",
+                            "startLn": 124,
+                            "endLn": 130,
+                            "testMethod": "@Test\n public void testPositiveBigDecimal ( ) {\n     function . execute ( null , null , null , new Object [ ] { \n new BigDecimal ( 10.5D ) } , null ) ; \n     Object result = function . getResult ( ) ; \n     assertTrue(resultinstanceofBigDecimal);\n}",
+                            "oracle": "assertTrue(resultinstanceofBigDecimal);",
+                            "oracleLn": 2,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/sql/functions/math/OSQLFunctionAbsoluteValue.java",
+                            "focalName": "getResult",
+                            "focalStartLn": 81,
+                            "focalEndLn": 84,
+                            "focalMethod": "@Override\n public Object getResult ( ) { \n return result ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OMatchStatementExecutionNewTest",
+                    "classPath": "graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java",
+                    "subRepo": "graphdb",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 32,
+                        "endLn": 66,
+                        "setupMethod": "@BeforeClass\n public static void beforeClass ( ) throws Exception { \n db = new ODatabaseDocumentTx ( DB_STORAGE + \"STR\" + DB_NAME ) ; \n db . create ( ) ; \n getProfilerInstance ( ) . startRecording ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n String [ ] [ ] friendList = new String [ ] [ ] { \n { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } } ; \n for ( String [ ] pair : friendList ) { \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( pair [ 0 ] , pair [ 1 ] ) ; \n } db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n initOrgChart ( ) ; \n initTriangleTest ( ) ; \n initEdgeIndexTest ( ) ; \n initDiamondTest ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testMaxDepthArrow",
+                            "startLn": 695,
+                            "endLn": 716,
+                            "testMethod": "@Test\n public void testMaxDepthArrow ( ) throws Exception {\n     OResultSet qResult = db . query ( \"STR\" ) ; \n     Assert.assertEquals(2,size(qResult));\n}",
+                            "oracle": "Assert.assertEquals(2,size(qResult));",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTx.java",
+                            "focalName": "query",
+                            "focalStartLn": 1353,
+                            "focalEndLn": 1357,
+                            "focalMethod": "@Override\n public OResultSet query ( String query , Object ... args ) { \n checkOpenness ( ) ; \n return internal . query ( query , args ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OLiveCommandResultListenerTest",
+                    "classPath": "server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java",
+                    "subRepo": "server",
+                    "before": {
+                        "setupName": "before",
+                        "startLn": 63,
+                        "endLn": 81,
+                        "setupMethod": "@Before\n public void before ( ) throws IOException { \n MockitoAnnotations . initMocks ( this ) ; \n Mockito . when ( server . getContextConfiguration ( ) ) . thenReturn ( new OContextConfiguration ( ) ) ; \n db = new ODatabaseDocumentTx ( \"STR\" + OLiveCommandResultListenerTest . class . getSimpleName ( ) ) ; \n db . create ( ) ; \n OClientConnectionManager manager = new OClientConnectionManager ( server ) ; \n protocol = new ONetworkProtocolBinary ( server ) ; \n protocol . initVariables ( server , channelBinary ) ; \n connection = manager . connect ( protocol ) ; \n OTokenHandlerImpl tokenHandler = new OTokenHandlerImpl ( server ) ; \n byte [ ] token = tokenHandler . getSignedBinaryToken ( db , db . getUser ( ) , connection . getData ( ) ) ; \n connection = manager . connect ( protocol , connection , token , tokenHandler ) ; \n connection . setDatabase ( db ) ; \n connection . getData ( ) . setSerializationImpl ( ORecordSerializerNetwork . NAME ) ; \n Mockito . when ( server . getClientConnectionManager ( ) ) . thenReturn ( manager ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testNetworkError",
+                            "startLn": 91,
+                            "endLn": 100,
+                            "testMethod": "@Test\n public void testNetworkError ( ) throws IOException {\n     Mockito . when ( channelBinary . writeInt ( Mockito . anyInt ( ) ) ) . thenThrow ( new IOException ( \"STR\" ) ) ; \n     OLiveCommandResultListener listener = new OLiveCommandResultListener ( server , connection , new TestResultListener ( ) ) ; \n     OLiveQueryHook . subscribe ( 10 , rawListener , db ) ; \n     assertTrue(OLiveQueryHook.getOpsReference(db).getQueueThread().hasToken(10));\n}",
+                            "oracle": "assertTrue(OLiveQueryHook.getOpsReference(db).getQueueThread().hasToken(10));",
+                            "oracleLn": 3,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/query/live/OLiveQueryQueueThread.java",
+                            "focalName": "hasToken",
+                            "focalStartLn": 103,
+                            "focalEndLn": 105,
+                            "focalMethod": " public boolean hasToken ( Integer key ) { \n return subscribers . containsKey ( key ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OClassImplTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/metadata/schema/OClassImplTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "setUp",
+                        "startLn": 21,
+                        "endLn": 28,
+                        "setupMethod": "@Before\n public void setUp ( ) { \n db = new ODatabaseDocumentTx ( \"STR\" + OClassImplTest . class . getSimpleName ( ) ) ; \n if ( db . exists ( ) ) { \n db . open ( \"STR\" , \"STR\" ) ; \n } else db . create ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCreateNoLinkedClass",
+                            "startLn": 75,
+                            "endLn": 86,
+                            "testMethod": "@Test\n public void testCreateNoLinkedClass ( ) {\n     final OSchema oSchema = db . getMetadata ( ) . getSchema ( ) ; \n     OClass oClass = oSchema . createClass ( \"STR\" ) ; \n     oClass . createProperty ( \"STR\" , OType . LINKLIST , ( OClass ) null ) ; \n     oClass . createProperty ( \"STR\" , OType . LINKLIST , ( OClass ) null , true ) ; \n     assertNotNull(oClass.getProperty(\"STR\"));\n}",
+                            "oracle": "assertNotNull(oClass.getProperty(\"STR\"));",
+                            "oracleLn": 4,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/metadata/schema/OClass.java",
+                            "focalName": "getProperty",
+                            "focalStartLn": 113,
+                            "focalEndLn": 113,
+                            "focalMethod": " OProperty getProperty ( String iPropertyName ) ; \n"
+                        }
+                    ]
+                },
+                {
+                    "className": "OPropertyListIndexDefinitionTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/index/OPropertyListIndexDefinitionTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeMethod",
+                        "startLn": 19,
+                        "endLn": 22,
+                        "setupMethod": "@Before\n public void beforeMethod ( ) { \n propertyIndex = new OPropertyListIndexDefinition ( \"STR\" , \"STR\" , OType . INTEGER ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCreateValueSingleParameter",
+                            "startLn": 24,
+                            "endLn": 35,
+                            "testMethod": "@Test\n public void testCreateValueSingleParameter ( ) {\n     final Object result = propertyIndex . createValue ( Collections . singletonList ( Arrays . asList ( \"STR\" , \"STR\" ) ) ) ; \n     Assert.assertTrue(resultinstanceofCollection);\n}",
+                            "oracle": "Assert.assertTrue(resultinstanceofCollection);",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/index/OPropertyListIndexDefinition.java",
+                            "focalName": "createValue",
+                            "focalStartLn": 50,
+                            "focalEndLn": 61,
+                            "focalMethod": "@Override\n public Object createValue ( List < ? > params ) { \n if ( ! ( params . get ( 0 ) instanceof Collection ) ) params = ( List ) Collections . singletonList ( params ) ; \n final Collection < ? > multiValueCollection = ( Collection < ? > ) params . get ( 0 ) ; \n final List < Object > values = new ArrayList < > ( multiValueCollection . size ( ) ) ; \n for ( final Object item : multiValueCollection ) { \n values . add ( createSingleValue ( item ) ) ; \n } return values ; \n } "
+                        }
+                    ]
+                },
                 {
                     "className": "FloatSerializerTest",
                     "classPath": "core/src/test/java/com/orientechnologies/common/serialization/types/FloatSerializerTest.java",

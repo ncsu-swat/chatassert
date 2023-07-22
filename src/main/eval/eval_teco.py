@@ -8,10 +8,12 @@ from markdown_util import clean_args, check_commutative_equal
 
 global corr_count
 
+teco_raw_preds_path = '../../teco_eval/teco/output/all_preds.jsonl'
+
 def writeTecoPreds():
     with open('../../teco_eval/teco/input/id.jsonl', 'r') as ids_file,\
          open('../../teco_eval/teco/input/gold_stmts.jsonl', 'r') as golds_file,\
-         open('../../teco_eval/teco/output/preds.jsonl', 'r') as preds_file,\
+         open(teco_raw_preds_path, 'r') as preds_file,\
          open('../../teco_eval/teco/input/proj_name.jsonl', 'r') as proj_file,\
          open('../../teco_eval/teco/input/test_mkey.jsonl', 'r') as test_file,\
          open('../../teco_eval/teco/output/preds_processed.csv', 'w+') as preds_csv:
@@ -30,13 +32,13 @@ def writeTecoPreds():
             for topPred in pred['topk']:
                 # print(str(i), ''.join(gold).replace('Assert.', ''), ''.join(topPred['toks']).replace('Assert.', ''))
                 goldAssert = clean_args(' '.join(golds[ids2lines[pred['data_id']]]))
-                # goldAssert = ''.join(golds[ids2lines[pred['data_id']]])
+                # goldAssert = ' '.join(golds[ids2lines[pred['data_id']]])
                 goldAssert = goldAssert.replace('org.junit.Assert.', '')
                 goldAssert = goldAssert.replace('Assert.', '')
                 goldAssert = goldAssert.replace(' ', '')
 
                 predAssert = check_commutative_equal(clean_args(' '.join(topPred['toks'])), goldAssert)
-                # predAssert = ''.join(topPred['toks'])
+                # predAssert = ' '.join(topPred['toks'])
                 predAssert = predAssert.replace('org.junit.Assert.', '')
                 predAssert = predAssert.replace('Assert.', '')
                 predAssert = predAssert.replace(' ', '')
@@ -52,8 +54,9 @@ def eval():
 
     corr_count = 0
     preds_processed = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t')
-    total_samples = 350
-    print(len(preds_processed))
+    
+    if 'all' in teco_raw_preds_path: total_samples = 3540
+    else: total_samples = 350
 
     def acc_at_ten(df_slice):
         for (idx, row) in df_slice.iterrows():
@@ -61,9 +64,11 @@ def eval():
             if row['Correct'] == 1:
                 corr_count += 1
                 break
+            # break    # For Acc@1, we look at just the first instance
 
     preds_processed.groupby('TestID').apply(acc_at_ten)
     
+    print(str(corr_count))
     print('Teco acc@10: {}%'.format(str(corr_count/total_samples)))
 
 writeTecoPreds()

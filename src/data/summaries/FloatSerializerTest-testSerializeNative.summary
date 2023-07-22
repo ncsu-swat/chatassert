@@ -1,0 +1,37 @@
+0. In line 1, method `serializeNative` of class `OFloatSerializer` is invoked.
+1. Certainly! 
+
+The method `serializeNative` is a void method in the class `OFloatSerializer`. It takes four parameters: `object` of type `float`, `stream` of type `byte[]`, `startPosition` of type `int`, and `hints` of type `Object...` (varargs). 
+
+Inside the method, there is a single line of code:
+```CONVERTER.putInt(stream, startPosition, Float.floatToIntBits(object), ByteOrder.nativeOrder());```
+
+This line of code calls a method `putInt` on the `CONVERTER` object. The `putInt` method is responsible for converting the `float` object into its binary representation and storing it into the `stream` array starting from the `startPosition`.
+
+The parameters passed to `putInt` are:
+- `stream`, which is the byte array where the binary representation of the `float` will be stored.
+- `startPosition`, which is the index in the `stream` array where the binary representation will start from.
+- `Float.floatToIntBits(object)`, which converts the `float` object passed as `object` parameter into its binary representation as an integer.
+- `ByteOrder.nativeOrder()`, which represents the byte order of the system.
+
+In summary, the `serializeNative` method of class `OFloatSerializer` takes a `float` object, converts it into a binary representation, and stores it in a byte array starting from the specified position.
+2. In line 2, method `deserializeNative` of class `OFloatSerializer` is invoked.
+3. Certainly! 
+
+The method `deserializeNative` is a public method of the class `OFloatSerializer`. It takes two parameters: `stream` of type `byte[]`, and `startPosition` of type `int`. It returns a `float` value.
+
+Inside the method, there is a single line of code:
+```return Float.intBitsToFloat(CONVERTER.getInt(stream, startPosition, ByteOrder.nativeOrder()));```
+
+This line of code does the following steps:
+1. It calls the `getInt` method on the `CONVERTER` object. The `getInt` method is responsible for retrieving the binary representation of the `float` from the `stream` array starting from the `startPosition` and converting it back to an integer.
+   - The parameters passed to `getInt` are:
+     - `stream`, which is the byte array where the binary representation of the `float` is stored.
+     - `startPosition`, which is the index in the `stream` array where the binary representation starts from.
+     - `ByteOrder.nativeOrder()`, which represents the byte order of the system.
+2. The returned integer value is then passed to the `intBitsToFloat` method of the `Float` class. This method converts the integer back into a `float` value.
+3. Finally, the `float` value is returned as the result of the `deserializeNative` method.
+
+In summary, the `deserializeNative` method of the `OFloatSerializer` class retrieves the binary representation of a `float` from a byte array at a specified position, converts it back into a `float` value, and returns it.
+4. Take note that in line 2, an object of class `Float` is created.
+

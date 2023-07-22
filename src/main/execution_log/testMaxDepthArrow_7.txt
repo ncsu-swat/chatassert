@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-graphdb ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689658671179
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689984147014
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -60,24 +60,30 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/ODeleteEdgeStatementExecutionTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java:[586,64] incompatible types: bad return type in lambda expression
-    missing return value
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionTest.java:[406,40] cannot find symbol
+  symbol:   variable OSQLSynchQuery
+  location: class com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionTest.java:[406,56] cannot find symbol
+  symbol:   variable actualValue
+  location: class com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.994 s
-[INFO] Finished at: 2023-07-18T11:37:57+06:00
+[INFO] Total time:  7.179 s
+[INFO] Finished at: 2023-07-22T06:02:33+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-graphdb: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java:[586,64] incompatible types: bad return type in lambda expression
-[ERROR]     missing return value
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-graphdb: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionTest.java:[406,40] cannot find symbol
+[ERROR]   symbol:   variable OSQLSynchQuery
+[ERROR]   location: class com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionTest.java:[406,56] cannot find symbol
+[ERROR]   symbol:   variable actualValue
+[ERROR]   location: class com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -1,0 +1,60 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ---------------------< guru.nidi.raml:raml-loader >---------------------
+[INFO] Building raml-loader 1.0.2-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ raml-loader ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.0.12:prepare (default) @ raml-loader ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.9/org.jacoco.agent-0.7.9-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ raml-loader ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ raml-loader ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ raml-loader ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/LoaderTest.java:[59,37] cannot find symbol
+  symbol:   variable ResourceNotFoundException
+  location: class guru.nidi.loader.basic.LoaderTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.481 s
+[INFO] Finished at: 2023-07-21T12:07:24+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project raml-loader: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/LoaderTest.java:[59,37] cannot find symbol
+[ERROR]   symbol:   variable ResourceNotFoundException
+[ERROR]   location: class guru.nidi.loader.basic.LoaderTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

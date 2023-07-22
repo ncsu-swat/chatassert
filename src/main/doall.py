@@ -408,6 +408,8 @@ if __name__ == "__main__":
                             print('Running Summarization Queries. Please wait for ChatGPT to build a knowledge base.\n')
                             summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""))
 
+                        if not EXECUTE_GENERATION: continue
+
                         # Get one Example from the same test file (Ablation Study No. 4)
                         example_method = None
                         if ONE_SHOT:

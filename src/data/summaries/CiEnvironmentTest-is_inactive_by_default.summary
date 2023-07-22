@@ -1,0 +1,5 @@
+0. Take note that in line 1, constructor `HashMap` from class `HashMap` is invoked.
+1. Take note that in line 1, an object of class `HashMap` is created.
+2. Take note that in line 1, an object of class `String` is created.
+3. Take note that in line 1, an object of class `Map` is created.
+

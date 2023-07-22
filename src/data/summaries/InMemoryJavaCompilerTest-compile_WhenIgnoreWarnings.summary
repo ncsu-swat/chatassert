@@ -1,0 +1,54 @@
+0. Take note that in line 1, constructor `StringBuffer` from class `StringBuffer` is invoked.
+1. Take note that in line 2, method `append` from class `StringBuffer` is invoked.
+2. Take note that in line 3, method `append` from class `StringBuffer` is invoked.
+3. Take note that in line 4, method `append` from class `StringBuffer` is invoked.
+4. Take note that in line 5, method `append` from class `StringBuffer` is invoked.
+5. Take note that in line 6, method `toString` from class `StringBuffer` is invoked.
+6. In line 6, method `newInstance` of class `InMemoryJavaCompiler` is invoked.
+7. The given method code is a static method called `newInstance` in the class `InMemoryJavaCompiler`. It returns an instance of the `InMemoryJavaCompiler` class.
+
+Here is a breakdown of the code:
+- `public static`: This keyword indicates that the method can be accessed from anywhere even without creating an instance of the class.
+- `InMemoryJavaCompiler`: This is the return type of the method. It specifies that the method will return an object of the `InMemoryJavaCompiler` type.
+- `newInstance()`: This is the name of the method, and it indicates that it will create a new instance of the `InMemoryJavaCompiler` class.
+- `return new InMemoryJavaCompiler();`: This line of code creates a new instance of the `InMemoryJavaCompiler` class using the default constructor `InMemoryJavaCompiler()`, and then returns it as the result of the method.
+
+In summary, the `newInstance` method is a factory method that allows you to create a new instance of the `InMemoryJavaCompiler` class.
+8. In line 6, method `ignoreWarnings` of class `InMemoryJavaCompiler` is invoked.
+9. The given method code is a method called `ignoreWarnings` in the class `InMemoryJavaCompiler`. It returns an instance of the `InMemoryJavaCompiler` class and modifies the internal `ignoreWarnings` flag to true.
+
+Here is a breakdown of the code:
+- `public`: This keyword indicates that the method can be accessed from anywhere.
+- `InMemoryJavaCompiler`: This is the return type of the method. It specifies that the method will return an object of the `InMemoryJavaCompiler` type.
+- `ignoreWarnings()`: This is the name of the method.
+
+- `ignoreWarnings = true;`: This line of code sets the value of the `ignoreWarnings` flag to true. This flag is likely an instance variable of the `InMemoryJavaCompiler` class which determines whether non-critical compiler warnings should be ignored or not.
+
+- `return this;`: This line of code returns the current instance of the `InMemoryJavaCompiler` class (`this`) as the result of the method. By returning `this`, the method allows for method chaining, meaning that you can call multiple methods in a row on the same instance of the `InMemoryJavaCompiler` class.
+
+In summary, the `ignoreWarnings` method is used to set the `ignoreWarnings` flag to true in the `InMemoryJavaCompiler` class. By returning the current instance of the class, it allows for method chaining and convenient usage.
+10. In line 6, method `compile` of class `InMemoryJavaCompiler` is invoked.
+11. The given method code is a method called `compile` in the class `InMemoryJavaCompiler`. It compiles a single Java source code and returns the compiled `Class` corresponding to the given class name.
+
+Here is a breakdown of the code:
+- `public`: This keyword indicates that the method can be accessed from anywhere.
+- `Class<?>`: This is the return type of the method. It specifies that the method will return an object of type `Class` which can represent any class.
+
+- `compile(String className, String sourceCode)`: This is the method signature which takes two parameters: `className`, which is a `String` representing the name of the class being compiled, and `sourceCode`, which is a `String` representing the Java source code to be compiled.
+
+- `return addSource(className, sourceCode).compileAll().get(className);`: This line of code is the body of the method and it contains the logic to compile the Java source code and return the compiled `Class` object.
+
+    - `addSource(className, sourceCode)`: This method call is likely a separate method in the `InMemoryJavaCompiler` class that adds the given source code to be compiled. It may return an instance of `InMemoryJavaCompiler` with the source code added.
+
+    - `compileAll()`: This method call is likely another method in the `InMemoryJavaCompiler` class that initiates the compilation process for all the added source code. It may return some compiled data structure, possibly a `Map` containing the compiled classes.
+
+    - `get(className)`: This method call is used to retrieve the compiled `Class` corresponding to the given `className` from the compiled result. It is likely accessing the `Map` returned by the `compileAll()` method and fetching the compiled class by its name.
+
+In summary, the `compile` method takes a class name and source code as input, adds the source code for compilation, compiles all the added source code, and returns the compiled `Class` corresponding to the given class name. It likely uses helper methods in the `InMemoryJavaCompiler` class to perform the compilation process.
+12. Take note that in line 7, method `newInstance` from class `Class` is invoked.
+13. Take note that in line 7, method `getMethod` from class `Class` is invoked.
+14. Take note that in line 7, method `invoke` from class `Method` is invoked.
+15. Take note that in line 1, an object of class `StringBuffer` is created.
+16. Take note that in line 6, an object of class `Class` is created.
+17. Take note that in line 7, an object of class `List` is created.
+

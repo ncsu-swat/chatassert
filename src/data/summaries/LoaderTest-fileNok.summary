@@ -1,0 +1,5 @@
+0. Take note that in line 1, method `currentThread` from class `Thread` is invoked.
+1. Take note that in line 1, method `getContextClassLoader` from class `Thread` is invoked.
+2. Take note that in line 1, method `getResource` from class `ClassLoader` is invoked.
+3. Take note that in line 1, an object of class `URL` is created.
+

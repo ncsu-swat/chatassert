@@ -1,0 +1,133 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 1 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] 
+[INFO] ----------------------< guru.nidi:graphviz-rough >----------------------
+[INFO] Building graphviz-rough 0.18.1
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphviz-rough ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target
+[INFO] 
+[INFO] --- code-assert-maven-plugin:0.9.15:prepare (default) @ graphviz-rough ---
+[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/jacoco.exec
+[INFO] Wrote argLine to target/coverageOptions.txt
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:install-node-and-npm (install node and npm) @ graphviz-rough ---
+[INFO] Node v10.16.0 is already installed.
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:npm (npm install) @ graphviz-rough ---
+[INFO] Running 'npm install' in /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
+[INFO] 
+[INFO] > fsevents@1.2.12 install /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node_modules/fsevents
+[INFO] > node-gyp rebuild
+[INFO] 
+[INFO] sh: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin/node-gyp: Permission denied
+[INFO] npm WARN graphviz-rough@0.18.0 No description
+[INFO] npm WARN graphviz-rough@0.18.0 No repository field.
+[INFO] npm WARN graphviz-rough@0.18.0 No license field.
+[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
+[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 install: `node-gyp rebuild`
+[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 126
+[INFO] 
+[INFO] audited 604 packages in 2.906s
+[INFO] found 84 vulnerabilities (23 moderate, 52 high, 9 critical)
+[INFO]   run `npm audit fix` to fix them, or `npm audit` for details
+[INFO] 
+[INFO] --- frontend-maven-plugin:1.8.0:npm (webpack) @ graphviz-rough ---
+[INFO] Running 'npm run webpack' in /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
+[INFO] 
+[INFO] > graphviz-rough@0.18.0 webpack /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
+[INFO] > webpack
+[INFO] 
+[INFO] Browserslist: caniuse-lite is outdated. Please run:
+[INFO] npx browserslist@latest --update-db
+[INFO] Hash: 2f65e8e4a2889c46f583
+[INFO] Version: webpack 4.43.0
+[INFO] Time: 5133ms
+[INFO] Built at: 07/19/2023 9:16:51 PM
+[INFO]             Asset     Size  Chunks                    Chunk Names
+[INFO] graphviz-rough.js  448 KiB       0  [emitted]  [big]  main
+[INFO] Entrypoint main [big] = graphviz-rough.js
+[INFO] [145] (webpack)/buildin/global.js 905 bytes {0} [built]
+[INFO] [164] multi @babel/polyfill ./src/main/js/index.js 40 bytes {0} [built]
+[INFO] [338] (webpack)/buildin/module.js 552 bytes {0} [built]
+[INFO] [352] ./src/main/js/index.js 305 bytes {0} [built]
+[INFO]     + 364 hidden modules
+[INFO] 
+[INFO] WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+[INFO] This can impact web performance.
+[INFO] Assets: 
+[INFO]   graphviz-rough.js (448 KiB)
+[INFO] 
+[INFO] WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+[INFO] Entrypoints:
+[INFO]   main (448 KiB)
+[INFO]       graphviz-rough.js
+[INFO] 
+[INFO] 
+[INFO] WARNING in webpack performance recommendations: 
+[INFO] You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+[INFO] For more info visit https://webpack.js.org/guides/code-splitting/
+[INFO] 
+[INFO] --- snippets-maven-plugin:1.0.0:snippets (default) @ graphviz-rough ---
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/ReadmeTest.java
+[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest_backup.txt
+[INFO] Found 1 snippets.
+[INFO] Replacing README.md
+[WARNING] In file README.md: Snippet 'basic' not defined.
+[WARNING] In file README.md: Snippet 'mutable' not defined.
+[WARNING] In file README.md: Snippet 'imperative' not defined.
+[WARNING] In file README.md: Snippet 'kotlin' not defined.
+[WARNING] In file README.md: Snippet 'manipulate' not defined.
+[WARNING] In file README.md: Snippet 'complex' not defined.
+[WARNING] In file README.md: Snippet 'records' not defined.
+[WARNING] In file README.md: Snippet 'img' not defined.
+[WARNING] In file README.md: Snippet 'image' not defined.
+[WARNING] In file README.md: Snippet 'config' not defined.
+[WARNING] In file README.md: Snippet 'processor' not defined.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphviz-rough ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphviz-rough ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphviz-rough ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphviz-rough ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java:[33,37] cannot find symbol
+  symbol:   variable zigzag
+  location: class guru.nidi.graphviz.rough.FillStyleTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.320 s
+[INFO] Finished at: 2023-07-19T21:16:52+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project graphviz-rough: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java:[33,37] cannot find symbol
+[ERROR]   symbol:   variable zigzag
+[ERROR]   location: class guru.nidi.graphviz.rough.FillStyleTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

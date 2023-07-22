@@ -1,0 +1,74 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.eluder.coveralls:coveralls-maven-plugin >-------------
+[INFO] Building coveralls-maven-plugin 4.4.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] ----------------------------[ maven-plugin ]----------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ coveralls-maven-plugin ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ coveralls-maven-plugin ---
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.5.2:helpmojo (help-goal) @ coveralls-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[INFO] java-annotations mojo extractor found 0 mojo descriptor.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ coveralls-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ coveralls-maven-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target/classes
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.5.2:descriptor (default-descriptor) @ coveralls-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[WARNING] Deprecated @Component annotation for 'project' field in org.eluder.coveralls.maven.plugin.CoverallsReportMojo: replace with @Parameter( defaultValue = "${project}", readonly = true )
+[INFO] java-annotations mojo extractor found 2 mojo descriptors.
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.5.2:descriptor (mojo-descriptor) @ coveralls-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to read mojo source files.
+[INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+[WARNING] Deprecated @Component annotation for 'project' field in org.eluder.coveralls.maven.plugin.CoverallsReportMojo: replace with @Parameter( defaultValue = "${project}", readonly = true )
+[INFO] java-annotations mojo extractor found 2 mojo descriptors.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ coveralls-maven-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ coveralls-maven-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 44 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java uses unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,40] cannot find symbol
+  symbol:   variable yourObjectinstanceofYourClass
+  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.615 s
+[INFO] Finished at: 2023-07-21T21:01:06+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,40] cannot find symbol
+[ERROR]   symbol:   variable yourObjectinstanceofYourClass
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

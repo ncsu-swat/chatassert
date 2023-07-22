@@ -43,7 +43,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.jcodec.common.CollectionsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
 
 Results :
 
@@ -52,6 +52,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.917 s
-[INFO] Finished at: 2023-07-12T20:40:34+06:00
+[INFO] Total time:  20.497 s
+[INFO] Finished at: 2023-07-22T17:34:56+06:00
 [INFO] ------------------------------------------------------------------------

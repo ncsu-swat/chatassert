@@ -1,0 +1,76 @@
+0. Take note that in line 1, constructor `GeneralHandler` from class `RouterNanoHTTPD.GeneralHandler` is invoked.
+1. Take note that in line 2, constructor `GeneralHandler` from class `RouterNanoHTTPD.GeneralHandler` is invoked.
+2. Take note that in line 3, constructor `TestRouter` from class `TestNanolets.TestRouter` is invoked.
+3. In line 4, an object of class `RouterNanoHTTPD` is instantiated.
+4. Certainly! 
+
+The given code is a constructor for the `RouterNanoHTTPD` class. Here's how it works:
+
+1. `public RouterNanoHTTPD(int port)` is the constructor method, which takes an integer `port` as a parameter.
+
+2. `super(port)` is a call to the superclass constructor (`NanoHTTPD` class) with the `port` parameter. This line is used to initialize the superclass with the specified `port` value.
+
+3. `router = new UriRouter();` creates a new object of the `UriRouter` class and assigns it to the instance variable `router` of the `RouterNanoHTTPD` class. This line initializes the `router` variable with a new instance of `UriRouter`, which will be used for routing incoming HTTP requests.
+
+Overall, this constructor initializes the `RouterNanoHTTPD` object by setting the port and creating a new `UriRouter` object.
+5. Take note that in line 5, method `getDeclaredField` from class `Class` is invoked.
+6. Take note that in line 6, method `setAccessible` from class `Field` is invoked.
+7. Take note that in line 7, method `set` from class `Field` is invoked.
+8. Take note that in line 8, method `getClass` from class `Object` is invoked.
+9. In line 8, method `setNotFoundHandler` of class `RouterNanoHTTPD` is invoked.
+10. Certainly! 
+
+The given method code is a method called `setNotFoundHandler` in the `RouterNanoHTTPD` class. Here's an explanation of how it works:
+
+1. `<T extends UriResponder>` in the method signature indicates that the method is a generic method, where `T` is a placeholder representing a class that extends `UriResponder`.
+
+2. The method takes a parameter `handler` of type `Class<T>`, which represents a class that extends `UriResponder`.
+
+3. Inside the method, `router.setNotFoundHandler(handler)` is called. Here, `router` is an instance variable of `UriRouter` type declared in the `RouterNanoHTTPD` class.
+
+4. The line `router.setNotFoundHandler(handler)` invokes the `setNotFoundHandler` method of the `UriRouter` class, passing the `handler` class as a parameter. This method is responsible for setting the handler to be used when a URL is not found.
+
+In summary, the `setNotFoundHandler` method in the `RouterNanoHTTPD` class sets the provided class as the handler for HTTP requests with URLs that are not found.
+11. Take note that in line 9, method `getClass` from class `Object` is invoked.
+12. In line 9, method `setNotImplementedHandler` of class `RouterNanoHTTPD` is invoked.
+13. Absolutely! 
+
+The given method code is a method called `setNotImplementedHandler` in the `RouterNanoHTTPD` class. Here's an explanation of how it works:
+
+1. `<T extends UriResponder>` in the method signature indicates that the method is a generic method, where `T` is a placeholder representing a class that extends `UriResponder`.
+
+2. The method takes a parameter `handler` of type `Class<T>`, which represents a class that extends `UriResponder`. This parameter is the handler class that will be used when an HTTP request corresponds to a valid URL but the corresponding action is not implemented.
+
+3. Inside the method, `router.setNotImplemented(handler)` is called. Here, `router` is an instance variable of `UriRouter` type declared in the `RouterNanoHTTPD` class.
+
+4. The line `router.setNotImplemented(handler)` invokes the `setNotImplemented` method of the `UriRouter` class, passing the `handler` class as a parameter. This method is responsible for setting the handler to be used when an HTTP request corresponds to a valid URL but the corresponding action is not implemented.
+
+In summary, the `setNotImplementedHandler` method in the `RouterNanoHTTPD` class sets the provided class as the handler for HTTP requests with URLs that are valid but do not have an implemented action.
+14. Take note that in line 1, an object of class `GeneralHandler` is created.
+15. Take note that in line 1, an object of class `UriResponder` is created.
+16. Take note that in line 2, an object of class `GeneralHandler` is created.
+17. Take note that in line 2, an object of class `UriResponder` is created.
+18. Take note that in line 3, an object of class `TestRouter` is created.
+19. In line 4, an object of class `RouterNanoHTTPD` is instantiated
+20. The provided class code is an implementation of a router in the NanoHTTPD library. Here's a summary of the key components and functionalities:
+
+1. The class `RouterNanoHTTPD` extends the `NanoHTTPD` class, which is a lightweight HTTP server implementation.
+
+2. The class defines an interface `UriResponder`, which must be implemented by classes that handle different types of HTTP requests (GET, POST, PUT, DELETE, and others).
+
+3. The class also defines abstract classes `DefaultStreamHandler` and `DefaultHandler`, which are general classes that can be inherited to handle stream and text/html data, respectively.
+
+4. The class provides several specific handler classes like `GeneralHandler`, `StaticPageHandler`, `Error404UriHandler`, `IndexHandler`, and `NotImplementedHandler`. These classes define specific behavior for handling HTTP requests for particular URLs or situations.
+
+5. The class includes a class `UriResource` that represents a URL pattern and its corresponding handler class. It also provides methods to match URLs and execute the appropriate handler.
+
+6. The class `RouterNanoHTTPD` contains a `UriRouter` object, responsible for routing incoming HTTP requests to the appropriate handlers based on their URL patterns.
+
+7. The class provides methods to add routes, set not found and not implemented handlers, and remove routes.
+
+8. The class implements the `serve` method from the `NanoHTTPD` class, which is responsible for processing incoming HTTP requests by delegating to the `UriRouter`.
+
+This class provides a flexible and extensible router implementation for handling HTTP requests with different URL patterns and mapping them to specific handlers.
+21. Take note that in line 5, an object of class `RouterNanoHTTPD` is created.
+22. Take note that in line 5, an object of class `Field` is created.
+
