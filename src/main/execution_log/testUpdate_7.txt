@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-lucene ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/lucene
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689645357557
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1690070567359
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -63,7 +63,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.orientechnologies.spatial.LuceneGeoUpdateTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.31 s - in com.orientechnologies.spatial.LuceneGeoUpdateTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.882 s - in com.orientechnologies.spatial.LuceneGeoUpdateTest
 Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] 
 [INFO] Results:
@@ -73,6 +73,6 @@ Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.137 s
-[INFO] Finished at: 2023-07-18T07:56:15+06:00
+[INFO] Total time:  19.991 s
+[INFO] Finished at: 2023-07-23T06:03:06+06:00
 [INFO] ------------------------------------------------------------------------

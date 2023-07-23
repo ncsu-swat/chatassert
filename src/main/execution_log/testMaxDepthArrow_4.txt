@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-graphdb ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689983846899
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1690076087576
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -66,8 +66,8 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
-[INFO] Running com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.234 s - in com.orientechnologies.orient.graph.sql.OMatchStatementExecutionTest
+[INFO] Running com.orientechnologies.orient.graph.sql.OMatchStatementExecutionNewTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.926 s - in com.orientechnologies.orient.graph.sql.OMatchStatementExecutionNewTest
 Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] 
 [INFO] Results:
@@ -77,6 +77,6 @@ Shutting down OrientDB engine and checking for direct memory leaks...
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.373 s
-[INFO] Finished at: 2023-07-22T05:57:44+06:00
+[INFO] Total time:  18.694 s
+[INFO] Finished at: 2023-07-23T07:35:05+06:00
 [INFO] ------------------------------------------------------------------------

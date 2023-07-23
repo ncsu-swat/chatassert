@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689639598512
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1690067689678
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -103,27 +103,27 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[62,40] cannot find symbol
-  symbol:   variable OPropertyIndexDefinition
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[58,44] cannot find symbol
+  symbol:   variable expectedResult
   location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[62,66] cannot find symbol
-  symbol:   variable actualObject
-  location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[58,76] cannot find symbol
+  symbol:   method toArray()
+  location: variable result of type java.lang.Object
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.427 s
-[INFO] Finished at: 2023-07-18T06:20:21+06:00
+[INFO] Total time:  22.584 s
+[INFO] Finished at: 2023-07-23T05:15:10+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[62,40] cannot find symbol
-[ERROR]   symbol:   variable OPropertyIndexDefinition
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[58,44] cannot find symbol
+[ERROR]   symbol:   variable expectedResult
 [ERROR]   location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[62,66] cannot find symbol
-[ERROR]   symbol:   variable actualObject
-[ERROR]   location: class com.orientechnologies.orient.core.index.OPropertyMapIndexDefinitionTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/index/OPropertyMapIndexDefinitionTest.java:[58,76] cannot find symbol
+[ERROR]   symbol:   method toArray()
+[ERROR]   location: variable result of type java.lang.Object
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -34,35 +34,30 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ simulator ---
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.hazelcast.simulator.protocol.core.SimulatorAddressTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec <<< FAILURE! - in com.hazelcast.simulator.protocol.core.SimulatorAddressTest
-testToString_whenCoordinator(com.hazelcast.simulator.protocol.core.SimulatorAddressTest)  Time elapsed: 0.008 sec  <<< FAILURE!
-java.lang.AssertionError
-	at com.hazelcast.simulator.protocol.core.SimulatorAddressTest.testToString_whenCoordinator(SimulatorAddressTest.java:104)
-
-
-Results :
-
-Failed tests: 
-  SimulatorAddressTest.testToString_whenCoordinator:104
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,40] cannot find symbol
+  symbol:   variable expectedObject
+  location: class com.hazelcast.simulator.protocol.core.SimulatorAddressTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,56] cannot find symbol
+  symbol:   variable actualObject
+  location: class com.hazelcast.simulator.protocol.core.SimulatorAddressTest
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.396 s
-[INFO] Finished at: 2023-07-18T04:21:35+06:00
+[INFO] Total time:  4.063 s
+[INFO] Finished at: 2023-07-23T03:51:04+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project simulator: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/surefire-reports for the individual test results.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,40] cannot find symbol
+[ERROR]   symbol:   variable expectedObject
+[ERROR]   location: class com.hazelcast.simulator.protocol.core.SimulatorAddressTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/protocol/core/SimulatorAddressTest.java:[104,56] cannot find symbol
+[ERROR]   symbol:   variable actualObject
+[ERROR]   location: class com.hazelcast.simulator.protocol.core.SimulatorAddressTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

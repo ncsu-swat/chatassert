@@ -7,7 +7,6 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
 [INFO] 
 [INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
 [INFO] 
@@ -41,32 +40,15 @@
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.utils.CommonUtils_SleepTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec <<< FAILURE! - in com.hazelcast.simulator.utils.CommonUtils_SleepTest
-testSleepRandomNanosMinDelayZero(com.hazelcast.simulator.utils.CommonUtils_SleepTest)  Time elapsed: 0.01 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<1.0E9> but was:<1172752.0>
-	at com.hazelcast.simulator.utils.CommonUtils_SleepTest.testSleepRandomNanosMinDelayZero(CommonUtils_SleepTest.java:172)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in com.hazelcast.simulator.utils.CommonUtils_SleepTest
 
 Results :
 
-Failed tests: 
-  CommonUtils_SleepTest.testSleepRandomNanosMinDelayZero:172 expected:<1.0E9> but was:<1172752.0>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.627 s
-[INFO] Finished at: 2023-07-18T04:07:56+06:00
+[INFO] Total time:  5.543 s
+[INFO] Finished at: 2023-07-23T03:35:22+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project simulator: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

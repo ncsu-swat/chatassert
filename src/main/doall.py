@@ -31,7 +31,7 @@ LOCAL_TRIALS = 3 # Maximum number of retries based on compilation and execution 
 FEEDBACK_REPAIR = True  # Ablation Study No. 1
 FUZZ_REPAIR = True      # Ablation Study No. 2
 SUMMARIZATION = True    # Ablation Study No. 3
-ONE_SHOT = True         # Ablation Study No. 4
+ONE_SHOT = False        # Ablation Study No. 4
 
 # Switches
 EXECUTE_GENERATION = True # Only cache summaries or execute oracle generation conversation too?

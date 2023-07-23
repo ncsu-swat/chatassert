@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-server ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689666394891
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1690084805895
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -57,21 +57,21 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[95,61] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[95,55] cannot find symbol
   symbol:   method hasToken(int)
-  location: class com.orientechnologies.orient.server.OClientConnectionManager
+  location: interface com.orientechnologies.orient.core.query.live.OLiveQueryListener
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.015 s
-[INFO] Finished at: 2023-07-18T13:46:40+06:00
+[INFO] Total time:  7.434 s
+[INFO] Finished at: 2023-07-23T10:00:12+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-server: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[95,61] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[95,55] cannot find symbol
 [ERROR]   symbol:   method hasToken(int)
-[ERROR]   location: class com.orientechnologies.orient.server.OClientConnectionManager
+[ERROR]   location: interface com.orientechnologies.orient.core.query.live.OLiveQueryListener
 [ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 

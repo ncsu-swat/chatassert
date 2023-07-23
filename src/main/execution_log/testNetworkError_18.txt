@@ -11,7 +11,7 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-server ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689671030296
+[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1690090135019
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -50,26 +50,34 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-server ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 63 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/target/test-classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/network/TestNetworkSerializerIndipendency.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/network/TestNetworkSerializerIndipendency.java: Recompile with -Xlint:deprecation for details.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/tx/RemoteTransactionSupportTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/tx/RemoteTransactionSupportTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,12] illegal start of expression
-[INFO] 4 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,44] cannot find symbol
+  symbol:   variable expectedArray
+  location: class com.orientechnologies.orient.server.OLiveCommandResultListenerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,59] cannot find symbol
+  symbol:   variable actualArray
+  location: class com.orientechnologies.orient.server.OLiveCommandResultListenerTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.541 s
-[INFO] Finished at: 2023-07-18T15:03:55+06:00
+[INFO] Total time:  6.769 s
+[INFO] Finished at: 2023-07-23T11:29:00+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-server: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,9] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,10] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,11] illegal start of expression
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,12] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,44] cannot find symbol
+[ERROR]   symbol:   variable expectedArray
+[ERROR]   location: class com.orientechnologies.orient.server.OLiveCommandResultListenerTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/server/src/test/java/com/orientechnologies/orient/server/OLiveCommandResultListenerTest.java:[92,59] cannot find symbol
+[ERROR]   symbol:   variable actualArray
+[ERROR]   location: class com.orientechnologies.orient.server.OLiveCommandResultListenerTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

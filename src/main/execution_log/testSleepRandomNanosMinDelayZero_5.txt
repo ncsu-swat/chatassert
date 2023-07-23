@@ -41,7 +41,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.hazelcast.simulator.utils.CommonUtils_SleepTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 sec - in com.hazelcast.simulator.utils.CommonUtils_SleepTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 sec - in com.hazelcast.simulator.utils.CommonUtils_SleepTest
 
 Results :
 
@@ -50,6 +50,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.728 s
-[INFO] Finished at: 2023-07-18T04:10:29+06:00
+[INFO] Total time:  5.550 s
+[INFO] Finished at: 2023-07-23T03:37:57+06:00
 [INFO] ------------------------------------------------------------------------
