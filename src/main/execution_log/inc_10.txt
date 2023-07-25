@@ -84,33 +84,15 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running io.fabric8.maven.core.config.ProcessorConfigTest
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.054 s <<< FAILURE! - in io.fabric8.maven.core.config.ProcessorConfigTest
-[ERROR] inc(io.fabric8.maven.core.config.ProcessorConfigTest)  Time elapsed: 0.022 s  <<< FAILURE!
-java.lang.AssertionError
-	at io.fabric8.maven.core.config.ProcessorConfigTest.inc(ProcessorConfigTest.java:60)
-
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s - in io.fabric8.maven.core.config.ProcessorConfigTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Failures: 
-[ERROR]   ProcessorConfigTest.inc:60
-[INFO] 
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.348 s
-[INFO] Finished at: 2023-07-19T14:51:55+06:00
+[INFO] Total time:  8.379 s
+[INFO] Finished at: 2023-07-25T07:44:39+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project fabric8-maven-plugin-core: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

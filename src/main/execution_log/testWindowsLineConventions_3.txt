@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.markdownj.test.LineConventions
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec - in org.markdownj.test.LineConventions
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 sec - in org.markdownj.test.LineConventions
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.168 s
-[INFO] Finished at: 2023-07-19T11:02:05+06:00
+[INFO] Total time:  2.518 s
+[INFO] Finished at: 2023-07-23T21:23:38+06:00
 [INFO] ------------------------------------------------------------------------

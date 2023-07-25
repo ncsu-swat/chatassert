@@ -49,27 +49,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,42] cannot find symbol
-  symbol:   variable expectedMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,40] cannot find symbol
+  symbol:   variable General
   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,55] cannot find symbol
-  symbol:   variable actualMap
-  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.499 s
-[INFO] Finished at: 2023-07-19T09:37:43+06:00
+[INFO] Total time:  6.650 s
+[INFO] Finished at: 2023-07-23T20:11:07+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,42] cannot find symbol
-[ERROR]   symbol:   variable expectedMap
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,40] cannot find symbol
+[ERROR]   symbol:   variable General
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,55] cannot find symbol
-[ERROR]   symbol:   variable actualMap
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

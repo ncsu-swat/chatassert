@@ -39,29 +39,24 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[58,37] cannot find symbol
-  symbol:   variable expectedSize
-  location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ storm-crawler-core ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
+23:04:07.401 [main] INFO  c.d.EffectiveTldFinder - Loading public suffix list from class path: jar:file:/Users/adminuser/.m2/repository/com/github/crawler-commons/crawler-commons/1.2/crawler-commons-1.2.jar!/effective_tld_names.dat
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.29 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.789 s
-[INFO] Finished at: 2023-07-19T12:46:40+06:00
+[INFO] Total time:  12.407 s
+[INFO] Finished at: 2023-07-23T23:04:07+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[58,37] cannot find symbol
-[ERROR]   symbol:   variable expectedSize
-[ERROR]   location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

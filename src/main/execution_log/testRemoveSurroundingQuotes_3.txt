@@ -35,7 +35,7 @@
  T E S T S
 -------------------------------------------------------
 Running io.openliberty.tools.common.plugins.util.DevUtilTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 sec
 
 Results :
 
@@ -44,6 +44,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.080 s
-[INFO] Finished at: 2023-07-19T16:07:51+06:00
+[INFO] Total time:  3.006 s
+[INFO] Finished at: 2023-07-25T14:28:24+06:00
 [INFO] ------------------------------------------------------------------------

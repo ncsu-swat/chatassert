@@ -38,31 +38,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,56] cannot find symbol
-  symbol:   variable ebmlDecodeSigned
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,40] cannot find symbol
+  symbol:   variable MKVTestSuite
   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,50] non-static method read(java.nio.ByteBuffer) cannot be referenced from a static context
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,89] cannot find symbol
-  symbol:   variable actual
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,54] cannot find symbol
+  symbol:   variable actualValue
   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,83] non-static method read(java.nio.ByteBuffer) cannot be referenced from a static context
-[INFO] 4 errors 
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.838 s
-[INFO] Finished at: 2023-07-19T07:24:21+06:00
+[INFO] Total time:  15.779 s
+[INFO] Finished at: 2023-07-23T16:33:23+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,56] cannot find symbol
-[ERROR]   symbol:   variable ebmlDecodeSigned
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,40] cannot find symbol
+[ERROR]   symbol:   variable MKVTestSuite
 [ERROR]   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,50] non-static method read(java.nio.ByteBuffer) cannot be referenced from a static context
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,89] cannot find symbol
-[ERROR]   symbol:   variable actual
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,54] cannot find symbol
+[ERROR]   symbol:   variable actualValue
 [ERROR]   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,83] non-static method read(java.nio.ByteBuffer) cannot be referenced from a static context
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -33,15 +33,35 @@
  T E S T S
 -------------------------------------------------------
 Running org.markdownj.test.EdgeCases
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 sec - in org.markdownj.test.EdgeCases
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec <<< FAILURE! - in org.markdownj.test.EdgeCases
+testSpaces(org.markdownj.test.EdgeCases)  Time elapsed: 0.02 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at org.markdownj.test.EdgeCases.testSpaces(EdgeCases.java:59)
+
 
 Results :
 
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+Failed tests: 
+  EdgeCases.testSpaces:59 null
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.457 s
-[INFO] Finished at: 2023-07-19T11:07:11+06:00
+[INFO] Total time:  2.181 s
+[INFO] Finished at: 2023-07-23T21:50:53+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project markdownj-core: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

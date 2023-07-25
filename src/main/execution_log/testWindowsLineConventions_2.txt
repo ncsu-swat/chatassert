@@ -33,36 +33,15 @@
  T E S T S
 -------------------------------------------------------
 Running org.markdownj.test.LineConventions
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE! - in org.markdownj.test.LineConventions
-testWindowsLineConventions(org.markdownj.test.LineConventions)  Time elapsed: 0.018 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<<p>EXPECTED</p>[]> but was:<<p>EXPECTED</p>[
-]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at org.markdownj.test.LineConventions.testWindowsLineConventions(LineConventions.java:61)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 sec - in org.markdownj.test.LineConventions
 
 Results :
 
-Failed tests: 
-  LineConventions.testWindowsLineConventions:61 expected:<<p>EXPECTED</p>[]> but was:<<p>EXPECTED</p>[
-]>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.323 s
-[INFO] Finished at: 2023-07-19T11:01:51+06:00
+[INFO] Total time:  2.575 s
+[INFO] Finished at: 2023-07-23T21:23:10+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project markdownj-core: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

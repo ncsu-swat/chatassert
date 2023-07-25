@@ -5,9 +5,9 @@
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml
-Progress (1): 990 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml (990 B at 291 B/s)
+Progress (1): 990 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd/2.3.2-SNAPSHOT/maven-metadata.xml (990 B at 360 B/s)
 Downloading from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/maven-metadata.xml
-Progress (1): 609 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/maven-metadata.xml (609 B at 803 B/s)
+Progress (1): 609 B                   Downloaded from sonatype-nexus-snapshots: https://oss.sonatype.org/content/repositories/snapshots/org/nanohttpd/nanohttpd-project/2.3.2-SNAPSHOT/maven-metadata.xml (609 B at 838 B/s)
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ nanohttpd-nanolets ---
 [INFO] 
@@ -19,7 +19,7 @@ Progress (1): 609 B                   Downloaded from sonatype-nexus-snapshots
 [INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd-nanolets ---
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java
-[INFO] Scan 3 files header done in 50.45ms.
+[INFO] Scan 3 files header done in 50.779ms.
 [INFO] All files are up-to-date.
 [INFO] 
 [INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd-nanolets ---
@@ -78,7 +78,7 @@ Caused by: java.lang.NoSuchFieldException: $jacocoAccess
 	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:137)
 	... 9 more
 FATAL ERROR in native method: processing of -javaagent failed
-/bin/sh: line 1: 90113 Abort trap: 6           /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter3510814686003214527.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire9486899190021555128tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_017807364561208304035tmp
+/bin/sh: line 1: 62478 Abort trap: 6           /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter7467177625710562834.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire9671481168528695300tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_018012682597452099467tmp
 
 Results :
 
@@ -87,11 +87,11 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.949 s
-[INFO] Finished at: 2023-07-19T05:34:02+06:00
+[INFO] Total time:  13.253 s
+[INFO] Finished at: 2023-07-23T14:26:50+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project nanohttpd-nanolets: ExecutionException: java.lang.RuntimeException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
-[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter3510814686003214527.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire9486899190021555128tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_017807364561208304035tmp
+[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter7467177625710562834.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire9671481168528695300tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_018012682597452099467tmp
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

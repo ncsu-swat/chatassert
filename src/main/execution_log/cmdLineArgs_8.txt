@@ -57,7 +57,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.engine.GraphvizServerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.052 s - in guru.nidi.graphviz.engine.GraphvizServerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in guru.nidi.graphviz.engine.GraphvizServerTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -72,8 +72,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.CodeCoverage
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.111 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
-[ERROR] coverage  Time elapsed: 0.094 s  <<< FAILURE!
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.102 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.085 s  <<< FAILURE!
 java.lang.AssertionError: 
 Enough code coverage
 Expected: Has enough test coverage.
@@ -107,8 +107,8 @@ guru.nidi.graphviz.service                                    0 / 75       0 / 7
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.860 s
-[INFO] Finished at: 2023-07-19T06:34:07+06:00
+[INFO] Total time:  20.608 s
+[INFO] Finished at: 2023-07-23T15:15:55+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
 [ERROR] 

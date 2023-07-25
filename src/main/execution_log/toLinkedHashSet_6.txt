@@ -20,7 +20,7 @@
 [INFO] ShortRevision tag detected. The value is '7'.
 [INFO] Executing: /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils && git rev-parse --verify --short=7 HEAD
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils
-[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-19T13:57:48
+[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-25T00:10:47
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -46,59 +46,25 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ collections-utils ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ collections-utils ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/surefire-reports
-[INFO] parallel='all', perCoreThreadCount=true, threadCount=4, useUnlimitedThreads=false, threadCountSuites=0, threadCountClasses=0, threadCountMethods=0, parallelOptimized=true
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.tenidwa.collections.utils.CollectorsTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.003 sec <<< FAILURE! - in org.tenidwa.collections.utils.CollectorsTest
-toLinkedHashSet(org.tenidwa.collections.utils.CollectorsTest)  Time elapsed: 0.003 sec  <<< FAILURE!
-java.lang.AssertionError: expected: java.util.Arrays$ArrayList<[1, 2, 3]> but was: java.util.LinkedHashSet<[1, 2, 3]>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at org.tenidwa.collections.utils.CollectorsTest.toLinkedHashSet(CollectorsTest.java:28)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.apache.maven.surefire.junitcore.pc.Scheduler$1.run(Scheduler.java:387)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-
-Results :
-
-Failed tests: 
-  CollectorsTest.toLinkedHashSet:28 expected: java.util.Arrays$ArrayList<[1, 2, 3]> but was: java.util.LinkedHashSet<[1, 2, 3]>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,40] cannot find symbol
+  symbol:   variable actual
+  location: class org.tenidwa.collections.utils.CollectorsTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.079 s
-[INFO] Finished at: 2023-07-19T13:57:50+06:00
+[INFO] Total time:  2.369 s
+[INFO] Finished at: 2023-07-25T00:10:48+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project collections-utils: There are test failures.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project collections-utils: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,40] cannot find symbol
+[ERROR]   symbol:   variable actual
+[ERROR]   location: class org.tenidwa.collections.utils.CollectorsTest
 [ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

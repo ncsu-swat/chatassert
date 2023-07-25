@@ -22,16 +22,20 @@ from utils.one_shot_util import find_similar
 
 from py4j.java_gateway import JavaGateway
 
+from multiprocessing import Process, Queue
+
+import traceback
+
 # Constants to determine various generation/repair loop termination
 TARGET_NUMBER = 10 # Number of oracles to be generated (NO in the paper)
 GLOBAL_TRIALS = 30  # Maximum number of interactions (GT in the paper)
 LOCAL_TRIALS = 3 # Maximum number of retries based on compilation and execution feedback (LT in the paper)
 
 # Switches for ablation study
-FEEDBACK_REPAIR = True  # Ablation Study No. 1
-FUZZ_REPAIR = True      # Ablation Study No. 2
-SUMMARIZATION = True    # Ablation Study No. 3
-ONE_SHOT = False        # Ablation Study No. 4
+FUZZ_REPAIR = True      # Ablation Study No. 4
+FEEDBACK_REPAIR = True  # Ablation Study No. 3
+SUMMARIZATION = True    # Ablation Study No. 2
+ONE_SHOT = False        # Ablation Study No. 1
 
 # Switches
 EXECUTE_GENERATION = True # Only cache summaries or execute oracle generation conversation too?
@@ -44,6 +48,8 @@ status_count = {
 }
 
 global first_case_done, first_pass_case_done
+# global proc_q
+global project
 
 def get_gpt_oracle(test_name="", temperature=1, context=None):
     if context is None: raise Exception("In get_gpt_oracle: context cannot be None")
@@ -75,7 +81,10 @@ def ask(oracle_id, context, summaries, example_method, test_name, before_code, t
 
     return gpt_oracle
 
-def follow_up(gateway, project, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle, focal_code):
+def follow_up(proc_q, repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle, focal_code):
+    # global proc_q
+    gateway = JavaGateway()
+
     # Instantiating feedback context (per example)
     feedback_context = Context(_name=Context.FEEDBACK_CONTEXT_NAME)
 
@@ -84,7 +93,7 @@ def follow_up(gateway, project, oracle_id, file_path, subRepo, className, test_n
     # Insert the faulty oracle and ask ChatGPT to fix the oracle so that it compiles and executes
     feedback_context.insert(role="user", content=(Prompts.FEEDBACK_SEED_EXT).format(gpt_oracle))
 
-    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)
+    res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)
     for feedback_id in range(LOCAL_TRIALS):
         # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
         print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
@@ -92,11 +101,11 @@ def follow_up(gateway, project, oracle_id, file_path, subRepo, className, test_n
             if len(feedback) > 0:
                 if FUZZ_REPAIR:        # (Ablation Study No. 2)
                     # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
-                    fuzzed_mutants = adhoc_repair(gateway, project, gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
+                    fuzzed_mutants = adhoc_repair(gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
 
                     for mutant in fuzzed_mutants:
                         print('FOLLOW-UP MUTANT: {}'.format(mutant))
-                        res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, mutant)
+                        res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, mutant)
                         if feedback is not None and len(feedback)==0:
                             # Mutant causes successful build without any feedback. So, select this mutant as gpt_oracle.
                             gpt_oracle = mutant
@@ -115,19 +124,23 @@ def follow_up(gateway, project, oracle_id, file_path, subRepo, className, test_n
             elif len(feedback) == 0:
                 break
 
-        res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)                       
+        res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)                       
+
+    proc_q.put(res)
+    proc_q.put(feedback)
+    proc_q.put(gpt_oracle)
 
     return res, feedback, gpt_oracle
 
-def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
+def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
     res, feedback = None, None
     # Check if the oracle is plausible (using py4j and Java Method Injector)
     try:
-        testInjector = javaGateway.entry_point
+        testInjector = JavaGateway().entry_point
         testInjector.setFile(file_path)
         testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>;", gpt_oracle))
 
-        res, output = project.run_test(subRepo, class_name, test_name)
+        res, output = Project.run_test(repo_dir, subRepo, class_name, test_name)
 
         with open('execution_log/{}_{}.txt'.format(test_name, oracle_id), 'w+') as logFile:
             logFile.write(output)
@@ -159,7 +172,7 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
 
             # Test failure
             if "test failures" in output_lines[i].lower():
-                report_dir = os.path.join(project.repo_dir, subRepo, 'target/surefire-reports/')
+                report_dir = os.path.join(repo_dir, subRepo, 'target/surefire-reports/')
                 report_path = None
                 for r_path in os.listdir(report_dir):
                     if (class_name + '.xml') in r_path:
@@ -189,6 +202,7 @@ def collect_feedback(javaGateway, oracle_id, project, file_path, subRepo, class_
                         print('\n\n!!! Could not retrieve test error message (report not found in xml) !!!\n\n')
                 break
     except Exception as e:
+        traceback.print_exc()
         print('Exception: {}'.format(e))
         return None, None
 
@@ -271,7 +285,7 @@ def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_na
     # Convert the string literals in the generated assertion, to abstract STR tag
     gpt_oracle = gateway.entry_point.abstractStringLiterals(gpt_oracle)
     # Apply assignment heuristics (lhs = rhs -> replace rhs with lhs in the assertion)
-    gpt_oracle = check_and_fix_lhs2rhs(gateway, gpt_oracle, test_code)
+    gpt_oracle = check_and_fix_lhs2rhs(gpt_oracle, test_code)
 
     # Removing org.junit.Assert. substring, Assert. substring and empty spaces in both gpt_oracle, and in the original assertion
     gpt_oracle = gpt_oracle.replace("org.junit.Assert.", "")
@@ -306,6 +320,8 @@ def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_na
     
 
 if __name__ == "__main__":
+    global project
+
     v1_flag, v2_flag = False, False
     arg = " ".join(sys.argv)
     if 'v1' in arg: 
@@ -362,8 +378,6 @@ if __name__ == "__main__":
                     classTests = testClass["classTests"]
                     subRepo = testClass["subRepo"]
 
-                    backup_test_file(filePath)
-
                     before_name = ""
                     before_code = ""
                     after_code = ""
@@ -375,12 +389,17 @@ if __name__ == "__main__":
                     if "after" in testClass:
                         after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
 
+                    # Make sure to copy only the subRepo from the cache directory to the working directory
+                    project.copy_cache(subRepo)
+
                     # Make sure that all dependencies are added to pom.xml
                     project.ensure_dependencies(subRepo)
 
                     # Fetch dependency jar paths to pass to the JarTypeSolver
                     depPaths = list(project.list_dependencies(subRepo))
-                            
+                    
+                    backup_test_file(filePath)
+
                     print("\n-----------------------------------------\nAnalyzing Oracles for Test Class: {}\n-----------------------------------------\n".format(className))
                     for test in classTests:
                         # Instantiate oracle generation conversation context
@@ -440,7 +459,7 @@ if __name__ == "__main__":
 
                                 if gpt_oracle not in already_gen_oras:
                                     already_gen_oras.add(gpt_oracle)
-                                    res, feedback = collect_feedback(gateway, oracle_id, project, filePath, subRepo, className, test_name, test_code, gpt_oracle)
+                                    res, feedback = collect_feedback(project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle)
 
                             elif v2_flag: # Feedback loop
                                 gpt_oracle = ask(oracle_id, context, summaries, example_method, test_name, before_code, test_code, focal_code)
@@ -454,7 +473,21 @@ if __name__ == "__main__":
                                     already_gen_oras.add(gpt_oracle)
                                 
                                     # Follow-up with feedback loop
-                                    res, feedback, gpt_oracle = follow_up(gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
+                                    # global proc_q
+                                    res, feedback = None, None
+                                    proc_q = Queue()
+                                    p = Process(target=follow_up, args=(proc_q, project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code))
+                                    p.start()
+                                    p.join(timeout=45)
+                                    if p.is_alive():
+                                        print('\nEXECUTION TIMEOUT\n')
+                                        p.terminate()
+                                    else:
+                                        res = proc_q.get()
+                                        feedback = proc_q.get()
+                                        gpt_oracle = proc_q.get()
+
+                                    # res, feedback, gpt_oracle = follow_up(gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
                                     # print('\nFEEDBACK:\n' + str(feedback))
 
                                     if gpt_oracle is None: continue

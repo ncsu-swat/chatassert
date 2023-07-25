@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running gov.adlnet.xapi.StatementTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 sec
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.139 s
-[INFO] Finished at: 2023-07-19T09:15:58+06:00
+[INFO] Total time:  2.889 s
+[INFO] Finished at: 2023-07-23T19:41:43+06:00
 [INFO] ------------------------------------------------------------------------

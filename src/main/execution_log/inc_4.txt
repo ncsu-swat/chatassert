@@ -84,7 +84,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running io.fabric8.maven.core.config.ProcessorConfigTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in io.fabric8.maven.core.config.ProcessorConfigTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in io.fabric8.maven.core.config.ProcessorConfigTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -93,6 +93,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.188 s
-[INFO] Finished at: 2023-07-19T14:36:01+06:00
+[INFO] Total time:  7.402 s
+[INFO] Finished at: 2023-07-25T01:27:29+06:00
 [INFO] ------------------------------------------------------------------------

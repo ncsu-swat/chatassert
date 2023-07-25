@@ -39,24 +39,34 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/TestUtil.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/AbstractFetcherBoltTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ storm-crawler-core ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
-12:38:56.115 [main] INFO  c.d.EffectiveTldFinder - Loading public suffix list from class path: jar:file:/Users/adminuser/.m2/repository/com/github/crawler-commons/crawler-commons/1.2/crawler-commons-1.2.jar!/effective_tld_names.dat
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.272 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[74,39] cannot find symbol
+  symbol:   variable HashMap
+  location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[74,52] cannot find symbol
+  symbol:   method getConfig()
+  location: variable bolt of type com.digitalpebble.stormcrawler.indexing.AbstractIndexerBolt
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.015 s
-[INFO] Finished at: 2023-07-19T12:38:56+06:00
+[INFO] Total time:  5.700 s
+[INFO] Finished at: 2023-07-23T22:59:46+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[74,39] cannot find symbol
+[ERROR]   symbol:   variable HashMap
+[ERROR]   location: class com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/indexer/BasicIndexingTest.java:[74,52] cannot find symbol
+[ERROR]   symbol:   method getConfig()
+[ERROR]   location: variable bolt of type com.digitalpebble.stormcrawler.indexing.AbstractIndexerBolt
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

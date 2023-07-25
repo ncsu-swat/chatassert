@@ -1,19 +1,21 @@
 import re
 import random
 
-def adhoc_repair(java_gateway, project, gpt_oracle, feedback, file_path, test_name, test_code, focal_code):
+from py4j.java_gateway import JavaGateway
+
+def adhoc_repair(gpt_oracle, feedback, file_path, test_name, test_code, focal_code):
     fuzzed_mutants = []
 
-    fuzzed_mutants += fuzz(java_gateway, project, gpt_oracle, feedback, file_path, test_name, focal_code)
+    fuzzed_mutants += fuzz(gpt_oracle, feedback, file_path, test_name, focal_code)
 
     return fuzzed_mutants
 
 # Identifier heuristics
-def fuzz(java_gateway, project, gpt_oracle, feedback, file_path, test_name, focal_code):
+def fuzz(gpt_oracle, feedback, file_path, test_name, focal_code):
     fuzzed_mutants = set()
     holed_assertions = set()
 
-    jGateway = java_gateway.entry_point
+    jGateway = JavaGateway().entry_point
     jGateway.setFile(file_path)
 
     # Creating prefix holes for method calls that were not found in a test method during compilation
@@ -40,19 +42,13 @@ def fuzz(java_gateway, project, gpt_oracle, feedback, file_path, test_name, foca
             for holeFiller in holeFillers:
                 fuzzed_mutants.add(holed_assertion.replace('<insert>', holeFiller))
 
-            ### Deprecated since class names are now included from the IdFinderVisitor.java
-            # # Check from the index, which class methodNotFound belongs to and use the class name as filler
-            # if methodNotFound in project.index:
-            #     for idx_item in project.index[methodNotFound]:
-            #         fuzzed_mutants.append(holed_assertion.replace('<insert>', idx_item.class_name))
-
     random.shuffle(list(fuzzed_mutants))
 
     return fuzzed_mutants
 
 # Assignment heuristics
-def check_and_fix_lhs2rhs(java_gateway, gpt_oracle, test_code):
-    lhs2rhs_dict = java_gateway.entry_point.lhs2rhs(test_code)
+def check_and_fix_lhs2rhs(gpt_oracle, test_code):
+    lhs2rhs_dict = JavaGateway().entry_point.lhs2rhs(test_code)
 
     gpt_oracle = gpt_oracle.replace(' ', '')
     for (k, v) in lhs2rhs_dict.items():

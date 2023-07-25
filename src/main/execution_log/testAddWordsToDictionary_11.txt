@@ -27,7 +27,7 @@
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java:-1: info: compiling
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala:-1: info: compiling
-[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes at 1689755520764
+[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes at 1690315730718
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala/org/openkoreantext/processor/OpenKoreanTextProcessor.scala:178: warning: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses
 [WARNING]     KoreanDictionaryProvider.koreanDictionary
 [WARNING]                              ^
@@ -42,17 +42,17 @@
 [INFO] prepare-compile in 0 s
 [INFO] compile in 9 s
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ open-korean-text ---
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ open-korean-text ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default) @ open-korean-text ---
+[INFO] --- maven-compiler-plugin:3.1:compile (default) @ open-korean-text ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ open-korean-text ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -68,11 +68,11 @@
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java:-1: info: compiling
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/scala:-1: info: compiling
-[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes at 1689755531537
+[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes at 1690315741300
 [INFO] prepare-compile in 0 s
 [INFO] compile in 7 s
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ open-korean-text ---
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ open-korean-text ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes
 [INFO] 
@@ -82,7 +82,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.openkoreantext.processor.OpenKoreanProcessorJavaTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.694 sec - in org.openkoreantext.processor.OpenKoreanProcessorJavaTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.556 sec - in org.openkoreantext.processor.OpenKoreanProcessorJavaTest
 
 Results :
 
@@ -91,6 +91,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.364 s
-[INFO] Finished at: 2023-07-19T14:32:24+06:00
+[INFO] Total time:  23.708 s
+[INFO] Finished at: 2023-07-26T02:09:13+06:00
 [INFO] ------------------------------------------------------------------------

@@ -23,23 +23,30 @@
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ yubico-validation-client2 ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ yubico-validation-client2 ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.yubico.client.v2.YubicoClientTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,12] illegal start of expression
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.056 s
-[INFO] Finished at: 2023-07-19T05:23:00+06:00
+[INFO] Total time:  1.439 s
+[INFO] Finished at: 2023-07-23T14:25:37+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project yubico-validation-client2: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[118,12] illegal start of expression
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

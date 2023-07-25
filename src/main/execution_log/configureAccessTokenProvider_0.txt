@@ -12,8 +12,8 @@
 [INFO] Building spring-cloud-security 2.2.5.RELEASE
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
-Downloading from spring-snapshots: https://repo.spring.io/libs-snapshot-local/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml
 Downloading from spring-releases: https://repo.spring.io/libs-release-local/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml
+Downloading from spring-snapshots: https://repo.spring.io/libs-snapshot-local/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml
 Downloading from spring-milestones: https://repo.spring.io/libs-milestone-local/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml
 [WARNING] Could not transfer metadata org.codehaus.mojo:flatten-maven-plugin/maven-metadata.xml from/to spring-releases (https://repo.spring.io/libs-release-local): authentication failed for https://repo.spring.io/libs-release-local/org/codehaus/mojo/flatten-maven-plugin/maven-metadata.xml, status: 401 Unauthorized
 [INFO] 
@@ -72,8 +72,8 @@ Audit done.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.302 s
-[INFO] Finished at: 2023-07-19T11:11:24+06:00
+[INFO] Total time:  7.110 s
+[INFO] Finished at: 2023-07-23T21:55:00+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:3.0.0:check (checkstyle-validation) on project spring-cloud-security: Failed during checkstyle execution: There are 47 errors reported by Checkstyle 8.18 with checkstyle.xml ruleset. -> [Help 1]
 [ERROR] 

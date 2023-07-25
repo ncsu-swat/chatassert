@@ -25,38 +25,30 @@
 [INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ markdownj-core ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.markdownj.test.LineConventions
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec <<< FAILURE! - in org.markdownj.test.LineConventions
-testMacLineConventions(org.markdownj.test.LineConventions)  Time elapsed: 0.01 sec  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<[expectedoutcome]> but was:<[<TEST>.getApplicationValue()]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at org.markdownj.test.LineConventions.testMacLineConventions(LineConventions.java:33)
-
-
-Results :
-
-Failed tests: 
-  LineConventions.testMacLineConventions:33 expected:<[expectedoutcome]> but was:<[<TEST>.getApplicationValue()]>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/LineConventions.java:[67,39] cannot find symbol
+  symbol:   variable expectedString
+  location: class org.markdownj.test.LineConventions
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/LineConventions.java:[67,55] cannot find symbol
+  symbol:   variable actualString
+  location: class org.markdownj.test.LineConventions
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.482 s
-[INFO] Finished at: 2023-07-19T10:58:08+06:00
+[INFO] Total time:  1.706 s
+[INFO] Finished at: 2023-07-23T21:20:29+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project markdownj-core: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports for the individual test results.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project markdownj-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/LineConventions.java:[67,39] cannot find symbol
+[ERROR]   symbol:   variable expectedString
+[ERROR]   location: class org.markdownj.test.LineConventions
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/LineConventions.java:[67,55] cannot find symbol
+[ERROR]   symbol:   variable actualString
+[ERROR]   location: class org.markdownj.test.LineConventions
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

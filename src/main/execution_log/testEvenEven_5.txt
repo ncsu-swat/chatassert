@@ -28,7 +28,7 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jcodec ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 5 resources
+[INFO] Copying 4 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jcodec ---
 [INFO] Changes detected - recompiling the module!
@@ -43,7 +43,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.jcodec.scale.Yuv444jToYuv420jTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.12 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec
 
 Results :
 
@@ -52,6 +52,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.534 s
-[INFO] Finished at: 2023-07-19T08:35:13+06:00
+[INFO] Total time:  21.694 s
+[INFO] Finished at: 2023-07-23T18:31:41+06:00
 [INFO] ------------------------------------------------------------------------

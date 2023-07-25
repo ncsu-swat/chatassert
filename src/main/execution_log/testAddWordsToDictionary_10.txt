@@ -27,7 +27,7 @@
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java:-1: info: compiling
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala:-1: info: compiling
-[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes at 1689755487923
+[INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes at 1690315685561
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/scala/org/openkoreantext/processor/OpenKoreanTextProcessor.scala:178: warning: a pure expression does nothing in statement position; multiline expressions might require enclosing parentheses
 [WARNING]     KoreanDictionaryProvider.koreanDictionary
 [WARNING]                              ^
@@ -40,19 +40,13 @@
 [WARNING]                                            ^
 [WARNING] three warnings found
 [INFO] prepare-compile in 0 s
-[INFO] compile in 8 s
+[INFO] compile in 11 s
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ open-korean-text ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ open-korean-text ---
+[INFO] Nothing to compile - all classes are up to date
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default) @ open-korean-text ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/main/java/org/openkoreantext/processor/util/CharArrayMap.java: Recompile with -Xlint:unchecked for details.
+[INFO] --- maven-compiler-plugin:3.1:compile (default) @ open-korean-text ---
+[INFO] Nothing to compile - all classes are up to date
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ open-korean-text ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -68,33 +62,45 @@
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java:-1: info: compiling
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/scala:-1: info: compiling
-[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes at 1689755498294
+[INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes at 1690315697542
 [INFO] prepare-compile in 0 s
 [INFO] compile in 8 s
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ open-korean-text ---
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ open-korean-text ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/target/test-classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[52,37] cannot find symbol
-  symbol:   variable texts
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,39] cannot find symbol
+  symbol:   variable expectedSize
   location: class org.openkoreantext.processor.OpenKoreanProcessorJavaTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[52,50] variable text is already defined in method testAddWordsToDictionary()
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,82] cannot find symbol
+  symbol:   method getText()
+  location: variable token of type org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,103] method count in interface scala.collection.TraversableOnce<A> cannot be applied to given types;
+  required: scala.Function1<org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken,java.lang.Object>
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+[INFO] 3 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.634 s
-[INFO] Finished at: 2023-07-19T14:31:46+06:00
+[INFO] Total time:  22.445 s
+[INFO] Finished at: 2023-07-26T02:08:26+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project open-korean-text: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[52,37] cannot find symbol
-[ERROR]   symbol:   variable texts
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project open-korean-text: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,39] cannot find symbol
+[ERROR]   symbol:   variable expectedSize
 [ERROR]   location: class org.openkoreantext.processor.OpenKoreanProcessorJavaTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[52,50] variable text is already defined in method testAddWordsToDictionary()
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,82] cannot find symbol
+[ERROR]   symbol:   method getText()
+[ERROR]   location: variable token of type org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/open-korean-text/src/test/java/org/openkoreantext/processor/OpenKoreanProcessorJavaTest.java:[72,103] method count in interface scala.collection.TraversableOnce<A> cannot be applied to given types;
+[ERROR]   required: scala.Function1<org.openkoreantext.processor.tokenizer.KoreanTokenizer.KoreanToken,java.lang.Object>
+[ERROR]   found: no arguments
+[ERROR]   reason: actual and formal argument lists differ in length
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

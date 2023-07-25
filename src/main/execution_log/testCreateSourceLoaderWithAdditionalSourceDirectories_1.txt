@@ -49,20 +49,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/util/SourceLoaderFactoryTest.java:[88,37] cannot find symbol
-  symbol:   variable sourceLoaderinstanceofMultiSourceLoader
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/util/SourceLoaderFactoryTest.java:[88,40] cannot find symbol
+  symbol:   variable sourceLoaderinstance
   location: class org.eluder.coveralls.maven.plugin.util.SourceLoaderFactoryTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.781 s
-[INFO] Finished at: 2023-07-19T10:00:15+06:00
+[INFO] Total time:  5.381 s
+[INFO] Finished at: 2023-07-23T20:26:50+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/util/SourceLoaderFactoryTest.java:[88,37] cannot find symbol
-[ERROR]   symbol:   variable sourceLoaderinstanceofMultiSourceLoader
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/util/SourceLoaderFactoryTest.java:[88,40] cannot find symbol
+[ERROR]   symbol:   variable sourceLoaderinstance
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.util.SourceLoaderFactoryTest
 [ERROR] 
 [ERROR] -> [Help 1]

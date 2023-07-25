@@ -56,7 +56,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.helger.genericode.excel.ExcelSheetToCodeList04Test
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in com.helger.genericode.excel.ExcelSheetToCodeList04Test
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s - in com.helger.genericode.excel.ExcelSheetToCodeList04Test
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -65,6 +65,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.017 s
-[INFO] Finished at: 2023-07-19T09:28:00+06:00
+[INFO] Total time:  7.901 s
+[INFO] Finished at: 2023-07-23T19:58:10+06:00
 [INFO] ------------------------------------------------------------------------

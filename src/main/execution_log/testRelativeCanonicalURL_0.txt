@@ -47,8 +47,8 @@
  T E S T S
 -------------------------------------------------------
 Running com.digitalpebble.stormcrawler.indexer.BasicIndexingTest
-12:22:21.604 [main] INFO  c.d.EffectiveTldFinder - Loading public suffix list from class path: jar:file:/Users/adminuser/.m2/repository/com/github/crawler-commons/crawler-commons/1.2/crawler-commons-1.2.jar!/effective_tld_names.dat
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.332 sec
+22:42:14.444 [main] INFO  c.d.EffectiveTldFinder - Loading public suffix list from class path: jar:file:/Users/adminuser/.m2/repository/com/github/crawler-commons/crawler-commons/1.2/crawler-commons-1.2.jar!/effective_tld_names.dat
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.279 sec
 
 Results :
 
@@ -57,6 +57,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.945 s
-[INFO] Finished at: 2023-07-19T12:22:21+06:00
+[INFO] Total time:  11.830 s
+[INFO] Finished at: 2023-07-23T22:42:14+06:00
 [INFO] ------------------------------------------------------------------------

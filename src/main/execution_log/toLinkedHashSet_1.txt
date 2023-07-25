@@ -20,7 +20,7 @@
 [INFO] ShortRevision tag detected. The value is '7'.
 [INFO] Executing: /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils && git rev-parse --verify --short=7 HEAD
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils
-[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-19T13:55:37
+[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-25T00:09:28
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -46,40 +46,24 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ collections-utils ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,39] cannot find symbol
-  symbol:   method newHashSet(java.util.LinkedHashSet<java.lang.Integer>)
-  location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,72] cannot find symbol
-  symbol:   variable Stream
-  location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,109] cannot find symbol
-  symbol:   method toList()
-  location: class org.tenidwa.collections.utils.Collectors
-[INFO] 3 errors 
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ collections-utils ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/surefire-reports
+[INFO] parallel='all', perCoreThreadCount=true, threadCount=4, useUnlimitedThreads=false, threadCountSuites=0, threadCountClasses=0, threadCountMethods=0, parallelOptimized=true
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.tenidwa.collections.utils.CollectorsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in org.tenidwa.collections.utils.CollectorsTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.612 s
-[INFO] Finished at: 2023-07-19T13:55:39+06:00
+[INFO] Total time:  3.527 s
+[INFO] Finished at: 2023-07-25T00:09:31+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project collections-utils: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,39] cannot find symbol
-[ERROR]   symbol:   method newHashSet(java.util.LinkedHashSet<java.lang.Integer>)
-[ERROR]   location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,72] cannot find symbol
-[ERROR]   symbol:   variable Stream
-[ERROR]   location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[28,109] cannot find symbol
-[ERROR]   symbol:   method toList()
-[ERROR]   location: class org.tenidwa.collections.utils.Collectors
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -57,7 +57,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.model.SvgSizeAnalyzerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in guru.nidi.graphviz.model.SvgSizeAnalyzerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s - in guru.nidi.graphviz.model.SvgSizeAnalyzerTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -72,8 +72,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.CodeCoverage
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.11 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
-[ERROR] coverage  Time elapsed: 0.092 s  <<< FAILURE!
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.101 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.085 s  <<< FAILURE!
 java.lang.AssertionError: 
 Enough code coverage
 Expected: Has enough test coverage.
@@ -107,8 +107,8 @@ guru.nidi.graphviz.service                                    0 / 75       0 / 7
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.602 s
-[INFO] Finished at: 2023-07-19T06:20:30+06:00
+[INFO] Total time:  19.738 s
+[INFO] Finished at: 2023-07-23T15:03:31+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
 [ERROR] 

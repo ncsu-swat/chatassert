@@ -25,39 +25,25 @@
 [INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ markdownj-core ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.markdownj.test.EdgeCases
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec <<< FAILURE! - in org.markdownj.test.EdgeCases
-testSpaces(org.markdownj.test.EdgeCases)  Time elapsed: 0.02 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at org.markdownj.test.EdgeCases.testSpaces(EdgeCases.java:59)
-
-
-Results :
-
-Failed tests: 
-  EdgeCases.testSpaces:59 null
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/EdgeCases.java:[59,40] cannot find symbol
+  symbol:   variable processor
+  location: class org.markdownj.test.EdgeCases
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.475 s
-[INFO] Finished at: 2023-07-19T11:04:32+06:00
+[INFO] Total time:  1.692 s
+[INFO] Finished at: 2023-07-23T21:44:50+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project markdownj-core: There are test failures.
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project markdownj-core: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/EdgeCases.java:[59,40] cannot find symbol
+[ERROR]   symbol:   variable processor
+[ERROR]   location: class org.markdownj.test.EdgeCases
 [ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

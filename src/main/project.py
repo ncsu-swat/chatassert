@@ -3,6 +3,7 @@ from utils.cmd_util import execute_cmd_with_output
 from utils.file_util import delete_folder
 
 import os
+import shutil
 from path_config import TMP_DIR
 import re
 import xml.etree.ElementTree as ET
@@ -13,7 +14,8 @@ class Project():
         self.sub_dir = subDir
         self.project_url = project_url        
         self.cur_com = cur_com 
-        self.repo_dir = os.path.join(base_dir, "repos", project_name)
+        self.repo_dir = os.path.join(base_dir, "repos", project_name)            # Working directory
+        self.cache_dir = os.path.join(base_dir, "cached_repos", project_name)    # Caching directory (to avoid time consuming downloads everytime)
         self.java_gateway = java_gateway
 
         # # clone the project
@@ -24,24 +26,20 @@ class Project():
             # modify pom
             self.modify_pom()
 
-    def init_env(self): 
-        # # delete folder if it exists
-        delete_folder(self.repo_dir) # Commenting to avoid repeated downloads
-
-        if not os.path.exists(self.repo_dir):
+    def init_env(self):
+        if not os.path.exists(self.cache_dir):
             # cloning the repo
-            print("Cloning the repo to {}...".format(self.repo_dir))
-            clone_repo(self.repo_dir, self.project_url)
+            print("Cloning the repo to {}...".format(self.cache_dir))
+            clone_repo(self.cache_dir, self.project_url)
 
             # reset
             print("Reseting the repo to {}...".format(self.cur_com))
-            reset_repo(self.repo_dir, self.cur_com)
-            print("Done.")
+            reset_repo(self.cache_dir, self.cur_com)
 
-            # ensure dependencies and plugins
-            # print("Ensuring dependencies and plugins")
-            # self.ensure_dependencies()
-            # print("Done.")
+        # ensuring dependencies and plugins (self.ensure_dependencies) is invoke from doall script since we need to know the subRepo name
+        # copying repo from cache dir to working dir (self.copy_cache) is invoked from doall script since we need to know the subRepo name
+
+        print("Done.")
 
     # This method lists all the jars associated with the dependencies of a particular sub-module of this project
     def list_dependencies(self, subRepo=""):
@@ -98,10 +96,23 @@ class Project():
 
         return dependencies
 
+    # This method copies only the subRepo from the cache directory to the working directory
+    def copy_cache(self, subRepo=""):
+        try:
+            # delete potentially stale repo in working directory if it exists
+            print('Deleting potentially stale repo in working directory')
+            delete_folder(os.path.join(self.repo_dir, subRepo)) # Commenting to avoid repeated copy
+
+            # copying from cache to working directory
+            print('Copying repo from cache dir to working dir')
+            shutil.copytree(os.path.join(self.cache_dir, subRepo), os.path.join(self.repo_dir, subRepo))
+        except:
+            print('\n!!! ERROR COPYING SUBREPO !!!\n')
+
     def ensure_dependencies(self, subRepo=""):
         ET.register_namespace('', 'http://maven.apache.org/POM/4.0.0')
 
-        pom_file = os.path.join(self.repo_dir, subRepo, 'pom.xml')
+        pom_file = os.path.join(self.cache_dir, subRepo, 'pom.xml')
         pom = ET.parse(pom_file)
         root = pom.getroot()
 
@@ -225,12 +236,13 @@ class Project():
 
             pom.write(os.path.join(pom_file, 'pom.xml'))
 
-    def run_test(self, subRepo, className, testName):
+    @staticmethod
+    def run_test(repo_dir, subRepo, className, testName):
         res_dict = {"build_failure": False, "tests": 0, "failures": 0, "errors": 0}
         print("Running maven tests...")
         
         print(className, testName)
-        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dgpg.skip -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(self.repo_dir, subRepo, className, testName))
+        output = execute_cmd_with_output("cd {}/{}; mvn clean test -Dgpg.skip -Dtest={}#{} -Dorg.slf4j.simpleLogger.defaultLogLevel=info".format(repo_dir, subRepo, className, testName))
 
         # parse the result
         print("Parsing the result...")

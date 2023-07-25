@@ -42,20 +42,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,37] cannot find symbol
-  symbol:   variable boltinstanceofFeedParserBolt
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,40] cannot find symbol
+  symbol:   variable OutputCollector
   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.732 s
-[INFO] Finished at: 2023-07-19T12:55:45+06:00
+[INFO] Total time:  5.280 s
+[INFO] Finished at: 2023-07-23T23:20:16+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,37] cannot find symbol
-[ERROR]   symbol:   variable boltinstanceofFeedParserBolt
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,40] cannot find symbol
+[ERROR]   symbol:   variable OutputCollector
 [ERROR]   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
 [ERROR] 
 [ERROR] -> [Help 1]

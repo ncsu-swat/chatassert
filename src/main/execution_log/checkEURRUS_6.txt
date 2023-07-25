@@ -37,7 +37,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.github.moneytostr.MoneyToStrTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.205 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.197 sec
 
 Results :
 
@@ -46,6 +46,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.356 s
-[INFO] Finished at: 2023-07-19T15:37:27+06:00
+[INFO] Total time:  8.364 s
+[INFO] Finished at: 2023-07-25T14:23:31+06:00
 [INFO] ------------------------------------------------------------------------

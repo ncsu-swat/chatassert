@@ -36,7 +36,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.java_websocket.extensions.DefaultExtensionTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
 
 Results :
 
@@ -45,6 +45,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.461 s
-[INFO] Finished at: 2023-07-19T15:42:22+06:00
+[INFO] Total time:  4.055 s
+[INFO] Finished at: 2023-07-25T14:24:42+06:00
 [INFO] ------------------------------------------------------------------------

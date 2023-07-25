@@ -42,26 +42,26 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,42] cannot find symbol
-  symbol:   variable expectedMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,37] cannot find symbol
+  symbol:   variable Metadata
   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,55] cannot find symbol
-  symbol:   variable actualMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,47] cannot find symbol
+  symbol:   variable actualObject
   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
 [INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.020 s
-[INFO] Finished at: 2023-07-19T13:16:05+06:00
+[INFO] Total time:  5.519 s
+[INFO] Finished at: 2023-07-23T23:34:24+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,42] cannot find symbol
-[ERROR]   symbol:   variable expectedMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,37] cannot find symbol
+[ERROR]   symbol:   variable Metadata
 [ERROR]   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,55] cannot find symbol
-[ERROR]   symbol:   variable actualMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,47] cannot find symbol
+[ERROR]   symbol:   variable actualObject
 [ERROR]   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
 [ERROR] -> [Help 1]
 [ERROR] 

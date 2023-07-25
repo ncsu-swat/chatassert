@@ -38,27 +38,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,44] cannot find symbol
-  symbol:   variable expected
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,37] cannot find symbol
+  symbol:   variable MKVTestSuite
   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,54] cannot find symbol
-  symbol:   variable actual
-  location: class org.jcodec.containers.mkv.MkvBlockTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.670 s
-[INFO] Finished at: 2023-07-19T07:09:14+06:00
+[INFO] Total time:  14.353 s
+[INFO] Finished at: 2023-07-23T16:27:37+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,44] cannot find symbol
-[ERROR]   symbol:   variable expected
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,37] cannot find symbol
+[ERROR]   symbol:   variable MKVTestSuite
 [ERROR]   location: class org.jcodec.containers.mkv.MkvBlockTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java:[136,54] cannot find symbol
-[ERROR]   symbol:   variable actual
-[ERROR]   location: class org.jcodec.containers.mkv.MkvBlockTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

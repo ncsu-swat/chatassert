@@ -27,29 +27,23 @@
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ci.common ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/DevUtilTest.java:[405,49] cannot find symbol
-  symbol:   method getProperty(java.lang.String)
-  location: variable util of type io.openliberty.tools.common.plugins.util.DevUtil
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ ci.common ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running io.openliberty.tools.common.plugins.util.DevUtilTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.201 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.656 s
-[INFO] Finished at: 2023-07-19T16:23:00+06:00
+[INFO] Total time:  4.090 s
+[INFO] Finished at: 2023-07-25T14:28:54+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project ci.common: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ci.common/src/test/java/io/openliberty/tools/common/plugins/util/DevUtilTest.java:[405,49] cannot find symbol
-[ERROR]   symbol:   method getProperty(java.lang.String)
-[ERROR]   location: variable util of type io.openliberty.tools.common.plugins.util.DevUtil
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

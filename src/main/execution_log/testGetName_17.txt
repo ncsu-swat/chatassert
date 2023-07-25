@@ -49,22 +49,39 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,37] cannot find symbol
-  symbol:   variable condition
-  location: class org.eluder.coveralls.maven.plugin.service.BambooTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,63] cannot find symbol
+  symbol:   variable expectedValue
+  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,39] cannot find symbol
+  symbol:   variable StringUtils
+  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,103] cannot find symbol
+  symbol:   variable actualValue
+  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,79] cannot find symbol
+  symbol:   variable StringUtils
+  location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.936 s
-[INFO] Finished at: 2023-07-21T08:17:23+06:00
+[INFO] Total time:  5.534 s
+[INFO] Finished at: 2023-07-23T20:18:16+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/BambooTest.java:[57,37] cannot find symbol
-[ERROR]   symbol:   variable condition
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.BambooTest
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,63] cannot find symbol
+[ERROR]   symbol:   variable expectedValue
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,39] cannot find symbol
+[ERROR]   symbol:   variable StringUtils
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,103] cannot find symbol
+[ERROR]   symbol:   variable actualValue
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/GeneralTest.java:[59,79] cannot find symbol
+[ERROR]   symbol:   variable StringUtils
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.GeneralTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

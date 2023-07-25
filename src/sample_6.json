@@ -8,58 +8,6 @@
             "buildSystem": "mvn",
             "allTests": [
                 {
-                    "className": "GroupTest",
-                    "classPath": "src/test/java/gov/adlnet/xapi/GroupTest.java",
-                    "subRepo": "",
-                    "before": {
-                        "setupName": "setUp",
-                        "startLn": 25,
-                        "endLn": 30,
-                        "setupMethod": "@Before\n public void setUp ( ) throws Exception { \n members = new ArrayList < Agent > ( ) ; \n members . add ( new Agent ( NAME , MBOX ) ) ; \n group = new Group ( members ) ; \n } "
-                    },
-                    "classTests": [
-                        {
-                            "testName": "testSetMember",
-                            "startLn": 84,
-                            "endLn": 92,
-                            "testMethod": "@Test\n public void testSetMember ( ) {\n     ArrayList < Agent > expected = new ArrayList < Agent > ( ) ; \n     expected . add ( new Agent ( \"STR\" + NAME , MBOX ) ) ; \n     group . setMember ( expected ) ; \n     ArrayList < Agent > actual = group . getMember ( ) ; \n     assertNotNull(actual);\n}",
-                            "oracle": "assertNotNull(actual);",
-                            "oracleLn": 4,
-                            "focalFile": "src/main/java/gov/adlnet/xapi/model/Group.java",
-                            "focalName": "getMember",
-                            "focalStartLn": 23,
-                            "focalEndLn": 25,
-                            "focalMethod": " public ArrayList < Agent > getMember ( ) { \n return member ; \n } "
-                        }
-                    ]
-                },
-                {
-                    "className": "PersonTest",
-                    "classPath": "src/test/java/gov/adlnet/xapi/PersonTest.java",
-                    "subRepo": "",
-                    "before": {
-                        "setupName": "setUp",
-                        "startLn": 35,
-                        "endLn": 40,
-                        "setupMethod": "@Before\n public void setUp ( ) throws Exception { \n person = new Person ( ) ; \n person . setName ( NAME ) ; \n person . setMbox ( MBOX ) ; \n } "
-                    },
-                    "classTests": [
-                        {
-                            "testName": "testGetObjectType",
-                            "startLn": 47,
-                            "endLn": 52,
-                            "testMethod": "@Test\n public void testGetObjectType ( ) {\n     String expected = \"STR\" ; \n     String actual = person . getObjectType ( ) ; \n     assertEquals(expected,actual);\n}",
-                            "oracle": "assertEquals(expected,actual);",
-                            "oracleLn": 2,
-                            "focalFile": "src/main/java/gov/adlnet/xapi/model/Person.java",
-                            "focalName": "getObjectType",
-                            "focalStartLn": 18,
-                            "focalEndLn": 20,
-                            "focalMethod": " public String getObjectType ( ) { \n return OBJECTTYPE ; \n } "
-                        }
-                    ]
-                },
-                {
                     "className": "ActivityDefinitionTest",
                     "classPath": "src/test/java/gov/adlnet/xapi/ActivityDefinitionTest.java",
                     "subRepo": "",

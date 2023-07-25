@@ -57,7 +57,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.model.SvgSizeAnalyzerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s - in guru.nidi.graphviz.model.SvgSizeAnalyzerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.05 s - in guru.nidi.graphviz.model.SvgSizeAnalyzerTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -72,8 +72,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running guru.nidi.graphviz.CodeCoverage
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.118 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
-[ERROR] coverage  Time elapsed: 0.1 s  <<< FAILURE!
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.124 s <<< FAILURE! - in guru.nidi.graphviz.CodeCoverage
+[ERROR] coverage  Time elapsed: 0.102 s  <<< FAILURE!
 java.lang.AssertionError: 
 Enough code coverage
 Expected: Has enough test coverage.
@@ -82,7 +82,7 @@ Analyzed coverage types:                                    BRANCH       LINE   
 guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
-guru.nidi.graphviz.model                                      2 / 75       4 / 75       4 / 75     
+guru.nidi.graphviz.model                                      0 / 75       1 / 75       1 / 75     
 guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
 	at guru.nidi.graphviz.CodeCoverage.coverage(CodeCoverage.java:38)
@@ -98,7 +98,7 @@ Analyzed coverage types:                                    BRANCH       LINE   
 guru.nidi.graphviz.attribute                                  0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.attribute.validate                         0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.engine                                     0 / 75       0 / 75       0 / 75     
-guru.nidi.graphviz.model                                      2 / 75       4 / 75       4 / 75     
+guru.nidi.graphviz.model                                      0 / 75       1 / 75       1 / 75     
 guru.nidi.graphviz.parse                                      0 / 75       0 / 75       0 / 75     
 guru.nidi.graphviz.service                                    0 / 75       0 / 75       0 / 75     
 [INFO] 
@@ -107,8 +107,8 @@ guru.nidi.graphviz.service                                    0 / 75       0 / 7
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.210 s
-[INFO] Finished at: 2023-07-19T06:28:24+06:00
+[INFO] Total time:  20.165 s
+[INFO] Finished at: 2023-07-23T15:12:19+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal guru.nidi:code-assert-maven-plugin:0.9.15:assert (default) on project graphviz-java: Unable to execute mojo: There are test failures.
 [ERROR] 

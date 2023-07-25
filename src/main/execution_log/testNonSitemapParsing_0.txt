@@ -42,22 +42,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,40] cannot find symbol
-  symbol:   variable result
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,39] cannot find symbol
+  symbol:   variable expectedList
   location: class com.digitalpebble.stormcrawler.bolt.SiteMapParserBoltTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,53] cannot find symbol
+  symbol:   variable actualList
+  location: class com.digitalpebble.stormcrawler.bolt.SiteMapParserBoltTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.704 s
-[INFO] Finished at: 2023-07-19T11:30:34+06:00
+[INFO] Total time:  5.389 s
+[INFO] Finished at: 2023-07-23T22:09:32+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,40] cannot find symbol
-[ERROR]   symbol:   variable result
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,39] cannot find symbol
+[ERROR]   symbol:   variable expectedList
 [ERROR]   location: class com.digitalpebble.stormcrawler.bolt.SiteMapParserBoltTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/SiteMapParserBoltTest.java:[187,53] cannot find symbol
+[ERROR]   symbol:   variable actualList
+[ERROR]   location: class com.digitalpebble.stormcrawler.bolt.SiteMapParserBoltTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

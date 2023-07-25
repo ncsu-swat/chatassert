@@ -42,22 +42,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,71] cannot find symbol
-  symbol:   variable tuple
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,39] cannot find symbol
+  symbol:   variable IOException
   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,52] cannot find symbol
+  symbol:   variable md
+  location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.293 s
-[INFO] Finished at: 2023-07-19T12:52:48+06:00
+[INFO] Total time:  4.914 s
+[INFO] Finished at: 2023-07-23T23:17:47+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,71] cannot find symbol
-[ERROR]   symbol:   variable tuple
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project storm-crawler-core: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,39] cannot find symbol
+[ERROR]   symbol:   variable IOException
 [ERROR]   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/storm-crawler/core/src/test/java/com/digitalpebble/stormcrawler/bolt/FeedParserBoltTest.java:[85,52] cannot find symbol
+[ERROR]   symbol:   variable md
+[ERROR]   location: class com.digitalpebble.stormcrawler.bolt.FeedParserBoltTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

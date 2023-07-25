@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.markdownj.test.EdgeCases
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 sec - in org.markdownj.test.EdgeCases
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 sec - in org.markdownj.test.EdgeCases
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.261 s
-[INFO] Finished at: 2023-07-19T11:05:53+06:00
+[INFO] Total time:  2.716 s
+[INFO] Finished at: 2023-07-23T21:47:55+06:00
 [INFO] ------------------------------------------------------------------------

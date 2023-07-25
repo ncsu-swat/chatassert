@@ -31,7 +31,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.yubico.client.v2.YubicoClientTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
 
 Results :
 
@@ -40,6 +40,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.050 s
-[INFO] Finished at: 2023-07-19T05:01:20+06:00
+[INFO] Total time:  2.052 s
+[INFO] Finished at: 2023-07-23T14:19:24+06:00
 [INFO] ------------------------------------------------------------------------

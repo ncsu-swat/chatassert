@@ -16,7 +16,7 @@
 [INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd-nanolets ---
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java
-[INFO] Scan 3 files header done in 53.487ms.
+[INFO] Scan 3 files header done in 52.113ms.
 [INFO] All files are up-to-date.
 [INFO] 
 [INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd-nanolets ---
@@ -49,45 +49,30 @@
 [INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java uses or overrides a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ nanohttpd-nanolets ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Exception in thread "main" java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:513)
-	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:525)
-Caused by: java.lang.RuntimeException: Class java/util/UUID could not be instrumented.
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:139)
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:100)
-	at org.jacoco.agent.rt.internal_773e439.PreMain.createRuntime(PreMain.java:55)
-	at org.jacoco.agent.rt.internal_773e439.PreMain.premain(PreMain.java:47)
-	... 6 more
-Caused by: java.lang.NoSuchFieldException: $jacocoAccess
-	at java.base/java.lang.Class.getField(Class.java:1999)
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:137)
-	... 9 more
-FATAL ERROR in native method: processing of -javaagent failed
-/bin/sh: line 1: 96415 Abort trap: 6           /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter6154825018400157881.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire3407515696074630638tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_06976860537202668754tmp
-
-Results :
-
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[450,37] cannot find symbol
+  symbol:   variable IOException
+  location: class org.nanohttpd.junit.router.TestNanolets
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[450,50] cannot find symbol
+  symbol:   variable actualInstance
+  location: class org.nanohttpd.junit.router.TestNanolets
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.954 s
-[INFO] Finished at: 2023-07-19T05:53:27+06:00
+[INFO] Total time:  3.357 s
+[INFO] Finished at: 2023-07-23T14:46:14+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project nanohttpd-nanolets: ExecutionException: java.lang.RuntimeException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
-[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefirebooter6154825018400157881.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire3407515696074630638tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/surefire/surefire_06976860537202668754tmp
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project nanohttpd-nanolets: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[450,37] cannot find symbol
+[ERROR]   symbol:   variable IOException
+[ERROR]   location: class org.nanohttpd.junit.router.TestNanolets
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[450,50] cannot find symbol
+[ERROR]   symbol:   variable actualInstance
+[ERROR]   location: class org.nanohttpd.junit.router.TestNanolets
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

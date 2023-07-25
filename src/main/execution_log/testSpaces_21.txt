@@ -33,27 +33,26 @@
  T E S T S
 -------------------------------------------------------
 Running org.markdownj.test.EdgeCases
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec <<< FAILURE! - in org.markdownj.test.EdgeCases
-testSpaces(org.markdownj.test.EdgeCases)  Time elapsed: 0.028 sec  <<< FAILURE!
-java.lang.AssertionError: null
-	at org.junit.Assert.fail(Assert.java:86)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertTrue(Assert.java:52)
-	at org.markdownj.test.EdgeCases.testSpaces(EdgeCases.java:59)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec <<< FAILURE! - in org.markdownj.test.EdgeCases
+testSpaces(org.markdownj.test.EdgeCases)  Time elapsed: 0.037 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[[expectedSuffix]]> but was:<[<p><test-input></p>]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.markdownj.test.EdgeCases.testSpaces(EdgeCases.java:25)
 
 
 Results :
 
 Failed tests: 
-  EdgeCases.testSpaces:59 null
+  EdgeCases.testSpaces:25 expected:<[[expectedSuffix]]> but was:<[<p><test-input></p>]>
 
 Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.261 s
-[INFO] Finished at: 2023-07-19T11:10:20+06:00
+[INFO] Total time:  2.632 s
+[INFO] Finished at: 2023-07-23T21:53:53+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.16:test (default-test) on project markdownj-core: There are test failures.
 [ERROR] 

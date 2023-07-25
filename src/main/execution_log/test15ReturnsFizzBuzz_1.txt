@@ -33,7 +33,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.teachingkidsprogramming.recipes.completed.FizzBuzzTDDTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 sec
 
 Results :
 
@@ -42,6 +42,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.236 s
-[INFO] Finished at: 2023-07-19T14:00:58+06:00
+[INFO] Total time:  6.557 s
+[INFO] Finished at: 2023-07-25T00:13:34+06:00
 [INFO] ------------------------------------------------------------------------

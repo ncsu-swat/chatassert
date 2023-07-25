@@ -42,7 +42,7 @@
  T E S T S
 -------------------------------------------------------
 Running lv.semti.morphology.Testi.MorphologyTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.286 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.945 sec
 
 Results :
 
@@ -51,6 +51,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.239 s
-[INFO] Finished at: 2023-07-19T15:16:18+06:00
+[INFO] Total time:  6.690 s
+[INFO] Finished at: 2023-07-25T07:48:38+06:00
 [INFO] ------------------------------------------------------------------------
