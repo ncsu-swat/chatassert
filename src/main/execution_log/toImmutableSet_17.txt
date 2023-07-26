@@ -20,7 +20,7 @@
 [INFO] ShortRevision tag detected. The value is '7'.
 [INFO] Executing: /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils && git rev-parse --verify --short=7 HEAD
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils
-[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-13T23:53:34
+[INFO] Storing buildNumber: 82f20ef at timestamp: 2023-07-26T09:47:49
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -35,7 +35,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ collections-utils ---
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ collections-utils ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 15 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/classes
 [INFO] 
@@ -43,33 +43,28 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ collections-utils ---
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ collections-utils ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/target/test-classes
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,39] cannot find symbol
-  symbol:   variable expectedSet
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,37] cannot find symbol
+  symbol:   variable actualImmutableSet
   location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,52] cannot find symbol
-  symbol:   variable actualSet
-  location: class org.tenidwa.collections.utils.CollectorsTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.772 s
-[INFO] Finished at: 2023-07-13T23:53:36+06:00
+[INFO] Total time:  4.346 s
+[INFO] Finished at: 2023-07-26T09:47:52+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project collections-utils: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,39] cannot find symbol
-[ERROR]   symbol:   variable expectedSet
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project collections-utils: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,37] cannot find symbol
+[ERROR]   symbol:   variable actualImmutableSet
 [ERROR]   location: class org.tenidwa.collections.utils.CollectorsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/collections-utils/src/test/java/org/tenidwa/collections/utils/CollectorsTest.java:[14,52] cannot find symbol
-[ERROR]   symbol:   variable actualSet
-[ERROR]   location: class org.tenidwa.collections.utils.CollectorsTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

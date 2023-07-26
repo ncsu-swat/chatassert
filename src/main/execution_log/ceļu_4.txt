@@ -16,7 +16,7 @@
 [INFO] Copying 16 resources
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ morphology ---
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ morphology ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/main/java/lv/semti/morphology/analyzer/Word.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/main/java/lv/semti/morphology/analyzer/Word.java uses or overrides a deprecated API.
@@ -28,30 +28,41 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 6 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ morphology ---
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ morphology ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/TagSetTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/TagSetTest.java uses or overrides a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/TagSetTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphoEvaluate.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphoEvaluate.java uses unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphoEvaluate.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ morphology ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running lv.semti.morphology.Testi.MorphologyTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.89 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,39] cannot find symbol
+  symbol:   variable expectedSize
+  location: class lv.semti.morphology.Testi.MorphologyTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,57] cannot find symbol
+  symbol:   method getWordforms()
+  location: variable ceÄ¼u of type lv.semti.morphology.analyzer.Word
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.482 s
-[INFO] Finished at: 2023-07-21T14:09:12+06:00
+[INFO] Total time:  3.289 s
+[INFO] Finished at: 2023-07-26T20:56:52+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project morphology: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,39] cannot find symbol
+[ERROR]   symbol:   variable expectedSize
+[ERROR]   location: class lv.semti.morphology.Testi.MorphologyTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,57] cannot find symbol
+[ERROR]   symbol:   method getWordforms()
+[ERROR]   location: variable ceÄ¼u of type lv.semti.morphology.analyzer.Word
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

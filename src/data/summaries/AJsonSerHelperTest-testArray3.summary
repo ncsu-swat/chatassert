@@ -1,0 +1,163 @@
+0. Take note that in line 1, constructor `ByteArrayOutputStream` from class `ByteArrayOutputStream` is invoked.
+1. In line 2, an object of class `AJsonSerHelper` is instantiated.
+2. Certainly! 
+
+The constructor code you provided is for the `AJsonSerHelper` class. It takes an `OutputStream` as a parameter.
+
+Let's break down the code step by step:
+
+1. `this.out = new OutputStreamWriter(out, UTF_8);`
+   - In this line, a new `OutputStreamWriter` object is created using the `out` parameter and the UTF-8 character encoding. The `OutputStreamWriter` class is a bridge from characters to bytes and writes characters to an `OutputStream`.
+   - The `this.out` is an instance variable of type `OutputStreamWriter` that holds a reference to the created `OutputStreamWriter` object. The `this` keyword here is used to refer to the current instance of the `AJsonSerHelper` class.
+
+2. `state.push(JsonSerState.initial);`
+   - In this line, the `push()` method of an object named `state` is called, passing `JsonSerState.initial` as an argument. `state` is assumed to be an instance of a class that provides a `push()` method to manage a stack of `JsonSerState` objects.
+   - `JsonSerState.initial` is likely an enumeration value representing the initial state of the JSON serialization process.
+
+Overall, this constructor initializes the `out` instance variable with a new `OutputStreamWriter` and pushes the initial serialization state onto the `state` stack.
+3. In line 3, method `startArray` of class `AJsonSerHelper` is invoked.
+4. Certainly! Let's break down the method `startArray()` step by step:
+
+1. `checkAcceptsValueAndPrefixComma();`
+   - This line calls the method `checkAcceptsValueAndPrefixComma()`. It is likely a helper method that checks whether the current state of serialization allows adding a value and adds a comma as necessary before starting a new array. The purpose of this method is to ensure the correct JSON syntax and prevent errors.
+
+2. `state.push(JsonSerState.startOfArray);`
+   - Here, the `push()` method of an object named `state` is called, passing `JsonSerState.startOfArray` as an argument. `state` is assumed to be an instance of a class that manages a stack of `JsonSerState` objects.
+   - `JsonSerState.startOfArray` is probably an enumeration value representing the state when a new array is starting to be serialized.
+
+3. `out.write("[");`
+   - This line writes the opening bracket `[` to the `out` instance variable, which is an `OutputStreamWriter`. It is responsible for writing characters to the underlying output stream.
+   - The opening bracket `[` signifies the beginning of a JSON array.
+
+Overall, the `startArray()` method ensures that a value can be added to the serialization process, updates the state to indicate the beginning of an array, and writes the opening bracket to the output stream.
+5. In line 4, method `writeBooleanLiteral` of class `AJsonSerHelper` is invoked.
+6. Certainly! Let's go through the `writeBooleanLiteral(boolean value)` method step by step:
+
+1. `checkAcceptsValueAndPrefixComma();`
+   - This line calls the `checkAcceptsValueAndPrefixComma()` method. It is likely a helper method that checks if the current state of the serialization allows adding a value and prefixes a comma if necessary. This ensures the correct JSON syntax and prevents errors.
+
+2. `out.write(String.valueOf(value));`
+   - Here, the `write()` method of the `out` instance variable, which is an `OutputStreamWriter`, is called. It writes the string representation of the `value` passed to the method.
+   - `String.valueOf(value)` converts the boolean `value` to its string representation. For example, if `value` is `true`, the resulting string will be `"true"`. If `value` is `false`, the resulting string will be `"false"`.
+
+3. `afterValueWritten();`
+   - This line calls the `afterValueWritten()` method. It is probably a helper method that performs actions after a value is written. This could include updating the serialization state or adding necessary punctuation or formatting.
+
+Overall, the `writeBooleanLiteral(boolean value)` method checks if a value can be added, writes the string representation of the boolean `value` to the output stream, and performs any necessary actions after the value is written.
+7. In line 5, method `writeNumberLiteral` of class `AJsonSerHelper` is invoked.
+8. Certainly! Let's break down the `writeNumberLiteral(long value, int numFracDigits)` method step by step:
+
+1. `checkAcceptsValueAndPrefixComma();`
+   - This line calls the helper method `checkAcceptsValueAndPrefixComma()`. This method ensures that the current state of serialization allows adding a value and prefixes a comma if necessary. This helps maintain correct JSON syntax and prevents errors.
+
+2. `if (value < 0) { out.write('-'); value = -value; }`
+   - Here, the code checks if the number `value` is negative. If it is, the code writes a minus sign (`-`) to the `out` instance variable (an `OutputStreamWriter`). It then takes the absolute value of `value` by applying the negation operator (`-`).
+   - This ensures that the sign of the number is correctly represented and prepares the positive value for writing.
+
+3. `if (numFracDigits == 0) { out.write(String.valueOf(value)); }`
+   - This code checks if `numFracDigits` is equal to zero, which indicates that no fraction part is needed for the number.
+   - If `numFracDigits` is zero, the code writes the integer part of the number, represented by `value`, to the output stream using the `out` instance variable.
+
+4. `else { final long intPart = value / TEN_POW[numFracDigits]; final String fracPart = String.valueOf(1_000_000_000 + value % TEN_POW[numFracDigits]).substring(10 - numFracDigits, 10); out.write(String.valueOf(intPart)); out.write("."); out.write(fracPart); }`
+   - In this block, when `numFracDigits` is not zero, the code calculates the integer and fractional parts of the number using modular arithmetic and division.
+   - `intPart` represents the integer part of the number, calculated by dividing `value` by a power of ten (`TEN_POW[numFracDigits]`).
+   - `fracPart` represents the fractional part of the number. It is obtained by performing modular arithmetic for precision (`value % TEN_POW[numFracDigits]`) and converting it to a string. The substring method is then used to extract the required fractional digits.
+   - The calculated integer and fractional parts are then written to the output stream.
+
+5. `afterValueWritten();`
+   - This line calls the `afterValueWritten()` method, which likely performs necessary actions after a value is written, such as updating the serialization state or adding punctuation or formatting.
+
+Overall, the `writeNumberLiteral(long value, int numFracDigits)` method checks if a value can be added, writes the number to the output stream with the specified precision, and performs any necessary actions after the value is written.
+9. In line 6, method `writeStringLiteral` of class `AJsonSerHelper` is invoked.
+10. Certainly! Let's break down the `writeStringLiteral(String s)` method step by step:
+
+1. `if (s == null) { writeNullLiteral(); return; }`
+   - This line checks if the input string `s` is `null`.
+   - If `s` is `null`, the method calls the `writeNullLiteral()` to write a JSON null literal to the output stream and then returns, ending the execution of the method.
+   - This ensures that if the input string is `null`, it is properly represented as a JSON null value.
+
+2. `checkAcceptsValueAndPrefixComma();`
+   - This line calls the helper method `checkAcceptsValueAndPrefixComma()`. This method ensures that the current serialization state allows adding a value and prefixes a comma if necessary. This is to ensure the correct JSON syntax and prevent errors.
+
+3. `_writeStringLiteral(s);`
+   - Here, the method `_writeStringLiteral(String s)` is called to write the string literal to the output stream.
+   - The method `_writeStringLiteral(String s)` is likely a private helper method in the `AJsonSerHelper` class that handles the actual serialization of the string. It handles encoding, special characters, and any necessary escaping.
+
+4. `afterValueWritten();`
+   - This line calls the `afterValueWritten()` method. This method likely performs actions after a value is written, such as updating the serialization state or adding punctuation or formatting.
+
+Overall, the `writeStringLiteral(String s)` method checks if the input string is `null` and handles it accordingly. If it is not `null`, it ensures that a value can be added, writes the string literal to the output stream, and performs any necessary actions after the value is written.
+11. In line 7, method `endArray` of class `AJsonSerHelper` is invoked.
+12. Certainly! Let's break down the `endArray()` method step by step:
+
+1. `checkInArray();`
+     - This line calls the `checkInArray()` method, which is likely a helper method in the `AJsonSerHelper` class.
+     - This method checks if the current state of serialization allows ending an array. It ensures that the serialization process is currently inside an array and throws an exception if not.
+     - This ensures that the `endArray()` method is invoked only when the serializer is in the correct state, preventing errors.
+
+2. `state.pop();`
+     - In this line, the `pop()` method is called on the `state` object, which is assumed to be a stack-like data structure to manage the state of serialization.
+     - This method removes the topmost state from the stack.
+     - This line signifies that the current array serialization is ending, and the state is updated accordingly.
+
+3. `out.write("]");`
+     - Here, the `write()` method of the `out` instance variable, which is an `OutputStreamWriter`, is called to write the closing square bracket `]` to the output stream.
+     - The closing bracket signifies the end of a JSON array.
+
+4. `afterValueWritten();`
+     - This line calls the `afterValueWritten()` method, which likely carries out any necessary actions after a value is written. This can include updating the serialization state or adding necessary punctuation or formatting.
+
+Overall, the `endArray()` method checks if the serialization is in the correct state to end an array, pops the topmost state from the stack, writes the closing bracket to the output stream, and performs any necessary actions after the value is written.
+13. Take note that in line 8, constructor `String` from class `String` is invoked.
+14. Take note that in line 8, method `toByteArray` from class `ByteArrayOutputStream` is invoked.
+15. Take note that in line 1, an object of class `ByteArrayOutputStream` is created.
+16. In line 2, an object of class `AJsonSerHelper` is instantiated
+17. The given class is `AJsonSerHelper`, which is a utility class that provides helper methods for manually writing JSON to an OutputStream. Here's a breakdown of the class code:
+
+1. `package com.ajjpj.afoundation.io;`
+   - This line declares the package to which the class belongs.
+
+2. Import statements:
+   - `import java.io.*;` - Imports classes related to input/output operations.
+   - `import java.nio.charset.Charset;` - Imports the `Charset` class for specifying character encodings.
+   - `import java.text.DecimalFormat;` - Imports the `DecimalFormat` class for formatting numbers.
+   - `import java.text.DecimalFormatSymbols;` - Imports the `DecimalFormatSymbols` class for number formatting symbols.
+   - `import java.util.ArrayDeque;` - Imports the `ArrayDeque` class for implementing a double-ended queue.
+   - `import java.util.Deque;` - Imports the `Deque` interface for defining a double-ended queue.
+   - `import java.util.Locale;` - Imports the `Locale` class for language and region-specific operations.
+
+3. Javadoc comments:
+   - The Javadoc comments provide high-level explanations about the purpose and usage of the class.
+
+4. Class declaration:
+   - `public class AJsonSerHelper`
+
+5. Constant declarations:
+   - `public static final Charset UTF_8 = Charset.forName("UTF-8");` - Defines a constant `UTF_8` of `Charset` type, representing the UTF-8 character encoding.
+   - `private static final int[] TEN_POW` - Defines a constant array `TEN_POW` that holds powers of ten.
+   - `private static final String[] PATTERNS` - Defines a constant array `PATTERNS` that holds formatting patterns for numbers.
+   - `private static final DecimalFormatSymbols DECIMAL_FORMAT_SYMBOLS` - Defines a constant `DECIMAL_FORMAT_SYMBOLS` used for number formatting.
+  
+6. Instance variables:
+   - `protected final Writer out` - Holds a reference to an `out` object of type `Writer`.
+   - `private final Deque<JsonSerState> state` - Holds a stack-like data structure to manage the state of serialization.
+
+7. Constructor:
+   - `public AJsonSerHelper(OutputStream out)` - Constructs an `AJsonSerHelper` object and initializes the `out` variable with a new `OutputStreamWriter` object based on the given `OutputStream`. It also pushes an initial state onto the `state` stack.
+
+8. Methods:
+   - The class provides several methods for various JSON operations like starting and ending objects/arrays, writing literals, and convenience methods for common JSON operations.
+   - The methods perform various checks and write the corresponding JSON syntax to the `out` instance variable, also updating the state.
+
+9. Upper Bound Generics:
+   - The class provides an upper bound generic method `buildString()` that takes an `AStatement1` callback and builds a JSON string based on the actions performed within the callback. It returns the serialized JSON string.
+
+10. Helper methods:
+   - The class provides some helper methods such as writing commas, colons, validating the state of serialization, and updating the state based on the current operation.
+
+11. `protected JsonSerState state()`:
+   - This method returns the current state from the top of the `state` stack.
+
+Overall, the `AJsonSerHelper` class provides utility methods to aid in manually writing JSON to an output stream. It handles different JSON elements, performs necessary checks, and manages the state of serialization.
+18. Take note that in line 8, an object of class `String` is created.
+

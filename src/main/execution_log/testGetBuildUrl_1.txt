@@ -42,34 +42,26 @@
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ coveralls-maven-plugin ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 44 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/validation/ValidationErrorsTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/json/JsonWriterTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,37] cannot find symbol
-  symbol:   variable yourObject
-  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,73] cannot find symbol
-  symbol:   variable yourObject
-  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,12] illegal start of expression
+[INFO] 4 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.333 s
-[INFO] Finished at: 2023-07-21T20:07:58+06:00
+[INFO] Total time:  4.210 s
+[INFO] Finished at: 2023-07-26T21:11:57+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,37] cannot find symbol
-[ERROR]   symbol:   variable yourObject
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,73] cannot find symbol
-[ERROR]   symbol:   variable yourObject
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,9] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,10] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,11] illegal start of expression
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,12] illegal start of expression
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

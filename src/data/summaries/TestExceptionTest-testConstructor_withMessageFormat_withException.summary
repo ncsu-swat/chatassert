@@ -1,0 +1,3 @@
+0. Take note that in line 1, constructor `RuntimeException` from class `RuntimeException` is invoked.
+1. Take note that in line 1, an object of class `Throwable` is created.
+

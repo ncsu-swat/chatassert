@@ -18,7 +18,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/resources/META-INF/plexus
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ fabric8-maven-plugin-core ---
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ fabric8-maven-plugin-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 107 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target/classes
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/service/ApplyService.java:[181,85] daemonSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
@@ -28,8 +28,8 @@
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesClientUtil.java:[78,51] replicaSets() in io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/ResourceUtil.java:[97,46] WRITE_EMPTY_JSON_ARRAYS in com.fasterxml.jackson.databind.SerializationFeature has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/util/kubernetes/KubernetesResourceUtil.java:[430,40] getItems() in io.fabric8.kubernetes.api.model.BaseKubernetesListFluentImpl has been deprecated
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/main/java/io/fabric8/maven/core/config/ProcessorConfig.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- plexus-component-metadata:2.0.0:generate-metadata (default) @ fabric8-maven-plugin-core ---
 [INFO] Discovered 1 component descriptors(s)
@@ -72,11 +72,11 @@
 [INFO] Copying file service/error-services
 [INFO] Copying file service/test-services
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fabric8-maven-plugin-core ---
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ fabric8-maven-plugin-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 51 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fabric8-maven-plugin/core/src/test/java/io/fabric8/maven/core/config/ProcessorConfigTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ fabric8-maven-plugin-core ---
 [INFO] 
@@ -93,6 +93,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.092 s
-[INFO] Finished at: 2023-07-13T22:44:52+06:00
+[INFO] Total time:  7.127 s
+[INFO] Finished at: 2023-07-26T08:17:24+06:00
 [INFO] ------------------------------------------------------------------------

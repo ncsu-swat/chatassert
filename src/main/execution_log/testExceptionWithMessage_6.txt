@@ -53,7 +53,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 s - in org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s - in org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -62,6 +62,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.225 s
-[INFO] Finished at: 2023-07-13T23:41:40+06:00
+[INFO] Total time:  10.208 s
+[INFO] Finished at: 2023-07-26T09:28:41+06:00
 [INFO] ------------------------------------------------------------------------

@@ -49,22 +49,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,38] cannot find symbol
-  symbol:   variable HashMap
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,39] cannot find symbol
+  symbol:   variable expectedValue
   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,54] cannot find symbol
+  symbol:   variable actualValue
+  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.592 s
-[INFO] Finished at: 2023-07-21T20:46:43+06:00
+[INFO] Total time:  5.531 s
+[INFO] Finished at: 2023-07-26T21:17:24+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,38] cannot find symbol
-[ERROR]   symbol:   variable HashMap
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,39] cannot find symbol
+[ERROR]   symbol:   variable expectedValue
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,54] cannot find symbol
+[ERROR]   symbol:   variable actualValue
+[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

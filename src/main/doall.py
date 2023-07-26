@@ -32,10 +32,10 @@ GLOBAL_TRIALS = 30  # Maximum number of interactions (GT in the paper)
 LOCAL_TRIALS = 3 # Maximum number of retries based on compilation and execution feedback (LT in the paper)
 
 # Switches for ablation study
-FUZZ_REPAIR = True      # Ablation Study No. 4
+FUZZ_REPAIR = False     # Ablation Study No. 4
 FEEDBACK_REPAIR = True  # Ablation Study No. 3
 SUMMARIZATION = True    # Ablation Study No. 2
-ONE_SHOT = False        # Ablation Study No. 1
+ONE_SHOT = True         # Ablation Study No. 1
 
 # Switches
 EXECUTE_GENERATION = True # Only cache summaries or execute oracle generation conversation too?
@@ -99,7 +99,7 @@ def follow_up(proc_q, repo_dir, oracle_id, file_path, subRepo, className, test_n
         print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
         if feedback is not None:
             if len(feedback) > 0:
-                if FUZZ_REPAIR:        # (Ablation Study No. 2)
+                if FUZZ_REPAIR:        # (Ablation Study No. 4)
                     # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
                     fuzzed_mutants = adhoc_repair(gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
 
@@ -111,7 +111,7 @@ def follow_up(proc_q, repo_dir, oracle_id, file_path, subRepo, className, test_n
                             gpt_oracle = mutant
                             break
 
-                if FEEDBACK_REPAIR:    # (Ablation Study No. 1)
+                if FEEDBACK_REPAIR:    # (Ablation Study No. 3)
                     if feedback is None or len(feedback) > 0:
                         feedback_context.insert(role="user", content=feedback)
 
@@ -322,194 +322,198 @@ def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_na
 if __name__ == "__main__":
     global project
 
-    v1_flag, v2_flag = False, False
-    arg = " ".join(sys.argv)
-    if 'v1' in arg: 
-        GLOBAL_TRIALS = 1 # L-One (Zero)
-        v1_flag = True
-    if 'v2' in arg: 
-        # Default GLOBAL_TRIALS = 30
-        v2_flag = True
+    try:
+        v1_flag, v2_flag = False, False
+        arg = " ".join(sys.argv)
+        if 'v1' in arg: 
+            GLOBAL_TRIALS = 1 # L-One (Zero)
+            v1_flag = True
+        if 'v2' in arg: 
+            # Default GLOBAL_TRIALS = 30
+            v2_flag = True
 
-    # Add condition for only generating and caching summaries (which can be used later)
-    # Add conditions for ablation study
+        # Add condition for only generating and caching summaries (which can be used later)
+        # Add conditions for ablation study
 
-    # Input data sample id (e.g. sample_1.json)
-    sample_id = sys.argv[-1]
-    print('SAMPLE: sample_{}.json'.format(sample_id))
+        # Input data sample id (e.g. sample_1.json)
+        sample_id = sys.argv[-1]
+        print('SAMPLE: sample_{}.json'.format(sample_id))
 
-    testId = 0
+        testId = 0
 
-    # Initialize a PY4J client to communicate with the Java gateway server
-    gateway = JavaGateway()
+        # Initialize a PY4J client to communicate with the Java gateway server
+        gateway = JavaGateway()
 
-    with open(os.path.join(PRO_DIR, "res/res_all/res_all_{}.csv".format(sample_id)), "w+") as resAll, open(os.path.join(PRO_DIR, "res/res_pass/res_pass_{}.csv".format(sample_id)), "w+") as resPass:
-        resAllWriter = csv.writer(resAll, delimiter='\t')
-        resPassWriter = csv.writer(resPass, delimiter='\t')
+        with open(os.path.join(PRO_DIR, "res/res_all/res_all_{}.csv".format(sample_id)), "w+") as resAll, open(os.path.join(PRO_DIR, "res/res_pass/res_pass_{}.csv".format(sample_id)), "w+") as resPass:
+            resAllWriter = csv.writer(resAll, delimiter='\t')
+            resPassWriter = csv.writer(resPass, delimiter='\t')
 
-        resAllWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
-        resPassWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
+            resAllWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
+            resPassWriter.writerow(["TestID", "VariantID", "Project", "TestClass", "TestName", "TrueOracle", "GenOracle", "Time", "Corr", "BuildErr"])
 
-        corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
+            corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
-        configuration_file = os.path.join(PRO_DIR, "sample_{}.json".format(sample_id))
-        with open(configuration_file, 'r') as f:
-            data = json.load(f)
-            for project_data in data["projects"]:
-                print('\n-----------------------\nPROJECT NAME: {}\{}\n-----------------------\n'.format(project_data["userName"], project_data["repoName"]))
+            configuration_file = os.path.join(PRO_DIR, "sample_{}.json".format(sample_id))
+            with open(configuration_file, 'r') as f:
+                data = json.load(f)
+                for project_data in data["projects"]:
+                    print('\n-----------------------\nPROJECT NAME: {}\{}\n-----------------------\n'.format(project_data["userName"], project_data["repoName"]))
 
-                userName = project_data["userName"]
-                repoName = project_data["repoName"]
-                gitURL = "git@github.com:{}/{}.git".format(userName, repoName)
-                commit = project_data["commitSHA"]
-                allTests = project_data["allTests"]
-                
-                # removing existing repo
-                if repoName in os.listdir('../tmp/repos'):
-                    os.system('rm -rf ../tmp/repos/{}'.format(repoName))
-                
-                # create project object
-                project = Project(repoName, "", gitURL, commit, gateway)
-
-                for testClass in allTests:
-                    className = testClass["className"]
-                    classPath = testClass["classPath"]
-                    filePath = os.path.join(project.repo_dir, classPath)
-                    classTests = testClass["classTests"]
-                    subRepo = testClass["subRepo"]
-
-                    before_name = ""
-                    before_code = ""
-                    after_code = ""
-
-                    if "before" in testClass:
-                        # before_code = "".join(read_file(filePath, int(testClass["before"]["startLn"]), int(testClass["before"]["endLn"])))
-                        before_name = testClass["before"]["setupName"]
-                        before_code = testClass["before"]["setupMethod"]
-                    if "after" in testClass:
-                        after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
-
-                    # Make sure to copy only the subRepo from the cache directory to the working directory
-                    project.copy_cache(subRepo)
-
-                    # Make sure that all dependencies are added to pom.xml
-                    project.ensure_dependencies(subRepo)
-
-                    # Fetch dependency jar paths to pass to the JarTypeSolver
-                    depPaths = list(project.list_dependencies(subRepo))
+                    userName = project_data["userName"]
+                    repoName = project_data["repoName"]
+                    gitURL = "git@github.com:{}/{}.git".format(userName, repoName)
+                    commit = project_data["commitSHA"]
+                    allTests = project_data["allTests"]
                     
-                    backup_test_file(filePath)
+                    # removing existing repo
+                    if repoName in os.listdir('../tmp/repos'):
+                        os.system('rm -rf ../tmp/repos/{}'.format(repoName))
+                    
+                    # create project object
+                    project = Project(repoName, "", gitURL, commit, gateway)
 
-                    print("\n-----------------------------------------\nAnalyzing Oracles for Test Class: {}\n-----------------------------------------\n".format(className))
-                    for test in classTests:
-                        # Instantiate oracle generation conversation context
-                        context = Context(_name=Context.GENERATION_CONTEXT_NAME)
+                    for testClass in allTests:
+                        className = testClass["className"]
+                        classPath = testClass["classPath"]
+                        filePath = os.path.join(project.repo_dir, classPath)
+                        classTests = testClass["classTests"]
+                        subRepo = testClass["subRepo"]
 
-                        # Restore test file from backup
-                        restore_test_file(filePath)
+                        before_name = ""
+                        before_code = ""
+                        after_code = ""
 
-                        # Get Test Code
-                        test_name = test["testName"]
-                        test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
-                        test_lines = tecofy_testlines(test_lines)
-                        test_lines = place_placeholder(test_lines, int(test["startLn"]), int(test["oracleLn"]))
-                        if len(test_lines) == 0: continue
-                        test_code = " ".join(test_lines)
+                        if "before" in testClass:
+                            # before_code = "".join(read_file(filePath, int(testClass["before"]["startLn"]), int(testClass["before"]["endLn"])))
+                            before_name = testClass["before"]["setupName"]
+                            before_code = testClass["before"]["setupMethod"]
+                        if "after" in testClass:
+                            after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
 
-                        # Get Focal Code
-                        focal_name = test["focalName"]
-                        focal_path = os.path.join(project.repo_dir, test["focalFile"])
-                        focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
+                        # Make sure to copy only the subRepo from the cache directory to the working directory
+                        project.copy_cache(subRepo)
 
-                        # Get Summarization (Ablation Study No. 3)
-                        summaries = None
-                        if SUMMARIZATION:
-                            print('Running Summarization Queries. Please wait for ChatGPT to build a knowledge base.\n')
-                            summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""))
+                        # Make sure that all dependencies are added to pom.xml
+                        project.ensure_dependencies(subRepo)
 
-                        if not EXECUTE_GENERATION: continue
+                        # Fetch dependency jar paths to pass to the JarTypeSolver
+                        depPaths = list(project.list_dependencies(subRepo))
+                        
+                        backup_test_file(filePath)
 
-                        # Get one Example from the same test file (Ablation Study No. 4)
-                        example_method = None
-                        if ONE_SHOT:
-                            print('Finding an Example that is a best match with the Test Method')
-                            example_method = find_similar(className, test_name, test_code)
+                        print("\n-----------------------------------------\nAnalyzing Oracles for Test Class: {}\n-----------------------------------------\n".format(className))
+                        for test in classTests:
+                            # Instantiate oracle generation conversation context
+                            context = Context(_name=Context.GENERATION_CONTEXT_NAME)
 
-                        # Get Oracle Code
-                        oracle_code = test['oracle']
+                            # Restore test file from backup
+                            restore_test_file(filePath)
 
-                        global first_case_done, first_pass_case_done
-                        first_pass_case_done, first_case_done = False, False
-                        target_number = TARGET_NUMBER
-                        already_gen_oras = set()
+                            # Get Test Code
+                            test_name = test["testName"]
+                            test_lines = read_file(filePath, int(test["startLn"]), int(test["endLn"]))
+                            test_lines = tecofy_testlines(test_lines)
+                            test_lines = place_placeholder(test_lines, int(test["startLn"]), int(test["oracleLn"]))
+                            if len(test_lines) == 0: continue
+                            test_code = " ".join(test_lines)
 
-                        for oracle_id in range(GLOBAL_TRIALS):
-                            print('\nORACLE ID: {}\n'.format(oracle_id))
+                            # Get Focal Code
+                            focal_name = test["focalName"]
+                            focal_path = os.path.join(project.repo_dir, test["focalFile"])
+                            focal_code = "".join(read_file(os.path.join(project.repo_dir, test["focalFile"]), test["focalStartLn"], test["focalEndLn"])) if "focalFile" in test else ""
 
-                            start_time = time.time()
+                            # Get Summarization (Ablation Study No. 2)
+                            summaries = None
+                            if SUMMARIZATION:
+                                print('Running Summarization Queries. Please wait for ChatGPT to build a knowledge base.\n')
+                                summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""))
 
-                            if target_number == 0: break # Already produced TARGET_NUMBER of plausible oracles for this test
+                            if not EXECUTE_GENERATION: continue
 
-                            res, feedback = None, None
-                            # print('\nTEST CODE: {}\n'.format(test_code))
+                            # Get one Example from the same test file (Ablation Study No. 1)
+                            example_method = None
+                            if ONE_SHOT:
+                                print('Finding an Example that is a best match with the Test Method')
+                                example_method = find_similar(className, test_name, test_code)
 
-                            if v1_flag: # No feedback (L-One)
-                                gpt_oracle = ask(oracle_id, context, summaries, example_method, test_name, before_code, test_code, focal_code)
-                                if gpt_oracle is None: continue
+                            # Get Oracle Code
+                            oracle_code = test['oracle']
 
-                                if gpt_oracle not in already_gen_oras:
-                                    already_gen_oras.add(gpt_oracle)
-                                    res, feedback = collect_feedback(project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle)
+                            global first_case_done, first_pass_case_done
+                            first_pass_case_done, first_case_done = False, False
+                            target_number = TARGET_NUMBER
+                            already_gen_oras = set()
 
-                            elif v2_flag: # Feedback loop
-                                gpt_oracle = ask(oracle_id, context, summaries, example_method, test_name, before_code, test_code, focal_code)
+                            for oracle_id in range(GLOBAL_TRIALS):
+                                print('\nORACLE ID: {}\n'.format(oracle_id))
 
-                                # gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
+                                start_time = time.time()
 
-                                # print("\nGPT ORACLE: {}\n".format(gpt_oracle))
-                                if gpt_oracle is None: continue
+                                if target_number == 0: break # Already produced TARGET_NUMBER of plausible oracles for this test
 
-                                if gpt_oracle not in already_gen_oras:
-                                    already_gen_oras.add(gpt_oracle)
-                                
-                                    # Follow-up with feedback loop
-                                    # global proc_q
-                                    res, feedback = None, None
-                                    proc_q = Queue()
-                                    p = Process(target=follow_up, args=(proc_q, project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code))
-                                    p.start()
-                                    p.join(timeout=45)
-                                    if p.is_alive():
-                                        print('\nEXECUTION TIMEOUT\n')
-                                        p.terminate()
-                                    else:
-                                        res = proc_q.get()
-                                        feedback = proc_q.get()
-                                        gpt_oracle = proc_q.get()
+                                res, feedback = None, None
+                                # print('\nTEST CODE: {}\n'.format(test_code))
 
-                                    # res, feedback, gpt_oracle = follow_up(gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
-                                    # print('\nFEEDBACK:\n' + str(feedback))
-
+                                if v1_flag: # No feedback (L-One)
+                                    gpt_oracle = ask(oracle_id, context, summaries, example_method, test_name, before_code, test_code, focal_code)
                                     if gpt_oracle is None: continue
 
-                                    if feedback is None or len(feedback) > 0:
-                                        # Explicitly tell ChatGPT to avoid gpt_oracle
-                                        context.insert(role="user", content="AVOID generating the assertion `" + gpt_oracle + "`, because it results in a build failure.")
+                                    if gpt_oracle not in already_gen_oras:
+                                        already_gen_oras.add(gpt_oracle)
+                                        res, feedback = collect_feedback(project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle)
 
-                                    # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
-                                    elif len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
-                                        # Oracle compiles and runs - add it to main conversation history
-                                        context.insert(role="user", content="GOOD. `" + gpt_oracle + "` is a plausible assertion. So, AVOID generating the assertion `" + gpt_oracle + "` again because you have already generated it.")
-                                        # SUCCESS
-                                        target_number -= 1
+                                elif v2_flag: # Feedback loop
+                                    gpt_oracle = ask(oracle_id, context, summaries, example_method, test_name, before_code, test_code, focal_code)
 
-                            # Write results to csv file
-                            write_res(gateway, resPassWriter, resAllWriter, testId, oracle_id, userName, repoName, className, test_name, gpt_oracle, oracle_code, start_time, time.time(), feedback)
+                                    # gpt_oracle = 'org.junit.Assert.assertTrue(((ODirtyManager) doc.getReal()).newRecords.isEmpty());'
 
-                        # Restore test file from backup
-                        restore_test_file(filePath)
+                                    # print("\nGPT ORACLE: {}\n".format(gpt_oracle))
+                                    if gpt_oracle is None: continue
 
-                        # Increment test counter
-                        testId += 1
+                                    if gpt_oracle not in already_gen_oras:
+                                        already_gen_oras.add(gpt_oracle)
+                                    
+                                        # Follow-up with feedback loop
+                                        # global proc_q
+                                        res, feedback = None, None
+                                        proc_q = Queue()
+                                        p = Process(target=follow_up, args=(proc_q, project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code))
+                                        p.start()
+                                        p.join(timeout=60)
+                                        if p.is_alive():
+                                            print('\nEXECUTION TIMEOUT\n')
+                                            p.terminate()
+                                        else:
+                                            res = proc_q.get()
+                                            feedback = proc_q.get()
+                                            gpt_oracle = proc_q.get()
 
-                        # exit(0)
+                                        # res, feedback, gpt_oracle = follow_up(gateway, project, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code)
+                                        # print('\nFEEDBACK:\n' + str(feedback))
+
+                                        if gpt_oracle is None: continue
+
+                                        if feedback is None or len(feedback) > 0:
+                                            # Explicitly tell ChatGPT to avoid gpt_oracle
+                                            context.insert(role="user", content="AVOID generating the assertion `" + gpt_oracle + "`, because it results in a build failure.")
+
+                                        # # Check if the returned oracle compiles and runs and if yes, add it to main conversation history (the main conversation history should not contain any invalid assertion that does not compile or run)
+                                        elif len(gpt_oracle) > 0 and feedback is not None and len(feedback) == 0:
+                                            # Oracle compiles and runs - add it to main conversation history
+                                            context.insert(role="user", content="GOOD. `" + gpt_oracle + "` is a plausible assertion. So, AVOID generating the assertion `" + gpt_oracle + "` again because you have already generated it.")
+                                            # SUCCESS
+                                            target_number -= 1
+
+                                # Write results to csv file
+                                write_res(gateway, resPassWriter, resAllWriter, testId, oracle_id, userName, repoName, className, test_name, gpt_oracle, oracle_code, start_time, time.time(), feedback)
+
+                            # Restore test file from backup
+                            restore_test_file(filePath)
+
+                            # Increment test counter
+                            testId += 1
+
+                            # exit(0)
+    except Exception as e:
+        print('Exception has occurred: {}\n'.format(e))
+        traceback.print_exc()

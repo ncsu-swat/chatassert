@@ -14,21 +14,21 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ fluent-logger ---
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ fluent-logger ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java uses or overrides a deprecated API.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/main/java/org/fluentd/logger/FluentLogger.java: Recompile with -Xlint:deprecation for details.
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ fluent-logger ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ fluent-logger ---
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ fluent-logger ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java uses unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: Recompile with -Xlint:unchecked for details.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java uses unchecked or unsafe operations.
+[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.8.1:test (default-test) @ fluent-logger ---
 [INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/surefire-reports
@@ -37,15 +37,28 @@
  T E S T S
 -------------------------------------------------------
 Running org.fluentd.logger.TestFluentLogFactory
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.293 sec
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.293 sec <<< FAILURE!
 
 Results :
 
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+Failed tests: 
+  testGetLogger(org.fluentd.logger.TestFluentLogFactory)
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.748 s
-[INFO] Finished at: 2023-07-12T23:52:53+06:00
+[INFO] Total time:  7.730 s
+[INFO] Finished at: 2023-07-26T04:55:19+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.8.1:test (default-test) on project fluent-logger: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

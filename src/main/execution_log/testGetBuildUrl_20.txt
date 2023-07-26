@@ -49,32 +49,26 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,42] cannot find symbol
-  symbol:   variable expectedValue
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,40] cannot find symbol
+  symbol:   variable expectedObject
   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,80] cannot find symbol
-  symbol:   variable actualValue
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,56] cannot find symbol
+  symbol:   variable actualObject
   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,57] cannot find symbol
-  symbol:   variable properties
-  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[INFO] 3 errors 
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.177 s
-[INFO] Finished at: 2023-07-21T20:49:35+06:00
+[INFO] Total time:  6.231 s
+[INFO] Finished at: 2023-07-26T21:17:56+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,42] cannot find symbol
-[ERROR]   symbol:   variable expectedValue
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,40] cannot find symbol
+[ERROR]   symbol:   variable expectedObject
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,80] cannot find symbol
-[ERROR]   symbol:   variable actualValue
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,57] cannot find symbol
-[ERROR]   symbol:   variable properties
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,56] cannot find symbol
+[ERROR]   symbol:   variable actualObject
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
 [ERROR] -> [Help 1]
 [ERROR] 

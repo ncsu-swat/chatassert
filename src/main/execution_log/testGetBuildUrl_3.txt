@@ -49,27 +49,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,37] cannot find symbol
-  symbol:   variable yourObjectInstance
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,40] cannot find symbol
+  symbol:   variable SomeClass
   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,79] cannot find symbol
-  symbol:   method getProperty(java.lang.String)
-  location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[INFO] 2 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.680 s
-[INFO] Finished at: 2023-07-21T20:13:40+06:00
+[INFO] Total time:  4.540 s
+[INFO] Finished at: 2023-07-26T21:13:05+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,37] cannot find symbol
-[ERROR]   symbol:   variable yourObjectInstance
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project coveralls-maven-plugin: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[44,40] cannot find symbol
+[ERROR]   symbol:   variable SomeClass
 [ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/src/test/java/org/eluder/coveralls/maven/plugin/service/ShippableTest.java:[69,79] cannot find symbol
-[ERROR]   symbol:   method getProperty(java.lang.String)
-[ERROR]   location: class org.eluder.coveralls.maven.plugin.service.ShippableTest
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

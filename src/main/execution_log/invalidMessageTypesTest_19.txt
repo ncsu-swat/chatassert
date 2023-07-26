@@ -15,7 +15,7 @@
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ parcefone ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 5 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/classes
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
+[WARNING] [options] bootstrap class path not set in conjunction with -source 7
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ parcefone ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -24,40 +24,25 @@
 [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ parcefone ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/test-classes
-[INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
-[INFO] 1 warning
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[271,38] error: cannot find symbol
-  symbol:   variable expectedValue
-  location: class CEFParserTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[271,53] error: cannot find symbol
-  symbol:   variable actualValue
-  location: class CEFParserTest
-[INFO] 2 errors 
-[INFO] -------------------------------------------------------------
+[WARNING] [options] bootstrap class path not set in conjunction with -source 7
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ parcefone ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.fluenda.parcefone.parser.CEFParserTest
+0    [main] ERROR com.fluenda.parcefone.parser.CEFParser  â com.fluenda.parcefone.event.CEFHandlingException: Error setting value to field rt
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.643 s
-[INFO] Finished at: 2023-07-21T13:05:19+06:00
+[INFO] Total time:  3.001 s
+[INFO] Finished at: 2023-07-26T20:41:30+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project parcefone: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[271,38] error: cannot find symbol
-[ERROR]   symbol:   variable expectedValue
-[ERROR]   location: class CEFParserTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/ParCEFone/src/test/java/com/fluenda/parcefone/parser/CEFParserTest.java:[271,53] error: cannot find symbol
-[ERROR]   symbol:   variable actualValue
-[ERROR]   location: class CEFParserTest
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

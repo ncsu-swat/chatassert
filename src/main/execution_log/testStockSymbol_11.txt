@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1689279087667
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1690345808663
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -49,7 +49,6 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Copying guava-26.0-jre.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/guava-26.0-jre.jar
 [INFO] Copying log4j-1.2.17.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/log4j-1.2.17.jar
 [INFO] Copying args4j-2.33.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/args4j-2.33.jar
-[INFO] Copying jaxb-api-2.3.0.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/jaxb-api-2.3.0.jar
 [INFO] 
 [INFO] --- depends-maven-plugin:1.4.0:generate-depends-file (generate-depends-file) @ tcl-regex ---
 [INFO] Created: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/classes/META-INF/maven/dependencies.properties
@@ -68,7 +67,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.basistech.tclre.RegressionTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.257 s - in com.basistech.tclre.RegressionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.378 s - in com.basistech.tclre.RegressionTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -80,6 +79,6 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.138 s
-[INFO] Finished at: 2023-07-14T02:11:33+06:00
+[INFO] Total time:  10.188 s
+[INFO] Finished at: 2023-07-26T10:30:16+06:00
 [INFO] ------------------------------------------------------------------------

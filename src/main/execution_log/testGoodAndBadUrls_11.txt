@@ -12,34 +12,29 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 2 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ yubico-validation-client2 ---
 [INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/classes
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ yubico-validation-client2 ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ yubico-validation-client2 ---
 [INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ yubico-validation-client2 ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.yubico.client.v2.YubicoClientTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.823 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.184 s
-[INFO] Finished at: 2023-07-13T13:37:38+06:00
+[INFO] Total time:  1.265 s
+[INFO] Finished at: 2023-07-26T06:50:06+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.0.2:testCompile (default-testCompile) on project yubico-validation-client2: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/java/com/yubico/client/v2/YubicoClientTest.java:[149,54] error: bad operand types for binary operator '<'
+[ERROR] 
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

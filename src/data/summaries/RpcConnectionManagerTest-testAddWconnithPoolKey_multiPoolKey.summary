@@ -1,0 +1,46 @@
+0. In line 1, method `getAConn` of class `RpcConnectionManagerTest` is invoked.
+1. The method `getAConn()` is a private method defined in the class `RpcConnectionManagerTest`. It is used to obtain a connection. Here is a breakdown of what the code does:
+
+1. The method is declared as `private`, which means it can only be accessed within the same class.
+2. The method has a return type of `Connection`, indicating that it will return an object of the `Connection` class.
+3. The method does not take any arguments.
+4. Inside the method, there is a try-catch block to handle a `RemotingException`.
+5. In the `try` block, the code calls a method `create()` on an object named `cm`. It passes `ip`, `port`, and `1000` as arguments to this method. This method is responsible for creating a connection.
+6. If the `create()` method does not throw a `RemotingException`, the created connection is returned.
+7. If a `RemotingException` is thrown, the error message "Create connection failed!" is logged using a `logger` object of some kind.
+8. Finally, if the connection could not be created or if there was an exception, `null` is returned.
+
+Overall, it seems like this method tries to create a connection using a `cm` object and returns that connection if it is created successfully. Otherwise, it returns `null`.
+2. In line 2, method `add` of class `DefaultConnectionManager` is invoked.
+3. This method belongs to the class `DefaultConnectionManager` and is used to add a `Connection` object to a connection pool identified by a `poolKey`. Let's break down the code:
+
+1. The method is annotated with `@Override`, indicating that it overrides a method from a super class or interface.
+2. The method does not have a return type (`void`), indicating that it does not return any value.
+3. The method takes two parameters: a `Connection` object named `connection` and a `String` parameter named `poolKey`.
+4. Inside the method, a variable `pool` is declared and initialized as `null`.
+5. There is a try-catch block to handle any exceptions that may occur.
+6. In the try block, the code calls a method `getConnectionPoolAndCreateIfAbsent()` using the `poolKey`. This method is responsible for obtaining or creating an empty connection pool.
+7. If an exception occurs during the execution of `getConnectionPoolAndCreateIfAbsent()`, the catch block logs the exception message along with any stack trace.
+8. If the `pool` object is not `null` (indicating that a connection pool is obtained or created successfully), the `connection` object is added to the pool using the `add()` method of the `pool` object.
+9. If the `pool` object is `null`, indicating a failure in obtaining or creating the connection pool, an error message is logged.
+
+In summary, this method adds a `Connection` object to a connection pool identified by a `poolKey`. It first tries to obtain or create an empty connection pool using the `getConnectionPoolAndCreateIfAbsent()` method, and then adds the `connection` object to the pool if successful. If any exceptions occur during the process, appropriate error messages are logged.
+4. Take note that in line 3, method `add` from class `DefaultConnectionManager` is invoked.
+5. Take note that in line 4, method `add` from class `DefaultConnectionManager` is invoked.
+6. In line 1, an object of class `Connection` is instantiated
+7. The given code is a class called `Connection` in a package named `com.alipay.remoting`. It represents an abstraction of a socket channel and provides various methods and attributes related to the connection. Here is a summary of the key parts of the code:
+
+1. The class has a private static logger object defined using `BoltLoggerFactory`.
+2. The class has a `Channel` object called `channel`, which represents the underlying Netty channel associated with the connection.
+3. It has a `ConcurrentHashMap` called `invokeFutureMap`, which stores mapping between invokeId and `InvokeFuture` objects.
+4. It defines several `AttributeKey`s for storing attributes related to the connection, such as `CONNECTION`, `HEARTBEAT_COUNT`, `HEARTBEAT_SWITCH`, `PROTOCOL`, and `VERSION`.
+5. The class has various constructors that initialize the connection with the associated channel, protocol code, version, and URL.
+6. The `init()` method is a private method that sets the initial attributes of the channel.
+7. There are getter and setter methods for accessing the remote and local addresses, IP addresses, and ports associated with the connection.
+8. The class provides methods for managing `InvokeFuture` objects, such as adding, getting, and removing them from the `invokeFutureMap`.
+9. There is a `close()` method that closes the connection by closing the associated channel.
+10. The class provides methods for managing pool keys and attributes associated with the connection.
+11. Finally, there are getter and setter methods for the `invokeFutureMap` and the `Channel` object.
+
+Overall, this class represents a connection abstraction with various methods and attributes for managing the connection and associated operations.
+

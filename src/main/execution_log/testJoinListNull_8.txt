@@ -30,20 +30,20 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,45] cannot find symbol
-  symbol:   variable FOCAL
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,38] cannot find symbol
+  symbol:   method joinListNull()
   location: class me.zzp.util.SeqTest
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.986 s
-[INFO] Finished at: 2023-07-13T23:10:49+06:00
+[INFO] Total time:  2.117 s
+[INFO] Finished at: 2023-07-26T08:45:32+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project jactiverecord: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,45] cannot find symbol
-[ERROR]   symbol:   variable FOCAL
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jactiverecord/src/test/java/me/zzp/util/SeqTest.java:[22,38] cannot find symbol
+[ERROR]   symbol:   method joinListNull()
 [ERROR]   location: class me.zzp.util.SeqTest
 [ERROR] 
 [ERROR] -> [Help 1]

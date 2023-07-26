@@ -35,7 +35,7 @@
  T E S T S
 -------------------------------------------------------
 Running me.zzp.util.SeqTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec
 
 Results :
 
@@ -44,6 +44,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.374 s
-[INFO] Finished at: 2023-07-13T22:59:10+06:00
+[INFO] Total time:  2.381 s
+[INFO] Finished at: 2023-07-26T08:38:21+06:00
 [INFO] ------------------------------------------------------------------------

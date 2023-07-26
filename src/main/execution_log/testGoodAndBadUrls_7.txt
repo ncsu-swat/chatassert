@@ -12,16 +12,14 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 2 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ yubico-validation-client2 ---
 [INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/classes
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ yubico-validation-client2 ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ yubico-validation-client2 ---
 [INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ yubico-validation-client2 ---
@@ -31,7 +29,7 @@
  T E S T S
 -------------------------------------------------------
 Running com.yubico.client.v2.YubicoClientTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.122 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.956 sec
 
 Results :
 
@@ -40,6 +38,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.405 s
-[INFO] Finished at: 2023-07-13T13:36:50+06:00
+[INFO] Total time:  4.052 s
+[INFO] Finished at: 2023-07-26T06:49:37+06:00
 [INFO] ------------------------------------------------------------------------

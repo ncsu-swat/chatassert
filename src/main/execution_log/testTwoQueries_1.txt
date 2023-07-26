@@ -12,16 +12,14 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 2 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ yubico-validation-client2 ---
 [INFO] Compiling 14 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/classes
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ yubico-validation-client2 ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ yubico-validation-client2 ---
-[INFO] Changes detected - recompiling the module!
+[INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ yubico-validation-client2 ---
 [INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/yubico-java-client/v2client/target/test-classes
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ yubico-validation-client2 ---
@@ -31,8 +29,8 @@
  T E S T S
 -------------------------------------------------------
 Running com.yubico.client.v2.YubicoClientTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.789 sec <<< FAILURE!
-testTwoQueries(com.yubico.client.v2.YubicoClientTest)  Time elapsed: 1.742 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.088 sec <<< FAILURE!
+testTwoQueries(com.yubico.client.v2.YubicoClientTest)  Time elapsed: 2.04 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<OK> but was:<REPLAYED_OTP>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -83,8 +81,8 @@ Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.920 s
-[INFO] Finished at: 2023-07-21T19:16:41+06:00
+[INFO] Total time:  3.695 s
+[INFO] Finished at: 2023-07-26T21:07:15+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project yubico-validation-client2: There are test failures.
 [ERROR] 

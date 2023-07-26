@@ -6,7 +6,6 @@
 [INFO] ----------------------------[ maven-plugin ]----------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ coveralls-maven-plugin ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/coveralls-maven-plugin/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ coveralls-maven-plugin ---
 [INFO] 
@@ -53,7 +52,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s - in org.eluder.coveralls.maven.plugin.validation.ValidationExceptionTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -62,6 +61,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.720 s
-[INFO] Finished at: 2023-07-13T23:39:55+06:00
+[INFO] Total time:  10.555 s
+[INFO] Finished at: 2023-07-26T09:26:26+06:00
 [INFO] ------------------------------------------------------------------------

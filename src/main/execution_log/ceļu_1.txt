@@ -16,7 +16,7 @@
 [INFO] Copying 16 resources
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ morphology ---
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ morphology ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/main/java/lv/semti/morphology/analyzer/Word.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/main/java/lv/semti/morphology/analyzer/Word.java uses or overrides a deprecated API.
@@ -28,7 +28,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 6 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ morphology ---
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ morphology ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/TagSetTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/TagSetTest.java uses or overrides a deprecated API.
@@ -38,22 +38,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,49] cannot find symbol
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,39] cannot find symbol
+  symbol:   variable expectedCount
+  location: class lv.semti.morphology.Testi.MorphologyTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,58] cannot find symbol
   symbol:   method getWordformCount()
-  location: class java.lang.Integer
-[INFO] 1 error
+  location: variable ceÄ¼u of type lv.semti.morphology.analyzer.Word
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.439 s
-[INFO] Finished at: 2023-07-21T14:00:36+06:00
+[INFO] Total time:  3.827 s
+[INFO] Finished at: 2023-07-26T20:55:07+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project morphology: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,49] cannot find symbol
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project morphology: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,39] cannot find symbol
+[ERROR]   symbol:   variable expectedCount
+[ERROR]   location: class lv.semti.morphology.Testi.MorphologyTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/morphology/src/test/java/lv/semti/morphology/Testi/MorphologyTest.java:[166,58] cannot find symbol
 [ERROR]   symbol:   method getWordformCount()
-[ERROR]   location: class java.lang.Integer
-[ERROR] 
+[ERROR]   location: variable ceÄ¼u of type lv.semti.morphology.analyzer.Word
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

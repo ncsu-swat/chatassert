@@ -1,0 +1,33 @@
+0. In line 2, method `array` of class `Seq` is invoked.
+1. The given method is called `array` and it is a part of the `Seq` class. 
+
+The `array` method is a generic method, meaning it can work with different types of objects. The generic type parameter is represented by `<E>`, which stands for the element type.
+
+The method takes in a variable number of arguments of type `E`, represented by the `args` parameter. These arguments can be multiple elements of any type that match the generic type parameter.
+
+Inside the method, the `array` method simply returns the same arguments it received as an array. It does this by returning the `args` parameter as is. 
+
+In summary, the `array` method takes a series of elements of type `E` and returns an array containing these elements.
+2. In line 2, method `assignAt` of class `Seq` is invoked.
+3. The given code defines a static method called `assignAt` in the `Seq` class, which takes in three parameters:
+
+1. `a` - an integer array, which represents the given array to be modified.
+2. `indexes` - an array of `Integer` objects, which represents the positions in the array `a` that need to be assigned new values.
+3. `values` - a variable number of integer values corresponding to the indexes, which represents the new values to be assigned at the specified positions in `a`.
+
+The method returns the modified array `a` after the assignment.
+
+In the method implementation:
+
+1. First, it checks if the lengths of the `indexes` and `values` arrays are the same. If they are not equal, it throws an `IllegalArgumentException` with a descriptive error message.
+2. Next, it iterates over each element in the `indexes` array using a `for` loop.
+3. Inside the loop, it retrieves the current index from the `indexes` array.
+4. It then checks if the index is within the valid range of array `a`. If it is, it assigns the corresponding value from the `values` array to the element at that index in `a`.
+5. If the index is negative and within the range of `-a.length` to `-1`, it adjusts the index to be a positive index by adding `a.length` to it, and then assigns the corresponding value from the `values` array to the element at that adjusted index in `a`.
+6. If the index is not within any of the valid ranges, it throws an `ArrayIndexOutOfBoundsException` with the invalid index.
+7. After iterating through all the indexes, the method returns the modified array `a`.
+
+In summary, the `assignAt` method allows you to assign new values to multiple positions in an integer array `a` based on the given indexes and values arrays. It performs checks to ensure that the indexes are valid, and returns the modified array.
+4. Take note that in line 3, method `array` from class `Seq` is invoked.
+5. Take note that in line 3, method `assignAt` from class `Seq` is invoked.
+

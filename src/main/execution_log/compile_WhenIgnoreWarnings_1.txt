@@ -15,7 +15,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ InMemoryJavaCompiler ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ InMemoryJavaCompiler ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/classes
 [INFO] 
@@ -23,30 +23,75 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ InMemoryJavaCompiler ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ InMemoryJavaCompiler ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java uses or overrides a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,37] cannot find symbol
-  symbol:   variable objectToCheckinstanceofClassName
-  location: class org.mdkt.compiler.InMemoryJavaCompilerTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ InMemoryJavaCompiler ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.mdkt.compiler.InMemoryJavaCompilerTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.516 sec <<< FAILURE!
+compile_WhenIgnoreWarnings(org.mdkt.compiler.InMemoryJavaCompilerTest)  Time elapsed: 0.429 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<interface java.util.List> but was:<class java.util.ArrayList>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.mdkt.compiler.InMemoryJavaCompilerTest.compile_WhenIgnoreWarnings(InMemoryJavaCompilerTest.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:242)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:137)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   compile_WhenIgnoreWarnings(org.mdkt.compiler.InMemoryJavaCompilerTest): expected:<interface java.util.List> but was:<class java.util.ArrayList>
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.035 s
-[INFO] Finished at: 2023-07-21T13:26:17+06:00
+[INFO] Total time:  2.493 s
+[INFO] Finished at: 2023-07-26T20:47:34+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project InMemoryJavaCompiler: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,37] cannot find symbol
-[ERROR]   symbol:   variable objectToCheckinstanceofClassName
-[ERROR]   location: class org.mdkt.compiler.InMemoryJavaCompilerTest
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project InMemoryJavaCompiler: There are test failures.
 [ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/surefire-reports for the individual test results.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

@@ -1,4 +1,6 @@
 [INFO] Scanning for projects...
+Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.hazelcast.simulator:simulator-root:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): transfer failed for https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
 [WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
 [INFO] 
 [INFO] -----------------< com.hazelcast.simulator:simulator >------------------
@@ -7,12 +9,13 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ simulator ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target
 [INFO] 
 [INFO] --- git-commit-id-plugin:2.1.10:revision (default) @ simulator ---
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 10 resources
+[INFO] Copying 9 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
 [INFO] Changes detected - recompiling the module!
@@ -36,22 +39,27 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,51] cannot find symbol
-  symbol:   method get(java.lang.String,java.lang.String)
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,39] cannot find symbol
+  symbol:   variable expectedCoordinatorPort
   location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,64] cannot find symbol
+  symbol:   method getCoordinatorPort()
+  location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.008 s
-[INFO] Finished at: 2023-07-12T22:29:18+06:00
+[INFO] Total time:  5.050 s
+[INFO] Finished at: 2023-07-27T00:58:33+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,51] cannot find symbol
-[ERROR]   symbol:   method get(java.lang.String,java.lang.String)
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,39] cannot find symbol
+[ERROR]   symbol:   variable expectedCoordinatorPort
 [ERROR]   location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/common/SimulatorPropertiesTest.java:[192,64] cannot find symbol
+[ERROR]   symbol:   method getCoordinatorPort()
+[ERROR]   location: class com.hazelcast.simulator.common.SimulatorPropertiesTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

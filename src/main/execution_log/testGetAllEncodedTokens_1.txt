@@ -1,47 +1,15 @@
 [INFO] Scanning for projects...
-[INFO] 
-[INFO] --------------------< org.markdownj:markdownj-core >--------------------
-[INFO] Building MarkdownJ Core 0.5-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ markdownj-core ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ markdownj-core ---
-[INFO] 
-[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ markdownj-core ---
-[INFO] Using encoding: 'UTF-8' to copy filtered resources.
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ markdownj-core ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 8 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/classes
-[INFO] 
-[INFO] --- maven-resources-plugin:2.2:testResources (default-testResources) @ markdownj-core ---
-[INFO] Using encoding: 'UTF-8' to copy filtered resources.
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ markdownj-core ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Some input files use unchecked or unsafe operations.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/src/test/java/org/markdownj/test/MarkupFileTester.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.16:test (default-test) @ markdownj-core ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.markdownj.test.CharacterProtectorTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec - in org.markdownj.test.CharacterProtectorTest
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.339 s
-[INFO] Finished at: 2023-07-13T21:42:54+06:00
-[INFO] ------------------------------------------------------------------------
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-resolvable parent POM for org.markdownj:markdownj-core:0.5-SNAPSHOT: Could not find artifact org.markdownj:markdownj:pom:0.5-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 38, column 13
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project org.markdownj:markdownj-core:0.5-SNAPSHOT (/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/pom.xml) has 1 error
+[ERROR]     Non-resolvable parent POM for org.markdownj:markdownj-core:0.5-SNAPSHOT: Could not find artifact org.markdownj:markdownj:pom:0.5-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 38, column 13 -> [Help 2]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+[ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException

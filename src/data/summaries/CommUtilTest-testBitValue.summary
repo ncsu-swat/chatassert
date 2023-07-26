@@ -1,0 +1,18 @@
+0. Take note that in line 2, method `getBytes` from class `String` is invoked.
+1. In line 2, method `bitSet` of class `CommUtil` is invoked.
+2. Sure, here's an explanation of the given method:
+
+This method `bitSet` is a static method defined in the class `CommUtil`. It takes a `byte` array as a parameter and returns a `BitSet` instance.
+
+The method first checks if the `bytes` array is null. If it is, then it returns null.
+
+If the `bytes` array is not null, the method proceeds to create a new instance of `BitSet` called `bit`. It also declares an integer variable `index` and initializes it to 0.
+
+Next, the method iterates over each element `aByte` in the `bytes` array using a for-each loop. For each `aByte`, it then iterates from 7 to 0 using a nested for loop. Inside the nested loop, it performs a bitwise AND operation between `aByte` and `1` shifted left by `j` bits. If the result of this operation is equal to `1`, it uses the `bit.set()` method to set the bit at the current `index` to `true`, otherwise, it sets it to `false`. After each iteration, it increments the `index` by `1`.
+
+Once all elements in the `bytes` array have been processed, the method returns the `bit` BitSet instance.
+
+Overall, this method takes a byte array and converts it into a BitSet representation. The BitSet represents the binary digits (bits) in the byte array.
+3. Take note that in line 1, an object of class `String` is created.
+4. Take note that in line 2, an object of class `BitSet` is created.
+

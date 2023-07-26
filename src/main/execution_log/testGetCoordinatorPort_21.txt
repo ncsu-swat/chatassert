@@ -1,4 +1,6 @@
 [INFO] Scanning for projects...
+Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.hazelcast.simulator:simulator-root:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): transfer failed for https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
 [WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
 [INFO] 
 [INFO] -----------------< com.hazelcast.simulator:simulator >------------------
@@ -13,7 +15,7 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 10 resources
+[INFO] Copying 9 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
 [INFO] Changes detected - recompiling the module!
@@ -36,34 +38,13 @@
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/coordinator/CoordinatorOperationProcessorTest.java: Recompile with -Xlint:unchecked for details.
 [INFO] 
 [INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ simulator ---
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.hazelcast.simulator.common.SimulatorPropertiesTest
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.299 sec <<< FAILURE! - in com.hazelcast.simulator.common.SimulatorPropertiesTest
-testGetCoordinatorPort(com.hazelcast.simulator.common.SimulatorPropertiesTest)  Time elapsed: 0.235 sec  <<< FAILURE!
-java.lang.AssertionError: Values should be different. Actual: 0
-	at com.hazelcast.simulator.common.SimulatorPropertiesTest.testGetCoordinatorPort(SimulatorPropertiesTest.java:192)
-
-
-Results :
-
-Failed tests: 
-  SimulatorPropertiesTest.testGetCoordinatorPort:192 Values should be different. Actual: 0
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
-
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.732 s
-[INFO] Finished at: 2023-07-12T22:35:28+06:00
+[INFO] Total time:  6.101 s
+[INFO] Finished at: 2023-07-27T01:04:24+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project simulator: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project simulator: workingDirectory cannot be null -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.

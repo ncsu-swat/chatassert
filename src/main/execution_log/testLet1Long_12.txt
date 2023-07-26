@@ -11,13 +11,8 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-core ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689994224051
-[WARNING] Cannot get the branch information from the git repository: 
-Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
-
-[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core
-[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] Storing buildNumber: e76ae1d56b95734494bfb36cf1d7d99ac755b50a at timestamp: 1690370066068
+[INFO] Storing buildScmBranch: main
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-core ---
 [INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/jacoco.exec -ea
@@ -43,7 +38,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 11 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1633 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/classes
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/main/java/com/orientechnologies/orient/core/OSignalHandler.java:[25,16] sun.misc.Signal is internal proprietary API and may be removed in a future release
@@ -93,28 +88,45 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 5 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-core ---
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-core ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 429 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/record/impl/ODocumentTest.java: Recompile with -Xlint:deprecation for details.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Some input files use unchecked or unsafe operations.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTxTest.java: Recompile with -Xlint:unchecked for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OSelectStatementExecutionTest.java:[1883,90] package resultinstanceofcom.orientechnologies.orient.core.sql does not exist
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ orientdb-core ---
+[WARNING] The system property security.userPasswordSaltIterations is configured twice! The property appears in <argLine/> and any of <systemPropertyVariables/>, <systemProperties/> or user property.
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.orientechnologies.orient.core.sql.executor.OSelectStatementExecutionTest
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.666 s <<< FAILURE! - in com.orientechnologies.orient.core.sql.executor.OSelectStatementExecutionTest
+[ERROR] testLet1Long(com.orientechnologies.orient.core.sql.executor.OSelectStatementExecutionTest)  Time elapsed: 0.05 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.orientechnologies.orient.core.sql.executor.OSelectStatementExecutionTest.lambda$testLet1Long$3(OSelectStatementExecutionTest.java:1883)
+	at com.orientechnologies.orient.core.sql.executor.OSelectStatementExecutionTest.testLet1Long(OSelectStatementExecutionTest.java:1883)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   OSelectStatementExecutionTest.testLet1Long:1883->lambda$testLet1Long$3:1883 NullPointer
+[INFO] 
+[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.611 s
-[INFO] Finished at: 2023-07-22T08:50:46+06:00
+[INFO] Total time:  40.195 s
+[INFO] Finished at: 2023-07-26T17:15:04+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-core: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/src/test/java/com/orientechnologies/orient/core/sql/executor/OSelectStatementExecutionTest.java:[1883,90] package resultinstanceofcom.orientechnologies.orient.core.sql does not exist
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project orientdb-core: There are test failures.
 [ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/core/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

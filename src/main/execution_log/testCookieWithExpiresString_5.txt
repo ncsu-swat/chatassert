@@ -16,7 +16,7 @@
 [INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd ---
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java
-[INFO] Scan 54 files header done in 195.625ms.
+[INFO] Scan 54 files header done in 234.3ms.
 [INFO] All files are up-to-date.
 [INFO] 
 [INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd ---
@@ -24,74 +24,16 @@
 [INFO] --- maven-java-formatter-plugin:0.4:format (default) @ nanohttpd ---
 [INFO] Using 'UTF-8' encoding to format source files.
 [INFO] Number of files to be formatted: 54
-[INFO] Successfully formatted: 1 file(s)
-[INFO] Fail to format        : 0 file(s)
-[INFO] Skipped               : 53 file(s)
-[INFO] Approximate time taken: 0s
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ nanohttpd ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 2 resources
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ nanohttpd ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 26 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/main/java/org/nanohttpd/util/ServerRunner.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ nanohttpd ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 4 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ nanohttpd ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 28 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpKeepAliveTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/src/test/java/org/nanohttpd/junit/protocols/http/HttpKeepAliveTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ nanohttpd ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Exception in thread "main" java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:513)
-	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:525)
-Caused by: java.lang.RuntimeException: Class java/util/UUID could not be instrumented.
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:139)
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:100)
-	at org.jacoco.agent.rt.internal_773e439.PreMain.createRuntime(PreMain.java:55)
-	at org.jacoco.agent.rt.internal_773e439.PreMain.premain(PreMain.java:47)
-	... 6 more
-Caused by: java.lang.NoSuchFieldException: $jacocoAccess
-	at java.base/java.lang.Class.getField(Class.java:1999)
-	at org.jacoco.agent.rt.internal_773e439.core.runtime.ModifiedSystemClassRuntime.createFor(ModifiedSystemClassRuntime.java:137)
-	... 9 more
-FATAL ERROR in native method: processing of -javaagent failed
-/bin/sh: line 1: 90980 Abort trap: 6           /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefirebooter15198173322416614416.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefire1124258169785864021tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefire_08861386889198722329tmp
-
-Results :
-
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
-
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  9.848 s
-[INFO] Finished at: 2023-07-13T21:54:38+06:00
+[INFO] Total time:  1.914 s
+[INFO] Finished at: 2023-07-26T07:51:55+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project nanohttpd: ExecutionException: java.lang.RuntimeException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
-[ERROR] Command was /bin/sh -c cd /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core && /Library/Java/JavaVirtualMachines/jdk-11.0.17.jdk/Contents/Home/bin/java -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.7.4.201502262128/org.jacoco.agent-0.7.4.201502262128-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/jacoco.exec -jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefirebooter15198173322416614416.jar /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefire1124258169785864021tmp /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/target/surefire/surefire_08861386889198722329tmp
-[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal com.googlecode.maven-java-formatter-plugin:maven-java-formatter-plugin:0.4:format (default) on project nanohttpd: Config file [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/../src/main/formatter/formatter.xml] cannot be found: Could not find resource '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/core/../src/main/formatter/formatter.xml'. -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

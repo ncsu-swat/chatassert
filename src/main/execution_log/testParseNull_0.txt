@@ -52,7 +52,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.eluder.coveralls.maven.plugin.util.TimestampParserTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in org.eluder.coveralls.maven.plugin.util.TimestampParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 s - in org.eluder.coveralls.maven.plugin.util.TimestampParserTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -61,6 +61,6 @@
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.171 s
-[INFO] Finished at: 2023-07-13T23:33:42+06:00
+[INFO] Total time:  10.723 s
+[INFO] Finished at: 2023-07-26T09:11:15+06:00
 [INFO] ------------------------------------------------------------------------

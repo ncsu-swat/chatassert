@@ -1,0 +1,4 @@
+0. Take note that in line 1, method `getClass` from class `Object` is invoked.
+1. Take note that in line 1, method `getResourceAsStream` from class `Class` is invoked.
+2. Take note that in line 1, an object of class `InputStream` is created.
+

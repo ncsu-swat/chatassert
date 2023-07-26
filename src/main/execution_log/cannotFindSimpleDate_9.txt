@@ -21,7 +21,7 @@
 [INFO] ShortRevision tag detected. The value is '8'.
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java' && 'git' 'rev-parse' '--verify' '--short=8' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java
-[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1689279470672
+[INFO] Storing buildNumber: d2cb9b68 at timestamp: 1690346716274
 [WARNING] Cannot get the branch information from the git repository: 
 Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 
@@ -49,7 +49,6 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Copying guava-26.0-jre.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/guava-26.0-jre.jar
 [INFO] Copying log4j-1.2.17.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/log4j-1.2.17.jar
 [INFO] Copying args4j-2.33.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/args4j-2.33.jar
-[INFO] Copying jaxb-api-2.3.0.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/bundles/jaxb-api-2.3.0.jar
 [INFO] 
 [INFO] --- depends-maven-plugin:1.4.0:generate-depends-file (generate-depends-file) @ tcl-regex ---
 [INFO] Created: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/target/classes/META-INF/maven/dependencies.properties
@@ -64,22 +63,27 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,52] cannot find symbol
-  symbol:   variable matches
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,40] cannot find symbol
+  symbol:   variable Exception
   location: class com.basistech.tclre.RegressionTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,51] cannot find symbol
+  symbol:   variable actualObject
+  location: class com.basistech.tclre.RegressionTest
+[INFO] 2 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  5.356 s
-[INFO] Finished at: 2023-07-14T02:17:54+06:00
+[INFO] Total time:  7.001 s
+[INFO] Finished at: 2023-07-26T10:45:20+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,52] cannot find symbol
-[ERROR]   symbol:   variable matches
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project tcl-regex: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,40] cannot find symbol
+[ERROR]   symbol:   variable Exception
 [ERROR]   location: class com.basistech.tclre.RegressionTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/tcl-regex-java/src/test/java/com/basistech/tclre/RegressionTest.java:[86,51] cannot find symbol
+[ERROR]   symbol:   variable actualObject
+[ERROR]   location: class com.basistech.tclre.RegressionTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

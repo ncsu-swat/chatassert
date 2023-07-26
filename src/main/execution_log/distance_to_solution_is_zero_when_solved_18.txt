@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------< org.teachingkidsprogramming:TeachingKidsProgramming >---------
+[INFO] Building org.teachingkidsprogramming:TeachingKidsProgramming 0.0.9-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ TeachingKidsProgramming ---
+[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ TeachingKidsProgramming ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] Copying 70 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ TeachingKidsProgramming ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 328 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/classes
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/main/java/org/teachingextensions/logo/utils/PuzzleUtils/PuzzleBoard.java: Some input files use or override a deprecated API.
+[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/main/java/org/teachingextensions/logo/utils/PuzzleUtils/PuzzleBoard.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ TeachingKidsProgramming ---
+[INFO] Using 'ISO-8859-1' encoding to copy filtered resources.
+[INFO] Copying 57 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ TeachingKidsProgramming ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 52 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/target/test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[125,40] cannot find symbol
+  symbol:   variable BeyondCompareReporter
+  location: class org.teachingextensions.logo.PuzzleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[125,63] cannot find symbol
+  symbol:   variable actualObject
+  location: class org.teachingextensions.logo.PuzzleTest
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.938 s
+[INFO] Finished at: 2023-07-26T08:26:21+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project TeachingKidsProgramming: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[125,40] cannot find symbol
+[ERROR]   symbol:   variable BeyondCompareReporter
+[ERROR]   location: class org.teachingextensions.logo.PuzzleTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/TeachingKidsProgramming.Source.Java/src/test/java/org/teachingextensions/logo/PuzzleTest.java:[125,63] cannot find symbol
+[ERROR]   symbol:   variable actualObject
+[ERROR]   location: class org.teachingextensions.logo.PuzzleTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,123 @@
+0. Take note that in line 1, constructor `HashMap` from class `HashMap` is invoked.
+1. Take note that in line 2, constructor `HashMap` from class `HashMap` is invoked.
+2. In line 3, an object of class `OMultiValueChangeEvent` is instantiated.
+3. Certainly!
+
+In the provided code, we have a constructor defined for the class `OMultiValueChangeEvent`. Let's break it down:
+
+```java
+public OMultiValueChangeEvent(OChangeType changeType, K key, V value) {
+    this.changeType = changeType;
+    this.key = key;
+    this.value = value;
+}
+```
+
+This constructor takes three parameters: `changeType` of type `OChangeType`, `key` of type `K`, and `value` of type `V`. Here, `OChangeType`, `K`, and `V` are likely generic type parameters that are not defined in the provided code.
+
+Inside the constructor, we have three assignments:
+1. `this.changeType = changeType;` assigns the value of the `changeType` parameter to the instance variable `changeType` of the same name. In Java, `this` is a reference to the current object, and it is used to access the instance variables and methods of the object.
+2. `this.key = key;` assigns the value of the `key` parameter to the instance variable `key` of the same name.
+3. `this.value = value;` assigns the value of the `value` parameter to the instance variable `value` of the same name.
+
+Overall, this constructor is used to create an instance of the `OMultiValueChangeEvent` class by assigning the provided values for `changeType`, `key`, and `value` to the respective instance variables.
+4. Take note that in line 4, constructor `OMultiValueChangeEvent` from class `OMultiValueChangeEvent` is invoked.
+5. In line 5, method `processChangeEvent` of class `OPropertyListIndexDefinition` is invoked.
+6. Certainly! Let's break down the provided `processChangeEvent` method:
+
+```java
+public void processChangeEvent(final OMultiValueChangeEvent<?, ?> changeEvent, final Map<Object, Integer> keysToAdd, final Map<Object, Integer> keysToRemove) {
+    switch(changeEvent.getChangeType()) {
+        case ADD: {
+            processAdd(createSingleValue(changeEvent.getValue()), keysToAdd, keysToRemove);
+            break;
+        }
+        case REMOVE: {
+            processRemoval(createSingleValue(changeEvent.getOldValue()), keysToAdd, keysToRemove);
+            break;
+        }
+        case UPDATE: {
+            processRemoval(createSingleValue(changeEvent.getOldValue()), keysToAdd, keysToRemove);
+            processAdd(createSingleValue(changeEvent.getValue()), keysToAdd, keysToRemove);
+            break;
+        }
+        default:
+            throw new IllegalArgumentException("Invalid change type : " + changeEvent.getChangeType());
+    }
+}
+```
+
+This method takes three parameters: `changeEvent` of type `OMultiValueChangeEvent<?, ?>`, `keysToAdd` of type `Map<Object, Integer>`, and `keysToRemove` of type `Map<Object, Integer>`. The `final` keyword before each parameter means the values of these parameters cannot be changed once assigned.
+
+Inside the method, we have a switch statement that checks the value of `changeEvent.getChangeType()`. Depending on the value, different blocks of code are executed:
+
+1. If the `changeType` is `ADD`, the code inside the `case ADD:` block is executed. 
+   - It calls the `processAdd` method, passing `createSingleValue(changeEvent.getValue())`, `keysToAdd`, and `keysToRemove` as arguments.
+   
+2. If the `changeType` is `REMOVE`, the code inside the `case REMOVE:` block is executed. 
+   - It calls the `processRemoval` method, passing `createSingleValue(changeEvent.getOldValue())`, `keysToAdd`, and `keysToRemove` as arguments.
+   
+3. If the `changeType` is `UPDATE`, the code inside the `case UPDATE:` block is executed. 
+   - It first calls the `processRemoval` method, passing `createSingleValue(changeEvent.getOldValue())`, `keysToAdd`, and `keysToRemove` as arguments.
+   - Then it calls the `processAdd` method, passing `createSingleValue(changeEvent.getValue())`, `keysToAdd`, and `keysToRemove` as arguments.
+
+The `createSingleValue` method likely creates a single-value representation for the given value.
+
+If the `changeType` doesn't match any of the `case` blocks in the `switch` statement, an `IllegalArgumentException` is thrown with the message "Invalid change type : " concatenated with the value of `changeEvent.getChangeType()`.
+
+Overall, this method processes the change event based on its type (`ADD`, `REMOVE`, or `UPDATE`) and invokes the appropriate methods (`processAdd` or `processRemoval`) accordingly, modifying the `keysToAdd` and `keysToRemove` maps.
+7. Take note that in line 6, method `processChangeEvent` from class `OPropertyListIndexDefinition` is invoked.
+8. Take note that in line 7, constructor `HashMap` from class `HashMap` is invoked.
+9. Take note that in line 8, method `put` from class `Map` is invoked.
+10. Take note that in line 9, method `put` from class `Map` is invoked.
+11. Take note that in line 10, constructor `HashMap` from class `HashMap` is invoked.
+12. Take note that in line 1, an object of class `Object` is created.
+13. Take note that in line 1, an object of class `Integer` is created.
+14. Take note that in line 1, an object of class `HashMap` is created.
+15. Take note that in line 1, an object of class `Map` is created.
+16. Take note that in line 2, an object of class `Object` is created.
+17. Take note that in line 2, an object of class `Integer` is created.
+18. Take note that in line 2, an object of class `HashMap` is created.
+19. Take note that in line 2, an object of class `Map` is created.
+20. Take note that in line 3, an object of class `Integer` is created.
+21. In line 3, an object of class `OMultiValueChangeEvent` is instantiated
+22. The provided code is the implementation of the class `OMultiValueChangeEvent`. Let's go through the code and understand its structure and functionality:
+
+#### Package and Class Declaration
+The code is in the package `com.orientechnologies.orient.core.db.record`, and it declares a public class `OMultiValueChangeEvent<K, V>`. The class is parametrized with two type parameters - `K` and `V`.
+
+#### Class Documentation
+There is a block of comments at the beginning of the file that provides information about ownership, licensing, and the Apache License version 2.0.
+
+#### Class Structure and Fields
+- `OMultiValueChangeEvent` class has three main fields:
+    - `changeType`: This field represents the type of operation performed on a tracked collection. It is of type `OChangeType`, which is an enum defined within the class.
+    - `key`: This field represents the position or key of an item inside the collection. Its type is `K`, which corresponds to the first type parameter of the class.
+    - `value`: This field represents the new value of the item. Its type is `V`, which corresponds to the second type parameter of the class.
+  
+- In addition to the aforementioned fields, there are two more fields:
+    - `oldValue`: This field represents the previous value of the item. Its type is also `V`.
+    - `changesOwnerContent`: This field is a boolean flag indicating whether the change affects the content of the owner structure.
+
+#### Constructors
+- The `OMultiValueChangeEvent` class provides multiple constructors to create instances of the class. The constructors initialize the `changeType`, `key`, `value`, `oldValue`, and `changesOwnerContent` fields. The differing constructors allow for flexibility in creating instances with varying parameters.
+
+#### Getter Methods
+- The class provides getter methods for accessing the fields `key`, `value`, `changeType`, `oldValue`, and `changesOwnerContent`.
+
+#### Overrides
+The class overrides the methods `equals`, `hashCode`, and `toString` for custom behavior, comparison, and string representation.
+
+#### Summary
+The `OMultiValueChangeEvent` class represents an event that contains information about an operation performed on a tracked collection. It provides various constructors and accessor methods to set and retrieve the details of the event such as the type of change, the position or key of the item, and the new and old values of the item.
+23. Take note that in line 4, an object of class `Integer` is created.
+24. Take note that in line 4, an object of class `OMultiValueChangeEvent` is created.
+25. Take note that in line 7, an object of class `Object` is created.
+26. Take note that in line 7, an object of class `Integer` is created.
+27. Take note that in line 7, an object of class `HashMap` is created.
+28. Take note that in line 7, an object of class `Map` is created.
+29. Take note that in line 10, an object of class `Object` is created.
+30. Take note that in line 10, an object of class `Integer` is created.
+31. Take note that in line 10, an object of class `HashMap` is created.
+32. Take note that in line 10, an object of class `Map` is created.
+

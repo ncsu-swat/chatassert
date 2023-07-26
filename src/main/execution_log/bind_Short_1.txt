@@ -1,4 +1,6 @@
 [INFO] Scanning for projects...
+Downloading from backup-repo: https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.hazelcast.simulator:simulator-root:0.14-SNAPSHOT/maven-metadata.xml from/to backup-repo (https://repo2.maven.org/maven2/): transfer failed for https://repo2.maven.org/maven2/com/hazelcast/simulator/simulator-root/0.14-SNAPSHOT/maven-metadata.xml
 [WARNING] The project com.hazelcast.simulator:simulator:jar:0.14-SNAPSHOT uses prerequisites which is only intended for maven-plugin projects but not for non maven-plugin projects. For such purposes you should use the maven-enforcer-plugin. See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
 [INFO] 
 [INFO] -----------------< com.hazelcast.simulator:simulator >------------------
@@ -13,7 +15,7 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ simulator ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 10 resources
+[INFO] Copying 9 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ simulator ---
 [INFO] Changes detected - recompiling the module!
@@ -37,22 +39,33 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,38] cannot find symbol
-  symbol:   variable result
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,86] cannot find symbol
+  symbol:   variable object
   location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
-[INFO] 1 error
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,94] cannot find symbol
+  symbol:   variable property
+  location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,104] cannot find symbol
+  symbol:   variable value
+  location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
+[INFO] 3 errors 
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  4.988 s
-[INFO] Finished at: 2023-07-12T23:01:37+06:00
+[INFO] Total time:  5.354 s
+[INFO] Finished at: 2023-07-27T01:25:13+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,38] cannot find symbol
-[ERROR]   symbol:   variable result
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project simulator: Compilation failure: Compilation failure: 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,86] cannot find symbol
+[ERROR]   symbol:   variable object
 [ERROR]   location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
-[ERROR] 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,94] cannot find symbol
+[ERROR]   symbol:   variable property
+[ERROR]   location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/hazelcast-simulator/simulator/src/test/java/com/hazelcast/simulator/utils/PropertyBindingSupport_bind0_NumericalTest.java:[61,104] cannot find symbol
+[ERROR]   symbol:   variable value
+[ERROR]   location: class com.hazelcast.simulator.utils.PropertyBindingSupport_bind0_NumericalTest
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

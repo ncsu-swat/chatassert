@@ -12,11 +12,11 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ commons-lib ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ commons-lib ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/classes
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
-[WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[40,55] [deprecation] ROUND_HALF_UP in BigDecimal has been deprecated
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[40,55] [deprecation] ROUND_HALF_UP in BigDecimal has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[175,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[196,17] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/main/java/com/rockagen/commons/util/Arith.java:[233,13] [deprecation] divide(BigDecimal,int,int) in BigDecimal has been deprecated
@@ -26,33 +26,25 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ commons-lib ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ commons-lib ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 12 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/target/test-classes
 [INFO] -------------------------------------------------------------
-[WARNING] COMPILATION WARNING : 
-[INFO] -------------------------------------------------------------
-[WARNING] [options] bootstrap class path not set in conjunction with -source 8
-[INFO] 1 warning
-[INFO] -------------------------------------------------------------
-[INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[86,24] error: cannot find symbol
-  symbol:   method assertNotEquals(String,String)
-  location: class Assert
+[ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
+/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[105,41] error: cannot find symbol
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.330 s
-[INFO] Finished at: 2023-07-13T22:02:04+06:00
+[INFO] Total time:  3.892 s
+[INFO] Finished at: 2023-07-26T07:57:54+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project commons-lib: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[86,24] error: cannot find symbol
-[ERROR]   symbol:   method assertNotEquals(String,String)
-[ERROR]   location: class Assert
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.2:testCompile (default-testCompile) on project commons-lib: Compilation failure
+[ERROR] To suppress warnings about obsolete options, use -Xlint:-options.
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/commons-lib/src/test/java/com/rockagen/commons/util/CommUtilTest.java:[105,41] error: cannot find symbol
 [ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 

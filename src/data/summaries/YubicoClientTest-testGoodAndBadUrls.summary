@@ -1,0 +1,65 @@
+0. In line 2, method `setWsapiUrls` of class `YubicoClient` is invoked.
+1. The given method is `setWsapiUrls` which belongs to the class `YubicoClient`. 
+
+The purpose of this method is to configure the URLs that will be used for validating OTPs (One-Time Passwords). 
+
+The method takes an input parameter `wsapi`, which is an array of strings. This parameter represents a list of base URLs that will be used for OTP validation.
+
+Inside the method, it iterates over each element in the `wsapi` array using a for-each loop. For each URL in the array, it calls the `warnIfDeprecatedUrl` method to generate a warning if the URL is deprecated (no implementation provided in the given code snippet).
+
+Finally, the method assigns the `wsapi` array to the `wsapi_urls` instance variable of the class `YubicoClient`. The `this.wsapi_urls` statement is used to refer to the `wsapi_urls` variable within the current instance of the `YubicoClient` class.
+2. In line 3, method `verify` of class `YubicoClient` is invoked.
+3. The given code snippet represents a method called `verify`. This method is declared as `abstract`, indicating that it doesn't have an implementation in this class but must be implemented in any class that extends this abstract class.
+
+The purpose of this method is to validate a One-Time Password (OTP) by making a webservice call to one or more Yubico validation servers.
+
+The method takes a parameter `otp`, which is a string representing the YubiKey OTP that needs to be validated.
+
+The method has a return type of `VerificationResponse`, which is the result of the webservice validation operation. The `VerificationResponse` is a class (not shown here) that likely contains the validation result and other relevant information.
+
+The method can throw three exceptions:
+
+1. `YubicoVerificationException`: This exception is thrown in case of any validation errors, such as if the validation servers are unreachable.
+
+2. `YubicoValidationFailure`: This exception is thrown in case of validation failures, such as when the OTP in the request doesn't match the OTP in the response.
+
+3. `IllegalArgumentException`: This exception is thrown if the provided OTP argument is not correctly formatted as a valid OTP string.
+
+The `abstract` keyword in the method declaration indicates that the method doesn't have an implementation in this class but must be implemented in any concrete class that extends this abstract class.
+4. Take note that in line 1, an object of class `String` is created.
+5. Take note that in line 2, an object of class `String` is created.
+6. In line 3, an object of class `VerificationResponse` is instantiated
+7. The given Java code represents an interface named `VerificationResponse`. It is a part of the Yubico Java Client library, which is used for validation of One-Time Passwords (OTPs) from Yubico validation servers.
+
+Here is a summary of the code:
+
+- The interface is declared inside the `com.yubico.client.v2` package.
+- It begins with some licensing and copyright information.
+- The interface defines several methods that describe the properties and responses returned from the server during the OTP validation process. Let's go through them:
+
+1. `isOk()` - It returns a boolean value indicating whether the response status from the server was OK, representing a valid OTP.
+
+2. `getH()` - It returns the signature of the response, with the same API key as the request.
+
+3. `getT()` - It returns the UTC timestamp from the server when the response was processed.
+
+4. `getStatus()` - It returns the status of the server response to the request. The return type `ResponseStatus` is an enumeration (not shown here) that represents different response statuses.
+
+5. `getTimestamp()` - It returns the internal timestamp from the YubiKey 8hz timer.
+
+6. `getSessioncounter()` - It returns the non-volatile counter that is incremented on power-up.
+
+7. `getSessionuse()` - It returns the volatile counter that is incremented on each button-press, starting from 0 after power-up.
+
+8. `getSl()` - It returns the amount of synchronization the server achieved before sending the response, in percentage.
+
+9. `getOtp()` - It echoes back the OTP from the request.
+
+10. `getNonce()` - It echoes back the nonce from the request.
+
+11. `getKeyValueMap()` - It returns all the parameters from the response as a `Map` of key-value pairs.
+
+12. `getPublicId()` - It returns the public ID of the returned OTP.
+
+The interface does not contain any implementation code, but it defines the contract that any class implementing this interface must adhere to. The implementing classes will provide the actual implementation of these methods according to their specific requirements.
+

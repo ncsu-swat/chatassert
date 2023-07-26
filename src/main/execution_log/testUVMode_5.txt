@@ -18,7 +18,7 @@
 [INFO] Copying 1 resource
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ jcodec ---
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ jcodec ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 887 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mps/MPSUtils.java: Some input files use or override a deprecated API.
@@ -28,36 +28,30 @@
 [INFO] 
 [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jcodec ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 5 resources
+[INFO] Copying 4 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jcodec ---
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ jcodec ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 147 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vpx/vp9/ModeInfoTest.java:[57,37] cannot find symbol
-  symbol:   variable myCondition
-  location: class org.jcodec.codecs.vpx.vp9.ModeInfoTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jcodec ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.jcodec.codecs.vpx.vp9.ModeInfoTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.999 s
-[INFO] Finished at: 2023-07-22T18:15:35+06:00
+[INFO] Total time:  20.626 s
+[INFO] Finished at: 2023-07-26T18:00:04+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/codecs/vpx/vp9/ModeInfoTest.java:[57,37] cannot find symbol
-[ERROR]   symbol:   variable myCondition
-[ERROR]   location: class org.jcodec.codecs.vpx.vp9.ModeInfoTest
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

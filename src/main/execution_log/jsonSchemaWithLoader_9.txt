@@ -19,7 +19,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ raml-loader ---
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ raml-loader ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 31 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/classes
 [INFO] 
@@ -27,34 +27,23 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 8 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ raml-loader ---
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ raml-loader ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 11 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Some input files use or override a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/basic/GithubTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/use/jsonschema/JsonSchemaTest.java:[37,40] cannot find symbol
-  symbol:   variable actualValue
-  location: class guru.nidi.loader.use.jsonschema.JsonSchemaTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- tools-maven-plugin:1.0.20:backport7to6 (default) @ raml-loader ---
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.938 s
-[INFO] Finished at: 2023-07-21T12:38:40+06:00
+[INFO] Total time:  3.335 s
+[INFO] Finished at: 2023-07-26T20:30:20+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project raml-loader: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/raml-loader/src/test/java/guru/nidi/loader/use/jsonschema/JsonSchemaTest.java:[37,40] cannot find symbol
-[ERROR]   symbol:   variable actualValue
-[ERROR]   location: class guru.nidi.loader.use.jsonschema.JsonSchemaTest
-[ERROR] 
-[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal guru.nidi.maven.plugins:tools-maven-plugin:1.0.20:backport7to6 (default) on project raml-loader: Could not backport: IllegalArgumentException -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

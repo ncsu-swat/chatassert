@@ -11,13 +11,8 @@
 [INFO] --- buildnumber-maven-plugin:1.4:create (default) @ orientdb-graphdb ---
 [INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
 [INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildNumber: 2cabb46c9581572b7f46724864f02d9c688070c5 at timestamp: 1689204132409
-[WARNING] Cannot get the branch information from the git repository: 
-Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
-
-[INFO] Executing: /bin/sh -c cd '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb' && 'git' 'rev-parse' '--verify' 'HEAD'
-[INFO] Working directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb
-[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] Storing buildNumber: e76ae1d56b95734494bfb36cf1d7d99ac755b50a at timestamp: 1690328323568
+[INFO] Storing buildScmBranch: main
 [INFO] 
 [INFO] --- jacoco-maven-plugin:0.8.5:prepare-agent (default) @ orientdb-graphdb ---
 [INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.5/org.jacoco.agent-0.8.5-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/target/jacoco.exec -ea
@@ -39,7 +34,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 3 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ orientdb-graphdb ---
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ orientdb-graphdb ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 82 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/main/java/com/tinkerpop/blueprints/impls/orient/OrientBaseGraph.java: Some input files use or override a deprecated API.
@@ -53,7 +48,7 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 6 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ orientdb-graphdb ---
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ orientdb-graphdb ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 104 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/orientechnologies/orient/graph/sql/ODeleteEdgeStatementExecutionTest.java: Some input files use or override a deprecated API.
@@ -63,27 +58,22 @@ Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[40,98] cannot find symbol
-  symbol:   variable OrientVertex
-  location: class com.tinkerpop.blueprints.impls.orient.OrientVertexType
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[40,39] cannot find symbol
-  symbol:   method getVertexClass()
-  location: variable g of type com.tinkerpop.blueprints.impls.orient.OrientBaseGraph
-[INFO] 2 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[43,48] cannot find symbol
+  symbol:   method isPooled()
+  location: class com.tinkerpop.blueprints.impls.orient.OrientGraph
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  6.817 s
-[INFO] Finished at: 2023-07-13T05:22:18+06:00
+[INFO] Total time:  5.901 s
+[INFO] Finished at: 2023-07-26T05:38:48+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project orientdb-graphdb: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[40,98] cannot find symbol
-[ERROR]   symbol:   variable OrientVertex
-[ERROR]   location: class com.tinkerpop.blueprints.impls.orient.OrientVertexType
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[40,39] cannot find symbol
-[ERROR]   symbol:   method getVertexClass()
-[ERROR]   location: variable g of type com.tinkerpop.blueprints.impls.orient.OrientBaseGraph
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.7.0:testCompile (default-testCompile) on project orientdb-graphdb: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/orientdb/graphdb/src/test/java/com/tinkerpop/blueprints/impls/orient/OrientGraphFactoryTest.java:[43,48] cannot find symbol
+[ERROR]   symbol:   method isPooled()
+[ERROR]   location: class com.tinkerpop.blueprints.impls.orient.OrientGraph
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

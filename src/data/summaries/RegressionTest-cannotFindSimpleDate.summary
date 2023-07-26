@@ -1,0 +1,107 @@
+0. Take note that in line 2, method `of` from class `EnumSet` is invoked.
+1. In line 2, method `compile` of class `HsrePattern` is invoked.
+2. This is a method called `compile` that takes in two parameters: `pattern` of type `String` and `flags` of type `EnumSet<PatternFlags>`. It returns a compiled pattern of type `RePattern`. 
+
+The method is marked with a Javadoc comment that describes its functionality. It states that the method compiles a pattern using the given input and returns the compiled pattern. It also mentions that it may throw a `RegexException` if there is an error during the regex compilation.
+
+Inside the method body, it simply invokes the `compile` method from the `Compiler` class, passing in the `pattern` and `flags` parameters. It then returns the result of this invocation.
+
+Note: The `compile` method from class `HsrePattern` is invoking the `compile` method of another class called `Compiler`.
+3. In line 3, method `matcher` of class `RePattern` is invoked.
+4. This method is called `matcher` and it belongs to the `RePattern` class. It takes in two parameters: `data` of type `CharSequence` and `flags` of type `ExecFlags` (which is an optional varargs parameter).
+
+The method has a Javadoc comment that explains its functionality. It states that the method creates a matcher from a pattern and returns it. The `data` parameter represents the initial data that the matcher will process, and the `flags` parameter is optional and can be used to change the behavior of the matcher.
+
+Inside the method body, there should be code to create a new `ReMatcher` object passing in the `data` and `flags` parameters. However, the code is not provided, so we can't see the implementation details of the creation of the `ReMatcher` object.
+
+Finally, the method returns the newly created `ReMatcher` object.
+5. Take note that in line 4, constructor `String` from class `String` is invoked.
+6. Take note that in line 4, method `toCharArray` from class `String` is invoked.
+7. Take note that in line 4, method `length` from class `String` is invoked.
+8. In line 4, method `reset` of class `ReMatcher` is invoked.
+9. Certainly! The provided code is a method declaration for the `reset` method of the `ReMatcher` class. Let's break it down:
+
+- `ReMatcher`: This is the class to which the `reset` method belongs.
+
+- `reset`: This is the name of the method.
+
+- `(CharSequence newSequence)`: This method accepts a parameter named `newSequence` of type `CharSequence`. `CharSequence` is an interface in Java that represents a sequence of characters (e.g., `String`, `StringBuilder`).
+
+- `ReMatcher`: The return type of the method is `ReMatcher`, which means that the `reset` method returns an instance of the `ReMatcher` class.
+
+- Javadoc: The method is documented with a Javadoc comment that provides information about its functionality. According to the comment, the `reset` method changes the data for the matcher object to a new sequence. It states that the region (or the portion of the sequence) is set to the entire sequence, and any previous match information is reset.
+
+- `return this matcher`: The method is designed to return the current `ReMatcher` object to support method chaining. This means that after calling the `reset` method, you can continue to invoke other methods on the same `ReMatcher` object.
+
+So, this `reset` method allows you to update the data used by the `ReMatcher` object, resets any previous match information, and returns the updated `ReMatcher` instance.
+10. In line 5, method `region` of class `ReMatcher` is invoked.
+11. Certainly! The provided code is a method declaration for the `region` method of the `ReMatcher` class. Let's go through it line by line:
+
+- `ReMatcher`: This is the class to which the `region` method belongs.
+
+- `region`: This is the name of the method.
+
+- `(int start, int end)`: This method accepts two parameters, `start` and `end`, both of type `int`. These parameters represent the start and end offset of the region for searching and matching.
+
+- `ReMatcher`: The return type of the method is `ReMatcher`, which means that the `region` method returns an instance of the `ReMatcher` class.
+
+- Javadoc: The method is documented using a Javadoc comment. The comment explains the functionality of the `region` method. According to the comment, the `region` method allows you to specify a region in the data on which searching and matching will be performed. The region is defined by the `start` and `end` offsets, and the comment specifies that these offsets are relative to the entire data.
+
+- `return this matcher;`: The method is designed to return the current `ReMatcher` object to support method chaining. This means that after calling the `region` method, you can continue to invoke other methods on the same `ReMatcher` object.
+
+In summary, the `region` method sets the bounds of the region to be searched and matched within the data for the `ReMatcher` object. It allows you to define a specific portion of the data on which subsequent search and match operations will be performed. The method returns the updated `ReMatcher` instance to enable method chaining.
+12. Take note that in line 1, an object of class `String` is created.
+13. In line 2, an object of class `RePattern` is instantiated
+14. The provided code is an interface called `RePattern`. Let's go through the code and understand its structure and meaning:
+
+- `/* ... */`: This section represents multiline comments that provide copyright and licensing information for the code.
+
+- `package com.basistech.tclre;`: This line specifies the package to which the `RePattern` interface belongs.
+
+- `import java.util.EnumSet;`: This line imports the `EnumSet` class from the `java.util` package. The `EnumSet` class is used in the method definitions of the interface.
+
+- `public interface RePattern {`: This line declares the `RePattern` interface, which means it defines a blueprint for a class to implement. An interface defines a contract of methods that classes implementing the interface must provide.
+
+- `ReMatcher matcher(CharSequence data, ExecFlags... flags);`: This is a method declaration. The `matcher` method takes in a `CharSequence` object named `data` as the initial data that the matcher will process. It also accepts varargs of `ExecFlags` named `flags` as optional flags that can change the behavior of the matcher. The method returns an instance of `ReMatcher`.
+
+- `ReMatcher matcher(CharSequence data, EnumSet<ExecFlags> flags);`: This is another method declaration that is similar to the previous method declaration. It also creates a matcher from a pattern, but this time it accepts an `EnumSet` object for `flags` instead of varargs.
+
+- `String pattern();`: This method declaration defines a method named `pattern` that returns a `String` representing the pattern.
+
+- `EnumSet<PatternFlags> flags();`: This method declaration defines a method named `flags` that returns an `EnumSet` object representing the flags.
+
+- The Javadoc comments throughout the code provide explanations and descriptions of the methods and their parameters.
+
+In summary, the `RePattern` interface defines methods that can be used to create matchers from patterns, retrieve the pattern string, and obtain the flags associated with the pattern.
+15. In line 3, an object of class `ReMatcher` is instantiated
+16. The provided code is an interface called `ReMatcher`. Let's go through the code and understand its structure and meaning:
+
+- The multiline comments at the beginning of the code provide information about the copyright, licensing, and basic details of the interface.
+
+- `package com.basistech.tclre;`: This line specifies the package to which the `ReMatcher` interface belongs.
+
+- `import java.util.EnumSet;` and `import java.util.regex.MatchResult;`: These lines import the `EnumSet` class from the `java.util` package and the `MatchResult` interface from the `java.util.regex` package. They are used in the method definitions of the interface.
+
+- The Javadoc comments throughout the code provide explanations and descriptions of the interface, its methods, and their parameters.
+
+- `public interface ReMatcher extends MatchResult {`: This line declares the `ReMatcher` interface, which means it extends the `MatchResult` interface. It defines additional methods specific to the matching functionality.
+
+- `RePattern pattern();`: This method declaration defines a method named `pattern` that returns a `RePattern` object. It represents the pattern that produced the matcher.
+
+- `boolean find(int startOffset);` and `boolean find();`: These method declarations define the `find` methods. They are used to search for the pattern in the data. The first method starts the search at the specified offset, and the second method starts the search at the end of the previous match.
+
+- `ReMatcher region(int start, int end);`: This method declaration defines a method named `region` that allows you to specify the region that bounds searching and matching. The region is defined by start and end offsets.
+
+- `ReMatcher reset();` and `ReMatcher reset(CharSequence newSequence);`: These method declarations define the `reset` methods. They reset the matcher to its initial state. The first method resets without changing the data, and the second method allows you to change the data for the matcher.
+
+- `ReMatcher flags(ExecFlags... flags);` and `EnumSet<ExecFlags> flags();`: These method declarations allow you to change and retrieve the flags associated with the matcher.
+
+- `boolean matches();`: This method declaration defines the `matches` method. It is used to check if the pattern is satisfied by the entire region.
+
+- `int regionStart();` and `int regionEnd();`: These method declarations define the `regionStart` and `regionEnd` methods that return the start and end offsets of the current region.
+
+- `boolean lookingAt();`: This method declaration defines the `lookingAt` method. It attempts to satisfy the pattern with the characters starting at the current position.
+
+In summary, the `ReMatcher` interface represents a matcher object that uses a regular expression pattern to search or match against data. It provides methods to perform matching and searching, set the search region, reset the matcher state, change or retrieve the flags, and obtain information about matches and regions. The `ReMatcher` interface extends the `MatchResult` interface, which provides methods for accessing match information.
+17. Take note that in line 4, an object of class `String` is created.
+

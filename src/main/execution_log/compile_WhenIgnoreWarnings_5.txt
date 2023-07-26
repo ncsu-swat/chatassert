@@ -15,7 +15,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/main/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ InMemoryJavaCompiler ---
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ InMemoryJavaCompiler ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 6 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/classes
 [INFO] 
@@ -23,30 +23,28 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ InMemoryJavaCompiler ---
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ InMemoryJavaCompiler ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java uses or overrides a deprecated API.
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,57] package resultinstanceofjava does not exist
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ InMemoryJavaCompiler ---
+[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.mdkt.compiler.InMemoryJavaCompilerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.508 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.813 s
-[INFO] Finished at: 2023-07-21T13:31:30+06:00
+[INFO] Total time:  2.258 s
+[INFO] Finished at: 2023-07-26T20:48:29+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project InMemoryJavaCompiler: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/InMemoryJavaCompiler/src/test/java/org/mdkt/compiler/InMemoryJavaCompilerTest.java:[88,57] package resultinstanceofjava does not exist
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

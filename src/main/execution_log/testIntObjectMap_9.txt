@@ -18,7 +18,7 @@
 [INFO] Copying 1 resource
 [INFO] Copying 1 resource
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ jcodec ---
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ jcodec ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 887 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/main/java/org/jcodec/containers/mps/MPSUtils.java: Some input files use or override a deprecated API.
@@ -30,7 +30,7 @@
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] Copying 4 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ jcodec ---
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ jcodec ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 147 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/containers/mp4/demuxer/MP4DemuxerTest.java: Some input files use or override a deprecated API.
@@ -38,35 +38,22 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,37] cannot find symbol
-  symbol:   variable Arrays
-  location: class org.jcodec.common.CollectionsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,73] cannot find symbol
-  symbol:   variable newInteger
-  location: class org.jcodec.common.CollectionsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,55] method values in class org.jcodec.common.IntObjectMap<T> cannot be applied to given types;
-  required: java.lang.Integer[]
-  found: no arguments
-  reason: actual and formal argument lists differ in length
-[INFO] 3 errors 
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,42] cannot find symbol
+  symbol:   method containsKey(int)
+  location: variable test of type org.jcodec.common.IntObjectMap<java.lang.Integer>
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.703 s
-[INFO] Finished at: 2023-07-22T17:49:33+06:00
+[INFO] Total time:  15.371 s
+[INFO] Finished at: 2023-07-26T17:50:28+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project jcodec: Compilation failure: Compilation failure: 
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,37] cannot find symbol
-[ERROR]   symbol:   variable Arrays
-[ERROR]   location: class org.jcodec.common.CollectionsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,73] cannot find symbol
-[ERROR]   symbol:   variable newInteger
-[ERROR]   location: class org.jcodec.common.CollectionsTest
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,55] method values in class org.jcodec.common.IntObjectMap<T> cannot be applied to given types;
-[ERROR]   required: java.lang.Integer[]
-[ERROR]   found: no arguments
-[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile) on project jcodec: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/jcodec/src/test/java/org/jcodec/common/CollectionsTest.java:[14,42] cannot find symbol
+[ERROR]   symbol:   method containsKey(int)
+[ERROR]   location: variable test of type org.jcodec.common.IntObjectMap<java.lang.Integer>
+[ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.

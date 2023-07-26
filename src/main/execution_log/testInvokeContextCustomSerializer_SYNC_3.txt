@@ -27,7 +27,7 @@
 [INFO] Copying 1 resource
 [INFO] Copying 3 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bolt ---
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ bolt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 168 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/main/java/com/alipay/remoting/AbstractBoltClient.java: Some input files use or override a deprecated API.
@@ -39,7 +39,7 @@
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 [INFO] Copying 6 resources
 [INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bolt ---
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ bolt ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 106 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/test-classes
 [INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/src/test/java/com/alipay/remoting/inner/utiltest/RemotingUtilTest.java: Some input files use or override a deprecated API.
@@ -53,36 +53,15 @@
 -------------------------------------------------------
 Running com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 Sofa-Middleware-Log SLF4J : Actual binding is of type [ com.alipay.remoting Log4j2 ]
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.516 sec <<< FAILURE! - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
-testInvokeContextCustomSerializer_SYNC(com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest)  Time elapsed: 5.515 sec  <<< FAILURE!
-java.lang.AssertionError: expected null, but was:<HELLO WORLD! I'm server returnRANDOM>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotNull(Assert.java:756)
-	at org.junit.Assert.assertNull(Assert.java:738)
-	at org.junit.Assert.assertNull(Assert.java:748)
-	at com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest.testInvokeContextCustomSerializer_SYNC(ClassCustomSerializerTest.java:375)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.468 sec - in com.alipay.remoting.rpc.serializer.ClassCustomSerializerTest
 
 Results :
 
-Failed tests: 
-  ClassCustomSerializerTest.testInvokeContextCustomSerializer_SYNC:375 expected null, but was:<HELLO WORLD! I'm server returnRANDOM>
-
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.239 s
-[INFO] Finished at: 2023-07-13T20:45:38+06:00
+[INFO] Total time:  12.196 s
+[INFO] Finished at: 2023-07-26T07:31:31+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.18.1:test (default-test) on project bolt: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/sofa-bolt/target/surefire-reports for the individual test results.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

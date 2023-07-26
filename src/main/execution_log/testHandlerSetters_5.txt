@@ -16,62 +16,26 @@
 [INFO] --- license-maven-plugin:1.7:update-file-header (first) @ nanohttpd-nanolets ---
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java
 [INFO] Will search files to update from root /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java
-[INFO] Scan 3 files header done in 54.475ms.
-[INFO] All files are up-to-date.
+[INFO] Scan 3 files header done in 58.417ms.
+[INFO] 
+ * uptodate header on 2 files.
+ * add header on 1 file.
 [INFO] 
 [INFO] --- license-maven-plugin:1.7:update-project-license (first) @ nanohttpd-nanolets ---
 [INFO] 
 [INFO] --- maven-java-formatter-plugin:0.4:format (default) @ nanohttpd-nanolets ---
 [INFO] Using 'UTF-8' encoding to format source files.
 [INFO] Number of files to be formatted: 3
-[INFO] Successfully formatted: 1 file(s)
-[INFO] Fail to format        : 0 file(s)
-[INFO] Skipped               : 2 file(s)
-[INFO] Approximate time taken: 0s
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ nanohttpd-nanolets ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/resources
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ nanohttpd-nanolets ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/main/java/org/nanohttpd/router/RouterNanoHTTPD.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ nanohttpd-nanolets ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 5 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ nanohttpd-nanolets ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/target/test-classes
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java uses or overrides a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/AppNanolets.java: Recompile with -Xlint:deprecation for details.
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[523,41] cannot find symbol
-  symbol:   method isUriHandlerSet(java.lang.String)
-  location: class java.lang.Long
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.482 s
-[INFO] Finished at: 2023-07-21T16:42:27+06:00
+[INFO] Total time:  1.752 s
+[INFO] Finished at: 2023-07-26T21:05:34+06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project nanohttpd-nanolets: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/src/test/java/org/nanohttpd/junit/router/TestNanolets.java:[523,41] cannot find symbol
-[ERROR]   symbol:   method isUriHandlerSet(java.lang.String)
-[ERROR]   location: class java.lang.Long
-[ERROR] 
-[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal com.googlecode.maven-java-formatter-plugin:maven-java-formatter-plugin:0.4:format (default) on project nanohttpd-nanolets: Config file [/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/../src/main/formatter/formatter.xml] cannot be found: Could not find resource '/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/nanohttpd/nanolets/../src/main/formatter/formatter.xml'. -> [Help 1]
 [ERROR] 
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
 [ERROR] 
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

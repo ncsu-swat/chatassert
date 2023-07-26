@@ -1,0 +1,107 @@
+0. In line 1, method `createFilter` of class `BasicURLNormalizerTest` is invoked.
+1. Certainly! Let me break down the code for you step by step:
+
+1. The method `createFilter` is defined with a parameter `List<String> queryElementsToRemove`. This method returns an object of type `URLFilter`.
+
+2. Inside the method, a new `ObjectNode` called `filterParams` is created using `JsonNodeFactory.instance`. `ObjectNode` is a class provided by the Jackson library that represents a JSON object.
+
+3. The `queryElementsToRemove` list is converted into a JSON array using the `getArrayNode` method. This method takes the `queryElementsToRemove` list as an argument and returns an `ArrayNode` object representing a JSON array.
+
+4. The `queryElementsToRemove` JSON array is then set as a property in the `filterParams` object using `filterParams.set("queryElementsToRemove", getArrayNode(queryElementsToRemove))`.
+
+5. Finally, the `filterParams` object is passed as an argument to another method `createFilter` (presumably defined elsewhere) which creates and returns an instance of `URLFilter`.
+
+So, in summary, this method `createFilter` takes a list of strings as input, converts it into a JSON array, and creates an instance of `URLFilter` with the converted JSON array as a parameter.
+2. Take note that in line 4, constructor `URL` from class `URL` is invoked.
+3. In line 6, an object of class `Metadata` is instantiated.
+4. Certainly! Let me break down the code for you:
+
+1. The constructor `Metadata()` is defined without any parameters.
+
+2. Inside the constructor, a new object of type `HashMap` is created using the `new` keyword. This `HashMap` object is assigned to the variable `md`.
+
+3. The `HashMap` class is a built-in class in Java that implements the `Map` interface. It represents a collection of key-value pairs.
+
+4. The `md` variable is an instance variable of the `Metadata` class, declared elsewhere in the class definition. It is likely declared as `private HashMap<KeyType, ValueType> md;`, where `KeyType` and `ValueType` represent the respective types of keys and values stored in the map.
+
+5. By initializing `md` with a new `HashMap` object in the constructor, it ensures that every time an instance of `Metadata` is created, a new, empty `HashMap` will be associated with it.
+
+Thus, this constructor initializes the `md` instance variable with a new empty `HashMap` whenever a new instance of `Metadata` is created.
+5. In line 6, method `filter` of class `URLFilter` is invoked.
+6. Certainly! Let me explain the code for you:
+
+1. This is a method named `filter` which returns a `String` value. It takes three parameters: `sourceUrl` of type `URL`, `sourceMetadata` of type `Metadata`, and `urlToFilter` of type `String`.
+
+2. The purpose of this method is to determine whether the given `urlToFilter` should be removed or returned as a normalized representation.
+
+3. Inside the method, there will be some implementation logic that checks the `urlToFilter` against certain criteria, such as checking if it matches certain patterns or if it meets specific conditions defined by the developer.
+
+4. Depending on the criteria, if the `urlToFilter` is determined to be removable, then the method should return `null`, indicating that the URL should be removed.
+
+5. If the `urlToFilter` is not removable, it should be normalized and returned as a `String`. The specific normalization rules for the URL will be defined within the method implementation.
+
+6. The `sourceUrl` parameter represents the URL of the page where the `urlToFilter` was found. It can be used as additional information for determining the filtering logic.
+
+7. The `sourceMetadata` parameter represents the metadata collected for the page. This metadata can also be used as additional information for determining the filtering logic.
+
+Overall, this method is designed to filter and normalize a given URL based on certain criteria and return it as a `String` or `null` if it should be removed. The specific implementation logic within the method will determine how the filtering and normalization are carried out.
+7. In line 1, an object of class `URLFilter` is instantiated
+8. Certainly! Let me explain the given class code:
+
+1. This is a class called `FastURLFilter` which implements the `URLFilter` interface and `JSONResource` interface.
+
+2. This `FastURLFilter` class provides functionality for filtering URLs based on regex patterns. It allows organizing the patterns into different scopes such as `host`, `domain`, `metadata`, and `global` to determine whether a URL should be kept or removed.
+
+3. The class includes several import statements that import necessary classes and libraries.
+
+4. The class has instance variables including `resourceFile`, `rules`, and an object of the `ObjectMapper` class provided by the Jackson library.
+
+5. The class provides methods like `configure()`, `getResourceFile()`, `loadJSONResources()`, and `filter()` to configure the filter, load JSON resources, and apply the filtering logic.
+
+6. There is a nested class called `Rules`, which represents the rules organized by different scopes. Each scope is represented by a different instance of the `Scope` class.
+
+7. The `Scope` class represents a scope in which the filtering rules are defined. It has a `Type` enum which defines the different types of scopes. Each scope has an array of `Rule` objects which contain the actual regex patterns.
+
+8. The `MDScope` class is a subclass of `Scope` and represents a scope based on metadata key-value pairs. It has additional fields for storing the metadata key and value.
+
+9. The `Rule` class represents a single rule containing a regex pattern and a type which can be one of `DENYPATH`, `DENYPATHQUERY`, `ALLOWPATH`, or `ALLOWPATHQUERY`. The type determines whether the rule is for allowing or denying URLs matching the pattern.
+
+10. The class also includes several helper methods for parsing the JSON resource file, checking and applying the filtering rules based on the URL, and performing various operations required for filtering.
+
+11. Finally, there is a logger instance initialized using the SLF4J logging framework.
+
+Overall, this class provides an implementation of a fast URL filter based on regex patterns organized by different scopes. It allows filtering URLs based on various criteria and provides flexibility in defining the filtering rules.
+9. Take note that in line 2, an object of class `String` is created.
+10. Take note that in line 3, an object of class `String` is created.
+11. Take note that in line 4, an object of class `URL` is created.
+12. Take note that in line 5, an object of class `String` is created.
+13. In line 6, an object of class `Metadata` is instantiated
+14. Certainly! Let me break down the provided class code for you:
+
+1. This is a class called `CommaSeparatedToMultivaluedMetadata`, which extends the `ParseFilter` class.
+
+2. The purpose of this class is to rewrite single metadata values containing comma-separated values into multiple values for the same key. It is specifically useful for scenarios like keyword tags.
+
+3. The class includes import statements for necessary classes and libraries.
+
+4. The class defines a private instance variable `keys` of type `Set<String>`. This set is used to store the keys to be processed for comma-separated values.
+
+5. The class overrides the `configure()` method from the `ParseFilter` class. This method is responsible for configuring the filter based on the provided parameters.
+
+6. Within the `configure()` method, the keys are extracted from the `filterParams` JSON node. If multiple keys are specified, they are added to the `keys` set.
+
+7. The class also overrides the `filter()` method from the `ParseFilter` class. This method is called for each parsed document, allowing the filter to process the URL, content, document fragment, and the `ParseResult` object.
+
+8. Inside the `filter()` method, the metadata for the given URL is accessed using `parse.get(url).getMetadata()`, where `parse` is an instance of `ParseResult`.
+
+9. For each key specified in the `keys` set, the filter checks if the metadata value for that key is not null. If it is null, the processing for that key is skipped.
+
+10. If a value is found for the key, it is removed from the metadata using `m.remove(key)`.
+
+11. The value is then split using the comma as a separator using `val.split(" *, *")`. This will result in an array of values.
+
+12. Each value is then added back to the metadata using `m.addValue(key, t)`, where `t` represents each value in the array.
+
+Overall, this class provides functionality to process comma-separated values within a metadata key and split them into multiple values for the same key. This is useful in scenarios where comma-separated values need to be treated as separate values, such as keyword tags.
+15. Take note that in line 6, an object of class `String` is created.
+

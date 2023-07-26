@@ -1,0 +1,40 @@
+0. In line 1, method `parse` of class `GraphvizServer.CmdOptions` is invoked.
+1. The provided method `parse` is a static method of the class `CmdOptions`, which takes in an array of `String` arguments (`args`) and returns an instance of `CmdOptions`.
+
+Here's a breakdown of what the method does:
+
+1. Creates a new instance of `CmdOptions` class named `options`.
+2. Iterates over each element in the `args` array using a `for` loop.
+3. Checks if the current `args` element starts with a dash ("-"), indicating an option.
+4. If an option is found:
+   - Checks the length of the option name and throws an `IllegalArgumentException` if it is only a dash ("-").
+   - Extracts the name of the option, starting from the second character (`args[i].substring(1, 2)`).
+   - Checks the length of the option value (`args[i]`) and assigns it to the `value` variable:
+     - If the length is greater than 2, assigns the substring from index 2 till the end as the value.
+     - If the length is exactly 2, and it is the last element of `args`, assigns an empty string as the value.
+     - If the length is exactly 2, and it's not the last element of `args`, assigns the next element as the value and increments `i` to skip it.
+   - Adds the option (name-value pair) to the `opts` map in the `options` object.
+5. If the current `args` element is not an option (doesn't start with a dash), adds it to the `args` list in the `options` object.
+6. After processing all the `args`, returns the `options` object.
+
+In summary, the `parse` method parses the command-line arguments, separating options (starting with a dash) and non-options, and stores them in the `opts` map and `args` list, respectively, in the `CmdOptions` object.
+2. Take note that in line 1, an object of class `String` is created.
+3. In line 1, an object of class `GraphvizServer` is instantiated
+4. The provided code is a Java class named `GraphvizServer`, which seems to be a server implementation for running Graphviz graph rendering engine.
+
+Here's a breakdown of the code:
+
+- The class is defined with the access modifier `final`, which means it cannot be extended.
+- It imports several classes and static methods from different packages.
+- The class provides a private constructor, indicating it cannot be instantiated.
+- It declares a constant `DEFAULT_PORT` with a value of `10234`.
+- There's a private static logger `LOG` of type `Logger` from the SLF4J library.
+- The class has two public static methods: `start(List<GraphvizEngine> engines)` and `start(List<GraphvizEngine> engines, int port)`. These methods are used to start the Graphviz server. They accept a list of `GraphvizEngine` objects and an optional `port` parameter. Internally, the methods create a command and start a new process to run the server.
+- The `main` method serves as the entry point of the Graphviz server application. It reads command-line arguments using `CmdOptions.parse` method and starts the server by creating a `ServerSocket` and accepting connections in a loop. It uses a `Communicator` to handle communication with the connected client.
+- The class also defines a private method `engineFromString`, which converts a class name into a `GraphvizEngine` object by dynamically loading the class using reflection.
+- Another private method `render` is used to process a raw graph description and convert it to an SVG representation using `Graphviz` rendering engine.
+- `CmdOptions` is a nested static class within `GraphvizServer` that represents the command-line options and arguments parsed from the command line. It has a `parse` method that accepts an array of strings and populates the `opts` map with option name-value pairs and adds non-option arguments to the `args` list.
+
+Overall, this class provides functionality to start a server that communicates with clients and renders Graphviz graphs based on the exchanged data.
+5. Take note that in line 1, an object of class `CmdOptions` is created.
+
