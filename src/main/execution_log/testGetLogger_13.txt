@@ -32,23 +32,26 @@
 [INFO] -------------------------------------------------------------
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java uses unchecked or unsafe operations.
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: Recompile with -Xlint:unchecked for details.
-[WARNING] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-[INFO] 3 warnings 
+[INFO] 2 warnings 
 [INFO] -------------------------------------------------------------
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,37] incompatible types: org.fluentd.logger.FluentLogger cannot be converted to boolean
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,37] cannot find symbol
+  symbol:   variable loggerA_lh1instanceofFluentLogger
+  location: class org.fluentd.logger.TestFluentLogFactory
 [INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.972 s
-[INFO] Finished at: 2023-07-26T04:56:20+06:00
+[INFO] Total time:  1.864 s
+[INFO] Finished at: 2023-07-27T01:33:09+06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project fluent-logger: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,37] incompatible types: org.fluentd.logger.FluentLogger cannot be converted to boolean
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,37] cannot find symbol
+[ERROR]   symbol:   variable loggerA_lh1instanceofFluentLogger
+[ERROR]   location: class org.fluentd.logger.TestFluentLogFactory
 [ERROR] 
 [ERROR] -> [Help 1]
 [ERROR] 

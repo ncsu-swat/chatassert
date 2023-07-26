@@ -27,25 +27,36 @@
 [INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ fluent-logger ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 7 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/test-classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java uses unchecked or unsafe operations.
 [WARNING] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/sender/TestRawSocketSender.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.8.1:test (default-test) @ fluent-logger ---
-[INFO] Surefire report directory: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running org.fluentd.logger.TestFluentLogFactory
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.296 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
+[INFO] 2 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,42] cannot find symbol
+  symbol:   variable loggers
+  location: class org.fluentd.logger.TestFluentLogFactory
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.690 s
-[INFO] Finished at: 2023-07-26T04:51:59+06:00
+[INFO] Total time:  1.783 s
+[INFO] Finished at: 2023-07-27T01:31:12+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project fluent-logger: Compilation failure
+[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/src/test/java/org/fluentd/logger/TestFluentLogFactory.java:[26,42] cannot find symbol
+[ERROR]   symbol:   variable loggers
+[ERROR]   location: class org.fluentd.logger.TestFluentLogFactory
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

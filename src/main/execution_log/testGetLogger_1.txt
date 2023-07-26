@@ -37,7 +37,7 @@
  T E S T S
 -------------------------------------------------------
 Running org.fluentd.logger.TestFluentLogFactory
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.435 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.383 sec
 
 Results :
 
@@ -46,6 +46,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  7.890 s
-[INFO] Finished at: 2023-07-26T04:51:32+06:00
+[INFO] Total time:  8.041 s
+[INFO] Finished at: 2023-07-27T01:30:32+06:00
 [INFO] ------------------------------------------------------------------------

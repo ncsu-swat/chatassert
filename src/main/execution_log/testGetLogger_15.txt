@@ -37,15 +37,28 @@
  T E S T S
 -------------------------------------------------------
 Running org.fluentd.logger.TestFluentLogFactory
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.342 sec
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.287 sec <<< FAILURE!
 
 Results :
 
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+Failed tests: 
+  testGetLogger(org.fluentd.logger.TestFluentLogFactory): expected:<2> but was:<4>
+
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
+[INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  8.213 s
-[INFO] Finished at: 2023-07-26T04:56:49+06:00
+[INFO] Total time:  7.488 s
+[INFO] Finished at: 2023-07-27T01:33:24+06:00
 [INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.8.1:test (default-test) on project fluent-logger: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/fluent-logger-java/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
