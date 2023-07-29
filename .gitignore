@@ -1,6 +1,12 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
 *.py[cod]
+*/*.py[cod]
+*/*/*.py[cod]
+*/*/*/*.py[cod]
 *$py.class
 
 # C extensions (commenting since the my_languages.so in eval/parser has .so)
@@ -24,6 +30,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.vscode/*
 MANIFEST
 
 # PyInstaller
@@ -168,3 +175,4 @@ tmp
 */*/*/.DS_Store
 */*/*/*/.DS_Store
 .vscode
+.vscode/*

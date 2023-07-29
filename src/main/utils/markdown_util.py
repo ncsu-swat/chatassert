@@ -101,6 +101,8 @@ def clean_args(gpt_oracle):
     gateway = JavaGateway()
     gpt_oracle = gateway.entry_point.removeAssertionMessage(gpt_oracle)
 
+    if '???' in gpt_oracle: return None
+
     return 'org.junit.Assert.' + gpt_oracle
 
 # Check if commutating args of assertEquals gives exact match

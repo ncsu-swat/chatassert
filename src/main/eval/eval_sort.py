@@ -1,19 +1,17 @@
 import pandas as pd
 
 acc_dict = { 1:0, 3:0, 5:0, 10:0 }
-total_samples = 0
+total_samples = 350
 
-def rank_acc():
+def rank_acc(df):
     global acc_dict
     global total_samples
-
-    preds_processed = pd.read_csv('../../res_sorted_all.csv', sep='\t')
 
     def acc_at_ten(df_slice):
         global acc_dict
         global total_samples
 
-        total_samples += 1
+        # total_samples += 1
         for (idx, (_, row)) in enumerate(df_slice.iterrows()):
             if row['Correct'] == 1:
                 for key in acc_dict.keys():
@@ -21,9 +19,42 @@ def rank_acc():
                         acc_dict[key] = acc_dict[key] + 1
                 break
 
-    preds_processed.groupby('TestID').apply(acc_at_ten)
+    df.groupby('ClassName#TestName').apply(acc_at_ten)
     acc_dict = { key:acc_dict[key]/total_samples for key in acc_dict.keys() }
 
     return acc_dict
 
-print(rank_acc())
+
+teco = pd.read_csv('../../data/venn/teco-res.tsv', sep='\t')
+# lmany = pd.read_csv('../../data/venn/lmany.tsv', sep='\t')
+lmany_fuzz = pd.read_csv('../../data/venn/lmany-fuzz.tsv', sep='\t')
+tatu = pd.read_csv('../../data/venn/chatassert-res.tsv', sep='\t')
+minus_ex = pd.read_csv('../../data/venn/minus-ex.tsv', sep='\t')
+minus_sr = pd.read_csv('../../data/venn/minus-sr.tsv', sep='\t')
+minus_cs = pd.read_csv('../../data/venn/minus-cs.tsv', sep='\t')
+minus_dr = pd.read_csv('../../data/venn/minus-dr.tsv', sep='\t')
+
+tatu['ClassName#TestName'] = tatu['ClassName'] + '#' + tatu['TestName']
+lmany['ClassName#TestName'] = lmany['ClassName'] + '#' + lmany['TestName']
+lmany_fuzz['ClassName#TestName'] = lmany_fuzz['ClassName'] + '#' + lmany_fuzz['TestName']
+minus_ex['ClassName#TestName'] = minus_ex['ClassName'] + '#' + minus_ex['TestName']
+minus_sr['ClassName#TestName'] = minus_sr['ClassName'] + '#' + minus_sr['TestName']
+minus_cs['ClassName#TestName'] = minus_cs['ClassName'] + '#' + minus_cs['TestName']
+minus_dr['ClassName#TestName'] = minus_dr['ClassName'] + '#' + minus_dr['TestName']
+
+print('TECO')
+print(rank_acc(teco))
+print('TATU')
+print(rank_acc(tatu))
+print('LMANY')
+print(rank_acc(lmany))
+print('LMANY-FUZZ')
+print(rank_acc(lmany_fuzz))
+print('MINUS-EX')
+print(rank_acc(minus_ex))
+print('MINUS-SR')
+print(rank_acc(minus_sr))
+print('MINUS-CS')
+print(rank_acc(minus_cs))
+print('MINUS-DR')
+print(rank_acc(minus_dr))

@@ -1,48 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] 
-[INFO] --------------------< org.markdownj:markdownj-core >--------------------
-[INFO] Building MarkdownJ Core 0.5-SNAPSHOT
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.2/maven-resources-plugin-2.2.pom
-Progress (1): 1.5 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.2/maven-resources-plugin-2.2.pom (1.5 kB at 2.6 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/1/maven-plugins-1.pom
-Progress (1): 2.7/3.2 kBProgress (1): 3.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/1/maven-plugins-1.pom (3.2 kB at 36 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.2/maven-resources-plugin-2.2.jar
-Progress (1): 2.7/14 kBProgress (1): 5.5/14 kBProgress (1): 8.2/14 kBProgress (1): 11/14 kB Progress (1): 14 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.2/maven-resources-plugin-2.2.jar (14 kB at 137 kB/s)
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ markdownj-core ---
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven) @ markdownj-core ---
-[INFO] 
-[INFO] --- maven-resources-plugin:2.2:resources (default-resources) @ markdownj-core ---
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0/maven-project-2.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0/maven-profile-2.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0/maven-repository-metadata-2.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0/maven-artifact-manager-2.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0/maven-model-2.0.jar
-Progress (1): 2.7/21 kBProgress (1): 5.5/21 kBProgress (1): 8.2/21 kBProgress (1): 11/21 kB Progress (1): 14/21 kBProgress (1): 16/21 kBProgress (1): 19/21 kBProgress (1): 21 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0/maven-repository-metadata-2.0.jar (21 kB at 237 kB/s)
-Progress (1): 2.7/30 kBProgress (1): 5.5/30 kBProgress (1): 8.2/30 kBProgress (1): 11/30 kB Progress (1): 14/30 kBProgress (1): 16/30 kBProgress (1): 19/30 kBProgress (2): 19/30 kB | 4.1/78 kBProgress (3): 19/30 kB | 4.1/78 kB | 2.7/51 kBProgress (3): 19/30 kB | 8.2/78 kB | 2.7/51 kBProgress (3): 19/30 kB | 12/78 kB | 2.7/51 kB Progress (3): 19/30 kB | 12/78 kB | 5.5/51 kBProgress (3): 19/30 kB | 16/78 kB | 5.5/51 kBProgress (3): 19/30 kB | 16/78 kB | 8.2/51 kBProgress (3): 19/30 kB | 16/78 kB | 11/51 kB Progress (4): 19/30 kB | 16/78 kB | 11/51 kB | 4.1/105 kBProgress (4): 19/30 kB | 16/78 kB | 11/51 kB | 8.2/105 kBProgress (4): 19/30 kB | 16/78 kB | 11/51 kB | 12/105 kB Progress (4): 22/30 kB | 16/78 kB | 11/51 kB | 12/105 kBProgress (4): 22/30 kB | 16/78 kB | 11/51 kB | 16/105 kBProgress (4): 22/30 kB | 16/78 kB | 14/51 kB | 16/105 kBProgress (4): 25/30 kB | 16/78 kB | 14/51 kB | 16/105 kBProgress (4): 25/30 kB | 16/78 kB | 16/51 kB | 16/105 kBProgress (4): 27/30 kB | 16/78 kB | 16/51 kB | 16/105 kBProgress (4): 27/30 kB | 16/78 kB | 19/51 kB | 16/105 kBProgress (4): 27/30 kB | 16/78 kB | 22/51 kB | 16/105 kBProgress (4): 30/30 kB | 16/78 kB | 22/51 kB | 16/105 kBProgress (4): 30 kB | 16/78 kB | 22/51 kB | 16/105 kB   Progress (4): 30 kB | 16/78 kB | 25/51 kB | 16/105 kBProgress (4): 30 kB | 20/78 kB | 25/51 kB | 16/105 kBProgress (4): 30 kB | 25/78 kB | 25/51 kB | 16/105 kBProgress (4): 30 kB | 29/78 kB | 25/51 kB | 16/105 kBProgress (4): 30 kB | 33/78 kB | 25/51 kB | 16/105 kBProgress (4): 30 kB | 33/78 kB | 27/51 kB | 16/105 kBProgress (4): 30 kB | 33/78 kB | 27/51 kB | 20/105 kBProgress (4): 30 kB | 33/78 kB | 27/51 kB | 25/105 kBProgress (4): 30 kB | 33/78 kB | 27/51 kB | 29/105 kBProgress (4): 30 kB | 33/78 kB | 27/51 kB | 33/105 kBProgress (4): 30 kB | 33/78 kB | 30/51 kB | 33/105 kBProgress (4): 30 kB | 33/78 kB | 33/51 kB | 33/105 kBProgress (4): 30 kB | 33/78 kB | 36/51 kB | 33/105 kBProgress (4): 30 kB | 33/78 kB | 38/51 kB | 33/105 kBProgress (4): 30 kB | 37/78 kB | 38/51 kB | 33/105 kBProgress (4): 30 kB | 41/78 kB | 38/51 kB | 33/105 kBProgress (4): 30 kB | 45/78 kB | 38/51 kB | 33/105 kBProgress (4): 30 kB | 49/78 kB | 38/51 kB | 33/105 kBProgress (4): 30 kB | 49/78 kB | 41/51 kB | 33/105 kBProgress (4): 30 kB | 49/78 kB | 41/51 kB | 37/105 kBProgress (4): 30 kB | 49/78 kB | 41/51 kB | 41/105 kBProgress (4): 30 kB | 49/78 kB | 41/51 kB | 45/105 kBProgress (4): 30 kB | 49/78 kB | 41/51 kB | 49/105 kBProgress (4): 30 kB | 49/78 kB | 44/51 kB | 49/105 kBProgress (4): 30 kB | 49/78 kB | 47/51 kB | 49/105 kBProgress (4): 30 kB | 49/78 kB | 49/51 kB | 49/105 kBProgress (4): 30 kB | 53/78 kB | 49/51 kB | 49/105 kBProgress (4): 30 kB | 53/78 kB | 51 kB | 49/105 kB   Progress (4): 30 kB | 57/78 kB | 51 kB | 49/105 kBProgress (4): 30 kB | 61/78 kB | 51 kB | 49/105 kBProgress (4): 30 kB | 66/78 kB | 51 kB | 49/105 kBProgress (4): 30 kB | 66/78 kB | 51 kB | 53/105 kBProgress (4): 30 kB | 66/78 kB | 51 kB | 57/105 kBProgress (4): 30 kB | 66/78 kB | 51 kB | 61/105 kBProgress (4): 30 kB | 66/78 kB | 51 kB | 66/105 kBProgress (4): 30 kB | 70/78 kB | 51 kB | 66/105 kBProgress (4): 30 kB | 74/78 kB | 51 kB | 66/105 kBProgress (4): 30 kB | 78/78 kB | 51 kB | 66/105 kBProgress (4): 30 kB | 78 kB | 51 kB | 66/105 kB                                                  Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0/maven-profile-2.0.jar (30 kB at 85 kB/s)
-Progress (3): 78 kB | 51 kB | 70/105 kBProgress (3): 78 kB | 51 kB | 74/105 kBProgress (3): 78 kB | 51 kB | 78/105 kBProgress (3): 78 kB | 51 kB | 82/105 kBProgress (3): 78 kB | 51 kB | 86/105 kBProgress (3): 78 kB | 51 kB | 90/105 kBProgress (3): 78 kB | 51 kB | 94/105 kBProgress (3): 78 kB | 51 kB | 98/105 kBProgress (3): 78 kB | 51 kB | 102/105 kBProgress (3): 78 kB | 51 kB | 105 kB                                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0/maven-artifact-manager-2.0.jar (51 kB at 133 kB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0/maven-project-2.0.jar (105 kB at 258 kB/s)
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0/maven-model-2.0.jar (78 kB at 185 kB/s)
-[INFO] Using encoding: 'UTF-8' to copy filtered resources.
-[INFO] 
-[INFO] --- maven-compiler-plugin:2.0.2:compile (default-compile) @ markdownj-core ---
-[INFO] Compiling 8 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/markdownj/core/target/classes
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.118 s
-[INFO] Finished at: 2023-06-07T07:33:45-04:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.0.2:compile (default-compile) on project markdownj-core: Compilation failure: Compilation failure: 
-[ERROR] error: Source option 5 is no longer supported. Use 6 or later.
-[ERROR] error: Target option 1.5 is no longer supported. Use 1.6 or later.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

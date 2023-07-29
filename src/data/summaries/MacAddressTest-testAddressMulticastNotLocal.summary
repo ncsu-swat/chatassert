@@ -1,0 +1,35 @@
+0. In line 1, an object of class `MacAddress` is instantiated.
+1. This is a constructor code for the `MacAddress` class. It takes a single parameter `macAddress`, which is a string representing a hexadecimal encoded address. 
+
+The constructor calls a method `parseMacAddress` to parse the provided `macAddress` and assigns the returned value to the `address` field of the `MacAddress` object. 
+
+Overall, this constructor allows you to create a `MacAddress` object by providing a hexadecimal encoded address.
+2. In line 1, an object of class `MacAddress` is instantiated
+3. The given code represents the `MacAddress` class. Here's a summary of the class:
+
+1. Package and Import Statements: The code is inside the `com.fluenda.parcefone.event` package. It imports `java.util.Arrays`, `java.util.Objects`, `java.util.regex.Matcher`, `java.util.regex.Pattern`, and `java.lang.Comparable`.
+
+2. Class Declaration: The `MacAddress` class implements the `Comparable<MacAddress>` interface.
+
+3. Constants: The class declares some constants like `ADDRESS_LENGTH`, `MUTLTICAST_FLAG`, `LOCAL_FLAG`, and `STANDARD_SEPARATOR`.
+
+4. Static Block: There is a static block that initializes the `ADDRESS_PATTERN` variable. It defines a pattern to match a valid MAC address.
+
+5. Instance Variables: The class has a private final instance variable `address` representing the MAC address as a byte array.
+
+6. Constructors: The class provides a single constructor that takes a `String` parameter `macAddress`. It calls the `parseMacAddress` method to parse the `macAddress` and stores the result in the `address` variable.
+
+7. Methods:
+   - `getBytes()`: It returns a copy of the `address` byte array.
+   - `isMulticast()`: It checks if the MAC address is a multicast address.
+   - `isLocal()`: It checks if the MAC address is a local address.
+   - `toString()`: It formats the MAC address as a lowercase hexadecimal string with a standard separator.
+   - `equals()`: It compares two `MacAddress` objects based on their byte arrays.
+   - `hashCode()`: It generates a hash code based on the byte array of the MAC address.
+   - `compareTo()`: It compares two `MacAddress` objects based on the byte values of their addresses.
+
+8. Private Methods:
+   - `parseMacAddress()`: It parses the given `macAddress` string to validate and convert it into a byte array representing the MAC address.
+
+Overall, the `MacAddress` class provides functionality to work with MAC addresses, including parsing, comparison, and data manipulation.
+

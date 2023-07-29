@@ -6,7 +6,7 @@ class Prompts:
     GENERATION_SEED = "I will give you a setup method <SETUP>, test method prefix <TEST> and a focal method <FOCAL>. Can you generate only one JUnit assert statement that is the best fit for the given test prefix?"
     GENERATION_MOCK_SEED_RESPONSE = "Yes. I will consider the setup method <SETUP> if any, test method prefix <TEST>, and the focal method <FOCAL>. I will generate only one JUnit assert statement that is a best fit for the given test prefix. Can you please provide the source code of the placeholders <SETUP>, <TEST>, and <FOCAL>?"
     GENERATION_SUMM_SEED = "A summary of each statement in the test prefix <TEST> is as follows:\n\n{}"
-    GENERATION_ONESHOT_SEED = "Here is an example test method for reference:\n```{}```"
+    GENERATION_ONESHOT_SEED = "\nHere are some examples that you can follow when generating the best assert statement.\n{}"
     GENERATION_SEED_EXT = "The source code for the <SETUP>, <TEST>, and <FOCAL> tags are as follows:\n<SETUP>:\n```{}```,\n<TEST>:\n```{}```,\n<FOCAL>:\n```{}```. Now, can you generate only one JUnit assert statement that is the best fit for the given test prefix?"
     GENERATION_NEXT = "Can you generate another completely different assert statement?"
     

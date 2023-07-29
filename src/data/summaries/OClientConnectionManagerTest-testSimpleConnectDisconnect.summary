@@ -1,0 +1,127 @@
+0. In line 1, an object of class `OClientConnectionManager` is instantiated.
+1. This is a constructor for the `OClientConnectionManager` class. Let's break down the code step by step:
+
+1. `public OClientConnectionManager(OServer server)`: This is the constructor method, which is used to create an instance of the `OClientConnectionManager` class. It takes an `OServer` object as a parameter.
+
+2. `final int delay = OGlobalConfiguration.SERVER_CHANNEL_CLEAN_DELAY.getValueAsInteger();`: This line retrieves the value of the `SERVER_CHANNEL_CLEAN_DELAY` configuration parameter and assigns it to the `delay` variable. The `getValueAsInteger()` method converts the parameter value to an integer.
+
+3. `timerTask = Orient.instance().scheduleTask(() -> { ... });`: Here, the `scheduleTask()` method is invoked on the `Orient.instance()` object, which is a singleton instance of the `Orient` class. It schedules a task to be executed periodically with a delay and an interval specified by the `delay` value. The task itself is defined as a lambda expression, which will be executed by the timer.
+
+4. Within the lambda expression: `cleanExpiredConnections();`: This line invokes the `cleanExpiredConnections()` method.
+
+5. `OLogManager.instance().debug(this, "Error on client connection purge task", e);`: In case an exception occurs during the execution of the `cleanExpiredConnections()` method, this line logs the error message and the exception details to the debug log.
+
+6. `Orient.instance().getProfiler().registerHookValue("server.connections.actives", "Number of active network connections", METRIC_TYPE.COUNTER, new OProfilerHookValue() { ... });`: This code registers a hook value in the profiler, which will provide insights into the number of active network connections. The hook value is defined as an anonymous inner class implementing the `OProfilerHookValue` interface.
+
+7. Within the anonymous inner class: `public Object getValue() { ... }`: This line implements the `getValue()` method of the `OProfilerHookValue` interface. It returns the number of connections in the `connections` list as a `Long` object.
+
+8. `return (long) connections.size();`: This line returns the count of elements in the `connections` list, typecasted to a `Long` object.
+
+9. `this.server = server;`: Finally, the `server` parameter passed to the constructor is assigned to the `server` instance variable of the class.
+
+Overall, this constructor initializes the `OClientConnectionManager` object, schedules a task to clean expired connections periodically, registers a hook value in the profiler, and assigns the `server` parameter to an instance variable.
+2. In line 1, an object of class `OClientConnectionManager` is instantiated
+3. This is the code for the `OClientConnectionManager` class. Let's go through the code step by step:
+
+1. The class is declared as `public class OClientConnectionManager`.
+
+2. It imports several classes and interfaces from different packages in the project.
+
+3. The class starts with a few comments about licensing and more information.
+
+4. The class is part of the `com.orientechnologies.orient.server` package.
+
+5. The actual class code begins with the declaration of class-level variables:
+
+- `connections`: A `ConcurrentMap` that stores `OClientConnection` objects with their unique identifiers as keys.
+
+- `connectionSerial`: An `AtomicInteger` that generates unique identifiers for each new connection.
+
+- `sessions`: A `ConcurrentMap` that stores `OClientSessions` objects with their token hashes as keys.
+
+- `timerTask`: A `TimerTask` that is used to periodically clean expired connections.
+
+- `server`: An `OServer` object that represents the server associated with this connection manager.
+
+6. The class declares a constructor `public OClientConnectionManager(OServer server)` that initializes the `OClientConnectionManager` object.
+
+- The constructor takes an `OServer` object as a parameter.
+
+- It initializes the `delay` variable using a configuration value.
+
+- It schedules a task to clean expired connections periodically using the `Orient.instance().scheduleTask()` method.
+
+- It registers a hook value in the profiler to track the number of active network connections.
+
+- It assigns the `server` parameter to the `server` instance variable.
+
+7. The class defines the `cleanExpiredConnections()` method.
+
+- This method is responsible for cleaning up expired connections.
+
+- It iterates over the `connections` map using an iterator and checks if each connection has expired.
+
+- If a connection is found to be expired, it is closed and removed from the map.
+
+- The method also cleans up any push sockets used for distributed configuration.
+
+8. The class declares several other methods such as `connect()`, `getConnection()`, `kill()`, `disconnect()`, etc., that are responsible for managing connections, retrieving connections, killing connections, and disconnecting connections.
+
+9. The class also contains a few helper methods to handle pushing distributed configuration to connected clients and managing sessions.
+
+10. The class provides a few utility methods to get information about the connections and sessions stored in the connection manager.
+
+11. Finally, the class defines the `shutdown()` and `killAllChannels()` methods to gracefully terminate and kill all connections, respectively.
+
+In summary, the `OClientConnectionManager` class manages client connections by storing them in a concurrent map, cleaning up expired connections, handling various operations on connections, and managing sessions. It also provides methods to push distributed configuration to connected clients and to gracefully terminate or kill all connections.
+4. In line 2, an object of class `OClientConnection` is instantiated
+5. This class is the implementation of the `OClientConnection` in the `com.orientechnologies.orient.server` package. Let's analyze the key aspects of this class:
+
+1. The class begins with a block of licensing information and package imports.
+
+2. The actual class code starts with the declaration and initialization of different instance variables:
+
+- `id`: It stores the unique identifier for the connection.
+
+- `since`: It holds the timestamp indicating when the connection was established.
+
+- `protocols`: It is a set of `ONetworkProtocol` objects associated with the connection.
+
+- `protocol`: It represents the current network protocol associated with the connection.
+
+- `database`: It holds the reference to the active database associated with the connection.
+
+- `serverUser`: It stores the details of the user associated with the connection.
+
+- `data`: It is an instance of `ONetworkProtocolData` that contains protocol-specific data.
+
+- `stats`: It is an instance of `OClientConnectionStats`, which maintains statistics for the connection.
+
+- `lock`: It is a lock used for managing concurrent access to the connection.
+
+- `tokenBased`: It indicates whether the connection is token-based authentication or not.
+
+- `tokenBytes`: It holds the byte array representation of the authentication token.
+
+- `token`: It represents the parsed and validated authentication token.
+
+- `disconnectOnAfter`: It specifies whether the connection should be disconnected after the currently executed operation.
+
+- `executor`: It is an instance of `OBinaryRequestExecutor` associated with the connection.
+
+3. The class provides a constructor `public OClientConnection(final int id, final ONetworkProtocol protocol)`.
+
+- The constructor initializes the instance variables `id`, `protocol`, `protocols`, `since`, and `executor`.
+
+4. The class defines methods for managing the connection, including `close()`, `acquire()`, and `release()`. The `acquire()` and `release()` methods are used for managing concurrent access to the connection.
+
+5. The class overrides the `toString()`, `hashCode()`, and `equals()` methods to provide custom behavior.
+
+6. The class provides various getter and setter methods for accessing and modifying the instance variables.
+
+7. It also contains methods related to validating the session, cleaning the session, and handling operations and initialization of the connection.
+
+8. The class includes methods for resolving network addresses, performing various operations related to the database and user, managing stats and execution details, and acquiring locks for expiration.
+
+Overall, the `OClientConnection` class represents a client connection to the server in the OrientDB framework. It encapsulates the connection-related information and provides methods for managing and interacting with the connection, including operations related to authentication, database access, statistics, and locking.
+

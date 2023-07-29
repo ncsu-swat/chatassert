@@ -1,0 +1,39 @@
+0. In line 1, an object of class `Cookie` is instantiated.
+1. This code is a constructor for the `Cookie` class. Constructors are special methods in a class that are used to create and initialize objects of that class.
+
+In this constructor, three parameters are passed - `name`, `value`, and `numDays`. These parameters represent the name, value, and number of days for the cookie. 
+
+The constructor initializes the instance variables (`n`, `v`, and `e`) of the `Cookie` class. `n` is assigned the value of the `name` parameter, `v` is assigned the value of the `value` parameter.
+
+The line `this.e = getHTTPTime(numDays);` calls the `getHTTPTime()` method passing in the `numDays` parameter. The returned value is assigned to the instance variable `e`. This method is likely used to get the expiration time of the cookie based on the number of days provided.
+
+Overall, this constructor sets the name, value, and expiration time of the `Cookie` object being instantiated.
+2. Take note that in line 1, method `add` from class `List` is invoked.
+3. Take note that in line 2, constructor `HttpGet` from class `HttpGet` is invoked.
+4. Take note that in line 3, constructor `BasicResponseHandler` from class `BasicResponseHandler` is invoked.
+5. Take note that in line 5, method `getCookieStore` from class `AbstractHttpClient` is invoked.
+6. In line 1, an object of class `Cookie` is instantiated
+7. This code represents a class called `Cookie` in the package `org.nanohttpd.protocols.http.content`. It is used to represent a simple cookie.
+
+The `Cookie` class has several methods and a constructor. Here's a summary of the different parts of the code:
+
+- The class begins with some licensing information and imports necessary classes.
+
+- The class has a static method `getHTTPTime(int days)` that returns the HTTP formatted date string representing the current date plus the provided number of days.
+
+- The `Cookie` class has three instance variables: `n` (name), `v` (value), and `e` (expires). These variables hold the values for the cookie's name, value, and expiration time.
+
+- There are three constructors provided in the class:
+  - The first constructor accepts the cookie's name and value as parameters and sets the expiration time to 30 days from the current date.
+  - The second constructor accepts the cookie's name, value, and a number of days as parameters and sets the expiration time accordingly.
+  - The third constructor accepts the cookie's name, value, and an explicit expiration date as parameters.
+
+- The class also provides a method `getHTTPHeader()` that returns the cookie as an HTTP header string with the format "name=value; expires=expiration_time".
+
+Overall, this `Cookie` class provides a representation for cookies and useful methods for creating and working with cookies in an HTTP context.
+8. Take note that in line 2, an object of class `HttpGet` is created.
+9. Take note that in line 3, an object of class `BasicResponseHandler` is created.
+10. Take note that in line 3, an object of class `String` is created.
+11. Take note that in line 3, an object of class `ResponseHandler` is created.
+12. Take note that in line 5, an object of class `CookieStore` is created.
+

@@ -1,0 +1,32 @@
+0. In line 3, method `execute` of class `OETLProcessor` is invoked.
+1. Sure! 
+
+The `execute` method is a void method, which means it does not return a value. Let's break down the code step by step:
+
+1. `configure();` This line invokes the `configure` method. It is likely that this method is responsible for setting up any necessary configurations or initializing some variables or objects.
+
+2. `begin();` This line invokes the `begin` method. This method probably contains some code that needs to be executed before the actual extraction and pipeline process starts. It could involve initializing resources or preparing the environment.
+
+3. `runExtractorAndPipeline();` This line invokes the `runExtractorAndPipeline` method. This method is likely responsible for executing the extraction and pipeline logic. It might involve fetching data from a source, transforming or processing it, and loading it into another destination.
+
+4. `end();` This line invokes the `end` method. This method probably contains some cleanup or finalization logic that needs to be performed after the extraction and pipeline process is complete.
+
+By calling these methods in this specific order within the `execute` method, it ensures that the necessary setup and cleanup actions are taken care of before and after the main extraction and pipeline process.
+2. In line 4, method `getResult` of class `OETLBaseTest` is invoked.
+3. Certainly! 
+
+The `getResult` method is defined in the `OETLBaseTest` class. Let's break down the code step by step:
+
+1. `protected List<ODocument>`: This indicates that the method has protected access, which means it is accessible only within the same package or by subclasses of the `OETLBaseTest` class. It also specifies that the method returns a `List` of `ODocument` objects.
+
+2. `return ((OETLStubLoader) proc.getLoader()).loadedRecords;`: This line is the implementation of the `getResult` method. It returns the `loadedRecords` field from an `OETLStubLoader` object.
+
+    - `proc.getLoader()`: Here, `getLoader()` is a method invoked on the `proc` object (which is an instance of `OETLProcessor`). This method retrieves the loader associated with the `OETLProcessor` instance. It is likely that the `getLoader()` method returns an implementation of the `OETLLoader` interface.
+
+    - `(OETLStubLoader) proc.getLoader()`: This line casts the `OETLLoader` object returned by `getLoader()` to an `OETLStubLoader` object. It assumes that the loader used is actually an `OETLStubLoader` instance.
+
+    - `.loadedRecords`: This is an attribute or field of the `OETLStubLoader` object, representing a `List<ODocument>` that contains the loaded records.
+
+So, the `getResult` method returns the list of `ODocument` objects that were loaded by the `OETLStubLoader` associated with the `OETLProcessor` instance (`proc`). This method is likely used for testing purposes to verify the expected result of the extraction and pipeline process.
+4. Take note that in line 1, an object of class `String` is created.
+

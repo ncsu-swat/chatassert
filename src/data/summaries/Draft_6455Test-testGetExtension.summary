@@ -1,0 +1,32 @@
+0. In line 1, an object of class `Draft_6455` is instantiated.
+1. The code above is a constructor for the `Draft_6455` class. It is used to initialize and create objects of this class. Let's break it down:
+
+- `Draft_6455()` is the constructor method with the same name as the class. It does not take any parameters.
+- The `@since 1.3.5` documentation comment indicates the version since which this constructor has been available.
+- Inside the constructor, the `this(Collections.<IExtension>emptyList())` statement is called, which is invoking another constructor of the same class `Draft_6455` with a list of `IExtension` objects.
+- `Collections.<IExtension>emptyList()` returns an empty list of `IExtension` type. It ensures that the constructor is called with an empty list argument.
+
+Overall, this constructor initializes a `Draft_6455` object with an empty list of extensions.
+2. In line 1, an object of class `Draft_6455` is instantiated
+3. The code provided is the implementation of the RFC 6455 WebSocket protocol, which is a widely used protocol for real-time communication between a client and a server over a network connection. Here is a summary of the classes and methods in the code:
+
+- The code contains various import statements for different classes and packages used in the implementation.
+
+- The `Draft_6455` class extends the `Draft` class and represents the implementation of the RFC 6455 WebSocket protocol. It contains methods for handling handshakes, creating frames, processing frames, and managing extensions and protocols.
+
+- The class defines several constants for different fields and headers used in the WebSocket protocol.
+
+- It also defines instance variables such as `extension`, `protocol`, `knownExtensions`, `knownProtocols`, `currentContinuousFrame`, `byteBufferList`, `incompleteframe`, `reuseableRandom`, and `maxFrameSize`.
+
+- The class includes multiple constructors for creating instances of `Draft_6455` with different configurations.
+
+- The class implements various methods such as `acceptHandshakeAsServer`, `acceptHandshakeAsClient`, `postProcessHandshakeRequestAsClient`, `postProcessHandshakeResponseAsServer`, `createBinaryFrame`, `createFrames`, `translateFrame`, `processFrame`, and more.
+
+- The class includes several helper methods for generating keys, converting data types, checking limits, and processing frames.
+
+- It also overrides methods from the parent class `Draft` for specific implementation requirements.
+
+- The code includes additional comments and documentation to provide further explanation and context for each class and method.
+
+Overall, the `Draft_6455` class serves as the main implementation of the RFC 6455 WebSocket protocol, providing methods for handling handshakes, creating and processing frames, and managing extensions and protocols.
+

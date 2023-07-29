@@ -1,0 +1,75 @@
+0. Take note that in line 1, constructor `File` from class `File` is invoked.
+1. In line 2, method `appendText` of class `FileUtils` is invoked.
+2. Sure! Here's an explanation of the `appendText` method:
+
+```java
+public static void appendText(String text, File file) {
+    checkNotNull(text, "Text can't be null");
+    checkNotNull(file, "File can't be null");
+    FileOutputStream stream = null;
+    OutputStreamWriter streamWriter = null;
+    BufferedWriter writer = null;
+    try {
+        stream = new FileOutputStream(file, true);
+        streamWriter = new OutputStreamWriter(stream);
+        writer = new BufferedWriter(streamWriter);
+        writer.append(text);
+        writer.close();
+    } catch (IOException e) {
+        throw new UncheckedIOException("Could not append text", e);
+    } finally {
+        closeQuietly(writer);
+        closeQuietly(streamWriter);
+        closeQuietly(stream);
+    }
+}
+```
+
+This method takes in two parameters: `text` as a `String` and `file` as a `File` object. 
+
+Here's a breakdown of what the code does:
+
+1. It first checks if the `text` and `file` are not null using a custom `checkNotNull` method. If either of them is null, an exception with an error message is thrown.
+
+2. Next, it declares `FileOutputStream`, `OutputStreamWriter`, and `BufferedWriter` variables and initializes them with null values.
+
+3. Inside a `try` block, it creates a new `FileOutputStream` object `stream` by passing the `file` and `true` as parameters. The `true` parameter indicates that the file should be opened in append mode.
+
+4. It then creates an `OutputStreamWriter` object `streamWriter` by passing the `stream` as a parameter.
+
+5. Next, it creates a `BufferedWriter` object `writer` by passing the `streamWriter` as a parameter.
+
+6. It appends the `text` to the `writer` using the `append` method.
+
+7. Finally, it closes the `writer` in a `finally` block to ensure that the resources are properly released. If an `IOException` occurs during any of the operations, it is caught, and a new `UncheckedIOException` is thrown with an error message indicating that text could not be appended.
+
+8. The `closeQuietly` method is called to close the `writer`, `streamWriter`, and `stream` safely in case of any exceptions during the closing process.
+
+Overall, the `appendText` method appends the provided `text` parameter to the specified `file` in an efficient and error-handling manner.
+3. Take note that in line 3, constructor `File` from class `File` is invoked.
+4. Take note that in line 4, method `getAbsolutePath` from class `File` is invoked.
+5. In line 4, method `initProperty` of class `SimulatorPropertiesTest` is invoked.
+6. Certainly! Here's an explanation of the `initProperty` method:
+
+```java
+private void initProperty(File file, String key, String value) {
+    System.out.println("writing value: " + value);
+    appendText(format("%s=%s", key, value), file);
+    simulatorProperties.init(file);
+}
+```
+
+This method is a private method that takes three parameters: `file` of type `File`, `key` of type `String`, and `value` of type `String`.
+
+Here's a breakdown of what the code does:
+
+1. It first prints a message to the console saying "writing value:" followed by the value provided.
+
+2. It then calls the `appendText` method, passing the formatted string `"%s=%s"` with `key` and `value` as arguments. The `appendText` method is responsible for appending this text to the specified `file`. This method might be defined elsewhere in the code.
+
+3. Finally, it calls the `init` method of the `simulatorProperties` object (which is an instance of a class, presumably `SimulatorProperties`). The `init` method is passed the `file` object as an argument. This method might be responsible for initializing some properties or doing some other operations related to the `file`.
+
+In summary, this `initProperty` method is used to write a key-value pair to a specified file by calling the `appendText` method and then initializing properties based on that file using the `init` method.
+7. Take note that in line 1, an object of class `File` is created.
+8. Take note that in line 3, an object of class `File` is created.
+

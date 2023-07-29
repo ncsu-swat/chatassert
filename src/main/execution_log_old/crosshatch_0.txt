@@ -1,187 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] Inspecting build with total of 1 modules...
-[INFO] Installing Nexus Staging features:
-[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
-[INFO] 
-[INFO] ----------------------< guru.nidi:graphviz-rough >----------------------
-[INFO] Building graphviz-rough 0.18.1
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-Downloading from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-maven-plugin/1.8.0/frontend-maven-plugin-1.8.0.pom
-Progress (1): 2.1/4.9 kBProgress (1): 4.9/4.9 kBProgress (1): 4.9 kB                        Downloaded from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-maven-plugin/1.8.0/frontend-maven-plugin-1.8.0.pom (4.9 kB at 6.9 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugins/1.8.0/frontend-plugins-1.8.0.pom
-Progress (1): 2.1/6.4 kBProgress (1): 4.9/6.4 kBProgress (1): 6.4 kB                        Downloaded from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugins/1.8.0/frontend-plugins-1.8.0.pom (6.4 kB at 19 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-maven-plugin/1.8.0/frontend-maven-plugin-1.8.0.jar
-Progress (1): 2.1/35 kBProgress (1): 5.5/35 kBProgress (1): 8.2/35 kBProgress (1): 11/35 kB Progress (1): 14/35 kBProgress (1): 17/35 kBProgress (1): 20/35 kBProgress (1): 22/35 kBProgress (1): 25/35 kBProgress (1): 28/35 kBProgress (1): 31/35 kBProgress (1): 33/35 kBProgress (1): 35 kB                      Downloaded from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-maven-plugin/1.8.0/frontend-maven-plugin-1.8.0.jar (35 kB at 97 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java/0.18.1/graphviz-java-0.18.1.pom
-Progress (1): 2.7/6.7 kBProgress (1): 5.5/6.7 kBProgress (1): 6.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java/0.18.1/graphviz-java-0.18.1.pom (6.7 kB at 27 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java-parent/0.18.1/graphviz-java-parent-0.18.1.pom
-Progress (1): 2.7/5.1 kBProgress (1): 5.1 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java-parent/0.18.1/graphviz-java-parent-0.18.1.pom (5.1 kB at 49 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.4.2/junit-platform-launcher-1.4.2.pom
-Progress (1): 2.2 kB                    Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.4.2/junit-platform-launcher-1.4.2.pom (2.2 kB at 35 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java/0.18.1/graphviz-java-0.18.1.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.4.2/junit-platform-launcher-1.4.2.jar
-Progress (1): 4.1/98 kBProgress (1): 8.2/98 kBProgress (1): 12/98 kB Progress (1): 16/98 kBProgress (1): 20/98 kBProgress (1): 25/98 kBProgress (1): 29/98 kBProgress (1): 33/98 kBProgress (1): 37/98 kBProgress (1): 41/98 kBProgress (1): 45/98 kBProgress (1): 49/98 kBProgress (1): 53/98 kBProgress (1): 57/98 kBProgress (1): 61/98 kBProgress (1): 66/98 kBProgress (1): 70/98 kBProgress (1): 74/98 kBProgress (1): 78/98 kBProgress (1): 82/98 kBProgress (1): 86/98 kBProgress (1): 90/98 kBProgress (1): 94/98 kBProgress (1): 98 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-launcher/1.4.2/junit-platform-launcher-1.4.2.jar (98 kB at 815 kB/s)
-Progress (1): 4.1/272 kBProgress (1): 8.2/272 kBProgress (1): 12/272 kB Progress (1): 16/272 kBProgress (1): 20/272 kBProgress (1): 25/272 kBProgress (1): 29/272 kBProgress (1): 33/272 kBProgress (1): 37/272 kBProgress (1): 41/272 kBProgress (1): 45/272 kBProgress (1): 49/272 kBProgress (1): 53/272 kBProgress (1): 57/272 kBProgress (1): 61/272 kBProgress (1): 66/272 kBProgress (1): 70/272 kBProgress (1): 74/272 kBProgress (1): 78/272 kBProgress (1): 82/272 kBProgress (1): 86/272 kBProgress (1): 90/272 kBProgress (1): 94/272 kBProgress (1): 98/272 kBProgress (1): 102/272 kBProgress (1): 106/272 kBProgress (1): 111/272 kBProgress (1): 115/272 kBProgress (1): 119/272 kBProgress (1): 123/272 kBProgress (1): 127/272 kBProgress (1): 131/272 kBProgress (1): 135/272 kBProgress (1): 139/272 kBProgress (1): 143/272 kBProgress (1): 147/272 kBProgress (1): 152/272 kBProgress (1): 156/272 kBProgress (1): 160/272 kBProgress (1): 164/272 kBProgress (1): 168/272 kBProgress (1): 172/272 kBProgress (1): 176/272 kBProgress (1): 180/272 kBProgress (1): 184/272 kBProgress (1): 188/272 kBProgress (1): 193/272 kBProgress (1): 197/272 kBProgress (1): 201/272 kBProgress (1): 205/272 kBProgress (1): 209/272 kBProgress (1): 213/272 kBProgress (1): 217/272 kBProgress (1): 221/272 kBProgress (1): 225/272 kBProgress (1): 229/272 kBProgress (1): 233/272 kBProgress (1): 238/272 kBProgress (1): 242/272 kBProgress (1): 246/272 kBProgress (1): 250/272 kBProgress (1): 254/272 kBProgress (1): 258/272 kBProgress (1): 262/272 kBProgress (1): 266/272 kBProgress (1): 270/272 kBProgress (1): 272 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/guru/nidi/graphviz-java/0.18.1/graphviz-java-0.18.1.jar (272 kB at 612 kB/s)
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphviz-rough ---
-[INFO] 
-[INFO] --- code-assert-maven-plugin:0.9.15:prepare (default) @ graphviz-rough ---
-[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/jacoco.exec
-[INFO] Wrote argLine to target/coverageOptions.txt
-[INFO] 
-[INFO] --- frontend-maven-plugin:1.8.0:install-node-and-npm (install node and npm) @ graphviz-rough ---
-Downloading from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugin-core/1.8.0/frontend-plugin-core-1.8.0.pom
-Progress (1): 2.1/3.0 kBProgress (1): 3.0 kB                        Downloaded from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugin-core/1.8.0/frontend-plugin-core-1.8.0.pom (3.0 kB at 11 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.pom
-Progress (1): 2.7 kB                    Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.pom (2.7 kB at 14 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven/3.5.0/maven-3.5.0.pom
-Progress (1): 2.1/25 kBProgress (1): 4.9/25 kBProgress (1): 7.6/25 kBProgress (1): 10/25 kB Progress (1): 13/25 kBProgress (1): 15/25 kBProgress (1): 18/25 kBProgress (1): 21/25 kBProgress (1): 24/25 kBProgress (1): 25 kB                      Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven/3.5.0/maven-3.5.0.pom (25 kB at 122 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.pom
-Progress (1): 2.1/4.0 kBProgress (1): 4.0 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.pom (4.0 kB at 21 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.5.0/maven-artifact-3.5.0.pom
-Progress (1): 2.1/2.1 kBProgress (1): 2.1 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.5.0/maven-artifact-3.5.0.pom (2.1 kB at 11 kB/s)
-Downloading from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugin-core/1.8.0/frontend-plugin-core-1.8.0.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.jar
-Downloading from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.5.0/maven-artifact-3.5.0.jar
-Progress (1): 2.1/71 kBProgress (1): 5.5/71 kBProgress (1): 8.2/71 kBProgress (1): 11/71 kB Progress (1): 14/71 kBProgress (1): 17/71 kBProgress (1): 20/71 kBProgress (1): 22/71 kBProgress (1): 25/71 kBProgress (1): 28/71 kBProgress (1): 31/71 kBProgress (1): 33/71 kBProgress (1): 36/71 kBProgress (1): 39/71 kBProgress (1): 42/71 kBProgress (1): 44/71 kBProgress (1): 46/71 kBProgress (1): 49/71 kBProgress (1): 52/71 kBProgress (1): 55/71 kBProgress (1): 57/71 kBProgress (1): 60/71 kBProgress (1): 63/71 kBProgress (1): 66/71 kBProgress (1): 69/71 kBProgress (1): 71 kB   Progress (2): 71 kB | 2.1/48 kBProgress (3): 71 kB | 2.1/48 kB | 2.8/592 kBProgress (4): 71 kB | 2.1/48 kB | 2.8/592 kB | 2.8/165 kBProgress (4): 71 kB | 2.1/48 kB | 2.8/592 kB | 5.5/165 kBProgress (4): 71 kB | 2.1/48 kB | 2.8/592 kB | 8.2/165 kBProgress (4): 71 kB | 5.5/48 kB | 2.8/592 kB | 8.2/165 kBProgress (4): 71 kB | 5.5/48 kB | 2.8/592 kB | 11/165 kB Progress (4): 71 kB | 8.2/48 kB | 2.8/592 kB | 11/165 kBProgress (4): 71 kB | 11/48 kB | 2.8/592 kB | 11/165 kB Progress (4): 71 kB | 11/48 kB | 2.8/592 kB | 14/165 kBProgress (5): 71 kB | 11/48 kB | 2.8/592 kB | 14/165 kB | 2.8/55 kBProgress (5): 71 kB | 11/48 kB | 5.5/592 kB | 14/165 kB | 2.8/55 kBProgress (5): 71 kB | 11/48 kB | 8.2/592 kB | 14/165 kB | 2.8/55 kBProgress (5): 71 kB | 11/48 kB | 8.2/592 kB | 14/165 kB | 5.6/55 kBProgress (5): 71 kB | 11/48 kB | 8.2/592 kB | 14/165 kB | 8.3/55 kBProgress (5): 71 kB | 11/48 kB | 11/592 kB | 14/165 kB | 8.3/55 kB Progress (5): 71 kB | 11/48 kB | 11/592 kB | 17/165 kB | 8.3/55 kBProgress (5): 71 kB | 11/48 kB | 11/592 kB | 17/165 kB | 11/55 kB Progress (5): 71 kB | 11/48 kB | 14/592 kB | 17/165 kB | 11/55 kBProgress (5): 71 kB | 11/48 kB | 16/592 kB | 17/165 kB | 11/55 kBProgress (5): 71 kB | 11/48 kB | 16/592 kB | 17/165 kB | 14/55 kBProgress (5): 71 kB | 14/48 kB | 16/592 kB | 17/165 kB | 14/55 kBProgress (5): 71 kB | 14/48 kB | 20/592 kB | 17/165 kB | 14/55 kBProgress (5): 71 kB | 17/48 kB | 20/592 kB | 17/165 kB | 14/55 kBProgress (5): 71 kB | 17/48 kB | 20/592 kB | 17/165 kB | 17/55 kBProgress (5): 71 kB | 17/48 kB | 20/592 kB | 20/165 kB | 17/55 kBProgress (5): 71 kB | 20/48 kB | 20/592 kB | 20/165 kB | 17/55 kBProgress (5): 71 kB | 20/48 kB | 22/592 kB | 20/165 kB | 17/55 kBProgress (5): 71 kB | 20/48 kB | 22/592 kB | 22/165 kB | 17/55 kBProgress (5): 71 kB | 22/48 kB | 22/592 kB | 22/165 kB | 17/55 kBProgress (5): 71 kB | 22/48 kB | 22/592 kB | 25/165 kB | 17/55 kBProgress (5): 71 kB | 25/48 kB | 22/592 kB | 25/165 kB | 17/55 kBProgress (5): 71 kB | 25/48 kB | 25/592 kB | 25/165 kB | 17/55 kBProgress (5): 71 kB | 25/48 kB | 28/592 kB | 25/165 kB | 17/55 kBProgress (5): 71 kB | 28/48 kB | 28/592 kB | 25/165 kB | 17/55 kBProgress (5): 71 kB | 28/48 kB | 28/592 kB | 28/165 kB | 17/55 kBProgress (5): 71 kB | 28/48 kB | 28/592 kB | 31/165 kB | 17/55 kBProgress (5): 71 kB | 31/48 kB | 28/592 kB | 31/165 kB | 17/55 kBProgress (5): 71 kB | 31/48 kB | 28/592 kB | 31/165 kB | 20/55 kBProgress (5): 71 kB | 31/48 kB | 31/592 kB | 31/165 kB | 20/55 kBProgress (5): 71 kB | 33/48 kB | 31/592 kB | 31/165 kB | 20/55 kBProgress (5): 71 kB | 33/48 kB | 31/592 kB | 34/165 kB | 20/55 kBProgress (5): 71 kB | 33/48 kB | 33/592 kB | 34/165 kB | 20/55 kBProgress (5): 71 kB | 33/48 kB | 33/592 kB | 34/165 kB | 22/55 kBProgress (5): 71 kB | 33/48 kB | 33/592 kB | 36/165 kB | 22/55 kBProgress (5): 71 kB | 36/48 kB | 33/592 kB | 36/165 kB | 22/55 kB                                                                 Downloaded from jcenter: https://jcenter.bintray.com/com/github/eirslett/frontend-plugin-core/1.8.0/frontend-plugin-core-1.8.0.jar (71 kB at 197 kB/s)
-Progress (4): 36/48 kB | 36/592 kB | 36/165 kB | 22/55 kBProgress (4): 36/48 kB | 36/592 kB | 36/165 kB | 25/55 kBProgress (4): 39/48 kB | 36/592 kB | 36/165 kB | 25/55 kBProgress (4): 39/48 kB | 36/592 kB | 39/165 kB | 25/55 kBProgress (4): 39/48 kB | 36/592 kB | 42/165 kB | 25/55 kBProgress (4): 39/48 kB | 36/592 kB | 42/165 kB | 28/55 kBProgress (4): 41/48 kB | 36/592 kB | 42/165 kB | 28/55 kBProgress (4): 41/48 kB | 39/592 kB | 42/165 kB | 28/55 kBProgress (4): 41/48 kB | 39/592 kB | 42/165 kB | 31/55 kBProgress (4): 41/48 kB | 39/592 kB | 45/165 kB | 31/55 kBProgress (4): 44/48 kB | 39/592 kB | 45/165 kB | 31/55 kBProgress (4): 44/48 kB | 42/592 kB | 45/165 kB | 31/55 kBProgress (4): 44/48 kB | 44/592 kB | 45/165 kB | 31/55 kBProgress (4): 44/48 kB | 44/592 kB | 47/165 kB | 31/55 kBProgress (4): 46/48 kB | 44/592 kB | 47/165 kB | 31/55 kBProgress (4): 48 kB | 44/592 kB | 47/165 kB | 31/55 kB   Progress (4): 48 kB | 44/592 kB | 47/165 kB | 33/55 kBProgress (4): 48 kB | 44/592 kB | 47/165 kB | 36/55 kBProgress (4): 48 kB | 47/592 kB | 47/165 kB | 36/55 kBProgress (4): 48 kB | 47/592 kB | 51/165 kB | 36/55 kBProgress (4): 48 kB | 47/592 kB | 53/165 kB | 36/55 kBProgress (4): 48 kB | 50/592 kB | 53/165 kB | 36/55 kBProgress (4): 48 kB | 50/592 kB | 53/165 kB | 39/55 kBProgress (4): 48 kB | 52/592 kB | 53/165 kB | 39/55 kBProgress (4): 48 kB | 52/592 kB | 53/165 kB | 42/55 kBProgress (4): 48 kB | 52/592 kB | 56/165 kB | 42/55 kBProgress (4): 48 kB | 52/592 kB | 59/165 kB | 42/55 kBProgress (4): 48 kB | 55/592 kB | 59/165 kB | 42/55 kBProgress (4): 48 kB | 55/592 kB | 62/165 kB | 42/55 kBProgress (4): 48 kB | 58/592 kB | 62/165 kB | 42/55 kBProgress (4): 48 kB | 58/592 kB | 62/165 kB | 44/55 kBProgress (4): 48 kB | 58/592 kB | 62/165 kB | 46/55 kBProgress (4): 48 kB | 60/592 kB | 62/165 kB | 46/55 kBProgress (4): 48 kB | 60/592 kB | 65/165 kB | 46/55 kBProgress (4): 48 kB | 60/592 kB | 65/165 kB | 49/55 kBProgress (4): 48 kB | 60/592 kB | 65/165 kB | 52/55 kBProgress (4): 48 kB | 63/592 kB | 65/165 kB | 52/55 kBProgress (4): 48 kB | 63/592 kB | 67/165 kB | 52/55 kBProgress (4): 48 kB | 63/592 kB | 67/165 kB | 55/55 kBProgress (4): 48 kB | 63/592 kB | 70/165 kB | 55/55 kBProgress (4): 48 kB | 63/592 kB | 70/165 kB | 55 kB   Progress (4): 48 kB | 63/592 kB | 73/165 kB | 55 kBProgress (4): 48 kB | 63/592 kB | 76/165 kB | 55 kBProgress (4): 48 kB | 63/592 kB | 78/165 kB | 55 kBProgress (4): 48 kB | 63/592 kB | 82/165 kB | 55 kBProgress (4): 48 kB | 66/592 kB | 82/165 kB | 55 kBProgress (4): 48 kB | 66/592 kB | 84/165 kB | 55 kBProgress (4): 48 kB | 69/592 kB | 84/165 kB | 55 kBProgress (4): 48 kB | 69/592 kB | 87/165 kB | 55 kBProgress (4): 48 kB | 72/592 kB | 87/165 kB | 55 kBProgress (4): 48 kB | 75/592 kB | 87/165 kB | 55 kBProgress (4): 48 kB | 75/592 kB | 90/165 kB | 55 kBProgress (4): 48 kB | 77/592 kB | 90/165 kB | 55 kBProgress (4): 48 kB | 77/592 kB | 93/165 kB | 55 kBProgress (4): 48 kB | 80/592 kB | 93/165 kB | 55 kBProgress (4): 48 kB | 80/592 kB | 95/165 kB | 55 kBProgress (4): 48 kB | 83/592 kB | 95/165 kB | 55 kBProgress (4): 48 kB | 83/592 kB | 98/165 kB | 55 kBProgress (4): 48 kB | 86/592 kB | 98/165 kB | 55 kBProgress (4): 48 kB | 88/592 kB | 98/165 kB | 55 kBProgress (4): 48 kB | 91/592 kB | 98/165 kB | 55 kBProgress (4): 48 kB | 91/592 kB | 101/165 kB | 55 kBProgress (4): 48 kB | 94/592 kB | 101/165 kB | 55 kBProgress (4): 48 kB | 94/592 kB | 104/165 kB | 55 kBProgress (4): 48 kB | 94/592 kB | 107/165 kB | 55 kBProgress (4): 48 kB | 96/592 kB | 107/165 kB | 55 kBProgress (4): 48 kB | 96/592 kB | 110/165 kB | 55 kBProgress (4): 48 kB | 99/592 kB | 110/165 kB | 55 kBProgress (4): 48 kB | 99/592 kB | 112/165 kB | 55 kBProgress (4): 48 kB | 102/592 kB | 112/165 kB | 55 kBProgress (4): 48 kB | 102/592 kB | 115/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 115/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 118/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 121/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 123/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 126/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 129/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 132/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 134/165 kB | 55 kBProgress (4): 48 kB | 104/592 kB | 138/165 kB | 55 kBProgress (4): 48 kB | 107/592 kB | 138/165 kB | 55 kBProgress (4): 48 kB | 107/592 kB | 141/165 kB | 55 kBProgress (4): 48 kB | 110/592 kB | 141/165 kB | 55 kBProgress (4): 48 kB | 112/592 kB | 141/165 kB | 55 kBProgress (4): 48 kB | 112/592 kB | 143/165 kB | 55 kBProgress (4): 48 kB | 115/592 kB | 143/165 kB | 55 kBProgress (4): 48 kB | 115/592 kB | 146/165 kB | 55 kBProgress (4): 48 kB | 115/592 kB | 149/165 kB | 55 kBProgress (4): 48 kB | 118/592 kB | 149/165 kB | 55 kBProgress (4): 48 kB | 118/592 kB | 152/165 kB | 55 kBProgress (4): 48 kB | 121/592 kB | 152/165 kB | 55 kBProgress (4): 48 kB | 121/592 kB | 154/165 kB | 55 kBProgress (4): 48 kB | 123/592 kB | 154/165 kB | 55 kBProgress (4): 48 kB | 123/592 kB | 157/165 kB | 55 kBProgress (4): 48 kB | 126/592 kB | 157/165 kB | 55 kBProgress (4): 48 kB | 126/592 kB | 160/165 kB | 55 kBProgress (4): 48 kB | 129/592 kB | 160/165 kB | 55 kBProgress (4): 48 kB | 129/592 kB | 163/165 kB | 55 kBProgress (4): 48 kB | 129/592 kB | 165 kB | 55 kB    Progress (4): 48 kB | 132/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 134/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 137/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 139/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 142/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 144/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 147/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 150/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 153/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 156/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 158/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 161/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 164/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 167/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 169/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 172/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 174/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 177/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 179/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 182/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 185/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 188/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 190/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 193/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 196/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 199/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 201/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 204/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 207/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 209/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 211/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 214/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 217/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 220/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 222/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 225/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 228/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 231/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 233/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 236/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 239/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 241/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 243/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 246/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 249/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 252/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 254/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 257/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 260/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 263/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 265/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 268/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 271/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 274/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 276/592 kB | 165 kB | 55 kBProgress (4): 48 kB | 278/592 kB | 165 kB | 55 kB                                                 Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-plugin-api/3.5.0/maven-plugin-api-3.5.0.jar (48 kB at 103 kB/s)
-Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-artifact/3.5.0/maven-artifact-3.5.0.jar (55 kB at 118 kB/s)
-Progress (2): 281/592 kB | 165 kBProgress (2): 284/592 kB | 165 kBProgress (2): 287/592 kB | 165 kBProgress (2): 289/592 kB | 165 kBProgress (2): 292/592 kB | 165 kBProgress (2): 295/592 kB | 165 kBProgress (2): 298/592 kB | 165 kBProgress (2): 300/592 kB | 165 kBProgress (2): 303/592 kB | 165 kBProgress (2): 306/592 kB | 165 kBProgress (2): 309/592 kB | 165 kBProgress (2): 311/592 kB | 165 kBProgress (2): 313/592 kB | 165 kBProgress (2): 316/592 kB | 165 kBProgress (2): 319/592 kB | 165 kBProgress (2): 321/592 kB | 165 kBProgress (2): 324/592 kB | 165 kBProgress (2): 327/592 kB | 165 kBProgress (2): 330/592 kB | 165 kBProgress (2): 332/592 kB | 165 kBProgress (2): 335/592 kB | 165 kBProgress (2): 338/592 kB | 165 kBProgress (2): 341/592 kB | 165 kBProgress (2): 343/592 kB | 165 kBProgress (2): 346/592 kB | 165 kBProgress (2): 348/592 kB | 165 kBProgress (2): 351/592 kB | 165 kBProgress (2): 353/592 kB | 165 kBProgress (2): 356/592 kB | 165 kBProgress (2): 359/592 kB | 165 kBProgress (2): 362/592 kB | 165 kBProgress (2): 364/592 kB | 165 kBProgress (2): 367/592 kB | 165 kBProgress (2): 370/592 kB | 165 kBProgress (2): 373/592 kB | 165 kBProgress (2): 375/592 kB | 165 kBProgress (2): 378/592 kB | 165 kBProgress (2): 381/592 kB | 165 kBProgress (2): 383/592 kB | 165 kBProgress (2): 385/592 kB | 165 kBProgress (2): 388/592 kB | 165 kBProgress (2): 391/592 kB | 165 kBProgress (2): 394/592 kB | 165 kBProgress (2): 396/592 kB | 165 kBProgress (2): 399/592 kB | 165 kBProgress (2): 402/592 kB | 165 kBProgress (2): 405/592 kB | 165 kBProgress (2): 408/592 kB | 165 kBProgress (2): 410/592 kB | 165 kBProgress (2): 413/592 kB | 165 kBProgress (2): 415/592 kB | 165 kBProgress (2): 418/592 kB | 165 kBProgress (2): 420/592 kB | 165 kBProgress (2): 423/592 kB | 165 kBProgress (2): 426/592 kB | 165 kBProgress (2): 429/592 kB | 165 kBProgress (2): 431/592 kB | 165 kBProgress (2): 434/592 kB | 165 kBProgress (2): 437/592 kB | 165 kBProgress (2): 440/592 kB | 165 kBProgress (2): 442/592 kB | 165 kBProgress (2): 445/592 kB | 165 kBProgress (2): 448/592 kB | 165 kBProgress (2): 450/592 kB | 165 kBProgress (2): 452/592 kB | 165 kBProgress (2): 455/592 kB | 165 kBProgress (2): 458/592 kB | 165 kBProgress (2): 461/592 kB | 165 kBProgress (2): 463/592 kB | 165 kBProgress (2): 466/592 kB | 165 kBProgress (2): 469/592 kB | 165 kB                                 Downloaded from jcenter: https://jcenter.bintray.com/org/apache/maven/maven-model/3.5.0/maven-model-3.5.0.jar (165 kB at 324 kB/s)
-Progress (1): 472/592 kBProgress (1): 474/592 kBProgress (1): 477/592 kBProgress (1): 480/592 kBProgress (1): 483/592 kBProgress (1): 485/592 kBProgress (1): 487/592 kBProgress (1): 490/592 kBProgress (1): 493/592 kBProgress (1): 495/592 kBProgress (1): 498/592 kBProgress (1): 501/592 kBProgress (1): 504/592 kBProgress (1): 506/592 kBProgress (1): 509/592 kBProgress (1): 512/592 kBProgress (1): 515/592 kBProgress (1): 517/592 kBProgress (1): 520/592 kBProgress (1): 522/592 kBProgress (1): 525/592 kBProgress (1): 527/592 kBProgress (1): 530/592 kBProgress (1): 533/592 kBProgress (1): 536/592 kBProgress (1): 538/592 kBProgress (1): 541/592 kBProgress (1): 544/592 kBProgress (1): 547/592 kBProgress (1): 550/592 kBProgress (1): 552/592 kBProgress (1): 555/592 kBProgress (1): 558/592 kBProgress (1): 561/592 kBProgress (1): 564/592 kBProgress (1): 566/592 kBProgress (1): 569/592 kBProgress (1): 572/592 kBProgress (1): 575/592 kBProgress (1): 577/592 kBProgress (1): 580/592 kBProgress (1): 583/592 kBProgress (1): 586/592 kBProgress (1): 588/592 kBProgress (1): 591/592 kBProgress (1): 592 kB                        Downloaded from jcenter: https://jcenter.bintray.com/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar (592 kB at 953 kB/s)
-[INFO] Installing node version v10.16.0
-[INFO] Downloading https://nodejs.org/dist/v10.16.0/node-v10.16.0-darwin-x64.tar.gz to /Users/adminuser/.m2/repository/com/github/eirslett/node/10.16.0/node-10.16.0-darwin-x64.tar.gz
-[INFO] No proxies configured
-[INFO] No proxy was configured, downloading directly
-[INFO] Unpacking /Users/adminuser/.m2/repository/com/github/eirslett/node/10.16.0/node-10.16.0-darwin-x64.tar.gz into /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node/tmp
-[INFO] Copying node binary from /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node/tmp/node-v10.16.0-darwin-x64/bin/node to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node/node
-[INFO] Extracting NPM
-[INFO] Installed node locally.
-[INFO] 
-[INFO] --- frontend-maven-plugin:1.8.0:npm (npm install) @ graphviz-rough ---
-[INFO] Running 'npm install' in /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
-[INFO] 
-[INFO] > fsevents@1.2.12 install /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node_modules/fsevents
-[INFO] > node-gyp rebuild
-[INFO] 
-[INFO] sh: /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin/node-gyp: Permission denied
-[INFO] 
-[INFO] > core-js@2.6.11 postinstall /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/node_modules/core-js
-[INFO] > node -e "try{require('./postinstall')}catch(e){}"
-[INFO] 
-[INFO] Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
-[INFO] 
-[INFO] The project needs your help! Please consider supporting of core-js on Open Collective or Patreon: 
-[INFO] > https://opencollective.com/core-js 
-[INFO] > https://www.patreon.com/zloirock 
-[INFO] 
-[INFO] Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
-[INFO] 
-[INFO] npm WARN graphviz-rough@0.18.0 No description
-[INFO] npm WARN graphviz-rough@0.18.0 No repository field.
-[INFO] npm WARN graphviz-rough@0.18.0 No license field.
-[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules/fsevents):
-[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 install: `node-gyp rebuild`
-[INFO] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 126
-[INFO] 
-[INFO] added 534 packages from 246 contributors and audited 604 packages in 10.05s
-[INFO] found 77 vulnerabilities (16 moderate, 52 high, 9 critical)
-[INFO]   run `npm audit fix` to fix them, or `npm audit` for details
-[INFO] 
-[INFO] --- frontend-maven-plugin:1.8.0:npm (webpack) @ graphviz-rough ---
-[INFO] Running 'npm run webpack' in /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
-[INFO] 
-[INFO] > graphviz-rough@0.18.0 webpack /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough
-[INFO] > webpack
-[INFO] 
-[INFO] Browserslist: caniuse-lite is outdated. Please run:
-[INFO] npx browserslist@latest --update-db
-[INFO] Hash: 2f65e8e4a2889c46f583
-[INFO] Version: webpack 4.43.0
-[INFO] Time: 10645ms
-[INFO] Built at: 06/07/2023 7:53:55 AM
-[INFO]             Asset     Size  Chunks                    Chunk Names
-[INFO] graphviz-rough.js  448 KiB       0  [emitted]  [big]  main
-[INFO] Entrypoint main [big] = graphviz-rough.js
-[INFO] [145] (webpack)/buildin/global.js 905 bytes {0} [built]
-[INFO] [164] multi @babel/polyfill ./src/main/js/index.js 40 bytes {0} [built]
-[INFO] [338] (webpack)/buildin/module.js 552 bytes {0} [built]
-[INFO] [352] ./src/main/js/index.js 305 bytes {0} [built]
-[INFO]     + 364 hidden modules
-[INFO] 
-[INFO] WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
-[INFO] This can impact web performance.
-[INFO] Assets: 
-[INFO]   graphviz-rough.js (448 KiB)
-[INFO] 
-[INFO] WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
-[INFO] Entrypoints:
-[INFO]   main (448 KiB)
-[INFO]       graphviz-rough.js
-[INFO] 
-[INFO] 
-[INFO] WARNING in webpack performance recommendations: 
-[INFO] You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
-[INFO] For more info visit https://webpack.js.org/guides/code-splitting/
-[INFO] 
-[INFO] --- snippets-maven-plugin:1.0.0:snippets (default) @ graphviz-rough ---
-[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java
-[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/ReadmeTest.java
-[INFO] Reading /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest_backup.txt
-[INFO] Found 1 snippets.
-[INFO] Replacing README.md
-[WARNING] In file README.md: Snippet 'basic' not defined.
-[WARNING] In file README.md: Snippet 'mutable' not defined.
-[WARNING] In file README.md: Snippet 'imperative' not defined.
-[WARNING] In file README.md: Snippet 'kotlin' not defined.
-[WARNING] In file README.md: Snippet 'manipulate' not defined.
-[WARNING] In file README.md: Snippet 'complex' not defined.
-[WARNING] In file README.md: Snippet 'records' not defined.
-[WARNING] In file README.md: Snippet 'img' not defined.
-[WARNING] In file README.md: Snippet 'image' not defined.
-[WARNING] In file README.md: Snippet 'config' not defined.
-[WARNING] In file README.md: Snippet 'processor' not defined.
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphviz-rough ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphviz-rough ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 2 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/classes
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphviz-rough ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphviz-rough ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 3 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/target/test-classes
-[INFO] -------------------------------------------------------------
-[ERROR] COMPILATION ERROR : 
-[INFO] -------------------------------------------------------------
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java:[35,40] cannot find symbol
-  symbol:   method crossHatch()
-  location: class guru.nidi.graphviz.rough.FillStyleTest
-[INFO] 1 error
-[INFO] -------------------------------------------------------------
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  38.893 s
-[INFO] Finished at: 2023-06-07T07:53:57-04:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:testCompile (default-testCompile) on project graphviz-rough: Compilation failure
-[ERROR] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/graphviz-java/graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java:[35,40] cannot find symbol
-[ERROR]   symbol:   method crossHatch()
-[ERROR]   location: class guru.nidi.graphviz.rough.FillStyleTest
-[ERROR] 
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

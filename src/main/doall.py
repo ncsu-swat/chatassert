@@ -27,15 +27,15 @@ from multiprocessing import Process, Queue
 import traceback
 
 # Constants to determine various generation/repair loop termination
-TARGET_NUMBER = 10 # Number of oracles to be generated (NO in the paper)
+TARGET_NUMBER = 10  # Number of oracles to be generated (NO in the paper)
 GLOBAL_TRIALS = 30  # Maximum number of interactions (GT in the paper)
-LOCAL_TRIALS = 3 # Maximum number of retries based on compilation and execution feedback (LT in the paper)
+LOCAL_TRIALS = 3    # Maximum number of retries based on compilation and execution feedback (LT in the paper)
 
 # Switches for ablation study
-FUZZ_REPAIR = False     # Ablation Study No. 4
-FEEDBACK_REPAIR = True  # Ablation Study No. 3
-SUMMARIZATION = True    # Ablation Study No. 2
-ONE_SHOT = True         # Ablation Study No. 1
+FUZZ_REPAIR = False      # Ablation Study No. 4
+FEEDBACK_REPAIR = True   # Ablation Study No. 3
+SUMMARIZATION = False    # Ablation Study No. 2
+ONE_SHOT = False         # Ablation Study No. 1
 
 # Switches
 EXECUTE_GENERATION = True # Only cache summaries or execute oracle generation conversation too?
@@ -46,6 +46,8 @@ status_count = {
     'test_err': 0,
     'test_fail': 0
 }
+
+global examples_count
 
 global first_case_done, first_pass_case_done
 # global proc_q
@@ -72,6 +74,8 @@ def ask(oracle_id, context, summaries, example_method, test_name, before_code, t
     # Add user input to the conversation history                                                                                                                                                          
     oracle_prompt_generator(oracle_id, context, summaries, example_method, before_code, test_code, focal_code)
 
+    print(context.history)
+
     # if if_exceed_token_limit(prompt, MODEL_NAME):
     #     #TODO: text-splitter
     #     pass
@@ -94,37 +98,38 @@ def follow_up(proc_q, repo_dir, oracle_id, file_path, subRepo, className, test_n
     feedback_context.insert(role="user", content=(Prompts.FEEDBACK_SEED_EXT).format(gpt_oracle))
 
     res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)
-    for feedback_id in range(LOCAL_TRIALS):
-        # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
-        print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
-        if feedback is not None:
-            if len(feedback) > 0:
-                if FUZZ_REPAIR:        # (Ablation Study No. 4)
-                    # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
-                    fuzzed_mutants = adhoc_repair(gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
+    if len(feedback) > 0:
+        for feedback_id in range(LOCAL_TRIALS):
+            # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
+            print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
+            if feedback is not None:
+                if len(feedback) > 0:
+                    if FUZZ_REPAIR:        # (Ablation Study No. 4)
+                        # Carry out adhoc-repairs before asking ChatGPT to repair (to reduce interaction time)
+                        fuzzed_mutants = adhoc_repair(gpt_oracle, feedback, file_path, test_name, test_code, focal_code)
 
-                    for mutant in fuzzed_mutants:
-                        print('FOLLOW-UP MUTANT: {}'.format(mutant))
-                        res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, mutant)
-                        if feedback is not None and len(feedback)==0:
-                            # Mutant causes successful build without any feedback. So, select this mutant as gpt_oracle.
-                            gpt_oracle = mutant
-                            break
+                        for mutant in fuzzed_mutants:
+                            print('FOLLOW-UP MUTANT: {}'.format(mutant))
+                            res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, mutant)
+                            if feedback is not None and len(feedback)==0:
+                                # Mutant causes successful build without any feedback. So, select this mutant as gpt_oracle.
+                                gpt_oracle = mutant
+                                break
 
-                if FEEDBACK_REPAIR:    # (Ablation Study No. 3)
-                    if feedback is None or len(feedback) > 0:
-                        feedback_context.insert(role="user", content=feedback)
+                    if FEEDBACK_REPAIR:    # (Ablation Study No. 3)
+                        if feedback is None or len(feedback) > 0:
+                            feedback_context.insert(role="user", content=feedback)
 
-                        fixed_gpt_oracle = get_gpt_oracle(test_name=test_name, temperature=1.5, context=feedback_context)
-                        if fixed_gpt_oracle is None: continue
-                        else:
-                            gpt_oracle = fixed_gpt_oracle
-                            # Insert the fixed oracle inside the feedback-driven repair context
-                            feedback_context.insert(role="assistant", content=(Prompts.FEEDBACK_FIXED).format(gpt_oracle))
-            elif len(feedback) == 0:
-                break
+                            fixed_gpt_oracle = get_gpt_oracle(test_name=test_name, temperature=1.5, context=feedback_context)
+                            if fixed_gpt_oracle is None: continue
+                            else:
+                                gpt_oracle = fixed_gpt_oracle
+                                # Insert the fixed oracle inside the feedback-driven repair context
+                                feedback_context.insert(role="assistant", content=(Prompts.FEEDBACK_FIXED).format(gpt_oracle))
+                elif len(feedback) == 0:
+                    break
 
-        res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)                       
+            res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)                       
 
     proc_q.put(res)
     proc_q.put(feedback)
@@ -142,7 +147,7 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
 
         res, output = Project.run_test(repo_dir, subRepo, class_name, test_name)
 
-        with open('execution_log/{}_{}.txt'.format(test_name, oracle_id), 'w+') as logFile:
+        with open(os.path.join(DATA_DIR, 'execution_log/{}_{}.txt'.format(test_name, oracle_id)), 'w+') as logFile:
             logFile.write(output)
 
         feedback = ""
@@ -151,6 +156,7 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
         for i in range(len(output_lines)):
             # Compilation error
             if "COMPILATION ERROR" in output_lines[i]:
+                print("\n\nCOMPILATION ERROR:\n\n{}\n".format(output_lines[i]))
                 status_count['comp_err'] += 1
 
                 err_msg = ""
@@ -159,8 +165,8 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
                     if (err_line == 2) and (i+err_line < len(output_lines)):
                         err_msg += output_lines[i+err_line]
                     elif (err_line > 2) and (i+err_line < len(output_lines)):
-                        if ("[ERROR]" in output_lines[i+err_line]) or ("[INFO]" in output_lines[i+err_line]) or ("[WARNING]" in output_lines[i+err_line]):
-                            feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(err_msg.replace("[ERROR]", ""))
+                        if ("[ERROR]" in output_lines[i+err_line]) or ("[INFO]" in output_lines[i+err_line]) or ("[WARNING]" in output_lines[i+err_line]) or ("SEVERE" in output_lines[i+err_line]):
+                            feedback = "I am getting the following compilation error: \n{}\nCan you please fix the generated assert statement?".format(err_msg)
                             break
                         else:
                             err_msg += " " + output_lines[i+err_line]
@@ -169,10 +175,12 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
                             print('\n\n!!! Could not retrieve compilation error message !!!\n\n')
                     err_line += 1
                 break
-
-            # Test failure
-            if "test failures" in output_lines[i].lower():
-                report_dir = os.path.join(repo_dir, subRepo, 'target/surefire-reports/')
+            
+        # Feedback was not updated so far as we have not observed any compilation error
+        if len(feedback) == 0:
+            # Check for Test failure
+            report_dir = os.path.join(repo_dir, subRepo, 'target/surefire-reports/')
+            if os.path.exists(report_dir):
                 report_path = None
                 for r_path in os.listdir(report_dir):
                     if (class_name + '.xml') in r_path:
@@ -200,13 +208,29 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
                             break
                     if not message_found:
                         print('\n\n!!! Could not retrieve test error message (report not found in xml) !!!\n\n')
-                break
+
     except Exception as e:
         traceback.print_exc()
         print('Exception: {}'.format(e))
         return None, None
 
+    print('\n\nFeedback:\n{}\n'.format(feedback))
+
     return res, feedback
+
+def is_functional(repo_dir, oracle_id, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
+    testInjector = JavaGateway().entry_point
+    testInjector.setFile(file_path)
+    testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>;", gpt_oracle))
+
+    res, output = Project.run_test(repo_dir, subRepo, class_name, test_name)
+
+    if output is None:
+        return False
+    if len(output) > 0:
+        return False
+
+    return True
 
 def backup_test_file(file_path):
     backup_file_path = file_path.replace(".java", "") + "_backup.txt"
@@ -279,7 +303,7 @@ def place_placeholder(tecofied_lines, startLn, oracleLn):
     
     return placeheld_lines
 
-def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_name, class_name, test_name, gpt_oracle, oracle_code, start_time, end_time, feedback):
+def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_name, class_name, test_name, test_code, gpt_oracle, oracle_code, start_time, end_time, feedback):
     global first_case_done, first_pass_case_done
 
     # Convert the string literals in the generated assertion, to abstract STR tag
@@ -303,24 +327,30 @@ def write_res(gateway, res_pass, res_all, test_id, oracle_id, user_name, repo_na
     if feedback is not None and len(feedback.strip()) > 0:
         # Build failure since len(feedback) > 0
         if gpt_oracle == oracle_code and oracle_id < 10:
-            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
+            # Build failure might occur either because the generated oracle is incorrect or because the project setup (unmet requirements and dependencies etc.) is incorrect.
+            # In this particular conditional branch, we are probably getting some build failures even if the generated oracle is an exact match with the ground truth. Since we have an exact match, the build failure is most likely due to some incorrect project setup or some other project issue that is preventing successful build.
+            # This particular case does not invalidate ChatAssert's ability to generate a correct and exact match oracle. Therefore, to fairly evaluate ChatAssert's actual ability to generate an exact match oracle, we have this particular block in place.
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(test_id if not first_pass_case_done else "/", oracle_id, user_name if oracle_id==0 else "/", repo_name if oracle_id==0 else "", class_name, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
             first_pass_case_done = True
         else:
-            res_all.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
+            res_all.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(test_id if not first_case_done else "/", oracle_id, user_name if oracle_id==0 else "/", repo_name if oracle_id==0 else "", class_name, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
             first_case_done = True
 
     elif len(gpt_oracle) > 0 and feedback is not None and len(feedback.strip()) == 0:
         # Successful build since len(feedback) == 0
         if gpt_oracle == oracle_code:
-            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_pass_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(test_id if not first_pass_case_done else "/", oracle_id, user_name if oracle_id==0 else "/", repo_name if oracle_id==0 else "", class_name, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '1', '0').split('\t'))
             first_pass_case_done = True
         else:
-            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(testId if not first_case_done else "/", oracle_id, userName if oracle_id==0 else "/", repoName if oracle_id==0 else "", className, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
+            res_pass.writerow("{}\t{}\t{}/{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}".format(test_id if not first_case_done else "/", oracle_id, user_name if oracle_id==0 else "/", repo_name if oracle_id==0 else "", class_name, test_name, oracle_code, gpt_oracle, str(end_time-start_time), '0', '0').split('\t'))
             first_case_done = True
     
 
-if __name__ == "__main__":
-    global project
+def main():
+    global project, TARGET_NUMBER, GLOBAL_TRIALS, LOCAL_TRIALS
+
+    global examples_count
+    examples_count = 0
 
     try:
         v1_flag, v2_flag = False, False
@@ -353,7 +383,7 @@ if __name__ == "__main__":
 
             corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
-            configuration_file = os.path.join(PRO_DIR, "sample_{}.json".format(sample_id))
+            configuration_file = os.path.join(DATA_DIR, "input/sample_{}.json".format(sample_id))
             with open(configuration_file, 'r') as f:
                 data = json.load(f)
                 for project_data in data["projects"]:
@@ -370,7 +400,7 @@ if __name__ == "__main__":
                         os.system('rm -rf ../tmp/repos/{}'.format(repoName))
                     
                     # create project object
-                    project = Project(repoName, "", gitURL, commit, gateway)
+                    project = Project(repoName, "", gitURL, commit)
 
                     for testClass in allTests:
                         className = testClass["className"]
@@ -390,8 +420,8 @@ if __name__ == "__main__":
                         if "after" in testClass:
                             after_code = "".join(read_file(filePath, int(testClass["after"]["startLn"]), int(testClass["after"]["endLn"])))
 
-                        # Make sure to copy only the subRepo from the cache directory to the working directory
-                        project.copy_cache(subRepo)
+                        # Make sure to copy repo from the cache directory to the working directory
+                        project.copy_cache()
 
                         # Make sure that all dependencies are added to pom.xml
                         project.ensure_dependencies(subRepo)
@@ -426,15 +456,17 @@ if __name__ == "__main__":
                             summaries = None
                             if SUMMARIZATION:
                                 print('Running Summarization Queries. Please wait for ChatGPT to build a knowledge base.\n')
-                                summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""))
+                                summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""), focal_code, enforce_regeneration=True)
 
-                            if not EXECUTE_GENERATION: continue
-
-                            # Get one Example from the same test file (Ablation Study No. 1)
+                            # Get Examples from the same test file (Ablation Study No. 1)
                             example_method = None
                             if ONE_SHOT:
-                                print('Finding an Example that is a best match with the Test Method')
+                                print('Finding Examples that are best matches with the Test Method')
                                 example_method = find_similar(className, test_name, test_code)
+                                print('\nFEW-SHOT EXAMPLES:\n{}\n'.format(example_method))
+                                if example_method is not None: examples_count += 1
+
+                            if not EXECUTE_GENERATION: continue
 
                             # Get Oracle Code
                             oracle_code = test['oracle']
@@ -479,10 +511,12 @@ if __name__ == "__main__":
                                         proc_q = Queue()
                                         p = Process(target=follow_up, args=(proc_q, project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle, focal_code))
                                         p.start()
-                                        p.join(timeout=60)
+                                        p.join(timeout=100)
                                         if p.is_alive():
                                             print('\nEXECUTION TIMEOUT\n')
                                             p.terminate()
+
+                                            gpt_oracle = None
                                         else:
                                             res = proc_q.get()
                                             feedback = proc_q.get()
@@ -504,8 +538,10 @@ if __name__ == "__main__":
                                             # SUCCESS
                                             target_number -= 1
 
-                                # Write results to csv file
-                                write_res(gateway, resPassWriter, resAllWriter, testId, oracle_id, userName, repoName, className, test_name, gpt_oracle, oracle_code, start_time, time.time(), feedback)
+                                # Sanity checking functionality of generated oracle
+                                if is_functional(project.repo_dir, oracle_id, filePath, subRepo, className, test_name, test_code, gpt_oracle):
+                                    # Write results to csv file
+                                    write_res(gateway, resPassWriter, resAllWriter, testId, oracle_id, userName, repoName, className, test_name, test_code, gpt_oracle, oracle_code, start_time, time.time(), feedback)
 
                             # Restore test file from backup
                             restore_test_file(filePath)
@@ -514,6 +550,14 @@ if __name__ == "__main__":
                             testId += 1
 
                             # exit(0)
+
+        print('\nExamples Count: {}\n'.format(examples_count))
     except Exception as e:
         print('Exception has occurred: {}\n'.format(e))
         traceback.print_exc()
+
+if __name__ == "__main__":
+    try:
+        main()
+    except:
+        pass

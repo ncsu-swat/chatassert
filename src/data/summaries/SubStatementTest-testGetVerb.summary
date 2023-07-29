@@ -1,0 +1,37 @@
+0. In line 2, method `getVerb` of class `SubStatement` is invoked.
+1. Certainly! 
+
+The code snippet you provided defines a method called `getVerb()` in the `SubStatement` class. 
+
+This method has a return type of `Verb`, which means it is expected to return an object of the `Verb` class.
+
+Inside the method, the `return` keyword is used to return the value of the variable `verb`. This implies that the `verb` variable is of type `Verb` and is declared somewhere in the `SubStatement` class. 
+
+By calling this method, you will receive the value stored in the `verb` variable, which is an object of the `Verb` class.
+2. In line 1, an object of class `Verb` is instantiated
+3. The provided code snippet represents a Java class named `Verb`, which is located in the `gov.adlnet.xapi.model` package.
+
+Here is a breakdown of the code:
+
+1. Import statements: The code imports necessary classes to be used in the `Verb` class, including `HashMap`, `Map.Entry`, and `Gson` from the `java.util` and `com.google.gson` packages, respectively.
+
+2. Class declaration: The `Verb` class is declared as a public class.
+
+3. Class fields: 
+   - `id`: A private field of type `String` to store the id of the verb.
+   - `display`: A private field of type `HashMap<String, String>` to store the display values of the verb in different languages. It maps a language key to the corresponding display value.
+
+4. Constructors: The class provides three constructors:
+   - An empty constructor that takes no arguments.
+   - A constructor that takes the `id` as a parameter.
+   - A constructor that takes both the `id` and a `display` map as parameters.
+   
+5. Methods:
+   - `serialize()`: This method returns a JSON representation of the `Verb` object using the Gson library. It constructs a JSON object, adds the `id` property, and if the `display` map is not null, it adds the `display` property and its corresponding key-value pairs.
+   - `toString()`: This method overrides the default `toString()` method and returns the value of `id`. However, if the `display` map is not null and it contains a value for the language key `"en-US"`, that value is returned instead of `id`.
+   - `toString(String langKey)`: This method takes a language key as a parameter and returns the display value for that language if it is present in the `display` map. Otherwise, it returns the `id`.
+   - Getter and setter methods: These methods are provided for the `id` and `display` fields.
+
+Overall, the `Verb` class represents a verb entity with an `id` and optional display values for different languages. It provides methods to manipulate and retrieve this information, as well as to serialize the object to JSON format.
+4. Take note that in line 2, an object of class `Verb` is created.
+

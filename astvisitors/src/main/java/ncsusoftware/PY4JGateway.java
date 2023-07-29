@@ -411,5 +411,30 @@ public class PY4JGateway{
 
         return source;
     }
+
+    public String removeTestMethodsExcept(String test_name){
+        try{
+            this.cu.walk(MethodDeclaration.class, md -> {
+                for(AnnotationExpr annExpr: md.getAnnotations()){
+                    if(annExpr.getName().asString().contains("Test")){
+                        if(!md.getName().asString().equals(test_name)){
+                            md.getParentNode().get().remove(md);
+                        }
+                    }
+                }
+            });
+            return this.cu.toString();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return this.cu.toString();
+    }
+
+    public String getPackageName(){
+        PackageDeclarationVisitor packageDeclarationVisitor = new PackageDeclarationVisitor();
+        this.cu.accept(packageDeclarationVisitor, null);
+
+        return packageDeclarationVisitor.packageName;
+    }
 }
 

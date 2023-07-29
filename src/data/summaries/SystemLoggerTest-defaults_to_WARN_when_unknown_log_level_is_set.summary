@@ -1,0 +1,76 @@
+0. In line 1, method `createConfig` of class `Keys` is invoked.
+1. The `createConfig` method is a public static method that returns an object of type `Config`. This method initializes a new `Config` object and sets various properties on it using the `set` and `setNull` methods.
+
+Here is a breakdown of what each line does:
+
+- Line 2: Creates a new `Config` object and assigns it to the `config` variable.
+- Lines 3-10: Sets various properties on the `config` object using the `set` and `setNull` methods. Each property is set using a constant value from a class called `Keys`. It sets the connection timeout to 5000, environment variable mask to "SECRET|KEY|TOKEN|PASSWORD", sets the logging level to "INFO", and sets the Cucumber Pro URL to "https://jam.cucumber.io/". Some properties are set as `null` using `setNull`.
+- Line 11: Returns the `config` object.
+
+So, when the `createConfig` method is invoked, it creates a new `Config` object, sets its properties, and then returns it as the result of the method.
+2. In line 2, method `set` of class `Config` is invoked.
+3. The `set` method is a public method of the `Config` class. It takes two arguments, `key` and `value`, both of type `String`.
+
+Here is a breakdown of what the method does:
+
+- Line 2: The `setIn` method of the `Config` class is invoked with the normalized `key` and a `RealValue` object created from the `value`.
+
+The `setIn` method is responsible for setting the value of a property in the `Config` object. It takes two arguments, `normalizedKey` and `realValue`. The `normalizedKey` is obtained by passing the `key` to the `normalize` method, which likely performs some operations to ensure a consistent format for the key. The `realValue` is obtained by converting the `value` to a `RealValue` object using the `fromString` method.
+
+Overall, the `set` method provides a convenient way to set a property in the `Config` object by normalizing the key and converting the value to the appropriate type.
+4. In line 3, an object of class `Logger.SystemLogger` is instantiated.
+5. The constructor code you provided is for the `SystemLogger` class. Here is a breakdown of what each part does:
+
+- Lines 2-8: It starts by obtaining the value of the `Keys.CUCUMBERPRO_LOGGING` property from the `Config` object passed to the constructor. This value is then converted to uppercase and stored in the `name` variable. Next, it tries to convert `name` to a `Level` enumeration value using the `valueOf` method. If the conversion fails with an `IllegalArgumentException`, it sets the `level` to `Level.WARN` as a default.
+- Lines 9-14: It then proceeds to initialize `stdout` and `stderr` `PrintWriter` objects with the output streams for standard output (System.out) and standard error (System.err), respectively. It wraps these output streams with `OutputStreamWriter` to handle character encoding, using "UTF-8" as the encoding. If there is an exception during this initialization, it throws a `CucumberException`.
+- Lines 16-29: It checks if the `Keys.CUCUMBERPRO_LOGFILE` property in the `Config` object is not `null`. If it is not `null`, it attempts to initialize a `PrintWriter` object called `fileWriter` using an instance of `OutputStreamWriter` with the output stream obtained from opening a `FileOutputStream` with the value of `Keys.CUCUMBERPRO_LOGFILE` as the file name. Again, "UTF-8" is used as the encoding. If there is an exception during this initialization, it throws a `CucumberException` providing the appropriate error message.
+- Lines 30-31: If the `Keys.CUCUMBERPRO_LOGFILE` property is `null`, it sets `fileWriter` to `null`.
+- Line 33: Finally, it assigns the value of `level` to the instance variable `this.level`.
+
+In summary, the `SystemLogger` constructor initializes the `SystemLogger` object by obtaining and setting the appropriate values for the log level, output streams, and log file writer. It handles exceptions that may occur during the initialization process and ensures that the necessary resources are properly set up for logging.
+6. In line 1, an object of class `Config` is instantiated
+7. This code represents the `Config` class, which is used for managing configuration settings. Here is a breakdown of the different parts of the class:
+
+- Line 5: The `Config` class is defined in the `io.cucumber.pro.config` package. It imports several classes from Java's standard library.
+
+- Lines 9-13: This class is documented with a Javadoc comment. It states that the configuration uses hierarchical keys.
+
+- Lines 16-18: The `valueByProperty` field is declared and initialized as a `TreeMap`. It will store key-value pairs, where the keys are strings and the values are instances of a `Value` class.
+
+- Lines 20-22: The `configByProperty` field is declared and initialized as a `TreeMap`. It will store key-value pairs, where the keys are strings and the values are instances of the `Config` class (representing child configurations).
+
+- Lines 24-48: Several public methods are defined for getting and setting configuration values. These include `getString`, `getBoolean`, `getInteger`, `isNull`, `setNull`, `set`, and `setValue`. Each of these methods takes a key as an argument, and they perform operations to retrieve or update the corresponding values.
+
+- Lines 50-54: The `getChild` method is defined to retrieve or create a child configuration based on a given property. It checks if the `configByProperty` map contains the key, and if not, it creates a new `Config` object and adds it to the map.
+
+- Lines 56-76: The `getIn` method is a private helper method that takes a normalized key and a boolean flag `allowNull`, and retrieves the `Value` object corresponding to that key. It traverses the key hierarchy by splitting the key using a dot as a separator, and iterates through each level to retrieve the corresponding `Config` object. If a `Value` object is found, it is returned, otherwise, an exception is thrown.
+
+- Lines 78-90: The `setIn` method is a private helper method that sets a `Value` object for a given key. It works in a similar way to the `getIn` method, iterating through each level of the key hierarchy and creating child `Config` objects as needed.
+
+- Lines 92-102: The `toYaml` method returns a YAML representation of the configuration. It iterates over the `valueByProperty` map and recursively prints out the key-value pairs, indenting based on the depth of the configuration hierarchy.
+
+- Lines 104-112: The `print` method is a helper method used by `toYaml`. It handles the actual printing of the key-value pairs and child configurations, indenting based on the depth.
+
+- Lines 114-118: The `indent` method is a helper method used by `print` to handle indentation with spaces.
+
+- Lines 120-124: The `toPath` method splits a key into a list of strings, using a dot as a separator.
+
+- Lines 126-130: The `normalize` method replaces underscores with dots and converts the key to lowercase.
+
+Overall, this `Config` class provides methods for retrieving, updating, and converting configuration settings through hierarchical keys. It maintains mappings of key-value pairs and supports nested configurations. The class is designed to handle different types of values and allows for serialization to a YAML format.
+8. In line 3, an object of class `Logger` is instantiated
+9. The given code represents the `TestLogger` class, which implements the `Logger` interface. Here is a breakdown of the different parts of the code:
+
+- Line 3: The class is defined in the `io.cucumber.pro` package. It imports the `CucumberException` class which is used in the code.
+
+- Line 6-12: The `TestLogger` class starts by declaring a private instance variable `messages` which is a `Map` that maps each `Level` to a `List` of strings. It is initialized using an anonymous inner class with an initializer block. The initializer block populates the map with empty `ArrayList` instances for each `Level`.
+
+- Line 16-18: The `log` method is implemented from the `Logger` interface. It takes a `Level`, `message`, and variable argument `args`. In this implementation, it formats the `message` string using the `args` and adds it to the corresponding `List` in the `messages` map based on the given `Level`.
+
+- Line 20-23: The `log` method is overloaded to take an `Exception` object as well as a `message`. It first calls the previous `log` method to log the message with an `ERROR` level. It then creates a new `CucumberException` with the given `Exception` object and message, and returns it.
+
+- Line 25-28: The `getMessages` method returns the `List` of messages for the given `Level` from the `messages` map.
+
+Overall, this `TestLogger` class provides an implementation of the `Logger` interface. It provides methods to log messages with different levels (`DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`), stores the logged messages in a map, and provides a way to retrieve the messages based on the desired level.
+10. Take note that in line 3, an object of class `SystemLogger` is created.
+

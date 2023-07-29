@@ -1,0 +1,31 @@
+0. In line 1, method `select` of class `SqlBuilder` is invoked.
+1. Certainly! The method `select` is defined in the `SqlBuilder` class. This method takes in a variable number of String parameters `columns`.
+
+In Java, the `public` keyword indicates that this method can be accessed from anywhere within the program. The return type of this method is `SqlBuilder`, which means it returns an instance of the `SqlBuilder` class.
+
+The method signature `select(String... columns)` indicates that this method can accept an arbitrary number of `String` arguments. This is achieved by using the ellipsis (`...`).
+
+In other words, you can call this method with one or more strings representing the columns you want to select. The implementation of the method may use these strings to build an SQL query, but the exact functionality is not shown in the code snippet you provided.
+2. In line 1, method `from` of class `SqlBuilder` is invoked.
+3. Certainly! The method `from` is defined in the `SqlBuilder` class. This method takes in a single parameter `table` of type `String`.
+
+In Java, the `public` keyword indicates that this method can be accessed from anywhere within the program. The return type of this method is `SqlBuilder`, which means it returns an instance of the `SqlBuilder` class.
+
+The method signature `from(String table)` indicates that this method expects a single string parameter `table`, which represents the name of the table to select from in an SQL query.
+
+The purpose of this method is likely to set the table name that will be used in the subsequent SQL query constructed using the `SqlBuilder` class. However, the exact functionality is not shown in the code snippet you provided.
+4. In line 1, method `orderBy` of class `SqlBuilder` is invoked.
+5. Certainly! 
+
+The code you provided represents a method declaration for the `orderBy` method in the `SqlBuilder` class. Here's what each part of the code means:
+
+- `public` keyword: It is an access modifier that specifies that the method can be accessed from anywhere within the program.
+
+- `SqlBuilder` : It is the return type of the method, indicating that the method returns an instance of the `SqlBuilder` class. 
+
+- `orderBy` : It is the name of the method.
+
+- `String... columns` : It is the parameter for the method and it is defined as a variable-length parameter or varargs. It allows you to pass zero or more String arguments to the method. This means you can provide one column, multiple columns, or even no columns.
+
+In summary, this method allows you to specify one or more columns for ordering the result of the SQL query constructed using the `SqlBuilder` class. The implementation of the method may append an "ORDER BY" clause in the SQL query to specify the desired column(s) for ordering. However, the exact functionality is not shown in the code snippet you provided.
+

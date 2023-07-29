@@ -1,0 +1,17 @@
+0. In line 2, method `setRaw` of class `Score` is invoked.
+1. Certainly! This is the code for the `setRaw` method of the `Score` class.
+
+The `setRaw` method is a public method because it has the `public` access modifier specified. It does not have a return type specified, which means it returns nothing (`void`). The method accepts a single parameter, `raw`, of type `float`.
+
+Inside the method, the value of the `raw` parameter is assigned to the instance variable `raw` of the `Score` class using the `this` keyword. The `this` keyword refers to the current object (instance of `Score` class) on which the method is invoked.
+
+In summary, the purpose of this method is to set the value of the `raw` instance variable of the `Score` class based on the value passed as a parameter.
+2. In line 3, method `getRaw` of class `Score` is invoked.
+3. Certainly! Let's break down the code for the `getRaw` method of the `Score` class.
+
+The `getRaw` method is a public method with a return type of `float`. It does not accept any parameters.
+
+Inside the method, a single line of code `return raw;` is present. This line simply returns the value of the `raw` instance variable of the `Score` class.
+
+In summary, the purpose of this method is to retrieve the value of the `raw` instance variable from an instance of the `Score` class. It returns this value of type `float`.
+

@@ -7,13 +7,19 @@ from path_config import API_KEY_FILEPATH
 from utils.context_util import Prompts
 from utils.file_util import read_file
 
+from traceback import print_exc
+
+import time
+
 # Organization IDs
-orgs = ["org-0wLi1kKIt9USgXMYklRCeTFQ", "org-9WS8eYC3IjH69yYgQNrk0X4w", "org-yclg2hcASx6eAd3nEyoFKrlf"]
-org_counter = [0, 0, 0]
+# orgs = ["org-0wLi1kKIt9USgXMYklRCeTFQ", "org-9WS8eYC3IjH69yYgQNrk0X4w", "org-yclg2hcASx6eAd3nEyoFKrlf"]
+orgs = ["org-SX6ZRhJQbRlEJCQwvqFIWBBf", "org-BThGzIrXj87JoLnOvhXP5Ff3"]
+org_counter = [0, 0]
 current_org = 0
 
 # Setup                                                                                                                                                                                                    
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key
+
 MODEL_NAME = "gpt-3.5-turbo-16k"
 MODEL_MAX_TOKEN={
     "gpt-3.5-turbo": 4096,
@@ -89,10 +95,11 @@ def interact_with_openai(temperature=1, context=None):
         
         except openai.error.RateLimitError as rate_err:
             print("\n!! Rate Limit Exceeded !!\n")
-            # time.sleep(10)
+            # shuffle_organization()
+            time.sleep(60)
 
-        except Exception as e: 
-            print("\n!! Interaction Exception !!\n")
+        except Exception as e:
+            print("\n!! Interaction Exception !!\n" + str(e))
                 
     shuffle_organization()
 

@@ -1,0 +1,197 @@
+0. In line 1, an object of class `ODatabaseDocumentTx` is instantiated.
+1. This constructor code is for the `ODatabaseDocumentTx` class. Let's break down the different parts:
+
+- `@Deprecated`: This is an annotation used to indicate that the constructor is deprecated and should not be used. It serves as a warning to developers that there is a better alternative available.
+- `public ODatabaseDocumentTx(String url)`: This is the constructor method of the class `ODatabaseDocumentTx`. It takes a single parameter `url`, which is of type `String`. This parameter represents the URL that will be used to connect to the database.
+- `this(url, true)`: This is the invocation of another constructor within the same class. It passes the `url` parameter and a value of `true` to the other constructor, indicating that the database should be opened in read-write mode.
+
+Overall, this constructor is used to instantiate an object of the `ODatabaseDocumentTx` class with a specified URL, connecting to the database in read-write mode by default. However, it is marked as deprecated, suggesting that developers should use an alternative class called `OrientDB` instead.
+2. Take note that in line 1, method `nanoTime` from class `System` is invoked.
+3. In line 2, method `create` of class `ODatabaseDocumentTx` is invoked.
+4. This is a method definition for the `create` method in the `ODatabaseDocumentTx` class. Let's break down the different parts:
+
+- `@Override`: This annotation indicates that this method is overriding a method from its superclass or implementing an interface method.
+- `<DB extends ODatabase>`: This is a generic type parameter declaration for the method. It specifies that the method returns an object of type `DB`, which must be a subtype of `ODatabase`.
+- `DB create()`: This is the method signature. It specifies that the method is named `create` and takes no parameters. The return type is the generic type `DB`.
+- `return create((Map<OGlobalConfiguration, Object>) null);`: This is the method implementation. It returns the result of another method call `create` with a `null` argument casted to a `Map<OGlobalConfiguration, Object>`. This implies that the `create` method is overloaded with a version that takes a `Map<OGlobalConfiguration, Object>` as an argument.
+
+Overall, this method is used to create and return a new object of a subtype of `ODatabase`. The specific subtype will depend on the implementation of the `create` method. In this case, it calls an overloaded version of the `create` method with a `null` argument, indicating that no specific configuration is provided for the creation of the database.
+5. In line 3, an object of class `OCommandSQL` is instantiated.
+6. Certainly! 
+
+The code snippet you provided is a constructor definition for the `OCommandSQL` class. Let's break it down:
+
+- `public OCommandSQL(final String iText)`: This is the constructor method of the class `OCommandSQL`. It takes a single parameter `iText`, which is of type `String`. This parameter represents the SQL query text that will be executed by the command.
+
+- `super(iText)`: This line calls the constructor of the superclass, passing the `iText` parameter to it. In this case, the superclass is not explicitly mentioned, but it is assumed to be a parent class of `OCommandSQL`.
+
+Overall, this constructor is used to instantiate an object of the `OCommandSQL` class with the SQL query text provided as an argument. It also calls the constructor of its superclass, which performs any necessary initialization for the inherited attributes or methods.
+7. In line 3, method `command` of class `ODatabaseDocumentTx` is invoked.
+8. Certainly! Let's break down the code snippet you provided:
+
+- `@Override`: This annotation indicates that this method is overriding a method from its superclass or implementing an interface method.
+
+- `<RET extends OCommandRequest>`: This is a generic type parameter declaration for the method. It specifies that the method returns an object of type `RET`, which must be a subtype of `OCommandRequest`.
+
+- `RET command(OCommandRequest iCommand)`: This is the method signature. It specifies that the method is named `command` and it takes a single parameter `iCommand` of type `OCommandRequest`. The return type is the generic type `RET`.
+
+- `checkOpenness()`: This line calls the `checkOpenness` method, which is likely a method defined within the same class or its superclass. This method checks if the database connection is open or not. It ensures that the database is open before executing the command.
+
+- `return internal.command(iCommand)`: This line calls the `command` method on the `internal` object, passing the `iCommand` parameter to it. The `internal` object likely represents an internal instance or object within the `ODatabaseDocumentTx` class. It executes the specified command and returns the result.
+
+Overall, this method is an overridden implementation of the `command` method in the `ODatabaseDocumentTx` class. It takes an `OCommandRequest` object as a parameter, checks if the database connection is open, and then delegates the command execution to an internal object called `internal`. The result of the command execution is returned by the method.
+9. In line 3, method `execute` of class `OCommandRequest` is invoked.
+10. Certainly! The code snippet you provided is a method definition for the `execute` method in the `OCommandRequest` class. Let's break it down:
+
+- `<RET>`: This is a generic type parameter declaration for the method. It specifies that the method returns an object of type `RET`. It's a placeholder for the actual type that will be determined when the method is used.
+
+- `RET execute(Object... iArgs)`: This is the method signature. It specifies that the method is named `execute` and it takes an variable number of arguments of type `Object`. The return type is the generic type `RET`.
+
+- `Object... iArgs`: This indicates that the method can accept zero or more arguments of type `Object`. The `...` notation is used to represent varargs, which means multiple arguments can be passed, and they are internally treated as an array of `Object`.
+
+Overall, this method is designed to execute a command and potentially return a result of a generic type specified by `RET`. The number of arguments that can be passed to the method is variable, and they will be treated as an array of `Object`. The specific implementation of the `execute` method will define how these arguments are used.
+11. Take note that in line 4, constructor `OCommandSQL` from class `OCommandSQL` is invoked.
+12. Take note that in line 4, method `command` from class `ODatabaseDocumentTx` is invoked.
+13. Take note that in line 4, method `execute` from class `OCommandRequest` is invoked.
+14. In line 5, method `getMetadata` of class `ODatabaseDocumentTx` is invoked.
+15. Certainly! Let's break down the code snippet you provided:
+
+- `@Override`: This annotation indicates that the method is overriding a method from its superclass or implementing an interface method.
+
+- `public OMetadataInternal getMetadata()`: This is the method signature. It specifies that the method is named `getMetadata` and it returns an object of type `OMetadataInternal`. The `public` access modifier denotes that the method can be accessed from any other class.
+
+- `checkOpenness()`: This line calls the `checkOpenness` method, which is likely a method defined within the same class or its superclass. It ensures that the database connection is open before accessing the metadata.
+
+- `return internal.getMetadata()`: This line invokes the `getMetadata()` method on the `internal` object, which probably represents an internal instance or object within the `ODatabaseDocumentTx` class. This method retrieves the metadata associated with the database and returns it.
+
+Overall, this method is an overridden implementation of the `getMetadata` method in the `ODatabaseDocumentTx` class. It checks if the database connection is open, then calls the `getMetadata()` method on the internal object to retrieve and return the metadata associated with the database.
+16. In line 5, method `getSchema` of class `OMetadata` is invoked.
+17. Certainly! Let's break down the code snippet you provided:
+
+- `OSchema`: This is the return type of the method. It indicates that the method will return an object of type `OSchema`. 
+
+- `getSchema()`: This is the method name. It does not take any parameters, hence the empty parentheses `()`.
+
+- `public`: This access modifier denotes that the method is accessible from any other class.
+
+Overall, this method definition specifies that the method `getSchema()` will return an object of type `OSchema`. The `OSchema` class likely represents the schema or structure of a database, such as the tables, columns, constraints, etc. The specific implementation of this method will depend on the class where it is defined, and it will determine what the method does and how it retrieves the schema object.
+18. In line 5, method `getClass` of class `OSchema` is invoked.
+19. Certainly! Let's break down the method code you provided:
+
+- `OClass`: This is the return type of the method. It indicates that the method will return an object of type `OClass`. 
+
+- `getClass(String iClassName)`: This is the method name and parameter declaration. The method takes a single parameter `iClassName` of type `String`, which represents the name of the class to retrieve.
+
+- `public`: This access modifier denotes that the method is accessible from any other class.
+
+- Javadoc comments: The block comment starting with `/**` and ending with `*/` is the Javadoc comment. It provides documentation for the method, explaining what it does and how to use it. It includes information such as the purpose of the method, its parameters, and its return value.
+
+- Method body: The method body is not shown in the code snippet you provided. It would contain the actual implementation of the method, which would handle retrieving and returning the `OClass` instance based on the given class name.
+
+Overall, this method is defined within the `OSchema` class. It is used to retrieve an `OClass` instance based on the specified class name. If the class is not already configured and the database has an entity manager with the requested class registered, the method might dynamically create a schema class for it. If neither the database nor the entity manager has a registered class with the specified name, the method returns `null`.
+20. In line 6, method `getProperty` of class `OClass` is invoked.
+21. Certainly! Let's break down the method code you provided:
+
+- `OProperty`: This is the return type of the method. It indicates that the method will return an object of type `OProperty`. 
+
+- `getProperty(String iPropertyName)`: This is the method name and parameter declaration. The method takes a single parameter `iPropertyName` of type `String`, which represents the name of the property to retrieve.
+
+- `public`: This access modifier denotes that the method is accessible from any other class.
+
+Overall, this method is defined within the `OClass` class. It is used to retrieve an `OProperty` instance based on the specified property name. The `OProperty` class likely represents a property defined within a class or entity in the database schema. The method implementation would handle searching for and returning the `OProperty` instance that matches the given property name. If no property with the specified name is found, the method might return `null` or throw an exception to indicate the absence of the property.
+
+22. In line 1, an object of class `ODatabaseDocumentTx` is instantiated
+23. The code you provided represents the class `ODatabaseDocumentTx` in the `com.orientechnologies.orient.core.db.document` package. 
+
+Let's break down the code:
+
+- Package Declaration: `package com.orientechnologies.orient.core.db.document;`
+
+- Import Statements: This section imports various classes and packages that are used in the code.
+
+- Class Definition: `ODatabaseDocumentTx` is the class being defined. 
+
+- JavaDoc Comments: The comments starting with `/**` and ending with `*/` provide documentation for the class and its methods.
+
+- Class Variables: These variables are defined within the class scope and store state or information specific to the instance of the class.
+
+- Constructors: The class has several constructors used to initialize an object of type `ODatabaseDocumentTx` with different arguments.
+
+- Methods: This class contains various methods that can be called on an instance of `ODatabaseDocumentTx`. Each method has its own functionality and purpose.
+
+- Overrides: Some methods in this class are overridden from superclasses or interfaces. The `@Override` annotation is used to indicate this.
+
+Overall, the `ODatabaseDocumentTx` class is used to interact with a document database in OrientDB. It provides methods for performing operations such as retrieving, creating, updating, and deleting documents, as well as executing commands and queries on the database.
+24. In line 3, an object of class `OCommandSQL` is instantiated
+25. This class is the implementation of a SQL command request in OrientDB. The code begins with a license and copyright notice. 
+
+Here's a breakdown of the different parts of the class:
+
+- `package com.orientechnologies.orient.core.sql;`: This line specifies the package of this class.
+
+- Imports: These lines import required classes and packages that are used in the class.
+
+- Class Definition: The class is defined as `OCommandSQL` and extends the abstract class `OCommandRequestTextAbstract`.
+
+- JavaDoc Comments: These comments provide documentation for the class, describing its purpose and functionality.
+
+- Methods:
+  - Constructors: The class has two constructors, one with no arguments and one that takes a `String` parameter `iText`. These constructors initialize the `text` field of the parent class `OCommandRequestTextAbstract`.
+
+  - `isIdempotent()`: This method returns a boolean value indicating whether the command is idempotent or not. In this implementation, it always returns `false`.
+
+  - `toString()`: This method overrides the `toString()` method inherited from `Object`. It returns a string representation of the SQL command, preceded by the prefix "sql.".
+
+  - `onAsyncReplicationOk()` and `onAsyncReplicationError()`: These methods override their counterparts in the parent class. They provide the ability to define callbacks to be executed in case of successful or failed asynchronous replication.
+
+Overall, this class provides the implementation for a SQL command request in OrientDB. It stores the SQL query text and delegates the execution to the configured `OCommandExecutor`.
+26. Take note that in line 4, an object of class `OCommandSQL` is created.
+27. In line 5, an object of class `OClass` is instantiated
+28. The code you provided is an interface named `OClass` from the OrientDB library. Let's break it down:
+
+- Package Declaration: `package com.orientechnologies.orient.core.metadata.schema;`
+- Import Statements: These statements import required classes and packages that are used in the interface.
+- Interface Definition: The interface is defined as `OClass` and it extends the `Comparable<OClass>` interface.
+- JavaDoc Comments: These comments provide documentation for the interface, describing its purpose and functionality.
+- Constants:
+  - `EDGE_CLASS_NAME` and `VERTEX_CLASS_NAME`: These constants define the class names for edges (E) and vertices (V) respectively.
+- Enums:
+  - `ATTRIBUTES`: This enum defines various attributes used in class metadata such as name, superclasses, description, etc.
+  - `INDEX_TYPE`: This enum lists different types of indexes that can be created on the class.
+- Method Signatures: These are the methods that can be implemented by a class that implements the `OClass` interface. Some of the methods include:
+  - Getter and setter methods for class properties such as `isAbstract()`, `getName()`, `isStrictMode()`, etc.
+  - Methods to get and set superclasses and subclasses.
+  - Methods to create, drop, and retrieve properties of the class.
+  - Methods related to clusters, indexes, and metadata of the class.
+  - Methods to get and set the oversize factor.
+  - Methods for class hierarchy management like superclass and subclass relationships.
+- Method Bodies: The methods provided in the interface have only method signatures without any implementation. The concrete implementation of these methods is expected to be provided by the classes that implement this interface.
+ 
+Overall, the `OClass` interface defines the contract or blueprint for classes representing schema information in OrientDB. It provides methods to interact with class properties, indexes, clusters, and other related functionalities.
+29. In line 6, an object of class `OProperty` is instantiated
+30. The code snippet you provided is an interface named `OProperty` from the OrientDB library. Let's break it down:
+
+- Package Declaration: `package com.orientechnologies.orient.core.metadata.schema;`
+
+- Import Statements: These statements import required classes and packages that are used in the interface.
+
+- Interface Definition: The interface is defined as `OProperty` and it extends the `Comparable<OProperty>` interface.
+
+- JavaDoc Comments: These comments provide documentation for the interface, describing its purpose and functionality.
+
+- Constants: The interface defines an enum named `ATTRIBUTES`, which lists various attributes used in property metadata such as name, type, description, etc.
+
+- Method Signatures: These are the methods that can be implemented by a class that implements the `OProperty` interface. Some of the methods include:
+
+  - Getter and setter methods for property attributes such as `getName()`, `getType()`, `getLinkedClass()`, etc.
+  - Methods to set and retrieve constraints on the property such as `isNotNull()`, `getMin()`, `getMax()`, etc.
+  - Methods to create and interact with indexes on the property such as `createIndex()`, `dropIndexes()`, `getIndexes()`, etc.
+  - Methods to set and retrieve custom properties on the property's metadata such as `setCustom()`, `getCustom()`, etc.
+  - Methods to retrieve information about the owner class and the property's metadata.
+
+  Note that some of the methods have `@Deprecated` annotations, indicating that they are no longer recommended and might be removed in future versions. It is suggested to use alternative methods instead.
+
+- Method Bodies: The methods provided in the interface have only method signatures without any implementation. The concrete implementation of these methods is expected to be provided by the classes that implement this interface.
+
+Overall, the `OProperty` interface defines the contract or blueprint for classes representing property metadata in OrientDB. It provides methods to retrieve and manipulate various attributes and constraints of a property, as well as work with indexes and custom metadata.
+

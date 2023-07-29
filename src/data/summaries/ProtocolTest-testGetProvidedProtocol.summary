@@ -1,0 +1,31 @@
+0. In line 1, an object of class `Protocol` is instantiated.
+1. This is a constructor for the `Protocol` class in Java. The constructor takes a `String` parameter called `providedProtocol`, which represents the protocol string that is being passed in.
+
+The purpose of the constructor is to initialize the `providedProtocol` field of the `Protocol` class. 
+
+In the constructor code, there is an `if` condition that checks whether the `providedProtocol` parameter is `null`. If it is `null`, then an `IllegalArgumentException` is thrown. This is to ensure that a valid value is passed as the protocol string.
+
+If the `providedProtocol` parameter is not `null`, then it is assigned to the `providedProtocol` field of the `Protocol` class using the `this` keyword. The `this` keyword refers to the current instance of the `Protocol` class.
+
+So, this constructor ensures that a valid protocol string is provided and assigns it to the `providedProtocol` field.
+2. In line 1, an object of class `Protocol` is instantiated
+3. This code represents a class called `Protocol` in the package `org.java_websocket.protocols`. The class implements the `IProtocol` interface.
+
+The purpose of this class is to represent a WebSocket protocol, which is used as the Sec-WebSocket-Protocol in WebSocket communication.
+
+The class has the following members:
+- `private final String providedProtocol`: This is an instance variable that represents the provided protocol string.
+- `private static final Pattern patternSpace`: This is a regular expression pattern that matches a space character.
+- `private static final Pattern patternComma`: This is a regular expression pattern that matches a comma character.
+
+The class provides the following methods:
+- `public Protocol(String providedProtocol)`: This is the constructor of the `Protocol` class. It takes a `String` parameter called `providedProtocol`, which represents the protocol string. If the `providedProtocol` is `null`, it throws an `IllegalArgumentException`. Otherwise, it assigns the provided protocol to the `providedProtocol` instance variable.
+- `public boolean acceptProvidedProtocol(String inputProtocolHeader)`: This method checks if the provided protocol is accepted based on the input protocol header. It removes spaces from the input protocol header, splits it by commas, and compares each header with the provided protocol. It returns `true` if a match is found, otherwise `false`.
+- `public String getProvidedProtocol()`: This method returns the provided protocol string.
+- `public IProtocol copyInstance()`: This method creates a new instance of the `Protocol` class with the same provided protocol string.
+- `public String toString()`: This method returns the provided protocol string.
+- `public boolean equals(Object o)`: This method checks if another object is equal to the `Protocol` object. It compares the provided protocol strings of the two objects.
+- `public int hashCode()`: This method returns a hash code for the `Protocol` object based on its provided protocol string.
+
+Additionally, the class includes a header comment that specifies the copyright and permission notice.
+

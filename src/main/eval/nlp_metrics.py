@@ -7,6 +7,7 @@ import syntax_match
 import dataflow_match
 
 from rouge import Rouge
+from rouge_metric import PyRouge
 sys.setrecursionlimit(12250000)
 
 def spacify(line):
@@ -153,6 +154,12 @@ def rouge(data):
     rouge = Rouge()
     scores = rouge.get_scores(all_hyps, all_refs, avg=True)
 
+    # rouge = PyRouge(rouge_n=(1, 2, 4), rouge_l=True, rouge_w=True,
+    #             rouge_w_weight=1.2, rouge_s=True, rouge_su=True, skip_gap=4)
+    # scores = rouge.evaluate(hypotheses, references)
+    # print(scores)
+
+    # return None
     return scores["rouge-l"]['f'] * 100.0
 
 def edit_sim(data):
@@ -177,22 +184,22 @@ def main():
 
     # print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
     # print('Teco BLEU: {}'.format(bleu(dataTeco)))
-    print('Batch BLEU: {}'.format(bleu(dataBatch)))
-    print('Batch-Fuzz BLEU: {}'.format(bleu(dataBatchFuzz)))
+    # print('Batch BLEU: {}'.format(bleu(dataBatch)))
+    # print('Batch-Fuzz BLEU: {}'.format(bleu(dataBatchFuzz)))
 
     # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
     # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
-    print('Batch CodeBLEU: {}'.format(code_bleu(dataBatch)))
-    print('Batch-Fuzz CodeBLEU: {}'.format(code_bleu(dataBatchFuzz)))
+    # print('Batch CodeBLEU: {}'.format(code_bleu(dataBatch)))
+    # print('Batch-Fuzz CodeBLEU: {}'.format(code_bleu(dataBatchFuzz)))
 
-    # print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
-    # print('Teco Rouge: {}'.format(rouge(dataTeco)))
-    print('Batch Rouge: {}'.format(rouge(dataBatch)))
-    print('Batch-Fuzz Rouge: {}'.format(rouge(dataBatchFuzz)))
+    print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
+    print('Teco Rouge: {}'.format(rouge(dataTeco)))
+    # print('Batch Rouge: {}'.format(rouge(dataBatch)))
+    # print('Batch-Fuzz Rouge: {}'.format(rouge(dataBatchFuzz)))
 
     # print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
     # print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
-    print('Batch Edit Distance: {}'.format(edit_sim(dataBatch)))
-    print('Batch-Fuzz Edit Distance: {}'.format(edit_sim(dataBatchFuzz)))
+    # print('Batch Edit Distance: {}'.format(edit_sim(dataBatch)))
+    # print('Batch-Fuzz Edit Distance: {}'.format(edit_sim(dataBatchFuzz)))
 
 main()

@@ -1,1 +1,0 @@
-- if an enumeration is involved as types show the possibilities. more generally, provide typing information of the parameters and results.

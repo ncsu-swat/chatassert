@@ -1,0 +1,40 @@
+0. Take note that in line 1, constructor `DefaultExtension` from class `DefaultExtension` is invoked.
+1. Take note that in line 2, constructor `DefaultExtension` from class `DefaultExtension` is invoked.
+2. In line 1, an object of class `DefaultExtension` is instantiated
+3. The code you provided is a class called `DefaultExtension` which implements the `IExtension` interface. It represents a normal implementation of the WebSocket protocol specified by rfc6455.
+
+Here is a summary of the class:
+
+- The class is located in the package `org.java_websocket.extensions` and is protected under the MIT license.
+- It has no instance variables.
+- The class overrides several methods defined in the `IExtension` interface.
+
+The overridden methods are:
+
+1. `decodeFrame(Framedata inputFrame) throws InvalidDataException`: This method decodes the frame data received from the WebSocket connection. In this implementation, it does nothing.
+
+2. `encodeFrame(Framedata inputFrame)`: This method encodes the frame data to be sent over the WebSocket connection. In this implementation, it does nothing.
+
+3. `acceptProvidedExtensionAsServer(String inputExtension)`: This method determines whether the server accepts the provided extension. In this implementation, it always returns true.
+
+4. `acceptProvidedExtensionAsClient(String inputExtension)`: This method determines whether the client accepts the provided extension. In this implementation, it always returns true.
+
+5. `isFrameValid(Framedata inputFrame) throws InvalidDataException`: This method checks if the received frame is valid according to the WebSocket protocol. If the frame has reserved bits set (RSV1, RSV2, or RSV3), it throws an `InvalidFrameException`.
+
+6. `getProvidedExtensionAsClient()`: This method returns the extension provided by the client. In this implementation, it returns an empty string.
+
+7. `getProvidedExtensionAsServer()`: This method returns the extension provided by the server. In this implementation, it returns an empty string.
+
+8. `copyInstance()`: This method creates and returns a copy of the `DefaultExtension` instance.
+
+9. `reset()`: This method resets the extension to its initial state. In this implementation, it does nothing.
+
+10. `toString()`: This method returns a string representation of the class name.
+
+11. `hashCode()`: This method returns the hash code of the class.
+
+12. `equals(Object o)`: This method checks if the given object is equal to the instance of `DefaultExtension`. It returns true if the objects are the same or if the given object is not null and has the same class type as `DefaultExtension`.
+
+Overall, this class represents a basic implementation of the WebSocket extension, providing empty or default behavior for the defined extension methods.
+4. Take note that in line 2, an object of class `DefaultExtension` is created.
+

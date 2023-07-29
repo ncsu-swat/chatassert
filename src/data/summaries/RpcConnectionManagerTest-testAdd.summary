@@ -1,0 +1,28 @@
+0. In line 1, method `getAConn` of class `RpcConnectionManagerTest` is invoked.
+1. The given method `getAConn` is a private method that returns a `Connection` object. It tries to create a connection using the `cm` (RpcConnectionManager) object's `create` method with the given `ip`, `port`, and timeout value of 1000 (milliseconds).
+
+If there is a `RemotingException` during the connection creation, an error message "Create connection failed!" is logged using the `logger` object.
+
+Finally, if the connection creation is successful, the method returns the `Connection` object. If there is an exception, the method returns `null`.
+2. In line 2, method `add` of class `DefaultConnectionManager` is invoked.
+3. The given method `add` is an implementation of the `add` method from the `ConnectionManager` interface. This method is responsible for adding a `Connection` object to the connection manager.
+
+First, the method retrieves the set of pool keys associated with the given connection using the `getPoolKeys` method. 
+
+Then, it iterates over each pool key in the set using a for-each loop. For each pool key, it invokes the `add` method of the connection manager, passing both the connection and the current pool key as parameters.
+
+In this way, the method ensures that the connection is added to all the appropriate pools based on the pool keys associated with it.
+4. In line 1, an object of class `Connection` is instantiated
+5. This code represents the `Connection` class in the package `com.alipay.remoting`. It is an abstraction of a socket channel.
+
+Some key points about the code:
+
+- The class has a `Channel` object, which represents the underlying socket channel.
+- It maintains a `ConcurrentHashMap` named `invokeFutureMap` to store `InvokeFuture` objects with their respective invoke IDs.
+- It also has several attributes defined using `AttributeKey` objects, such as `CONNECTION`, `HEARTBEAT_COUNT`, `HEARTBEAT_SWITCH`, `PROTOCOL`, and `VERSION`.
+- The class provides various methods to manipulate and retrieve information about the connection, such as `isFine()`, `increaseRef()`, `decreaseRef()`, `getRemoteAddress()`, `getRemoteIP()`, `getRemotePort()`, `getLocalAddress()`, `getLocalIP()`, `getLocalPort()`, `getChannel()`, and more.
+- It also provides methods related to the management of `InvokeFuture` objects, such as `getInvokeFuture()`, `addInvokeFuture()`, `removeInvokeFuture()`, and `isInvokeFutureMapFinish()`.
+- Other methods are provided to add and remove pool keys, set and retrieve attributes, and perform some initialization and cleanup tasks.
+
+Overall, this class encapsulates the functionality related to a connection in a network communication protocol and provides various methods and attributes to manage and interact with the connection.
+

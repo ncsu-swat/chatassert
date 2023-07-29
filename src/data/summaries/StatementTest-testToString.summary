@@ -1,0 +1,171 @@
+0. Take note that in line 2, method `randomUUID` from class `UUID` is invoked.
+1. Take note that in line 2, method `toString` from class `UUID` is invoked.
+2. In line 3, an object of class `Verb` is instantiated.
+3. Sure! 
+
+The code you provided is a constructor for the `Verb` class. A constructor is a special method that is used to initialize objects of a class. 
+
+In this constructor, there is one parameter `id` of type `String` which is used to initialize the `id` instance variable of the `Verb` class. The `this` keyword is used to refer to the current object being created.
+
+So, when an object of the `Verb` class is instantiated and this constructor is called with a `String` argument, it sets the value of the `id` instance variable for that object.
+4. In line 4, an object of class `Activity` is instantiated.
+5. Certainly! 
+
+The code you provided is a constructor for the `Activity` class. A constructor is a special method that is used to initialize objects of a class.
+
+In this constructor, there is one parameter `id` of type `String` which is used to initialize the `id` instance variable of the `Activity` class. The `this` keyword is used to refer to the current object being created.
+
+So, when an object of the `Activity` class is instantiated and this constructor is called with a `String` argument, it sets the value of the `id` instance variable for that object.
+6. In line 5, an object of class `Statement` is instantiated.
+7. Certainly! 
+
+The code you provided is a constructor for the `Statement` class. A constructor is a special method that is used to initialize objects of a class.
+
+This constructor takes three parameters: `actor` of type `Actor`, `verb` of type `Verb`, and `object` of type `IStatementObject`. It is used to initialize the instance variables `id`, `actor`, `verb`, and `object` of the `Statement` class.
+
+In this constructor, the `UUID.randomUUID().toString()` method is invoked to generate a random UUID (Universally Unique Identifier) and convert it to a string. The `this` keyword is used to refer to the current object being created, and the generated UUID is assigned to the `id` instance variable.
+
+Then, the passed `actor`, `verb`, and `object` parameters are assigned to the respective instance variables `actor`, `verb`, and `object` of the `Statement` class.
+
+So, when an object of the `Statement` class is instantiated and this constructor is called with an `Actor`, `Verb`, and `IStatementObject` argument, it sets the values of the `id`, `actor`, `verb`, and `object` instance variables for that object.
+8. Take note that in line 1, an object of class `String` is created.
+9. Take note that in line 2, an object of class `String` is created.
+10. In line 3, an object of class `Verb` is instantiated
+11. The code you provided is a Java class named `Verb` that belongs to the `gov.adlnet.xapi.model` package. Let's go through the code and understand its functionality:
+
+1. Import Statements:
+   - The `java.util.HashMap` class is imported to use the HashMap data structure.
+   - The `java.util.Map.Entry` class is imported to work with key-value pairs in a map.
+   - The `com.google.gson.*` classes are imported to serialize the `Verb` object to JSON using the Gson library.
+
+2. Class Declaration:
+   - The `public` access modifier is used to indicate that the class can be accessed from other packages.
+   - The class is named `Verb`.
+
+3. Instance Variables:
+   - `private String id` - Represents the ID of the verb.
+   - `private HashMap<String, String> display` - Represents the display names of the verb in different languages. It is a HashMap where the keys are language codes (e.g., "en-US") and the values are the display names in those languages.
+
+4. Constructors:
+   - `public Verb()` - Default constructor.
+   - `public Verb(String id)` - Constructor that takes the ID of the verb as a parameter.
+   - `public Verb(String id, HashMap<String, String> display)` - Constructor that takes the ID and display names as parameters.
+
+5. Method - `serialize()`:
+   - Creates a JsonElement object and constructs its JSON representation.
+   - If the `id` is not null, it adds the "id" property to the JSON object.
+   - If the `display` is not null, it adds the "display" property to the JSON object and iterates through the entries in the `display` HashMap to add each key-value pair as a property in the JSON object.
+   - Finally, it returns the constructed JSON object.
+
+6. Getters and Setters:
+   - `getId()` and `setId(String id)` - Getter and setter for the `id` instance variable.
+   - `getDisplay()` and `setDisplay(HashMap<String, String> display)` - Getter and setter for the `display` instance variable.
+
+7. Method - `toString()`:
+   - Overrides the `toString()` method inherited from the Object class.
+   - Returns a string representation of the `Verb` object.
+   - If the `display` HashMap is not null and contains a non-empty value for the "en-US" language code, it returns that value.
+   - Otherwise, it returns the `id` value.
+
+8. Method - `toString(String langKey)`:
+   - Overloaded version of the `toString()` method.
+   - Returns a string representation of the `Verb` object for a specific language specified by the `langKey` parameter.
+   - If the `display` HashMap is not null and contains a non-empty value for the specified `langKey`, it returns that value.
+   - Otherwise, it returns the `id` value.
+
+That's the overview of the `Verb` class. It represents a verb in the Experience API (xAPI) specification, with support for multiple display names in different languages.
+12. In line 4, an object of class `Activity` is instantiated
+13. Certainly! Let's go through the code and understand the functionality of the `Activity` class:
+
+1. Package Statement:
+  - The `Activity` class belongs to the `gov.adlnet.xapi.model` package.
+
+2. Import Statement:
+  - The `com.google.gson.*` classes are imported to serialize the `Activity` object to JSON using the Gson library.
+
+3. Class Declaration:
+  - The `public` access modifier is used to indicate that the class can be accessed from other packages.
+  - The class is named `Activity` and implements the `IStatementObject` interface.
+
+4. Constants:
+  - `public static final String ACTIVITY` - Represents the object type as "Activity".
+
+5. Instance Variables:
+  - `private String id` - Represents the ID of the activity.
+  - `private ActivityDefinition definition` - Represents the definition of the activity.
+
+6. Constructors:
+  - `public Activity()` - Default constructor.
+  - `public Activity(String id)` - Constructor that takes the ID of the activity as a parameter.
+  - `public Activity(String id, ActivityDefinition definition)` - Constructor that takes the ID and definition as parameters.
+
+7. Method - `getObjectType()`:
+  - Returns the object type as "Activity".
+
+8. Getters and Setters:
+  - `getId()` and `setId(String id)` - Getter and setter for the `id` instance variable.
+  - `getDefinition()` and `setDefinition(ActivityDefinition definition)` - Getter and setter for the `definition` instance variable.
+
+9. Method - `serialize()`:
+  - Creates a `JsonObject` and constructs its JSON representation.
+  - If the `id` is not null, it adds the "id" property to the JSON object.
+  - If the `definition` is not null, it calls the `serialize()` method on the `definition` object to get its serialized JSON representation and adds it as the "definition" property in the JSON object.
+  - Finally, it returns the constructed JSON object.
+
+10. Method - `toString()`:
+  - Overrides the `toString()` method inherited from the Object class.
+  - Returns a string representation of the `Activity` object.
+  - If the `definition` is null or the `name` property of the `definition` is null, it returns the `id` value.
+  - Otherwise, it calls the `toString()` method on the `definition` object to get its string representation.
+
+11. Method - `toString(String langMap)`:
+  - Overloaded version of the `toString()` method.
+  - Returns a string representation of the `Activity` object for a specific language specified by the `langMap` parameter.
+  - If the `definition` is null or the `name` property of the `definition` for the specified language is null, it returns the `id` value.
+  - Otherwise, it calls the `toString(String langMap)` method on the `definition` object with the specified language code to get its string representation.
+
+That's the overview of the `Activity` class. It represents an activity in the Experience API (xAPI) specification, with support for an ID and a definition that provides additional information about the activity.
+14. In line 5, an object of class `Statement` is instantiated
+15. Certainly! Let's go through the code and understand the functionality of the `SubStatement` class:
+
+1. Package Statement:
+   - The `SubStatement` class belongs to the `gov.adlnet.xapi.model` package.
+
+2. Import Statements:
+   - The `java.util.ArrayList` class is imported to use an ArrayList data structure.
+   - The `com.google.gson.*` classes are imported to serialize the `SubStatement` object to JSON using the Gson library.
+
+3. Class Declaration:
+   - The `public` access modifier is used to indicate that the class can be accessed from other packages.
+   - The class implements the `IStatementObject` interface.
+   - The class is named `SubStatement`.
+
+4. Constants:
+   - `public static final String SUB_STATEMENT` - Represents the object type as "SubStatement".
+
+5. Instance Variables:
+   - `private String timestamp` - Represents the timestamp of the statement.
+   - `private Verb verb` - Represents the verb of the statement.
+   - `private Actor actor` - Represents the actor of the statement.
+   - `private IStatementObject object` - Represents the object of the statement.
+   - `private Result result` - Represents the result of the statement.
+   - `private Context context` - Represents the context of the statement.
+   - `private ArrayList<Attachment> attachments` - Represents the attachments associated with the statement.
+
+6. Getters and Setters:
+   - Getter and setter methods are provided for each instance variable.
+
+7. Method - `setObject(IStatementObject object)`:
+   - Sets the object of the statement.
+   - If the object is of type "SubStatement", an exception is thrown since nested sub-statements are not allowed.
+
+8. Method - `getObjectType()`:
+   - Returns the object type as "SubStatement".
+
+9. Method - `serialize()`:
+   - Creates a `JsonObject` and constructs its JSON representation.
+   - Adds the instance variables to the JSON object using the `addProperty` or `add` methods.
+   - Calls the `serialize()` method on the nested objects (`actor`, `verb`, `object`, `result`, `context`, and `attachments`) to get their serialized JSON representations and adds them to the JSON object.
+
+That's the overview of the `SubStatement` class. It represents a sub-statement in the Experience API (xAPI) specification, with support for various properties like timestamp, verb, actor, object, result, context, and attachments. The class also provides methods for serialization and deserialization of the sub-statement object into JSON format.
+

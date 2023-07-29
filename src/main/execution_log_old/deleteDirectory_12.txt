@@ -1,94 +1,0 @@
-[INFO] Scanning for projects...
-[INFO] Inspecting build with total of 1 modules...
-[INFO] Installing Nexus Staging features:
-[INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
-[INFO] 
-[INFO] --------------------------< com.hotels:beeju >--------------------------
-[INFO] Building beeju 5.0.0
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- clean:3.2.0:clean (default-clean) @ beeju ---
-[INFO] Deleting /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/target
-[INFO] 
-[INFO] --- dependency:3.1.1:unpack (unpack) @ beeju ---
-[INFO] Configured Artifact: com.hotels:hotels-oss-plugin-config:1.3.0:jar
-[INFO] Unpacking /Users/adminuser/.m2/repository/com/hotels/hotels-oss-plugin-config/1.3.0/hotels-oss-plugin-config-1.3.0.jar to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/target/plugin-config with includes "" and excludes ""
-[INFO] 
-[INFO] --- buildnumber:1.4:create-timestamp (default) @ beeju ---
-[INFO] 
-[INFO] --- license:3.0:format (default) @ beeju ---
-[INFO] Updating license headers...
-[INFO] 
-[INFO] --- enforcer:3.0.0-M2:enforce (enforce-maven) @ beeju ---
-[INFO] 
-[INFO] --- jacoco:0.8.4:prepare-agent (jacoco-initialize) @ beeju ---
-[INFO] argLine set to -javaagent:/Users/adminuser/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/target/jacoco.exec,excludes=org/apache/hadoop/hive/ql/parse/HiveParser
-[INFO] 
-[INFO] --- spotless:1.27.0:apply (default) @ beeju ---
-[INFO] 
-[INFO] --- resources:3.3.0:resources (default-resources) @ beeju ---
-[INFO] skip non existing resourceDirectory /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/src/main/resources
-[INFO] 
-[INFO] --- compiler:3.8.1:compile (default-compile) @ beeju ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 16 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/target/classes
-[WARNING] bootstrap class path not set in conjunction with -source 8
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/src/main/java/com/hotels/beeju/core/BeejuCore.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/src/main/java/com/hotels/beeju/core/BeejuCore.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- resources:3.3.0:testResources (default-testResources) @ beeju ---
-[INFO] Copying 1 resource
-[INFO] 
-[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ beeju ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 10 source files to /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/target/test-classes
-[WARNING] bootstrap class path not set in conjunction with -source 8
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/src/test/java/com/hotels/beeju/HiveMetaStoreJUnitRuleTest.java: Some input files use or override a deprecated API.
-[INFO] /Users/adminuser/Documents/Work/Experiment/ChatGPT/oragen-main/src/tmp/repos/beeju/src/test/java/com/hotels/beeju/HiveMetaStoreJUnitRuleTest.java: Recompile with -Xlint:deprecation for details.
-[INFO] 
-[INFO] --- surefire:2.22.2:test (default-test) @ beeju ---
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-surefire-provider/1.3.2/junit-platform-surefire-provider-1.3.2.pom
-Progress (1): 1.4/2.6 kBProgress (1): 2.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-surefire-provider/1.3.2/junit-platform-surefire-provider-1.3.2.pom (2.6 kB at 2.0 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.22.0/common-java5-2.22.0.pom
-Progress (1): 1.4/2.7 kBProgress (1): 2.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.22.0/common-java5-2.22.0.pom (2.7 kB at 48 kB/s)
-[INFO] Artifact org.apache.maven.surefire:surefire-providers:pom:2.22.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), apache.snapshots (https://repository.apache.org/snapshots, default, snapshots)]
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.0/surefire-providers-2.22.0.pom
-Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.0/surefire-providers-2.22.0.pom (0 B at 0 B/s)
-[INFO] Artifact org.junit.vintage:junit-vintage-engine:pom:5.7.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), apache.snapshots (https://repository.apache.org/snapshots, default, snapshots)]
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/vintage/junit-vintage-engine/5.7.0/junit-vintage-engine-5.7.0.pom
-Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/vintage/junit-vintage-engine/5.7.0/junit-vintage-engine-5.7.0.pom (0 B at 0 B/s)
-[INFO] Artifact org.junit.vintage:junit-vintage-engine:jar:5.7.0 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [central (https://repo.maven.apache.org/maven2, default, releases), apache.snapshots (https://repository.apache.org/snapshots, default, snapshots)]
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-surefire-provider/1.3.2/junit-platform-surefire-provider-1.3.2.jar
-Progress (1): 1.4/18 kBProgress (1): 2.7/18 kBProgress (1): 4.1/18 kBProgress (1): 5.5/18 kBProgress (1): 6.9/18 kBProgress (1): 8.2/18 kBProgress (1): 9.6/18 kBProgress (1): 11/18 kB Progress (1): 12/18 kBProgress (1): 14/18 kBProgress (1): 15/18 kBProgress (1): 16/18 kBProgress (1): 18/18 kBProgress (1): 18 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-surefire-provider/1.3.2/junit-platform-surefire-provider-1.3.2.jar (18 kB at 212 kB/s)
-Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.22.0/common-java5-2.22.0.jar
-Downloading from central: https://repo.maven.apache.org/maven2/org/junit/vintage/junit-vintage-engine/5.7.0/junit-vintage-engine-5.7.0.jar
-Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/vintage/junit-vintage-engine/5.7.0/junit-vintage-engine-5.7.0.jar (0 B at 0 B/s)
-Progress (1): 1.4/51 kBProgress (1): 2.7/51 kBProgress (1): 4.1/51 kBProgress (1): 5.5/51 kBProgress (1): 6.9/51 kBProgress (1): 8.2/51 kBProgress (1): 9.6/51 kBProgress (1): 11/51 kB Progress (1): 12/51 kBProgress (1): 14/51 kBProgress (1): 15/51 kBProgress (1): 16/51 kBProgress (1): 17/51 kBProgress (1): 19/51 kBProgress (1): 20/51 kBProgress (1): 21/51 kBProgress (1): 23/51 kBProgress (1): 24/51 kBProgress (1): 25/51 kBProgress (1): 27/51 kBProgress (1): 28/51 kBProgress (1): 30/51 kBProgress (1): 31/51 kBProgress (1): 32/51 kBProgress (1): 34/51 kBProgress (1): 35/51 kBProgress (1): 36/51 kBProgress (1): 38/51 kBProgress (1): 39/51 kBProgress (1): 41/51 kBProgress (1): 42/51 kBProgress (1): 43/51 kBProgress (1): 45/51 kBProgress (1): 46/51 kBProgress (1): 47/51 kBProgress (1): 49/51 kBProgress (1): 50/51 kBProgress (1): 51 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.22.0/common-java5-2.22.0.jar (51 kB at 116 kB/s)
-[WARNING] Parameter 'localRepository' is deprecated core expression; Avoid use of ArtifactRepository type. If you need access to local repository, switch to '${repositorySystemSession}' expression and get LRM from it instead.
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-
- +-------------------------------------------------------------------------------+
- | WARNING:                                                                      |
- | The junit-platform-surefire-provider has been deprecated and is scheduled to  |
- | be removed in JUnit Platform 1.4. Please use the built-in support in Maven    |
- | Surefire >= 2.22.0 instead.                                                   |
- | Â» https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven |
- +-------------------------------------------------------------------------------+
-
-[INFO] Running com.hotels.beeju.core.BeejuCoreTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.483 s - in com.hotels.beeju.core.BeejuCoreTest
-[INFO] 
-[INFO] Results:
-[INFO] 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.460 s
-[INFO] Finished at: 2023-06-09T18:46:59-04:00
-[INFO] ------------------------------------------------------------------------

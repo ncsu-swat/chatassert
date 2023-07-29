@@ -1,0 +1,30 @@
+0. In line 1, method `registered` of class `Verbs` is invoked.
+1. Sure! 
+
+The method `registered()` is defined as a public static method, which means it can be accessed from any part of the code without needing to create an instance of the class `Verbs`. It has a return type of `Verb`. 
+
+Inside the method, there is a single statement that calls another method called `createVerb()` and passes the string argument "registered". The `createVerb()` method is responsible for creating and returning an instance of the class `Verb`. 
+
+So, the `registered()` method returns the `Verb` object created by the `createVerb()` method, which represents the action of being "registered".
+2. In line 1, an object of class `Verb` is instantiated
+3. Certainly! This is a class named `Verb` in the package `gov.adlnet.xapi.model`. Here is a breakdown of the code:
+
+- The class begins with import statements that import necessary classes from the Java libraries.
+
+- The class `Verb` has three private instance variables: `id` of type `String` and `display` of type `HashMap<String, String>`.
+
+- There are three constructors defined for the `Verb` class: 
+  - The first constructor `Verb()` is empty and doesn't perform any action.
+  - The second constructor `Verb(String id)` initializes the `id` instance variable with the provided `id` value.
+  - The third constructor `Verb(String id, HashMap<String, String> display)` initializes both `id` and `display` instance variables with the provided values.
+
+- The `serialize()` method returns a `JsonElement` representing the verb object in JSON format. It creates a `JsonObject`, adds the `id` field if it is not `null`, and adds the `display` field by iterating through the entries of the `display` `HashMap`.
+
+- The class provides getter and setter methods for `id` and `display`.
+
+- The `toString()` method overrides the default implementation to return a string representation of the `Verb` object. It checks if the `display` is not `null` and if it contains a non-empty value for the language key "en-US". If it does, it returns the corresponding value from `display`, otherwise it returns the `id`.
+
+- The `toString(String langKey)` method is similar to `toString()`, but it takes a language key as a parameter and returns the value from `display` for that specific language if available, otherwise it returns the `id`.
+
+Overall, the `Verb` class provides methods to create, manipulate, and represent verb objects, especially for use in the xAPI (Experience API) context.
+

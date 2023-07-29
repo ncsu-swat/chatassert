@@ -1,4 +1,4 @@
-# genoracle
+# ChatAssert
 
 # Requirements
 
@@ -15,13 +15,6 @@
       - `export PYTHONPATH="$PWD/src"`
       - `source env/bin/activate`
 
-
-<!--
-## Ishrak, I don't understand what this is doing here:
-Obs. The script `src/test/s.sh` sets up the environment to run the
-script doall.py. 
--->
-
 # Execution
 
  - **Step 1**: Spawn the java transformation server:
@@ -29,9 +22,6 @@ script doall.py.
     - Run `bash s` and keep the terminal open
  - **Step 2:** From a separate terminal
     - CD into the `src/main` directory
-    <!-- why doall.py instead of tname? why it does not take a (json?) file with all tests to generate assertions as input? -->
     - Examples:
-        - Run `python3 doall.py` 
-        - Run `python3 doall.py v1` # for running without feedback loop
-        - Run `python3 doall.py v2` # for running with feedback loop 
-        - Run `python3 doall.py mock` # to use the mock version instead of the actual ChatGPT API; mock currently supports the tests "testToMillibar" and "testReadExcel" only.
+        - Run `python3 doall.py v1` # for running L-One
+        - Run `python3 doall.py v2` # for running ChatAssert

@@ -1,0 +1,11 @@
+0. In line 2, method `getDuration` of class `Result` is invoked.
+1. Sure! 
+
+The method `getDuration` is defined as a public method that returns a value of type `String`. 
+
+In this case, the method simply returns the value of a variable called `duration`. It doesn't require any input parameters or perform any complex calculations or manipulations. It is simply a getter method that returns the value of the `duration` variable. 
+
+The access modifier `public` indicates that this method can be accessed from any other class. So, any instance of the `Result` class can call this method to retrieve the value of `duration`.
+2. Take note that in line 1, an object of class `String` is created.
+3. Take note that in line 2, an object of class `String` is created.
+

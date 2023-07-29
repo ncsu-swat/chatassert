@@ -1,0 +1,198 @@
+0. In line 1, an object of class `TestSuite` is instantiated.
+1. Certainly! 
+
+The code you provided is a constructor of the `TestSuite` class. A constructor is a special method that is invoked when an object of a class is created. 
+
+In this case, the constructor `TestSuite()` has no parameters enclosed inside the parentheses. This means that it is a default constructor, as it does not take any arguments.
+
+The constructor body, represented by the empty curly braces `{}`, does not contain any code. This means that it does not perform any specific actions when the `TestSuite` object is instantiated. It is possible that further initialization or setup might be present in a different constructor or method within the `TestSuite` class.
+2. In line 2, an object of class `TestCase` is instantiated.
+3. Certainly! 
+
+The code you provided is a constructor of the `TestCase` class. A constructor is a special method that is invoked when an object of a class is created. 
+
+This particular constructor `TestCase(String id)` takes a single parameter of type `String` with the identifier `id`. 
+
+The constructor body is represented by the curly braces `{}`. Inside the constructor body, there is a method call `this(id, Collections.<String, String>emptyMap())`.
+
+In this method call, `this` is used to invoke another constructor within the same class `TestCase`. The `this` keyword is used to refer to the current object instance.
+
+The invoked constructor `TestCase(String id, Map<String, String> properties)` takes two parameters - `String id` and `Map<String, String> properties`. However, in the constructor call, the second argument is `Collections.<String, String>emptyMap()`. 
+
+`Collections.<String, String>emptyMap()` is a method call that returns an empty immutable map of type `Map<String, String>`. This is a convenient way to initialize the `properties` parameter with an empty map if the caller doesn't provide any specific properties.
+
+The purpose of this constructor is to allow the caller to instantiate a `TestCase` object by providing an `id` and use an empty map for properties if no specific properties are provided.
+
+This constructor allows flexibility and convenience by offering a default value for the `properties` parameter.
+4. In line 2, method `addTest` of class `TestSuite` is invoked.
+5. Certainly! 
+
+The code you provided is the definition of the `addTest` method in the `TestSuite` class. 
+
+The method signature `public TestSuite addTest(TestCase testCase)` indicates that the method takes a parameter of type `TestCase` named `testCase` and returns an object of type `TestSuite`. 
+
+Within the method body, there are two main lines of code:
+
+1. `testCaseList.add(testCase);`: This line adds the `testCase` object to a list named `testCaseList`. Presumably, `testCaseList` is an instance variable or a local variable declared within the `TestSuite` class. 
+
+2. `return this;`: This line returns the current instance of the `TestSuite` object. The keyword `this` refers to the current object on which the method is being called. So, when this method is invoked on a `TestSuite` object, it will return the same object.
+
+In summary, the purpose of the `addTest` method is to add a `TestCase` object to the `testCaseList` and then return the current `TestSuite` object. This allows for method chaining, allowing multiple `addTest` calls to be chained together if desired.
+6. Take note that in line 3, constructor `TestCase` from class `TestCase` is invoked.
+7. Take note that in line 3, method `addTest` from class `TestSuite` is invoked.
+8. Take note that in line 4, constructor `TestCase` from class `TestCase` is invoked.
+9. Take note that in line 4, method `addTest` from class `TestSuite` is invoked.
+10. In line 5, method `addTests` of class `Registry` is invoked.
+11. Certainly! 
+
+The code you provided is the definition of the `addTests` method in the `Registry` class.
+
+The method signature `public synchronized List<TestData> addTests(TestSuite testSuite)` indicates that the method takes a parameter of type `TestSuite` named `testSuite` and returns a `List` of `TestData` objects.
+
+Within the method body, there are several lines of code that perform the following steps:
+
+1. Create a new `ArrayList` object called `result` with an initial capacity equal to the size of `testSuite` by passing `testSuite.size()` as the initial capacity parameter.
+
+2. Iterate through each `TestCase` object in the `testCaseList` of the `testSuite` using a for-each loop. 
+
+3. Get the `id` of the current `TestCase` using `testCase.getId()`. This assumes that the `TestCase` class has a method called `getId()` that returns the `id` value.
+
+4. Retrieve the `AtomicLong` object associated with the `id` from a `Map` named `ids` using `ids.get(id)`. The `ids` map stores the count of how many times each `id` has been encountered before.
+
+5. If the `count` is `null`, it means that the `id` is encountered for the first time. In this case, a new `AtomicLong` object with an initial value of 1 is created and put into the `ids` map using `ids.put(id, new AtomicLong(1))`.
+
+6. If the `count` is not `null`, it means that the `id` has been encountered before. In this case, a suffix is appended to the `id` by combining it with the current count value of the `AtomicLong` object using `id = id + "__" + count.getAndIncrement()`.
+
+7. An `int` value called `testIndex` is incremented atomically using the `testIndexGenerator`. The value of `testIndex` is obtained by invoking `testIndexGenerator.incrementAndGet()`.
+
+8. The `id` of the current `TestCase` is updated with the new value using `testCase.setId(id)`.
+
+9. A new `TestData` object is created with the `testIndex`, current `testCase`, and `testSuite` as arguments.
+
+10. The newly created `TestData` object is added to the `result` list using `result.add(test)`.
+
+11. The `TestData` object is also put into a `Map` named `tests` using `tests.put(id, test)`.
+
+12. Once all the `TestCase` objects from the `testSuite` have been processed, the `result` list containing the created `TestData` objects is returned.
+
+The method is declared as synchronized, which means that only one thread can execute this method at a time. This is to ensure thread safety when multiple threads try to access and modify shared resources within the method.
+12. In line 6, method `getTest` of class `Registry` is invoked.
+13. Certainly!
+
+The code you provided is the definition of the `getTest` method in the `Registry` class.
+
+The method signature `public TestData getTest(String testId)` indicates that the method takes a parameter of type `String` named `testId` and returns an object of type `TestData`, which represents a test data object.
+
+Within the method body, there is a single line of code:
+
+`return tests.get(testId);`
+
+This line retrieves the value associated with the `testId` key from a `Map` named `tests`. The `tests` map seems to store `TestData` objects, where the `testId` is used as the key and the `TestData` object is stored as the corresponding value.
+
+The `get` method of the `Map` interface is used to retrieve the value associated with a specific key. In this case, it retrieves the `TestData` object that corresponds to the given `testId`.
+
+The retrieved `TestData` object is then returned from the `getTest` method.
+
+Overall, the purpose of this method is to retrieve a `TestData` object from the `tests` map based on the provided `testId`.
+14. In line 1, an object of class `TestSuite` is instantiated
+15. The code you provided defines the `TestSuite` class. Below is an explanation of the class:
+
+- The class is in the package `com.hazelcast.simulator.coordinator`.
+
+- It imports several classes and packages, including `TestCase` from the `com.hazelcast.simulator.common` package and `WorkerQuery` from the `com.hazelcast.simulator.coordinator.registry` package.
+
+- The class is declared as `Serializable`, which means objects of this class can be serialized and deserialized.
+
+- The `TestSuite` class has several private instance variables, including:
+  - `testCaseList`: A list that will store instances of `TestCase`.
+  - `durationSeconds`: A `long` variable representing the duration of the test suite in seconds.
+  - `failFast`: A boolean variable indicating whether the test suite should stop on failure.
+  - `parallel`: A boolean variable indicating whether the tests in the suite should run in parallel.
+  - `workerQuery`: An instance of the `WorkerQuery` class.
+
+- The class has constructors that allow instantiation of a `TestSuite` object from either a `File` or a `String` parameter.
+  - The `File` constructor reads the contents of the file, parses it, and loads the test cases into the `testCaseList`.
+  - The `String` constructor directly loads the test cases from the provided content string into the `testCaseList`.
+
+- The class contains methods to get and set various properties of the `TestSuite` object, including:
+  - `setVerifyEnabled` and `isVerifyEnabled`: Get/set the verification enabled flag.
+  - `setParallel` and `isParallel`: Get/set the parallel execution flag.
+  - `getWorkerQuery` and `setWorkerQuery`: Get/set the worker query object.
+  - `getTestCaseList`: Get the list of test cases.
+  - `setDurationSeconds` and `getDurationSeconds`: Get/set the duration of the test suite.
+  - `setFailFast` and `isFailFast`: Get/set the fail-fast flag.
+  - `addTest`: Add a `TestCase` object to the test suite.
+  - `getTestCase`: Get a specific `TestCase` object from the test suite based on its ID.
+  - `size`: Get the number of test cases in the test suite.
+  - `getMaxTestCaseIdLength`: Get the maximum length of the test case IDs.
+
+- The `toString` method provides a string representation of the `TestSuite` object.
+
+- There are several private helper methods, including:
+  - `createTestCases`: Parses the provided properties and creates `TestCase` objects based on them.
+  - `isValidTestId`: Checks if a given test ID is valid.
+  - `getOrCreateTestCase`: Retrieves an existing `TestCase` from the provided test case map or creates a new one if not found.
+  - `getTestCaseIds`: Gets the list of test case IDs from the provided test case map.
+
+Overall, the `TestSuite` class represents a collection of test cases along with their associated properties. It provides methods to get and set various properties of the test suite and manipulate the test cases.
+16. In line 2, an object of class `TestCase` is instantiated
+17. Certainly! 
+
+The code you provided is the definition of the `TestCase` class. Below is an explanation of the class:
+
+- The class is in the package `com.hazelcast.simulator.common`.
+
+- It imports several classes and packages, including `Logger` from `org.apache.log4j`, and various utility classes from `java.util`.
+
+- The class is declared as `Serializable`, which means objects of this class can be serialized and deserialized.
+
+- The `TestCase` class has several private instance variables, including:
+  - `id`: A `String` variable representing the ID of the test case.
+  - `properties`: A `Map<String, String>` variable that stores the properties of the test case. It maps property names to their corresponding values.
+
+- The class has two constructors:
+  - The first constructor takes a `String` parameter `id`. It sets the `id` variable with the provided value and initializes the `properties` map as an empty map.
+  - The second constructor takes a `String` parameter `id` and a `Map<String, String>` parameter `properties`. It sets the `id` variable with the provided value and sets the properties in the `properties` map by iterating over the entries of the provided `properties` map and calling the `setProperty` method.
+
+- The class provides various methods to get and set properties of the test case. Some notable methods include:
+  - `setId`: Sets the ID of the test case.
+  - `getId`: Returns the ID of the test case.
+  - `getClassname`: Returns the value of the `class` property from the `properties` map.
+  - `getProperty`: Returns the value of a specific property from the `properties` map based on its name.
+  - `setProperty`: Sets the value of a specific property in the `properties` map based on its name and value. It also handles a specific case where the property name is `"basename"` and replaces it with `"name"` due to deprecation.
+  - `setProperties`: Sets multiple properties in the `properties` map by providing a `Map<String, String>` object containing key-value pairs.
+  - `toString`: Returns a string representation of the `TestCase` object, including its ID, class name, and properties.
+
+- The class also provides logging functionality through the `LOGGER` instance.
+
+This class represents a test case with an ID and a set of properties. The properties can store various details specific to the test case. The class offers methods to manipulate the properties and retrieve information about the test case. The `toString` method provides a formatted string representation of the `TestCase` object.
+18. Take note that in line 3, an object of class `TestCase` is created.
+19. Take note that in line 4, an object of class `TestCase` is created.
+20. In line 6, an object of class `TestData` is instantiated
+21. The code you provided is the definition of the `TestData` class. Below is an explanation of the class:
+
+- The class is in the package `com.hazelcast.simulator.coordinator.registry`.
+
+- It imports several classes, including `TestCase` and `TestPhase` from `com.hazelcast.simulator.common` and `TestSuite` from `com.hazelcast.simulator.coordinator`.
+
+- The class declares an enum `CompletedStatus` that represents the possible completion statuses of a test data. The enum has three values: `IN_PROGRESS`, `FAILED`, and `SUCCESS`.
+
+- The class has several private instance variables, including:
+  - `testIndex`: An `int` variable representing the index of the test data.
+  - `testCase`: A reference to the associated `TestCase` object.
+  - `testSuite`: A reference to the associated `TestSuite` object.
+  - `startTimeMillis`: A `long` variable representing the start time of the test data in milliseconds.
+  - `testPhase`: A reference to the current `TestPhase` of the test data.
+  - `stopRequested`: A boolean variable indicating whether a stop of the test data has been requested.
+  - `completedStatus`: An instance of the `CompletedStatus` enum representing the completion status of the test data. It is initially set to `IN_PROGRESS`.
+
+- The class has a package-private constructor that takes the `testIndex`, `testCase`, and `testSuite` as parameters and initializes the corresponding instance variables.
+
+- The class provides several getter and setter methods to access and modify the instance variables, such as `getCompletedStatus`, `isCompleted`, `setCompletedStatus`, `setStopRequested`, `isStopRequested`, and more.
+
+- The `initStartTime` method initializes the `startTimeMillis` with the current system time in milliseconds.
+
+- The `getStatusString` method returns a string representation of the completion status of the test data. If the status is `IN_PROGRESS`, it returns the description of the current `TestPhase`. Otherwise, it returns either "completed" or "failed" based on the completion status.
+
+Overall, the `TestData` class represents a data object that holds information about a particular test, including its associated `TestCase`, `TestSuite`, completion status, test phase, and more. The class provides methods to access and modify this information and calculates the current completion status and status string.
+

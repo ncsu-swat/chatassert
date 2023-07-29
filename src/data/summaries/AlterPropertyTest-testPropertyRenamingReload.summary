@@ -1,0 +1,124 @@
+0. In line 1, method `getMetadata` of class `ODatabase` is invoked.
+1. The method `getMetadata` is defined in the class `ODatabase`. This method has a return type of `OMetadata`, which indicates that it will return an object of type `OMetadata`.
+
+The method does not take any parameters.
+
+The documentation comment above the method provides additional information about its purpose. It states that the method will return an instance of `OMetadata`, and it cannot be null.
+
+In summary, the `getMetadata` method is used to retrieve the `OMetadata` instance associated with the `ODatabase` object.
+2. In line 1, method `getSchema` of class `OMetadata` is invoked.
+3. The method `getSchema` is defined in the class `OMetadata`. This method has a return type of `OSchema`, which suggests that it returns an object of type `OSchema`.
+
+The method does not take any parameters, indicated by the absence of parentheses after the method name.
+
+Based on the code snippet provided, it can be inferred that the `getSchema` method is used to retrieve an instance of the `OSchema` object, which represents the schema of a database or a specific data structure.
+
+The `OSchema` object likely holds information about the tables, classes, and relationships in the database, and can be used for operations such as creating, modifying, or querying database schema elements.
+
+Overall, the `getSchema` method allows access to the `OSchema` object associated with the `OMetadata` instance.
+4. In line 2, method `createClass` of class `OSchema` is invoked.
+5. Certainly! The method `createClass` is defined in the class `OSchema`. It takes a parameter of type `String` named `iClassName`. 
+
+This method is used to create a new instance of `OClass`, which represents a class in the database schema. 
+
+The `iClassName` parameter represents the name of the class that will be created. It is a `String` value that specifies the desired name for the class.
+
+The return type of this method is `OClass`, indicating that it returns the newly created `OClass` instance.
+
+In summary, the `createClass` method in the `OSchema` class is used to create a new `OClass` instance based on the provided class name (passed as the `iClassName` parameter) and returns the created `OClass` instance.
+6. In line 3, method `createProperty` of class `OClass` is invoked.
+7. Certainly! The method `createProperty` is defined in the class `OClass`. It takes two parameters: `iPropertyName`, which is of type `String`, and `iType`, which is of type `OType`.
+
+This method is used to create a new property for the class represented by the `OClass` instance. 
+
+The `iPropertyName` parameter represents the name of the property that will be created. It is a `String` value that specifies the desired name for the property.
+
+The `iType` parameter represents the data type of the property. It is of type `OType`, which is an enumeration class that defines various data types like `STRING`, `INTEGER`, `BOOLEAN`, etc. This parameter specifies the desired data type for the property.
+
+The return type of this method is `OProperty`, indicating that it returns the newly created `OProperty` instance.
+
+In summary, the `createProperty` method in the `OClass` class is used to create a new property using the provided name (passed as the `iPropertyName` parameter) and data type (passed as the `iType` parameter) and returns the created `OProperty` instance.
+8. In line 1, an object of class `OSchema` is instantiated
+9. This is the code for the `OSchema` interface. It declares a set of methods for working with the schema of a database. Here's a breakdown of the code:
+
+- The code begins with a header containing copyright and licensing information for the OrientDB library.
+
+- The package statement specifies that this interface belongs to the `com.orientechnologies.orient.core.metadata.schema` package.
+
+- The `import` statements import necessary classes from other packages.
+
+- The `OSchema` interface declares several methods for managing the database schema. Some notable methods include:
+  - `countClasses()`: Returns the number of classes in the schema.
+  - `createClass()`: Creates a new class in the schema.
+  - `dropClass()`: Drops the class from the schema.
+  - `getClass()`: Retrieves the class by name or by a Java class.
+  - `getOrCreateClass()`: Retrieves or creates a class in the schema.
+  - `getClasses()`: Retrieves a collection of all classes in the schema.
+  - `save()`: Saves the schema (deprecated).
+
+- The interface also includes some additional methods related to internal operations and global properties.
+
+- The code ends with the declaration of the `OSchema` interface.
+
+In summary, the `OSchema` interface provides a set of methods to work with and manipulate the schema of a database in the OrientDB library.
+10. In line 2, an object of class `OClass` is instantiated
+11. The code you provided is the definition of the `OClass` interface. Let's break it down:
+
+- This code is placed in the `com.orientechnologies.orient.core.metadata.schema` package.
+
+- The interface begins with documentation comments that provide information about authors, licensing, and more.
+
+- The `OClass` interface extends the `Comparable<OClass>` interface, indicating that it can be compared to other `OClass` instances.
+
+- The interface defines two constants: `EDGE_CLASS_NAME` and `VERTEX_CLASS_NAME`. These constants have string values "E" and "V" respectively.
+
+- The interface declares two enumerated types: `ATTRIBUTES` and `INDEX_TYPE`. They define several constants with different attribute names and index types.
+
+- The interface then defines a set of methods that can be used to interact with an OrientDB class. These methods allow you to perform various operations on the class, such as modifying its properties, creating and managing indexes, retrieving superclasses and subclasses, and more.
+
+- Many of the methods have self-explanatory names, like `createProperty`, `dropProperty`, `getSuperClass`, `isAbstract`, `setName`, etc. They provide functionality to manage the properties, structure, relationships, and metadata of a class.
+
+- Some methods have additional parameters, like `createIndex`, which allows you to create different types of indexes on the class. The parameters specify the index name, the index type, the fields to be indexed, and other optional parameters.
+
+- The interface also includes methods related to cluster management and custom attributes associated with the class.
+
+In summary, the `OClass` interface provides a collection of methods to manipulate and interact with an OrientDB class, such as managing properties, indexes, clusters, and custom attributes.
+12. In line 3, an object of class `OProperty` is instantiated
+13. This code represents the definition of the `OProperty` interface. Let's break it down:
+
+- The code begins with a header containing copyright and licensing information for the OrientDB library.
+
+- The package statement specifies that this interface belongs to the `com.orientechnologies.orient.core.metadata.schema` package.
+
+- The `import` statements import necessary classes from other packages.
+
+- The interface is named `OProperty` and it extends the `Comparable<OProperty>` interface, indicating that it can be compared to other `OProperty` instances.
+
+- The interface contains an enumerated type `ATTRIBUTES` which lists various attributes that can be associated with a property.
+
+- The interface then declares a set of methods that define the functionality of a property in the schema. These methods include:
+  - `getName`: Returns the name of the property.
+  - `getFullName`: Returns the full name of the property, including the name of the class it belongs to.
+  - `setName`: Sets the name of the property.
+  - `set`: Sets the value of a specific attribute for the property.
+  - `getType`: Returns the type of the property.
+  - `getLinkedClass`: Returns the linked class of the property.
+  - `setLinkedClass`: Sets the linked class of the property.
+  - `getLinkedType`: Returns the linked type of the property.
+  - `setLinkedType`: Sets the linked type of the property.
+  - `isNotNull`: Checks if the property is not null.
+  - `setNotNull`: Sets whether the property is not null.
+  - `getCollate`: Returns the collate setting for the property.
+  - `setCollate`: Sets the collate setting for the property.
+  - `isMandatory`: Checks if the property is mandatory.
+  - `setMandatory`: Sets whether the property is mandatory.
+  - `isReadonly`: Checks if the property is readonly.
+  - `setReadonly`: Sets whether the property is readonly.
+  - Various other methods for getting and setting minimum, maximum, default value, creating indexes, retrieving custom attributes, and more.
+
+- The interface also includes some deprecated methods, which are not recommended for use anymore.
+
+- The interface ends with the declaration of the `OProperty` interface.
+
+In summary, the `OProperty` interface defines the methods that can be used to interact with a property in the schema of an OrientDB database. It provides functionality for managing the attributes and settings of a property, as well as creating indexes and retrieving custom attributes associated with the property.
+

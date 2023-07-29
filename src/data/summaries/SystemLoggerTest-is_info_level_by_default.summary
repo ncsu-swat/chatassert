@@ -1,0 +1,90 @@
+0. In line 1, method `createConfig` of class `Keys` is invoked.
+1. In the provided code snippet, we have a method called `createConfig` which is declared as `public static` and returns a `Config` object. Here's an explanation of the code step by step:
+
+1. We create a new instance of the `Config` class and assign it to a variable called `config`. This initializes a configuration object that we can modify and set values for.
+
+2. We use the `set` method of the `Config` class to set the value of the `CUCUMBERPRO_CONNECTION_TIMEOUT` to 5000. This method takes two parameters - the key (CUCUMBERPRO_CONNECTION_TIMEOUT) and the value (5000).
+
+3. Similarly, we use the `set` method again to set the value of the `CUCUMBERPRO_ENVMASK` to "SECRET|KEY|TOKEN|PASSWORD".
+
+4. We use the `setNull` method to set the value of `CUCUMBERPRO_LOGFILE` to null. This indicates that there is no specific value set for this key.
+
+5. Again, we use the `set` method to set the value of `CUCUMBERPRO_LOGGING` to "INFO".
+
+6. We set the value of `CUCUMBERPRO_PROFILE`, `CUCUMBERPRO_PROJECTNAME`, and `CUCUMBERPRO_TOKEN` to null using the `setNull` method.
+
+7. Finally, we set the value of `CUCUMBERPRO_URL` to "https://jam.cucumber.io/" using the `set` method.
+
+8. After setting all the required values, we return the `config` object.
+
+In summary, the `createConfig` method generates a `Config` object and sets various configuration values for different keys. These values can be accessed and used later in the program.
+2. In line 2, an object of class `Logger.SystemLogger` is instantiated.
+3. Certainly! Let's break down the code step by step:
+
+1. The constructor of the `SystemLogger` class takes a `Config` object as a parameter.
+
+2. The code extracts the value of `CUCUMBERPRO_LOGGING` from the `Config` object and converts it to uppercase using the `toUpperCase` method. This value represents the desired log level.
+
+3. The code tries to convert the uppercase log level value to a `Level` enum using the `valueOf` method. If the log level value is not a valid enum value, it throws an `IllegalArgumentException` and sets the `level` to `Level.WARN` as a fallback.
+
+4. The code creates new `PrintWriter` objects for `stdout` and `stderr` by wrapping `System.out` and `System.err` respectively. These `PrintWriter` objects allow writing text data to the corresponding outputs.
+
+5. The code handles an exception `UnsupportedEncodingException` that might be thrown when trying to create the `PrintWriter` objects. If this exception occurs, it wraps it into a `CucumberException` and throws it.
+
+6. The code checks if the value of `CUCUMBERPRO_LOGFILE` in the `Config` object is not null. If it is not null, it creates a new `PrintWriter` object by wrapping a `FileOutputStream` with the given log file path. This `PrintWriter` will be used to write logs to the file.
+
+7. The code handles an `IOException` that might occur when creating the `PrintWriter` object for the log file. It wraps the exception into a `CucumberException` with a meaningful error message and throws it.
+
+8. If the value of `CUCUMBERPRO_LOGFILE` is null, it assigns `null` to the `fileWriter` variable.
+
+9. Finally, the code assigns the calculated `level` to the `level` instance variable.
+
+In summary, this constructor initializes a `SystemLogger` object by configuring the log level, creating `PrintWriter` objects for standard output and error streams, and optionally creating a `PrintWriter` object for a log file.
+4. In line 1, an object of class `Config` is instantiated
+5. This code represents the implementation of the `Config` class. Here's a breakdown of the class code:
+
+1. The class is declared in the `io.cucumber.pro.config` package.
+
+2. The code imports necessary dependencies from the Java standard library, such as `IOException`, `List`, `Map`, and `TreeMap`.
+
+3. The class is documented with comments and a Javadoc comment describing it as a nested configuration with hierarchical keys.
+
+4. The class contains two private instance variables:
+   - `valueByProperty`: A `TreeMap` that stores the values of configuration properties as `Value` objects, identified by their property names.
+   - `configByProperty`: Another `TreeMap` that stores nested configurations, represented as `Config` objects, identified by their property names.
+
+5. The class provides several getter and setter methods to access and modify configuration values for different data types, such as `String`, `Boolean`, and `Integer`. For example, `getString`, `getBoolean`, and `getInteger` retrieve the respective value types based on a given key.
+
+6. The class provides methods to check if a configuration value is null (`isNull`) and to set a null value for a key (`setNull`).
+
+7. The class also provides methods to set values of different data types (`set`) and a method (`setValue`) used internally by loaders to set values directly.
+
+8. The class provides a method (`getChild`) to get the nested `Config` object for a given property. If the property does not exist, it creates a new `Config` object for that property.
+
+9. There are private helper methods (`getValue`, `getIn`, `setIn`, `print`, `indent`) that support the functionality of the class for getting, setting, and printing configuration values.
+
+10. The `toYaml` method converts the configuration object into a YAML string representation. It takes a root key as an argument and recursively prints the configuration values and nested configurations.
+
+11. There are additional private helper methods (`toPath`, `normalize`) that handle transformations and normalizations of key strings in the configuration.
+
+In summary, the `Config` class represents a nested hierarchical configuration model where configuration values and nested configurations can be accessed, modified, and printed in YAML format.
+6. In line 2, an object of class `Logger` is instantiated
+7. The provided code represents the implementation of the `TestLogger` class. Here's a breakdown of the class code:
+
+1. The class is declared in the `io.cucumber.pro` package.
+
+2. The code imports necessary dependencies from the Java standard library and `cucumber.runtime` package.
+
+3. The class implements the `Logger` interface, which means it must provide implementations for all the methods defined in that interface.
+
+4. The class has a private instance variable `messages`, which is a `Map` that maps `Level` enum values to lists of strings. This map is initialized using an anonymous inner class initializer. Each enum value maps to an empty `ArrayList` of strings.
+
+5. The `log` method is overridden from the `Logger` interface. It takes a `Level` value, a message, and an array of objects as arguments. The method retrieves the list of messages for the given level from the `messages` map and adds a formatted message to it using the `String.format` method.
+
+6. The `log` method is overloaded to take an `Exception` and a message as arguments. It calls the previous `log` method with the `Level.ERROR` level and then creates a new `CucumberException` by passing the message and exception as arguments. The exception is returned as a result of this method.
+
+7. The `getMessages` method takes a `Level` value as an argument and returns the corresponding list of messages from the `messages` map.
+
+In summary, the `TestLogger` class is an implementation of the `Logger` interface that stores log messages in a map, categorized by their log levels. It provides methods to add log messages, retrieve log messages for specific log levels, and log exceptions with error messages.
+8. Take note that in line 2, an object of class `SystemLogger` is created.
+

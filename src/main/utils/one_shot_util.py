@@ -37,15 +37,14 @@ def get_embeddings(code):
     return embeddings.detach()
 
 def find_similar(target_class, target_name, target_code):
-    # Similarity measure
-    max_sim = -np.inf
-    max_sim_method = None
+    examples = []
 
     # Extract target embeddings
     target_embeddings = get_embeddings(target_code)
 
     # Retrieve reference test methods from the same test file
     ref_tests = []
+    ref_oracles = []
     with open("../sample_all.json", "r") as all:
         all_json = json.load(all)
         for project in all_json['projects']:
@@ -53,19 +52,24 @@ def find_similar(target_class, target_name, target_code):
                 if _class['className'] == target_class:
                     for _test in _class['classTests']:
                         if _test['testName'] != target_name:
-                            ref_tests.append(_test['testMethod'])
+                            prefix = _test['testMethod'].replace(_test['oracle'], '<AssertPlaceHolder>')
+                            ref_tests.append(prefix)
+                            ref_oracles.append(_test['oracle'])
+
 
     # Extract reference embeddings and measure distance from target embeddings
-    for test_method in ref_tests:
+    for (idx, test_method) in enumerate(ref_tests):
         ref_embeddings = get_embeddings(test_method)
         cos_sim = dot(target_embeddings, ref_embeddings.T)/(norm(target_embeddings)*norm(ref_embeddings.T))
 
-        if cos_sim > max_sim:
-            max_sim = cos_sim
-            max_sim_method = test_method
+        if cos_sim > 0.6:
+            examples.append(idx)
 
-    if max_sim > 0.9:
-        return max_sim_method
+    if len(examples) > 1:
+        example_string = ''
+        for idx in examples:
+            example_string += '\nExample {}:\n<TEST>:\n```{}```\n<AssertPlaceHolder>:\n```{}```'.format(str(idx), ref_tests[idx], ref_oracles[idx])
+        return example_string
     else:
         return None
 

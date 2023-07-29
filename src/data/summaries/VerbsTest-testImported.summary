@@ -1,0 +1,36 @@
+0. In line 1, method `imported` of class `Verbs` is invoked.
+1. In the given code snippet, we have a method definition for a method named `imported()`. Here are the key points to understand:
+
+1. The method is defined as `public`, which means it can be accessed from anywhere.
+2. The method is defined as `static`, which means it belongs to the class itself rather than an instance of the class.
+3. The method has a return type of `Verb`, which indicates that it will return an object of type `Verb`.
+4. The method body consists of a single line of code:
+   - It calls a method named `createVerb()` with the argument `"imported"`.
+   - `createVerb()` is assumed to be a separate method that is not shown in the given code snippet.
+   - The return value of `createVerb()` is then returned by the `imported()` method.
+
+To summarize, the `imported()` method in the `Verbs` class is a static method that returns a `Verb` object. It accomplishes this by invoking another method, `createVerb()`, which takes the string "imported" as an argument.
+2. In line 1, an object of class `Verb` is instantiated
+3. The given code defines a Java class named `Verb` in the package `gov.adlnet.xapi.model`. Let's analyze its design and functionality:
+
+1. The class has three fields:
+   - `id` (of type `String`) to represent the ID of the verb.
+   - `display` (of type `HashMap<String, String>`) to store localized display names of the verb in different languages.
+   
+2. The class provides three constructors:
+   - A default constructor with no arguments.
+   - A constructor that takes the `id` as a parameter.
+   - A constructor that takes both `id` and `display` as parameters.
+   
+3. The class contains getter and setter methods for both `id` and `display`.
+
+4. The `serialize()` method returns a `JsonElement` object, which is used to serialize the `Verb` object into a JSON format. It creates a `JsonObject` and adds the `id` and `display` properties to it. If the `display` map is not empty, it iterates over each entry and adds them to the JSON object as well.
+
+5. The `toString()` method overrides the default `toString()` method to provide a human-readable string representation of the `Verb` object. If the `display` map is not null and contains a non-empty value for the language code "en-US", it returns that value; otherwise, it returns the `id` value.
+
+6. The `toString(String langKey)` method is an overloaded version of `toString()`. It takes a language key as input and returns the display value of the `Verb` object for that language. If the `display` map is not null and contains a non-empty value for the given language key, it returns that value; otherwise, it returns the `id` value.
+
+7. The class imports `java.util.HashMap`, `java.util.Map.Entry`, and `com.google.gson.*` packages.
+
+To summarize, the `Verb` class represents a verb in the xAPI specification. It allows the storing of an ID and localized display names for the verb in different languages. It provides methods for serialization, accessing the ID, accessing the display map, and obtaining string representations of the verb.
+

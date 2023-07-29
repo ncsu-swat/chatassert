@@ -1,0 +1,87 @@
+0. In line 1, method `createFilter` of class `BasicURLNormalizerTest` is invoked.
+1. This method, `createFilter`, is a private method of the `BasicURLNormalizerTest` class. It takes two parameters: `removeAnchor`, a boolean value, and `queryElementsToRemove`, a List of Strings. 
+
+In the method body, an `ObjectNode` named `filterParams` is created using the `JsonObjectMapper` class. Then, the `queryElementsToRemove` list is converted to a JSON array node using the `getArrayNode` method. The `filterParams` object is updated with this array node using the `set` method.
+
+Next, the `removeAnchor` parameter is converted to a `Boolean` object using `Boolean.valueOf(removeAnchor)`, and the resulting value is added to `filterParams` using the `put` method.
+
+Finally, the `createFilter` method is called with the `filterParams` object as the argument, and its return value is returned from the `createFilter` method.
+
+In summary, this method creates a JSON object `filterParams` and populates it with the values of the `removeAnchor` and `queryElementsToRemove` parameters. It then calls another `createFilter` method with the `filterParams` object and returns the result.
+2. Take note that in line 2, constructor `URL` from class `URL` is invoked.
+3. In line 5, an object of class `Metadata` is instantiated.
+4. Certainly! The code you provided shows a constructor for the `Metadata` class. 
+
+In the constructor, `Metadata()`:
+
+1. It initializes an empty `HashMap` object called `md`.
+2. The line `md = new HashMap<>();` creates a new instance of the `HashMap` class and assigns it to the variable `md`.
+
+In summary, this constructor creates a new instance of the `Metadata` class and initializes an empty hashmap object `md` for storing key-value pairs.
+5. In line 5, method `filter` of class `URLFilter` is invoked.
+6. Certainly! The code you provided is the method declaration for the `filter` method. Let's break it down:
+
+- Method Name: `filter`
+- Parameters:
+  - `sourceUrl` - The URL of the page where the URL was found. It can be null.
+  - `sourceMetadata` - The metadata collected for the page.
+  - `urlToFilter` - The URL to be filtered.
+
+- Return Type: `String`
+- Description: This method takes three parameters: `sourceUrl`, `sourceMetadata`, and `urlToFilter`. It is responsible for filtering URLs and returning a normalised representation of the URL. 
+
+The method implementation is not provided in the code snippet you shared. However, based on the provided method declaration, this method should return either `null` if the URL is to be removed or a normalised representation (as a `String`) if it corresponds to the input URL.
+
+In summary, the `filter` method in the `URLFilter` class takes in three parameters and returns a normalised representation of the URL or `null` based on some filtering logic.
+7. In line 1, an object of class `URLFilter` is instantiated
+8. The code you provided defines a Java class called `FastURLFilter`. Let's break it down:
+
+1. Package Declaration: The class is declared inside the package `com.digitalpebble.stormcrawler.filtering.regex`.
+
+2. Imports: The class imports various classes and interfaces from different packages, such as `JSONResource`, `Metadata`, `URLFilter`, `ConfUtils`, and others. These imports provide access to necessary functionality and libraries used within the class.
+
+3. Class Definition: The `FastURLFilter` class implements the `URLFilter` interface and includes a `JSONResource` interface. It also contains a static logger `LOG` for logging purposes.
+
+4. Class Variables: The class includes several private instance variables, such as `resourceFile` (a String representing the resource file name), and `rules` (an instance of the `Rules` class).
+
+5. Constructors: The class does not define any constructors explicitly.
+
+6. Methods:
+   - `configure`: This method is used to configure the `FastURLFilter` instance. It takes in `stormConf` (a map representing the Storm configuration) and `filterParams` (a `JsonNode` representing filter parameters). It loads the resource file and handles exceptions if any occur.
+   - `getResourceFile`: This method returns the resource file name.
+   - `loadJSONResources`: This method loads JSON resources from an input stream and populates the `Rules` instance.
+   - `filter`: This method takes a source URL, source metadata, and a URL to filter. It checks the URL against the defined filter rules and returns either `null` if the URL should be removed or the URL itself if it passes the filtering rules.
+   
+7. Inner Classes:
+   - `Rules`: This class represents the collection of filter rules. It includes fields for global rules, domain rules, hostname rules, and metadata rules.
+   - `Scope`: This class represents the scope defined in the filter rules. It includes methods to get and set rules.
+   - `MDScope`: This class represents a scope based on a specific metadata constraint. It includes methods to get the key and value of the metadata constraint.
+   - `Rule`: This class represents a filter rule. It includes methods to get the type and pattern of the rule.
+   
+8. Comments: The code includes various comments describing the purpose and usage of the class and its methods.
+
+In summary, the `FastURLFilter` class is responsible for filtering URLs based on regex patterns organized by different scopes (global, domain, hostname, and metadata). It loads filter rules from a JSON resource file and provides a method to filter URLs based on these rules.
+9. Take note that in line 2, an object of class `URL` is created.
+10. Take note that in line 3, an object of class `String` is created.
+11. Take note that in line 4, an object of class `String` is created.
+12. In line 5, an object of class `Metadata` is instantiated
+13. The code you provided represents a Java class called `CommaSeparatedToMultivaluedMetadata`. Let's break down the code:
+
+- Package Declaration: The class is declared inside the `com.digitalpebble.stormcrawler.parse.filter` package.
+
+- Imports: The class imports various classes and interfaces from different packages, such as `Metadata`, `ParseFilter`, `ParseResult`, `JsonNode`, `HashSet`, `Iterator`, `Map`, `Set`, and `DocumentFragment`. These imports provide access to necessary functionality and libraries used within the class.
+
+- Class Definition: The `CommaSeparatedToMultivaluedMetadata` class extends the `ParseFilter` class. It overrides the `configure` and `filter` methods inherited from the `ParseFilter` class.
+
+- Class Variables:
+  - `keys`: A `Set<String>` to store the keys for which the single metadata needs to be transformed into multiple values.
+
+- Methods:
+  - `configure`: This method is used to configure the `CommaSeparatedToMultivaluedMetadata` instance. It takes in `stormConf` (a map representing the Storm configuration) and `filterParams` (a `JsonNode` representing filter parameters). It extracts the keys from the `filterParams` and sets them in the `keys` set. If no keys are provided, the method returns early.
+  - `filter`: This method takes the URL, content, document fragment, and `ParseResult` as input. It retrieves the metadata associated with the given URL from the `ParseResult`. For each key in the `keys` set, it fetches the corresponding value from the metadata, splits the value using comma as a separator, and adds each split value back to the metadata with the same key. This is done to convert a single metadata value containing comma-separated values into multiple values for the same key.
+
+- Comments: The code includes comments explaining the purpose of the class, its methods, and the license information.
+
+In summary, the `CommaSeparatedToMultivaluedMetadata` class is a parse filter in the StormCrawler framework. It is used to transform comma-separated values within a single metadata key into multiple values for the same key. This can be useful, for example, for creating keyword tags from a single metadata value.
+14. Take note that in line 5, an object of class `String` is created.
+

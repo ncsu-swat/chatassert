@@ -24,11 +24,6 @@ from doall import tecofy_testlines, place_placeholder, collect_feedback
 
 from py4j.java_gateway import JavaGateway
 from subprocess import Popen
-# print("-----------------------------------------------\nSTARTING JAVA GATEWAY SERVER\n-----------------------------------------------\n")
-# jServer = Popen(["bash", "s"], cwd="../../astvisitors")
-# print("\n>> WAITING FOR JAVA GATEWAY SERVER TO START <<\n")
-# time.sleep(15) # Giving the java gateway server some time to initiate
-# print("\n>> JAVA GATEWAY SERVER STARTED <<\n-----------------------------------------------\n")
 
 # Organization IDs
 orgs = ['org-0wLi1kKIt9USgXMYklRCeTFQ', 'org-9WS8eYC3IjH69yYgQNrk0X4w', 'org-yclg2hcASx6eAd3nEyoFKrlf']

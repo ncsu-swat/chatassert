@@ -1,0 +1,52 @@
+0. In line 1, method `readAllFromClasspath` of class `ProfileUtil` is invoked.
+1. The method `readAllFromClasspath` in the `ProfileUtil` class is responsible for reading all profiles that are found in the classpath.
+
+The method takes two parameters:
+- `name`: the name of the profile to lookup.
+- `ext`: the extension to use when looking for the profile file (e.g., 'default' for checking 'profile-default.yml'). This parameter can be null or empty.
+
+The method returns a list of profiles that match the specified name and extension.
+
+If an IOException occurs while reading a profile, the method throws an IOException.
+
+Here is a step-by-step explanation of how the method works:
+
+1. It creates an empty ArrayList called `ret`, which will be used to store the profiles that match the specified name.
+2. It iterates over each location returned by the `getMetaInfProfilePaths` method, passing `ext` as an argument.
+   - This method returns a list of file locations in the META-INF directory that match the specified extension.
+3. For each location, it iterates over each URL returned by the `ClassUtil.getResources` method, passing `location` as an argument.
+   - This method returns a list of URLs that represent the resources found at the specified location. These URLs can be used to open an input stream to read the profile data.
+4. For each URL, it iterates over each profile returned by the `fromYaml` method, passing a new input stream for the URL.
+   - This method reads the profile data from the provided input stream and returns a list of Profile objects.
+5. It checks if the name of each profile matches the specified `name` parameter using the `equals` method.
+   - If it matches, the profile is added to the `ret` list.
+6. After processing all the profiles, the method returns the `ret` list containing all the profiles that match the specified name and extension.
+2. In line 1, an object of class `Profile` is instantiated
+3. This is a Java class named `Profile` that represents a named configuration with enricher, generator, and watcher configurations. Let's go through the code step by step:
+
+- The class is declared in the package `io.fabric8.maven.core.config`.
+
+- The class implements the `Comparable<Profile>` interface, indicating that objects of this class can be compared and sorted.
+
+- It has a static field `idCreator`, declared as `AtomicInteger`, which is used to assign a unique ID to each `Profile` object.
+
+- The class has several instance variables, marked with the `@JsonProperty` annotation, representing different aspects of a profile:
+  - `name`: String representing the profile name.
+  - `parentProfile`: String representing the configuration of a parent profile that this profile extends from.
+  - `enricherConfig`: An instance of `ProcessorConfig` representing the enricher configurations.
+  - `generatorConfig`: An instance of `ProcessorConfig` representing the generator configurations.
+  - `watcherConfig`: An instance of `ProcessorConfig` representing the watcher configurations.
+  - `order`: An integer representing the order in case multiple profiles with the same name are found.
+
+- The class provides three constructors:
+  - A no-arg constructor used for YAML deserialization. It assigns a unique ID to the object using `idCreator`.
+  - A copy constructor that creates a new `Profile` object based on an existing `Profile` object. It assigns a new ID using `idCreator` and copies the values of the instance variables from the provided profile into the new object.
+  - A merge constructor that creates a new `Profile` object by merging two existing `Profile` objects. It also assigns a new ID using `idCreator`. This constructor checks if the profiles have the same name and then merges the configuration values based on their order.
+
+- The class provides getter and setter methods for the instance variables.
+
+- The class overrides the `compareTo` method from the `Comparable` interface. It compares two profiles based on their `order` values. If the order is different, it returns the difference of the orders. If the orders are the same, it compares the profiles based on their unique IDs.
+
+That's the summary of the `Profile` class. It represents a configuration in a specific format and provides methods to manipulate and compare profiles.
+4. Take note that in line 1, an object of class `List` is created.
+

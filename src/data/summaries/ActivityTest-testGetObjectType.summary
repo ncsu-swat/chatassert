@@ -1,0 +1,11 @@
+0. In line 2, method `getObjectType` of class `Activity` is invoked.
+1. Sure! 
+
+The method `getObjectType` is a `public` method defined in the `Activity` class. It returns a `String` value.
+
+In this method, the keyword `return` is used to specify the value that the method should return. In this case, the method is returning a string named "ACTIVITY".
+
+So, whenever this method is invoked, it will always return the string "ACTIVITY".
+2. Take note that in line 1, an object of class `String` is created.
+3. Take note that in line 2, an object of class `String` is created.
+

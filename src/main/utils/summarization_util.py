@@ -13,7 +13,7 @@ from utils.file_util import read_file
 
 # file_path: path of the class under test
 # src_path: project directory upto src -> ... /tmp/repos/repoName/subRepoName/src
-def fetch_summarization_targets(file_path, src_path, dep_paths, test_code):
+def fetch_summarization_targets(file_path, src_path, dep_paths, test_code, focal_code):
     # print('File path: {}\nSrc path: {}\nDep paths: {}\nTest code:\n{}\n\n'.format(file_path, src_path, dep_paths, test_code))
 
     # Creating Java Gateway Server
@@ -52,6 +52,7 @@ def fetch_summarization_targets(file_path, src_path, dep_paths, test_code):
         meta = dict()
         meta['lines'] = java_dict
         meta['classBody'] = class_body
+        meta['focal'] = focal_code
 
         return meta
     
@@ -62,6 +63,10 @@ def generate_summarization_prompts(meta):
     done_set = set()
 
     # We prioritize the summarization queries that are related to method calls and variable updates
+    if meta['focal'] is not None and len(meta['focal']) > 0:
+        summarization_prompts.append({'prompt': 'Let\'s summarize the focal method.', 'ask_gpt': False})                               # We include this message in the context, but don't directly ask about it. We keep this in the context.
+        summarization_prompts.append({'prompt': 'Can you explain the following focal method code?\n```{}```\n'.format(meta['focal']), 'ask_gpt': True})                                                                    # We ask directly about this question. Then, we drop this message from the context to save space.
+    
     for lineNumber, line in meta['lines'].items():
         for methodOrClass, details in line.items():
             # generate prompt
@@ -107,12 +112,12 @@ def generate_summarization_prompts(meta):
 
     return summarization_prompts
 
-def summarize(file_path, class_name, src_path, dep_paths, test_name, test_code, enforce_regeneration=False):
+def summarize(file_path, class_name, src_path, dep_paths, test_name, test_code, focal_code, enforce_regeneration=False):
     # instantiate a context manager for managing the context of the summarization related conversation
     context = Context(_name=Context.SUMMARIZATION_CONTEXT_NAME)
 
     # fetch methods and classes (creating a dictionary where the keys are the line numbers of the test prefix and the contents are related to which methods were called at a specific line in the test prefix or an object of which class was instantiated at a specific line in the test prefix or which variable was assigned to at a specific line in the test prefix)
-    meta = fetch_summarization_targets(file_path, src_path, dep_paths, test_code)
+    meta = fetch_summarization_targets(file_path, src_path, dep_paths, test_code, focal_code)
 
     if meta is not None:
         # retrieve summary from cache if exists
@@ -136,11 +141,13 @@ def summarize(file_path, class_name, src_path, dep_paths, test_name, test_code, 
                 # insert prompt into summarization context
                 context.insert(role="user", content=summarization_prompt['prompt'])
 
+                print(summarization_prompt)
+
                 # some of the summarization prompts will be directly added to the summary instead of asking ChatGPT to summarize (e.g. "Take note ... ")
                 if summarization_prompt['ask_gpt']:
                     # interact with open ai about abstraction
                     summary = interact_with_openai(context=context)
-                    # print('SUMMARIZATION RESPONSE: {}\n'.format(summary))
+                    print('SUMMARIZATION RESPONSE: {}\n'.format(summary))
 
                     # gather all the summaries for a specific test prefix
                     summaries += "{}. ".format(str(idx)) + summary + "\n"
@@ -155,6 +162,9 @@ def summarize(file_path, class_name, src_path, dep_paths, test_name, test_code, 
                     if len(summarization_prompt['prompt']) > 0:
                         summaries += "{}. ".format(str(idx)) + summarization_prompt['prompt'] + "\n"
                         idx += 1
+            
+            if len(summaries) > 0:
+                summaries += "\nThat is the end of all the summaries.\n"
 
             save_to_cache(summaries, class_name, test_name)
         
