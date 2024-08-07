@@ -45,7 +45,7 @@ def find_similar(target_class, target_name, target_code):
     # Retrieve reference test methods from the same test file
     ref_tests = []
     ref_oracles = []
-    with open("../sample_all.json", "r") as all:
+    with open("../data/samples/third_sampling/sample_all.json", "r") as all:
         all_json = json.load(all)
         for project in all_json['projects']:
             for _class in project['allTests']:

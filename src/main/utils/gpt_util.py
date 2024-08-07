@@ -20,11 +20,10 @@ current_org = 0
 # Setup                                                                                                                                                                                                    
 openai.api_key = read_file(API_KEY_FILEPATH)  # OpenAPI key
 
-MODEL_NAME = "gpt-3.5-turbo-16k"
+MODEL_NAME = "gpt-3.5-turbo"
 MODEL_MAX_TOKEN={
-    "gpt-3.5-turbo": 4096,
     "gpt-4": 8192,
-    "gpt-3.5-turbo-16k": 16384
+    "gpt-3.5-turbo": 16384
 }
 
 def oracle_prompt_generator(interact_index=None, context=None, summaries=None, example_method=None, setup=None, test=None, focal=None):

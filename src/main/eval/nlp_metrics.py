@@ -173,33 +173,61 @@ def edit_sim(data):
     return 1-score/len(data)
 
 def main():
-    dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
-    dataTeco = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t', usecols=['ClassName#TestName', 'TrueOracle', 'GenOracle'])
-    dataBatch = pd.read_csv('../../prelim_res_batch.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
-    dataBatchFuzz = pd.read_csv('../../prelim_res_batch_fuzz.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
+    # dataOGPT = pd.read_csv('../../prelim_res.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
+    dataOGPT = pd.read_csv('../../res/chatassert-res500.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
+    # dataTeco = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t', usecols=['ClassName#TestName', 'TrueOracle', 'GenOracle'])
+    dataTeco = pd.read_csv('../../res/teco-res.tsv', sep='\t', usecols=['ClassName#TestName', 'TrueOracle', 'GenOracle'])
+    # dataBatch = pd.read_csv('../../prelim_res_batch.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
+    # dataBatch = pd.read_csv('../../res/chatgpt.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
+    # dataBatchFuzz = pd.read_csv('../../prelim_res_batch_fuzz.csv', sep='\t', usecols=['TestClass', 'TestName', 'TrueOracle', 'GenOracle'])
 
-    dataOGPT['ClassName#TestName'] = dataOGPT['TestClass'] + '#' + dataOGPT['TestName']
-    dataBatch['ClassName#TestName'] = dataBatch['TestClass'] + '#' + dataBatch['TestName']
-    dataBatchFuzz['ClassName#TestName'] = dataBatchFuzz['TestClass'] + '#' + dataBatchFuzz['TestName']
+    minusCS = pd.read_csv('../../res/minus-cs500.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
+    minusEX = pd.read_csv('../../res/minus-ex500.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
+    minusSR = pd.read_csv('../../res/minus-sr500.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
+    minusDR = pd.read_csv('../../res/minus-dr500.tsv', sep='\t', usecols=['ClassName', 'TestName', 'TrueOracle', 'GenOracle'])
 
-    # print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
-    # print('Teco BLEU: {}'.format(bleu(dataTeco)))
+    dataOGPT['ClassName#TestName'] = dataOGPT['ClassName'] + '#' + dataOGPT['TestName']
+    # dataBatch['ClassName#TestName'] = dataBatch['ClassName'] + '#' + dataBatch['TestName']
+    # dataBatchFuzz['ClassName#TestName'] = dataBatchFuzz['TestClass'] + '#' + dataBatchFuzz['TestName']
+    minusCS['ClassName#TestName'] = minusCS['ClassName'] + '#' + minusCS['TestName']
+    minusEX['ClassName#TestName'] = minusEX['ClassName'] + '#' + minusEX['TestName']
+    minusSR['ClassName#TestName'] = minusSR['ClassName'] + '#' + minusSR['TestName']
+    minusDR['ClassName#TestName'] = minusDR['ClassName'] + '#' + minusDR['TestName']
+
+    print('OGPT BLEU: {}'.format(bleu(dataOGPT)))
+    print('Teco BLEU: {}'.format(bleu(dataTeco)))
     # print('Batch BLEU: {}'.format(bleu(dataBatch)))
     # print('Batch-Fuzz BLEU: {}'.format(bleu(dataBatchFuzz)))
+    print('MinusCS BLEU: {}'.format(bleu(minusCS)))
+    print('MinusEX BLEU: {}'.format(bleu(minusEX)))
+    print('MinusSR BLEU: {}'.format(bleu(minusSR)))
+    print('MinusDR BLEU: {}'.format(bleu(minusDR)))
 
     # print('OGPT CodeBLEU: {}'.format(code_bleu(dataOGPT)))
     # print('Teco CodeBLEU: {}'.format(code_bleu(dataTeco)))
     # print('Batch CodeBLEU: {}'.format(code_bleu(dataBatch)))
     # print('Batch-Fuzz CodeBLEU: {}'.format(code_bleu(dataBatchFuzz)))
+    # print('MinusCS CodeBLEU: {}'.format(code_bleu(minusCS)))
+    # print('MinusEX CodeBLEU: {}'.format(code_bleu(minusEX)))
+    # print('MinusSR CodeBLEU: {}'.format(code_bleu(minusSR)))
+    # print('MinusDR CodeBLEU: {}'.format(code_bleu(minusDR)))
 
     print('OGPT Rouge: {}'.format(rouge(dataOGPT)))
     print('Teco Rouge: {}'.format(rouge(dataTeco)))
     # print('Batch Rouge: {}'.format(rouge(dataBatch)))
     # print('Batch-Fuzz Rouge: {}'.format(rouge(dataBatchFuzz)))
+    print('MinusCS Rouge: {}'.format(rouge(minusCS)))
+    print('MinusEX Rouge: {}'.format(rouge(minusEX)))
+    print('MinusSR Rouge: {}'.format(rouge(minusSR)))
+    print('MinusDR Rouge: {}'.format(rouge(minusDR)))
 
-    # print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
-    # print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
+    print('OGPT Edit Distance: {}'.format(edit_sim(dataOGPT)))
+    print('Teco Edit Distance: {}'.format(edit_sim(dataTeco)))
     # print('Batch Edit Distance: {}'.format(edit_sim(dataBatch)))
     # print('Batch-Fuzz Edit Distance: {}'.format(edit_sim(dataBatchFuzz)))
+    print('MinusCS Edit Distance: {}'.format(edit_sim(minusCS)))
+    print('MinusEX Edit Distance: {}'.format(edit_sim(minusEX)))
+    print('MinusSR Edit Distance: {}'.format(edit_sim(minusSR)))
+    print('MinusDR Edit Distance: {}'.format(edit_sim(minusDR)))
 
 main()

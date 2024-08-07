@@ -1,4 +1,0 @@
-0. Take note that in line 2, method `getBytes` from class `String` is invoked.
-1. Take note that in line 1, an object of class `String` is created.
-2. Take note that in line 3, an object of class `String` is created.
-

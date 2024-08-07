@@ -24,13 +24,13 @@
     <dependency>
       <groupId>com.github.javaparser</groupId>
       <artifactId>javaparser-core</artifactId>
-      <version>3.25.3</version>
+      <version>3.25.10</version>
     </dependency>
 
     <dependency>
       <groupId>com.github.javaparser</groupId>
       <artifactId>javaparser-symbol-solver-core</artifactId>
-      <version>LATEST</version>
+      <version>3.25.10</version>
     </dependency>
 
     <dependency>

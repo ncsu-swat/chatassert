@@ -184,7 +184,7 @@ def sampleTeco():
         return get_assert_type(oracle)
 
     all_preds = None
-    atleast_nsamples = 350
+    atleast_nsamples = 1000
     sample_ids = set()
 
     unique_projects = set(projects)
@@ -233,7 +233,7 @@ def sampleTeco():
 
     sample_ids = list(sample_ids)
     random.shuffle(sample_ids)
-    with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as allPredsFile, open('../../teco_eval/teco/output/preds.jsonl', 'w+') as predsFile:
+    with open('../../teco_eval/teco/output/all_preds.jsonl', 'r') as allPredsFile, open('../../teco_eval/teco/output/preds_plus.jsonl', 'w+') as predsFile:
         all_preds = [json.loads(line) for line in allPredsFile]
         for idx in sample_ids:
             predsFile.write(json.dumps(all_preds[idx]) + '\n')
@@ -266,27 +266,29 @@ def listUsedSubModules(sample_id):
 # listUsedSubModules(1)
 # exit(0)
 
+# sampleTeco()
+# exit(0)
+
 #-------------------------------------------------
 isChunking = True if 'chunk' in sys.argv else False
 
 # Predictions
 preds = None
 if not isChunking:
-    with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
+    with open('../../teco_eval/teco/output/preds_v2.jsonl', 'r') as predsFile:
         preds = [json.loads(line) for line in predsFile]
 else:
-    with open('../../teco_eval/teco/output/preds.jsonl', 'r') as predsFile:
+    with open('../../teco_eval/teco/output/preds_v2.jsonl', 'r') as predsFile:
         preds = [json.loads(line) for line in predsFile]
 
 #-------------------------------------------------
 
 projectsList = []
-chunkList = [[],[],[],[],[],[],[]] # 7 chunks with 50 each
-currentChunk = -1
+chunkList = [] # chunks with 25 each
 
 for predId, pred in enumerate(preds):
-    if predId % 50 == 0:
-        currentChunk += 1
+    if predId % 25 == 0:
+        chunkList.append([])
 
     project = None
 
@@ -303,7 +305,7 @@ for predId, pred in enumerate(preds):
                 project = prj
                 break
     else:
-        for prj in chunkList[currentChunk]:
+        for prj in chunkList[-1]:
             if prj['userName']==repo['user'].to_string(index=False) and prj['repoName']==repo['repo'].to_string(index=False):
                 project = prj
                 break
@@ -337,7 +339,7 @@ for predId, pred in enumerate(preds):
         if not isChunking:
             projectsList.append(project)
         else:
-            chunkList[currentChunk].append(project)
+            chunkList[-1].append(project)
 
     else: # Project exists in the dictionary
         testClassFound = False
@@ -361,13 +363,13 @@ for predId, pred in enumerate(preds):
 #-------------------------------------------------------
 
 if not isChunking:
-    with open('../../sample_all.json', 'w+') as newData:
+    with open('../../data/samples/third_sampling/sample_all.json', 'w+') as newData:
         testCounterSanityCheck()
         projectsDict = { 'projects': projectsList }
         json.dump(projectsDict, newData, indent=4)
 else:
     for (chunkId, chunk) in enumerate(chunkList):
-        with open('../../sample_{}.json'.format(str(chunkId+1)), 'w+') as chunkFile:
+        with open('../../data/samples/third_sampling/sample_{}.json'.format(str(chunkId+1)), 'w+') as chunkFile:
             chunkDict = { 'projects': chunk }
             json.dump(chunkDict, chunkFile, indent=4)
 

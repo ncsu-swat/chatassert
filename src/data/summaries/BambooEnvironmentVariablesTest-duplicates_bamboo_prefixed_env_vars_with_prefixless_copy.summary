@@ -1,7 +1,0 @@
-0. Take note that in line 1, constructor `HashMap` from class `HashMap` is invoked.
-1. Take note that in line 1, method `put` from class `HashMap` is invoked.
-2. Take note that in line 2, method `put` from class `HashMap` is invoked.
-3. Take note that in line 3, method `put` from class `HashMap` is invoked.
-4. Take note that in line 1, an object of class `String` is created.
-5. Take note that in line 1, an object of class `HashMap` is created.
-

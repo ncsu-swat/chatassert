@@ -32,10 +32,10 @@ GLOBAL_TRIALS = 30  # Maximum number of interactions (GT in the paper)
 LOCAL_TRIALS = 3    # Maximum number of retries based on compilation and execution feedback (LT in the paper)
 
 # Switches for ablation study
-FUZZ_REPAIR = False      # Ablation Study No. 4
+FUZZ_REPAIR = True      # Ablation Study No. 4
 FEEDBACK_REPAIR = True   # Ablation Study No. 3
-SUMMARIZATION = False    # Ablation Study No. 2
-ONE_SHOT = False         # Ablation Study No. 1
+SUMMARIZATION = True    # Ablation Study No. 2
+ONE_SHOT = True         # Ablation Study No. 1
 
 # Switches
 EXECUTE_GENERATION = True # Only cache summaries or execute oracle generation conversation too?
@@ -98,7 +98,7 @@ def follow_up(proc_q, repo_dir, oracle_id, file_path, subRepo, className, test_n
     feedback_context.insert(role="user", content=(Prompts.FEEDBACK_SEED_EXT).format(gpt_oracle))
 
     res, feedback = collect_feedback(repo_dir, oracle_id, file_path, subRepo, className, test_name, test_code, gpt_oracle)
-    if len(feedback) > 0:
+    if feedback is not None and len(feedback) > 0:
         for feedback_id in range(LOCAL_TRIALS):
             # print('\nFEEDBACK ID: {}\n'.format(str(feedback_id)))
             print('FOLLOW-UP ORACLE: {}'.format(gpt_oracle))
@@ -171,13 +171,13 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
                         else:
                             err_msg += " " + output_lines[i+err_line]
                     else:
-                        if len(feedback) == 0:
+                        if feedback is not None and len(feedback) == 0:
                             print('\n\n!!! Could not retrieve compilation error message !!!\n\n')
                     err_line += 1
                 break
             
         # Feedback was not updated so far as we have not observed any compilation error
-        if len(feedback) == 0:
+        if feedback is not None and len(feedback) == 0:
             # Check for Test failure
             report_dir = os.path.join(repo_dir, subRepo, 'target/surefire-reports/')
             if os.path.exists(report_dir):
@@ -219,16 +219,19 @@ def collect_feedback(repo_dir, oracle_id, file_path, subRepo, class_name, test_n
     return res, feedback
 
 def is_functional(repo_dir, oracle_id, file_path, subRepo, class_name, test_name, test_code, gpt_oracle):
-    testInjector = JavaGateway().entry_point
-    testInjector.setFile(file_path)
-    testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>;", gpt_oracle))
+    # testInjector = JavaGateway().entry_point
+    # testInjector.setFile(file_path)
+    # testInjector.inject(test_name, test_code.replace("<AssertPlaceHolder>;", gpt_oracle))
 
-    res, output = Project.run_test(repo_dir, subRepo, class_name, test_name)
+    # res, output = Project.run_test(repo_dir, subRepo, class_name, test_name)
 
-    if output is None:
-        return False
-    if len(output) > 0:
-        return False
+    # # print('\nIs functional output: \n')
+    # # print(output)
+
+    # if output is None:
+    #     return False
+    # if res["build_failure"]:
+    #     return False
 
     return True
 
@@ -362,9 +365,6 @@ def main():
             # Default GLOBAL_TRIALS = 30
             v2_flag = True
 
-        # Add condition for only generating and caching summaries (which can be used later)
-        # Add conditions for ablation study
-
         # Input data sample id (e.g. sample_1.json)
         sample_id = sys.argv[-1]
         print('SAMPLE: sample_{}.json'.format(sample_id))
@@ -383,7 +383,7 @@ def main():
 
             corr, incorr, build_err, run_err, test_failure = 0, 0, 0, 0, 0
 
-            configuration_file = os.path.join(DATA_DIR, "input/sample_{}.json".format(sample_id))
+            configuration_file = os.path.join(DATA_DIR, "samples/third_sampling/sample_{}.json".format(sample_id))
             with open(configuration_file, 'r') as f:
                 data = json.load(f)
                 for project_data in data["projects"]:
@@ -456,7 +456,7 @@ def main():
                             summaries = None
                             if SUMMARIZATION:
                                 print('Running Summarization Queries. Please wait for ChatGPT to build a knowledge base.\n')
-                                summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""), focal_code, enforce_regeneration=True)
+                                summaries = summarize(filePath, className, os.path.join(project.repo_dir, subRepo, 'src'), depPaths, test_name, test_code.replace("<AssertPlaceHolder>;", ""), focal_code, enforce_regeneration=False)
 
                             # Get Examples from the same test file (Ablation Study No. 1)
                             example_method = None

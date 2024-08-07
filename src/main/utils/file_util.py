@@ -62,7 +62,6 @@ def read_file_(filepath):
         return ""
 
 
-# TODO: this is very inefficient. refactor/optimize when needed. -Marcelo
 def read_file(filepath, lo=0, hi=0):
     if lo == 0 and hi == 0:
         return read_file_(filepath=filepath)
@@ -75,5 +74,6 @@ def read_file(filepath, lo=0, hi=0):
             return res
     except Exception as e:
         print("Read file exception")
+        print(e)
         return ""
 

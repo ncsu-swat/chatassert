@@ -1,0 +1,729 @@
+{
+    "projects": [
+        {
+            "userName": "fluenda",
+            "repoName": "ParCEFone",
+            "subRepos": [],
+            "commitSHA": "5067b3315c1957f930f19549ec4b354e7b8c336d",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MacAddressTest",
+                    "classPath": "src/test/java/com/fluenda/parcefone/event/MacAddressTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testAddressHashCode",
+                            "startLn": 119,
+                            "endLn": 123,
+                            "testMethod": "@Test\n public void testAddressHashCode ( ) {\n     final MacAddress macAddress = new MacAddress ( MULTICAST_ADDRESS ) ; \n     assertNotEquals(0,macAddress.hashCode());\n}",
+                            "oracle": "assertNotEquals(0,macAddress.hashCode());",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/com/fluenda/parcefone/event/MacAddress.java",
+                            "focalName": "hashCode",
+                            "focalStartLn": 129,
+                            "focalEndLn": 132,
+                            "focalMethod": "@Override\n public int hashCode ( ) { \n return Arrays . hashCode ( address ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "orientechnologies",
+            "repoName": "orientdb",
+            "subRepos": [
+                "test-commons",
+                "core",
+                "client",
+                "object",
+                "tools",
+                "server",
+                "security",
+                "graphdb",
+                "tests",
+                "distributed",
+                "lucene",
+                "jdbc",
+                "etl",
+                "distribution",
+                "distribution-tp2",
+                "crashtests"
+            ],
+            "commitSHA": "2cabb46c9581572b7f46724864f02d9c688070c5",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "OMultiKeyTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/common/util/OMultiKeyTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testEqualsDifferentClass",
+                            "startLn": 41,
+                            "endLn": 45,
+                            "testMethod": "@Test\n public void testEqualsDifferentClass ( ) {\n     final OMultiKey multiKey = new OMultiKey ( Collections . singletonList ( \"STR\" ) ) ; \n     assertFalse(multiKey.equals(\"STR\"));\n}",
+                            "oracle": "assertFalse(multiKey.equals(\"STR\"));",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/common/util/OMultiKey.java",
+                            "focalName": "equals",
+                            "focalStartLn": 65,
+                            "focalEndLn": 80,
+                            "focalMethod": "@Override\n public boolean equals ( final Object o ) { \n if ( this == o ) return true ; \n if ( o == null || getClass ( ) != o . getClass ( ) ) return false ; \n final OMultiKey oMultiKey = ( OMultiKey ) o ; \n if ( keys . size ( ) != oMultiKey . keys . size ( ) ) return false ; \n for ( final Object inKey : keys ) { \n if ( ! oMultiKey . keys . contains ( inKey ) ) return false ; \n } return true ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "BytesContainerTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/record/impl/BytesContainerTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "testSimple",
+                            "startLn": 12,
+                            "endLn": 17,
+                            "testMethod": "@Test\n public void testSimple ( ) {\n     BytesContainer bytesContainer = new BytesContainer ( ) ; \n     assertNotNull(bytesContainer.bytes);\n}",
+                            "oracle": "assertNotNull(bytesContainer.bytes);",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/serialization/serializer/record/binary/BytesContainer.java",
+                            "focalName": "BytesContainer",
+                            "focalStartLn": 32,
+                            "focalEndLn": 34,
+                            "focalMethod": " public BytesContainer ( ) { \n bytes = new byte [ 64 ] ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OCommandExecutorSQLSelectTest",
+                    "classPath": "core/src/test/java/com/orientechnologies/orient/core/sql/OCommandExecutorSQLSelectTest.java",
+                    "subRepo": "core",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 51,
+                        "endLn": 180,
+                        "setupMethod": "@BeforeClass\n public static void beforeClass ( ) throws Exception { \n db = new ODatabaseDocumentTx ( DB_STORAGE + \"STR\" + DB_NAME ) ; \n db . create ( ) ; \n getProfilerInstance ( ) . startRecording ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" + \"STR\" + \"STR\" + \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" + \"STR\" + \"STR\" + \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n OSchema schema = db . getMetadata ( ) . getSchema ( ) ; \n if ( ! schema . existsClass ( \"STR\" ) ) { \n schema . createClass ( \"STR\" , 1 , null ) ; \n } ORecordIteratorClass < ODocument > iter = db . browseClass ( \"STR\" ) ; \n while ( iter . hasNext ( ) ) { \n iter . next ( ) . delete ( ) ; \n } String rowModel = \"STR\" ; \n for ( int i = 0 ; \n i < 26 ; \n ++ i ) { \n String l = String . valueOf ( ( char ) ( 'A' + i ) ) ; \n String json = String . format ( rowModel , l , i ) ; \n ODocument doc = db . newInstance ( \"STR\" ) ; \n doc . fromJSON ( json ) ; \n doc . save ( ) ; \n } db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n initExpandSkipLimit ( db ) ; \n initMassiveOrderSkipLimit ( db ) ; \n initDatesSet ( db ) ; \n initMatchesWithRegex ( db ) ; \n initDistinctLimit ( db ) ; \n initLinkListSequence ( db ) ; \n initMaxLongNumber ( db ) ; \n initFilterAndOrderByTest ( db ) ; \n initComplexFilterInSquareBrackets ( db ) ; \n initCollateOnLinked ( db ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testSkipOrdered",
+                            "startLn": 801,
+                            "endLn": 806,
+                            "testMethod": "@Test\n public void testSkipOrdered ( ) {\n     OSQLSynchQuery sql = new OSQLSynchQuery ( \"STR\" ) ; \n     List < ODocument > results = db . query ( sql ) ; \n     assertEquals(19,results.size());\n}",
+                            "oracle": "assertEquals(19,results.size());",
+                            "oracleLn": 2,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/db/document/ODatabaseDocumentTx.java",
+                            "focalName": "query",
+                            "focalStartLn": 754,
+                            "focalEndLn": 758,
+                            "focalMethod": "@Override\n public < RET extends List < ? > > RET query ( OQuery < ? > iCommand , Object ... iArgs ) { \n checkOpenness ( ) ; \n return internal . query ( iCommand , iArgs ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "OMatchStatementExecutionNewTest",
+                    "classPath": "graphdb/src/test/java/com/orientechnologies/orient/graph/sql/OMatchStatementExecutionNewTest.java",
+                    "subRepo": "graphdb",
+                    "before": {
+                        "setupName": "beforeClass",
+                        "startLn": 32,
+                        "endLn": 66,
+                        "setupMethod": "@BeforeClass\n public static void beforeClass ( ) throws Exception { \n db = new ODatabaseDocumentTx ( DB_STORAGE + \"STR\" + DB_NAME ) ; \n db . create ( ) ; \n getProfilerInstance ( ) . startRecording ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n String [ ] [ ] friendList = new String [ ] [ ] { \n { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } , { \n \"STR\" , \"STR\" } } ; \n for ( String [ ] pair : friendList ) { \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( pair [ 0 ] , pair [ 1 ] ) ; \n } db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n db . command ( new OCommandSQL ( \"STR\" ) ) . execute ( ) ; \n initOrgChart ( ) ; \n initTriangleTest ( ) ; \n initEdgeIndexTest ( ) ; \n initDiamondTest ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testFriendsOfFriendsArrows",
+                            "startLn": 547,
+                            "endLn": 557,
+                            "testMethod": "@Test\n public void testFriendsOfFriendsArrows ( ) throws Exception {\n     OResultSet qResult = db . query ( \"STR\" ) ; \n     Assert.assertTrue(qResult.hasNext());\n}",
+                            "oracle": "Assert.assertTrue(qResult.hasNext());",
+                            "oracleLn": 1,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/sql/executor/OResultSet.java",
+                            "focalName": "hasNext",
+                            "focalStartLn": 20,
+                            "focalEndLn": 21,
+                            "focalMethod": "@Override\n boolean hasNext ( ) ; \n"
+                        }
+                    ]
+                },
+                {
+                    "className": "LuceneSpatialWithinTest",
+                    "classPath": "lucene/src/test/java/com/orientechnologies/spatial/functions/LuceneSpatialWithinTest.java",
+                    "subRepo": "lucene",
+                    "before": {
+                        "setupName": "setupDatabase",
+                        "startLn": 45,
+                        "endLn": 75,
+                        "setupMethod": "@Before\n public void setupDatabase ( ) throws Throwable { \n String config = System . getProperty ( \"STR\" , \"STR\" ) ; \n String path ; \n if ( \"STR\" . equals ( config ) || \"STR\" . equals ( config ) ) { \n type = ODatabaseType . PLOCAL ; \n path = \"STR\" ; \n } else { \n type = ODatabaseType . MEMORY ; \n path = \"STR\" ; \n } context = new OrientDB ( path , OrientDBConfig . defaultConfig ( ) ) ; \n if ( context . exists ( name . getMethodName ( ) ) ) { \n context . drop ( name . getMethodName ( ) ) ; \n } context . create ( name . getMethodName ( ) , type ) ; \n db = context . open ( name . getMethodName ( ) , \"STR\" , \"STR\" ) ; \n db . set ( ODatabase . ATTRIBUTES . MINIMUMCLUSTERS , 8 ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testWithinNoIndex",
+                            "startLn": 36,
+                            "endLn": 49,
+                            "testMethod": "@Test\n public void testWithinNoIndex ( ) {\n     List < ODocument > execute = db . command ( new OCommandSQL ( \"STR\" + \"STR\" ) ) . execute ( ) ; \n     ODocument next = execute . iterator ( ) . next ( ) ; \n     Assert.assertEquals(next.field(\"STR\"),true);\n}",
+                            "oracle": "Assert.assertEquals(next.field(\"STR\"),true);",
+                            "oracleLn": 2,
+                            "focalFile": "core/src/main/java/com/orientechnologies/orient/core/record/impl/ODocument.java",
+                            "focalName": "field",
+                            "focalStartLn": 1201,
+                            "focalEndLn": 1226,
+                            "focalMethod": "@Override\n public < RET > RET field ( final String iFieldName ) { \n RET value = this . rawField ( iFieldName ) ; \n if ( ! iFieldName . startsWith ( \"STR\" ) && _lazyLoad && value instanceof ORID && ( ( ( ORID ) value ) . isPersistent ( ) || ( ( ORID ) value ) . isNew ( ) ) && ODatabaseRecordThreadLocal . instance ( ) . isDefined ( ) ) { \n RET newValue = getDatabase ( ) . load ( ( ORID ) value ) ; \n if ( newValue != null ) { \n unTrack ( ( ORID ) value ) ; \n track ( ( OIdentifiable ) newValue ) ; \n value = newValue ; \n if ( this . isTrackingChanges ( ) ) { \n ORecordInternal . setDirtyManager ( ( ORecord ) value , this . getDirtyManager ( ) ) ; \n } if ( ! iFieldName . contains ( \"STR\" ) ) { \n ODocumentEntry entry = _fields . get ( iFieldName ) ; \n removeCollectionChangeListener ( entry , entry . value ) ; \n entry . value = value ; \n addCollectionChangeListener ( entry ) ; \n } } } return value ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "amlinv",
+            "repoName": "stat-collection-utils",
+            "subRepos": [],
+            "commitSHA": "44da9965afbd2e92ce17ce2271d3bf21f69e2e97",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "JMXJvmIdConnectionFactoryTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/connection/impl/JMXJvmIdConnectionFactoryTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 54,
+                        "endLn": 78,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n this . factory = new JMXJvmIdConnectionFactory ( \"STR\" ) ; \n this . mockVirtualMachine = Mockito . mock ( VirtualMachine . class ) ; \n this . mockLogger = Mockito . mock ( Logger . class ) ; \n this . mockAttacher = Mockito . mock ( VirtualMachineAttacher . class ) ; \n this . mockJmxServiceUrlFactory = Mockito . mock ( JMXServiceUrlFactory . class ) ; \n this . mockJmxConnectorFactoryDelegate = Mockito . mock ( JMXConnectorFactoryDelegate . class ) ; \n this . mockJmxMbeanConnectorFactory = Mockito . mock ( JMXMBeanConnectionFactory . class ) ; \n this . mockJmxServiceUrl = Mockito . mock ( JMXServiceURL . class ) ; \n this . mockJmxConnector = Mockito . mock ( JMXConnector . class ) ; \n this . mockJmxMbeanConnection = Mockito . mock ( JMXMBeanConnection . class ) ; \n this . mockAgentProperties = Mockito . mock ( Properties . class ) ; \n this . mockSystemProperties = Mockito . mock ( Properties . class ) ; \n Mockito . when ( this . mockJmxServiceUrlFactory . createJMXServiceUrl ( \"STR\" ) ) . thenReturn ( this . mockJmxServiceUrl ) ; \n Mockito . when ( this . mockJmxConnectorFactoryDelegate . connect ( this . mockJmxServiceUrl ) ) . thenReturn ( this . mockJmxConnector ) ; \n Mockito . when ( this . mockJmxMbeanConnectorFactory . create ( this . mockJmxConnector ) ) . thenReturn ( this . mockJmxMbeanConnection ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCreateConnectionUsingSystemProperties",
+                            "startLn": 140,
+                            "endLn": 160,
+                            "testMethod": "@Test\n public void testCreateConnectionUsingSystemProperties ( ) throws Exception {\n     this . initFactory ( ) ; \n     Mockito . when ( this . mockAttacher . attach ( \"STR\" ) ) . thenReturn ( this . mockVirtualMachine ) ; \n     Mockito . when ( this . mockVirtualMachine . getAgentProperties ( ) ) . thenReturn ( this . mockAgentProperties ) ; \n     Mockito . when ( this . mockVirtualMachine . getSystemProperties ( ) ) . thenReturn ( this . mockSystemProperties ) ; \n     Mockito . when ( this . mockAgentProperties . getProperty ( JMXJvmIdConnectionFactory . COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ) . thenReturn ( null ) . thenReturn ( \"STR\" ) ; \n     Mockito . when ( this . mockSystemProperties . getProperty ( \"STR\" ) ) . thenReturn ( \"STR\" ) ; \n     MBeanAccessConnection result = this . factory . createConnection ( ) ; \n     assertSame(result,this.mockJmxMbeanConnection);\n}",
+                            "oracle": "assertSame(result,this.mockJmxMbeanConnection);",
+                            "oracleLn": 7,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/connection/impl/JMXJvmIdConnectionFactory.java",
+                            "focalName": "createConnection",
+                            "focalStartLn": 104,
+                            "focalEndLn": 132,
+                            "focalMethod": "@Override\n public MBeanAccessConnection createConnection ( ) throws IOException { \n JMXMBeanConnection result = null ; \n try { \n VirtualMachine vm = this . attacher . attach ( jvmId ) ; \n String url = vm . getAgentProperties ( ) . getProperty ( COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ; \n if ( url == null ) { \n String javaHome = vm . getSystemProperties ( ) . getProperty ( \"STR\" ) ; \n String agent = javaHome + File . separator + \"STR\" + File . separator + \"STR\" ; \n vm . loadAgent ( agent ) ; \n url = vm . getAgentProperties ( ) . getProperty ( COM_SUN_LOCAL_CONNECTOR_ADDRESS_PROPERTY ) ; \n } if ( url != null ) { \n JMXServiceURL jmxUrl = this . jmxServiceUrlFactory . createJMXServiceUrl ( url ) ; \n JMXConnector connector = this . jmxConnectorFactoryDelegate . connect ( jmxUrl ) ; \n result = this . jmxmBeanConnectionFactory . create ( connector ) ; \n } else { \n log . warn ( \"STR\" , this . jvmId ) ; \n } } catch ( AgentInitializationException | AgentLoadException | AttachNotSupportedException exc ) { \n log . warn ( \"STR\" , this . jvmId , exc ) ; \n } return result ; \n } "
+                        },
+                        {
+                            "testName": "testGetSetJmxServiceFactory",
+                            "startLn": 97,
+                            "endLn": 103,
+                            "testMethod": "@Test\n public void testGetSetJmxServiceFactory ( ) {\n     assertTrue(this.factory.getJmxServiceUrlFactory()instanceofDefaultJmxServiceUrlFactory);\n}",
+                            "oracle": "assertTrue(this.factory.getJmxServiceUrlFactory()instanceofDefaultJmxServiceUrlFactory);",
+                            "oracleLn": 0,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/connection/impl/JMXJvmIdConnectionFactory.java",
+                            "focalName": "getJmxServiceUrlFactory",
+                            "focalStartLn": 80,
+                            "focalEndLn": 82,
+                            "focalMethod": " public JMXServiceUrlFactory getJmxServiceUrlFactory ( ) { \n return jmxServiceUrlFactory ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ParameterReplacerTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/polling/ParameterReplacerTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 36,
+                        "endLn": 41,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n mockSource = Mockito . mock ( MBeanLocationParameterSource . class ) ; \n replacer = new ParameterReplacer ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testReplaceObjectNameParameters",
+                            "startLn": 48,
+                            "endLn": 67,
+                            "testMethod": "@Test\n public void testReplaceObjectNameParameters ( ) throws Exception {\n     Mockito . when ( this . mockSource . getParameter ( \"STR\" ) ) . thenReturn ( \"STR\" ) ; \n     Mockito . when ( this . mockSource . getParameter ( \"STR\" ) ) . thenReturn ( \"STR\" ) ; \n     Mockito . when ( this . mockSource . getParameter ( \"STR\" ) ) . thenReturn ( \"STR\" ) ; \n     String result ; \n     result = this . replacer . replaceObjectNameParameters ( \"STR\" , mockSource ) ; \n     assertEquals(\"STR\",result);\n}",
+                            "oracle": "assertEquals(\"STR\",result);",
+                            "oracleLn": 5,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/polling/ParameterReplacer.java",
+                            "focalName": "replaceObjectNameParameters",
+                            "focalStartLn": 41,
+                            "focalEndLn": 59,
+                            "focalMethod": " public String replaceObjectNameParameters ( String pattern , MBeanLocationParameterSource parameterSource ) { \n Matcher matcher = replaceParamPattern . matcher ( pattern ) ; \n StringBuffer result = new StringBuffer ( ) ; \n while ( matcher . find ( ) ) { \n String name = matcher . group ( \"STR\" ) ; \n String value = parameterSource . getParameter ( name ) ; \n if ( value != null ) { \n matcher . appendReplacement ( result , value ) ; \n } else { \n matcher . appendReplacement ( result , Matcher . quoteReplacement ( matcher . group ( ) ) ) ; \n } } matcher . appendTail ( result ) ; \n return result . toString ( ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "ObjectQueryInfoTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/polling/ObjectQueryInfoTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testImmutableQueryInfo",
+                            "startLn": 36,
+                            "endLn": 51,
+                            "testMethod": "@Test\n public void testImmutableQueryInfo ( ) throws Exception {\n     Map < String , Method > setters = new HashMap < > ( ) ; \n     setters . put ( \"STR\" , null ) ; \n     setters . put ( \"STR\" , null ) ; \n     Object target = new Object ( ) ; \n     ObjectName oname = new ObjectName ( \"STR\" ) ; \n     ObjectQueryInfo objectQueryInfo = new ObjectQueryInfo ( target , oname , setters ) ; \n     assertSame(target,objectQueryInfo.getTarget());\n}",
+                            "oracle": "assertSame(target,objectQueryInfo.getTarget());",
+                            "oracleLn": 6,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/polling/ObjectQueryInfo.java",
+                            "focalName": "getTarget",
+                            "focalStartLn": 38,
+                            "focalEndLn": 40,
+                            "focalMethod": " public Object getTarget ( ) { \n return target ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "AttributeInjectorTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/polling/AttributeInjectorTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 50,
+                        "endLn": 73,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n this . mockLogger = Mockito . mock ( Logger . class ) ; \n this . injector = new AttributeInjector ( ) ; \n this . target = new TestTarget ( ) ; \n this . attributeList = new LinkedList < > ( ) ; \n this . attributeSetters = new HashMap < > ( ) ; \n this . objectName = new ObjectName ( \"STR\" ) ; \n this . attributeList . add ( new Attribute ( \"STR\" , \"STR\" ) ) ; \n this . attributeList . add ( new Attribute ( \"STR\" , 7 ) ) ; \n this . attributeList . add ( new Attribute ( \"STR\" , 11 ) ) ; \n this . attributeSetters . put ( \"STR\" , TestTarget . class . getMethod ( \"STR\" , String . class ) ) ; \n this . attributeSetters . put ( \"STR\" , TestTarget . class . getMethod ( \"STR\" , int . class ) ) ; \n this . attributeSetters . put ( \"STR\" , TestTarget . class . getMethod ( \"STR\" , Integer . class ) ) ; \n this . attributeSetters . put ( \"STR\" , TestTarget . class . getMethod ( \"STR\" , String . class ) ) ; \n this . attributeSetters . put ( \"STR\" , TestTarget . class . getDeclaredMethod ( \"STR\" , String . class ) ) ; \n this . injector . setLog ( this . mockLogger ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testCopyOutWithLongForIntFields",
+                            "startLn": 95,
+                            "endLn": 106,
+                            "testMethod": "@Test\n public void testCopyOutWithLongForIntFields ( ) throws Exception {\n     this . attributeList . clear ( ) ; \n     this . attributeList . add ( new Attribute ( \"STR\" , 17L ) ) ; \n     this . attributeList . add ( new Attribute ( \"STR\" , 22L ) ) ; \n     this . injector . copyOutAttributes ( this . target , this . attributeList , this . attributeSetters , this . objectName ) ; \n     assertEquals(17,this.target.intValue);\n}",
+                            "oracle": "assertEquals(17,this.target.intValue);",
+                            "oracleLn": 4,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/polling/AttributeInjector.java",
+                            "focalName": "copyOutAttributes",
+                            "focalStartLn": 56,
+                            "focalEndLn": 60,
+                            "focalMethod": " public void copyOutAttributes ( Object target , List < Attribute > jmxAttributeValues , Map < String , Method > attributeSetters , ObjectName objectName ) { \n this . copyOutAttributes ( target , jmxAttributeValues , attributeSetters , \"STR\" , objectName ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "JmxAttributePollerTest",
+                    "classPath": "src/test/java/com/amlinv/jmxutil/polling/JmxAttributePollerTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setupTest",
+                        "startLn": 77,
+                        "endLn": 111,
+                        "setupMethod": "@Before\n public void setupTest ( ) throws Exception { \n this . polled001 = new TestDataClass001 ( ) ; \n this . polledObjects = new LinkedList < > ( ) ; \n this . polledObjects . add ( \"STR\" ) ; \n this . polledObjects . add ( polled001 ) ; \n this . mockMBeanAccessConnectionFactory = Mockito . mock ( MBeanAccessConnectionFactory . class ) ; \n this . mockScheduler = Mockito . mock ( Scheduler . class ) ; \n this . mockBatchCapableAccessConnection = Mockito . mock ( MBeanBatchCapableAccessConnection . class ) ; \n this . mockAccessConnection = Mockito . mock ( MBeanAccessConnection . class ) ; \n this . mockAttributeInjector = Mockito . mock ( AttributeInjector . class ) ; \n this . mockBatchPollProcessor = Mockito . mock ( BatchPollProcessor . class ) ; \n this . mockObjectQueryPreparer = Mockito . mock ( ObjectQueryPreparer . class ) ; \n this . mockTestHooks = Mockito . mock ( JmxAttributePoller . ConcurrencyTestHooks . class ) ; \n this . mockLogger = Mockito . mock ( Logger . class ) ; \n this . poller = new JmxAttributePoller ( this . polledObjects ) ; \n this . processes = new LinkedList < > ( ) ; \n this . executionSlips = new LinkedList < > ( ) ; \n Answer < SchedulerProcessExecutionSlip > startProcessAnswer = createProcessExecutionSlipAnswer ( null , null ) ; \n Mockito . when ( this . mockScheduler . startProcess ( Mockito . any ( SchedulerProcess . class ) ) ) . thenAnswer ( startProcessAnswer ) ; \n this . testObjectName001 = new ObjectName ( this . TEST_ONAME_001_STR ) ; \n this . accessConnectionFactoryDesc = \"STR\" ; \n Mockito . when ( this . mockMBeanAccessConnectionFactory . getTargetDescription ( ) ) . thenReturn ( this . accessConnectionFactoryDesc ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "testGetSetLog",
+                            "startLn": 134,
+                            "endLn": 141,
+                            "testMethod": "@Test\n public void testGetSetLog ( ) throws Exception {\n     assertNotNull(this.poller.getLog());\n}",
+                            "oracle": "assertNotNull(this.poller.getLog());",
+                            "oracleLn": 0,
+                            "focalFile": "src/main/java/com/amlinv/jmxutil/polling/JmxAttributePoller.java",
+                            "focalName": "getLog",
+                            "focalStartLn": 95,
+                            "focalEndLn": 97,
+                            "focalMethod": " public Logger getLog ( ) { \n return log ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "fabric8io",
+            "repoName": "fabric8-maven-plugin",
+            "subRepos": [
+                "core",
+                "enricher/api",
+                "enricher/standard",
+                "enricher/fabric8",
+                "generator/api",
+                "generator/java-exec",
+                "generator/spring-boot",
+                "generator/vertx",
+                "generator/karaf",
+                "generator/wildfly-swarm",
+                "generator/quarkus",
+                "generator/thorntail-v2",
+                "generator/webapp",
+                "generator/openliberty",
+                "watcher/api",
+                "watcher/standard",
+                "enricher/deprecated",
+                "it"
+            ],
+            "commitSHA": "4beae533a97571ddd6a6bc5dfa37c56a028cd3a9",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ResourceUtilTest",
+                    "classPath": "core/src/test/java/io/fabric8/maven/core/util/ResourceUtilTest.java",
+                    "subRepo": "core",
+                    "classTests": [
+                        {
+                            "testName": "simple",
+                            "startLn": 31,
+                            "endLn": 39,
+                            "testMethod": "@Test\n public void simple ( ) {\n     JsonParser parser = new JsonParser ( ) ; \n     JsonObject first = parser . parse ( \"STR\" ) . getAsJsonObject ( ) ; \n     JsonObject same = parser . parse ( \"STR\" ) . getAsJsonObject ( ) ; \n     JsonObject different = parser . parse ( \"STR\" ) . getAsJsonObject ( ) ; \n     assertTrue(ResourceUtil.jsonEquals(first,same));\n}",
+                            "oracle": "assertTrue(ResourceUtil.jsonEquals(first,same));",
+                            "oracleLn": 4,
+                            "focalFile": "core/src/main/java/io/fabric8/maven/core/util/ResourceUtil.java",
+                            "focalName": "jsonEquals",
+                            "focalStartLn": 39,
+                            "focalEndLn": 49,
+                            "focalMethod": " public static boolean jsonEquals ( JsonObject first , JsonObject second ) { \n final ObjectMapper mapper = new ObjectMapper ( ) ; \n try { \n final JsonNode tree1 = mapper . readTree ( first . toString ( ) ) ; \n final JsonNode tree2 = mapper . readTree ( second . toString ( ) ) ; \n return tree1 . equals ( tree2 ) ; \n } catch ( IOException e ) { \n return false ; \n } } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "arnohaase",
+            "repoName": "a-foundation",
+            "subRepos": [
+                "a-foundation"
+            ],
+            "commitSHA": "f3eef2ca89d67775f202a4c28140230a6229291e",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "ADiGraphTest",
+                    "classPath": "a-foundation/src/test/java/com/ajjpj/afoundation/collection/graph/ADiGraphTest.java",
+                    "subRepo": "a-foundation",
+                    "classTests": [
+                        {
+                            "testName": "testEmpty",
+                            "startLn": 184,
+                            "endLn": 212,
+                            "testMethod": "@Test\n public void testEmpty ( ) {\n     final ADiGraph < String , ASimpleEdge < String > > graph = ADiGraph . create ( Collections . < ASimpleEdge < String > > emptyList ( ) ) ; \n     assertTrue(graph.edges().isEmpty());\n}",
+                            "oracle": "assertTrue(graph.edges().isEmpty());",
+                            "oracleLn": 1,
+                            "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/graph/ADiGraph.java",
+                            "focalName": "edges",
+                            "focalStartLn": 83,
+                            "focalEndLn": 85,
+                            "focalMethod": " public Collection < E > edges ( ) { \n return new ArrayIterable < > ( edges ) ; \n } "
+                        },
+                        {
+                            "testName": "testTree",
+                            "startLn": 120,
+                            "endLn": 133,
+                            "testMethod": "@Test\n public void testTree ( ) {\n     final ADiGraph < String , ASimpleEdge < String > > graph = ADiGraph . create ( Arrays . asList ( edge ( \"STR\" , \"STR\" ) , edge ( \"STR\" , \"STR\" ) ) ) ; \n     assertFalse(graph.hasCycles());\n}",
+                            "oracle": "assertFalse(graph.hasCycles());",
+                            "oracleLn": 1,
+                            "focalFile": "a-foundation/src/main/java/com/ajjpj/afoundation/collection/graph/ADiGraph.java",
+                            "focalName": "hasCycles",
+                            "focalStartLn": 301,
+                            "focalEndLn": 303,
+                            "focalMethod": " public boolean hasCycles ( ) { \n return ! minimalCycles ( ) . isEmpty ( ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "hazelcast",
+            "repoName": "hazelcast-simulator",
+            "subRepos": [
+                "archetype",
+                "simulator",
+                "drivers/driver-hazelcast4plus",
+                "drivers/driver-hazelcast3",
+                "drivers/driver-ignite2",
+                "drivers/driver-infinispan9",
+                "drivers/driver-infinispan10",
+                "drivers/driver-infinispan11",
+                "drivers/driver-couchbase",
+                "drivers/driver-memcached",
+                "drivers/driver-mongodb",
+                "drivers/driver-lettuce5",
+                "drivers/driver-lettucecluster5",
+                "drivers/driver-jedis3"
+            ],
+            "commitSHA": "7f0c13f66a81ce27911109e4118f7405483931dc",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "BuildInfoUtilsTest",
+                    "classPath": "drivers/driver-hazelcast4plus/src/test/java/com/hazelcast/simulator/utils/BuildInfoUtilsTest.java",
+                    "subRepo": "drivers/driver-hazelcast4plus",
+                    "classTests": [
+                        {
+                            "testName": "testIsMinVersion_whenVersionCannotBeFound_thenReturnFalse",
+                            "startLn": 37,
+                            "endLn": 40,
+                            "testMethod": "@Test\n public void testIsMinVersion_whenVersionCannotBeFound_thenReturnFalse ( ) {\n     assertFalse(isMinVersion(\"STR\",null));\n}",
+                            "oracle": "assertFalse(isMinVersion(\"STR\",null));",
+                            "oracleLn": 0,
+                            "focalFile": "drivers/driver-hazelcast4plus/src/main/java/com/hazelcast/simulator/utils/BuildInfoUtils.java",
+                            "focalName": "isMinVersion",
+                            "focalStartLn": 58,
+                            "focalEndLn": 63,
+                            "focalMethod": " static boolean isMinVersion ( String minVersion , String version ) { \n if ( version == null ) { \n return false ; \n } return VersionUtils . isMinVersion ( minVersion , getVersion ( ) ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "trautonen",
+            "repoName": "coveralls-maven-plugin",
+            "subRepos": [],
+            "commitSHA": "8b8995e42768a25c8db6e85ede62238bf4606cb2",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "WildcardsTest",
+                    "classPath": "src/test/java/org/eluder/coveralls/maven/plugin/util/WildcardsTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testMatchesAgainstNull",
+                            "startLn": 36,
+                            "endLn": 39,
+                            "testMethod": "@Test\n public void testMatchesAgainstNull ( ) throws Exception {\n     assertFalse(Wildcards.matches(null,\"STR\"));\n}",
+                            "oracle": "assertFalse(Wildcards.matches(null,\"STR\"));",
+                            "oracleLn": 0,
+                            "focalFile": "src/main/java/org/eluder/coveralls/maven/plugin/util/Wildcards.java",
+                            "focalName": "matches",
+                            "focalStartLn": 42,
+                            "focalEndLn": 45,
+                            "focalMethod": " public static boolean matches ( final String text , final String wildcard ) { \n String pattern = wildcard . replace ( \"STR\" , \"STR\" ) . replace ( \"STR\" , \"STR\" ) ; \n return ( text != null && text . matches ( pattern ) ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "TooTallNate",
+            "repoName": "Java-WebSocket",
+            "subRepos": [],
+            "commitSHA": "e630e60168f8a857549731cd500e9312dfccbc46",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "Draft_6455Test",
+                    "classPath": "src/test/java/org/java_websocket/drafts/Draft_6455Test.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testToString",
+                            "startLn": 207,
+                            "endLn": 236,
+                            "testMethod": "@Test\n public void testToString ( ) throws Exception {\n     Draft_6455 draft_6455 = new Draft_6455 ( ) ; \n     assertEquals(\"STR\",draft_6455.toString());\n}",
+                            "oracle": "assertEquals(\"STR\",draft_6455.toString());",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/org/java_websocket/drafts/Draft_6455.java",
+                            "focalName": "toString",
+                            "focalStartLn": 1092,
+                            "focalEndLn": 1103,
+                            "focalMethod": "@Override\n public String toString ( ) { \n String result = super . toString ( ) ; \n if ( getExtension ( ) != null ) { \n result += \"STR\" + getExtension ( ) . toString ( ) ; \n } if ( getProtocol ( ) != null ) { \n result += \"STR\" + getProtocol ( ) . toString ( ) ; \n } result += \"STR\" + this . maxFrameSize ; \n return result ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "rockagen",
+            "repoName": "commons-lib",
+            "subRepos": [],
+            "commitSHA": "f37141cf40be79d130db804c39ce61690541d5f1",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "CommUtilTest",
+                    "classPath": "src/test/java/com/rockagen/commons/util/CommUtilTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testBitValue",
+                            "startLn": 109,
+                            "endLn": 115,
+                            "testMethod": "@Test\n public void testBitValue ( ) {\n     String bs = \"STR\" ; \n     BitSet b = CommUtil . bitSet ( bs . getBytes ( ) ) ; \n     Assert.assertEquals(\"STR\",CommUtil.hexdump(CommUtil.bitValue(b)));\n}",
+                            "oracle": "Assert.assertEquals(\"STR\",CommUtil.hexdump(CommUtil.bitValue(b)));",
+                            "oracleLn": 2,
+                            "focalFile": "src/main/java/com/rockagen/commons/util/CommUtil.java",
+                            "focalName": "hexdump",
+                            "focalStartLn": 1178,
+                            "focalEndLn": 1195,
+                            "focalMethod": " public static String hexdump ( final byte [ ] bytes ) { \n if ( bytes == null || bytes . length < 1 ) return \"STR\" ; \n int length = bytes . length ; \n int temp ; \n char [ ] hex = new char [ length * 2 ] ; \n for ( int i = 0 ; \n i < length ; \n i ++ ) { \n temp = bytes [ i ] & 0xFF ; \n hex [ i * 2 ] = HEXARRAY [ temp > > > 4 ] ; \n hex [ i * 2 + 1 ] = HEXARRAY [ temp & 0x0F ] ; \n } return new String ( hex ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "nidi3",
+            "repoName": "graphviz-java",
+            "subRepos": [
+                "graphviz-java",
+                "graphviz-java-min-deps",
+                "graphviz-java-all-j2v8",
+                "graphviz-rough",
+                "graphviz-kotlin"
+            ],
+            "commitSHA": "dcbd021a903a4114dd087ef9acec5650b92c89b2",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "FillStyleTest",
+                    "classPath": "graphviz-rough/src/test/java/guru/nidi/graphviz/rough/FillStyleTest.java",
+                    "subRepo": "graphviz-rough",
+                    "classTests": [
+                        {
+                            "testName": "crosshatch",
+                            "startLn": 34,
+                            "endLn": 40,
+                            "testMethod": "@Test\n void crosshatch ( ) {\n     assertEquals(map(\"STR\",\"STR\"),FillStyle.crossHatch().values);\n}",
+                            "oracle": "assertEquals(map(\"STR\",\"STR\"),FillStyle.crossHatch().values);",
+                            "oracleLn": 0,
+                            "focalFile": "graphviz-rough/src/main/java/guru/nidi/graphviz/rough/FillStyle.java",
+                            "focalName": "crossHatch",
+                            "focalStartLn": 180,
+                            "focalEndLn": 182,
+                            "focalMethod": " public static CrossHatch crossHatch ( ) { \n return new CrossHatch ( ) ; \n } "
+                        }
+                    ]
+                },
+                {
+                    "className": "LabelTest",
+                    "classPath": "graphviz-java/src/test/java/guru/nidi/graphviz/attribute/LabelTest.java",
+                    "subRepo": "graphviz-java",
+                    "classTests": [
+                        {
+                            "testName": "markdown",
+                            "startLn": 113,
+                            "endLn": 117,
+                            "testMethod": "@Test\n void markdown ( ) {\n     assertEquals(\"STR\",Label.markdown(\"STR\").value);\n}",
+                            "oracle": "assertEquals(\"STR\",Label.markdown(\"STR\").value);",
+                            "oracleLn": 0,
+                            "focalFile": "graphviz-java/src/main/java/guru/nidi/graphviz/attribute/Label.java",
+                            "focalName": "markdown",
+                            "focalStartLn": 171,
+                            "focalEndLn": 181,
+                            "focalMethod": " public static Label markdown ( String value ) { \n return html ( replaceMd ( replaceMd ( replaceMd ( replaceMd ( replaceMd ( replaceMd ( replaceMd ( value . replace ( \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) , \"STR\" , \"STR\" ) . replaceAll ( \"STR\" , \"STR\" ) ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "jcodec",
+            "repoName": "jcodec",
+            "subRepos": [],
+            "commitSHA": "6ad0b21222becf19b9465346423eb435dfc32f31",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MkvBlockTest",
+                    "classPath": "src/test/java/org/jcodec/containers/mkv/MkvBlockTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "testReadingXiphV2",
+                            "startLn": 105,
+                            "endLn": 118,
+                            "testMethod": "@Test\n public void testReadingXiphV2 ( ) throws Exception {\n     ByteBuffer bb = ByteBuffer . wrap ( new byte [ ] { \n ( byte ) 0x82 , 0x00 , ( byte ) 0xAE , 0x02 , 0x04 , ( byte ) 187 , ( byte ) 255 , ( byte ) 255 , 120 , ( byte ) 255 , 0 , 60 } ) ; \n     int startPosition = 5 ; \n     bb . position ( startPosition ) ; \n     MkvBlock be = new MkvBlock ( Block . id ) ; \n     be . offset = 0x149B0 ; \n     be . dataOffset = 0x149B3 ; \n     be . dataLen = 0x353 ; \n     int [ ] sizes = new int [ bb . get ( 4 ) + 1 ] ; \n     be . headerSize = MkvBlock . readXiphLaceSizes ( bb , sizes , ( int ) be . dataLen , startPosition ) ; \n     Assert.assertEquals(12,be.headerSize);\n}",
+                            "oracle": "Assert.assertEquals(12,be.headerSize);",
+                            "oracleLn": 9,
+                            "focalFile": "src/main/java/org/jcodec/containers/mkv/boxes/MkvBlock.java",
+                            "focalName": "readXiphLaceSizes",
+                            "focalStartLn": 156,
+                            "focalEndLn": 175,
+                            "focalMethod": " public static int readXiphLaceSizes ( ByteBuffer bb , int [ ] sizes , int size , int preLacingHeaderSize ) { \n int startPos = bb . position ( ) ; \n int lastIndex = sizes . length - 1 ; \n sizes [ lastIndex ] = size ; \n for ( int l = 0 ; \n l < lastIndex ; \n l ++ ) { \n int laceSize = 255 ; \n while ( laceSize == 255 ) { \n laceSize = bb . get ( ) & 0xFF ; \n sizes [ l ] += laceSize ; \n } sizes [ lastIndex ] -= sizes [ l ] ; \n } int headerSize = ( bb . position ( ) - startPos ) + preLacingHeaderSize ; \n sizes [ lastIndex ] -= headerSize ; \n return headerSize ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "PeterisP",
+            "repoName": "morphology",
+            "subRepos": [],
+            "commitSHA": "c0b04dc7292e3be8b62f5ef2490f70b61f7f9cfe",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MorphologyTest",
+                    "classPath": "src/test/java/lv/semti/morphology/Testi/MorphologyTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setUpBeforeClass",
+                        "startLn": 104,
+                        "endLn": 111,
+                        "setupMethod": "@BeforeClass\n public static void setUpBeforeClass ( ) { \n try { \n loc\u012bt\u0101js = new Analyzer ( false ) ; \n } catch ( Exception e ) { \n e . printStackTrace ( ) ; \n } } @Before\n public void defaultsettings ( ) { \n loc\u012bt\u0101js . defaultSettings ( ) ; \n loc\u012bt\u0101js . setCacheSize ( 0 ) ; \n loc\u012bt\u0101js . clearCache ( ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "rakiens",
+                            "startLn": 2297,
+                            "endLn": 2317,
+                            "testMethod": "@Test\n public void rakiens ( ) {\n     Word w = loc\u012bt\u0101js . analyze ( \"STR\" ) ; \n     assertTrue(w.isRecognized());\n}",
+                            "oracle": "assertTrue(w.isRecognized());",
+                            "oracleLn": 1,
+                            "focalFile": "src/main/java/lv/semti/morphology/analyzer/Word.java",
+                            "focalName": "isRecognized",
+                            "focalStartLn": 135,
+                            "focalEndLn": 137,
+                            "focalMethod": " public boolean isRecognized ( ) { \n return ! wordforms . isEmpty ( ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "basis-technology-corp",
+            "repoName": "tcl-regex-java",
+            "subRepos": [],
+            "commitSHA": "d2cb9b680fdac842c5c33bd1e600aad3a901ff62",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "SmpTest",
+                    "classPath": "src/test/java/com/basistech/tclre/SmpTest.java",
+                    "subRepo": "",
+                    "classTests": [
+                        {
+                            "testName": "find",
+                            "startLn": 52,
+                            "endLn": 57,
+                            "testMethod": "@Test\n public void find ( ) throws Exception {\n     RePattern pattern = HsrePattern . compile ( \"STR\" , PatternFlags . ADVANCED ) ; \n     ReMatcher matcher = pattern . matcher ( \"STR\" ) ; \n     assertTrue(matcher.find());\n}",
+                            "oracle": "assertTrue(matcher.find());",
+                            "oracleLn": 2,
+                            "focalFile": "src/main/java/com/basistech/tclre/ReMatcher.java",
+                            "focalName": "find",
+                            "focalStartLn": 61,
+                            "focalEndLn": 61,
+                            "focalMethod": " boolean find ( ) ; \n"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "userName": "javadev",
+            "repoName": "moneytostr-russian",
+            "subRepos": [],
+            "commitSHA": "d39c8729e15292d4f3d38ddbae68977f170f482b",
+            "buildSystem": "mvn",
+            "allTests": [
+                {
+                    "className": "MoneyToStrTest",
+                    "classPath": "src/test/java/com/github/moneytostr/MoneyToStrTest.java",
+                    "subRepo": "",
+                    "before": {
+                        "setupName": "setUp",
+                        "startLn": 106,
+                        "endLn": 174,
+                        "setupMethod": "@Before\n public void setUp ( ) { \n moneyToStrUAH = new MoneyToStr ( MoneyToStr . Currency . UAH , MoneyToStr . Language . UKR , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrUAHRUS = new MoneyToStr ( MoneyToStr . Currency . UAH , MoneyToStr . Language . RUS , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrUAHENG = new MoneyToStr ( MoneyToStr . Currency . UAH , MoneyToStr . Language . ENG , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrRUR = new MoneyToStr ( MoneyToStr . Currency . RUR , MoneyToStr . Language . UKR , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrRURRUS = new MoneyToStr ( MoneyToStr . Currency . RUR , MoneyToStr . Language . RUS , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrRURENG = new MoneyToStr ( MoneyToStr . Currency . RUR , MoneyToStr . Language . ENG , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrUSD = new MoneyToStr ( MoneyToStr . Currency . USD , MoneyToStr . Language . UKR , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrUSDRUS = new MoneyToStr ( MoneyToStr . Currency . USD , MoneyToStr . Language . RUS , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrUSDENG = new MoneyToStr ( MoneyToStr . Currency . USD , MoneyToStr . Language . ENG , MoneyToStr . Pennies . TEXT ) ; \n moneyToStrEURRUS = new MoneyToStr ( MoneyToStr . Currency . EUR , MoneyToStr . Language . RUS , MoneyToStr . Pennies . NUMBER ) ; \n moneyToStrPER100 = new MoneyToStr ( MoneyToStr . Currency . PER100 , MoneyToStr . Language . RUS , MoneyToStr . Pennies . TEXT ) ; \n moneyToStrPER1000 = new MoneyToStr ( MoneyToStr . Currency . PER1000 , MoneyToStr . Language . RUS , MoneyToStr . Pennies . TEXT ) ; \n moneyToStrCustom = new MoneyToStr ( MoneyToStr . Currency . RUR , MoneyToStr . Language . RUS , MoneyToStr . Pennies . NUMBER , new String [ ] { \n \"STR\" , \"STR\" , \"STR\" , \"STR\" , \"STR\" , \"STR\" , \"STR\" , \"STR\" } ) ; \n } "
+                    },
+                    "classTests": [
+                        {
+                            "testName": "checkPER1000",
+                            "startLn": 458,
+                            "endLn": 463,
+                            "testMethod": "@Test\n public void checkPER1000 ( ) {\n     assertEquals(\"STR\",moneyToStrPER1000.convert(12.346));\n}",
+                            "oracle": "assertEquals(\"STR\",moneyToStrPER1000.convert(12.346));",
+                            "oracleLn": 0,
+                            "focalFile": "src/main/java/com/github/moneytostr/MoneyToStr.java",
+                            "focalName": "convert",
+                            "focalStartLn": 442,
+                            "focalEndLn": 452,
+                            "focalMethod": " public String convert ( Double theMoney ) { \n if ( theMoney == null ) { \n throw new IllegalArgumentException ( \"STR\" ) ; \n } Long intPart = theMoney . longValue ( ) ; \n Long fractPart = Math . round ( ( theMoney - intPart ) * NUM100 ) ; \n if ( currency == Currency . PER1000 ) { \n fractPart = Math . round ( ( theMoney - intPart ) * NUM1000 ) ; \n } return convert ( intPart , fractPart ) ; \n } "
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,3 +1,0 @@
-- there seems to be a hickup after calling completion and before running it. needs to understand this!
-- release memory of models in a finally block (to handle abnormal exits)
-- [unsure about this] needs to check if there is some sort of memory leak associated with starcoder. memory does not seem to return to normal levels after process is finished.

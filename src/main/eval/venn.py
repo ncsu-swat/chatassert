@@ -14,9 +14,9 @@ teco_tatu_cnt, teco_br_cnt, tatu_br_cnt = 0, 0, 0
 teco_tatu_br_cnt = 0
 corr_dict = dict()
 
-teco = pd.read_csv('../../data/venn/teco-res.tsv', sep='\t')
-# tatu = pd.read_csv('../../data/venn/minus-dr.tsv', sep='\t')
-tatu = pd.read_csv('../../data/venn/chatassert-res.tsv', sep='\t')
+teco = pd.read_csv('../../res/teco-res.tsv', sep='\t')
+tatu = pd.read_csv('../../res/minus-dr500.tsv', sep='\t')
+# tatu = pd.read_csv('../../res/chatassert-res500.tsv', sep='\t')
 # br = pd.read_csv('../../data/venn/oragen-res-batch-sort.tsv', sep='\t')
 
 def teco_fn(df_slice):
@@ -125,36 +125,37 @@ print('teco-tatu: {}%\n\nteco: {}%\ntatu: {}%'.format(teco_tatu_cnt/len(corr_dic
 
 from matplotlib import pyplot as plt
 from matplotlib_venn import venn2, venn2_circles
+plt.style.use('tableau-colorblind10')
 
 ratio_left, ratio_middle, ratio_right = 1, 1, 0.6
 
-out = venn2(subsets = (ratio_left, ratio_right, ratio_middle), set_labels = ('ChatAssert', 'Teco'), set_colors=("skyblue", "coral"), alpha=0.5)
+out = venn2(subsets = (ratio_left, ratio_right, ratio_middle), set_labels = ('ChatAssert-DR', 'Teco'), alpha=0.5)
 venn2_circles(subsets = (ratio_left, ratio_right, ratio_middle))
-# out = venn2(subsets = (ratio_left, ratio_right, ratio_middle), set_labels = ('ChatAssert', 'Teco'), set_colors=("skyblue", "coral"), alpha=0.5)
+# out = venn2(subsets = (ratio_left, ratio_right, ratio_middle), set_labels = ('ChatAssert', 'Teco'), alpha=0.5)
 # venn2_circles(subsets = (ratio_left, ratio_right, ratio_middle))
 
 for (id, text) in enumerate(out.set_labels):
     text.set_fontsize(35)
     text.set_fontweight('bold')
     if id == 0:
-        text.set_x(-0.1)
+        text.set_x(-0.0)
     elif id == 1:
         text.set_x(0.3)
     text.set_y(-0.55)
 
 # chatassert vs. teco
-ratio_label_dict = {
-    0: 20.00,
-    1: 9.42,
-    2: 34.57
-}
+# ratio_label_dict = {
+#     0: 22.4,
+#     1: 10.8,
+#     2: 31.2
+# }
 
 #chatassert-dr vs. teco
-# ratio_label_dict = {
-#     0: 17.14,
-#     1: 12.57,
-#     2: 31.42
-# }
+ratio_label_dict = {
+    0: 19.6,
+    1: 14.6,
+    2: 27.2
+}
 for x in range(len(out.subset_labels)):
     if out.subset_labels[x] is not None:
         out.subset_labels[x].set_text(ratio_label_dict[x])

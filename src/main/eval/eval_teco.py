@@ -6,9 +6,11 @@ import pandas as pd
 sys.path.append('../utils')
 from markdown_util import clean_args, check_commutative_equal
 
+global total_count
 global corr_count
 
-teco_raw_preds_path = '../../teco_eval/teco/output/all_preds.jsonl'
+# teco_raw_preds_path = '../../teco_eval/teco/output/all_preds.jsonl'
+teco_raw_preds_path = '../../teco_eval/teco/output/preds_v2.jsonl'
 
 def writeTecoPreds():
     with open('../../teco_eval/teco/input/id.jsonl', 'r') as ids_file,\
@@ -50,8 +52,10 @@ def writeTecoPreds():
                 csvWriter.writerow("{}\t{}\t{}\t{}\t{}\t{}\t{}".format(str(i), str(len(pred['topk'])), proj[ids2lines[pred["data_id"]]], tests[ids2lines[pred["data_id"]]].split('/')[-1].split('(')[0], goldAssert, predAssert, str(isCorrect)).split('\t'))
 
 def eval():
+    global total_count
     global corr_count
 
+    total_count = 0
     corr_count = 0
     preds_processed = pd.read_csv('../../teco_eval/teco/output/preds_processed.csv', sep='\t')
     
@@ -59,6 +63,8 @@ def eval():
     else: total_samples = 350
 
     def acc_at_ten(df_slice):
+        global total_count
+        total_count += 1
         for (idx, row) in df_slice.iterrows():
             global corr_count
             if row['Correct'] == 1:
@@ -69,7 +75,7 @@ def eval():
     preds_processed.groupby('TestID').apply(acc_at_ten)
     
     print(str(corr_count))
-    print('Teco acc@10: {}%'.format(str(corr_count/total_samples)))
+    print('Teco acc@10: {}%'.format(str(corr_count/total_count)))
 
 writeTecoPreds()
 eval()

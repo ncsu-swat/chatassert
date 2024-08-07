@@ -1,4 +1,0 @@
-0. Take note that in line 1, method `asList` from class `Arrays` is invoked.
-1. Take note that in line 1, an object of class `String` is created.
-2. Take note that in line 1, an object of class `List` is created.
-

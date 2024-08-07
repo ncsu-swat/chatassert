@@ -155,6 +155,8 @@ def draw_violin_plot():
         chatassert_dr = pd.read_csv(os.path.join(DATA_DIR, 'mutation/chatassert-non-xm-dr-mutationCoverage.tsv'), sep='\t')
         teco = pd.read_csv(os.path.join(DATA_DIR, 'mutation/teco-non-xm-mutationCoverage.tsv'), sep='\t')
 
+        x = pd.read_csv('../res/x.tsv', sep=',')
+
         from scipy import stats
         normality_chatassert = stats.shapiro(chatassert['MutationStrength'])
         normality_chatassert_dr = stats.shapiro(chatassert_dr['MutationStrength'])
@@ -193,8 +195,10 @@ def draw_violin_plot():
         print('\nEffect Size (Cliff\'s Delta):\n\tChatAssert vs. ChatAssert-DR: {}\n\tChatAssert vs. Teco: {}\n\tChatAssert-DR vs. Teco: {}\n\n'.format(res1, res2, res3))
 
         # mutation_df = pd.DataFrame({'chatassert': chatassert['MutationStrength'], 'chatassert-dr': chatassert_dr['MutationStrength'], 'teco': teco['MutationStrength']})
-        mutation_df = pd.DataFrame({'chatassert-dr': chatassert_dr['MutationStrength'], 'teco': teco['MutationStrength']})
+        # mutation_df = pd.DataFrame({'chatassert-dr': chatassert_dr['MutationStrength'], 'teco': teco['MutationStrength']})
         # mutation_df = pd.DataFrame({'chatassert': chatassert['MutationStrength'], 'teco': teco['MutationStrength']})
+        # mutation_df = pd.DataFrame({'chatassert': x['MutationStrength'], 'teco': x['MutationStrengths']})
+        mutation_df = pd.DataFrame({'chatassert-dr': x['MutationStrengthss'], 'teco': x['MutationStrengths']})
 
         sns.set(font_scale=2)
         plt.tick_params(labelleft=False)
@@ -210,7 +214,7 @@ def main():
     global project
 
     START_FROM = 0
-    GO_UNTIL = 351
+    GO_UNTIL = 26
 
     try:
         res_file = sys.argv[1]
@@ -225,7 +229,7 @@ def main():
         # Initialize a PY4J client to communicate with the Java gateway server
         gateway = JavaGateway()
 
-        configuration_file = os.path.join(DATA_DIR, "input", "sample_{}.json".format(sample_id))
+        configuration_file = os.path.join(DATA_DIR, "samples/third_sampling", "sample_{}.json".format(sample_id))
         with open(configuration_file, 'r') as f:
             data = json.load(f)
             for project_data in data["projects"]:
@@ -305,21 +309,21 @@ def main():
                                 try:
                                     print('Oracle: {}\n'.format(oracle))
 
-                                    if pd.isnull(df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'].iloc[0]):
-                                        if is_functional(project.repo_dir, filePath, subRepo, className, test_name, test_code, qualified_oracle):
-                                            print('Is functional? - True\n')
-                                            df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'] = '1'
-                                        else:
-                                            print('Is functional? - False\n')
-                                            df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'] = '0'
-
-                                    # if df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'].iloc[0] == 1:
-                                    #     if pd.isnull(df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'].iloc[0]):
-                                    #         line_coverage, mutation_coverage, test_strength, tests_ran = run_pitest(project.repo_dir, filePath, subRepo, className, test_name, test_code, qualified_oracle)
+                                    # if pd.isnull(df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'].iloc[0]):
+                                    #     if is_functional(project.repo_dir, filePath, subRepo, className, test_name, test_code, qualified_oracle):
+                                    #         print('Is functional? - True\n')
+                                    #         df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'] = '1'
+                                    #     else:
+                                    #         print('Is functional? - False\n')
+                                    #         df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'] = '0'
+                                    
+                                    if df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'Compiles'].iloc[0] == 1:
+                                        if pd.isnull(df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'].iloc[0]):
+                                            line_coverage, mutation_coverage, test_strength, tests_ran = run_pitest(project.repo_dir, filePath, subRepo, className, test_name, test_code, qualified_oracle)
 
                                             # df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'line_coverage'] = line_coverage
                                             # df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'mutation_coverage'] = mutation_coverage
-                                            # df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'] = test_strength
+                                            df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'MutationStrength'] = test_strength
                                             # df_res.loc[(df_res['ClassName']==className) & (df_res['TestName']==test_name) & (df_res['GenOracle']==oracle), 'tests_ran'] = tests_ran
                                 except Exception as e:
                                     traceback.print_exc()
@@ -354,7 +358,7 @@ def main():
 
 if __name__ == "__main__":
     try:
-        # main()
-        draw_violin_plot()
+        main()
+        # draw_violin_plot()
     except Exception as e:
         print(e)

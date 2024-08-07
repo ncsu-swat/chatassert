@@ -9,3 +9,5 @@ TMP_DIR= os.path.join(PRO_DIR, 'tmp')
 API_KEY_FILEPATH = os.path.join(PRO_DIR, "openai_api.key")
 
 CONFIG_DIR = os.path.join(PRO_DIR, "configurations")
+
+PORT = 25556

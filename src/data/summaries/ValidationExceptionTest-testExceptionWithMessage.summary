@@ -1,7 +1,0 @@
-0. In line 1, an object of class `ValidationException` is instantiated.
-1. Yes, this is a constructor definition for the `ValidationException` class. 
-
-The constructor takes a parameter of type `String` named `s`. It is marked as `final`, which means that the value of `s` cannot be changed within the constructor.
-
-The `super(s)` statement is calling the constructor of the superclass (`Exception`) and passing `s` as an argument. This means that the `ValidationException` inherits from `Exception` and sets the message of the exception to the value of `s`.
-
